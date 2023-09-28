@@ -5,16 +5,27 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
-  </div>
+   		<h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+		<h2 class="govuk-heading-m">Prototypes</h2>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>Find</li>
+			<li>Refer</li>
+			<li>
+				<a class="govuk-link" href="assess/">Assess</a>
+			</li>
+		</ul>
+		<h2 class="govuk-heading-m">Archive</h2>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>
+				<a class="govuk-link" href="https://miro.com/app/board/uXjVPiWWsO0=/?share_link_id=118610768837">Design history (Miro)</a>
+			</li>
+		</ul>
+    <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+  	</div>
 </div>
 
 {% endblock %}

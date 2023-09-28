@@ -4,3 +4,127 @@
 // 
 
 // Add extra styles here
+
+.moj-header {
+    background-color: #0b0c0c;
+    padding: 15px 0 10px 0;
+    border-bottom: none;
+}
+
+.govuk-phase-banner {
+    border-bottom: none;
+}
+
+.govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
+    max-width: 1220px;
+    margin: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+.govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
+    margin: 0 30px;
+    }
+}
+@media (min-width: 1020px) {
+    .govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
+        margin: 0 30px;
+        }
+    }
+@media (min-width: 1280px) {
+    .govuk-width-container, .moj-primary-navigation__container, .moj-header__container, .key-details-bar .key-details-bar__key-details {
+        margin: 0 auto;
+        }
+    }
+
+.filters-container {
+    background: #f3f2f1;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-options {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.username {
+    margin-top: 5px;
+}
+
+.username,
+.manange-details {
+    display: block;
+    line-height: .8;
+}
+
+.key-details-bar {
+    background-color: #1D70B8;
+  }
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 0;
+    position: relative;
+  }
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-family: "GDS Transport", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.04167;
+    font-weight: 700;
+    line-height: 1.11111;
+    margin-right: 10px;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    padding-top: 10px;
+    margin-top: 6px;
+  }
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-family: "GDS Transport", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 5px 8px;
+    color: #1D70B8;
+    background-color: #FFFFFF;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0 0;
+  }
+  .key-details-bar .key-details-bar__key-details * {
+    color: #FFFFFF;
+  }
+  .key-details-bar_divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+  }
+  @media (min-width: 40.0625em) {
+    .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+      font-size: 1.675rem;
+      line-height: 1.11111;
+    }
+    .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+  }
+  
+  .nav-border {
+    border-right: 1px solid #fff;
+    padding-right: 20px;
+  }
+
+
