@@ -4,27 +4,17 @@
 BNM+ (General Violence) - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-
-<!-- {{ govukPhaseBanner({
-	tag: {
-	  text: "Prototype"
-	},
-	html: 'This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
-
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }} -->
-{% endblock %}
-
 {% block header %}
-  {% include "/includes/head-main.html" %}
+	{% include "/includes/head-main.html" %}
 {% endblock %}
+
+<!-- {% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</div>
+{% endblock %} -->
 
 {% block content %}
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-xl">Referrals</span>

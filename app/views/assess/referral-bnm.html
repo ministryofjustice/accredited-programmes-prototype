@@ -1,30 +1,20 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-BNM+ (General Violence) - {{ serviceName }} - GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-
-<!-- {{ govukPhaseBanner({
-	tag: {
-	  text: "Prototype"
-	},
-	html: 'This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
-
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }} -->
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-  {% include "/includes/key-details.html" %}
+	{% include "/includes/key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</div>
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
