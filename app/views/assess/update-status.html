@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update status of referral</h1>
+		<p class="govuk-body">Record all decisions for the referral so that the programme teams and prison offender manager are up to date.</p>
+		<h2 class="govuk-heading-m">Current status details</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28th June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--grey">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+			  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">Select decision</h2>
+			  	</legend>
+			  	<!-- <div id="contact-hint" class="govuk-hint">Select one option.</div> -->
+			  	<div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+				  		<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+				  		<label class="govuk-label govuk-radios__label govuk-label--s" for="contact">This person is eligible</label>
+						<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person meets the eligibility criteria for this programme and will be assessed for suitability.</div>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+				  		<div class="govuk-form-group">
+							<label class="govuk-label" for="contact-by-email">Email address</label>
+							<input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+				  		</div>
+					</div>
+					<div class="govuk-radios__item">
+				  		<input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+				  		<label class="govuk-label govuk-radios__label govuk-label--s" for="contact-2">This person is not eligible</label>
+						<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person does not meet the eligibility criteria for this programme and the referral will be closed. You must provide a reason.</div>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+				  		<div class="govuk-form-group">
+							<label class="govuk-label" for="contact-by-phone">Phone number</label>
+							<input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+				  		</div>
+					</div>
+			  	</div>
+			</fieldset>
+		</div>
+
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+			  	<span class="govuk-warning-text__assistive">Warning</span>
+			  	This decision will change the referral status.
+			</strong>
+		</div>
+
+    </div>
+</div>
+
+{% endblock %}
