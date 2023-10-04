@@ -10,29 +10,52 @@
     <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
 
    		<h1 class="govuk-heading-xl">{{ serviceName }}</h1>
-		<h2 class="govuk-heading-l">Prototypes</h2>
-		<h3 class="govuk-heading-m">Custody</h3>
-		<ul class="govuk-list govuk-list--bullet">
-			<li>Find</li>
-			<li>Refer</li>
-			<li><a class="govuk-link" href="assess/open-referrals">Assess</a>
+		<h2 class="govuk-heading-l govuk-!-margin-bottom-8">Custody prototypes</h2>
+		<div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">Contents</h2>
+			<ul class="govuk-tabs__list">
+				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+					<a class="govuk-tabs__tab" href="#find">Find</a>
+			  	</li>
+			  	<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#refer">Refer</a>
+			 	 </li>
+			  	<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#assess">Assess</a>
+			  	</li>
+			</ul>
+			<div class="govuk-tabs__panel" id="find">
+				<!-- <h2 class="govuk-heading-l">Find</h2> -->
+				<p class="govuk-body">To be done.</p>
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="refer">
+				<!-- <h2 class="govuk-heading-l">Refer</h2> -->
+				<p class="govuk-body">To be done.</p>
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="assess">
+				<h2 class="govuk-heading-m">Assess</h2> 
+				<h4 class="govuk-heading-s">Version 6</h4>
+				<p><a class="govuk-link" href="assess/open-referrals">View prototype</a></p>
 				<ul class="govuk-list govuk-list--number">
-					<li><a class="govuk-link" href="assess/assessment-started/update-status">Assess: Status history (assessment started)</a></li>
-					<li><a class="govuk-link" href="assess/assessed-suitable/update-status">Assess: Status history (assessed suitable)</a></li>
-					<li><a class="govuk-link" href="assess/place-allocated/update-status">Assess: Status history (place allocated)</a></li>
-					<li><a class="govuk-link" href="assess/on-programme/update-status">Assess: Status history (on programme)</a></li>
-					<li><a class="govuk-link" href="assess/programme-completed/update-status">Assess: Status history (programme completed)</a></li>
+					<li><a class="govuk-link" href="assess/assessment-started/update-status">Status history (assessment started)</a></li>
+					<li><a class="govuk-link" href="assess/assessed-suitable/update-status">Status history (assessed suitable)</a></li>
+					<li><a class="govuk-link" href="assess/suitable-not-ready/update-status">Status history (suitable not ready)</a></li>
+					<li><a class="govuk-link" href="assess/not-suitable/update-status">Status history (not suitable)</a></li>
+					<li><a class="govuk-link" href="assess/on-programme/update-status">Status history (on programme)</a></li>
+					<li><a class="govuk-link" href="assess/programme-completed/update-status">Status history (programme completed)</a></li>
+					<li><a class="govuk-link" href="assess/deselected/update-status">Status history (deselected)</a></li>
 				</ul>
-			</li>
-		</ul>
-		<h4 class="govuk-heading-s">Alternative designs</h4>
-		<ul class="govuk-list govuk-list--bullet">
-			<li><a class="govuk-link" href="alternative-designs/assess/rag-tags">Assess: RAG tags</a></li>
-			<li><a class="govuk-link" href="alternative-designs/assess/colour-tags">Assess: Colour tags</a></li>
-			<li><a class="govuk-link" href="alternative-designs/assess/status-history">Assess: Status history</a></li>
-		</ul>
+				<h4 class="govuk-heading-s">Alternative designs</h4>
+				<ul class="govuk-list govuk-list--bullet">
+					<li><a class="govuk-link" href="alternative-designs/assess/rag-tags">RAG tags</a></li>
+					<li><a class="govuk-link" href="alternative-designs/assess/colour-tags">Colour tags</a></li>
+					<li><a class="govuk-link" href="alternative-designs/assess/status-history">Status history</a></li>
+				</ul>
+			</div>
+		</div>
+		
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-		<h2 class="govuk-heading-l">Archive</h2>
+		<h3 class="govuk-heading-m">Archive</h3>
 		<ul class="govuk-list govuk-list--bullet">
 			<li>
 				<a class="govuk-link" href="https://miro.com/app/board/uXjVPiWWsO0=/?share_link_id=118610768837">Design history (Miro)</a>
