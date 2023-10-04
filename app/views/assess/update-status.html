@@ -48,10 +48,14 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person meets the eligibility criteria for this programme and will be assessed for suitability.</div>
 					</div>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-				  		<div class="govuk-form-group">
+				  		<!-- <div class="govuk-form-group">
 							<label class="govuk-label" for="contact-by-email">Email address</label>
 							<input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
-				  		</div>
+				  		</div> -->
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
+							<textarea class="govuk-textarea" id="add-notes-optional" name="addNotesOptional" rows="5"></textarea>
+						</div>
 					</div>
 					<div class="govuk-radios__item">
 				  		<input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
@@ -59,13 +63,21 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person does not meet the eligibility criteria for this programme and the referral will be closed. You must provide a reason.</div>
 					</div>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-				  		<div class="govuk-form-group">
+				  		<!-- <div class="govuk-form-group">
 							<label class="govuk-label" for="contact-by-phone">Phone number</label>
 							<input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
-				  		</div>
+				  		</div> -->
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="add-reason">Add reason</label>
+							<textarea class="govuk-textarea" id="add-reason" name="addReason" rows="5"></textarea>
+						</div>
 					</div>
 			  	</div>
 			</fieldset>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="#">Cancel</a>
+			</div>
 		</div>
 
 		<div class="govuk-warning-text">
