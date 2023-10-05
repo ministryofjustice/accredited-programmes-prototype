@@ -27,10 +27,10 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 					<p class="moj-timeline__byline">by Carol Duffy</p>
 			  	</div>
 			  	<p class="moj-timeline__date">
-					<time datetime="2023-19-07T08:59:00.000Z">19 July 2023 at 8:59am</time>
+					<time datetime="2023-08-08T13:13:00.000Z">8 August 2023 at 1:13pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--grey">Place allocated</strong>
+					<strong class="govuk-tag govuk-tag--grey">On programme</strong>
 			  	</div>
 			</div>
 		</div>
@@ -44,9 +44,9 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 					<!-- <div id="programme-hint" class="govuk-hint">Select one option.</div> -->
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="started-programme" data-aria-controls="conditional-programme">
-							<label class="govuk-label govuk-radios__label govuk-label--s" for="programme">The person has started the programme</label>
-							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has been offered a place and has now started attending programme sessions.</div>
+							<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="completed-programme" data-aria-controls="conditional-programme">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="programme">The person has successfully completed the programme</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has completed all activities and sessions for the programme.</div>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme">
 							<div class="govuk-form-group">
@@ -55,22 +55,11 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 							</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-2" name="programme" type="radio" value="not-ready-programme" data-aria-controls="conditional-programme-2">
-							<label class="govuk-label govuk-radios__label govuk-label--s" for="programme-2">The person is not ready for the programme</label>
-							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person cannot continue with the programme so the referral will be labelled as 'suitable but not ready'. You must add a reason why.</div>
+							<input class="govuk-radios__input" id="programme-2" name="programme" type="radio" value="not-completed-programme" data-aria-controls="conditional-programme-2">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="programme-2">The person has not completed the programme</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The referral will be closed and marked as incomplete. You must add a reason why.</div>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-2">
-							<div class="govuk-form-group">
-								<label class="govuk-label" for="add-reason">Add reason</label>
-								<textarea class="govuk-textarea" id="add-reason" name="addReason" rows="5"></textarea>
-							</div>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-3" name="programme" type="radio" value="deselected" data-aria-controls="conditional-programme-3">
-							<label class="govuk-label govuk-radios__label govuk-label--s" for="programme-3">The person has been deselected from the programme</label>
-							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person cannot start the programme so the referral will be closed. You must add a reason why.</div>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-3">
 							<div class="govuk-form-group">
 								<label class="govuk-label" for="add-reason">Add reason</label>
 								<textarea class="govuk-textarea" id="add-reason" name="addReason" rows="5"></textarea>
