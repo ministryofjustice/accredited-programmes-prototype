@@ -44,31 +44,61 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
 
 		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Carol Duffy</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--grey">Assessment started</strong>
-			  	</div>
-			</div>
 			{% if data['suitability'] == "suitable" %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Status update</h2>
 					<p class="moj-timeline__byline">by Carol Duffy</p>
 			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-07-03T14:09:00.000Z">3 July 2023 at 2:09pm</time>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--grey">Assessed as suitable</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			{% if data['suitability'] == "suitable-not-ready" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--grey">Suitable but not ready</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			{% if data['suitability'] == "not-suitable" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--grey">Not suitable</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--grey">Assessment started</strong>
 			  	</div>
 			</div>
+			{% if data['suitability'] %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Status update</h2>
