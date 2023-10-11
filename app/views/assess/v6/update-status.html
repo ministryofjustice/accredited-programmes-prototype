@@ -10,7 +10,8 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <div class="govuk-!-margin-top-2">
-	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
 </div> 
 {% endblock %}
 
@@ -51,7 +52,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-eligibility">
 							<div class="govuk-form-group">
 								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
-								<textarea class="govuk-textarea" id="add-notes-optional" name="addNotesOptional" rows="5"></textarea>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="addNotesOptional" rows="5">{{ data['add-notes-optional'] }}</textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
