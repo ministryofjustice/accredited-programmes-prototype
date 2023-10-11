@@ -40,7 +40,11 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
 		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% if data['programme'] == "started-programme" %}
 		<a class="govuk-button" href="update-status">Update status</a>
+		{% elseif data['programme'] == "not-ready-programme" %}
+		<a class="govuk-button" href="update-status">Update status</a>
+		{% endif %}
 		<!-- <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
 
