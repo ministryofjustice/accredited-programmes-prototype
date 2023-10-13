@@ -30,8 +30,8 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-label--s" for="setting">Setting</label>
 					<select class="govuk-select" id="setting" name="setting">
 						<option value="select" selected>Select</option>
-						<option value="general-violence">Custody</option>
-						<option value="intimate-partner-violence">Community</option>
+						<option value="general-violence">Prison</option>
+						<option value="intimate-partner-violence">Probation</option>
 					</select>
 				</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -42,7 +42,7 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="female">Female</option>
 					</select>
 				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+				<!-- <div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="risk-criteria">Risk criteria</label>
 					<select class="govuk-select" id="risk-criteria" name="risk-criteria">
 						<option value="select" selected>Select</option>
@@ -54,13 +54,24 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="medium-or-high-ESARA">Medium or High ESARA</option>
 						<option value="very-high-high-OSP">Very High/High OSP</option>
 					</select>
+				</div> -->
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="risk-criteria">Risk criteria</label>
+					<select class="govuk-select" id="risk-criteria" name="risk-criteria">
+						<option value="select" selected>Select</option>
+						<option value="esara-sara">ESARA/SARA</option>
+						<option value="osp">OSP</option>
+						<option value="ogrs">OGRS</option>
+						<option value="ovp">OVP</option>
+						<option value="rosh">ROSH</option>
+					</select>
 				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0 govuk-!-margin-top-4">
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="learning-needs">Learning needs</label>
 					<select class="govuk-select" id="learning-needs" name="learning-needs">
 						<option value="select" selected>Select</option>
-						<option value="adapted-learning-difficulties-and-challenges">Adapted for learning difficulties and challenges (LDC)</option>
-						<option value="not-adapted-learning-difficulties-and-challenges">Not adapted for learning difficulties and challenges (LDC)</option>
+						<option value="ldc-adapted">LDC adapted</option>
+						<option value="not-adapted-ldc">Not adapted for LDC</option>
 					</select>
 				</div>
 				<button class="govuk-button" data-module="govuk-button" style="margin-bottom: 2px !important">Apply filters</button>
@@ -77,19 +88,19 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody </dd>
+				<dd class="govuk-summary-list__value">Prison</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male only</dd>
+				<dd class="govuk-summary-list__value">Male</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Risk Criteria</dt>
-				<dd class="govuk-summary-list__value">High ESARA/SARA, Very High/High OSP</dd>
+				<dd class="govuk-summary-list__value">OSP</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Learning needs</dt>
-			  	<dd class="govuk-summary-list__value">Adapted for learning difficulties and challenges (LDC)</dd>
+			  	<dd class="govuk-summary-list__value">LDC adapted</dd>
 			</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -99,19 +110,19 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody </dd>
+				<dd class="govuk-summary-list__value">Prison</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male only</dd>
+				<dd class="govuk-summary-list__value">Male</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Risk Criteria</dt>
-				<dd class="govuk-summary-list__value">High ESARA/SARA/OVP, Very high/High OSP, High OGRS</dd>
+				<dd class="govuk-summary-list__value">OGRS</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Learning needs</dt>
-			  	<dd class="govuk-summary-list__value">Adapted for learning difficulties and challenges (LDC)</dd>
+			  	<dd class="govuk-summary-list__value">LDC adapted</dd>
 			</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -121,19 +132,19 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody </dd>
+				<dd class="govuk-summary-list__value">Prison</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male only</dd>
+				<dd class="govuk-summary-list__value">Male</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Risk Criteria</dt>
-				<dd class="govuk-summary-list__value">Medium ESARA</dd>
+				<dd class="govuk-summary-list__value">ESARA/SARA</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Learning needs</dt>
-			  	<dd class="govuk-summary-list__value">Not adapted for learning difficulties and challenges (LDC)</dd>
+			  	<dd class="govuk-summary-list__value">Not adapted for LDC</dd>
 			</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -143,19 +154,19 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Community </dd>
+				<dd class="govuk-summary-list__value">Probation</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male only</dd>
+				<dd class="govuk-summary-list__value">Male</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Risk Criteria</dt>
-				<dd class="govuk-summary-list__value">Medium or High ESARA</dd>
+				<dd class="govuk-summary-list__value">ESARA/SARA</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Learning needs</dt>
-			  	<dd class="govuk-summary-list__value">Not adapted for learning difficulties and challenges (LDC)</dd>
+			  	<dd class="govuk-summary-list__value">Not adapted for LDC</dd>
 			</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -165,19 +176,19 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody </dd>
+				<dd class="govuk-summary-list__value">Prison</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male only</dd>
+				<dd class="govuk-summary-list__value">Male</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Risk Criteria</dt>
-				<dd class="govuk-summary-list__value">Assessment + ERG22+</dd>
+				<dd class="govuk-summary-list__value">OVP</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Learning needs</dt>
-			  	<dd class="govuk-summary-list__value">Not adapted for learning difficulties and challenges (LDC)</dd>
+			  	<dd class="govuk-summary-list__value">Not adapted for LDC</dd>
 			</div>
 		</dl>
 
