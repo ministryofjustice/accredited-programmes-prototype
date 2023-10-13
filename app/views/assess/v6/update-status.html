@@ -36,7 +36,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<form action="status-history" method="post">
+		<form action="update-status" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="eligibility-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -52,7 +52,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-eligibility">
 							<div class="govuk-form-group">
 								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
-								<textarea class="govuk-textarea" id="add-notes-optional" name="addNotesOptional" rows="5">{{ data['add-notes-optional'] }}</textarea>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="add-notes-optional" rows="5">{{ data['add-notes-optional'] }}</textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -63,7 +63,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-eligibility-2">
 							<div class="govuk-form-group">
 								<label class="govuk-label" for="add-reason">Add reason</label>
-								<textarea class="govuk-textarea" id="add-reason" name="addReason" rows="5"></textarea>
+								<textarea class="govuk-textarea" id="add-reason" name="add-reason" rows="5"></textarea>
 							</div>
 						</div>
 					</div>
