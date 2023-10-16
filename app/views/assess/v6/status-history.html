@@ -42,6 +42,8 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<p class="govuk-body">View progress and update the status of a referral.</p>
 		{% if data['eligibility'] == "eligible" %}
 		<a class="govuk-button" href="update-status">Update status</a>
+		{% else %}
+		<!-- Don't show 'Update status' button -->
 		{% endif %}
 
 		<div class="moj-timeline">
