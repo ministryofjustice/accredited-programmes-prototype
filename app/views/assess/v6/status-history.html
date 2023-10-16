@@ -40,9 +40,9 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
 		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% if data['eligibility'] == "eligible" %}
 		<a class="govuk-button" href="update-status">Update status</a>
-		<!-- <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+		{% endif %}
 
 		<div class="moj-timeline">
 			{% if data['eligibility'] == "eligible" %}
@@ -71,7 +71,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<p class="govuk-body">{{ data['add-reason'] }}</p>
-					<strong class="govuk-tag govuk-tag--red">Not eligible</strong>
+					<strong class="govuk-tag govuk-tag--grey">Not eligible</strong>
 			  	</div>
 			</div>
 			{% endif %}
