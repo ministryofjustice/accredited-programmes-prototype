@@ -39,14 +39,18 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
-		<p class="govuk-body">View progress and update the status of a referral.</p>
+
 		{% if data['programme'] == "started-programme" %}
+		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% else %}
+		<p class="govuk-body">This referral is now closed.</p>
+		{% endif %} 
+
+		{% if data['programme'] == "deselected" %}
+		<!-- Don't show 'Update status' button -->
+		{% else %}
 		<a class="govuk-button" href="update-status">Update status</a>
-		{% elseif data['programme'] == "not-ready-programme" %}
-		<a class="govuk-button" href="update-status">Update status</a>
-		{% endif %}
-		<!-- <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+		{% endif %} 
 
 		<div class="moj-timeline">
 			{% if data['programme'] == "started-programme" %}
@@ -64,21 +68,6 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	</div>	
 			</div>
 			{% endif %}
-			{% if data['programme'] == "not-ready-programme" %}
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Carol Duffy</p>
-			  	</div>
-				  <p class="moj-timeline__date">
-					<time datetime="2023-08-08T13:13:00.000Z">8 August 2023 at 1:13pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<p class="govuk-body">{{ data['add-reason'] }}</p>
-					<strong class="govuk-tag govuk-tag--turquoise">Suitable but not ready</strong>
-			  	</div>	
-			</div>
-			{% endif %}
 			{% if data['programme'] == "deselected" %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -89,23 +78,11 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<time datetime="2023-08-08T13:13:00.000Z">8 August 2023 at 1:13pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<p class="govuk-body">{{ data['add-reason-2'] }}</p>
+					<p class="govuk-body">{{ data['add-reason'] }}</p>
 					<strong class="govuk-tag govuk-tag--grey">Deselected</strong>
 			  	</div>	
 			</div>
 			{% endif %}
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Carol Duffy</p>
-			  	</div>
-				<p class="moj-timeline__date">
-					<time datetime="2023-19-07T08:59:00.000Z">19 July 2023 at 8:59am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Place allocated</strong>
-			  	</div>
-			</div>
 			{% if data['programme'] %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
