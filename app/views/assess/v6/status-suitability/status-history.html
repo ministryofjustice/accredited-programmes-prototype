@@ -39,7 +39,14 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
+		{% if data['suitability'] == "suitable" %}
 		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% elseif data['suitability'] == "suitable-not-ready" %}
+		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% else %}
+		<p class="govuk-body">This referral is now closed.</p>
+		{% endif %} 
+		
 		{% if data['suitability'] == "suitable" %}
 		<a class="govuk-button" href="update-status">Update status</a>
 		{% elseif data['suitability'] == "suitable-not-ready" %}
