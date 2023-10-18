@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Add Accredited Programme - {{ serviceName }} - GOV.UK Prototype Kit
+Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -17,11 +17,11 @@ Add Accredited Programme - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="add-programme-details" method="post">
+		<form action="update-status" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-						<h1 class="govuk-fieldset__heading">Add Accredited Programme</h1>
+						<h1 class="govuk-fieldset__heading">Add Accredited Programme details</h1>
 					</legend>
 					<div id="contact-hint" class="govuk-hint">Select the programme</div>
 					<div class="govuk-radios" data-module="govuk-radios">
