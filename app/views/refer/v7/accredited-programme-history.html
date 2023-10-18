@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="task-list" class="govuk-back-link govuk-!-margin-bottom-0">Back to the tasklist</a>
+</div> 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Accredited Programme history</h1>
+		<div class="govuk-inset-text">There is no record of Accredited Programmes for Del Hatton.</div>
+		<p class="govuk-body">The programme team may use information about a person's Accredited Programme history to assess whether they are suitable. You can add a programme history or continue with the referral if this history is not known.</p>
+		<form action="task-list" method="post">
+			<!-- <div class="govuk-button-group govuk-!-margin-top-4">
+				<a class="govuk-button" href="task-list">Continue</a>
+				<a class="govuk-link govuk-button--secondary" href="persons-identifier">Add a programme</a>
+			</div> -->
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="add-accredited-programme">Add a programme</button>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
