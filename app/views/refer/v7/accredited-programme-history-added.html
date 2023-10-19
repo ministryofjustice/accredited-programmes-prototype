@@ -19,7 +19,7 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Accredited Programme history</h1>
-		<!-- <div class="moj-banner moj-banner--success" role="region" aria-label="Success">
+		<div class="moj-banner moj-banner--success" role="region" aria-label="Success">
 			<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
 			  <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
 			</svg>
@@ -61,19 +61,12 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 		  			</div>
 			  	</dl>
 			</div>
-		</div> -->
-		<div class="govuk-inset-text">There is no record of Accredited Programmes for Del Hatton.</div>
-		<p class="govuk-body">The programme team may use information about a person's Accredited Programme history to assess whether they are suitable.</p>
-		<p class="govuk-body">You can continue by adding a programme history or skip this section of the referral if the history is not known.</p>
-		<form action="add-accredited-programme" method="post">
-			<!-- <input type="hidden" name="accredited-programme-history" value="true">
-			<div class="govuk-button-group govuk-!-margin-top-4">
-				<a class="govuk-button" href="task-list">Continue</a>
-				<a class="govuk-link govuk-button--secondary" href="persons-identifier">Add a programme</a>
-			</div> -->
+		</div>
+		<form action="task-list" method="post">
+			<input type="hidden" value="{{ data['programme-history'] }}" name="programme-history">
 			<div class="govuk-button-group govuk-!-margin-top-6">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="task-list">Skip this section</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Add another</button>
 			</div>
 		</form>
     </div>
