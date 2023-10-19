@@ -20,15 +20,16 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Accredited Programme history</h1>
 		<div class="govuk-inset-text">There is no record of Accredited Programmes for Del Hatton.</div>
-		<p class="govuk-body">The programme team may use information about a person's Accredited Programme history to assess whether they are suitable. You can add a programme history or continue with the referral if this history is not known.</p>
-		<form action="task-list" method="post">
+		<p class="govuk-body">The programme team may use information about a person's Accredited Programme history to assess whether they are suitable.</p>
+		<p class="govuk-body">You can continue by adding a programme history or skip this section of the referral if the history is not known.</p>
+		<form action="add-accredited-programme" method="post">
 			<!-- <div class="govuk-button-group govuk-!-margin-top-4">
 				<a class="govuk-button" href="task-list">Continue</a>
 				<a class="govuk-link govuk-button--secondary" href="persons-identifier">Add a programme</a>
 			</div> -->
 			<div class="govuk-button-group govuk-!-margin-top-6">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="add-accredited-programme">Add a programme</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="task-list">Skip this section</button>
 			</div>
 		</form>
     </div>
