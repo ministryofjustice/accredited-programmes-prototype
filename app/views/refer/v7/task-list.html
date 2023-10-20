@@ -39,7 +39,7 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
               			<span class="govuk-prototype-kit-task-list__task-name">
                 			<a href="accredited-programme-history" aria-describedby="review-accredited-programme-history-status">Review Accredited Programme history</a>
               			</span>
-						{% if (data['sectionone'] == "done") %}
+						{% if (data['referral-information-one'] == "done") %}
 						<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="confirm-personal-details-status">Completed</strong>
 						{% else %}
               			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
@@ -47,15 +47,23 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
             		</li>
             		<li class="govuk-prototype-kit-task-list__item">
               			<span class="govuk-prototype-kit-task-list__task-name">
-                			<a href="#" aria-describedby="confirm-oasys-information-status">Confirm the OASys information</a>
+                			<a href="confirm-oasys-information" aria-describedby="confirm-oasys-information-status">Confirm the OASys information</a>
               			</span>
-              			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% if (data['referral-information-two'] == "done") %}
+              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
+						{% else %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% endif %}
             		</li>
             		<li class="govuk-prototype-kit-task-list__item">
               			<span class="govuk-prototype-kit-task-list__task-name">
-                			<a href="#" aria-describedby="additional-information">Add additional information</a>
+                			<a href="add-additional-information" aria-describedby="additional-information">Add additional information</a>
               			</span>
-              			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% if (data['referral-information-three'] == "done") %}
+              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
+						{% else %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% endif %}
             		</li>
           		</ul>
         	</li>
