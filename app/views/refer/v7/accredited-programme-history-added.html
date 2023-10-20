@@ -39,7 +39,7 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
+					<!-- <div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Programme name</dt>
 				  		<dd class="govuk-summary-list__value">Kaizen</dd>
 					</div>
@@ -58,11 +58,31 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 			  		<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Source of information</dt>
 						<dd class="govuk-summary-list__value">Found on OASys</dd>
-		  			</div>
+		  			</div> -->
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Programme name</dt>
+						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme']  }}</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						<dd class="govuk-summary-list__value">{{ data['setting']  }}, {{ data['setting-community']  }} {{ data['setting-custody']  }}</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">{{ data['outcome']  }}, {{ data['outcome-complete']  }} {{ data['outcome-incomplete']  }}</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail']  }}</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+					  	<dt class="govuk-summary-list__key">Source of information</dt>
+					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail']  }}</dd>
+					</div>
 			  	</dl>
 			</div>
 		</div>
-		<form action="task-list" method="post">
+		<form action="task-list?sectionone=done&" method="post">
 			<input type="hidden" value="{{ data['programme-history'] }}" name="programme-history">
 			<div class="govuk-button-group govuk-!-margin-top-6">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>

@@ -39,10 +39,11 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
               			<span class="govuk-prototype-kit-task-list__task-name">
                 			<a href="accredited-programme-history" aria-describedby="review-accredited-programme-history-status">Review Accredited Programme history</a>
               			</span>
-              			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
-						{% if (data['programme-history'] == "true") %}
+						{% if (data['sectionone'] == "done") %}
 						<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="confirm-personal-details-status">Completed</strong>
-						{% endif %}
+						{% else %}
+              			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+            			{% endif %}
             		</li>
             		<li class="govuk-prototype-kit-task-list__item">
               			<span class="govuk-prototype-kit-task-list__task-name">
