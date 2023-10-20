@@ -30,7 +30,7 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 			  	<h2 class="govuk-summary-card__title">Kaizen</h2>
 			  	<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Kaizen</span></a>
+						<a class="govuk-link" href="add-accredited-programme">Change<span class="govuk-visually-hidden"> Kaizen</span></a>
 					</li>
 					<li class="govuk-summary-card__action">
 						<a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> Kaizen</span></a>
@@ -39,45 +39,49 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
-					<!-- <div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">Programme name</dt>
-				  		<dd class="govuk-summary-list__value">Kaizen</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">Setting</dt>
-				  		<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Outcome</dt>
-						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
-				  	</div>
-				  	<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Additional detail</dt>
-						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement</dd>
-					</div>
-			  		<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Source of information</dt>
-						<dd class="govuk-summary-list__value">Found on OASys</dd>
-		  			</div> -->
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Programme name</dt>
-						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme']  }}</dd>
+						{% if data['add-accredited-programme'] %}
+						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Kaizen</dd>
+						{% endif %}
 				  	</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Setting</dt>
-						<dd class="govuk-summary-list__value">{{ data['setting']  }}, {{ data['setting-community']  }} {{ data['setting-custody']  }}</dd>
+						{% if data['setting'] == "Community" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
+						{% elseif data['setting'] == "Custody" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+						{% endif %}
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
-						<dd class="govuk-summary-list__value">{{ data['outcome']  }}, {{ data['outcome-complete']  }} {{ data['outcome-incomplete']  }}</dd>
+						{% if data['outcome'] == "Complete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, {{ data['outcome-complete'] }}</dd>
+						{% elseif data['outcome'] == "Incomplete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, {{ data['outcome-incomplete'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
+						{% endif %}
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Additional detail</dt>
-						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail']  }}</dd>
+						{% if data['provide-additional-detail'] %}
+						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+						{% endif %}
 					</div>
 					<div class="govuk-summary-list__row">
 					  	<dt class="govuk-summary-list__key">Source of information</dt>
-					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail']  }}</dd>
+						{% if data['provide-source-detail'] %}
+					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Found on OASys</dd>
+						{% endif %}
 					</div>
 			  	</dl>
 			</div>
