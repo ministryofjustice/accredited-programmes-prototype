@@ -1,0 +1,214 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Check your answers</h1>
+		<p class="govuk-body">Read through this page and check that the information provided for each answer is accurate. When you feel the application is complete, submit it.</p>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<ul class="govuk-list">
+			<li><strong>Applicant name:</strong> Del Hatton</li>
+			<li><strong>Programme name:</strong> Becoming New Me Plus (BNM+)</li>
+			<li><strong>Programme strand:</strong> Intimate partner violence</li>
+			<li><strong>Programme location:</strong> HMP Erlestoke</li>
+		</ul>
+		<ul class="govuk-list">
+			<li><strong>Referrer name:</strong> Jordan Smith</li>
+			<li><strong>Referrer email address:</strong> <a href="mailto:interventions.erlestoke@justice.gov.uk" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></li>
+			<li><strong>Referrer contact number:</strong> 01380 814250</li>
+		</ul>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Personal details</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Personal details</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Name</dt>
+						<dd class="govuk-summary-list__value">Del Hatton</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Prison number</dt>
+						<dd class="govuk-summary-list__value">D0168KE</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Date of birth</dt>
+						<dd class="govuk-summary-list__value">5 July 1971</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Ethnicity</dt>
+						<dd class="govuk-summary-list__value">White and Black African</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Gender</dt>
+						<dd class="govuk-summary-list__value">Male</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						<dd class="govuk-summary-list__value">Custody</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Current prison</dt>
+						<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Accredited Programme history</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Kaizen</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+						Change<span class="govuk-visually-hidden"> Accredited Programme history</span>
+					  </a>
+					</li>
+				</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Kaizen</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Found on OASys</dd>
+		  			</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+			  	<h2 class="govuk-summary-card__title">Creating better relationships</h2>
+			  	<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Creating better relationships</span></a>
+					</li>
+			  	</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Other, Creating better relationships</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Community</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Not known</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Not known</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Not known</dd>
+		  			</div> 
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+			  	<h2 class="govuk-summary-card__title">New Me MOT</h2>
+			  	<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> New Me MOT</span></a>
+					</li>
+			  	</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">New Me MOT</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Custody</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Complete, Year complete 1993</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Not known</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Spoke to POM</dd>
+		  			</div> 
+			  	</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">OASys information</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Confirm OASys information</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-!-margin-bottom-2">I confirm that the information is up to date.</p>
+					</div>
+				</dl>
+			</div>
+		 </div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Additional information</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Add Additional information</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
+					</li>
+			  	</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
