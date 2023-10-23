@@ -5,7 +5,7 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details.html" %}
+	{% include "/includes/key-details-pom.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -85,7 +85,7 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 				<fieldset class="govuk-fieldset" aria-describedby="provide-source-detail-hint">
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Provide the source</legend>
 				  <div id="provide-source-detail-hint" class="govuk-hint">Include where you got this information from</div>
-				  <textarea class="govuk-textarea" id="provide-source-detail" name="provide-source-detail" rows="5" aria-describedby="provide-source-detail-hint">{{ data['rovide-source-detail'] }}</textarea>
+				  <textarea class="govuk-textarea" id="provide-source-detail" name="provide-source-detail" rows="5" aria-describedby="provide-source-detail-hint">{{ data['provide-source-detail'] }}</textarea>
 				</fieldset>
 		  	</div>
 			<button class="govuk-button" data-module="govuk-button">Continue</button>
