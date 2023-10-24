@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="add-programme-details" method="post">
+			<h1 class="govuk-heading-l">Withdraw referral</h1>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+						<h1 class="govuk-fieldset__heading">Why are you withdrawing this referral?</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason" name="referral-reason" type="radio" value="Duplicate referral">
+							<label class="govuk-label govuk-radios__label" for="referral-reason">Duplicate referral</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-2" name="referral-reason" type="radio" value="Kaizen">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-2">Kaizen</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-3" name="referral-reason" type="radio" value="New Me Strengths">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-3">New Me Strengths</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-4" name="referral-reason" type="radio" value="Becoming New Me Plus">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-4">Becoming New Me Plus</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-5" name="referral-reason" type="radio" value="Building Better Relationships">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-5">Building Better Relationships</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-6" name="referral-reason" type="radio" value="Horizon">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-6">Horizon</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-7" name="referral-reason" type="radio" value="iHorizon">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-7">iHorizon</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-8" name="referral-reason" type="radio" value="Healthy Sex Programme">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-8">Healthy Sex Programme</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-reason-9" name="referral-reason" type="radio" value="Healthy Identity Intervention">
+							<label class="govuk-label govuk-radios__label" for="referral-reason-9">Healthy Identity Intervention</label>
+						</div>
+	
+					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

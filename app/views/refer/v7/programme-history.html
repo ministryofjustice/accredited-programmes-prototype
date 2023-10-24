@@ -5,13 +5,13 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pt.html" %}
+	{% include "/includes/key-details-pom.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <div class="govuk-!-margin-top-2">
 	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
-	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to my referrals</a>
 </div> 
 {% endblock %}
 
@@ -26,12 +26,12 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
-			 	</li>
 			  	<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 			  	</li>
+				  <li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+			   </li>
 		  	</ul>
 		</nav>
 		<h2 class="govuk-heading-m">Referral summary</h2>
@@ -59,12 +59,6 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		  		</li>
 		  		<li class="moj-side-navigation__item moj-side-navigation__item--active">
 					<a href="programme-history" aria-current="location">Programme history</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="risk-scores-alerts">Risk scores and alerts</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="offence-history">Offence history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="sentence-information">Sentence information</a>
