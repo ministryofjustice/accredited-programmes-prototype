@@ -66,9 +66,9 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
 						{% if data['outcome'] == "Complete" %}
-						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, {{ data['outcome-complete'] }}</dd>
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
 						{% elseif data['outcome'] == "Incomplete" %}
-						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, {{ data['outcome-incomplete'] }}</dd>
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
 						{% else %}
 						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
 						{% endif %}
