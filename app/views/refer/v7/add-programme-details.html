@@ -25,7 +25,7 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
     				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select the setting (if known)</legend>
     				<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="setting" name="setting" type="radio" value="Community" data-aria-controls="conditional-setting">
+							<input class="govuk-radios__input" id="setting" name="setting" type="radio" value="Community" data-aria-controls="conditional-setting" {{ checked("setting", "Community") }}>
 							<label class="govuk-label govuk-radios__label" for="setting">Community</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-setting">
@@ -35,7 +35,7 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 							</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="setting-2" name="setting" type="radio" value="Custody" data-aria-controls="conditional-setting-2">
+							<input class="govuk-radios__input" id="setting-2" name="setting" type="radio" value="Custody" data-aria-controls="conditional-setting-2" {{ checked("setting", "Custody") }}>
 							<label class="govuk-label govuk-radios__label" for="setting-2">Custody</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-setting-2">
@@ -52,7 +52,7 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select the outcome (if known)</legend>
 				  <div class="govuk-radios" data-module="govuk-radios">
 					  <div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="outcome" name="outcome" type="radio" value="Complete" data-aria-controls="conditional-outcome">
+						  <input class="govuk-radios__input" id="outcome" name="outcome" type="radio" value="Complete" data-aria-controls="conditional-outcome" {{ checked("outcome", "Complete") }}>
 						  <label class="govuk-label govuk-radios__label" for="outcome">Complete</label>
 					  </div>
 					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-outcome">
@@ -62,13 +62,13 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 						  </div>
 					  </div>
 					  <div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="outcome-2" name="outcome" type="radio" value="Incomplete" data-aria-controls="conditional-outcome-2">
+						  <input class="govuk-radios__input" id="outcome-2" name="outcome" type="radio" value="Incomplete" data-aria-controls="conditional-outcome-2" {{ checked("outcome", "Incomplete") }}>
 						  <label class="govuk-label govuk-radios__label" for="outcome-2">Incomplete</label>
 					  </div>
 					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-outcome-2">
 						  <div class="govuk-form-group">
-							  <label class="govuk-label" for="outcome-incomplete">Enter the year started (if known)</label>
-							  <input class="govuk-input govuk-input--width-4 govuk-input--extra-letter-spacing" id="outcome-incomplete" name="outcome-incomplete" value="{{ data['outcome-incomplete'] }}">
+							<label class="govuk-label" for="outcome-incomplete">Enter the year completed (if known)</label>
+							<input class="govuk-input govuk-input--width-4 govuk-input--extra-letter-spacing" id="outcome-incomplete" name="outcome-incomplete" value="{{ data['outcome-incomplete'] }}">
 						  </div>
 					  </div>
 				  </div>

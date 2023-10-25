@@ -55,8 +55,12 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 				  	</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Setting</dt>
-						{% if data['setting'] == "Community" %}
+						{% if data['setting'] == "Community" and data['setting-community'] == false %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}</dd>
+						{% elseif data['setting'] == "Community" %}
 						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
+						{% elseif data['setting'] == "Custody" and data['setting-custody'] == false %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}</dd>
 						{% elseif data['setting'] == "Custody" %}
 						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
 						{% else %}
@@ -65,8 +69,12 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
-						{% if data['outcome'] == "Complete" %}
+						{% if data['outcome'] == "Complete" and data['outcome-complete'] == false %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}</dd>
+						{% elseif data['outcome'] == "Complete" %}
 						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
+						{% elseif data['outcome'] == "Incomplete" and data['outcome-incomplete'] == false %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}</dd>
 						{% elseif data['outcome'] == "Incomplete" %}
 						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
 						{% else %}
@@ -77,6 +85,8 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 						<dt class="govuk-summary-list__key">Additional detail</dt>
 						{% if data['provide-additional-detail'] %}
 						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail'] }}</dd>
+						{% elseif data['provide-additional-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% else %}
 						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
 						{% endif %}
@@ -85,6 +95,8 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 					  	<dt class="govuk-summary-list__key">Source of information</dt>
 						{% if data['provide-source-detail'] %}
 					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail'] }}</dd>
+						{% elseif data['provide-source-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% else %}
 						<dd class="govuk-summary-list__value">Found on OASys</dd>
 						{% endif %}
