@@ -56,11 +56,11 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Setting</dt>
 						{% if data['setting'] == "Community" and data['setting-community'] == false %}
-						<dd class="govuk-summary-list__value">{{ data['setting'] }}</dd>
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% elseif data['setting'] == "Community" %}
 						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
 						{% elseif data['setting'] == "Custody" and data['setting-custody'] == false %}
-						<dd class="govuk-summary-list__value">{{ data['setting'] }}</dd>
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% elseif data['setting'] == "Custody" %}
 						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
 						{% else %}
@@ -70,11 +70,11 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
 						{% if data['outcome'] == "Complete" and data['outcome-complete'] == false %}
-						<dd class="govuk-summary-list__value">{{ data['outcome'] }}</dd>
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% elseif data['outcome'] == "Complete" %}
 						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
 						{% elseif data['outcome'] == "Incomplete" and data['outcome-incomplete'] == false %}
-						<dd class="govuk-summary-list__value">{{ data['outcome'] }}</dd>
+						<dd class="govuk-summary-list__value">Not known</dd>
 						{% elseif data['outcome'] == "Incomplete" %}
 						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
 						{% else %}
