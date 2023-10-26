@@ -74,7 +74,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Accredited Programme history</h2>
-		<div class="govuk-summary-card">
+		<!-- <div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				{% if data['add-accredited-programme'] %}
 				<h2 class="govuk-summary-card__title">{{ data['add-accredited-programme'] }}</h2>
@@ -148,37 +148,157 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		  			</div>
 			  	</dl>
 			</div>
+		</div> -->
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				{% if data['add-accredited-programme'] %}
+				<h2 class="govuk-summary-card__title">{{ data['add-accredited-programme'] }}</h2>
+				{% else %}
+				<h2 class="govuk-summary-card__title">Kaizen</h2>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+						{% if data['add-accredited-programme'] %}
+						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Kaizen</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-accredited-programme">
+							  Change<span class="govuk-visually-hidden"> Programme name</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						{% if data['setting'] == "Community" and data['setting-community'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Community" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
+						{% elseif data['setting'] == "Custody" and data['setting-custody'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Custody" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details">
+							  Change<span class="govuk-visually-hidden"> Setting</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						{% if data['outcome'] == "Complete" and data['outcome-complete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Complete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
+						{% elseif data['outcome'] == "Incomplete" and data['outcome-incomplete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Incomplete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details">
+							  Change<span class="govuk-visually-hidden"> Outcome</span>
+							</a>
+						</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						{% if data['provide-additional-detail'] %}
+						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail'] }}</dd>
+						{% elseif data['provide-additional-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details">
+							  Change<span class="govuk-visually-hidden"> Additional detail</span>
+							</a>
+						</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						{% if data['provide-source-detail'] %}
+					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail'] }}</dd>
+						{% elseif data['provide-source-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Found on OASys</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details">
+							  Change<span class="govuk-visually-hidden"> Source of information</span>
+							</a>
+						</dd>
+		  			</div>
+			  	</dl>
+			</div>
 		</div>
+
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 			  	<h2 class="govuk-summary-card__title">Creating better relationships</h2>
-			  	<ul class="govuk-summary-card__actions">
+			  	<!-- <ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
 						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Creating better relationships</span></a>
 					</li>
-			  	</ul>
+			  	</ul> -->
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Programme name</dt>
 				  		<dd class="govuk-summary-list__value">Creating better relationships</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Programme name</span>
+							</a>
+						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Setting</dt>
 				  		<dd class="govuk-summary-list__value">Community</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Setting</span>
+							</a>
+						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
 						<dd class="govuk-summary-list__value">Not known</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Outcome</span>
+							</a>
+						</dd>
 				  	</div>
 				  	<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Additional detail</dt>
 						<dd class="govuk-summary-list__value">Not known</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Additional detail</span>
+							</a>
+						</dd>
 					</div>
 			  		<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Source of information</dt>
 						<dd class="govuk-summary-list__value">Not known</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Source of information</span>
+							</a>
+						</dd>
 		  			</div> 
 			  	</dl>
 			</div>
@@ -186,33 +306,58 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 			  	<h2 class="govuk-summary-card__title">New Me MOT</h2>
-			  	<ul class="govuk-summary-card__actions">
+			  	<!-- <ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
 						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> New Me MOT</span></a>
 					</li>
-			  	</ul>
+			  	</ul> -->
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Programme name</dt>
 				  		<dd class="govuk-summary-list__value">New Me MOT</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Programme name</span>
+							</a>
+						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Setting</dt>
 				  		<dd class="govuk-summary-list__value">Custody</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Setting</span>
+							</a>
+						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Outcome</dt>
 						<dd class="govuk-summary-list__value">Complete, Year complete 1993</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Outcome</span>
+							</a>
+						</dd>
 				  	</div>
 				  	<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Additional detail</dt>
 						<dd class="govuk-summary-list__value">Not known</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Additional detail</span>
+							</a>
+						</dd>
 					</div>
 			  		<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Source of information</dt>
 						<dd class="govuk-summary-list__value">Spoke to POM</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Source of information</span>
+							</a>
+						</dd>
 		  			</div> 
 			  	</dl>
 			</div>
