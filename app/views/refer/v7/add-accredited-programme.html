@@ -18,7 +18,11 @@ Add Accredited Programme - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+		{% if data ['camefromcheckanswers'] == "true" %}
+		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% else %}
 		<form action="add-programme-details" method="post">
+		{% endif %}
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="programme-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">

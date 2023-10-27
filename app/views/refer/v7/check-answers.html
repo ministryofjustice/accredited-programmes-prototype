@@ -167,7 +167,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Kaizen</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-accredited-programme">
+							<a class="govuk-link" href="add-accredited-programme?camefromcheckanswers=true&">
 							  Change<span class="govuk-visually-hidden"> Programme name</span>
 							</a>
 						</dd>
@@ -186,7 +186,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-programme-details">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
 							  Change<span class="govuk-visually-hidden"> Setting</span>
 							</a>
 						</dd>
@@ -401,7 +401,11 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm this information is correct</h2>
+		{% if data ['camefromcheckanswers'] == "true" %}
+		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% else %}
 		<form action="confirmation" method="post">
+		{% endif %}
 			<div class="govuk-form-group">
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
