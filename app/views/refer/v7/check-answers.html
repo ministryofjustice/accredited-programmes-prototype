@@ -205,7 +205,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-programme-details">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
 							  Change<span class="govuk-visually-hidden"> Outcome</span>
 							</a>
 						</dd>
@@ -220,7 +220,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-programme-details">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
 							  Change<span class="govuk-visually-hidden"> Additional detail</span>
 							</a>
 						</dd>
@@ -235,7 +235,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Found on OASys</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-programme-details">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
 							  Change<span class="govuk-visually-hidden"> Source of information</span>
 							</a>
 						</dd>
@@ -383,7 +383,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<h2 class="govuk-summary-card__title">Add Additional information</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="add-additional-information">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
+						<a class="govuk-link" href="add-additional-information?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
 					</li>
 			  	</ul>
 			</div>
@@ -401,11 +401,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm this information is correct</h2>
-		{% if data ['camefromcheckanswers'] == "true" %}
-		<form action="check-answers?camefromcheckanswers=false&" method="post">
-		{% else %}
 		<form action="confirmation" method="post">
-		{% endif %}
 			<div class="govuk-form-group">
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">

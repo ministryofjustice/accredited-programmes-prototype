@@ -26,7 +26,11 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 			<li>Their offence history and behaviour</li>
 			<li>Information to support an override</li>
 		</ul>
+		{% if data ['camefromcheckanswers'] == "true" %}
+		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% else %}
 		<form action="task-list?referral-information-three=done&" method="post">
+		{% endif %}
 			<div class="govuk-form-group">
 				<label class="govuk-label govuk-label--s" for="provide-additional-information">Provide additional information</label>
 				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5">{{ data['provide-additional-information'] }}</textarea>
