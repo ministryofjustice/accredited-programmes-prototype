@@ -21,6 +21,8 @@ Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
 		<h1 class="govuk-heading-l">Add Accredited Programme details</h1>
 		{% if data ['camefromcheckanswers'] == "true" %}
 		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% elseif data ['camefromaccreditedprogrammeanswers'] == "true" %}
+		<form action="accredited-programme-history-added?camefromaccreditedprogrammeanswers=false&" method="post">
 		{% else %}
 		<form action="accredited-programme-history-added" method="post">
 		{% endif %}

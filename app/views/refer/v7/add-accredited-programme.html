@@ -20,6 +20,8 @@ Add Accredited Programme - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 		{% if data ['camefromcheckanswers'] == "true" %}
 		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% elseif data ['camefromaccreditedprogrammeanswers'] == "true" %}
+		<form action="accredited-programme-history-added?camefromaccreditedprogrammeanswers=false&" method="post">
 		{% else %}
 		<form action="add-programme-details" method="post">
 		{% endif %}

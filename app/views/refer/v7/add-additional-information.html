@@ -28,6 +28,8 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 		</ul>
 		{% if data ['camefromcheckanswers'] == "true" %}
 		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% elseif data ['camefromaccreditedprogrammeanswers'] == "true" %}
+		<form action="accredited-programme-history-added?camefromaccreditedprogrammeanswers=false&" method="post">
 		{% else %}
 		<form action="task-list?referral-information-three=done&" method="post">
 		{% endif %}
