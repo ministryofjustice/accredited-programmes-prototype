@@ -383,14 +383,18 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<h2 class="govuk-summary-card__title">Add Additional information</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
+						<a class="govuk-link" href="add-additional-information">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
 					</li>
 			  	</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
+						{% if data['provide-additional-information'] %}
+						<p class="govuk-!-margin-bottom-2">{{ data['provide-additional-information'] }}</p>
+						{% else %}
 						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+						{% endif %}
 					</div>
 				</dl>
 			</div>
