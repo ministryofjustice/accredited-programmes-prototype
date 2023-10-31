@@ -1,0 +1,345 @@
+.dps-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #0b0c0c
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header {
+    padding-top:15px
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header {
+    padding-bottom:15px
+  }
+}
+
+.dps-header__container {
+  max-width: 1170px;
+  margin-right: 15px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+@supports(margin: unquote('max(calc(0px)))')) {
+  .dps-header__container {
+    margin-right: unquote('max(15px, calc(15px + env(safe-area-inset-right)))');
+    margin-left: unquote('max(15px, calc(15px + env(safe-area-inset-left)))')
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__container {
+    margin-right:30px;
+    margin-left: 30px
+  }
+
+  @supports(margin: unquote('max(calc(0px)))')) {
+    .dps-header__container {
+      margin-right:unquote('max(30px, calc(15px + env(safe-area-inset-right)))');
+      margin-left: unquote('max(30px, calc(15px + env(safe-area-inset-left)))')
+    }
+  }
+}
+
+@media(min-width: 1230px) {
+  .dps-header__container {
+    margin-right:auto;
+    margin-left: auto
+  }
+
+  @supports(margin: unquote('max(calc(0px)))')) {
+    .dps-header__container {
+      margin-right:auto;
+      margin-left: auto
+    }
+  }
+}
+
+.dps-header__logo {
+  margin-right: 10px;
+  position: relative;
+  top: -2px;
+  fill: #fff
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__logo {
+    margin-right:10px
+  }
+}
+
+.dps-header__title {
+  padding-right: 15px;
+  display: flex;
+  align-items: center
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__title {
+    padding-right:15px
+  }
+}
+
+.dps-header__title__organisation-name {
+  margin-right: 10px;
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
+  display: flex;
+  align-items: center
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__title__organisation-name {
+    margin-right:10px
+  }
+}
+
+@media print {
+  .dps-header__title__organisation-name {
+    font-family: sans-serif
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__title__organisation-name {
+    font-size:24px;
+    font-size: 1.5rem;
+    line-height: 1.25
+  }
+}
+
+@media print {
+  .dps-header__title__organisation-name {
+    font-size: 18pt;
+    line-height: 1.15
+  }
+}
+
+.dps-header__title__service-name {
+  display: none;
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1111111111
+}
+
+@media print {
+  .dps-header__title__service-name {
+    font-family: sans-serif
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__title__service-name {
+    font-size:24px;
+    font-size: 1.5rem;
+    line-height: 1.25
+  }
+}
+
+@media print {
+  .dps-header__title__service-name {
+    font-size: 18pt;
+    line-height: 1.15
+  }
+}
+
+@media(min-width: 48.0625em) {
+  .dps-header__title__service-name {
+    display:inline-block
+  }
+}
+
+.dps-header__link {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+@media print {
+  .dps-header__link {
+    font-family: sans-serif
+  }
+}
+
+.dps-header__link:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #fd0;
+  box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+  text-decoration: none
+}
+
+.dps-header__link:link {
+  color: #1d70b8
+}
+
+.dps-header__link:visited {
+  color: #4c2c92
+}
+
+.dps-header__link:hover {
+  color: #003078
+}
+
+.dps-header__link:active {
+  color: #0b0c0c
+}
+
+.dps-header__link:focus {
+  color: #0b0c0c
+}
+
+.dps-header__link:link,.dps-header__link:visited,.dps-header__link:active {
+  color: #fff;
+  text-decoration: none
+}
+
+.dps-header__link:hover {
+  text-decoration: underline
+}
+
+.dps-header__link:focus {
+  color: #0b0c0c
+}
+
+.dps-header__link:focus svg {
+  fill: #0b0c0c
+}
+
+.dps-header__link__sub-text {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.1428571429;
+  display: none
+}
+
+@media print {
+  .dps-header__link__sub-text {
+    font-family: sans-serif
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__link__sub-text {
+    font-size:16px;
+    font-size: 1rem;
+    line-height: 1.25
+  }
+}
+
+@media print {
+  .dps-header__link__sub-text {
+    font-size: 14pt;
+    line-height: 1.2
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__link__sub-text {
+    display:block
+  }
+}
+
+.dps-header__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__navigation {
+    flex-direction:row;
+    align-items: center
+  }
+}
+
+.dps-header__navigation__item {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 5px;
+  text-align: right
+}
+
+@media print {
+  .dps-header__navigation__item {
+    font-family: sans-serif
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__navigation__item {
+    font-size:19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737
+  }
+}
+
+@media print {
+  .dps-header__navigation__item {
+    font-size: 14pt;
+    line-height: 1.15
+  }
+}
+
+@media(min-width: 40.0625em) {
+  .dps-header__navigation__item {
+    margin-right:15px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    border-right: 1px solid #fff
+  }
+}
+
+@media(min-width: 40.0625em)and (min-width: 40.0625em) {
+  .dps-header__navigation__item {
+    margin-right:20px
+  }
+}
+
+@media(min-width: 40.0625em)and (min-width: 40.0625em) {
+  .dps-header__navigation__item {
+    padding-right:20px
+  }
+}
+
+.dps-header__navigation__item a {
+  display: inline-block
+}
+
+.dps-header__navigation__item:last-child {
+  margin-right: 0;
+  border-right: 0;
+  padding-right: 0
+}
+
+@media print {
+  .dps-header {
+    display: none
+  }
+}
