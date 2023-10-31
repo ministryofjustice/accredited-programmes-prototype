@@ -18,37 +18,21 @@ Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
         <p class="govuk-body govuk-hint">Leave blank to view all results for selected residential location</p>
         <form class="horizontal-form" data-test="homepage-search-form" class="form" action="search-results" method="post">
             <div class="govuk-form-group">
-                <label class="govuk-label" for="prisoner-name">Name or prison number</label> <input class="govuk-input" data-test="homepage-search-keywords" id="prisoner-name" name="prisoner-name" type="text">
+                <label class="govuk-label" for="prisoner-name">Name or prison number</label>
+				<input class="govuk-input" data-test="homepage-search-keywords" id="prisoner-name" name="prisoner-name" type="text">
             </div>
             <div class="govuk-form-group">
-                <label class="govuk-label" for="location">Residential location</label> <select class="govuk-select" data-test="homepage-search-location" id="location" name="location">
-                    <option value="WRI">
-                         (HMP)
-                    </option>
-                    <option value="WRI-A">
-                        A
-                    </option>
-                    <option value="WRI-B">
-                        B
-                    </option>
-                    <option value="WRI-C">
-                        C
-                    </option>
-                    <option value="WRI-D">
-                        D
-                    </option>
-                    <option value="WRI-E">
-                        E
-                    </option>
-                    <option value="WRI-F">
-                        F
-                    </option>
-                    <option value="WRI-H">
-                        H
-                    </option>
-                    <option value="WRI-S">
-                        S
-                    </option>
+                <label class="govuk-label" for="location">Residential location</label> 
+				<select class="govuk-select" data-test="homepage-search-location" id="location" name="location">
+                    <option value="WRI">(HMP)</option>
+                    <option value="WRI-A">A</option>
+                    <option value="WRI-B">B</option>
+                    <option value="WRI-C">C</option>
+                    <option value="WRI-D">D</option>
+                    <option value="WRI-E">E</option>
+                    <option value="WRI-F">F</option>
+                    <option value="WRI-H">H</option>
+                    <option value="WRI-S">S</option>
                 </select>
             </div><button class="govuk-button" data-module="govuk-button" type="submit" onclick="showAlert()">Search</button>
         </form>
@@ -58,19 +42,19 @@ Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="moj-width-container">
         <ul class="govuk-grid-row card-group">
             <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#" onclick="showAlert()">Manage prisoner whereabouts</a>
+                    </h2>
+                    <p class="govuk-body card__description">View unlock lists, all appointments, COVID units and who is due to leave the establishment soon, manage attendance and add bulk appointments.</p>
+                </div>
+            </li>
+			<li class="govuk-grid-column-one-third card-group__item">
                 <div class="card card--clickable" data-test="global-search">
                     <h2 class="govuk-heading-m card__heading">
                         <a class="govuk-link card__link govuk-link--no-visited-state" href="#" onclick="showAlert()">Global search</a>
                     </h2>
                     <p class="govuk-body card__description">Search for someone in any establishment, or who has been released.</p>
-                </div>
-            </li>
-            <li class="govuk-grid-column-one-third card-group__item">
-                <div class="card card--clickable" data-test="manage-prisoner-whereabouts">
-                    <h2 class="govuk-heading-m card__heading">
-                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#" onclick="showAlert()">Manage prisoner whereabouts</a>
-                    </h2>
-                    <p class="govuk-body card__description">View unlock lists and manage attendance.</p>
                 </div>
             </li>
             <li class="govuk-grid-column-one-third card-group__item">
