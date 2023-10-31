@@ -408,6 +408,19 @@ $low-score-colour__text: #485b10;
   margin-left: 15px;
 }
 
+@media (min-width: 40.0625em) {
+.moj-width-container {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 1230px) {
+  .moj-width-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .homepage-search {
   padding: 30px 0;
   background-color: #e0eef8;
@@ -416,6 +429,10 @@ $low-score-colour__text: #485b10;
 .homepage-content {
   padding: 30px 0;
   background: #f0f4f5;
+}
+
+.homepage-content {
+  margin-bottom: -50px;
 }
 
 .card {
@@ -522,6 +539,13 @@ $low-score-colour__text: #485b10;
   }
 }
 
+@media (min-width: 1230px) {
+  .location-bar {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .location-bar__location {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -531,4 +555,69 @@ $low-score-colour__text: #485b10;
   font-size: 1rem;
   line-height: 1.25;
   margin-right: 15px;
+}
+
+@media (min-width: 40.0625em) {
+.location-bar__location {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+
+.horizontal-form * {
+  width: 100%;
+}
+
+@media (min-width: 48.0625em) {
+  .horizontal-form {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .horizontal-form * {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .horizontal-form > div {
+    margin-right: 15px;
+  }
+  .horizontal-form .date-picker-container input {
+    width: auto;
+  }
+  .horizontal-form label {
+    margin-bottom: 5px;
+  }
+  .horizontal-form button {
+    margin-right: 15px;
+  }
+  .horizontal-form a {
+    margin-top: 15px;
+  }
+  .horizontal-form button, .horizontal-form a {
+    align-self: flex-end;
+    margin-bottom: 2px;
+  }
+}
+.horizontal-links > a {
+  margin-right: 10px;
+}
+
+@media (min-width: 48.0625em) {
+  .horizontal-links {
+    display: flex;
+  }
+  .horizontal-links * {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .horizontal-links > a {
+    margin-right: 15px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.establishment-roll {
+  margin-bottom: 15px;
 }
