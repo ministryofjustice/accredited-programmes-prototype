@@ -402,13 +402,12 @@ $low-score-colour__text: #485b10;
 // DPS header
 @import "components/dps-header";
 
-.dps-home .govuk-width-container {
+.moj-special-width-container {
   max-width: initial !important;
 }
 
-.dps-home footer .govuk-width-container {
-  max-width: 1220px !important;
-  margin: 0 auto;
+.moj-special-width-container {
+  margin: 0 !important;
 }
 
 .moj-width-container {
