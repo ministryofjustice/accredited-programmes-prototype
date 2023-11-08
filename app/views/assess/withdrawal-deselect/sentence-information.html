@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+			 	</li>
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+			  	</li>
+		  	</ul>
+		</nav>
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<ul class="govuk-list">
+			<li><strong>Programme name:</strong> Becoming New Me Plus (BNM+)</li>
+			<li><strong>Programme strand:</strong> Intimate partner violence</li>
+			<li><strong>Programme location:</strong> HMP Erlestoke</li>
+		</ul>
+		<ul class="govuk-list">
+			<li><strong>Date referred:</strong> 11 June 2023</li>
+			<li><strong>Referrer name:</strong> Jordan Smith</li>
+			<li><strong>Referrer email address:</strong> <a href="mailto:interventions.erlestoke@justice.gov.uk" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></li>
+			<li><strong>Referrer contact number:</strong> 01380 814250</li>
+		</ul>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="programme-history">Programme history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="risk-scores-alerts">Risk scores and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="offence-history">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="sentence-information" aria-current="location">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="additional-information">Additional information</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 1 November 2022</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Sentence details</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Sentence type</dt>
+							<dd class="govuk-summary-list__value">Concurrent determinate sentence</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Sentence date</dt>
+							<dd class="govuk-summary-list__value">5 June 2020</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Release dates</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Earliest release date </dt>
+							<dd class="govuk-summary-list__value">12 Aug 2024</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Conditional release date</dt>
+							<dd class="govuk-summary-list__value">12 Aug 2024</dd>
+						</div> 
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Tariff end date</dt>
+							<dd class="govuk-summary-list__value">12 Aug 2028</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Sentence end date</dt>
+							<dd class="govuk-summary-list__value">5 Jun 2028</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

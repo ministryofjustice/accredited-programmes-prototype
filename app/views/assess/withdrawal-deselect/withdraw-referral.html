@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="status-history" method="post">
+			<h1 class="govuk-heading-l">Withdraw referral</h1>
+			<p class="govuk-body">Withdrawing a referral means that the person can no longer participate in the programme. You can choose to close the referral or return the person to the waiting list.</p>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Select reason category</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason" name="withdrawal-reason" type="radio" value="personal-health">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason">Personal and health</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-2" name="withdrawal-reason" type="radio" value="motivation-behaviour">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-2">Motivation and behaviour</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-3" name="withdrawal-reason" type="radio" value="operational">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-3">Operational</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-4" name="withdrawal-reason" type="radio" value="administrative-error">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-4">Administrative error</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-5" name="withdrawal-reason" type="radio" value="other">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-5">Other</label>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
