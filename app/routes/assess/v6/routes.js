@@ -7,3 +7,4 @@ module.exports = function (router) {
         res.redirect('status-history')
   });
 }
+

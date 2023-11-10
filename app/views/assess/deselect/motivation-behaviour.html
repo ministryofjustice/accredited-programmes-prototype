@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Motivation and behaviour - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="#" method="post">
+			<h1 class="govuk-heading-l">Motivation and behaviour</h1>
+			<p class="govuk-body">TBC</p>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Select reason category</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health" name="withdrawal-reason-personal-health" type="radio" value="personal-reasons" data-aria-controls="conditional-withdrawal-reason-personal-health">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health">Personal reasons</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-withdrawal-reason-personal-health">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="add-notes-optional" rows="5">{{ data['add-notes-optional'] }}</textarea>
+							</div>
+						</div>
+
+						
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health-2" name="withdrawal-reason-personal-health" type="radio" value="medical-health-reasons">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health-2">Medical or health reasons</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health-3" name="withdrawal-reason-personal-health" type="radio" value="instructed-solicitor">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health-3">Instructed by solicitor not to attend</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health-4" name="withdrawal-reason-personal-health" type="radio" value="drug-use">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health-4">Drug use</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health-5" name="withdrawal-reason-personal-health" type="radio" value="risk-scores-changed">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health-5">Risk scores changed</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-personal-health-6" name="withdrawal-reason-personal-health" type="radio" value="death">
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-personal-health-6">Death</label>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

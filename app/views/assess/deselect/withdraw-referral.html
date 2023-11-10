@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history" method="post">
+		<form action="withdraw-referral-answer" method="post">
 			<h1 class="govuk-heading-l">Withdraw referral</h1>
 			<p class="govuk-body">Withdrawing a referral means that the person can no longer participate in the programme. You can choose to close the referral or return the person to the waiting list.</p>
 			<div class="govuk-form-group">
@@ -43,8 +43,14 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-4">Administrative error</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="withdrawal-reason-5" name="withdrawal-reason" type="radio" value="other">
+							<input class="govuk-radios__input" id="withdrawal-reason-5" name="withdrawal-reason" type="radio" value="Other" data-aria-controls="conditional-withdrawal-reason-5" {{ checked("withdrawal-reason", "Other") }}>
 							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-5">Other</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-withdrawal-reason-5">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="withdrawal-reason-other">Enter reason</label>
+								<input class="govuk-input govuk-!-width-two-thirds" id="withdrawal-reason-other" name="withdrawal-reason-other" value="{{ data['withdrawal-reason-other'] }}">
+							</div>
 						</div>
 					</div>
 				</fieldset>
