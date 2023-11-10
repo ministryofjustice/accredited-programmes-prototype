@@ -13,12 +13,16 @@ require('./routes/assess/v6/routes.js')(router);
 
 
 
-  router.post('/withdraw-referral-answer', function (req, res) {
-    const withdrawalReason = req.session.data['withdrawal-reason']
-
-      if (withdrawalReason == 'Personal and health'){
-        res.redirect('personal-health')
-      }else {
-        res.redirect('motivation-behaviour')
-      }
-  });
+router.get('/assess/deselect/withdraw-referral', function (req, res) {
+    res.render('/assess/deselect/withdraw-referral')
+ });
+ 
+ router.post('/assess/deselect/withdraw-referral', function (req, res) {
+     const withdrawalReason = req.session.data['withdrawal-reason']
+ 
+       if (withdrawalReason == 'Personal and health'){
+         res.redirect('personal-health')
+       }else {
+         res.redirect('motivation-behaviour')
+       }
+   });
