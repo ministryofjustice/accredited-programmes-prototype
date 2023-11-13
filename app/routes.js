@@ -16,14 +16,23 @@ router.get('/refer/features/withdrawal/v1/withdraw-referral', function (req, res
 });
 
 router.post('/refer/features/withdrawal/v1/withdraw-referral', function (req, res) {
-   const withdrawalReason = req.session.data['reason-category']
-
-     if (withdrawalReason == 'Personal and health'){
-       res.redirect('personal-health')
-     } else {
-       res.redirect('motivation-behaviour')
-     }
- });
+	const withdrawalReason = req.session.data['reason-category']
+    	if (withdrawalReason == 'Personal and health') {
+			res.redirect('personal-health')
+     	} 
+		else if (withdrawalReason == 'Motivation and behaviour') {
+       		res.redirect('motivation-behaviour')
+     	}
+		else if (withdrawalReason == 'Operational') {
+			res.redirect('operational')
+	  	}
+		else if (withdrawalReason == 'Administrative error') {
+			res.redirect('administrative-error')
+	  	}
+		else {
+			res.redirect('other')
+	  	}
+ 	});
 
 
 router.get('/assess/deselect/withdraw-referral', function (req, res) {
