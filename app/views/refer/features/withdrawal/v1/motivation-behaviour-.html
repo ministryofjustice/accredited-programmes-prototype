@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+Motivation and behaviour - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="withdraw-referral" method="post">
+		<form action="#" method="post">
 			<h1 class="govuk-heading-l">Withdraw referral</h1>
 			<p class="govuk-body">Withdrawing a referral means that the person can no longer participate in the programme. You can choose to close the refferal or return the person to the waiting list.</p>
 			<h2 class="govuk-heading-m">Current status details</h2>
@@ -44,31 +44,29 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Personal and health">
-							<label class="govuk-label govuk-radios__label" for="reason-category">Personal and health</label>
+							<input class="govuk-radios__input" id="specific-reason-motivation-behaviour" name="specific-reason-motivation-behaviour" type="radio" value="Motivation changed" data-aria-controls="conditional-specific-reason-motivation-behaviour">
+							<label class="govuk-label govuk-radios__label" for="specific-reason-motivation-behaviour">Motivation changed</label>
 						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour">
-							<label class="govuk-label govuk-radios__label" for="reason-category-2">Motivation and behaviour</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-3" name="reason-category" type="radio" value="Operational">
-							<label class="govuk-label govuk-radios__label" for="reason-category-3">Operational</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-4" name="reason-category" type="radio" value="Administrative error">
-							<label class="govuk-label govuk-radios__label" for="reason-category-4">Administrative error</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-5" name="reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-5" {{ checked("reason-category", "Other") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-5">Other</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-5">
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-motivation-behaviour">
 							<div class="govuk-form-group">
-								<label class="govuk-label" for="reason-category-other">Enter reason</label>
-								<input class="govuk-input govuk-!-width-two-thirds" id="reason-category-other" name="reason-category-other" value="{{ data['reason-category-other'] }}">
+								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="add-notes-optional" rows="5">{{ data['add-notes-optional'] }}</textarea>
 							</div>
 						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="specific-reason-motivation-behaviour-2" name="specific-reason-motivation-behaviour" type="radio" value="Behaviour problems" data-aria-controls="conditional-specific-reason-motivation-behaviour">
+							<label class="govuk-label govuk-radios__label" for="specific-reason-motivation-behaviour-2">Behaviour problems</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-motivation-behaviour">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="add-notes-optional" rows="5">{{ data['add-notes-optional'] }}</textarea>
+							</div>
+						</div>
+
+						
+						
 					</div>
 				</fieldset>
 				<div class="govuk-button-group govuk-!-margin-top-6">
