@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="close-referral" method="post">
+		<form action="status-history" method="post">
 			<h1 class="govuk-heading-l">Withdraw referral</h1>
 			<p class="govuk-body">Withdrawing a referral means that the person can no longer participate in the programme.</p>
 			<h2 class="govuk-heading-m">Current status details</h2>
@@ -133,8 +133,14 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 					</div>
 				</fieldset>
-				<div class="govuk-button-group govuk-!-margin-top-6">
-					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				<div class="govuk-warning-text govuk-!-margin-top-2">
+					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+					<strong class="govuk-warning-text__text">
+						<span class="govuk-warning-text__assistive">Warning</span>This referral is going to be closed.</strong>
+				</div> 
+				<div class="govuk-button-group govuk-!-margin-top-4">
+					<button class="govuk-button" data-module="govuk-button">Submit</button>
+					<a class="govuk-link" href="#">Cancel</a>
 				</div>
 			</div>
 		</form>

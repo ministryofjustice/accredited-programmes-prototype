@@ -24,8 +24,12 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			</div>
 			<div class="moj-page-header-actions__actions">
 	  			<div class="moj-button-menu">
-					<div class="moj-button-menu__wrapper">	
+					<div class="moj-button-menu__wrapper">
+						{% if data['operational'] == "Other type of release" %}	
+						<a class="govuk-button govuk-button--disabled moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="withdraw-referral">Withdraw referral</a>
+						{% else %}
 						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="withdraw-referral">Withdraw referral</a>
+						{% endif %}
 					</div>
 	  			</div>
 			</div>
@@ -54,7 +58,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			<a class="govuk-button" href="#">Update status</a>
 		</div>
 		<div class="moj-timeline">
-			{% if data['personal-health'] == "Personal reasons" or data['operational'] == "Other type of release" %}
+			{% if data['operational'] == "Other type of release" %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Status update</h2>
@@ -65,7 +69,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<p class="govuk-body">{{ data['add-notes'] }}</p>
-					<strong class="govuk-tag govuk-tag--grey">Referral closed</strong>
+					<strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong>
 			  	</div>
 			</div>
 			{% else %}
