@@ -30,7 +30,6 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 					<time datetime="2023-07-03T14:09:00.000Z">8 August 2023 at 1:33pm</time>
 				</p>
 				<div class="moj-timeline__description">
-					<!-- <p class="govuk-body">{{ data['add-notes'] }}</p> -->
 					<strong class="govuk-tag govuk-tag--green">On programme</strong>
 			  	</div>
 			</div>
@@ -47,7 +46,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="suitability" name="suitability" type="radio" value="suitable" data-aria-controls="conditional-suitability">
 							<label class="govuk-label govuk-radios__label govuk-label--s" for="suitability">This person is suitable</label>
-							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has passed the assessment and is suitable for this programme.</div>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has been deselected but they are still suitable for a programme.</div>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-suitability">
 							<div class="govuk-form-group">
@@ -58,12 +57,12 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="suitability-2" name="suitability" type="radio" value="suitable-not-ready" data-aria-controls="conditional-suitability-2">
 							<label class="govuk-label govuk-radios__label govuk-label--s" for="suitability-2">This person is suitable but not ready</label>
-							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has passed the assessment and is suitable for this programme but is not yet ready. You must provide a reason.</div>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has been deselected but are not yet ready to start a programme.</div>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-suitability-2">
 							<div class="govuk-form-group">
-								<label class="govuk-label" for="add-reason">Add reason</label>
-								<textarea class="govuk-textarea" id="add-reason" name="add-reason" rows="5"></textarea>
+								<label class="govuk-label" for="add-notes-optional-2">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional-2" name="add-notes-optional-2" rows="5"></textarea>
 							</div>
 						</div>
 					</div>
