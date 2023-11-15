@@ -34,17 +34,22 @@ router.post('/refer/features/withdrawal/v1/withdraw-referral', function (req, re
 	  	}
  	});
 
-
-router.get('/assess/deselect/withdraw-referral', function (req, res) {
-    res.render('/assess/deselect/withdraw-referral')
- });
- 
- router.post('/assess/deselect/withdraw-referral', function (req, res) {
-     const withdrawalReason = req.session.data['withdrawal-reason']
- 
-       if (withdrawalReason == 'Personal and health'){
-         res.redirect('personal-health')
-       }else {
-         res.redirect('motivation-behaviour')
-       }
-   });
+router.get('/assess/features/deselection/v1/deselection', function (req, res) {
+		res.render('/assess/features/deselection/v1/deselection')
+	});
+	  
+router.post('/assess/features/deselection/v1/deselection', function (req, res) {
+	const deselectionReason = req.session.data['deselection-reason-category']
+		if (deselectionReason == 'Personal and health') {
+			res.redirect('personal-health')
+		} 
+		else if (deselectionReason == 'Group management') {
+				res.redirect('group-management')
+		}
+		else if (deselectionReason == 'Operational') {
+			res.redirect('operational')
+		}
+		else {
+			res.redirect('other')
+		}
+	});

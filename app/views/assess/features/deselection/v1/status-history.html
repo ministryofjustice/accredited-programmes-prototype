@@ -25,7 +25,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			<div class="moj-page-header-actions__actions">
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
-						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="deselect">Deselect</a>
+						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="deselection">Deselection</a>
 					</div>
 	  			</div>
 			</div>
@@ -57,11 +57,20 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<h2 class="moj-timeline__title">Status update</h2>
 					<p class="moj-timeline__byline">by Carol Duffy</p>
 			  	</div>
+				{% if data['suitability'] %}
 			  	<p class="moj-timeline__date">
 					<time datetime="2023-07-03T14:09:00.000Z">8 August 2023 at 1:33pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<p class="govuk-body">{{ data['add-notes-optional'] }}</p>
+					<p class="govuk-body">{{ data['add-notes'] }}</p>
+					<strong class="govuk-tag govuk-tag--green">On programme</strong>
+			  	</div>
+				{% endif %}
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-03T14:09:00.000Z">8 August 2023 at 1:33pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-notes'] }}</p>
 					<strong class="govuk-tag govuk-tag--green">On programme</strong>
 			  	</div>
 			</div>
