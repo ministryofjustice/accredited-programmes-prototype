@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<!-- <div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Make a referral</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4"><span class="govuk-!-font-weight-regular">HMP Erlestoke | </span>Becoming New Me Plus (BNM+)</h2>
+		<strong class="govuk-tag govuk-tag--green">Intimate partner violence</strong>
+      	<ul class="govuk-prototype-kit-task-list govuk-!-margin-top-8">
+			<li>
+				<h2 class="govuk-prototype-kit-task-list__section">Personal details</h2>
+				<ul class="govuk-prototype-kit-task-list__items">
+					<li class="govuk-prototype-kit-task-list__item">
+						<span class="govuk-prototype-kit-task-list__task-name">
+							<a href="check-details" aria-describedby="confirm-personal-details-status">Confirm personal details</a>
+						</span>
+						<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="confirm-personal-details-status">Completed</strong>
+					</li>
+				</ul>
+			</li>
+        	<li>
+          		<h2 class="govuk-prototype-kit-task-list__section">Referral information</h2>
+          		<ul class="govuk-prototype-kit-task-list__items">
+            		<li class="govuk-prototype-kit-task-list__item">
+              			<span class="govuk-prototype-kit-task-list__task-name">
+                			<a href="accredited-programme-history" aria-describedby="review-accredited-programme-history-status">Review Accredited Programme history</a>
+              			</span>
+						{% if (data['referral-information-one'] == "done") %}
+						<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="confirm-personal-details-status">Completed</strong>
+						{% else %}
+              			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+            			{% endif %}
+            		</li>
+            		<li class="govuk-prototype-kit-task-list__item">
+              			<span class="govuk-prototype-kit-task-list__task-name">
+                			<a href="confirm-oasys-information" aria-describedby="confirm-oasys-information-status">Confirm the OASys information</a>
+              			</span>
+						{% if (data['referral-information-two'] == "done") %}
+              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
+						{% else %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% endif %}
+            		</li>
+            		<li class="govuk-prototype-kit-task-list__item">
+              			<span class="govuk-prototype-kit-task-list__task-name">
+                			<a href="add-additional-information" aria-describedby="additional-information">Add additional information</a>
+              			</span>
+						{% if (data['referral-information-three'] == "done") %}
+              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
+						{% else %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
+						{% endif %}
+            		</li>
+          		</ul>
+        	</li>
+        	<li>
+          		<h2 class="govuk-prototype-kit-task-list__section">Check answers and submit</h2>
+				<ul class="govuk-prototype-kit-task-list__items">
+					<li class="govuk-prototype-kit-task-list__item">
+						<span class="govuk-prototype-kit-task-list__task-name">
+							<a href="check-answers" aria-describedby="check-answers-status">Check answers and submit</a>
+						</span>
+						{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="check-answers-status">Not started</strong>
+						{% else %}
+						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="check-answers-status">Cannot start yet</strong>
+						{% endif %}
+					</li>
+				</ul>
+        	</li>
+      	</ul>
+		<a href="#" class="govuk-button govuk-button--secondary">Save and come back later</a>
+	</div>
+</div>
+{% endblock %}
