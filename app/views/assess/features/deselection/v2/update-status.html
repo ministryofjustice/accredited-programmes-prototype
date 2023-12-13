@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> 
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update status of referral</h1>
+		<p class="govuk-body">Record all decisions so that the status of a referral is up to date.</p>
+		<h2 class="govuk-heading-m">Current status details</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+				</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-03T14:09:00.000Z">8 August 2023 at 1:33pm</time>
+				</p>
+				<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">On programme</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<form action="status-history" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="eligibility-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Select decision</h2>
+					</legend>
+					<!-- <div id="eligibility-hint" class="govuk-hint">Select one option.</div> -->
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="suitability" name="suitability" type="radio" value="suitable" data-aria-controls="conditional-suitability">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="suitability">This person is suitable</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has been deselected but they are still suitable for a programme.</div>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-suitability">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-notes-optional">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional" name="add-notes-optional" rows="5"></textarea>
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="suitability-2" name="suitability" type="radio" value="suitable-not-ready" data-aria-controls="conditional-suitability-2">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="suitability-2">This person is suitable but not ready</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The person has been deselected but are not yet ready to start a programme.</div>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-suitability-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-notes-optional-2">Add notes (optional)</label>
+								<textarea class="govuk-textarea" id="add-notes-optional-2" name="add-notes-optional-2" rows="5"></textarea>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-warning-text">
+					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+					<strong class="govuk-warning-text__text">
+						<span class="govuk-warning-text__assistive">Warning</span>
+						This decision will change the referral status.
+					</strong>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-top-4">
+					<button class="govuk-button" data-module="govuk-button">Submit</button>
+					<a class="govuk-link" href="#">Cancel</a>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
