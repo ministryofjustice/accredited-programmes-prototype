@@ -55,7 +55,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="select" selected>Select</option>
 						<option value="assessed-suitable">Assessed as suitable</option>
 						<option value="assessment-started">Assessment started</option>
-						<option value="awaiting-assessment">Awaiting assessment</option>
+						<option value="assessment-started">Awaiting assessment</option>
 						<option value="on-programme">On programme</option>
 						<!-- <option value="place-allocated">Place allocated</option> -->
 						<option value="referral-submitted">Referral submitted</option>
@@ -93,9 +93,9 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['awaiting-assessment'] == "withdraw-referral" %}
+				{% if data['assessment-started'] == "not-suitable" or data['assessment-started'] == "withdraw-referral" %}
 				<!-- -->
-				{% elseif data['awaiting-assessment'] == "assessment-started" or data['awaiting-assessment'] == "on-hold" %}
+				{% elseif data['assessment-started'] == "assessed-suitable" or data['assessment-started'] == "suitable-not-ready" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -103,10 +103,10 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">N/A</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Extended determinate recall</td>
-					{% if data['awaiting-assessment'] == "on-hold" %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On hold</strong></td>
+					{% if data['assessment-started'] == "assessed-suitable" %}
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessed as suitable</strong></td>
 					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Assessment started</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--turquoise">Suitable but not ready</strong></td>
 					{% endif %}
 			  	</tr>
 				{% else %}
