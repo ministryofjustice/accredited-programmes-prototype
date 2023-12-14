@@ -103,9 +103,9 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong></td>
 			  	</tr>
-				{% elseif data['referral-submitted'] == "not-eligible" or data['referral-submitted'] == "withdraw-referral" %}
+				{% elseif data['awaiting-assessment'] == "withdraw-referral" %}
 				<!-- -->
-				{% elseif data['referral-submitted'] == "on-hold" %}
+				{% elseif data['awaiting-assessment'] == "assessment-started" or data['awaiting-assessment'] == "on-hold" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -113,7 +113,11 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">N/A</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Extended determinate recall</td>
+					{% if data['awaiting-assessment'] == "on-hold" %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On hold</strong></td>
+					{% else %}
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Assessment started</strong></td>
+					{% endif %}
 			  	</tr>
 				{% else %}
 				<tr class="govuk-table__row">
