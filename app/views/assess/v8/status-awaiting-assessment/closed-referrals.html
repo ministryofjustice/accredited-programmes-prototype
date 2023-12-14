@@ -94,28 +94,20 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "not-eligible" %}
+				{% if data['referral-submitted'] == "not-eligible" or data['awaiting-assessment'] == "withdraw-referral" %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
 					<td class="govuk-table__cell">1 Dec 2025</td>
 					<td class="govuk-table__cell">N/A</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
+					{% if data['awaiting-assessment'] == "not-eligible" %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
-				</tr>
-				{% endif %}
-				{% if data['awaiting-assessment'] == "withdraw-referral" %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
+					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+					{% endif %}
 				</tr>
 				{% endif %}
 			  	<tr class="govuk-table__row">
