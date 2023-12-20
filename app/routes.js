@@ -36,10 +36,35 @@ router.post('/refer/features/withdrawal/v1/withdraw-referral', function (req, re
 	  	}
  	});
 
+	router.get('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
+		res.render('/refer/features/withdrawal/v2/withdraw-referral')
+	});
+	  
+	router.post('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
+		const withdrawalReason = req.session.data['reason-category']
+			if (withdrawalReason == 'Administrative error (referrers only)') {
+				res.redirect('administrative-error')
+			} 
+			else if (withdrawalReason == 'Motivation and behaviour') {
+					res.redirect('motivation-behaviour')
+			}
+			else if (withdrawalReason == 'Operational') {
+				res.redirect('operational')
+			}
+			else if (withdrawalReason == 'Other') {
+				res.redirect('other')
+			}
+			else {
+				res.redirect('personal-health')
+			}
+		});
+
+
 router.get('/assess/features/deselection/v1/deselection', function (req, res) {
 		res.render('/assess/features/deselection/v1/deselection')
 	});
 	  
+
 router.post('/assess/features/deselection/v1/deselection', function (req, res) {
 	const deselectionReason = req.session.data['deselection-reason-category']
 		if (deselectionReason == 'Personal and health') {
@@ -53,5 +78,25 @@ router.post('/assess/features/deselection/v1/deselection', function (req, res) {
 		}
 		else {
 			res.redirect('other')
+		}
+	});
+
+router.get('/assess/features/deselection/v2/deselection', function (req, res) {
+		res.render('/assess/features/deselection/v2/deselection')
+	});
+	  
+router.post('/assess/features/deselection/v2/deselection', function (req, res) {
+	const deselectionReason = req.session.data['deselection-reason-category']
+		if (deselectionReason == 'Motivation and behaviour') {
+			res.redirect('motivation-behaviour')
+		} 
+		else if (deselectionReason == 'Operational') {
+				res.redirect('operational')
+		}
+		else if (deselectionReason == 'Other') {
+			res.redirect('other')
+		}
+		else {
+			res.redirect('personal-health')
 		}
 	});
