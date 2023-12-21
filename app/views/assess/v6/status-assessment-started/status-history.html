@@ -39,24 +39,79 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
+		{% if data['suitability'] == "suitable" %}
 		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% elseif data['suitability'] == "suitable-not-ready" %}
+		<p class="govuk-body">View progress and update the status of a referral.</p>
+		{% else %}
+		<p class="govuk-body">This referral is now closed.</p>
+		{% endif %} 
+		
+		{% if data['suitability'] == "suitable" %}
 		<a class="govuk-button" href="update-status">Update status</a>
+		{% elseif data['suitability'] == "suitable-not-ready" %}
+		<a class="govuk-button" href="update-status">Update status</a>
+		{% endif %}
+
 		<div class="moj-timeline">
-			{% if data['start-assessment'] == "start-assessment" %}
+			{% if data['suitability'] == "suitable" %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Status update</h2>
 					<p class="moj-timeline__byline">by Carol Duffy</p>
 			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<p class="govuk-body">{{ data['add-notes-optional'] }}</p>
+					<strong class="govuk-tag govuk-tag--blue">Assessed as suitable</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			{% if data['suitability'] == "suitable-not-ready" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-reason'] }}</p>
+					<strong class="govuk-tag govuk-tag--turquoise">Suitable but not ready</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			{% if data['suitability'] == "not-suitable" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-11T08:45:00.000Z">11 July 2023 at 8:45am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-reason-2'] }}</p>
+					<strong class="govuk-tag govuk-tag--grey">Not suitable</strong>
+			  	</div>	
+			</div>
+			{% endif %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by Carol Duffy</p>
+			  	</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--yellow">Assessment started</strong>
 			  	</div>
 			</div>
-			{% endif %}
+			{% if data['suitability'] %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Status update</h2>
@@ -69,7 +124,6 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong>
 			  	</div>
 			</div>
-			{% if data['start-assessment'] == "start-assessment" %}
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
 					<h2 class="moj-timeline__title">Referral submitted</h2>
@@ -81,7 +135,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
 			  	</div>
-			</div> 
+			</div>
 			{% endif %}
 		</div>
     </div>
