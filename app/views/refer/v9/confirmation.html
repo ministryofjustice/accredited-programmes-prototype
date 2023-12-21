@@ -1,0 +1,27 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-panel govuk-panel--confirmation">
+			<h1 class="govuk-panel__title">Referral complete</h1>
+			<div class="govuk-panel__body">We have sent you a confirmation email.</div>
+		</div>
+		<h2 class="govuk-heading-m">What happens next</h2>
+    	<p class="govuk-body">Your referral has been sent to the programme team for evaluation.</p>
+		<p class="govuk-body">The programme team might need to do further assessments to find out if a person is suitable or not.</p>
+		<p class="govuk-body">If a person is suitable, they'll get added to a waiting list.</p>
+		<p class="govuk-body">If you have any questions about your referral, contact the programme office.</p>
+      	<p class="govuk-body"><a href="#" class="govuk-link"> What did you think of this service?</a></p>
+		<a class="govuk-button govuk-!-margin-top-4" data-module="govuk-button" href="open-referrals">Go to my referrals</a>
+    </div>
+</div>
+{% endblock %}

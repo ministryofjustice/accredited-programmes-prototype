@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Add Accredited Programme details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add Accredited Programme details</h1>
+		{% if data ['camefromcheckanswers'] == "true" %}
+		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% elseif data ['camefromaccreditedprogrammeanswers'] == "true" %}
+		<form action="accredited-programme-history-added?camefromaccreditedprogrammeanswers=false&" method="post">
+		{% else %}
+		<form action="accredited-programme-history-added" method="post">
+		{% endif %}
+			<div class="govuk-form-group">
+  				<fieldset class="govuk-fieldset" aria-describedby="setting-hint">
+    				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select the setting (if known)</legend>
+    				<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="setting" name="setting" type="radio" value="Community" data-aria-controls="conditional-setting" {{ checked("setting", "Community") }}>
+							<label class="govuk-label govuk-radios__label" for="setting">Community</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-setting">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="setting-community">Enter the location (if known)</label>
+								<input class="govuk-input govuk-!-width-two-thirds" id="setting-community" name="setting-community" value="{{ data['setting-community'] }}">
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="setting-2" name="setting" type="radio" value="Custody" data-aria-controls="conditional-setting-2" {{ checked("setting", "Custody") }}>
+							<label class="govuk-label govuk-radios__label" for="setting-2">Custody</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-setting-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="setting-custody">Enter the prison (if known)</label>
+								<input class="govuk-input govuk-!-width-two-thirds" id="setting-custody" name="setting-custody" value="{{ data['setting-custody'] }}">
+							</div>
+						</div>
+					</div>
+  				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="outcome-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select the outcome (if known)</legend>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					  <div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="outcome" name="outcome" type="radio" value="Complete" data-aria-controls="conditional-outcome" {{ checked("outcome", "Complete") }}>
+						  <label class="govuk-label govuk-radios__label" for="outcome">Complete</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-outcome">
+						  <div class="govuk-form-group">
+							  <label class="govuk-label" for="outcome-complete">Enter the year completed (if known)</label>
+							  <input class="govuk-input govuk-input--width-4 govuk-input--extra-letter-spacing" id="outcome-complete" name="outcome-complete" value="{{ data['outcome-complete'] }}">
+						  </div>
+					  </div>
+					  <div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="outcome-2" name="outcome" type="radio" value="Incomplete" data-aria-controls="conditional-outcome-2" {{ checked("outcome", "Incomplete") }}>
+						  <label class="govuk-label govuk-radios__label" for="outcome-2">Incomplete</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-outcome-2">
+						  <div class="govuk-form-group">
+							<label class="govuk-label" for="outcome-incomplete">Enter the year started (if known)</label>
+							<input class="govuk-input govuk-input--width-4 govuk-input--extra-letter-spacing" id="outcome-incomplete" name="outcome-incomplete" value="{{ data['outcome-incomplete'] }}">
+						  </div>
+					  </div>
+				  </div>
+				</fieldset>
+		  	</div>
+			<div class="govuk-form-group">
+  				<fieldset class="govuk-fieldset" aria-describedby="provide-additional-detail-hint">
+    				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Provide additional detail (if known)</legend>
+    				<div id="provide-additional-detail-hint" class="govuk-hint">Include information about the outcome</div>
+    				<textarea class="govuk-textarea" id="provide-additional-detail" name="provide-additional-detail" rows="5" aria-describedby="provide-additional-detail-hint">{{ data['provide-additional-detail'] }}</textarea>
+  				</fieldset>
+			</div>
+			<div class="govuk-form-group govuk-!-margin-bottom-2">
+				<fieldset class="govuk-fieldset" aria-describedby="provide-source-detail-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Provide the source</legend>
+				  <div id="provide-source-detail-hint" class="govuk-hint">Include where you got this information from</div>
+				  <textarea class="govuk-textarea" id="provide-source-detail" name="provide-source-detail" rows="5" aria-describedby="provide-source-detail-hint">{{ data['provide-source-detail'] }}</textarea>
+				</fieldset>
+		  	</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+	  	</form>
+	</div>
+</div>
+{% endblock %}

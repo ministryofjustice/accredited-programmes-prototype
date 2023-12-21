@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Remove programme - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="#" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Remove programme</h1>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+			  	<h2 class="govuk-summary-card__title">Kaizen</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Kaizen</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Found on OASys</dd>
+		  			</div> 
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+				<span class="govuk-warning-text__assistive">Warning</span>You are removing this programme. Once a programme has been removed, it cannot be undone.</strong>
+		</div>
+		<form action="#" method="post">
+			<button class="govuk-button" data-module="govuk-button">Confirm</button>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
