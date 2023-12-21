@@ -46,27 +46,25 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="assessed-suitable" name="assessed-suitable" type="radio" value="suitable-not-ready" data-aria-controls="conditional-assessed-suitable">
 							<label class="govuk-label govuk-radios__label govuk-label--s" for="assessed-suitable">Suitable but not ready</label>
-							<div id="suitable-not-ready-item-hint" class="govuk-hint govuk-radios__hint">The referral will be paused until the person is ready to continue. You must provide a reason why.</div>
+							<div id="suitable-not-ready-hint" class="govuk-hint govuk-radios__hint">This person has started the programme.</div>
 						</div>
-
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="assessed-suitable-2" name="assessed-suitable" type="radio" value="on-programme" data-aria-controls="conditional-assessed-suitable-2">
-							<label class="govuk-label govuk-radios__label govuk-label--s" for="assessed-suitable-2">On programme</label>
-							<div id="on-programme-hint" class="govuk-hint govuk-radios__hint">This person has started the programme.</div>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-assessed-suitable-2">
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-assessed-suitable">
 							<div class="govuk-form-group">
-								<label class="govuk-label" for="add-reason-on-programme">Add reason</label>
-								<textarea class="govuk-textarea" id="add-reason-on-programme" name="add-reason-on-programme" rows="5">{{ data['add-reason-on-programme'] }}</textarea>
+								<label class="govuk-label" for="add-reason-suitable-not-ready">Add reason</label>
+								<textarea class="govuk-textarea" id="add-reason-suitable-not-ready" name="add-reason-suitable-not-ready" rows="5">{{ data['add-reason-suitable-not-ready'] }}</textarea>
 							</div>
 						</div>
-
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="assessed-suitable-3" name="assessed-suitable" type="radio" value="withdraw-referral" data-aria-controls="conditional-assessed-suitable-3">
-							<label class="govuk-label govuk-radios__label govuk-label--s" for="assessed-suitable-3">Withdraw referral</label>
+							<input class="govuk-radios__input" id="assessed-suitable" name="assessed-suitable" type="radio" value="on-programme">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="assessed-suitable">On programme</label>
+							<div id="on-programme-item-hint" class="govuk-hint govuk-radios__hint">The referral will be paused until the person is ready to continue. You must provide a reason why.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable-2" name="assessed-suitable" type="radio" value="withdraw-referral" data-aria-controls="conditional-assessed-suitable-2">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="assessed-suitable-2">Withdraw referral</label>
 							<div id="withdraw-referral-item-hint" class="govuk-hint govuk-radios__hint">The referral will be withdrawn and will be closed. You must select a reason why.</div>
 						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-assessed-suitable-3">
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-assessed-suitable-2">
 							<div class="govuk-form-group">
 								<label class="govuk-label" for="withdrawal-reason">Select reason</label>
 								<select class="govuk-select" id="withdrawal-reason" name="withdrawal-reason">
