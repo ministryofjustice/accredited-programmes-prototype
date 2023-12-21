@@ -47,20 +47,21 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error (referrers only)</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour">
+							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour" {{ checked("reason-category", "Motivation and behaviour") }}>
 							<label class="govuk-label govuk-radios__label" for="reason-category-2">Motivation and behaviour</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-3" name="reason-category" type="radio" value="Operational">
+							<input class="govuk-radios__input" id="reason-category-3" name="reason-category" type="radio" value="Operational" {{ checked("reason-category", "Operational") }}>
 							<label class="govuk-label govuk-radios__label" for="reason-category-3">Operational</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-4" name="reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-4" {{ checked("reason-category", "Other") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-4">Other</label>
+							<input class="govuk-radios__input" id="reason-category-4" name="reason-category" type="radio" value="Personal and health" {{ checked("reason-category", "Personal and health") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-4">Personal and health</label>
 						</div>
+						<div class="govuk-radios__divider">or</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-5" name="reason-category" type="radio" value="Personal and health">
-							<label class="govuk-label govuk-radios__label" for="reason-category-5">Personal and health</label>
+							<input class="govuk-radios__input" id="reason-category-5" name="reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-5" {{ checked("reason-category", "Other") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-5">Other</label>
 						</div>
 					</div>
 				</fieldset>

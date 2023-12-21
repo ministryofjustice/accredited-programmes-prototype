@@ -42,6 +42,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						<h1 class="govuk-fieldset__heading">Select the reason for deselecting this person</h1>
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
+
+
+						
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="operational" name="operational" type="radio" value="Course no longer available" data-aria-controls="conditional-operational">
 							<label class="govuk-label govuk-radios__label" for="operational">Course no longer available</label>
@@ -53,9 +56,10 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
+
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-2" name="operational" type="radio" value="Other type of release" data-aria-controls="conditional-operational-2">
-							<label class="govuk-label govuk-radios__label" for="operational-2">Other type of release</label>
+							<input class="govuk-radios__input" id="operational-2" name="operational" type="radio" value="Did not return from court" data-aria-controls="conditional-operational-2">
+							<label class="govuk-label govuk-radios__label" for="operational-2">Did not return from court</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-2">
 							<div class="govuk-form-group">
@@ -66,8 +70,8 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-3" name="operational" type="radio" value="Released after parole hearing" data-aria-controls="conditional-operational-3">
-							<label class="govuk-label govuk-radios__label" for="operational-3">Released after parole hearing</label>
+							<input class="govuk-radios__input" id="operational-3" name="operational" type="radio" value="In segregation unit" data-aria-controls="conditional-operational-3">
+							<label class="govuk-label govuk-radios__label" for="operational-3">In segregation unit</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-3">
 							<div class="govuk-form-group">
@@ -76,9 +80,10 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
+
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-4" name="operational" type="radio" value="Sentence ended / on probation" data-aria-controls="conditional-operational-4">
-							<label class="govuk-label govuk-radios__label" for="operational-4">Sentence ended / on probation</label>
+							<input class="govuk-radios__input" id="operational-4" name="operational" type="radio" value="In transfer process / transferred to another prison" data-aria-controls="conditional-operational-4">
+							<label class="govuk-label govuk-radios__label" for="operational-4">In transfer process / transferred to another prison</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-4">
 							<div class="govuk-form-group">
@@ -87,11 +92,73 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
+
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-5" name="operational" type="radio" value="In transfer process / transferred to another prison" data-aria-controls="conditional-operational-5">
-							<label class="govuk-label govuk-radios__label" for="operational-5">In transfer process / transferred to another prison</label>
+							<input class="govuk-radios__input" id="operational-5" name="operational" type="radio" value="Not allowed out of cell (Rule 53)" data-aria-controls="conditional-operational-5">
+							<label class="govuk-label govuk-radios__label" for="operational-5">Not allowed out of cell (Rule 53)</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-5">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
+						</div>
+
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="operational-6" name="operational" type="radio" value="Other type of release" data-aria-controls="conditional-operational-6">
+							<label class="govuk-label govuk-radios__label" for="operational-6">Other type of release</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-6">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="operational-7" name="operational" type="radio" value="Regime considerations" data-aria-controls="conditional-operational-7">
+							<label class="govuk-label govuk-radios__label" for="operational-7">Regime considerations</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-7">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="operational-8" name="operational" type="radio" value="Released after parole hearing" data-aria-controls="conditional-operational-8">
+							<label class="govuk-label govuk-radios__label" for="operational-8">Released after parole hearing</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-8">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="operational-9" name="operational" type="radio" value="Safer custody issues" data-aria-controls="conditional-operational-9">
+							<label class="govuk-label govuk-radios__label" for="operational-9">Safer custody issues</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-9">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="operational-10" name="operational" type="radio" value="Sentence ended / on probation" data-aria-controls="conditional-operational-10">
+							<label class="govuk-label govuk-radios__label" for="operational-10">Sentence ended / on probation</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-10">
 							<div class="govuk-form-group">
 								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
