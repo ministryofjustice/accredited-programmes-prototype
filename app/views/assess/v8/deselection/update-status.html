@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update status of referral</h1>
+		<p class="govuk-body">Record all decisions so that the status of a referral is up to date.</p>
+		<h2 class="govuk-heading-m">Current status details</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<form action="update-status" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="referral-submitted-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Select decision</h2>
+					</legend>
+					<!-- <div id="referral-submitted-hint" class="govuk-hint">Select one option.</div> -->
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted" name="referral-submitted" type="radio" value="awaiting-assessment" data-aria-controls="conditional-referral-submitted">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="referral-submitted">Awaiting assessment</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">This person meets the eligibility criteria for this programme and will be assessed for suitability.</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted-2" name="referral-submitted" type="radio" value="not-eligible" data-aria-controls="conditional-referral-submitted-2">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="referral-submitted-2">Not eligible</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">This person does not meet the eligibility criteria for this programme and the referral will be closed. You must provide a reason why.</div>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-referral-submitted-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-reason-not-eligible">Add reason</label>
+								<textarea class="govuk-textarea" id="add-reason-not-eligible" name="add-reason-not-eligible" rows="5">{{ data['add-reason-not-eligible'] }}</textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted-3" name="referral-submitted" type="radio" value="on-hold" data-aria-controls="conditional-referral-submitted-3">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="referral-submitted-3">On hold</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The referral will be paused until the person is ready to continue. You must provide a reason why.</div>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-referral-submitted-3">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="add-reason-on-hold">Add reason</label>
+								<textarea class="govuk-textarea" id="add-reason-on-hold" name="add-reason-on-hold" rows="5">{{ data['add-reason-on-hold'] }}</textarea>
+							</div>
+						</div>
+
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted-4" name="referral-submitted" type="radio" value="withdraw-referral" data-aria-controls="conditional-referral-submitted-4">
+							<label class="govuk-label govuk-radios__label govuk-label--s" for="referral-submitted-4">Withdraw referral</label>
+							<div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">The referral will be withdrawn and will be closed. You must select a reason why.</div>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-referral-submitted-4">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="withdrawal-reason">Select reason</label>
+								<select class="govuk-select" id="withdrawal-reason" name="withdrawal-reason">
+									<option value="Blah blah blah 1">Blah blah blah 1</option>
+									<option value="Blah blah blah 2">Blah blah blah 2</option>
+									<option value="Blah blah blah 3">Blah blah blah 3</option>
+									<option value="Blah blah blah 4">Blah blah blah 4</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</fieldset>
+				<div class="govuk-warning-text">
+					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+					<strong class="govuk-warning-text__text">
+						<span class="govuk-warning-text__assistive">Warning</span>This decision will change the referral status.</strong>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-top-4">
+					<button class="govuk-button" data-module="govuk-button">Submit</button>
+					<a class="govuk-link" href="#">Cancel</a>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
