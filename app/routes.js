@@ -10,6 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 require('./routes/assess/v6/routes.js')(router);
 require('./routes/assess/v7/routes.js')(router);
 require('./routes/assess/v8/routes.js')(router);
+require('./routes/refer/v9/routes.js')(router);
 
 
 

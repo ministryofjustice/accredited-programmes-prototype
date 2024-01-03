@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="withdraw-referral" method="post">
+		<form action="status-history" method="post">
 			<h1 class="govuk-heading-l">Withdraw referral</h1>
 			<p class="govuk-body">Withdrawing a referral means that the referral cannot continue.</p>
 			<h2 class="govuk-heading-m">Current status details</h2>
@@ -31,6 +31,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<time datetime="2023-07-03T14:09:00.000Z">3 July 2023 at 2:09pm</time>
 					</p>
 					<div class="moj-timeline__description">
+						<!-- <p class="govuk-body">{{ data['add-notes-optional'] }}</p> -->
 						<strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong>
 					</div>
 				</div>
@@ -39,29 +40,30 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h1 class="govuk-fieldset__heading">Select the appropriate category for this withdrawal</h1>
+						<h1 class="govuk-fieldset__heading">Select the reason for this withdrawal</h1>
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error (referrers only)">
-							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error (referrers only)</label>
+							<input class="govuk-radios__input" id="motivation-behaviour" name="motivation-behaviour" type="radio" value="Behavioural problems" data-aria-controls="conditional-motivation-behaviour">
+							<label class="govuk-label govuk-radios__label" for="motivation-behaviour">Behavioural problems</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour" {{ checked("reason-category", "Motivation and behaviour") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-2">Motivation and behaviour</label>
+							<input class="govuk-radios__input" id="motivation-behaviour-2" name="motivation-behaviour" type="radio" value="Motivation changed" data-aria-controls="conditional-motivation-behaviour-2">
+							<label class="govuk-label govuk-radios__label" for="motivation-behaviour-2">Motivation changed</label>
 						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-3" name="reason-category" type="radio" value="Operational" {{ checked("reason-category", "Operational") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-3">Operational</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-4" name="reason-category" type="radio" value="Personal and health" {{ checked("reason-category", "Personal and health") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-4">Personal and health</label>
-						</div>
-						<div class="govuk-radios__divider">or</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category-5" name="reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-5" {{ checked("reason-category", "Other") }}>
-							<label class="govuk-label govuk-radios__label" for="reason-category-5">Other</label>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
+							</div>
 						</div>
 					</div>
 				</fieldset>
