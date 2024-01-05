@@ -10,7 +10,6 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 
 {% block beforeContent %}
 <div class="govuk-!-margin-top-2">
-	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
 	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
 </div> 
 {% endblock %}
@@ -26,7 +25,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						{% if data['operational'] == "Released after parole hearing" %}
-						<a class="govuk-button govuk-button--disabled moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="withdraw-referral">Withdraw referral</a>
+						<a class="govuk-button govuk-button--disabled moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="#">Withdraw referral</a>
 						{% else %}
 						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="withdraw-referral">Withdraw referral</a>
 						{% endif %}
@@ -64,7 +63,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<time datetime="2023-07-05T16:53:00.000Z">5 July 2023 at 4:53pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<p class="govuk-body">{{ data['add-notes-3'] }}</p>
+					<p class="govuk-body">{{ data['add-notes-4'] }}</p>
 					<strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong>
 			  	</div>
 			</div>
