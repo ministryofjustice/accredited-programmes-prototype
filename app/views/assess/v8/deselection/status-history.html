@@ -52,7 +52,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
-		{% if data['personal-health'] == "Medical or health reasons" %}
+		{% if data['motivation-behaviour'] == "Behavioural problems during sessions" %}
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -60,7 +60,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<p class="moj-timeline__byline">by Carol Duffy</p>
 			  	</div>
 			  	<p class="moj-timeline__date">
-					<time datetime="2023-08-11T11:59:00.000Z">11 August 2023 at 11:59am</time>
+					<time datetime="2023-08-12T12:41:00.000Z">12 August 2023 at 12:41pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
 					{% if data['suitability'] == "suitable" %}
@@ -72,7 +72,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					{% endif %}
 			  	</div>
 			  	<div class="moj-timeline__description">
-					<p class="govuk-body">{{ data['add-notes-2'] }}</p>
+					<p class="govuk-body">{{ data['add-notes'] }}</p>
 					<strong class="govuk-tag govuk-tag--grey">Deselected</strong>
 			  	</div>
 			</div>
