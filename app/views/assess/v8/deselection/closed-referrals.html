@@ -57,7 +57,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="assessment-started">Assessment started</option>
 						<option value="awaiting-assessment">Awaiting assessment</option>
 						<option value="on-programme">On programme</option>
-						<!-- <option value="place-allocated">Place allocated</option> -->
 						<option value="referral-submitted">Referral submitted</option>
 						<option value="suitable-not-ready">Suitable but not ready</option>
 					</select>
@@ -94,30 +93,16 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "not-eligible" %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
 					<td class="govuk-table__cell">1 Dec 2025</td>
 					<td class="govuk-table__cell">N/A</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
-				</tr>
-				{% endif %}
-				{% if data['referral-submitted'] == "withdraw-referral" %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
-				</tr>
-				{% endif %}
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
+			  	</tr>
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jeff Bezos</a><br />E2391AG</td>
 					<td class="govuk-table__cell">15 Aug 2023</td>
