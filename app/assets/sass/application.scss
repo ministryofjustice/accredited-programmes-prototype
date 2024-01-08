@@ -307,15 +307,17 @@ $low-score-colour__text: #485b10;
 }
 
 .red {
-  color: govuk-colour("red");
+  /* color: govuk-colour("red"); */
+  color: #942514;
 }
 
 .orange {
-  color: #a34e00;
+  color: #a34e00
 }
 
 .red-figure {
-  background: #d4351c40 !important;
+  /* background: #d4351c40 !important; */
+  background: #94251440 !important;
   padding: 2px 6px !important;
 }
 
