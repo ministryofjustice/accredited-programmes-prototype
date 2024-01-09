@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt-secondary.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="withdraw-referral" method="post">
+			<h1 class="govuk-heading-l">Withdraw referral</h1>
+			<p class="govuk-body">Withdrawing a referral means that the referral cannot continue.</p>
+			<h2 class="govuk-heading-m">Current status details</h2>
+			<div class="moj-timeline">
+				<div class="moj-timeline__item">
+					<div class="moj-timeline__header">
+						<h2 class="moj-timeline__title">Status update</h2>
+						<p class="moj-timeline__byline">by Carol Duffy</p>
+					</div>
+					<p class="moj-timeline__date">
+						<time datetime="2023-07-08T15:52:00.000Z">8 July 2023 at 3:52pm</time>
+					</p>
+					<div class="moj-timeline__description">
+						<strong class="govuk-tag govuk-tag--yellow">Assessment started</strong>
+					</div>
+				</div>
+			</div>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Select the appropriate category for this withdrawal</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error (referrers only)">
+							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error (referrers only)</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour" {{ checked("reason-category", "Motivation and behaviour") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-2">Motivation and behaviour</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-3" name="reason-category" type="radio" value="Operational" {{ checked("reason-category", "Operational") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-3">Operational</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-4" name="reason-category" type="radio" value="Personal and health" {{ checked("reason-category", "Personal and health") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-4">Personal and health</label>
+						</div>
+						<div class="govuk-radios__divider">or</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-5" name="reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-5" {{ checked("reason-category", "Other") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-5">Other</label>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

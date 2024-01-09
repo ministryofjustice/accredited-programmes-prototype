@@ -27,5 +27,28 @@ module.exports = function (router) {
 			res.redirect('personal-health')
 		}
     });
+
+    router.get('/assess/' + version + '/withdrawal/withdraw-referral', function (req, res) {
+        res.render('/assess/' + version + '/withdrawal/withdraw-referral')
+    });
+  
+    router.post('/assess/' + version + '/withdrawal/withdraw-referral', function (req, res) {
+        const withdrawalReason = req.session.data['reason-category']
+        if (withdrawalReason == 'Administrative error (referrers only)') {
+            res.redirect('administrative-error')
+        } 
+        else if (withdrawalReason == 'Motivation and behaviour') {
+                res.redirect('motivation-behaviour')
+        }
+        else if (withdrawalReason == 'Operational') {
+            res.redirect('operational')
+        }
+        else if (withdrawalReason == 'Other') {
+            res.redirect('other')
+        }
+        else {
+            res.redirect('personal-health')
+        }
+    });
 }
 

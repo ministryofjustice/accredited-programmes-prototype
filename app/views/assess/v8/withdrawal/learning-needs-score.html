@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt-secondary.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+	  			<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="withdraw-referral">Withdraw referral</a>
+					</div>
+	  			</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Risks and needs</h2>
+				<p class="govuk-body govuk-!-margin-bottom-0">Relevant sections from OASys to support the referral. The full Layer 3 assessment is available in OASys. Information is accurate at the time of the referral being submitted.</p>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="risks-needs">Risks and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="offence-analysis">Section 2 - Offence analysis</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="relationships">Section 6 - Relationships</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="lifestyle-associates">Section 7 - Lifestyle and Associates</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="emotional-wellbeing">Section 10 - Emotional Wellbeing</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="thinking-behaving">Section 11 - Thinking and behaving</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="attitudes">Section 12 - Attitudes</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="health">Section 13 - Health</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="learning-needs-score" aria-current="location">Learning needs score</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="rosh-analysis">Section R6 - ROSH analysis</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 4 January 2023</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Learning needs information</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">3.3 - Currently of no fixed abode or in transient accommodation</dt>
+						<dd class="govuk-summary-list__value">0 - No problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.4 - Work related skills</dt>
+						<dd class="govuk-summary-list__value">1 - Some problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.7 - Has problems with reading, writing or numeracy</dt>
+						<dd class="govuk-summary-list__value">2 - Significant problems
+							Reading, Writing</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.8 - Has learning difficulties (optional)</dt>
+						<dd class="govuk-summary-list__value">2 - Significant problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.9 - Educational or formal professional / vocational qualifications (optional) </dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Learning needs score</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Calculated score</dt>
+						<dd class="govuk-summary-list__value">2<br /><br />This individual may have a learning disability and/or learning challenges. Further assessment may be needed to determine the support required.</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
