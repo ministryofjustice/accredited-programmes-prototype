@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Deselection - {{ serviceName }} - GOV.UK Prototype Kit
+Deselection reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,9 +18,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<form action="update-status" method="post">
-			<h1 class="govuk-heading-l">Deselect person</h1>
+			<h1 class="govuk-heading-l">Deselection reason</h1>
 			<p class="govuk-body">Deselecting a person means that the person can no longer participate in the programme.</p>
-			<h2 class="govuk-heading-m">Current status details</h2>
+			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
 				<div class="moj-timeline__item">
 					<div class="moj-timeline__header">
@@ -60,9 +60,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-2">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-2">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-2" name="add-notes-2" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -71,9 +71,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-3">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-3">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-3" name="add-notes-3" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -82,9 +82,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-4">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-4">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-4" name="add-notes-4" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -93,9 +93,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-5">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-5">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-5" name="add-notes-5" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -104,9 +104,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-6">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-6">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-6" name="add-notes-6" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 						<div class="govuk-radios__item">
@@ -115,9 +115,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-7">
 							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-7">Add notes</label>
+								<label class="govuk-label govuk-label--s" for="add-notes">Add notes</label>
 								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for deselecting this person.</div>
-								<textarea class="govuk-textarea" id="add-notes-7" name="add-notes-7" rows="5" aria-describedby="more-info-hint"></textarea>
+								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
 							</div>
 						</div>
 					</div>

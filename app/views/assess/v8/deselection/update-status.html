@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
+Deselect person - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -17,9 +17,9 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Update status of referral</h1>
+		<h1 class="govuk-heading-l">Deselect person</h1>
 		<p class="govuk-body">Record all decisions so that the status of a referral is up to date.</p>
-		<h2 class="govuk-heading-m">Current status details</h2>
+		<h2 class="govuk-heading-m">Current status</h2>
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -41,6 +41,7 @@ Update status of referral - {{ serviceName }} - GOV.UK Prototype Kit
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 						<h2 class="govuk-fieldset__heading">Select decision</h2>
 					</legend>
+					<!-- <div id="eligibility-hint" class="govuk-hint">Select one option.</div> -->
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="suitability" name="suitability" type="radio" value="suitable" data-aria-controls="conditional-suitability">
