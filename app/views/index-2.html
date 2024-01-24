@@ -1,0 +1,212 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
+
+   		<h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+		<div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">Contents</h2>
+			<ul class="govuk-tabs__list">
+				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+					<a class="govuk-tabs__tab" href="#find">Find</a>
+			  	</li>
+			  	<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#refer">Refer</a>
+			 	 </li>
+			  	<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#assess">Assess</a>
+			  	</li>
+				<!-- <li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#sprints">Sprints</a>
+			  	</li> -->
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#archives">Archives</a>
+			  	</li>
+			</ul>
+			<div class="govuk-tabs__panel" id="find">
+				<h2 class="govuk-heading-l">Find</h2> 
+				<p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) finds a programme for the Person in Prison (PiP).</p>
+				<h4 class="govuk-heading-m">Version 2 <strong class="govuk-tag govuk-tag--blue">Built</strong> &#127881;</h4>
+				<span class="govuk-caption-m govuk-!-margin-bottom-4">This is a copy of the Figma prototype with some tweaks.</span>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="find/v2/list-programmes">Find an Accredited Programme</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="find/v2/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<!-- <p><a class="govuk-link govuk-link--no-visited-state" href="find/v2/dps-home">Find an Accredited Programme</a></p> -->
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="refer">
+				<h2 class="govuk-heading-l">Refer</h2> 
+				<p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) makes a programme referral for the Person in Prison (PiP).</p>
+
+				<h4 class="govuk-heading-m">Work in progress</h4>
+
+				<h4 class="govuk-heading-m">User testing</h4>
+				<h3 class="govuk-heading-s">Ready for testing</h3>
+				<h3 class="govuk-heading-s">Tested with users</h3>
+
+				<h4 class="govuk-heading-m">Ready for build</h4>
+
+				<h4 class="govuk-heading-m">Version 9 <strong class="govuk-tag govuk-tag--grey">Work in progress</strong></h4>
+				<details class="govuk-details govuk-!-margin-bottom-2">
+					<summary class="govuk-details__summary">
+					  	<span class="govuk-details__summary-text">Change log</span>
+					</summary>
+					<div class="govuk-details__text">
+						<ul class="govuk-list govuk-list--bullet">
+							<li>Initial 'Withdraw referral' thinking journey removed</li>
+							<li>Withdraw referral journey (version 2) added in</li>
+							<li>'Risk and needs' section updated, based on the last round of usability testing</li>
+						</ul>
+					</div>
+				</details>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v9/start-now">Make a referral</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v9/open-referrals">View your referrals (withdraw referral journey only)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v9/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h4 class="govuk-heading-m">Version 8 <strong class="govuk-tag govuk-tag--yellow">Tested with users</strong></h4>
+				<details class="govuk-details govuk-!-margin-bottom-2">
+					<summary class="govuk-details__summary">
+					  	<span class="govuk-details__summary-text">Change log</span>
+					</summary>
+					<div class="govuk-details__text">
+						<ul class="govuk-list govuk-list--bullet">
+							<li>Reference to OASys Layer 3 added to 'Confirm the OASys information' and 'Add additional information' pages</li>
+							<li>'Risk and needs' section added in</li>
+							<li>'Risk and alerts' (previously known as 'Risk scores and alerts') moved from 'Referral details' to 'Risk and needs' section</li>
+						</ul>
+					</div>
+				</details>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v8/start-now">Make a referral</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v8/open-referrals">View your referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v8/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h4 class="govuk-heading-m">Version 7 <strong class="govuk-tag govuk-tag--green">Ready for build</strong></h4>
+				<span class="govuk-caption-m govuk-!-margin-bottom-4">This is a copy of the Figma prototype with some tweaks.</span>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/start-now">Make a referral</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/open-referrals">View your referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h5 class="govuk-heading-s">Accredited Programme history (different states)</h5>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/accredited-programme-history-added/multiple">Multiple programmes added</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/accredited-programme-history-added/previously">History of added programmes</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/v7/accredited-programme-history-added/remove">Removing a programme</a></li>
+				</ul>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+				<h3 class="govuk-heading-m">Hypotheses and experiments</h3>
+				<h4 class="govuk-heading-s">Withdraw referral</h4>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/features/withdrawal/v2/withdraw-referral">Version 2</a> <strong class="govuk-tag govuk-tag--red">Ready for testing</strong></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="refer/features/withdrawal/v1/withdraw-referral">Version 1</a> <strong class="govuk-tag govuk-tag--yellow">Tested with users</strong></li>
+				</ul>
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="assess">
+				<h2 class="govuk-heading-l">Assess</h2> 
+				<p class="govuk-body">This is the end to end journey of when a member of the Programme Team (PT) views and assess the programme referral made by the Prison Offender Manager (POM).</p>
+				<h4 class="govuk-heading-m">Version 8 <strong class="govuk-tag govuk-tag--grey">Work in progress</strong></h4>
+				<details class="govuk-details govuk-!-margin-bottom-2">
+					<summary class="govuk-details__summary">
+					  	<span class="govuk-details__summary-text">Change log</span>
+					</summary>
+					<div class="govuk-details__text">
+						<ul class="govuk-list govuk-list--bullet">
+							<li>'On hold' status added to relevant user journeys</li>
+							<li>Deselect person journey (version 2) added in</li>
+							<li>'Risk and needs' section updated, based on the last round of usability testing</li>
+						</ul>
+					</div>
+				</details>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/open-referrals">Manage referrals ('On hold' journey only)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/deselection/open-referrals">Manage referrals (deselect person journey only - Sham Booth)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/withdrawal/open-referrals.html">Manage referrals (withdraw referral journey only - Sham Booth)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h5 class="govuk-heading-s">Update status of referral (different statuses)</h5>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/update-status">Referral submitted (includes 'On hold' status)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/status-awaiting-assessment/update-status">Awaiting assessment (includes 'On hold' status)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/status-assessment-started/update-status">Assessment started</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/status-assessed-suitable/update-status">Assessed as suitable</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/status-on-programme/update-status">On programme</a></li>
+				</ul>
+				<h4 class="govuk-heading-m">Version 7 <strong class="govuk-tag govuk-tag--yellow">Tested with users</strong></h4>
+				<details class="govuk-details govuk-!-margin-bottom-2">
+					<summary class="govuk-details__summary">
+					  	<span class="govuk-details__summary-text">Change log</span>
+					</summary>
+					<div class="govuk-details__text">
+						<ul class="govuk-list govuk-list--bullet">
+							<li>'Risk and needs' section added in</li>
+							<li>'Risk and alerts' (previously known as 'Risk scores and alerts') moved from 'Referral details' to 'Risk and needs' section</li>
+						</ul>
+					</div>
+				</details>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v7/open-referrals">Manage referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v7/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h4 class="govuk-heading-m">Version 6 <strong class="govuk-tag govuk-tag--green">Ready for build</strong></h4>
+				<span class="govuk-caption-m govuk-!-margin-bottom-4">This is a copy of the Figma prototype with some tweaks.</span>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/open-referrals">Manage referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/dps-home">Digital Prison Services (homepage)</a></li>
+				</ul>
+				<h5 class="govuk-heading-s">Update status of referral (different statuses)</h5>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/update-status">Referral submitted</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/status-awaiting-assessment/update-status">Awaiting assessment</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/status-assessment-started/update-status">Assessment started</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/status-assessed-suitable/update-status">Assessed as suitable</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/status-on-programme/update-status">On programme</a></li>
+				</ul>
+				<h5 class="govuk-heading-s">Sentence information (different states)</h5>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/alternative-designs/sentence-information-no-record">No record</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/alternative-designs/sentence-information-no-sentence">No sentence</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/alternative-designs/sentence-information-no-release-dates">No release dates</a></li>
+				</ul>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+				<h3 class="govuk-heading-m">Hypotheses and experiments</h3>
+				<h4 class="govuk-heading-s">Deselect person</h4>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/features/deselection/v2/deselection">Version 2</a> <strong class="govuk-tag govuk-tag--red">Ready for testing</strong></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/features/deselection/v1/deselection">Version 1</a> <strong class="govuk-tag govuk-tag--yellow">Tested with users</strong></li>
+				</ul>
+			</div>
+			<!-- <div class="govuk-tabs__panel" id="sprints">
+				<h2 class="govuk-heading-l">Sprints</h2> 
+				<p class="govuk-body">A slice of the prototype (for the developers to build) based on the current sprint.</p>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 20</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 21</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 22</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 23</a></li>
+				</ul>
+			</div> -->
+			<div class="govuk-tabs__panel" id="archives">
+				<h2 class="govuk-heading-l">Archives</h2> 
+				<h3 class="govuk-heading-m">Figma</h3> 
+				<p class="govuk-body">Links to the old Figma prototypes:</a></p>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=0-1&mode=design" target="_blank">Find (versions 1 to 2)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=6-2&mode=design" target="_blank">Refer (versions 1 to 7)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=2074-9281&mode=design" target="_blank">Assess (versions 1 to 6)</a></li>
+				</ul>
+				<h3 class="govuk-heading-m">Design history</h3> 
+				<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://miro.com/app/board/uXjVNBAA7Gw=/" target="_blank">Miro Design history board</a></p>
+			</div>
+		</div>
+  	</div>
+</div>
+
+{% endblock %}
