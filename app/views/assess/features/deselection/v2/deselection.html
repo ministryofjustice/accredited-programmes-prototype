@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Deselection - {{ serviceName }} - GOV.UK Prototype Kit
+Deselection category - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,9 +18,9 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<form action="deselection" method="post">
-			<h1 class="govuk-heading-l">Deselect person</h1>
+			<h1 class="govuk-heading-l">Deselection category</h1>
 			<p class="govuk-body">Deselecting a person means that the person can no longer participate in the programme.</p>
-			<h2 class="govuk-heading-m">Current status details</h2>
+			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
 				<div class="moj-timeline__item">
 					<div class="moj-timeline__header">
@@ -39,7 +39,7 @@ Deselection - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h1 class="govuk-fieldset__heading">Select the appropriate category to deselect this person</h1>
+						<h1 class="govuk-fieldset__heading">Select the category to deselect this person</h1>
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
