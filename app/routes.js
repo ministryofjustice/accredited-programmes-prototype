@@ -94,10 +94,10 @@ router.post('/assess/features/deselection/v2/deselection', function (req, res) {
 		else if (deselectionReason == 'Operational') {
 				res.redirect('operational')
 		}
-		else if (deselectionReason == 'Other') {
-			res.redirect('other')
+		else if (deselectionReason == 'Personal and health') {
+			res.redirect('personal-health')
 		}
 		else {
-			res.redirect('personal-health')
+			res.redirect('other')
 		}
 	});
