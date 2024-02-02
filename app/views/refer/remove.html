@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Remove programme - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Remove programme</h1>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				{% if data['add-accredited-programme'] %}
+				<h2 class="govuk-summary-card__title">{{ data['add-accredited-programme'] }}</h2>
+			  	{% elseif data['add-accredited-programme'] == "Other" %}
+				<h2 class="govuk-summary-card__title">Other - {{ data['add-accredited-programme-other'] }}</h2>
+			  	{% else %}
+			  	<h2 class="govuk-summary-card__title">Kaizen</h2>
+			  	{% endif %}
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Programme name</dt>
+						{% if data['add-accredited-programme'] %}
+						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Kaizen</dd>
+						{% endif %}
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						{% if data['setting'] == "Community" and data['setting-community'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Community" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
+						{% elseif data['setting'] == "Custody" and data['setting-custody'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Custody" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+						{% endif %}
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						{% if data['outcome'] == "Complete" and data['outcome-complete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Complete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
+						{% elseif data['outcome'] == "Incomplete" and data['outcome-incomplete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Incomplete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Incomplete, Year started 2021</dd>
+						{% endif %}
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						{% if data['provide-additional-detail'] %}
+						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail'] }}</dd>
+						{% elseif data['provide-additional-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+						{% endif %}
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						{% if data['provide-source-detail'] %}
+					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail'] }}</dd>
+						{% elseif data['provide-source-detail'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Found on OASys</dd>
+						{% endif %}
+		  			</div> 
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+				<span class="govuk-warning-text__assistive">Warning</span>You are removing this programme. Once a programme has been removed, it cannot be undone.</strong>
+		</div>
+		<form action="accredited-programme-history" method="post">
+			<button class="govuk-button" data-module="govuk-button">Confirm</button>
+		</form>
+    </div>
+</div>
+
+{% endblock %}

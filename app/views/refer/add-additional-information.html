@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back to the tasklist</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add additional information</h1>
+		<p class="govuk-body">You must provide additional information you feel will help the programme team in their assessment. This might include:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>The reason for the referral</li>
+			<li>The person's motivation to complete a programme</li>
+			<li>Information to support an override</li>
+		</ul>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+			  <span class="govuk-warning-text__assistive">Warning</span>This service will provide the relevant sections from OASys that the programme team needs to assess this referral. The programme team may also need to access the full OASys Layer 3.</strong>
+		</div>
+		{% if data ['camefromcheckanswers'] == "true" %}
+		<form action="check-answers?camefromcheckanswers=false&" method="post">
+		{% elseif data ['camefromaccreditedprogrammeanswers'] == "true" %}
+		<form action="accredited-programme-history-added?camefromaccreditedprogrammeanswers=false&" method="post">
+		{% else %}
+		<form action="task-list?referral-information-three=done&" method="post">
+		{% endif %}
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--s" for="provide-additional-information">Provide additional information</label>
+				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5">{{ data['provide-additional-information'] }}</textarea>
+			</div>
+			<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">Continue</button>
+		</form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="status-history" method="post">
+			<h1 class="govuk-heading-l">Withdrawal reason</h1>
+			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
+			<h2 class="govuk-heading-m">Current status</h2>
+			<div class="moj-timeline">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+				</div>
+				<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+				</p>
+				<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+				</div>
+			</div>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Select the reason for this withdrawal</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="specific-reason-administrative-error" name="specific-reason-administrative-error" type="radio" value="Duplicate referral" data-aria-controls="conditional-specific-reason-administrative-error">
+							<label class="govuk-label govuk-radios__label" for="specific-reason-administrative-error">Duplicate referral</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-administrative-error">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes-withdraw">Add notes (optional)</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
+								<textarea class="govuk-textarea" id="add-notes-withdraw" name="add-notes-withdraw" rows="5" aria-describedby="more-info-hint">{{ data['add-notes-withdraw'] }}</textarea>
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="specific-reason-administrative-error-2" name="specific-reason-administrative-error" type="radio" value="Submitted in error" data-aria-controls="conditional-specific-reason-administrative-error-2">
+							<label class="govuk-label govuk-radios__label" for="specific-reason-administrative-error-2">Submitted in error</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-administrative-error-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="add-notes-withdraw-2">Add notes (optional)</label>
+								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
+								<textarea class="govuk-textarea" id="add-notes-withdraw-2" name="add-notes-withdraw" rows="5" aria-describedby="more-info-hint">{{ data['add-notes-withdraw-2'] }}</textarea>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-warning-text">
+					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+					<strong class="govuk-warning-text__text">
+					  <span class="govuk-warning-text__assistive">Warning</span>Submitting this will close the referral.</strong>
+				</div>
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+					<a class="govuk-link" href="update-status">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

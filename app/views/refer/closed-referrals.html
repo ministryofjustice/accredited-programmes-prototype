@@ -1,0 +1,212 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+My referrals - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-refer.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<!-- <div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div>  -->
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl">My referrals</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="draft-referrals">Draft referrals</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals</a>
+				</li>	
+			</ul>
+		</nav>
+		<div class="moj-scrollable-pane">
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+			  	<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name / Prison number</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date refergrey</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Release date type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Programme location</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Programme name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+			  	</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+			  	<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Martin Guthrie</a><br />D0168KE</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">1 Dec 2025</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Leicester</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (IPV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
+			  	</tr>
+				  <tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Daniel Hunter</a><br />B6789KL</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">1 Apr 2024</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (IPV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">David Paterson</a><br />N6005OK</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">28 Dec 2027</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Thinking Skills Programme</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Kris Wallace</a><br />L2273CK</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">1 Jan 2026</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Birmingham</td>
+					<td class="govuk-table__cell">Thinking Skills Programme</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not suitable</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Frank Friel</a><br />A1034LK</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">3 Apr 2030</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Salford</td>
+					<td class="govuk-table__cell">New Me MOT</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not suitable</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jay Welsh</a><br />Z2345LL</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">15 May 2029</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not suitable</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">David McKenna</a><br />D0051ED</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">1 Jan 2026</td>
+					<td class="govuk-table__cell">HDC</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Deselected</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Nicholas Metcalfe</a><br />E7728KL</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">3 Apr 2030</td>
+					<td class="govuk-table__cell">HDC</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Deselected</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Suhail Akhtar</a><br />K2273CD</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">15 May 2029</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Deselected</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Luke Hemsworth</a><br />F3849MK</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">1 Jan 2026</td>
+					<td class="govuk-table__cell">Pre tarrif</td>
+					<td class="govuk-table__cell">HMP Brighton</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jim McDonald</a><br />B1234LP</td>
+					<td class="govuk-table__cell">29 Jun 2023</td>
+					<td class="govuk-table__cell">3 Apr 2030</td>
+					<td class="govuk-table__cell">Pre tarrif</td>
+					<td class="govuk-table__cell">HMP Brighton</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Alistair McAdam</a><br />A114LKA</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">15 May 2029</td>
+					<td class="govuk-table__cell">Parole eligibility</td>
+					<td class="govuk-table__cell">HMP Brighton</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Bob James</a><br />A9234LQ</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">1 Jan 2026</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Lukas Setto</a><br />L0994FD</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">3 Apr 2030</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Rema Aalegra</a><br />F0394LM</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">15 May 2029</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Erlestoke</td>
+					<td class="govuk-table__cell">Kaizen (GV)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		<nav class="govuk-pagination" role="navigation" aria-label="results">
+			<ul class="govuk-pagination__list">
+				<li class="govuk-pagination__item govuk-pagination__item--current">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+			  	</li>
+			  	<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
+			  	</li>
+				<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
+			  	<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">42</a>
+			  	</li>
+			</ul>
+			<div class="govuk-pagination__next">
+			  	<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+					<path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+				</svg>
+				</a>
+			</div>
+		</nav>
+    </div>
+</div>
+
+{% endblock %}

@@ -12,6 +12,44 @@ require('./routes/assess/v7/routes.js')(router);
 require('./routes/assess/v8/routes.js')(router);
 require('./routes/refer/v9/routes.js')(router);
 
+router.post('/assess/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['referral-submitted']
+    	if (referralSubmitted == 'Awaiting assessment') {
+			res.redirect('awaiting-assessment')
+     	} 
+		else if (referralSubmitted == 'Not eligible') {
+       		res.redirect('not-eligible')
+     	}
+		else if (referralSubmitted == 'On hold') {
+			res.redirect('on-hold')
+	  	}
+		else {
+			res.redirect('withdraw-referral')
+	  	}
+ 	});
+
+	 router.get('/assess/withdraw-referral', function (req, res) {
+		res.render('/assess/withdraw-referral')
+	});
+	  
+router.post('/assess/withdraw-referral', function (req, res) {
+	const withdrawalReason = req.session.data['reason-category']
+		if (withdrawalReason == 'Administrative error') {
+			res.redirect('administrative-error')
+		} 
+		else if (withdrawalReason == 'Motivation and behaviour') {
+				res.redirect('motivation-behaviour')
+		}
+		else if (withdrawalReason == 'Operational') {
+			res.redirect('operational')
+		}
+		else if (withdrawalReason == 'Other') {
+			res.redirect('other')
+		}
+		else {
+			res.redirect('personal-health')
+		}
+	});
 
 
 router.get('/refer/features/withdrawal/v1/withdraw-referral', function (req, res) {

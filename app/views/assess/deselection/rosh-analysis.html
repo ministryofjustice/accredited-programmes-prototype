@@ -1,0 +1,141 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt-secondary.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a> -->
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+	  			<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+						<a class="govuk-button moj-button-menu__item govuk-button--warning moj-page-header-actions__actiong" href="deselection">Deselect person</a>
+					</div>
+	  			</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Risks and needs</h2>
+				<p class="govuk-body govuk-!-margin-bottom-0">Relevant sections from OASys to support the referral. The full Layer 3 assessment is available in OASys. Information is accurate at the time of the referral being submitted.</p>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="risks-needs">Risks and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="offence-analysis">Section 2 - Offence analysis</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="relationships">Section 6 - Relationships</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="lifestyle-associates">Section 7 - Lifestyle and Associates</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="emotional-wellbeing">Section 10 - Emotional Wellbeing</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="thinking-behaving">Section 11 - Thinking and behaving</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="attitudes">Section 12 - Attitudes</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="health">Section 13 - Health</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="learning-needs-score">Learning needs score</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="rosh-analysis" aria-current="location">Section R6 - ROSH analysis</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 4 January 2023</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Section R6.2 - Previous behaviour</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">What exactly did s/he do?</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br /><br />Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Where and when did s/he do it?</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br /><br />Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">How did s/he do it (was there any pre planning, use of weapon, tool etc)</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Who were the victims (were there concerns about targeting, type, age, race or vulnerability of victim)?</dt>
+							<dd class="govuk-summary-list__value">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Was anyone else present / involved?</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Why did s/he do it (motivation and triggers)?</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.<br /><br />Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing.<br /><br />Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.<br /><br />Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phas</dd>
+						</div> 
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Source of information</dt>
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

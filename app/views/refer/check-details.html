@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirm Del Hatton's details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Confirm Del Hatton's details</h1>
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Prison number</dt>
+				{% if data['person-identifier'] == "D0168GH" %}
+				<dd class="govuk-summary-list__value">D0168GH</dd>
+				{% else %}
+				<dd class="govuk-summary-list__value">D0168KE</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Date of birth</dt>
+				<dd class="govuk-summary-list__value">5 July 1971</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Ethnicity</dt>
+			  	<dd class="govuk-summary-list__value">White and Black African</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Male</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Custody</dd>
+	  		</div>
+	  		<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Current prison</dt>
+				<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
+  			</div>
+		</dl>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+				<span class="govuk-warning-text__assistive">Warning</span>
+				If this information is out of date or incorrect, you must update the information in NOMIS.
+			</strong>
+		</div>
+		<div class="govuk-button-group govuk-!-margin-top-4">
+			<a class="govuk-button" href="task-list">Continue</a>
+			<a class="govuk-link" href="persons-identifier">Enter a different identifier</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

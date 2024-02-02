@@ -1,0 +1,134 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="open-referrals" class="govuk-back-link govuk-!-margin-bottom-0">Back to referrals</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+	  			<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+						<a class="govuk-button" href="update-status">Update status</a>
+					</div>
+	  			</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="status-history">Status history</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-m">Status history</h2>
+		<div class="moj-timeline">
+			{% if data['referral-submitted'] == "Awaiting assessment" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong>
+			  	</div>
+			</div>
+			{% endif %}
+
+			{% if data['referral-submitted'] == "Not eligible" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-reason-not-eligible'] }}</p>
+					<strong class="govuk-tag govuk-tag--grey">Not eligible</strong>
+			  	</div>
+			</div>
+			{% endif %}
+
+			{% if data['referral-submitted'] == "On hold" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-reason-on-hold'] }}</p>
+					<strong class="govuk-tag govuk-tag--purple">On hold - Referral submitted</strong>
+			  	</div>
+			</div>
+			{% endif %}
+
+			{% if data['referral-submitted'] == "Withdraw referral" %}
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<p class="govuk-body">{{ data['add-notes-withdraw-2'] }}</p>
+					<strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong>
+			  	</div>
+			</div>
+			{% endif %}
+
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

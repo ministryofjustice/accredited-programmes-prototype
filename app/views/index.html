@@ -5,12 +5,357 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-
-    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %} -->
-
+	<div class="govuk-grid-column-three-quarters">
    		<h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+		<h2 class="govuk-heading-l">Current MVP</h2>
 		<div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">Contents</h2>
+			<ul class="govuk-tabs__list">
+				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+					<a class="govuk-tabs__tab" href="#find">Find</a>
+			  	</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#refer">Refer</a>
+			  	</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#assess">Assess</a>
+			  	</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#archives">Archives and Design history</a>
+			  	</li>
+			</ul>
+			<div class="govuk-tabs__panel" id="find">
+				<h3 class="govuk-heading-m">Find</h3>
+				<p>This is the end to end journey of when the Prison Offender Manager (POM) finds a programme for the Person in Prison (PiP).</p>
+				<a href="dps-find-refer/" class="govuk-button">View prototype</a>
+			</div>
+
+			<div class="govuk-tabs__panel" id="refer">
+				<h3 class="govuk-heading-m">Refer</h3>
+				<p>This is the end to end journey of when the Prison Offender Manager (POM) makes a programme referral for the Person in Prison (PiP).</p>
+				<a href="dps-find-refer/" class="govuk-button">View prototype</a>
+				<table class="govuk-table">
+					<thead class="govuk-table__head">
+					  	<tr class="govuk-table__row">
+							<th scope="col" class="govuk-table__header">Activity</th>
+							<th scope="col" class="govuk-table__header">Prototype</th>
+					  	</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+
+						<!-- Update status of referral -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Update status of referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-(Custody)?type=design&node-id=4956-12262&mode=design" target="_blank" class="govuk-link">Update status of referral (Figma)</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+						<!-- Withdraw referral -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Withdraw referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 2</span></li>
+									<li>
+										<a href="refer/features/withdrawal/v2/withdraw-referral" class="govuk-link">Withdraw referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 1</span></li>
+									<li>
+										<a href="refer/features/withdrawal/v1/withdraw-referral" class="govuk-link">Withdraw referral</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Make a referral -->
+					  	<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Make a referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="refer/v9/start-now" class="govuk-link">Make a referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="refer/v8/start-now" class="govuk-link">Make a referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 7</span></li>
+									<li>
+										<a href="refer/v7/start-now" class="govuk-link">Make a referral</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- View your referrals -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">View your referrals</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="refer/v9/open-referrals" class="govuk-link">View your referrals</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="refer/v8/open-referrals" class="govuk-link">View your referrals</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 7</span></li>
+									<li>
+										<a href="refer/v7/open-referrals" class="govuk-link">View your referrals</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Accredited Programme history -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Accredited Programme history</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li>
+										<a href="refer/v7/accredited-programme-history-added/multiple" class="govuk-link">Multiple programmes added</a>
+									</li>
+									<li>
+										<a href="refer/v7/accredited-programme-history-added/previously" class="govuk-link">History of added programmes</a>
+									</li>
+									<li>
+										<a href="refer/v7/accredited-programme-history-added/remove" class="govuk-link">Removing a programme</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="govuk-tabs__panel" id="assess">
+				<h3 class="govuk-heading-m">Assess</h3>
+				<p>This is the end to end journey of when a member of the Programme Team (PT) views and assesses the programme referral made by the Prison Offender Manager (POM).</p>
+				<a href="dps-assess/" class="govuk-button">View prototype</a>
+				<table class="govuk-table">
+					<thead class="govuk-table__head">
+					  	<tr class="govuk-table__row">
+							<th scope="col" class="govuk-table__header">Activity</th>
+							<th scope="col" class="govuk-table__header">Prototype</th>
+					  	</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+
+						<!-- Manage referrals -->
+					  	<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Manage referrals</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="assess/v8/open-referrals" class="govuk-link">Manage referrals ('On hold' journey only)</a>
+									</li>
+									<li>
+										<a href="assess/v8/deselection/open-referrals" class="govuk-link">Manage referrals (deselect person journey only - Sham Booth)</a>
+									</li>
+									<li>
+										<a href="assess/v8/withdrawal/open-referrals" class="govuk-link">Manage referrals (withdraw referral journey only - Sham Booth)</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 7</span></li>
+									<li>
+										<a href="assess/v7/open-referrals" class="govuk-link">Manage referrals</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 6</span></li>
+									<li>
+										<a href="assess/v6/open-referrals" class="govuk-link">Manage referrals</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Deselect person -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Deselect person</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 2</span></li>
+									<li>
+										<a href="assess/features/deselection/v2/deselection" class="govuk-link">Deselect person</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 1</span></li>
+									<li>
+										<a href="assess/features/deselection/v1/deselection" class="govuk-link">Deselect person</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Update status of referral -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Update status of referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-(Custody)?type=design&node-id=5720-55156&mode=design" target="_blank" class="govuk-link">Update status of referral (Figma)</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="assess/v8/update-status" class="govuk-link">Referral submitted</a>
+									</li>
+									<li>
+										<a href="assess/v8/status-awaiting-assessment/update-status" class="govuk-link">Awaiting assessment</a>
+									</li>
+									<li>
+										<a href="assess/v8/status-assessment-started/update-status" class="govuk-link">Assessment started</a>
+									</li>
+									<li>
+										<a href="assess/v8/status-assessed-suitable/update-status" class="govuk-link">Assessed as suitable</a>
+									</li>
+									<li>
+										<a href="assess/v8/status-on-programme/update-status" class="govuk-link">On programme</a>
+									</li>
+								</ul>
+
+								<ul class="govuk-list">
+									<li><span class="grey">Version 6</span></li>
+									<li>
+										<a href="assess/v6/update-status" class="govuk-link">Referral submitted</a>
+									</li>
+									<li>
+										<a href="assess/v6/status-awaiting-assessment/update-status" class="govuk-link">Awaiting assessment</a>
+									</li>
+									<li>
+										<a href="assess/v6/status-assessment-started/update-status" class="govuk-link">Assessment started</a>
+									</li>
+									<li>
+										<a href="assess/v6/status-assessed-suitable/update-status" class="govuk-link">Assessed as suitable</a>
+									</li>
+									<li>
+										<a href="assess/v6/status-on-programme/update-status" class="govuk-link">On programme</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Sentence information -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Sentence information</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li>
+										<a href="#" class="govuk-link">No record</a>
+									</li>
+									<li>
+										<a href="#" class="govuk-link">No sentence</a>
+									</li>
+									<li>
+										<a href="#" class="govuk-link">No release dates</a>
+									</li>
+								</ul>	
+							</td>
+					 	</tr>
+
+					</tbody>
+				</table>
+			</div>
+			<div class="govuk-tabs__panel" id="archives">
+				<h3 class="govuk-heading-m">Archives</h3>
+
+				<table class="govuk-table">
+					<thead class="govuk-table__head">
+					  	<tr class="govuk-table__row">
+							<th scope="col" class="govuk-table__header">Epic</th>
+							<th scope="col" class="govuk-table__header">Prototype</th>
+					  	</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+
+					<!-- Find -->
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">Find</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li><span class="grey">Versions 1 to 2</span></li>
+								<li>
+									<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=0-1&mode=design" target="_blank" class="govuk-link">Figma</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+
+					<!-- Refer -->
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">Refer</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li><span class="grey">Versions 1 to 7</span></li>
+								<li>
+									<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=6-2&mode=design" target="_blank" class="govuk-link">Figma</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+
+					<!-- Assess -->
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">Assess</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li><span class="grey">Versions 1 to 6</span></li>
+								<li>
+									<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=2074-9281&mode=design" target="_blank" class="govuk-link">Figma</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3 class="govuk-heading-m">Design history</h3> 
+			<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://miro.com/app/board/uXjVNBAA7Gw=/" target="_blank">Miro Design history board</a></p>
+
+				<!-- <h3 class="govuk-heading-m">Figma</h3> 
+				<p class="govuk-body">Links to the old Figma prototypes:</a></p>
+				<ul class="govuk-list">
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=0-1&mode=design" target="_blank">Find (versions 1 to 2)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=6-2&mode=design" target="_blank">Refer (versions 1 to 7)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-Prototype?type=design&node-id=2074-9281&mode=design" target="_blank">Assess (versions 1 to 6)</a></li>
+				</ul>
+				<h3 class="govuk-heading-m">Design history</h3> 
+				<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://miro.com/app/board/uXjVNBAA7Gw=/" target="_blank">Miro Design history board</a></p> -->
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<!-- <div class="govuk-tabs" data-module="govuk-tabs">
 			<h2 class="govuk-tabs__title">Contents</h2>
 			<ul class="govuk-tabs__list">
 				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
@@ -22,9 +367,6 @@
 			  	<li class="govuk-tabs__list-item">
 					<a class="govuk-tabs__tab" href="#assess">Assess</a>
 			  	</li>
-				<!-- <li class="govuk-tabs__list-item">
-					<a class="govuk-tabs__tab" href="#sprints">Sprints</a>
-			  	</li> -->
 				<li class="govuk-tabs__list-item">
 					<a class="govuk-tabs__tab" href="#archives">Archives</a>
 			  	</li>
@@ -38,11 +380,19 @@
 					<li><a class="govuk-link govuk-link--no-visited-state" href="find/v2/list-programmes">Find an Accredited Programme</a></li>
 					<li><a class="govuk-link govuk-link--no-visited-state" href="find/v2/dps-home">Digital Prison Services (homepage)</a></li>
 				</ul>
-				<!-- <p><a class="govuk-link govuk-link--no-visited-state" href="find/v2/dps-home">Find an Accredited Programme</a></p> -->
 			</div>
 			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="refer">
 				<h2 class="govuk-heading-l">Refer</h2> 
 				<p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) makes a programme referral for the Person in Prison (PiP).</p>
+
+				<h4 class="govuk-heading-m">Work in progress</h4>
+
+				<h4 class="govuk-heading-m">User testing</h4>
+				<h3 class="govuk-heading-s">Ready for testing</h3>
+				<h3 class="govuk-heading-s">Tested with users</h3>
+
+				<h4 class="govuk-heading-m">Ready for build</h4>
+
 				<h4 class="govuk-heading-m">Version 9 <strong class="govuk-tag govuk-tag--grey">Work in progress</strong></h4>
 				<details class="govuk-details govuk-!-margin-bottom-2">
 					<summary class="govuk-details__summary">
@@ -117,9 +467,9 @@
 					</div>
 				</details>
 				<ul class="govuk-list">
-					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/open-referrals">Manage referrals ('On hold' journey only)</a></li>
-					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/deselection/open-referrals">Manage referrals (deselect person journey only - Sham Booth)</a></li>
-					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/withdrawal/open-referrals.html">Manage referrals (withdraw referral journey only - Sham Booth)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/open-referrals">Make a referral ('On hold' journey only)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/deselection/open-referrals">Make a referral (deselect person journey only - Sham Booth)</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/withdrawal/open-referrals.html">Make a referral (withdraw referral journey only - Sham Booth)</a></li>
 					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v8/dps-home">Digital Prison Services (homepage)</a></li>
 				</ul>
 				<h5 class="govuk-heading-s">Update status of referral (different statuses)</h5>
@@ -143,13 +493,13 @@
 					</div>
 				</details>
 				<ul class="govuk-list">
-					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v7/open-referrals">Manage referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v7/open-referrals">Make a referral</a></li>
 					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v7/dps-home">Digital Prison Services (homepage)</a></li>
 				</ul>
 				<h4 class="govuk-heading-m">Version 6 <strong class="govuk-tag govuk-tag--green">Ready for build</strong></h4>
 				<span class="govuk-caption-m govuk-!-margin-bottom-4">This is a copy of the Figma prototype with some tweaks.</span>
 				<ul class="govuk-list">
-					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/open-referrals">Manage referrals</a></li>
+					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/open-referrals">Make a referral</a></li>
 					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/v6/dps-home">Digital Prison Services (homepage)</a></li>
 				</ul>
 				<h5 class="govuk-heading-s">Update status of referral (different statuses)</h5>
@@ -174,16 +524,6 @@
 					<li><a class="govuk-link govuk-link--no-visited-state" href="assess/features/deselection/v1/deselection">Version 1</a> <strong class="govuk-tag govuk-tag--yellow">Tested with users</strong></li>
 				</ul>
 			</div>
-			<!-- <div class="govuk-tabs__panel" id="sprints">
-				<h2 class="govuk-heading-l">Sprints</h2> 
-				<p class="govuk-body">A slice of the prototype (for the developers to build) based on the current sprint.</p>
-				<ul class="govuk-list">
-					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 20</a></li>
-					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 21</a></li>
-					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 22</a></li>
-					<li><a class="govuk-link govuk-link--no-visited-state" href="#">Sprint 23</a></li>
-				</ul>
-			</div> -->
 			<div class="govuk-tabs__panel" id="archives">
 				<h2 class="govuk-heading-l">Archives</h2> 
 				<h3 class="govuk-heading-m">Figma</h3> 
@@ -196,8 +536,8 @@
 				<h3 class="govuk-heading-m">Design history</h3> 
 				<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://miro.com/app/board/uXjVNBAA7Gw=/" target="_blank">Miro Design history board</a></p>
 			</div>
-		</div>
+		</div> -->
+
   	</div>
 </div>
-
 {% endblock %}

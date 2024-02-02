@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Put referral on hold - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}	
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Put referral on hold</h1>
+		<p class="govuk-body">If you put a referral on hold, it will not progress until it is removed from hold.</p>
+		<h2 class="govuk-heading-m">Current status</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">On hold</h2>
+		<p class="govuk-body">You must give a reason for putting this referral on hold.</p>
+		<form action="status-history" method="post">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--s" for="add-reason-on-hold">Add reason</label>
+				<textarea class="govuk-textarea" id="add-reason-on-hold" name="add-reason-on-hold" rows="5">{{ data['add-reason-on-hold'] }}</textarea>
+			</div>
+			<div class="govuk-warning-text">
+				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+				<strong class="govuk-warning-text__text">
+				  <span class="govuk-warning-text__assistive">Warning</span>This will change the referral status to on hold.</strong>
+			</div>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+				<a class="govuk-link" href="update-status">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
