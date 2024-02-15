@@ -28,9 +28,9 @@ router.post('/assess/update-status', function (req, res) {
 	  	}
  	});
 
-	 router.get('/assess/withdraw-referral', function (req, res) {
-		res.render('/assess/withdraw-referral')
-	});
+router.get('/assess/withdraw-referral', function (req, res) {
+	res.render('/assess/withdraw-referral')
+});
 	  
 router.post('/assess/withdraw-referral', function (req, res) {
 	const withdrawalReason = req.session.data['reason-category']
@@ -51,9 +51,38 @@ router.post('/assess/withdraw-referral', function (req, res) {
 		}
 	});
 
+/* router.get('/refer/on-hold', function (req, res) {
+    res.render('/refer/on-hold')
+});
+router.post('/refer/on-hold', function (req, res) {
+    res.redirect('/refer/status-history')
+});*/
+
+router.get('/refer/withdrawal-category', function (req, res) {
+	res.render('/refer/withdrawal-category')
+	});
+	  
+router.post('/refer/withdrawal-category', function (req, res) {
+	const withdrawalReason = req.session.data['reason-category']
+		if (withdrawalReason == 'Administrative error') {
+			res.redirect('administrative-error')
+		} 
+		else if (withdrawalReason == 'Motivation and behaviour') {
+			res.redirect('motivation-behaviour')
+		}
+		else if (withdrawalReason == 'Operational') {
+			res.redirect('operational')
+		}
+		else if (withdrawalReason == 'Personal and health') {
+			res.redirect('personal-health')
+		}
+		else {
+			res.redirect('other')
+		}
+	});
 
 router.get('/refer/features/withdrawal/v1/withdraw-referral', function (req, res) {
-  res.render('/refer/features/withdrawal/v1/withdraw-referral')
+  	res.render('/refer/features/withdrawal/v1/withdraw-referral')
 });
 
 router.post('/refer/features/withdrawal/v1/withdraw-referral', function (req, res) {
@@ -75,33 +104,33 @@ router.post('/refer/features/withdrawal/v1/withdraw-referral', function (req, re
 	  	}
  	});
 
-	router.get('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
-		res.render('/refer/features/withdrawal/v2/withdraw-referral')
-	});
+router.get('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
+	res.render('/refer/features/withdrawal/v2/withdraw-referral')
+});
 	  
-	router.post('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
-		const withdrawalReason = req.session.data['reason-category']
-			if (withdrawalReason == 'Administrative error (referrers only)') {
-				res.redirect('administrative-error')
-			} 
-			else if (withdrawalReason == 'Motivation and behaviour') {
-					res.redirect('motivation-behaviour')
-			}
-			else if (withdrawalReason == 'Operational') {
-				res.redirect('operational')
-			}
-			else if (withdrawalReason == 'Other') {
-				res.redirect('other')
-			}
-			else {
-				res.redirect('personal-health')
-			}
-		});
+router.post('/refer/features/withdrawal/v2/withdraw-referral', function (req, res) {
+	const withdrawalReason = req.session.data['reason-category']
+		if (withdrawalReason == 'Administrative error (referrers only)') {
+			res.redirect('administrative-error')
+		} 
+		else if (withdrawalReason == 'Motivation and behaviour') {
+			res.redirect('motivation-behaviour')
+		}
+		else if (withdrawalReason == 'Operational') {
+			res.redirect('operational')
+		}
+		else if (withdrawalReason == 'Other') {
+			res.redirect('other')
+		}
+		else {
+			res.redirect('personal-health')
+		}
+	});
 
 
 router.get('/assess/features/deselection/v1/deselection', function (req, res) {
-		res.render('/assess/features/deselection/v1/deselection')
-	});
+	res.render('/assess/features/deselection/v1/deselection')
+});
 	  
 
 router.post('/assess/features/deselection/v1/deselection', function (req, res) {
@@ -121,8 +150,8 @@ router.post('/assess/features/deselection/v1/deselection', function (req, res) {
 	});
 
 router.get('/assess/features/deselection/v2/deselection', function (req, res) {
-		res.render('/assess/features/deselection/v2/deselection')
-	});
+	res.render('/assess/features/deselection/v2/deselection')
+});
 	  
 router.post('/assess/features/deselection/v2/deselection', function (req, res) {
 	const deselectionReason = req.session.data['deselection-reason-category']

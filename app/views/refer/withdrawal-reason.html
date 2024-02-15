@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-top-2">
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
+</div> 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="status-history" method="post">
+			<h1 class="govuk-heading-l">Withdraw referral</h1>
+			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
+			<h2 class="govuk-heading-m">Current status</h2>
+			<div class="moj-timeline">
+				<div class="moj-timeline__item">
+					<div class="moj-timeline__header">
+						<h2 class="moj-timeline__title">Referral submitted</h2>
+						<p class="moj-timeline__byline">by You</p>
+					</div>
+					<p class="moj-timeline__date">
+						<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+					</p>
+					<div class="moj-timeline__description">
+						<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+					</div>
+				</div>
+			</div>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<h2 class="govuk-heading-m">Give a reason</h2>
+			<p class="govuk-body">Provide more information about the reason for withdrawing this referral.</p>
+			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="100">
+				<div class="govuk-form-group">
+				  	<h3 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--s" for="add-withdrawal-reason">Add reason</label>
+				  	</h3>
+				  	<textarea class="govuk-textarea govuk-js-character-count" id="add-withdrawal-reason" name="add-withdrawal-reason" rows="5" aria-describedby="add-withdrawal-reason-info">{{ data['add-withdrawal-reason'] }}</textarea>
+				</div>
+				<div id="add-withdrawal-reason-info" class="govuk-hint govuk-character-count__message">You have 100 characters remaining</div>
+			</div>
+			<div class="govuk-warning-text">
+				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+				<strong class="govuk-warning-text__text">
+				  	<span class="govuk-visually-hidden">Warning</span>Submitting this will close the referral.</strong>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="status-history">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

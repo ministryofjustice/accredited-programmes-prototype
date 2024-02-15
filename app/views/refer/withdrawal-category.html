@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+Withdrawal category - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -17,21 +17,21 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="withdraw-referral" method="post">
-			<h1 class="govuk-heading-l">Withdraw referral</h1>
-			<p class="govuk-body">Withdrawing a referral means that the referral cannot continue.</p>
-			<h2 class="govuk-heading-m">Current status details</h2>
+		<form action="withdrawal-category" method="post">
+			<h1 class="govuk-heading-l">Withdrawal category</h1>
+			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
+			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
 				<div class="moj-timeline__item">
 					<div class="moj-timeline__header">
-						<h2 class="moj-timeline__title">Status update</h2>
-						<p class="moj-timeline__byline">by Carol Duffy</p>
+						<h2 class="moj-timeline__title">Referral submitted</h2>
+						<p class="moj-timeline__byline">by You</p>
 					</div>
 					<p class="moj-timeline__date">
-						<time datetime="2023-07-03T14:09:00.000Z">3 July 2023 at 2:09pm</time>
+						<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
 					</p>
 					<div class="moj-timeline__description">
-						<strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong>
+						<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
 					</div>
 				</div>
 			</div>
@@ -39,12 +39,12 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h1 class="govuk-fieldset__heading">Select the appropriate category for this withdrawal</h1>
+						<h1 class="govuk-fieldset__heading">Select the withdrawal category</h1>
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error (referrers only)">
-							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error (referrers only)</label>
+							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error" {{ checked("reason-category", "Administrative error") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error</label>
 						</div>
 						<div class="govuk-radios__item">
 							<input class="govuk-radios__input" id="reason-category-2" name="reason-category" type="radio" value="Motivation and behaviour" {{ checked("reason-category", "Motivation and behaviour") }}>
