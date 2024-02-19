@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pt-secondary.html" %}
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history" method="post">
+		<form action="withdrawal-reason" method="post">
 			<h1 class="govuk-heading-l">Withdrawal reason</h1>
 			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
@@ -43,82 +43,33 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational" name="operational" type="radio" value="Course no longer available" data-aria-controls="conditional-operational">
-							<label class="govuk-label govuk-radios__label" for="operational">Course no longer available</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
-						</div>
-
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-2" name="operational" type="radio" value="In transfer process / transferred to another prison" data-aria-controls="conditional-operational-2">
-							<label class="govuk-label govuk-radios__label" for="operational-2">In transfer process / transferred to another prison</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-2">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-2">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-2" name="add-notes-2" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason" name="withdrawal-reason" type="radio" value="Course no longer available" {{ checked("withdrawal-reason", "Course no longer available") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason">Course no longer available</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-3" name="operational" type="radio" value="Other type of release" data-aria-controls="conditional-operational-3">
-							<label class="govuk-label govuk-radios__label" for="operational-3">Other type of release</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-3">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-3">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-3" name="add-notes-3" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason-2" name="withdrawal-reason" type="radio" value="In transfer process or transferred to another prison" {{ checked("withdrawal-reason", "In transfer process or transferred to another prison") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-2">In transfer process or transferred to another prison</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-4" name="operational" type="radio" value="Released after parole hearing" data-aria-controls="conditional-operational-4">
-							<label class="govuk-label govuk-radios__label" for="operational-4">Released after parole hearing</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-4">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-4">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-4" name="add-notes-4" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason-3" name="withdrawal-reason" type="radio" value="Not enough time to complete programme" {{ checked("withdrawal-reason", "Not enough time to complete programme") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-3">Not enough time to complete programme</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-5" name="operational" type="radio" value="Risk to females" data-aria-controls="conditional-operational-5">
-							<label class="govuk-label govuk-radios__label" for="operational-5">Risk to females</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-5">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-5">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-5" name="add-notes-5" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason-4" name="withdrawal-reason" type="radio" value="Released after parole hearing" {{ checked("withdrawal-reason", "Released after parole hearing") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-4">Released after parole hearing</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="operational-6" name="operational" type="radio" value="Sentence ended / on probation" data-aria-controls="conditional-operational-6">
-							<label class="govuk-label govuk-radios__label" for="operational-6">Sentence ended / on probation</label>
+							<input class="govuk-radios__input" id="withdrawal-reason-5" name="withdrawal-reason" type="radio" value="Sentence ended or on probation" {{ checked("withdrawal-reason", "Sentence ended or on probation") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-5">Sentence ended or on probation</label>
 						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-operational-6">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-6">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-6" name="add-notes-6" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-6" name="withdrawal-reason" type="radio" value="Other type of release" {{ checked("withdrawal-reason", "Other type of release") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-6">Other type of release</label>
 						</div>
 					</div>
 				</fieldset>
-				<div class="govuk-warning-text">
-					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-					<strong class="govuk-warning-text__text">
-					  <span class="govuk-visually-hidden">Warning</span>Submitting this will close the referral.</strong>
-				</div>
-				<div class="govuk-button-group">
-					<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-					<a class="govuk-link" href="update-status">Cancel</a>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
 				</div>
 			</div>
 		</form>

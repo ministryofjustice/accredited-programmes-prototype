@@ -5,7 +5,7 @@ Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pom.html" %}
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,20 +17,22 @@ Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history" method="post">
+		<form action="withdrawal-reason" method="post">
 			<h1 class="govuk-heading-l">Withdrawal reason</h1>
 			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
-					<p class="moj-timeline__byline">by Jordan Smith</p>
-				</div>
-				<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
-				</p>
-				<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+				<div class="moj-timeline__item">
+					<div class="moj-timeline__header">
+						<h2 class="moj-timeline__title">Referral submitted</h2>
+						<p class="moj-timeline__byline">by Jordan Smith</p>
+					</div>
+					<p class="moj-timeline__date">
+						<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+					</p>
+					<div class="moj-timeline__description">
+						<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
+					</div>
 				</div>
 			</div>
 			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -41,41 +43,20 @@ Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="specific-reason-administrative-error" name="specific-reason-administrative-error" type="radio" value="Duplicate referral" data-aria-controls="conditional-specific-reason-administrative-error">
-							<label class="govuk-label govuk-radios__label" for="specific-reason-administrative-error">Duplicate referral</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-administrative-error">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-withdraw">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-withdraw" name="add-notes-withdraw" rows="5" aria-describedby="more-info-hint">{{ data['add-notes-withdraw'] }}</textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason" name="withdrawal-reason" type="radio" value="Duplicate referral" {{ checked("withdrawal-reason", "Duplicate referral") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason">Duplicate referral</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="specific-reason-administrative-error-2" name="specific-reason-administrative-error" type="radio" value="Submitted in error" data-aria-controls="conditional-specific-reason-administrative-error-2">
-							<label class="govuk-label govuk-radios__label" for="specific-reason-administrative-error-2">Submitted in error</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-specific-reason-administrative-error-2">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes-withdraw-2">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes-withdraw-2" name="add-notes-withdraw" rows="5" aria-describedby="more-info-hint">{{ data['add-notes-withdraw-2'] }}</textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason-2" name="withdrawal-reason" type="radio" value="Submitted in error" {{ checked("withdrawal-reason", "Submitted in error") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-2">Submitted in error</label>
 						</div>
 					</div>
 				</fieldset>
-				<div class="govuk-warning-text">
-					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-					<strong class="govuk-warning-text__text">
-					  <span class="govuk-visually-hidden">Warning</span>Submitting this will close the referral.</strong>
-				</div>
-				<div class="govuk-button-group">
-					<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-					<a class="govuk-link" href="update-status">Cancel</a>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
 				</div>
 			</div>
 		</form>
 	</div>
 </div>
-
 {% endblock %}

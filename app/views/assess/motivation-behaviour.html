@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pt-secondary.html" %}
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history" method="post">
+		<form action="withdrawal-reason" method="post">
 			<h1 class="govuk-heading-l">Withdrawal reason</h1>
 			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
@@ -43,37 +43,17 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="motivation-behaviour" name="motivation-behaviour" type="radio" value="Behavioural problems" data-aria-controls="conditional-motivation-behaviour">
-							<label class="govuk-label govuk-radios__label" for="motivation-behaviour">Behavioural problems</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason" name="withdrawal-reason" type="radio" value="Behavioural problems" {{ checked("withdrawal-reason", "Behavioural problems") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason">Behavioural problems</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="motivation-behaviour-2" name="motivation-behaviour" type="radio" value="Motivation changed" data-aria-controls="conditional-motivation-behaviour-2">
-							<label class="govuk-label govuk-radios__label" for="motivation-behaviour-2">Motivation changed</label>
-						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-motivation-behaviour-2">
-							<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="add-notes">Add notes (optional)</label>
-								<div id="more-info-hint" class="govuk-hint">Provide more information about the reason for withdrawing this referral.</div>
-								<textarea class="govuk-textarea" id="add-notes" name="add-notes" rows="5" aria-describedby="more-info-hint"></textarea>
-							</div>
+							<input class="govuk-radios__input" id="withdrawal-reason-2" name="withdrawal-reason" type="radio" value="Motivation changed" {{ checked("withdrawal-reason", "Motivation changed") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-2">Motivation changed</label>
 						</div>
 					</div>
 				</fieldset>
-				<div class="govuk-warning-text">
-					<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-					<strong class="govuk-warning-text__text">
-					  <span class="govuk-visually-hidden">Warning</span>Submitting this will close the referral.</strong>
-				</div>
-				<div class="govuk-button-group">
-					<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-					<a class="govuk-link" href="update-status">Cancel</a>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
 				</div>
 			</div>
 		</form>

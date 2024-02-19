@@ -57,7 +57,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="assessment-started">Assessment started</option>
 						<option value="awaiting-assessment">Awaiting assessment</option>
 						<option value="on-programme">On programme</option>
-						<!-- <option value="place-allocated">Place allocated</option> -->
 						<option value="referral-submitted">Referral submitted</option>
 						<option value="suitable-not-ready">Suitable but not ready</option>
 					</select>
@@ -94,7 +93,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "Not eligible" %}
+				{% if data['add-reason-not-eligible-url'] == "done" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -105,8 +104,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
 				</tr>
-				{% endif %}
-				{% if data['referral-submitted'] == "Withdraw referral" %}
+				{% elseif data['add-withdrawal-reason-url'] == "done" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -115,7 +113,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Withdrawn</strong></td>
 				</tr>
 				{% endif %}
 			  	<tr class="govuk-table__row">
@@ -246,7 +244,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Withdrawn</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Lukas Setto</a><br />L0994FD</td>
@@ -256,7 +254,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Life</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Withdrawn</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Rema Aalegra</a><br />F0394LM</td>
@@ -266,7 +264,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Life</td>
 					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral withdrawn</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Withdrawn</strong></td>
 				</tr>
 				
 			</tbody>
