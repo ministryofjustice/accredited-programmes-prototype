@@ -8,12 +8,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 	{% include "/includes/head-assess.html" %}
 {% endblock %}
 
-{% block beforeContent %}
-<!-- <div class="govuk-!-margin-top-2">
-	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
-</div>  -->
-{% endblock %} 
-
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -57,7 +51,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="assessment-started">Assessment started</option>
 						<option value="awaiting-assessment">Awaiting assessment</option>
 						<option value="on-programme">On programme</option>
-						<!-- <option value="place-allocated">Place allocated</option> -->
 						<option value="referral-submitted">Referral submitted</option>
 						<option value="suitable-not-ready">Suitable but not ready</option>
 					</select>
@@ -93,7 +86,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "Awaiting assessment" %}
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -103,29 +95,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong></td>
 			  	</tr>
-				{% elseif data['referral-submitted'] == "Not eligible" or data['referral-submitted'] == "Withdraw referral" %}
-				<!-- -->
-				{% elseif data['referral-submitted'] == "On hold" %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">On hold - Referral submitted</strong></td>
-			  	</tr>
-				{% else %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Referral submitted</strong></td>
-			  	</tr>
-				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
 					<td class="govuk-table__cell">27 Jul 2023</td>
@@ -276,5 +245,4 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 		</nav>
     </div>
 </div>
-
 {% endblock %}
