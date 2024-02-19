@@ -49,7 +49,20 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-			  	<tr class="govuk-table__row">
+				{% if data['add-withdrawal-reason-url'] == "done" %}
+				<!-- Empty row -->
+				{% elseif data['add-hold-reason-url'] == "done" %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="status-history" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">1 Dec 2025</td>
+					<td class="govuk-table__cell">Conditional release</td>
+					<td class="govuk-table__cell">HMP Leicester</td>
+					<td class="govuk-table__cell">Becoming New Me Plus (BNM+)</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">On hold - Referral submitted</strong></td>
+			  	</tr>
+				{% else %}
+				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="status-history" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">28 Jun 2023</td>
 					<td class="govuk-table__cell">1 Dec 2025</td>
@@ -58,7 +71,8 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Becoming New Me Plus (BNM+)</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Referral submitted</strong></td>
 			  	</tr>
-				  <tr class="govuk-table__row">
+				{% endif %}
+				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
 					<td class="govuk-table__cell">27 Jul 2023</td>
 					<td class="govuk-table__cell">1 Apr 2024</td>
