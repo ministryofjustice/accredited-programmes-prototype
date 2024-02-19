@@ -19,22 +19,14 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						<form action="open-referrals" method="post">
-							{% if data['add-hold-reason-url'] != "done" %}
-							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
-							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% elseif data['add-hold-reason-url'] == "done" %}
+							{% if data['add-hold-reason-url'] == "done" %}
 							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							<a href="remove-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
 							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% elseif data['remove-hold-reason-url'] == "done" %}
+							{% else %}
 							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
 							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% elseif data['add-withdrawal-reason-url'] == "done" %}
-							<button type="submit" class="govuk-button moj-button-menu__item">Back to referrals</button>
-							<button type="submit" disabled aria-disabled="true" class="govuk-button moj-button-menu__item govuk-button--secondary" formaction="on-hold">Withdraw referral</button>
-							<button type="submit" disabled aria-disabled="true" class="govuk-button moj-button-menu__item govuk-button--secondary" formaction="withdrawal-category">Withdraw referral</button>
 							{% endif %}	
 						</form>
 					</div>
@@ -77,10 +69,15 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<strong class="govuk-tag govuk-tag--grey">Withdrawn</strong>
 					{% if data['withdrawal-reason'] %}
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> {{ data['withdrawal-reason'] }}</p>
+					{% if data['add-withdrawal-reason'] %}
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> {{ data['add-withdrawal-reason'] }}</p>
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
 					{% else %}
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> Submitted in error</p>
-					{% endif %}
 					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
 			  	</div>
 			</div> 
 			<div class="moj-timeline__item">
@@ -108,48 +105,11 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--purple">On hold - Referral submitted</strong>
+					{% if data['add-hold-reason'] %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-hold-reason'] }}</p>
+					{% else %}
 					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
-			  	</div>
-			</div> 
-		</div>
-		{% elseif data['remove-hold-reason-url'] == "done" %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-30T10:11:00.000Z">30 June 2023 at 10:11am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--red">Referral submitted</strong>
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">On hold - Referral submitted</strong>
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
 			  	</div>
 			</div> 
 			<div class="moj-timeline__item">
