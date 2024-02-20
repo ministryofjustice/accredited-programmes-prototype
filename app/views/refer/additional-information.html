@@ -19,21 +19,13 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						<form action="open-referrals" method="post">
-							{% if data['add-hold-reason-url'] == "done" and data['add-withdrawal-reason-url'] != "done" %}
 							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="remove-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
-							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% endif %}	
-							{% if data['add-withdrawal-reason-url'] == "done" %}
-							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<button type="submit" disabled aria-disabled="true" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Put on hold</button>
-							<button type="submit" disabled aria-disabled="true" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Withdraw referral</button>
-							{% endif %}	
-							{% if data['add-hold-reason-url'] != "done" %}
-							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
-							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% endif %}	
+							{% if data['add-hold-reason'] %}
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Remove hold</a>
+							{% else %}
+							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Put on hold</a>
+							{% endif %}
+							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Withdraw referral</a>
 						</form>
 					</div>
 	  			</div>
@@ -46,7 +38,11 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
+					{% if data['reason-category'] %}
+					<a class="moj-sub-navigation__link" href="status-history-disabled">Status history</a>
+					{% else %}
 					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+					{% endif %}
 			  	</li>
 				<li class="moj-sub-navigation__item">
 				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
