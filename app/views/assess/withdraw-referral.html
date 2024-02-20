@@ -43,7 +43,7 @@ Withdrawal category - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error">
+							<input class="govuk-radios__input" id="reason-category" name="reason-category" type="radio" value="Administrative error" {{ checked("reason-category", "Administrative error") }}>
 							<label class="govuk-label govuk-radios__label" for="reason-category">Administrative error</label>
 						</div>
 						<div class="govuk-radios__item">

@@ -86,11 +86,11 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['add-withdrawal-reason-url'] == "done" %}
+				{% if data['referral-submitted'] == "Withdraw referral" %}
 				<!-- Empty row -->
-				{% elseif data['add-reason-not-eligible-url'] == "done" %}
+				{% elseif data['referral-submitted'] == "Not eligible" %}
 				<!-- Empty row -->
-				{% elseif data['confirm-suitability-url'] == "done" %}
+				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -100,7 +100,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Extended determinate recall</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Awaiting assessment</strong></td>
 			  	</tr>
-				{% elseif data['add-hold-reason-url'] == "done" %}
+				{% elseif data['referral-submitted'] == "On hold" %}
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>

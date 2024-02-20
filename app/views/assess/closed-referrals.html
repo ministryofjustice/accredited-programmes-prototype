@@ -93,7 +93,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['add-reason-not-eligible-url'] == "done" %}
+				{% if data['referral-submitted'] == "Not eligible" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
@@ -104,7 +104,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not eligible</strong></td>
 				</tr>
-				{% elseif data['add-withdrawal-reason-url'] == "done" %}
+				{% elseif data['referral-submitted'] == "Withdraw referral" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
