@@ -10,7 +10,7 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <div class="govuk-!-margin-top-2">
-	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back to the tasklist</a>
+	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
 </div> 
 {% endblock %}
 
@@ -37,7 +37,7 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 		<form action="task-list?referral-information-three=done&" method="post">
 		{% endif %}
 			<div class="govuk-form-group">
-				<label class="govuk-label govuk-label--s" for="provide-additional-information">Provide additional information</label>
+				<label class="govuk-label govuk-label--m" for="provide-additional-information">Provide additional information</label>
 				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5">{{ data['provide-additional-information'] }}</textarea>
 			</div>
 			<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">Continue</button>
