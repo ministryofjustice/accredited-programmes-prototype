@@ -168,3 +168,26 @@ router.post('/assess/features/deselection/v2/deselection', function (req, res) {
 			res.redirect('other')
 		}
 	});
+
+
+// Logging session data  
+router.use((req, res, next) => {    
+	const log = {  
+		method: req.method,  
+		url: req.originalUrl,  
+		data: req.session.data  
+	}  
+	console.log(JSON.stringify(log, null, 2))  
+	
+	next()  
+})  
+
+// GET SPRINT NAME - useful for relative templates  
+router.use('/', (req, res, next) => {  
+	res.locals.currentURL = req.originalUrl; //current screen  
+	res.locals.prevURL = req.get('Referrer'); // previous screen
+  
+  console.log('folder : ' + res.locals.folder + ', subfolder : ' + res.locals.subfolder  );
+  
+	next();  
+});
