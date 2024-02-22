@@ -19,13 +19,15 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						<form action="open-referrals" method="post">
-							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							{% if data['add-hold-reason'] %}
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Remove hold</a>
+							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
+							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
 							{% else %}
-							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Put on hold</a>
-							{% endif %}
-							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Withdraw referral</a>
+							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
+							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
+							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+							{% endif %}	
 						</form>
 					</div>
 	  			</div>
