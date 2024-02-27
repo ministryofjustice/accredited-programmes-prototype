@@ -9,13 +9,14 @@ Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-!-margin-top-2">
-	<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-0">Back</a>
-</div> 
-{% endblock %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
 
 {% block content %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<form action="withdrawal-reason" method="post">
 			<h1 class="govuk-heading-l">Withdrawal reason</h1>

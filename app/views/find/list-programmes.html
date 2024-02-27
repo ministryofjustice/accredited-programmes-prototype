@@ -8,8 +8,14 @@ Find an accredited programme - {{ serviceName }} - GOV.UK Prototype Kit
 	{% include "/includes/head-find.html" %}
 {% endblock %}
 
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
 {% block content %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">Find an Accredited Programme</h1>
     </div>

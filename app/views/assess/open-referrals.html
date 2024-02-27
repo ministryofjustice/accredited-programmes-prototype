@@ -8,8 +8,14 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 	{% include "/includes/head-assess.html" %}
 {% endblock %}
 
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
 {% block content %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-xl">Referrals</span>
 		<h1 class="govuk-heading-xl">Becoming New Me Plus (BNM+)</h1>
