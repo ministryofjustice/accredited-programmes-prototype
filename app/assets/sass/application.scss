@@ -661,3 +661,19 @@ $low-score-colour__text: #485b10;
 .clear {
   clear: both !important;
 }
+
+@media (min-width: 40.0625em) {
+.moj-page-header-actions__actions {
+  margin-top: 10px;
+}
+}
+
+.moj-page-header-actions {
+  margin-top: 10px;
+}
+
+.api-message {
+  border-left: 10px solid #D4351C;
+  background-color: #f3f2f1;
+  padding: 25px 30px;
+}
