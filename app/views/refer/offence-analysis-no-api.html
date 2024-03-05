@@ -5,12 +5,12 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-no-api-risk-scores.html" %}
+	{% include "/includes/key-details-no-api.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -25,15 +25,13 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						<form action="#" method="post">
+							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							{% if data['add-hold-reason'] %}
-							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Remove hold</a>
 							{% else %}
-							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% endif %}	
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Put on hold</a>
+							{% endif %}
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary" disabled aria-disabled="true">Withdraw referral</a>
 						</form>
 					</div>
 	  			</div>
@@ -74,11 +72,11 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="#" aria-current="location">Risks and alerts</a>
-		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Section 2 - Offence analysis</a>
+					<a href="#">Risks and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="#" aria-current="location">Section 2 - Offence analysis</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
 					<a href="#">Section 6 - Relationships</a>
@@ -108,7 +106,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">We cannot show risk scores from OASYS at the moment.</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">We cannot retrieve this information from OASys at the moment. Try again later.</div>
 		</div>
 	</div>
 </div>
