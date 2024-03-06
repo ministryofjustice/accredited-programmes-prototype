@@ -5,7 +5,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-no-api.html" %}
+	{% include "/includes/key-details-no-oasys-nomis.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -108,11 +108,19 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-width-container">
-			<div class="api-message govuk-!-margin-bottom-5">
-				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">OASys data unavailable</h3>
-				<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-0">We cannot retrieve this information from OASys at the moment. Try again later.</p>
-			</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">We cannot show risk scores from OASys at the moment. Try again later.</div>
+		<div class="govuk-inset-text govuk-!-margin-top-8 govuk-!-margin-bottom-4">Imported from NOMIS on 1 August 2023, last updated on 16 November 2022</div>
+		<h3 class="govuk-heading-s">Risk alerts</h3>
+		<div class="risk-flag-widget">
+			<h2 class="govuk-heading-s govuk-!-margin-bottom-3">Active alerts</h2>
+			<hr class="govuk-section-break govuk-section-break--visible">
+			<ul class="govuk-list govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+				<li>Gang member</li>
+				<li>Arsonist</li>
+				<li>Risk to females</li>
+			</ul>
+			<hr class="govuk-section-break govuk-section-break--visible">
+			<p class="text-secondary govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 grey">Last updated: 2 February 2022</p>
 		</div>
 	</div>
 </div>
