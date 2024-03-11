@@ -25,15 +25,9 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<div class="moj-button-menu">
 					<div class="moj-button-menu__wrapper">
 						<form action="#" method="post">
-							{% if data['add-hold-reason'] %}
-							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% else %}
 							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
 							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% endif %}	
 						</form>
 					</div>
 	  			</div>
@@ -46,11 +40,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					{% if data['reason-category'] %}
 					<a class="moj-sub-navigation__link" href="#">Status history</a>
-					{% else %}
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
-					{% endif %}
 				</li>
 			  	<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Referral details</a>
