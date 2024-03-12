@@ -10,7 +10,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -21,7 +21,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 		<h1 class="govuk-heading-xl">Becoming New Me Plus (BNM+)</h1>
     </div>
 </div>
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 		<div class="filters-container">
@@ -71,10 +70,10 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="#">Open referrals</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals</a>
+					<a class="moj-sub-navigation__link" href="#">Closed referrals</a>
 				</li>
 			</ul>
 		</nav>
@@ -92,33 +91,8 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "Withdraw referral" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Not eligible" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell"><a href="sentence-information-multiple" class="govuk-link">Multiple sentences</a></td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
-			  	</tr>
-				{% elseif data['referral-submitted'] == "On hold" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell"><a href="sentence-information-multiple" class="govuk-link">Multiple sentences</a></td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
-			  	</tr>
-				{% else %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
 					<td class="govuk-table__cell">1 Dec 2025</td>
 					<td class="govuk-table__cell">N/A</td>
@@ -126,7 +100,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell"><a href="sentence-information-multiple" class="govuk-link">Multiple sentences</a></td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
-				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
 					<td class="govuk-table__cell">27 Jul 2023</td>
