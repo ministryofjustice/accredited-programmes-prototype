@@ -56,7 +56,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<div class="govuk-grid-row">
 			<div class="govuk-grid-column-two-thirds">
 				<h2 class="govuk-heading-m">Programmes Needs Identifier</h2>
-				<p class="govuk-body govuk-!-margin-bottom-0">The Programmes Needs Identifier (PNI) is used in referrals to Getting Ready and Building Choices. It gives an indication of whether someone is suitable for the programme, and if so, whether they need the moderate or high intensity programme.</p>
+				<p class="govuk-body govuk-!-margin-bottom-0">The Programmes Needs Identifier (PNI) is used in referrals to Getting Ready and Building Choices. It gives an indication of whether someone is eligible for the programme, and if so, whether they need the moderate or high intensity programme.</p>
 			</div>
 		</div>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -65,39 +65,107 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">TBC</div>
-		<h3 class="govuk-heading-s">Sex</h3>
-		<div class="rosh-widget rosh-widget--low govuk-!-margin-bottom-6">
-			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
-				<span class="green"><strong>LOW</strong> <span class="govuk-!-font-weight-regular">NEED</span></span>
-				<span class="green-figure">0</span>
-			</h2>
-			<p class="govuk-body-m govuk-!-margin-bottom-1">Sexual Pre-occupation</p>
-			<p class="text-secondary govuk-body-s govuk-!-margin-bottom-0 grey">Last updated: 1 November 2022</p>
-		</div>
-
+		<!-- <div class="govuk-inset-text govuk-!-margin-top-0">TBC</div> -->
 		<div class="rosh-widget rosh-widget--medium govuk-!-margin-bottom-6">
 			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
-				<span class="orange"><strong>MEDIUM</strong> <span class="govuk-!-font-weight-regular">NEED</span></span>
+				<span class="orange"><strong>MODERATE INTENSITY</strong></span>
 				<span class="orange-figure">2</span>
 			</h2>
-			<p class="govuk-body-m govuk-!-margin-bottom-1">Offence related Sexual Interests</p>
-			<p class="text-secondary govuk-body-s govuk-!-margin-bottom-0 grey">Last updated: 1 November 2022</p>
+			<p class="govuk-body-m govuk-!-margin-bottom-1">Based on the PNI scores, this person may be eligible for the moderate intensity programme.</p>
+			<!-- <p class="text-secondary govuk-body-s govuk-!-margin-bottom-0 grey">Last updated: 1 November 2022</p> -->
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Sex</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.11 - Sexual Pre-occupation</dt>
+						<dd class="govuk-summary-list__value">0 - Low need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.12 - Offence related Sexual Interests </dt>
+						<dd class="govuk-summary-list__value">2 - Medium need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.12  Emotional congruence with children or feeling closer to children than adults</dt>
+						<dd class="govuk-summary-list__value">3 - Medium need</dd>
+					</div>
+				</dl>
+			</div>
 		</div>
 
-		<div class="rosh-widget rosh-widget--medium govuk-!-margin-bottom-6">
-			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
-				<span class="orange"><strong>MEDIUM</strong> <span class="govuk-!-font-weight-regular">NEED</span></span>
-				<span class="orange-figure">3</span>
-			</h2>
-			<p class="govuk-body-m govuk-!-margin-bottom-1">Emotional congruence with children/ feeling closer to children than adults*</p>
-			<p class="text-secondary govuk-body-s govuk-!-margin-bottom-0 grey">Last updated: 1 November 2022</p>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Cognitive</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">12.1 Pro-criminal attitudes</dt>
+						<dd class="govuk-summary-list__value">3 - High need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">12.9 Hostile orientation</dt>
+						<dd class="govuk-summary-list__value">1 - Low need</dd>
+					</div>
+				</dl>
+			</div>
 		</div>
 
-		
-		
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Relationships</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.1 - Current relationship with close family</dt>
+						<dd class="govuk-summary-list__value">5 - High need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.6 - Previous experience of close relationships</dt>
+						<dd class="govuk-summary-list__value">1 - Low need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">7.3 - Easily influenced by criminal associates</dt>
+						<dd class="govuk-summary-list__value">3 - Medium need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.3 - Aggressive or controlling behaviour</dt>
+						<dd class="govuk-summary-list__value">1 - Low need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
 
-		<p class="govuk-body-s grey govuk-!-margin-bottom-0">* Not sure what the asterisk is for in the data above.</p>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Self Management</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.2 - Impulsivity</dt>
+						<dd class="govuk-summary-list__value">0 - Low need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.4 - Temper control</dt>
+						<dd class="govuk-summary-list__value">1 - Low need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.6 - Problem-solving skills</dt>
+						<dd class="govuk-summary-list__value">3 - Medium need</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">10.1 - Difficulties coping</dt>
+						<dd class="govuk-summary-list__value">2 - Medium need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+		<!-- <p class="govuk-body-s grey govuk-!-margin-bottom-0">* Not sure what the asterisk is for in the data above.</p> -->
 	</div>
 </div>
 {% endblock %}
