@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+	  			<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+						<form action="open-referrals" method="post">
+							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+						</form>
+					</div>
+	  			</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="pni">Identify programme pathway</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Identify programme pathway</h2>
+				<p class="govuk-body govuk-!-margin-bottom-0">The Programmes Needs Identifier (PNI) is used in referrals to Getting Ready and Building Choices. It gives an indication of whether someone is eligible for the programme, and if so, whether they need the moderate or high intensity pathway.</p>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+		<div class="rosh-widget rosh-widget--medium govuk-!-margin-bottom-6">
+			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+				<span class="orange"><strong>MODERATE INTENSITY</strong></span>
+				<span class="orange-figure">2</span>
+			</h2>
+			<p class="govuk-body-m govuk-!-margin-bottom-1">Based on the programme needs scores, this person may be eligible for the moderate intensity pathway (Building Choices only).</p>
+		</div>
+		<h2 class="govuk-heading-m">Programme needs score breakdown</h2>
+		<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Sex</h3>
+		<p class="govuk-body">low need</p>
+		<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Cognitive</h3>
+		<p class="govuk-body">high need</p>
+		<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Relationships</h3>
+		<p class="govuk-body">high need</p>
+		<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Self-management</h3>
+		<p class="govuk-body">medium need</p>
+	</div>
+</div>
+{% endblock %}
