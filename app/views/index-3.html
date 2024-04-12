@@ -1,0 +1,301 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-8">
+			<span class="govuk-caption-l">Custody</span>{{ serviceName }}</h1>
+
+			<div class="govuk-tabs" data-module="govuk-tabs">
+				<h2 class="govuk-tabs__title">Contents</h2>
+				<ul class="govuk-tabs__list">
+					<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+						<a class="govuk-tabs__tab" href="#custody">Custody</a>
+					  </li>
+					<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#community">Community</a>
+					  </li>
+					<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#next-gen">Next Gen</a>
+					  </li>
+					
+				</ul>
+				<div class="govuk-tabs__panel" id="custody">
+					<h3 class="govuk-heading-m">Custody</h3>
+					<h3 class="govuk-heading-m">Find</h3>
+					<p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) finds a programme for the Person in Prison (PiP).</p>
+					<a href="dps/" class="govuk-button">View prototype</a>
+					<table class="govuk-table">
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Activity</th>
+								<th scope="col" class="govuk-table__header">Prototype</th>
+							</tr>
+						</thead>
+						<tbody class="govuk-table__body">
+
+							<!-- List of programmes -->
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">List of programmes</td>
+								<td class="govuk-table__cell">
+									<ul class="govuk-list">
+										<li><span class="grey">Version A</span></li>
+										<li>
+											<a href="find/bnm-plus-a" class="govuk-link govuk-link--no-visited-state">Becoming New Me Plus (BNM+)</a>
+										</li>
+									</ul>
+									<ul class="govuk-list">
+										<li><span class="grey">Version B</span></li>
+										<li>
+											<a href="find/bnm-plus-b" class="govuk-link govuk-link--no-visited-state">Becoming New Me Plus (BNM+)</a>
+										</li>
+									</ul>
+								</td>
+							</tr>
+
+							<!-- Service pages -->
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">Service pages</td>
+								<td class="govuk-table__cell">
+									<ul class="govuk-list">
+										<li>
+											<a href="page-not-found" class="govuk-link govuk-link--no-visited-state">TBC - Page not found (Error 404)</a>
+										</li>
+										<li>
+											<a href="problem-with-service" class="govuk-link govuk-link--no-visited-state">Problem with the service (Error 500)</a>
+										</li>
+										<li>
+											<a href="service-unavailable" class="govuk-link govuk-link--no-visited-state">TBC - Service unavailable (Error 503)</a>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h3 class="govuk-heading-m">Refer</h3>
+				<p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) makes a programme referral for the Person in Prison (PiP).</p>
+				<p class="govuk-body-s grey"><strong>Note:</strong> This prototype shows the 'Referral submitted' status stage. To see other statuses (including removing a hold) please refer to the latest <a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-(Custody)?type=design&node-id=5731-248038&mode=design" target="_blank" class="govuk-link govuk-link--no-visited-state">Figma designs</a>.</p>
+				<a href="refer/start-now" class="govuk-button">View prototype</a>
+				<table class="govuk-table">
+					<thead class="govuk-table__head">
+					  	<tr class="govuk-table__row">
+							<th scope="col" class="govuk-table__header">Activity</th>
+							<th scope="col" class="govuk-table__header">Prototype</th>
+					  	</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+
+						<!-- Programmes Needs Identifier -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Programmes Needs Identifier (PNI)</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Concept 1</span></li>
+									<li>
+										<a href="pni/c1/list-programmes" class="govuk-link govuk-link--no-visited-state">Find an Accredited Programme</a>
+									</li>
+									<li>
+										<a href="pni/c1/pni" class="govuk-link govuk-link--no-visited-state">Referral details - Programmes Needs Identifier</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Concept 2</span></li>
+									<li>
+										<a href="pni/c2/pni" class="govuk-link govuk-link--no-visited-state">Referral details - Programmes Needs Identifier</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+						<!-- Update status of referral -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Update status of referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 10</span></li>
+									<li>
+										<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-(Custody)?type=design&node-id=5731-248038&mode=design" target="_blank" class="govuk-link govuk-link--no-visited-state">Update status of referral (Figma)</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="https://www.figma.com/file/ZGMNCyn4uzmUxFQdmAiQQq/Accredited-Programmes-(Custody)?type=design&node-id=4956-12262&mode=design" target="_blank" class="govuk-link govuk-link--no-visited-state">Update status of referral (Figma)</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+						<!-- Withdraw referral -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Withdraw referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 2</span></li>
+									<li>
+										<a href="refer/features/withdrawal/v2/withdraw-referral" class="govuk-link govuk-link--no-visited-state">Withdraw referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 1</span></li>
+									<li>
+										<a href="refer/features/withdrawal/v1/withdraw-referral" class="govuk-link govuk-link--no-visited-state">Withdraw referral</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Make a referral -->
+					  	<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Make a referral</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="refer/v9/start-now" class="govuk-link govuk-link--no-visited-state">Make a referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="refer/v8/start-now" class="govuk-link govuk-link--no-visited-state">Make a referral</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 7</span></li>
+									<li>
+										<a href="refer/v7/start-now" class="govuk-link govuk-link--no-visited-state">Make a referral</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- View your referrals -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">View your referrals</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li><span class="grey">Version 9</span></li>
+									<li>
+										<a href="refer/v9/open-referrals" class="govuk-link govuk-link--no-visited-state">View your referrals</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 8</span></li>
+									<li>
+										<a href="refer/v8/open-referrals" class="govuk-link govuk-link--no-visited-state">View your referrals</a>
+									</li>
+								</ul>
+								<ul class="govuk-list">
+									<li><span class="grey">Version 7</span></li>
+									<li>
+										<a href="refer/v7/open-referrals" class="govuk-link govuk-link--no-visited-state">View your referrals</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Accredited Programme history -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Accredited Programme history</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li>
+										<a href="refer/accredited-programme-history-added/multiple" class="govuk-link govuk-link--no-visited-state">Multiple programmes added</a>
+									</li>
+									<li>
+										<a href="refer/accredited-programme-history-added/previously" class="govuk-link govuk-link--no-visited-state">History of added programmes</a>
+									</li>
+									<li>
+										<a href="refer/accredited-programme-history-added/remove" class="govuk-link govuk-link--no-visited-state">Removing a programme</a>
+									</li>
+								</ul>
+							</td>
+					 	</tr>
+
+						<!-- Sentence information -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Sentence information</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li>
+										<a href="refer/sentence-information/sentence-information-no-record" class="govuk-link govuk-link--no-visited-state">No record</a>
+									</li>
+									<li>
+										<a href="refer/sentence-information/sentence-information-no-sentence" class="govuk-link govuk-link--no-visited-state">No sentence</a>
+									</li>
+									<li>
+										<a href="refer/sentence-information/sentence-information-no-release-dates" class="govuk-link govuk-link--no-visited-state">No release dates</a>
+									</li>
+									<li>
+										<a href="refer/sentence-information/open-referrals" class="govuk-link govuk-link--no-visited-state">Multiple sentences</a>
+									</li>
+								</ul>	
+							</td>
+					 	</tr>
+
+						<!-- Service, API and Data not available/down -->
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">Service, API and Data not available/down</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-list">
+									<li>
+										<a href="page-not-found" class="govuk-link govuk-link--no-visited-state">TBC - Page not found (Error 404)</a>
+									</li>
+									<li>
+										<a href="problem-with-service" class="govuk-link govuk-link--no-visited-state">Problem with the service (Error 500)</a>
+									</li>
+									<li>
+										<a href="service-unavailable" class="govuk-link govuk-link--no-visited-state">TBC - Service unavailable (Error 503)</a>
+									</li>			
+									<li>
+										<a href="refer/api-down/risks-needs-no-oasys-nomis" class="govuk-link govuk-link--no-visited-state">OASys not available and NOMIS available (Risks and alerts example)</a>
+									</li>
+									<li>
+										<a href="refer/api-down/risks-needs-no-oasys-no-nomis" class="govuk-link govuk-link--no-visited-state">OASys and NOMIS not available (Risks and alerts example)</a>
+									</li>
+									<li>
+										<a href="refer/api-down/risks-needs-no-nomis-oasys" class="govuk-link govuk-link--no-visited-state">NOMIS not available and OASys available (Risks and alerts example)</a>
+									</li>
+									<li>
+										<a href="refer/api-down/offence-analysis-no-oasys-no-nomis" class="govuk-link govuk-link--no-visited-state">OASys and NOMIS not available (Generic example)</a>
+									</li>
+									<li>
+										<a href="refer/empty-states/open-referrals" class="govuk-link govuk-link--no-visited-state">My referrals - Open</a>
+									</li>
+									<li>
+										<a href="refer/empty-states/draft-referrals" class="govuk-link govuk-link--no-visited-state">My referrals - Draft</a>
+									</li>
+									<li>
+										<a href="refer/empty-states/open-referrals" class="govuk-link govuk-link--no-visited-state">My referrals - Closed</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+				</div>
+	
+				<div class="govuk-tabs__panel" id="community">
+					<h3 class="govuk-heading-m">Community</h3>
+					
+				</div>
+	
+				<div class="govuk-tabs__panel" id="next-gen">
+					<h3 class="govuk-heading-m">Next Gen</h3>
+					
+				</div>
+				
+			</div>
+
+			
+
+  	</div>
+</div>
+{% endblock %}
