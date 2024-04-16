@@ -689,3 +689,17 @@ $low-score-colour__text: #485b10;
   width: 100%;
   padding: 15px;
 }
+
+.flex-container {
+  padding: 40px 0;
+}
+
+.flex-container .moj-primary-navigation__list {
+  width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    /* gap: 15px 15px !important; */
+    justify-items: start !important;
+    font-weight: bold !important;
+    margin-bottom: 0 !important;
+}
