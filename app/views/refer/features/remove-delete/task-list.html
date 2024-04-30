@@ -17,7 +17,20 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Make a referral</h1>
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+			  	<h1 class="govuk-heading-l">Make a referral</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+		  
+			  	<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+				  		<button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">Delete draft referral</button>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<!-- <h1 class="govuk-heading-l">Make a referral</h1> -->
 		<p class="govuk-body govuk-!-margin-bottom-6">Changes you make will be saved. You can leave this page and return to it later in <a href="#">Draft referrals</a>.</p>
 		<h2 class="govuk-heading-m govuk-!-margin-bottom-4"><span class="govuk-!-font-weight-regular">HMP Erlestoke | </span>Becoming New Me Plus (BNM+)</h2>
 		<strong class="govuk-tag govuk-tag--green">Intimate partner violence</strong>
