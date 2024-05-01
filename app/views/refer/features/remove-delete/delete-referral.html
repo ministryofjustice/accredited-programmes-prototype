@@ -18,34 +18,13 @@ Delete this draft referral? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<!-- <h1 class="govuk-heading-l">Delete this draft referral?</h1>
-		<p class="govuk-body">Enter the prison number. We'll import their details into your service.</p> -->
 		<form action="draft-referrals" method="post">
-			<!-- <div class="govuk-form-group">
-				<label class="govuk-label govuk-label--m" for="person-identifier">Enter identifier</label>
-				<div id="person-identifier-hint" class="govuk-hint">For example, a prison number is D0168GH</div>
-				<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
-				<div class="govuk-button-group govuk-!-margin-top-6">
-					<button class="govuk-button" data-module="govuk-button">Continue</button>
-				</div>
-			</div> -->
-
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="areYouSure-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-						<h1 class="govuk-fieldset__heading">Delete this draft referral?</h1>
+						<h1 class="govuk-fieldset__heading">Delete draft referral?</h1>
 				  	</legend>
 				  	<div id="areYouSure-hint" class="govuk-hint">This action cannot be undone.</div>
-				  	<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-						<div class="govuk-radios__item">
-					  		<input class="govuk-radios__input" id="areYouSure" name="areYouSure" type="radio" value="yes">
-					  		<label class="govuk-label govuk-radios__label" for="areYouSure">Yes</label>
-						</div>
-						<div class="govuk-radios__item">
-					  		<input class="govuk-radios__input" id="areYouSure-2" name="areYouSure" type="radio" value="no">
-					  		<label class="govuk-label govuk-radios__label" for="areYouSure-2">No</label>
-						</div>
-				  	</div>
 				</fieldset>
 				<div class="govuk-button-group govuk-!-margin-top-6">
 					<button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">Delete draft</button>
