@@ -138,6 +138,8 @@ $high-score-border-colour: #d4351c;
 $very-high-score-colour: #711a0d;
 $very-high-score-border-colour: #942514;
 $unknown-score-border-colour: #fd0;
+$not-eligible-score-colour: #b1b4b6;
+$not-eligible-score-border-colour: #b1b4b6;
 
 .rosh-widget {
   border: 2px solid govuk-colour('black');
@@ -183,6 +185,14 @@ $unknown-score-border-colour: #fd0;
 
   & h3 {
     color: $very-high-score-colour;
+  }
+}
+
+.rosh-widget--not-eligible {
+  border: 2px solid $not-eligible-score-border-colour;
+
+  & h3 {
+    color: $not-eligible-score-colour;
   }
 }
 

@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Recommended programme pathway - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended programme pathway</h1>
+		<p class="govuk-body">Based on Del Hatton's risks and needs data, this is the recommended programme pathway.</p>
+		<div class="rosh-widget rosh-widget--not-eligible govuk-!-margin-bottom-6">
+			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+				<span class="grey"><strong>NOT ELIGIBLE</strong></span>
+			</h2>
+			<p class="govuk-body-m govuk-!-margin-bottom-1">Based on their risks and needs scores, this person may not be eligible for an Accredited Programme.</p>
+		</div>
+		<p class="govuk-body">Speak to the programme team if you still think the person should be referred to an Accredited Programme.</p>
+    </div>
+</div>
+
+{% endblock %}
