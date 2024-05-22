@@ -33,7 +33,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
 							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
 							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-							{% endif %}
+							{% endif %}	
 						</form>
 					</div>
 	  			</div>
@@ -80,8 +80,8 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 				<li class="moj-side-navigation__item">
 					<a href="offence-analysis">Section 2 - Offence analysis</a>
 		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="ete">Section 4 - ETE</a>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="ete" aria-current="location">Section 4 - ETE</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
 					<a href="relationships">Section 6 - Relationships</a>
@@ -104,8 +104,8 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 				<li class="moj-side-navigation__item">
 					<a href="attitudes">Section 12 - Attitudes</a>
 		  		</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="health" aria-current="location">Section 13 - Health</a>
+				<li class="moj-side-navigation__item">
+					<a href="health">Section 13 - Health</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="learning-needs-score">Learning needs score</a>
@@ -120,18 +120,18 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 4 January 2023</div>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				  <h2 class="govuk-summary-card__title">13.1 - Health</h2>
+				  <h2 class="govuk-summary-card__title">4.8 - Learning difficulties</h2>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">General health - any physical or mental health conditions? (optional)</dt>
-						<dd class="govuk-summary-list__value">Yes<br /><br />
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</dd>
+						<dt class="govuk-summary-list__key">Has learning difficulties</dt>
+						<dd class="govuk-summary-list__value">Missing</dd>
 					</div>
 				</dl>
 			</div>
 		</div>
+
 	</div>
 </div>
 {% endblock %}
