@@ -5,7 +5,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pt.html" %}
+	{% include "/includes/key-details-pom.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,13 +22,22 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
 			</div>
 			<div class="moj-page-header-actions__actions">
-				<div class="moj-button-menu">
-				  <div class="moj-button-menu__wrapper">
-					  <a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-					  <a href="update-status" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
-				  </div>
-				</div>
-		  	</div>
+	  			<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper">
+						<form action="open-referrals" method="post">
+							{% if data['add-hold-reason'] %}
+							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
+							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Remove hold</a>
+							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+							{% else %}
+							<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
+							<a href="on-hold" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
+							<a href="withdrawal-category" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+							{% endif %}	
+						</form>
+					</div>
+	  			</div>
+			</div>
  		</div>
 	</div>
 </div>
@@ -36,14 +45,18 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					{% if data['reason-category'] %}
+					<a class="moj-sub-navigation__link" href="status-history-disabled">Status history</a>
+					{% else %}
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+					{% endif %}
+				</li>
 			  	<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 				</li>
 			</ul>
 		</nav>
@@ -77,7 +90,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<a href="lifestyle-associates">Section 7 - Lifestyle and associates</a>
 		  		</li>
 				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="drugs-misuse" aria-current="location">Section 8 - Drugs misuse</a>
+					<a href="drug-misuse" aria-current="location">Section 8 - Drug misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="alcohol-misuse">Section 9 - Alcohol misuse</a>
@@ -107,7 +120,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 4 January 2023</div>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				  <h2 class="govuk-summary-card__title">8 - Drugs misuse</h2>
+				  <h2 class="govuk-summary-card__title">8 - Drug misuse</h2>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
