@@ -32,11 +32,28 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			  	<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">Search</button>
 			</form>
-			<p class="govuk-body govuk-!-margin-top-2">No person found in closed referrals. Try another name or search open or draft referrals.</p>
 		</div>  
 	</div>
 </div>
 <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="draft-referrals">Draft referrals</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals</a>
+				</li>	
+			</ul>
+		</nav>
+		<p class="govuk-body govuk-!-margin-top-2">No person found in closed referrals. Try another name or search open or draft referrals.</p>
+	</div>
+</div>
+<!-- <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
@@ -217,6 +234,6 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</nav>
     </div>
-</div>
+</div> -->
 
 {% endblock %}
