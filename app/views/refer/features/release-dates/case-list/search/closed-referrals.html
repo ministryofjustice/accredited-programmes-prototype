@@ -54,7 +54,7 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 			  	<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="none">Name / Prison number</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date referred</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Programme location</th>
@@ -63,18 +63,8 @@ My referrals - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['reason-category'] %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="status-history" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">28 Jun 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">HMP Leicester</td>
-					<td class="govuk-table__cell">Becoming New Me Plus (BNM+)</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
-			  	</tr>
-				{% endif %}
 			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Martin Guthrie</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Martin Guthrie</a><br />D0168KE</td>
 					<td class="govuk-table__cell">16 Aug 2023</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">HMP Leicester</td>
