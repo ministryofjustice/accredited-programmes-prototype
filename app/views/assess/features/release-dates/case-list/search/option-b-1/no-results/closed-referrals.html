@@ -23,55 +23,71 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 </div>
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<div class="filters-container">
-			<h2 class="govuk-heading-m">Filters</h2>
-			<div class="filter-options">
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
-					<select class="govuk-select" id="programme-strand" name="programme-strand">
-						<option value="select" selected>Select</option>
-						<option value="general-violence">General violence</option>
-						<option value="intimate-partner-violence">Intimate partner violence</option>
-					</select>
+    <div class="govuk-grid-column-one-third">
+		<div class="moj-filter">
+			<div class="moj-filter__header">
+			  	<div class="moj-filter__header-title">
+					<h2 class="govuk-heading-m">Filter</h2>
 				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="sentence-type">Sentence type</label>
-					<select class="govuk-select" id="sentence-type" name="sentence-type">
-						<option value="select" selected>Select</option>
-						<option value="determinate">Determinate</option>
-						<option value="determinate-recall">Determinate recall</option>
-						<option value="extended-determinate">Extended determinate</option>
-						<option value="extended-determinate-recall">Extended determinate recall</option>
-						<option value="ipp">IPP</option>
-						<option value="ipp-recall">IPP recall</option>
-						<option value="life">Life</option>
-						<option value="life-recall">Life recall</option>
-					</select>
-				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
-					<select class="govuk-select" id="referral-status" name="referral-status">
-						<option value="select" selected>Select</option>
-						<option value="assessed-suitable">Assessed as suitable</option>
-						<option value="assessment-started">Assessment started</option>
-						<option value="awaiting-assessment">Awaiting assessment</option>
-						<option value="on-programme">On programme</option>
-						<option value="referral-submitted">Referral submitted</option>
-						<option value="suitable-not-ready">Suitable but not ready</option>
-					</select>
-				</div>
-				<button class="govuk-button" data-module="govuk-button" style="margin-bottom: 2px !important">Apply filters</button>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+		<div class="moj-filter__content">
+			<div class="moj-filter__options">
+				<div class="govuk-button-group govuk-!-margin-right-3">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
+				<div class="govuk-form-group">
+				  	<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or prison number</label>
+				  	<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
+				</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Programme strand</legend>
+					  	<select class="govuk-select" id="programme-strand" name="programme-strand" style="width: 100%">
+							<option value="select" selected>Select</option>
+							<option value="general-violence">General violence</option>
+							<option value="intimate-partner-violence">Intimate partner violence</option>
+						</select>
+					</fieldset>
+			  	</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Sentence type</legend>
+					  	<select class="govuk-select" id="sentence-type" name="sentence-type" style="width: 100%">
+							<option value="select" selected>Select</option>
+							<option value="determinate">Determinate</option>
+							<option value="determinate-recall">Determinate recall</option>
+							<option value="extended-determinate">Extended determinate</option>
+							<option value="extended-determinate-recall">Extended determinate recall</option>
+							<option value="ipp">IPP</option>
+							<option value="ipp-recall">IPP recall</option>
+							<option value="life">Life</option>
+							<option value="life-recall">Life recall</option>
+						</select>
+					</fieldset>
+			  	</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Referral status</legend>
+					  	<select class="govuk-select" id="referral-status" name="referral-status" style="width: 100%">
+							<option value="select" selected>Select</option>
+							<option value="assessed-suitable">Assessed as suitable</option>
+							<option value="assessment-started">Assessment started</option>
+							<option value="awaiting-assessment">Awaiting assessment</option>
+							<option value="on-programme">On programme</option>
+							<option value="referral-submitted">Referral submitted</option>
+							<option value="suitable-not-ready">Suitable but not ready</option>
+						</select>
+					</fieldset>
+			  	</div>
+			</div>
+		</div>
+	</div>	  
+    <div class="govuk-grid-column-two-thirds">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-			  	<li class="moj-sub-navigation__item">
+				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals</a>
 				</li>
 				<li class="moj-sub-navigation__item">
