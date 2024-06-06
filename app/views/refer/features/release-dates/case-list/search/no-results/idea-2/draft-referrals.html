@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+My referrals - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-refer.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">My referrals</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="moj-search govuk-!-margin-bottom-6">
+			<form action="#" method="post">
+				<div class="govuk-form-group">
+					<h2 class="govuk-label-wrapper">
+					  	<label class="govuk-label govuk-label--m" for="search-name-prison">Search by name or prison number</label>
+					</h2>
+					<input class="govuk-input" id="search-name-prison" name="searchNamePrison" type="text" value="Del Hatton">
+				</div>
+			  	<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">Search</button>
+			</form>
+			<p class="govuk-body-l govuk-!-margin-top-6"><strong>3</strong> results found in open and draft referrals.</p>
+		</div>  
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals (1)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="draft-referrals">Draft referrals (2)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (0)</a>
+				</li>	
+			</ul>
+		</nav>
+		<div class="moj-scrollable-pane">
+			<table class="govuk-table" data-module="moj-sortable-table">
+				<thead class="govuk-table__head">
+					  <tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Date referred</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Release date type</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Programme location</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Programme name</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Progress</th>
+					  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+						<td class="govuk-table__cell">28 Jun 2023</td>
+						<td class="govuk-table__cell">1 Dec 2025</td>
+						<td class="govuk-table__cell">Conditional release</td>
+						<td class="govuk-table__cell">HMP Leicester</td>
+						<td class="govuk-table__cell">Becoming New Me Plus (IPV)</td>
+						<td class="govuk-table__cell">1 out of 5 tasks complete</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+						<td class="govuk-table__cell">28 Jun 2023</td>
+						<td class="govuk-table__cell">1 Dec 2025</td>
+						<td class="govuk-table__cell">Conditional release</td>
+						<td class="govuk-table__cell">HMP Erlestoke</td>
+						<td class="govuk-table__cell">Kaizen (IPV)</td>
+						<td class="govuk-table__cell">3 out of 5 tasks complete</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
