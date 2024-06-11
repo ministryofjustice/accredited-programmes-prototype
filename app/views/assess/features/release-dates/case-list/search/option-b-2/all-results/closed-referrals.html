@@ -10,7 +10,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -35,7 +35,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="moj-filter__options">
 				<div class="govuk-form-group">
 				  	<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or prison number</label>
-				  	<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text" value="George Franko">
+				  	<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text" value="Del Hatton">
 				</div>
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
@@ -69,17 +69,39 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 	</div>	  
     <div class="govuk-grid-column-three-quarters">
+		<p class="govuk-body-l"><strong>2</strong> results for 'Del Hatton'</p>
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals (0)</a>
+					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals (1)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals (0)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals (1)</a>
 				</li>
 			</ul>
 		</nav>
-		<p class="govuk-body govuk-!-margin-top-2">No person found in closed referrals. Try another name, or search open referrals or another programme.</p>
+		<div class="moj-scrollable-pane">
+			<table class="govuk-table" data-module="moj-sortable-table">
+				<thead class="govuk-table__head">
+					  <tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+					  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+						<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
+						<td class="govuk-table__cell">Sexual offence</td>
+						<td class="govuk-table__cell">Extended determinate recall</td>
+						<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
     </div>
 </div>
 

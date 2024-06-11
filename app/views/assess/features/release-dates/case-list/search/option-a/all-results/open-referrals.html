@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-assess.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Referrals</span>
+		<h1 class="govuk-heading-xl">Becoming New Me Plus (BNM+)</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<div class="filters-container">
+			<h2 class="govuk-heading-m">Filters</h2>
+			<div class="filter-options">
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or prison number</label>
+					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text" value="Del Hatton">
+			  	</div>
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
+					<select class="govuk-select" id="programme-strand" name="programme-strand">
+						<option value="select" selected>Select</option>
+						<option value="general-violence">General violence</option>
+						<option value="intimate-partner-violence">Intimate partner violence</option>
+					</select>
+				</div>
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
+					<select class="govuk-select" id="referral-status" name="referral-status">
+						<option value="select" selected>Select</option>
+						<option value="assessed-suitable">Assessed as suitable</option>
+						<option value="assessment-started">Assessment started</option>
+						<option value="awaiting-assessment">Awaiting assessment</option>
+						<option value="on-programme">On programme</option>
+						<option value="referral-submitted">Referral submitted</option>
+						<option value="suitable-not-ready">Suitable but not ready</option>
+					</select>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-right-3 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
+					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
+				</div>
+			</div>
+		</div>
+		<p class="govuk-body-l govuk-!-margin-top-6"><strong>2</strong> results for 'Del Hatton'</p>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (1)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (1)</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="moj-scrollable-pane">
+			<table class="govuk-table" data-module="moj-sortable-table">
+				<thead class="govuk-table__head">
+					  <tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+					  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a href="#" class="govuk-link">Del Hatton</a><br />D0168KE</td>
+						<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
+						<td class="govuk-table__cell">Intimate partner violence</td>
+						<td class="govuk-table__cell">Extended determinate recall</td>
+						<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+</div>
+{% endblock %}
