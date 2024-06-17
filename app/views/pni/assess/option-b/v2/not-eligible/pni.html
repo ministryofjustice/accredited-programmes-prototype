@@ -1,0 +1,182 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+				<div class="moj-button-menu">
+				  <div class="moj-button-menu__wrapper">
+					  <a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
+					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  </div>
+				</div>
+		  	</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="pni">Check programme pathway</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Check programme pathway</h2>
+				<p class="govuk-body govuk-!-margin-bottom-6">This is the recommended Accredited Programmes pathway. It is based on the person's risks and needs (calculated using the programmes needs identifier (PNI))</p>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+		<div class="rosh-widget rosh-widget--not-eligible govuk-!-margin-bottom-6">
+			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+				<span class="grey"><strong>NOT ELIGIBLE</strong></span>
+			</h2>
+			<p class="govuk-body govuk-!-margin-bottom-1">If the person has been transferred from another course and has already had a programme needs assessment (PNA), use the recommended PNA pathway rather than this recommendation.</p>
+		</div>
+		<div class="govuk-inset-text">If the person has been transferred from another course and has already had a programme needs assessment (PNA), use the recommended PNA pathway rather than this recommendation.</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Programme needs scores</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Sex</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.11 - Sexual Pre-occupation</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.12 - Offence related Sexual Interests </dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.12  Emotional congruence with children or feeling closer to children than adults</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Sex result</dt>
+						<dd class="govuk-summary-list__value">Low need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Cognitive</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">12.1 Pro-criminal attitudes</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">12.9 Hostile orientation</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Cognitive result</dt>
+						<dd class="govuk-summary-list__value">Low need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Relationships</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.1 - Current relationship with close family</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">6.6 - Previous experience of close relationships</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">7.3 - Easily influenced by criminal associates</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.3 - Aggressive or controlling behaviour</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Relationships result</dt>
+						<dd class="govuk-summary-list__value">Low need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Self-management</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.2 - Impulsivity</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.4 - Temper control</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">11.6 - Problem-solving skills</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">10.1 - Difficulties coping</dt>
+						<dd class="govuk-summary-list__value">0</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Self-management total</dt>
+						<dd class="govuk-summary-list__value">Low need</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
