@@ -35,7 +35,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="intimate-partner-violence">Intimate partner violence</option>
 					</select>
 				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+				<!-- <div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="sentence-type">Sentence type</label>
 					<select class="govuk-select" id="sentence-type" name="sentence-type">
 						<option value="select" selected>Select</option>
@@ -48,7 +48,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="life">Life</option>
 						<option value="life-recall">Life recall</option>
 					</select>
-				</div>
+				</div> -->
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
 					<select class="govuk-select" id="referral-status" name="referral-status">
@@ -86,12 +86,9 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			<thead class="govuk-table__head">
 			  	<tr class="govuk-table__row">
 					<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Conditional release date</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Parole eligibility date</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Tariff expiry date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Date closed</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 			  	</tr>
 			</thead>
@@ -99,180 +96,121 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 				{% if data['referral-submitted'] == "Not eligible" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
+					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
+					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">Determinate recall</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 				</tr>
 				{% elseif data['referral-submitted'] == "Withdraw referral" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">1 Dec 2025</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
-					<td class="govuk-table__cell">Extended determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
+					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
+					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">Determinate recall</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
 				</tr>
 				{% endif %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jeff Bezos</a><br />E2391AG</td>
-					<td class="govuk-table__cell">15 Aug 2023</td>
-					<td class="govuk-table__cell">1 Jan 2026</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">General violence</td>
-					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
-			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
-					<td class="govuk-table__cell">27 Jul 2023</td>
-					<td class="govuk-table__cell">1 Apr 2024</td>
-					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">27 Jul 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Determinate</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Simon McGregor</a><br />N6005OK</td>
-					<td class="govuk-table__cell">1 May 2023</td>
-					<td class="govuk-table__cell">28 Dec 2027</td>
-					<td class="govuk-table__cell">28 Jun 2027</td>
+					<td class="govuk-table__cell">1 May 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Extended determinate</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Richard Step</a><br />L2273CK</td>
-					<td class="govuk-table__cell">10 Aug 2023</td>
-					<td class="govuk-table__cell">1 Jan 2026</td>
-					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">
+						L2273CK	10 Aug 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not suitable</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Matt Jones</a><br />A1034LK</td>
-					<td class="govuk-table__cell">27 Jul 2023</td>
-					<td class="govuk-table__cell">3 Apr 2030</td>
-					<td class="govuk-table__cell">3 Apr 2027</td>
+					<td class="govuk-table__cell">27 Jul 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">IPP</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not suitable</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Kevin Wright</a><br />Z2345LL</td>
-					<td class="govuk-table__cell">28 Jun 2023</td>
-					<td class="govuk-table__cell">15 May 2029</td>
-					<td class="govuk-table__cell">15 May 2026</td>
+					<td class="govuk-table__cell">28 Jun 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">IPP recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not suitable</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Adrian Poole</a><br />D0051ED</td>
-					<td class="govuk-table__cell">15 Aug 2023</td>
-					<td class="govuk-table__cell">1 Jan 2026</td>
-					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">15 Aug 2023<br />Home detention curfew approved date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Nicholas Metcalfe</a><br />E7728KL</td>
-					<td class="govuk-table__cell">14 Aug 2023</td>
-					<td class="govuk-table__cell">3 Apr 2030</td>
-					<td class="govuk-table__cell">3 Apr 2027</td>
+					<td class="govuk-table__cell">14 Aug 2023<br />Home detention curfew eligibility date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Life</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Suhail Akhtar</a><br />K2273CD</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">15 May 2029</td>
-					<td class="govuk-table__cell">15 May 2026</td>
+					<td class="govuk-table__cell">16 Aug 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Life recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Luke Hemsworth</a><br />F3849MK</td>
-					<td class="govuk-table__cell">15 Aug 2023</td>
-					<td class="govuk-table__cell">1 Jan 2026</td>
-					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">15 Aug 2023<br />Tariff end date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Deselected</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jim McDonald</a><br />B1234LP</td>
-					<td class="govuk-table__cell">29 Jun 2023</td>
-					<td class="govuk-table__cell">3 Apr 2030</td>
-					<td class="govuk-table__cell">3 Apr 2027</td>
+					<td class="govuk-table__cell">29 Jun 2023<br />Tariff expired release scheme eligibility date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Deselected</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Alistair McAdam</a><br />A114LKA</td>
-					<td class="govuk-table__cell">1 May 2023</td>
-					<td class="govuk-table__cell">15 May 2029</td>
-					<td class="govuk-table__cell">15 May 2026</td>
+					<td class="govuk-table__cell">1 May 2023<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Deselected</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Bob James</a><br />A9234LQ</td>
-					<td class="govuk-table__cell">10 Aug 2023</td>
-					<td class="govuk-table__cell">1 Jan 2026</td>
-					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">10 Aug 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Determinate recall</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Lukas Setto</a><br />L0994FD</td>
-					<td class="govuk-table__cell">14 Aug 2023</td>
-					<td class="govuk-table__cell">3 Apr 2030</td>
-					<td class="govuk-table__cell">3 Apr 2027</td>
+					<td class="govuk-table__cell">14 Aug 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell">Life</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Rema Aalegra</a><br />F0394LM</td>
-					<td class="govuk-table__cell">16 Aug 2023</td>
-					<td class="govuk-table__cell">15 May 2029</td>
-					<td class="govuk-table__cell">15 May 2026</td>
+					<td class="govuk-table__cell">16 Aug 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">General violence</td>
 					<td class="govuk-table__cell">Life</td>
-					<td class="govuk-table__cell">DD MMM YYYY</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
 				</tr>
-				
 			</tbody>
 		</table>
-
 		<nav class="govuk-pagination" role="navigation" aria-label="results">
 			<ul class="govuk-pagination__list">
 				<li class="govuk-pagination__item govuk-pagination__item--current">
