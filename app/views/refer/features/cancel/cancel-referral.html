@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Are you sure you want to cancel? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="status-history" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="areYouSure-hint">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<h1 class="govuk-fieldset__heading">Are you sure you want to cancel?</h1>
+					</legend>
+					<div id="areYouSure-hint" class="govuk-hint">This action cannot be undone.</div>
+					<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="areYouSure" name="areYouSure" type="radio" value="yes">
+							<label class="govuk-label govuk-radios__label" for="areYouSure">Yes</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="areYouSure-2" name="areYouSure" type="radio" value="no">
+							<label class="govuk-label govuk-radios__label" for="areYouSure-2">No</label>
+						</div>
+				  	</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<!-- <a class="govuk-button" href="status-history">Save and continue</a> -->
+					<button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
