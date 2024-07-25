@@ -736,3 +736,36 @@ $low-score-colour__text: #485b10;
   align-items: flex-end;
   flex-wrap: wrap;
 }
+
+.moj-filter__tag:link, .moj-filter__tag:visited {
+  color: #0b0c0c;
+}
+.moj-filter__tag:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+}
+.moj-filter__tag:hover {
+  background-color: #0b0c0c;
+  color: #ffffff;
+}
+.moj-filter__tag:after {
+  background-image: url(../images/icon-tag-remove-cross.svg);
+  content: "";
+  display: inline-block;
+  font-weight: bold;
+  height: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+  width: 10px;
+}
+.moj-filter__tag:hover:after {
+  background-image: url(../images/icon-tag-remove-cross-white.svg);
+}
+.moj-filter__options {
+  box-shadow: inset 0 0 0 1px #b1b4b6;
+  margin-top: -1px;
+  padding: 20px;
+}
+.moj-filter__options div:last-of-type {
+  margin-bottom: 0;
+}
