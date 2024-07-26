@@ -769,3 +769,11 @@ $low-score-colour__text: #485b10;
 .moj-filter__options div:last-of-type {
   margin-bottom: 0;
 }
+
+
+.scroll-content {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+  width: 98%;
+  height: 500px;
+}
