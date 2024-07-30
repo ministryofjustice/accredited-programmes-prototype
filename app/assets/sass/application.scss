@@ -774,6 +774,7 @@ $low-score-colour__text: #485b10;
 .scroll-content {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: scroll; /* Add vertical scrollbar */
+  overflow: auto;
   width: 98%;
   height: 500px;
 }
