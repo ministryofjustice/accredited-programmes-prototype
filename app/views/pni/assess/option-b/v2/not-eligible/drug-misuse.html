@@ -5,7 +5,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pom.html" %}
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,13 +23,10 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			</div>
 			<div class="moj-page-header-actions__actions">
 				<div class="moj-button-menu">
-					<div class="moj-button-menu__wrapper">
-						<form action="#" method="post">
-							<a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
-							<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-						</form>
-					</div>
+				  <div class="moj-button-menu__wrapper">
+					  <a href="#" class="govuk-button moj-button-menu__item">Back to referrals</a>
+					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  </div>
 				</div>
 		  	</div>
  		</div>
@@ -39,14 +36,14 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
-				</li>
 			  	<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="pni">Check programme pathway</a>
@@ -79,14 +76,14 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 				<li class="moj-side-navigation__item">
 					<a href="lifestyle-associates">Section 7 - Lifestyle and associates</a>
 		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="drug-misuse">Section 8 - Drugs misuse</a>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="drug-misuse" aria-current="location">Section 8 - Drugs misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="alcohol-misuse">Section 9 - Alcohol misuse</a>
 		  		</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="emotional-wellbeing" aria-current="location">Section 10 - Emotional wellbeing</a>
+				<li class="moj-side-navigation__item">
+					<a href="emotional-wellbeing">Section 10 - Emotional wellbeing</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="thinking-behaving">Section 11 - Thinking and behaving</a>
@@ -107,34 +104,25 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 4 January 2023</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Assessment completed 1 August 2023</div>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">10 - Emotional wellbeing</h2>
-		  	</div>
-		  	<div class="govuk-summary-card__content">
-			  	<dl class="govuk-summary-list">
-				  	<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">10.1 - Difficulties coping</dt>
-						<dd class="govuk-summary-list__value">1 - Some problems</dd>
+				  <h2 class="govuk-summary-card__title">8 - Drug misuse</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">8.5 - Level of use of main drug</dt>
+						<dd class="govuk-summary-list__value">2 - At least weekly</dd>
 					</div>
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">10.2 - Current psychological problems or depression</dt>
-						<dd class="govuk-summary-list__value">2 - Significant problems</dd>
-				  	</div>
-				  	<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">10.5 - Self-harm, attempted suicide, suicidal thoughts or feelings</dt>
-						<dd class="govuk-summary-list__value">0 - No</dd>
-				  	</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">10.6 - Current psychiatric problems</dt>
-						<dd class="govuk-summary-list__value">0 - No problems</dd>
+						<dt class="govuk-summary-list__key">8.9 - Using and obtaining drugs a major activity or occupation</dt>
+						<dd class="govuk-summary-list__value">1 - Some problems<br /><br />Cocaine makes Del more aggressive and violent.</dd>
 					</div>
-			  	</dl>
+				</dl>
 			</div>
 		</div>
 
 	</div>
 </div>
-
 {% endblock %}
