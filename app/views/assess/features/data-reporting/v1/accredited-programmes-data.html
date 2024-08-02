@@ -63,11 +63,18 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 					</fieldset>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reportingPeriod-5">
+						<div class="moj-datepicker govuk-!-margin-bottom-6" data-module="moj-date-picker">
+							<div class="govuk-form-group">
+							  	<label class="govuk-label govuk-label--s" for="date-from">Date from</label>
+							  	<div id="date-from-hint" class="govuk-hint">For example, 17/5/2024.</div>
+							  	<input class="govuk-input moj-js-datepicker-input " id="date-from" name="date-from" type="text" aria-describedby="date-from-hint" autocomplete="off">
+							</div>
+						</div>
 						<div class="moj-datepicker" data-module="moj-date-picker">
 							<div class="govuk-form-group">
-							  	<label class="govuk-label" for="date">Date</label>
-							  	<div id="date-hint" class="govuk-hint">For example, 17/5/2024.</div>
-							  	<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+							  	<label class="govuk-label govuk-label--s" for="date-to">Date to</label>
+							  	<div id="date-to-hint" class="govuk-hint">For example, 23/5/2024.</div>
+							  	<input class="govuk-input moj-js-datepicker-input " id="date-to" name="date-to" type="text" aria-describedby="date-to-hint" autocomplete="off">
 							</div>
 						</div>
 						  
