@@ -84,7 +84,17 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 					</fieldset>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reportingPeriod-5">
-						<div class="govuk-form-group">
+						<div class="moj-datepicker" data-module="moj-date-picker">
+							<div class="govuk-form-group">
+							  	<label class="govuk-label" for="date">Date</label>
+							  	<div id="date-hint" class="govuk-hint">For example, 17/5/2024.</div>
+							  	<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+							</div>
+						</div>
+						  
+						<!-- GOV.UK Design System Dates component
+						
+							<div class="govuk-form-group">
 							<fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
 								<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 									<h1 class="govuk-fieldset__heading">Date from</h1>
@@ -139,8 +149,9 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 									</div>
 								</div>
 							</fieldset>
-						</div>
-					</div>	
+						</div> 
+						-->
+					</div>
 				</div>
 				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 				<div class="govuk-form-group">
