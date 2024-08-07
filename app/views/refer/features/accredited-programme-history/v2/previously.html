@@ -18,8 +18,19 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
+		{% if (data['delete-programme-history'] == "done") %}
+		<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+			<div class="govuk-notification-banner__header">
+			  	<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Success</h2>
+			</div>
+			<div class="govuk-notification-banner__content">
+			  	<h3 class="govuk-notification-banner__heading">TBC</h3>
+			  	<p class="govuk-body">TBC</p>
+			</div>
+		</div>
+		{% endif %}
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Accredited Programme history</h1>
-		<p class="govuk-body">This is a list of programmes [Del Hatton] has started or completed. Programme history is collected through DPS or added by the referrer. You can:</p>
+		<p class="govuk-body">This is a list of programmes Del Hatton has started or completed. Programme history is collected through DPS or added by the referrer. You can:</p>
 		<ul class="govuk-list govuk-list--bullet">
 			<li>add missing programme history</li>
 			<li>change details added by a referrer, if they're incorrect</li>
@@ -37,8 +48,11 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
+				{% if (data['delete-programme-history'] == "done") %}
+
+				{% else %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Healthy Sex Programme</td>
+					<td class="govuk-table__cell"><a href="programme-history-details" class="govuk-link govuk-link--no-visited-state">Healthy Sex Programme</td>
 					<td class="govuk-table__cell">Whatton</td>
 					<td class="govuk-table__cell">Completed 2024</td>
 					<td class="govuk-table__cell">Added by referrer</td>
@@ -48,11 +62,12 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 								<a class="govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> details</span></a>	
 							</li>
 							<li class="govuk-summary-list__actions-list-item">
-							  	<a class="govuk-link govuk-link--no-visited-state" href="#">Remove<span class="govuk-visually-hidden"> details</span></a>
+							  	<a class="govuk-link govuk-link--no-visited-state" href="delete-programme-history">Delete<span class="govuk-visually-hidden"> details</span></a>
 							</li>
 						</ul>
 					</td>
 				</tr>
+				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Kaizen</td>
 					<td class="govuk-table__cell">Whatton</td>
@@ -78,7 +93,7 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 								<a class="govuk-link govuk-link--no-visited-state" href="#">Change<span class="govuk-visually-hidden"> details</span></a>	
 							</li>
 							<li class="govuk-summary-list__actions-list-item">
-							  	<a class="govuk-link govuk-link--no-visited-state" href="#">Remove<span class="govuk-visually-hidden"> details</span></a>
+							  	<a class="govuk-link govuk-link--no-visited-state" href="#">Delete<span class="govuk-visually-hidden"> details</span></a>
 							</li>
 						</ul>
 					</td>

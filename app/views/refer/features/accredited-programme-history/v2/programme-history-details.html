@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Programme history details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Programme history details</h1>
+		<!-- <div class="govuk-inset-text">The history shows Del Hatton has previously started or completed an Accredited Programme.</div>
+		<p class="govuk-body">Add another programme if you know that he started or completed a programme which is not listed below or skip this section of the referral if the history is not known.</p> -->
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+			  	<h2 class="govuk-summary-card__title">Healthy Sex Programme</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Healthy Sex Programme</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Custody</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Location</dt>
+						<dd class="govuk-summary-list__value">Whatton</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Completed 2024</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Motivated to complete the programme</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Programme team at Whatton</dd>
+		  			</div> 
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Added by</dt>
+						<dd class="govuk-summary-list__value">Test user, 24 July 2024</dd>
+		  			</div> 
+			  	</dl>
+			</div>
+		</div>
+    </div>
+</div>
+
+{% endblock %}
