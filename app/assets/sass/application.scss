@@ -140,6 +140,8 @@ $very-high-score-border-colour: #942514;
 $unknown-score-border-colour: #fd0;
 $not-eligible-score-colour: #b1b4b6;
 $not-eligible-score-border-colour: #b1b4b6;
+$info-missing-score-colour: #1d70b8;
+$info-missing-score-border-colour: #1d70b8;
 
 .rosh-widget {
   border: 2px solid govuk-colour('black');
@@ -193,6 +195,14 @@ $not-eligible-score-border-colour: #b1b4b6;
 
   & h3 {
     color: $not-eligible-score-colour;
+  }
+}
+
+.rosh-widget--info-missing {
+  border: 2px solid $info-missing-score-border-colour;
+
+  & h3 {
+    color: $info-missing-score-colour;
   }
 }
 
@@ -314,6 +324,10 @@ $low-score-colour__text: #485b10;
 
 .grey {
   color: govuk-colour("dark-grey");
+}
+
+.blue {
+  color: govuk-colour("blue");
 }
 
 .red {
