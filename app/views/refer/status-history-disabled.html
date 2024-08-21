@@ -72,14 +72,14 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--red">Withdrawn</strong>
 					{% if data['withdrawal-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> {{ data['withdrawal-reason'] }}</p>
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['withdrawal-reason'] }}</p>
 					{% if data['add-withdrawal-reason'] %}
 					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> {{ data['add-withdrawal-reason'] }}</p>
 					{% else %}
 					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> Submitted in error</p>
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> Submitted in error</p>
 					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 			  	</div>

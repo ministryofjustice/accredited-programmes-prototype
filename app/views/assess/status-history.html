@@ -92,9 +92,9 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--grey">Not eligible</strong>
 					{% if data['add-reason-not-eligible'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-reason-not-eligible'] }}</p>
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['add-reason-not-eligible'] }}</p>
 					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 			  	</div>
 			</div>
@@ -124,9 +124,9 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong>
 					{% if data['add-hold-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-hold-reason'] }}</p>
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['add-hold-reason'] }}</p>
 					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 			  	</div>
 			</div> 
@@ -156,15 +156,15 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--red">Withdrawn</strong>
 					{% if data['withdrawal-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> {{ data['withdrawal-reason'] }}</p>
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['withdrawal-reason'] }}</p>
 						{% if data['add-withdrawal-reason'] %}
-						<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> {{ data['add-withdrawal-reason'] }}</p>
+						<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> {{ data['add-withdrawal-reason'] }}</p>
 						{% else %}
-						<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 						{% endif %}
 					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Status reason:</strong> Submitted in error</p>
-					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> Submitted in error</p>
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 			  	</div>
 			</div> 
