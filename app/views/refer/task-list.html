@@ -71,21 +71,27 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 		  	</li>
 		</ul>
 
+		{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
 		<h2 class="govuk-heading-m govuk-!-margin-top-8">Check answers and submit</h2>
 		<ul class="govuk-task-list">
 			<li class="govuk-task-list__item govuk-task-list__item--with-link">
 			  	<div class="govuk-task-list__name-and-hint">
 					<a class="govuk-link govuk-task-list__link" href="check-answers" aria-describedby="make-referral-details-5">Check answers and submit</a>
-			  	</div>
-				{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
+				</div>
 				<div class="govuk-task-list__status" id="make-referral-details-5">
 					<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
 			  	</div>
-				{% else %}
-				<div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="make-referral-details-5">Cannot start yet</div>
-				{% endif %}
 			</li>
 		</ul>
+		{% else %}
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Check answers and submit</h2>
+		<ul class="govuk-task-list">
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">Check answers and submit</div>
+				<div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="make-referral-details-5">Cannot start yet</div>
+			</li>
+		</ul>
+		{% endif %}
 		<a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4">Save and come back later</a>
 	</div>
 </div>
