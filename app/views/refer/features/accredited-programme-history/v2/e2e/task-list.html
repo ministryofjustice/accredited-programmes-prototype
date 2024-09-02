@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Make a referral</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4"><span class="govuk-!-font-weight-regular">HMP Erlestoke | </span>Becoming New Me Plus (BNM+)</h2>
+		<strong class="govuk-tag govuk-tag--green">Intimate partner violence</strong>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Personal details</h2>
+		<ul class="govuk-task-list">
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">
+					<a class="govuk-link govuk-task-list__link" href="check-details" aria-describedby="make-referral-details-1">Confirm personal details</a>
+			  	</div>
+			  	<div class="govuk-task-list__status" id="make-referral-details-1">Completed</div>
+			</li>
+		</ul>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Referral information</h2>
+		<ul class="govuk-task-list">
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">
+					<a class="govuk-link govuk-task-list__link" href="accredited-programme-history" aria-describedby="make-referral-details-2">Review Accredited Programme history</a>
+			  	</div>
+				{% if (data['referral-information-one'] == "done") %}
+				<div class="govuk-task-list__status" id="make-referral-details-2">Completed</div>
+				{% else %}
+				<div class="govuk-task-list__status" id="make-referral-details-2">
+					<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+			  	</div>
+				{% endif %}
+			</li>
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">
+					<a class="govuk-link govuk-task-list__link" href="confirm-oasys-information" aria-describedby="make-referral-details-3">Check risks and needs information (OASys)</a>
+			  	</div>
+				{% if (data['referral-information-two'] == "done") %}
+				<div class="govuk-task-list__status" id="make-referral-details-3">Completed</div>
+				{% else %}
+			  	<div class="govuk-task-list__status" id="make-referral-details-3">
+					<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+			  	</div>
+				{% endif %}
+			</li>
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+				<div class="govuk-task-list__name-and-hint">
+				  	<a class="govuk-link govuk-task-list__link" href="add-additional-information" aria-describedby="make-referral-details-4">Add additional information</a>
+				</div>
+				{% if (data['referral-information-three'] == "done") %}
+				<div class="govuk-task-list__status" id="make-referral-details-4">Completed</div>
+				{% else %}
+				<div class="govuk-task-list__status" id="make-referral-details-4">
+				  	<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+				</div>
+				{% endif %}
+		  	</li>
+		</ul>
+
+		{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Check answers and submit</h2>
+		<ul class="govuk-task-list">
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">
+					<a class="govuk-link govuk-task-list__link" href="check-answers" aria-describedby="make-referral-details-5">Check answers and submit</a>
+				</div>
+				<div class="govuk-task-list__status" id="make-referral-details-5">
+					<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+			  	</div>
+			</li>
+		</ul>
+		{% else %}
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Check answers and submit</h2>
+		<ul class="govuk-task-list">
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+			  	<div class="govuk-task-list__name-and-hint">Check answers and submit</div>
+				<div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="make-referral-details-5">Cannot start yet</div>
+			</li>
+		</ul>
+		{% endif %}
+		<a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4">Save and come back later</a>
+	</div>
+</div>
+{% endblock %}
