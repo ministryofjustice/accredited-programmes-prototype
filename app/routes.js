@@ -51,6 +51,30 @@ router.post('/assess/withdraw-referral', function (req, res) {
 		}
 	});
 
+router.get('/assess/features/withdrawal/v3/withdraw-referral', function (req, res) {
+	res.render('/assess/features/withdrawal/v3/withdraw-referral')
+});
+
+		
+router.post('/assess/features/withdrawal/v3/withdraw-referral', function (req, res) {
+	const withdrawalReason = req.session.data['reason-category']
+		if (withdrawalReason == 'Administrative error') {
+			res.redirect('administrative-error')
+		} 
+		else if (withdrawalReason == 'Motivation and behaviour') {
+				res.redirect('motivation-behaviour')
+		}
+		else if (withdrawalReason == 'Operational') {
+			res.redirect('operational')
+		}
+		else if (withdrawalReason == 'Other') {
+			res.redirect('other')
+		}
+		else {
+			res.redirect('personal-health')
+		}
+	});
+
 /* router.get('/refer/on-hold', function (req, res) {
     res.render('/refer/on-hold')
 });
