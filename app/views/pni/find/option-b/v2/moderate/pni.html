@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Programme pathway - {{ serviceName }} - GOV.UK Prototype Kit
+Programme needs identifier - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,17 +18,17 @@ Programme pathway - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Programme pathway</h1>
-		<p class="govuk-body">This is the recommended Accredited Programmes pathway, based on the person's risks and needs.</p>
-		<div class="rosh-widget rosh-widget--high govuk-!-margin-bottom-6">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Programme needs identifier</h1>
+		<p class="govuk-body">This is the recommended Accredited Programmes pathway. It is based on a combination of:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>risk scores</li>
+			<li>the programme needs identifier (PNI)</li>
+		</ul>
+		<div class="rosh-widget rosh-widget--medium govuk-!-margin-bottom-6">
 			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
-				<span class="red"><strong>HIGH INTENSITY</strong></span>
+				<span class="orange"><strong>MODERATE INTENSITY</strong></span>
 			</h2>
-			<p class="govuk-body govuk-!-margin-bottom-1">Based on the programme needs scores, Del Hatton may be eligible for the high intensity Accredited Programmes pathway.</p>
-		</div>
-		<div class="govuk-inset-text">
-			<h3 class="govuk-heading-m">Programme needs assessment</h3>
-			<p class="govuk-body">If the person has already had a programme needs assessment (PNA), use the recommended PNA pathway rather than this recommendation.</p>
+			<p class="govuk-body govuk-!-margin-bottom-1">Based on the risk and need scores, Del Hatton may be eligible for the moderate intensity Accredited Programmes pathway.</p>
 		</div>
 		<details class="govuk-details">
 			<summary class="govuk-details__summary">
@@ -132,7 +132,7 @@ Programme pathway - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</details>
 		<div class="govuk-button-group govuk-!-margin-top-4">
-			<a class="govuk-button" href="high-acp-programmes">Recommended programmes</a>
+			<a class="govuk-button" href="moderate-acp-programmes">Recommended programmes</a>
 		</div>
     </div>
 </div>
