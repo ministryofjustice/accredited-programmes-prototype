@@ -37,7 +37,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-		<div class="filters-container-moj govuk-!-padding-top-4" style="border-bottom: none; margin-bottom: 0;">
+		<div class="filters-container-moj govuk-!-padding-top-4">
 			<!-- <h2 class="govuk-heading-m filters-heading">Filters</h2> -->
 			<div class="filter-options">
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -48,7 +48,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
 					<select class="govuk-select" id="programme-strand" name="programme-strand">
 						<option value="select" selected>Select</option>
-						<option value="general-violence" selected>General violence</option>
+						<option value="general-violence">General violence</option>
 						<option value="intimate-partner-violence">Intimate partner violence</option>
 					</select>
 				</div>
@@ -58,49 +58,20 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="select" selected>Select</option>
 						<option value="assessed-suitable">Assessed as suitable</option>
 						<option value="assessment-started">Assessment started</option>
-						<option value="awaiting-assessment" selected>Awaiting assessment</option>
+						<option value="awaiting-assessment">Awaiting assessment</option>
 						<option value="on-programme">On programme</option>
 						<option value="referral-submitted">Referral submitted</option>
 						<option value="suitable-not-ready">Suitable but not ready</option>
 					</select>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-right-3 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
-					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
-					<!-- <a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a> -->
+					<a class="govuk-button govuk-!-margin-bottom-0" href="filter-applied">Apply filters</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<div class="moj-filter__content" style="margin-bottom: 40px;">
-			<div class="moj-filter__selected">
-				<div class="moj-filter__selected-heading">
-					<!-- <div class="moj-filter__heading-title">
-						<h2 class="govuk-heading-m">Selected filters</h2>
-					</div> -->
-					<div class="moj-filter__heading-action">
-						<p><a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a></p>
-					</div>
-				</div>
-				<div class="" style="float: left; margin-right: 30px">
-					<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Programme strand</h3>
-					<ul class="moj-filter-tags">
-						<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> General violence</a></li>
-					</ul>
-				</div>
-				<div class="">
-					<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Referral status</h3>
-					<ul class="moj-filter-tags">
-						<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Awaiting assessment</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
