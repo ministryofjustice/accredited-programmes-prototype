@@ -44,18 +44,22 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<select class="govuk-select" id="referral-status" name="referral-status">
 						<optgroup label="Open referrals">
 							<option value="select" selected>Select</option>
-							<option value="assessed-suitable">Assessed as suitable</option>
-							<option value="assessment-started">Assessment started</option>
-							<option value="awaiting-assessment">Awaiting assessment</option>
-							<option value="on-programme">On programme</option>
 							<option value="referral-submitted">Referral submitted</option>
+							<option value="on-hold-referral-submitted">On hold - referral submitted</option>
+							<option value="awaiting-assessment">Awaiting assessment</option>
+							<option value="on-hold-awaiting-assessment">On hold - awaiting assessment</option>
+							<option value="assessment-started">Assessment started</option>
+							<option value="on-hold-assessment-started">On hold - assessment started</option>
+							<option value="assessed-suitable">Assessed as suitable</option>
 							<option value="suitable-not-ready">Suitable but not ready</option>
+							<option value="on-programme">On programme</option>
 						</optgroup>
 						<optgroup label="Closed referrals">
-							<option value="deselected">Deselected</option>
 							<option value="not-eligible">Not eligible</option>
-							<option value="programme-completed">Programme complete</option>
+							<option value="not-suitable">Not suitable</option>
 							<option value="withdrawn">Withdrawn</option>
+							<option value="deselected">Deselected</option>
+							<option value="programme-completed">Programme complete</option>
 						</optgroup>
 					</select>
 				</div>
