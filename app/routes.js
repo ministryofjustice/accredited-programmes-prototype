@@ -24,15 +24,15 @@ router.post('/assess/update-status', function (req, res) {
 			res.redirect('on-hold')
 	  	}
 		else {
-			res.redirect('withdraw-referral')
+			res.redirect('withdrawal-reason')
 	  	}
  	});
 
-router.get('/assess/withdraw-referral', function (req, res) {
-	res.render('/assess/withdraw-referral')
+router.get('/assess/withdrawal-reason', function (req, res) {
+	res.render('/assess/withdrawal-reason')
 });
 	  
-router.post('/assess/withdraw-referral', function (req, res) {
+router.post('/assess/withdrawal-reason', function (req, res) {
 	const withdrawalReason = req.session.data['reason-category']
 		if (withdrawalReason == 'Administrative error') {
 			res.redirect('administrative-error')
