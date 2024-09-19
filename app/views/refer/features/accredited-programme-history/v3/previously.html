@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Accredited Programme history</h1>
+		<p class="govuk-body">This is a list of programmes Del Hatton has started or completed. You can add missing programme history.</p>
+	</div>
+	<div class="govuk-grid-column-full">
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Outcome</th>
+				<th scope="col" class="govuk-table__header" style="width: 40%"><a href="#" class="govuk-link govuk-link--no-underline govuk-link--no-visited-state">Notes</a></th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="programme-history-details" class="govuk-link govuk-link--no-visited-state">Healthy Sex Programme</td>
+					<td class="govuk-table__cell">Whatton</td>
+					<td class="govuk-table__cell">Completed 2024</td>
+					<td class="govuk-table__cell">Motivated to complete the programme</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Kaizen</td>
+					<td class="govuk-table__cell">Whatton</td>
+					<td class="govuk-table__cell">Completed 2023</td>
+					<td class="govuk-table__cell">n/a</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Kaizen</td>
+					<td class="govuk-table__cell">Whatton</td>
+					<td class="govuk-table__cell">Deselected 2022</td>
+					<td class="govuk-table__cell">n/a</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Becoming New Me Plus</td>
+					<td class="govuk-table__cell">Lowdham Grange</td>
+					<td class="govuk-table__cell">Deselected 2020</td>
+					<td class="govuk-table__cell">Deselected for mental health reasons. Del required sessions with a psychologist to address this before he was able to continue with a programme.</td>
+				</tr>
+			</tbody>
+		</table>
+		<form action="#" method="post">
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Add a programme</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Return to task list</button>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
