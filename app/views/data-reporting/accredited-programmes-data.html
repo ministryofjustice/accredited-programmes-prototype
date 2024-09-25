@@ -10,7 +10,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -18,7 +18,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-1">Accredited Programmes data</h1>
-		<p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-8">Showing data for HMP Altcourse from last month (1 to 31 August 2024)</p>
+		<p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-8">Showing data from last month (1 to 31 August 2024)</p>
     </div>
 </div>
 
@@ -29,30 +29,9 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			  	<div class="moj-filter__header-title">
 					<h2 class="govuk-heading-m">Filters</h2>
 				</div>
-				<div class="moj-filter__header-action"></div>
 			</div>
 		</div>
 		<div class="moj-filter__content">
-
-			<div class="moj-filter__selected">
-				<div class="moj-filter__selected-heading">
-		  			<div class="moj-filter__heading-title">
-						<h2 class="govuk-heading-m">Selected filters</h2>
-				  	</div>
-				  	<div class="moj-filter__heading-action">
-						<p><a class="govuk-link govuk-link--no-visited-state" href="accredited-programmes-data">Clear filters</a></p>
-				  	</div>
-				</div>
-				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Reporting period</h3>
-				<ul class="moj-filter-tags">
-				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> last month</a></li>
-				</ul>
-				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Location</h3>
-				<ul class="moj-filter-tags">
-				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Altcourse</a></li>
-				</ul>
-			</div>
-
 			<div class="moj-filter__options">
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
@@ -61,7 +40,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						</legend>
 					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month" checked>
+						  		<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month">
 						  		<label class="govuk-label govuk-radios__label" for="reportingPeriod">last month</label>
 							</div>
 							<div class="govuk-radios__item">
@@ -172,7 +151,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 						  		<label class="govuk-label govuk-radios__label" for="location">national data</label>
 							</div>
 							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="data by prison" data-aria-controls="conditional-location-2" checked>
+								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="data by prison" data-aria-controls="conditional-location-2">
 								<label class="govuk-label govuk-radios__label" for="location-2">data by prison</label>
 							</div>
 							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location-2">
@@ -184,7 +163,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 									<div class="govuk-form-group">
 										<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 											<div class="govuk-radios__item">
-												<input class="govuk-radios__input" id="prisonName" name="prisonName" type="radio" value="Altcourse" checked>
+												<input class="govuk-radios__input" id="prisonName" name="prisonName" type="radio" value="Altcourse">
 												<label class="govuk-label govuk-radios__label" for="prisonName">Altcourse</label>
 											</div>
 											<div class="govuk-radios__item">
@@ -432,7 +411,8 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					</fieldset>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-right-3">
-					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<!-- <button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button> -->
+					<a href="accredited-programmes-data-altcourse" class="govuk-button">Apply filters</a>
 				</div>
 			</div>
 		</div>
@@ -553,6 +533,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 	</div>
+	
 </div>
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
