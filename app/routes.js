@@ -28,6 +28,25 @@ router.post('/assess/update-status', function (req, res) {
 	  	}
  	});
 
+router.post('/assess/features/rct/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['assessment-started']
+		if (referralSubmitted == 'Assessed as suitable and ready to continue') {
+			res.redirect('assessed-suitable-ready')
+		} 
+		else if (referralSubmitted == 'Assessed as suitable but not ready') {
+			res.redirect('assessed-suitable-not-ready')
+		}
+		else if (referralSubmitted == 'Not suitable') {
+			res.redirect('#')
+		}
+		else if (referralSubmitted == 'On hold - assessment not completed') {
+			res.redirect('#')
+		}
+		else {
+			res.redirect('#')
+		}
+	});
+
 router.get('/assess/withdrawal-reason', function (req, res) {
 	res.render('/assess/withdrawal-reason')
 });

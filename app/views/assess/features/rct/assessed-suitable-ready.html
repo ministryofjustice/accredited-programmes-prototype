@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Move referral to assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}	
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Move referral to assessed as suitable</h1>
+		<p class="govuk-body">Submitting this will change the status to assessed as suitable.</p>
+		<h2 class="govuk-heading-m">Current status</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<form action="status-history" method="post">
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm status change</h2>
+			<p class="govuk-body">I confirm the person has been assessed as suitable.</p>
+			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+				<div class="govuk-form-group">
+					<h3 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--s" for="add-add-info">Add additional information (optional)</label>
+					</h3>
+					<textarea class="govuk-textarea govuk-js-character-count" id="add-add-info" name="add-add-info" rows="12" aria-describedby="add-add-info">{{ data['add-add-info'] }}</textarea>
+				</div>
+				<div id="add-add-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+			</div> 
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Is Del Hatton in the randomised controlled trial (RCT)?</h2>
+			<p class="govuk-body">Tick the box if Del Hatton is in the RCT.</p>
+			<div class="govuk-form-group">
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="rct-intervention-group" name="rct-intervention-group" type="checkbox" value="{{ data['rct-intervention-group'] }}">
+					<label class="govuk-label govuk-checkboxes__label" for="rct-intervention-group">Del Hatton is in the RCT (intervention group)</label>
+					</div>
+				</div>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-8">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+				<a class="govuk-link" href="status-history">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
