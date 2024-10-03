@@ -29,18 +29,12 @@ router.post('/assess/update-status', function (req, res) {
  	});
 
 router.post('/assess/features/rct/update-status', function (req, res) {
-	const referralSubmitted = req.session.data['assessment-started']
-		if (referralSubmitted == 'Assessed as suitable and ready to continue') {
-			res.redirect('assessed-suitable-ready')
+	const referralSubmitted = req.session.data['assessed-suitable']
+		if (referralSubmitted == 'On programme') {
+			res.redirect('on-programme')
 		} 
 		else if (referralSubmitted == 'Assessed as suitable but not ready') {
 			res.redirect('assessed-suitable-not-ready')
-		}
-		else if (referralSubmitted == 'Not suitable') {
-			res.redirect('#')
-		}
-		else if (referralSubmitted == 'On hold - assessment not completed') {
-			res.redirect('#')
 		}
 		else {
 			res.redirect('#')
