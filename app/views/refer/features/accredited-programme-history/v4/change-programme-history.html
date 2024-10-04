@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Programme history details</h1>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Healthy Sex Programme</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Healthy Sex Programme</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Healthy Sex Programme</span>
+							</a>
+						</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						<dd class="govuk-summary-list__value">Custody</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Setting</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Location</dt>
+						<dd class="govuk-summary-list__value">Whatton</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Location</span>
+							</a>
+						</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Completed 2024</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Outcome</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Motivated to complete the programme</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Additional detail</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+					  	<dt class="govuk-summary-list__key">Added by</dt>
+						<dd class="govuk-summary-list__value">Motivated to complete the programme</dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="#">
+							  Change<span class="govuk-visually-hidden"> Added by</span>
+							</a>
+						</dd>
+					</div>
+			  	</dl>
+			</div>
+		</div>
+		<form action="#" method="post">
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" type="submit">CTA</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="javascript:window.history.back()">Cancel</button>
+			</div>
+		</form>
+    </div>
+</div>
+{% endblock %}
