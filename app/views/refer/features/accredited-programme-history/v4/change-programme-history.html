@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+Change programme history - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Programme history details</h1>
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Change programme history</h1>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Healthy Sex Programme</h2>
@@ -82,11 +82,8 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</dl>
 			</div>
 		</div>
-		<form action="#" method="post">
-			<div class="govuk-button-group govuk-!-margin-top-7">
-				<button class="govuk-button" data-module="govuk-button" type="submit">CTA</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="javascript:window.history.back()">Cancel</button>
-			</div>
+		<form action="javascript:window.history.back()" method="post">
+			<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button" type="submit">Return to Accredited Programme history</button>
 		</form>
     </div>
 </div>
