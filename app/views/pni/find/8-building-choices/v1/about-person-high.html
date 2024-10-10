@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">About the person you're referring</h1>
+		<p class="govuk-body">Not all prisons can offer programmes to all prisoners. To see a list of suitable locations, tell us more about the person you're referring.</p>
+		<form action="about-person-high" method="post">
+
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Have they been convicted of a sexual offence?</legend>
+				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-sexual-offence" name="high-sexual-offence" type="radio" value="yes" {{ checked("high-sexual-offence", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-sexual-offence">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-sexual-offence-2" name="high-sexual-offence" type="radio" value="no" {{ checked("high-sexual-offence", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-sexual-offence-2">No</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do they have learning disabilities or challenges?</legend>
+				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-learning-dc" name="high-learning-dc" type="radio" value="yes" {{ checked("high-learning-dc", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-learning-dc">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-learning-dc-2" name="high-learning-dc" type="radio" value="no" {{ checked("high-learning-dc", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-learning-dc-2">No</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are they in a women's prison?</legend>
+				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-womens-prison" name="high-womens-prison" type="radio" value="yes" {{ checked("high-womens-prison", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-womens-prison">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high-womens-prison-2" name="high-womens-prison" type="radio" value="no" {{ checked("high-womens-prison", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high-womens-prison-2">No</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+
+			<div class="govuk-form-group">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
