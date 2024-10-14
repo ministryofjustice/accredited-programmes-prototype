@@ -22,12 +22,12 @@ About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
 		<p class="govuk-body">Not all prisons can offer programmes to all prisoners. To see a list of suitable locations, tell us more about the person you're referring.</p>
 
 		{% if data['high-sexual-offence'] == 'yes' and data['high-learning-dc'] == 'yes' and data['high-womens-prison'] == 'yes' %}
-		<form action="building-choice-high-yes-yes-yes" method="post">
-		{% elseif data['high-sexual-offence'] == 'no' and data['high-learning-dc'] == 'no' and data['high-womens-prison'] == 'no'%}
-		<form action="building-choice-high-no-no-no" method="post">
-		{% else %}
-		<form action="#" method="post">
-		{% endif %}
+        <form action="building-choice-high-yes-yes-yes" method="post">
+        {% elif data['high-sexual-offence'] == 'no' and data['high-learning-dc'] == 'no' and data['high-womens-prison'] == 'no'%}
+        <form action="building-choice-high-no-no-no" method="post">
+        {% else %}
+        <form action="#" method="post">
+        {% endif %}
 		
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
