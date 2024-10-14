@@ -20,8 +20,15 @@ About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">About the person you're referring</h1>
 		<p class="govuk-body">Not all prisons can offer programmes to all prisoners. To see a list of suitable locations, tell us more about the person you're referring.</p>
-		<form action="about-person-high" method="post">
 
+		{% if data['high-sexual-offence'] == 'yes' and data['high-learning-dc'] == 'yes' and data['high-womens-prison'] == 'yes' %}
+		<form action="building-choice-high-yes-yes-yes" method="post">
+		{% elseif data['high-sexual-offence'] == 'no' and data['high-learning-dc'] == 'no' and data['high-womens-prison'] == 'no'%}
+		<form action="building-choice-high-no-no-no" method="post">
+		{% else %}
+		<form action="#" method="post">
+		{% endif %}
+		
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Have they been convicted of a sexual offence?</legend>

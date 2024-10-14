@@ -227,16 +227,6 @@ router.post('/assess/features/deselection/v2/deselection', function (req, res) {
 		}
 	});
 
-router.post('/pni/find/8-building-choices/v1/about-person-high', function (req, res) {
-	const highSexualOffence = req.session.data['high-sexual-offence']
-		if (highSexualOffence == 'yes') {
-			res.redirect('building-choice-1')
-			} 
-		else {
-			res.redirect('building-choice-2')
-			}
-		});
-
 // Logging session data  
 router.use((req, res, next) => {    
 	const log = {  
