@@ -20,63 +20,37 @@ About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">About the person you're referring</h1>
 		<p class="govuk-body">Not all prisons can offer programmes to all prisoners. To see a list of suitable locations, tell us more about the person you're referring.</p>
-
-		{% if data['high-sexual-offence'] == 'yes' and data['high-learning-dc'] == 'yes' and data['high-womens-prison'] == 'yes' %}
-        <form action="building-choice-high-yes-yes-yes" method="post">
-        {% elif data['high-sexual-offence'] == 'no' and data['high-learning-dc'] == 'no' and data['high-womens-prison'] == 'no'%}
-        <form action="building-choice-high-no-no-no" method="post">
-        {% else %}
-        <form action="#" method="post">
-        {% endif %}
-		
+        <form action="/redirect-bc-high" method="post">
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Have they been convicted of a sexual offence?</legend>
 				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-sexual-offence" name="high-sexual-offence" type="radio" value="yes" {{ checked("high-sexual-offence", "yes") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-sexual-offence">Yes</label>
+					  			<input class="govuk-radios__input" id="high_hso" name="high_hso" type="radio" value="yes" {{ checked("high_hso", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hso">Yes</label>
 							</div>
 							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-sexual-offence-2" name="high-sexual-offence" type="radio" value="no" {{ checked("high-sexual-offence", "no") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-sexual-offence-2">No</label>
+					  			<input class="govuk-radios__input" id="high_hso-2" name="high_hso" type="radio" value="no" {{ checked("high_hso", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hso-2">No</label>
 							</div>
 				  		</div>
 				</fieldset>
 			</div>
-
-			<div class="govuk-form-group govuk-!-margin-top-6">
-				<fieldset class="govuk-fieldset">
-				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do they have learning disabilities or challenges?</legend>
-				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-learning-dc" name="high-learning-dc" type="radio" value="yes" {{ checked("high-learning-dc", "yes") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-learning-dc">Yes</label>
-							</div>
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-learning-dc-2" name="high-learning-dc" type="radio" value="no" {{ checked("high-learning-dc", "no") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-learning-dc-2">No</label>
-							</div>
-				  		</div>
-				</fieldset>
-			</div>
-
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are they in a women's prison?</legend>
 				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-womens-prison" name="high-womens-prison" type="radio" value="yes" {{ checked("high-womens-prison", "yes") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-womens-prison">Yes</label>
+					  			<input class="govuk-radios__input" id="high_hwp" name="high_hwp" type="radio" value="yes" {{ checked("high_hwp", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hwp">Yes</label>
 							</div>
 							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="high-womens-prison-2" name="high-womens-prison" type="radio" value="no" {{ checked("high-womens-prison", "no") }}>
-					  			<label class="govuk-label govuk-radios__label" for="high-womens-prison-2">No</label>
+					  			<input class="govuk-radios__input" id="high_hwp-2" name="high_hwp" type="radio" value="no" {{ checked("high_hwp", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hwp-2">No</label>
 							</div>
 				  		</div>
 				</fieldset>
 			</div>
-
 			<div class="govuk-form-group">
 				<div class="govuk-button-group govuk-!-margin-top-6">
 					<button class="govuk-button" data-module="govuk-button">Continue</button>
