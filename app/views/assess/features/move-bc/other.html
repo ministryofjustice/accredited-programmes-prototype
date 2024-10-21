@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
+Withdraw reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,8 +18,8 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history?add-withdrawal-reason-url=done&" method="post">
-			<h1 class="govuk-heading-l">Withdraw referral</h1>
+		<form action="status-history" method="post">
+			<h1 class="govuk-heading-l">Withdrawal reason</h1>
 			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
@@ -42,12 +42,12 @@ Withdraw referral - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
 				<div class="govuk-form-group">
 				  	<h3 class="govuk-label-wrapper">
-						<label class="govuk-label govuk-label--s" for="add-withdrawal-reason">Add reason</label>
+						<label class="govuk-label govuk-label--s" for="add-other-reason">Add reason</label>
 				  	</h3>
-				  	<textarea class="govuk-textarea govuk-js-character-count" id="add-withdrawal-reason" name="add-withdrawal-reason" rows="12" aria-describedby="add-withdrawal-reason-info">{{ data['add-withdrawal-reason'] }}</textarea>
+				  	<textarea class="govuk-textarea govuk-js-character-count" id="add-other-reason" name="add-other-reason" rows="12" aria-describedby="add-other-reason-info">{{ data['add-other-reason'] }}</textarea>
 				</div>
-				<div id="add-withdrawal-reason-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
-			</div>
+				<div id="add-other-reason-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+			</div> 
 			<div class="govuk-warning-text">
 				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
 				<strong class="govuk-warning-text__text">

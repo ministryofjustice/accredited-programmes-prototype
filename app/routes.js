@@ -293,3 +293,23 @@ router.post('/redirect-bc-high', function(request, response) {
 	  response.redirect("pni/find/8-building-choices/v1/building-choice-moderate-yes-no")
 	}
   })
+
+
+  router.post('/assess/features/move-bc/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['referral-submitted']
+    	if (referralSubmitted == 'Awaiting assessment') {
+			res.redirect('awaiting-assessment')
+     	} 
+		else if (referralSubmitted == 'Not eligible') {
+       		res.redirect('not-eligible')
+     	}
+		else if (referralSubmitted == 'On hold') {
+			res.redirect('on-hold')
+	  	}
+		  else if (referralSubmitted == 'Withdraw referral') {
+			res.redirect('withdrawal-reason')
+	  	}
+		else {
+			res.redirect('transfer-building-choices')
+	  	}
+ 	});
