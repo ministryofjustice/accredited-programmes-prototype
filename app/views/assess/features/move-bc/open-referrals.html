@@ -10,7 +10,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -35,8 +35,12 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
 					<select class="govuk-select" id="programme-strand" name="programme-strand">
 						<option value="select" selected>Select</option>
-						<option value="general-violence">General violence</option>
-						<option value="intimate-partner-violence">Intimate partner violence</option>
+						<option value="extremism-offencee">Extremism offence</option>
+						<option value="gang-offence">Gang offence</option>
+						<option value="general-offence">General offence</option>
+						<option value="general-violence-offence">General violence offence</option>
+						<option value="intimate-partner-violence-offence">Intimate partner violence offence</option>
+						<option value="sexual-offence">Sexual offence</option>
 					</select>
 				</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -80,7 +84,6 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
-				
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 				</tr>
 			</thead>
@@ -97,7 +100,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 			  	</tr>
 				{% elseif data['referral-submitted'] == "On hold" %}
@@ -106,7 +109,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
 			  	</tr>
 				{% else %}
@@ -115,7 +118,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
 				{% endif %}
@@ -125,7 +128,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
@@ -133,7 +136,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">28 Dec 2027<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -141,7 +144,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -149,7 +152,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -157,7 +160,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -165,7 +168,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Home detention curfew approved date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -173,7 +176,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Home detention curfew eligibility date</td>
 					<td class="govuk-table__cell">Determinate</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -181,7 +184,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -189,7 +192,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Tariff end date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
@@ -197,7 +200,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Tariff expired release scheme eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -205,7 +208,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -213,7 +216,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -221,7 +224,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Conditional release date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -229,7 +232,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">General violence offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 			</tbody>

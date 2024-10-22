@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
+Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -61,7 +61,10 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 							<a class="moj-primary-navigation__link" href="#">Kaizen referrals</a>
 						</li>
 						<li class="moj-primary-navigation__item">
-							<a class="moj-primary-navigation__link" aria-current="page" href="building-choices/open-referrals">Building Choices referrals</a>
+							<a class="moj-primary-navigation__link" aria-current="page" href="building-choices/open-referrals">Building Choices: high intensity referrals</a>
+						</li>
+						<li class="moj-primary-navigation__item">
+							<a class="moj-primary-navigation__link" href="#">Building Choices: low intensity referrals</a>
 						</li>
             		</ul>
           		</nav>
@@ -81,7 +84,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-xl">Referrals</span>
-		<h1 class="govuk-heading-xl">Building Choices</h1>
+		<h1 class="govuk-heading-xl">Building Choices: high intensity</h1>
     </div>
 </div>
 
@@ -95,11 +98,11 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
 			  	</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="intensity-level">Intensity level</label>
-					<select class="govuk-select" id="intensity-level" name="intensity-level">
+					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
+					<select class="govuk-select" id="programme-strand" name="programme-strand">
 						<option value="select" selected>Select</option>
-						<option value="high">High</option>
-						<option value="moderate">Moderate</option>
+						<option value="general-offence">General offence</option>
+						<option value="sexual-offence">Sexual offence</option>
 					</select>
 				</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -142,7 +145,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Intensity level</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 				</tr>
 			</thead>
@@ -152,15 +155,15 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
-				<tr class="govuk-table__row">
+				  <tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
@@ -168,7 +171,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">28 Dec 2027<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -176,7 +179,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -184,7 +187,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -192,7 +195,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -200,7 +203,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Home detention curfew approved date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -208,7 +211,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Home detention curfew eligibility date</td>
 					<td class="govuk-table__cell">Determinate</td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -216,7 +219,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -224,7 +227,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Tariff end date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
@@ -232,7 +235,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Tariff expired release scheme eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -240,7 +243,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -248,7 +251,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">1 Jan 2026<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -256,7 +259,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">3 Apr 2030<br />Conditional release date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
@@ -264,7 +267,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Erlestoke</td>
 					<td class="govuk-table__cell">15 May 2029<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 			</tbody>

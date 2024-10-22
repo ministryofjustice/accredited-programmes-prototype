@@ -11,15 +11,15 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Transfer referral to Building Choices (TBC)</h1>
-		<p class="govuk-body">Submitting this will change the status to referral transferred (TBC).</p>
+		<h1 class="govuk-heading-l">Transfer referral to Building Choices: high intensity</h1>
+		<p class="govuk-body">Submitting this will transfer the referral to Building Choices: high intensity.</p>
 		<h2 class="govuk-heading-m">Current status</h2>
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
@@ -36,13 +36,13 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm transfer (TBC)</h2>
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm transfer</h2>
 		<form action="status-history" method="post">
 			<div class="govuk-form-group">
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
 					  <input class="govuk-checkboxes__input" id="confirm-suitability" name="confirm-suitability" type="checkbox" value="{{ data['confirm-suitability'] }}">
-					  <label class="govuk-label govuk-checkboxes__label" for="confirm-suitability">I confirm the person meets the programme eligibility criteria for Building Choices (TBC).</label>
+					  <label class="govuk-label govuk-checkboxes__label" for="confirm-suitability">I confirm the person meets the programme eligibility criteria for Building Choices: high intensity.</label>
 					</div>
 				</div>
 			</div>

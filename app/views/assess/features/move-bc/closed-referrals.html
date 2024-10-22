@@ -10,7 +10,7 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -35,8 +35,12 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
 					<select class="govuk-select" id="programme-strand" name="programme-strand">
 						<option value="select" selected>Select</option>
-						<option value="general-violence">General violence</option>
-						<option value="intimate-partner-violence">Intimate partner violence</option>
+						<option value="extremism-offencee">Extremism offence</option>
+						<option value="gang-offence">Gang offence</option>
+						<option value="general-offence">General offence</option>
+						<option value="general-violence-offence">General violence offence</option>
+						<option value="intimate-partner-violence-offence">Intimate partner violence offence</option>
+						<option value="sexual-offence">Sexual offence</option>
 					</select>
 				</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -88,28 +92,28 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken</td>
-					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
+					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not eligible</strong></td>
 				</tr>
 				{% elseif data['referral-submitted'] == "Withdraw referral" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken</td>
-					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
+					<td class="govuk-table__cell">1 Dec 20253<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">Intimate partner violence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
 				</tr>
 				{% elseif data['referral-submitted'] == "Transfer referral" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken</td>
-					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
+					<td class="govuk-table__cell">1 Dec 20253<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral transferred (TBC)</strong></td>
+					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Referral transferred</strong></td>
 				</tr>
 				{% endif %}
 				<tr class="govuk-table__row">
