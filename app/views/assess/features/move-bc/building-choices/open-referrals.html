@@ -130,7 +130,11 @@ Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
+					{% if data['referral-submitted'] == "Transfer referral" %}
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (35)</a>
+					{% else %}
 					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (34)</a>
+					{% endif %}
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Closed referrals (12)</a>
@@ -150,22 +154,26 @@ Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
+				{% if data['referral-submitted'] == "Transfer referral" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
 					<td class="govuk-table__cell">Sexual offence</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral transferred</strong></td>
 			  	</tr>
-				  <tr class="govuk-table__row">
+				{% else %}
+				<!-- Empty row -->
+				{% endif %}
+				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Sham Booth</a><br />B6789KL</td>
 					<td class="govuk-table__cell">Frankland</td>
 					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
 					<td class="govuk-table__cell">Indeterminate</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
-					</tr>
+				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Simon McGregor</a><br />N6005OK</td>
 					<td class="govuk-table__cell">Erlestoke</td>

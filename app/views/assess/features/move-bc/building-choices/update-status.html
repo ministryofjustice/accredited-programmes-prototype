@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update referral status - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update referral status</h1>
+		<p class="govuk-body">Record all decisions to keep the status up to date.</p>
+		<h2 class="govuk-heading-m">Current status</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral transferred</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-07-03T14:09:00.000Z">3 July 2023 at 2:09pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral transferred</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<form action="#" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Select decision</h2>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted" name="referral-submitted" type="radio" value="Awaiting assessment" {{ checked("referral-submitted", "Awaiting assessment") }}>
+							<label class="govuk-label govuk-radios__label" for="referral-submitted">Awaiting assessment</label>
+							<div class="govuk-hint govuk-radios__hint">This person meets the eligibility criteria for this programme and will be assessed for suitability.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted-2" name="referral-submitted" type="radio" value="Not eligible" {{ checked("referral-submitted", "Not eligible") }}>
+							<label class="govuk-label govuk-radios__label" for="referral-submitted-2">Not eligible</label>
+							<div class="govuk-hint govuk-radios__hint">This person does not meet the eligibility criteria for this programme. The referral will be closed.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="referral-submitted-3" name="referral-submitted" type="radio" value="On hold" {{ checked("referral-submitted", "On hold") }}>
+							<label class="govuk-label govuk-radios__label" for="referral-submitted-3">On hold</label>
+							<div class="govuk-hint govuk-radios__hint">The referral will be paused until the person is ready to continue.</div>
+						</div>
+						<div class="govuk-radios__item govuk-!-margin-bottom-0">
+							<input class="govuk-radios__input" id="referral-submitted-4" name="referral-submitted" type="radio" value="Withdraw referral" {{ checked("referral-submitted", "Withdraw referral") }}>
+							<label class="govuk-label govuk-radios__label" for="referral-submitted-4">Withdraw referral</label>
+							<div class="govuk-hint govuk-radios__hint">The referral will be closed.</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-8">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+					<a class="govuk-link" href="#">Cancel</a>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
