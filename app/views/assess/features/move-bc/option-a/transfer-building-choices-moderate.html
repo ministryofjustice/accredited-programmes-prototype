@@ -50,17 +50,17 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 			</div> 
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
-				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Select the programme strand</legend>
-					<div class="govuk-radios" data-module="govuk-radios">
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-strand" name="programme-strand" type="radio" value="General offence" {{ checked("programme-strand", "General offence") }}>
-							<label class="govuk-label govuk-radios__label" for="programme-strand">General offence</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-strand-2" name="programme-strand" type="radio" value="Sexual offence" {{ checked("programme-strand", "Sexual offence") }}>
-							<label class="govuk-label govuk-radios__label" for="programme-strand-2">Sexual offence</label>
-						</div>
-					</div>
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Select the offence type</legend>
+				  		<div class="govuk-radios" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="offence-type" name="offence-type" type="radio" value="general" {{ checked("offence-type", "general") }}>
+					  			<label class="govuk-label govuk-radios__label" for="offence-type">General</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="offence-type-2" name="offence-type" type="radio" value="sexual" {{ checked("offence-type", "sexual") }}>
+					  			<label class="govuk-label govuk-radios__label" for="offence-type-2">Sexual</label>
+							</div>
+				  		</div>
 				</fieldset>
 			</div>
 			<div class="govuk-warning-text">
