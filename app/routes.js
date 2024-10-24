@@ -295,7 +295,7 @@ router.post('/redirect-bc-high', function(request, response) {
   })
 
 
-  router.post('/assess/features/move-bc/update-status', function (req, res) {
+  router.post('/assess/features/move-bc/option-a/update-status', function (req, res) {
 	const referralSubmitted = req.session.data['referral-submitted']
     	if (referralSubmitted == 'Awaiting assessment') {
 			res.redirect('awaiting-assessment')
