@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
+Move referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -19,8 +19,8 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<form action="#" method="post">
-			<h1 class="govuk-heading-l">Transfer referral to Building Choices: high intensity</h1>
-			<p class="govuk-body">Submitting this will transfer the referral to Building Choices: high intensity.</p>
+			<h1 class="govuk-heading-l">Move referral to Building Choices: moderate intensity</h1>
+			<p class="govuk-body">This will transfer the referral from Becoming New Me Plus to Building Choices: moderate intensity.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
 			<div class="moj-timeline">
 				<div class="moj-timeline__item">
@@ -37,8 +37,8 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</div>
 			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Transfer referral</h2>
-			<p class="govuk-body">You must give a reason for transferring this referral to Building Choices: high intensity.</p>
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Move referral</h2>
+			<p class="govuk-body">You must give a reason for transferring this referral to Building Choices: moderate intensity.</p>
 			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
 				<div class="govuk-form-group">
 					<h3 class="govuk-label-wrapper">
@@ -48,29 +48,14 @@ Transfer referral to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 				<div id="transfer-reason-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
 			</div> 
-			<div class="govuk-form-group govuk-!-margin-top-6">
-				<fieldset class="govuk-fieldset">
-				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Select the offence type</legend>
-				  		<div class="govuk-radios" data-module="govuk-radios">
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="offence-type" name="offence-type" type="radio" value="general" {{ checked("offence-type", "general") }}>
-					  			<label class="govuk-label govuk-radios__label" for="offence-type">General</label>
-							</div>
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="offence-type-2" name="offence-type" type="radio" value="sexual" {{ checked("offence-type", "sexual") }}>
-					  			<label class="govuk-label govuk-radios__label" for="offence-type-2">Sexual</label>
-							</div>
-				  		</div>
-				</fieldset>
-			</div>
 			<div class="govuk-warning-text">
 				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
 				<strong class="govuk-warning-text__text">
-				<span class="govuk-visually-hidden">Warning</span>This referral will close, and a new referral will be created and added to Building Choices: high intensity.</strong>
+				<span class="govuk-visually-hidden">Warning</span> The Becoming New Me Plus referral will close. A new referral to Building Choices: moderate intensity will be created.</strong>
 			</div>
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-				<a class="govuk-link" href="#">Cancel</a>
+				<a class="govuk-link" href="status-history">Cancel</a>
 			</div>
 		</form>
 	</div>

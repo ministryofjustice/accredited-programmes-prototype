@@ -4,5 +4,12 @@
 //
 
 window.GOVUKPrototypeKit.documentReady(() => {
-  // Add JavaScript here
+  new MOJFrontend.ButtonMenu({
+    container: document.querySelector(".moj-button-menu"),
+    mq: "(min-width: 200em)",
+    buttonText: "Update referral",
+    menuClasses: "moj-button-menu__wrapper--right",
+    buttonClasses:
+    "govuk-button--secondary moj-button-menu__toggle-button--secondary",
+  });
 })

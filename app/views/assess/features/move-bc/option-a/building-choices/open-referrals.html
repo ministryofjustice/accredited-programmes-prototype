@@ -130,7 +130,7 @@ Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					{% if data['referral-submitted'] == "Transfer referral" %}
+					{% if (data['transfer-reason'] == "done") %}
 					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (35)</a>
 					{% else %}
 					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (34)</a>
@@ -154,7 +154,7 @@ Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "Transfer referral" %}
+				{% if (data['transfer-reason'] == "done") %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken (HMP)</td>

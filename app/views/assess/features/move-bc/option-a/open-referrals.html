@@ -68,14 +68,14 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					{% if data['referral-submitted'] == "Transfer referral" %}
+					{% if (data['transfer-reason'] == "done") %}
 					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (24)</a>
 					{% else %}
 					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (25)</a>
 					{% endif %}
 				</li>
 				<li class="moj-sub-navigation__item">
-					{% if data['referral-submitted'] == "Transfer referral" %}
+					{% if (data['transfer-reason'] == "done") %}
 					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (35)</a>
 					{% else %}
 					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (34)</a>
@@ -96,30 +96,8 @@ Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['referral-submitted'] == "Withdraw referral" %}
+				{% if (data['transfer-reason'] == "done") %}
 				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Not eligible" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Transfer referral" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">Stocken (HMP)</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
-			  	</tr>
-				{% elseif data['referral-submitted'] == "On hold" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
-					<td class="govuk-table__cell">Stocken (HMP)</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
-			  	</tr>
 				{% else %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Del Hatton</a><br />D0168KE</td>
