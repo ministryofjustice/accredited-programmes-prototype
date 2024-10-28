@@ -5,7 +5,7 @@
 
 window.GOVUKPrototypeKit.documentReady(() => {
   new MOJFrontend.ButtonMenu({
-    container: document.querySelector(".moj-button-menu"),
+    container: document.querySelector(".moj-button-menu-toggle"),
     mq: "(min-width: 200em)",
     buttonText: "Update referral",
     menuClasses: "moj-button-menu__wrapper--right",
