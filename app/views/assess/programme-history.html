@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -19,16 +19,16 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
 			</div>
-			<div class="moj-page-header-actions__actions">
-				<div class="moj-button-menu">
-				  <div class="moj-button-menu__wrapper">
+			<form action="open-referrals" method="post">
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
 					  <a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
 					  <a href="update-status" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
-				  </div>
+				  	</div>
 				</div>
-		  	</div>
+			</form>
  		</div>
 	</div>
 </div>
@@ -54,16 +54,20 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<h2 class="govuk-heading-m">Referral summary</h2>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Becoming New Me Plus (BNM+)</dd>
+			  	<dd class="govuk-summary-list__value">Becoming New Me Plus: intimate partner violence offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Intimate partner violence</dd>
+			  	<dd class="govuk-summary-list__value">Intimate partner violence offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
-				<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
+				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme team email address</dt>
@@ -118,7 +122,6 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<!-- <div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Jordan Smith on 111 June 2023</div> -->
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 			  		<h2 class="govuk-summary-card__title">Kaizen</h2>
@@ -131,7 +134,7 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">Custody, HMP Erlestoke</dd>
+							<dd class="govuk-summary-list__value">Custody, Erlestoke (HMP)</dd>
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Outcome</dt>
