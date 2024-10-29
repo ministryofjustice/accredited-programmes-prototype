@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -19,23 +19,15 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus (BNM+)</h1>
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
 			</div>
-			<div class="moj-page-header-actions__actions">
+			<div class="moj-button-group moj-button-group--inline">
 				<a href="open-referrals" class="govuk-button moj-button-menu__item">Back to referrals</a>
-				<div class="moj-button-menu">
-				  	<div class="moj-button-menu__wrapper">
-					  	<div style="float: right;">
-							<div class="moj-button-menu-toggle">
-						  		<div class="moj-button-menu__wrapper">
-									<a href="update-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
-									<a href="change-programme" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change programme</a>
-						  		</div>
-							</div>
-					  	</div>
-				  	</div>
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
+					<a href="update-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
+					<a href="change-programme" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change programme</a>		  
 				</div>
-		  	</div>
+			</div>
  		</div>
 	</div>
 </div>
@@ -50,6 +42,9 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
 				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
+				</li>
+				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 				</li>
 			</ul>
@@ -61,16 +56,20 @@ Referral to Becoming New Me Plus (BNM+) - {{ serviceName }} - GOV.UK Prototype K
 		<h2 class="govuk-heading-m">Referral summary</h2>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Becoming New Me Plus (BNM+)</dd>
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Becoming New Me Plus: intimate partner violence offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Intimate partner violence</dd>
+					<dt class="govuk-summary-list__key">Programme strand</dt>
+					<dd class="govuk-summary-list__value">Intimate partner violence offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
-				<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
+				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme team email address</dt>
