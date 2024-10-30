@@ -18,7 +18,7 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-1">Accredited Programmes data</h1>
-		<p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-8">Showing data for HMP Altcourse from last month (1 to 31 August 2024)</p>
+		<p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-8">Showing data from last month (1 to 31 August 2024)</p>
     </div>
 </div>
 
@@ -49,7 +49,11 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 				</ul>
 				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Location</h3>
 				<ul class="moj-filter-tags">
-				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Altcourse</a></li>
+				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> national data</a></li>
+				</ul>
+				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Programme</h3>
+				<ul class="moj-filter-tags">
+				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Becoming New Me Plus</a></li>
 				</ul>
 			</div>
 
@@ -98,66 +102,6 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 							  	<input class="govuk-input moj-js-datepicker-input " id="date-to" name="date-to" type="text" aria-describedby="date-to-hint" autocomplete="off">
 							</div>
 						</div>
-						  
-						<!-- GOV.UK Design System Dates component
-						
-							<div class="govuk-form-group">
-							<fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
-								<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-									<h1 class="govuk-fieldset__heading">Date from</h1>
-								</legend>
-								<div id="date-from-hint" class="govuk-hint">For example, 27 3 2023</div>
-								<div class="govuk-date-input" id="date-from">
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-from-day">Day</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-day" name="date-from-day" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-from-month">Month</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-month" name="date-from-month" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-from-year">Year</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-from-year" name="date-from-year" type="text" inputmode="numeric">
-										</div>
-									</div>
-								</div>
-							</fieldset>
-						</div>
-						<div class="govuk-form-group">
-							<fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
-								<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-									<h1 class="govuk-fieldset__heading">Date to</h1>
-								</legend>
-								<div id="date-to-hint" class="govuk-hint">For example, 29 3 2023</div>
-								<div class="govuk-date-input" id="date-to">
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-to-day">Day</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-day" name="date-to-day" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-to-month">Month</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-month" name="date-to-month" type="text" inputmode="numeric">
-										</div>
-									</div>
-									<div class="govuk-date-input__item">
-										<div class="govuk-form-group">
-											<label class="govuk-label govuk-date-input__label" for="date-to-year">Year</label>
-											<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-to-year" name="date-to-year" type="text" inputmode="numeric">
-										</div>
-									</div>
-								</div>
-							</fieldset>
-						</div> 
-						-->
 					</div>
 				</div>
 				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -168,11 +112,11 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 						</legend>
 					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="location" name="location" type="radio" value="national data">
+						  		<input class="govuk-radios__input" id="location" name="location" type="radio" value="national data" checked>
 						  		<label class="govuk-label govuk-radios__label" for="location">national data</label>
 							</div>
 							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="data by prison" data-aria-controls="conditional-location-2" checked>
+								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="data by prison" data-aria-controls="conditional-location-2">
 								<label class="govuk-label govuk-radios__label" for="location-2">data by prison</label>
 							</div>
 							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location-2">
@@ -184,7 +128,7 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 									<div class="govuk-form-group">
 										<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 											<div class="govuk-radios__item">
-												<input class="govuk-radios__input" id="prisonName" name="prisonName" type="radio" value="Altcourse" checked>
+												<input class="govuk-radios__input" id="prisonName" name="prisonName" type="radio" value="Altcourse">
 												<label class="govuk-label govuk-radios__label" for="prisonName">Altcourse</label>
 											</div>
 											<div class="govuk-radios__item">
@@ -431,14 +375,152 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 					  	</div>
 					</fieldset>
 				</div>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Programme</h1>
+					  	</legend>
+					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+						  		<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="Becoming New Me Plus" data-aria-controls="conditional-programme" checked>
+						  		<label class="govuk-label govuk-radios__label" for="programme">Becoming New Me Plus</label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme">
+								<div class="govuk-form-group">
+									<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+										<div class="govuk-radios__item">
+										  	<input class="govuk-radios__input" id="programme-bnm" name="programme-bnm" type="radio" value="general violence">
+										  	<label class="govuk-label govuk-radios__label" for="programme-bnm">general violence</label>
+										</div>
+										<div class="govuk-radios__item">
+										  	<input class="govuk-radios__input" id="programme-bnm-2" name="programme-bnm" type="radio" value="intimate partner violence">
+										  	<label class="govuk-label govuk-radios__label" for="programme-bnm-2">intimate partner violence</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-bnm-3" name="programme-bnm" type="radio" value="sexual offence">
+											<label class="govuk-label govuk-radios__label" for="programme-bnm-3">sexual offence</label>
+									  </div>
+									</div>
+								</div>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-2" name="programme" type="radio" value="Building Better Relationships">
+								<label class="govuk-label govuk-radios__label" for="programme-2">Building Better Relationships</label>
+						  	</div>
+							<div class="govuk-radios__item">
+						  		<input class="govuk-radios__input" id="programme-3" name="programme" type="radio" value="Building Choices" data-aria-controls="conditional-programme-2">
+						  		<label class="govuk-label govuk-radios__label" for="programme-3">Building Choices</label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-2">
+								<div class="govuk-form-group">
+									<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+										<div class="govuk-radios__item">
+										  	<input class="govuk-radios__input" id="programme-bc" name="programme-bc" type="radio" value="high intensity">
+										  	<label class="govuk-label govuk-radios__label" for="programme-bc">high intensity</label>
+										</div>
+										<div class="govuk-radios__item">
+										  	<input class="govuk-radios__input" id="programme-bc-2" name="programme-bc" type="radio" value="low intensity">
+										  	<label class="govuk-label govuk-radios__label" for="programme-bc-2">low intensity</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-4" name="programme" type="radio" value="Control of Violence for Angry Impulsive Drinkers">
+								<label class="govuk-label govuk-radios__label" for="programme-4">Control of Violence for Angry Impulsive Drinkers</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-5" name="programme" type="radio" value="Healthy Identity Intervention">
+								<label class="govuk-label govuk-radios__label" for="programme-5">Healthy Identity Intervention</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-6" name="programme" type="radio" value="Healthy Sex Programme">
+								<label class="govuk-label govuk-radios__label" for="programme-6">Healthy Sex Programme</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-7" name="programme" type="radio" value="Horizon">
+								<label class="govuk-label govuk-radios__label" for="programme-7">Horizon</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-8" name="programme" type="radio" value="Identity Matters">
+								<label class="govuk-label govuk-radios__label" for="programme-8">Identity Matters</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-9" name="programme" type="radio" value="Kaizen" data-aria-controls="conditional-programme-3">
+								<label class="govuk-label govuk-radios__label" for="programme-9">Kaizen</label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-3">
+								<div class="govuk-form-group">
+									<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-kaizen" name="programme-kaizen" type="radio" value="general violence">
+											<label class="govuk-label govuk-radios__label" for="programme-kaizen">general violence</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-kaizen-2" name="programme-kaizen" type="radio" value="intimate partner violence">
+											<label class="govuk-label govuk-radios__label" for="programme-kaizen-2">intimate partner violence</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-kaizen-3" name="programme-kaizen" type="radio" value="sexual offence">
+											<label class="govuk-label govuk-radios__label" for="programme-kaizen-3">sexual offence</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-10" name="programme" type="radio" value="Living as New Me">
+								<label class="govuk-label govuk-radios__label" for="programme-10">Living as New Me</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-11" name="programme" type="radio" value="New Me MOT">
+								<label class="govuk-label govuk-radios__label" for="programme-11">New Me MOT</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-12" name="programme" type="radio" value="New Me Strengths" data-aria-controls="conditional-programme-4">
+								<label class="govuk-label govuk-radios__label" for="programme-12">New Me Strengths</label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-4">
+								<div class="govuk-form-group">
+									<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-nms" name="programme-nms" type="radio" value="general violence">
+											<label class="govuk-label govuk-radios__label" for="programme-nms">general violence</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-nms-2" name="programme-nms" type="radio" value="intimate partner violence">
+											<label class="govuk-label govuk-radios__label" for="programme-nms-2">intimate partner violence</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="programme-nms-3" name="programme-nms" type="radio" value="sexual offence">
+											<label class="govuk-label govuk-radios__label" for="programme-nms-3">sexual offence</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="programme-13" name="programme" type="radio" value="Thinking Skills Programme">
+								<label class="govuk-label govuk-radios__label" for="programme-13">Thinking Skills Programme</label>
+						  	</div>
+					  	</div>
+					</fieldset>
+				</div>
 				<div class="govuk-button-group govuk-!-margin-right-3">
-					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a href="accredited-programmes-data-bnm-general-violence" class="govuk-button">Apply filters</a>
 				</div>
 			</div>
 		</div>
 	</div>	  
     <div class="govuk-grid-column-two-thirds">
 		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<!-- <div class="govuk-grid-column-full">
+				<h2 class="govuk-heading-m">
+					<span class="govuk-caption-m">govuk-caption-l</span> Becoming New Me Plus</h2>
+			</div> -->
+			<div class="govuk-grid-column-full">
+				<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Becoming New Me Plus</h2>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			</div>
 			<div class="govuk-grid-column-one-third">
 				<div class="data-block">
 					<h3 class="govuk-heading-s">Total referrals submitted</h3>

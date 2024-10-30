@@ -29,9 +29,34 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 			  	<div class="moj-filter__header-title">
 					<h2 class="govuk-heading-m">Filters</h2>
 				</div>
+				<div class="moj-filter__header-action"></div>
 			</div>
 		</div>
 		<div class="moj-filter__content">
+
+			<div class="moj-filter__selected">
+				<div class="moj-filter__selected-heading">
+		  			<div class="moj-filter__heading-title">
+						<h2 class="govuk-heading-m">Selected filters</h2>
+				  	</div>
+				  	<div class="moj-filter__heading-action">
+						<p><a class="govuk-link govuk-link--no-visited-state" href="accredited-programmes-data">Clear filters</a></p>
+				  	</div>
+				</div>
+				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Reporting period</h3>
+				<ul class="moj-filter-tags">
+				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> last month</a></li>
+				</ul>
+				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Location</h3>
+				<ul class="moj-filter-tags">
+				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> national data</a></li>
+				</ul>
+				<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Programme</h3>
+				<ul class="moj-filter-tags">
+				  	<li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Becoming New Me Plus: general violence</a></li>
+				</ul>
+			</div>
+
 			<div class="moj-filter__options">
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
@@ -40,7 +65,7 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 						</legend>
 					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month">
+						  		<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month" checked>
 						  		<label class="govuk-label govuk-radios__label" for="reportingPeriod">last month</label>
 							</div>
 							<div class="govuk-radios__item">
@@ -87,7 +112,7 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 						</legend>
 					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="location" name="location" type="radio" value="national data">
+						  		<input class="govuk-radios__input" id="location" name="location" type="radio" value="national data" checked>
 						  		<label class="govuk-label govuk-radios__label" for="location">national data</label>
 							</div>
 							<div class="govuk-radios__item">
@@ -358,14 +383,14 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 					  	</legend>
 					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="Becoming New Me Plus" data-aria-controls="conditional-programme">
+						  		<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="Becoming New Me Plus" data-aria-controls="conditional-programme" checked>
 						  		<label class="govuk-label govuk-radios__label" for="programme">Becoming New Me Plus</label>
 							</div>
 							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme">
 								<div class="govuk-form-group">
 									<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 										<div class="govuk-radios__item">
-										  	<input class="govuk-radios__input" id="programme-bnm" name="programme-bnm" type="radio" value="general violence">
+										  	<input class="govuk-radios__input" id="programme-bnm" name="programme-bnm" type="radio" value="general violence" checked>
 										  	<label class="govuk-label govuk-radios__label" for="programme-bnm">general violence</label>
 										</div>
 										<div class="govuk-radios__item">
@@ -481,13 +506,21 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 					</fieldset>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-right-3">
-					<a href="accredited-programmes-data-bnm" class="govuk-button">Apply filters</a>
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
 				</div>
 			</div>
 		</div>
 	</div>	  
     <div class="govuk-grid-column-two-thirds">
 		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<!-- <div class="govuk-grid-column-full">
+				<h2 class="govuk-heading-m">
+					<span class="govuk-caption-m">govuk-caption-l</span> Becoming New Me Plus</h2>
+			</div> -->
+			<div class="govuk-grid-column-full">
+				<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Becoming New Me Plus: general violence</h2>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			</div>
 			<div class="govuk-grid-column-one-third">
 				<div class="data-block">
 					<h3 class="govuk-heading-s">Total referrals submitted</h3>
@@ -602,7 +635,6 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 	</div>
-	
 </div>
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
