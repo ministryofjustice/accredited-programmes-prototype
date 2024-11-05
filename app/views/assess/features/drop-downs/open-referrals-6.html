@@ -81,7 +81,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 						<div class="govuk-form-group">
 							<fieldset class="govuk-fieldset">
 								  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-									<h1 class="govuk-fieldset__heading">Referral status</h1>
+									<h1 class="govuk-fieldset__heading">Referral status - Open</h1>
 								</legend>
 								  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 									<div class="govuk-radios__item">
@@ -108,7 +108,6 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 										<input class="govuk-radios__input" id="referralStatus-6" name="referralStatus" type="radio" value="On hold - assessment started">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-6">On hold - assessment started</label>
 									  </div>
-		
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-7" name="referralStatus" type="radio" value="Assessed as suitable">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-7">Assessed as suitable</label>
@@ -121,26 +120,33 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 										<input class="govuk-radios__input" id="referralStatus-9" name="referralStatus" type="radio" value="On programme">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-9">On programme</label>
 									  </div>
+								</div>
+							</fieldset>
+							<fieldset class="govuk-fieldset">
+								<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+								  <h1 class="govuk-fieldset__heading govuk-!-margin-top-6">Referral status - Closed</h1>
+								</legend>
+								<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-10" name="referralStatus" type="radio" value="Not eligible">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-10">Not eligible</label>
-									  </div>
+									</div>
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-11" name="referralStatus" type="radio" value="Not suitable">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-11">Not suitable</label>
-									  </div>
+									</div>
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-12" name="referralStatus" type="radio" value="Withdrawn">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-12">Withdrawn</label>
-									  </div>
+									</div>
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-13" name="referralStatus" type="radio" value="Deselected">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-13">Deselected</label>
-									  </div>
+									</div>
 									<div class="govuk-radios__item">
 										<input class="govuk-radios__input" id="referralStatus-14" name="referralStatus" type="radio" value="Programme complete">
 										<label class="govuk-label govuk-radios__label" for="referralStatus-14">Programme complete</label>
-									  </div>
+									</div>
 								</div>
 							</fieldset>
 						</div> 
@@ -154,69 +160,6 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 	</div>
 </div>
-
-<!-- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<div class="filters-container-moj">
-			<h2 class="govuk-heading-m filters-heading">Filters</h2>
-			<div class="filter-options">
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or prison number</label>
-					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
-			  	</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
-					<select class="govuk-select" id="programme-strand" name="programme-strand">
-						<option value="select" selected>Select</option>
-						<option value="general-violence">General violence offence</option>
-						<option value="intimate-partner-violence">Intimate partner violence offence</option>
-					</select>
-				</div>
-
-				 <div class="govuk-form-group">
-					<fieldset class="govuk-fieldset">
-					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-							<h1 class="govuk-fieldset__heading">Programme strand</h1>
-						</legend>
-					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="programmeStrand" name="programmeStrand" type="radio" value="Intimate partner violence offence">
-						  		<label class="govuk-label govuk-radios__label" for="programmeStrand">Intimate partner violence offence</label>
-							</div>
-							<div class="govuk-radios__item">
-						  		<input class="govuk-radios__input" id="programmeStrand-2" name="programmeStrand" type="radio" value="General violence offence">
-						  		<label class="govuk-label govuk-radios__label" for="programmeStrand-2">General violence offence</label>
-							</div>
-							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="programmeStrand-3" name="programmeStrand" type="radio" value="last 6 months">
-								<label class="govuk-label govuk-radios__label" for="programmeStrand-3">last 6 months</label>
-						  	</div>
-							
-						</div>
-					</fieldset>
-				</div> 
-
-
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
-					<select class="govuk-select" id="referral-status" name="referral-status">
-						<option value="select" selected>Select</option>
-						<option value="assessed-suitable">Assessed as suitable</option>
-						<option value="assessment-started">Assessment started</option>
-						<option value="awaiting-assessment">Awaiting assessment</option>
-						<option value="on-programme">On programme</option>
-						<option value="referral-submitted">Referral submitted</option>
-						<option value="suitable-not-ready">Suitable but not ready</option>
-					</select>
-				</div>
-				<div class="govuk-button-group govuk-!-margin-right-3 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
-					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
-					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
-				</div> 
-			</div>
-		</div>
-	</div>
-</div> -->
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
