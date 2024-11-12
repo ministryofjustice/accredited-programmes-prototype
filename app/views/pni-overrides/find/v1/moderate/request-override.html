@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Request an override - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Request an override</h1>
+		<p class="govuk-body">If you don't think the recommended programmes are suitable, you can request an override. The treatment manager will decide whether the override is appropriate.</p>
+		<form action="override-reason" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-7">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Programme you want to refer to</h1>
+					</legend>
+				 	<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programmeRefer" name="programmeRefer" type="radio" value="Becoming New Me Plus" {{ checked("programmeRefer", "Becoming New Me Plus") }}>
+							<label class="govuk-label govuk-radios__label" for="programmeRefer">Becoming New Me Plus</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programmeRefer-2" name="programmeRefer" type="radio" value="Building Choices: high intensity" {{ checked("programmeRefer", "Building Choices: high intensity") }}>
+							<label class="govuk-label govuk-radios__label" for="programmeRefer-2">Building Choices: high intensity</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programmeRefer-3" name="programmeRefer" type="radio" value="Healthy Identity Intervention" {{ checked("programmeRefer", "Healthy Identity Intervention") }}>
+							<label class="govuk-label govuk-radios__label" for="programmeRefer-3">Healthy Identity Intervention</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programmeRefer-4" name="programmeRefer" type="radio" value="Healthy Sex Programme" {{ checked("programmeRefer", "Healthy Sex Programme") }}>
+							<label class="govuk-label govuk-radios__label" for="programmeRefer-4">Healthy Sex Programme</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programmeRefer-5" name="programmeRefer" type="radio" value="Kaizen" {{ checked("programmeRefer", "Kaizen") }}>
+							<label class="govuk-label govuk-radios__label" for="programmeRefer-5">Kaizen</label>
+						</div>
+				  	</div>
+				</fieldset>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+	  	</form>
+	</div>
+</div>
+{% endblock %}
