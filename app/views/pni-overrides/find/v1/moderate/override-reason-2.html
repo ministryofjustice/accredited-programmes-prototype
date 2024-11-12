@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Override reason - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="building-choices-moderate" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="reasonOveride-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<h1 class="govuk-fieldset__heading">Override reason</h1>
+					</legend>
+					<div id="reasonOveride-hint" class="govuk-hint govuk-!-margin-bottom-6">Give a reason for requesting the override.</div>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programme-specific" name="programme-specific" type="radio" value="pna-completed" data-aria-controls="conditional-programme">
+							<label class="govuk-label govuk-radios__label" for="programme-specific">A programme needs assessment (PNA) has been completed and shows high need in Attitudes, Relationships and Self-management</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme">
+							<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+								<div class="govuk-form-group">
+									<h3 class="govuk-label-wrapper">
+										<label class="govuk-label govuk-label--m" for="add-details">Add reason</label>
+									</h3>
+									<textarea class="govuk-textarea govuk-js-character-count" id="add-details" name="add-details" rows="12" aria-describedby="add-details-info"></textarea>
+								</div>
+								<div id="add-details-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+							</div> 
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="programme-specific-2" name="programme-specific" type="radio" value="other" data-aria-controls="conditional-programme-2">
+							<label class="govuk-label govuk-radios__label" for="programme-specific-2">Other</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-programme-2">
+							<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+								<div class="govuk-form-group">
+									<h3 class="govuk-label-wrapper">
+										<label class="govuk-label govuk-label--m" for="add-details">Add reason</label>
+									</h3>
+									<textarea class="govuk-textarea govuk-js-character-count" id="add-details" name="add-details" rows="12" aria-describedby="add-details-info"></textarea>
+								</div>
+								<div id="add-details-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+							</div> 
+						</div>
+				  	</div>
+				</fieldset>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button class="govuk-button" data-module="govuk-button">Submit override request</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+	  	</form>
+	</div>
+</div>
+{% endblock %}
