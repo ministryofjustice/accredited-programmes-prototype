@@ -11,14 +11,14 @@ Override reason - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-two-thirds">
-		<form action="building-choices-moderate" method="post">
+		<form action="#" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="reasonOveride-hint">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -27,12 +27,20 @@ Override reason - {{ serviceName }} - GOV.UK Prototype Kit
 					<div id="reasonOveride-hint" class="govuk-hint govuk-!-margin-bottom-6">Give a reason for requesting the override.</div>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-specific" name="programme-specific" type="radio" value="pna-completed">
-							<label class="govuk-label govuk-radios__label" for="programme-specific">A programme needs assessment (PNA) has been completed and shows high need in Attitudes, Relationships and Self-management</label>
+							<input class="govuk-radios__input" id="generic-list" name="generic-list" type="radio" value="pna-different-recommendation">
+							<label class="govuk-label govuk-radios__label" for="generic-list">The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI)</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="programme-specific-2" name="programme-specific" type="radio" value="other">
-							<label class="govuk-label govuk-radios__label" for="programme-specific-2">Other</label>
+							<input class="govuk-radios__input" id="generic-list-2" name="generic-list" type="radio" value="risk-need-close">
+							<label class="govuk-label govuk-radios__label" for="generic-list-2">The risk and need scores are very close to the threshold</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="generic-list-3" name="generic-list" type="radio" value="agree-treatment-manager">
+							<label class="govuk-label govuk-radios__label" for="generic-list-3">I've agreed this with the treatment manager</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="generic-list-4" name="generic-list" type="radio" value="other">
+							<label class="govuk-label govuk-radios__label" for="programme-specific-4">Other</label>
 						</div>
 				  	</div>
 				</fieldset>
