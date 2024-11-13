@@ -11,14 +11,14 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<form action="status-history" method="post">
+		<form action="#" method="post">
 			<h1 class="govuk-heading-l">Assessed as suitable</h1>
 			<p class="govuk-body">Submitting this will change the status to assessed as suitable.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
@@ -54,11 +54,6 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 				<div id="override-reason-info-2" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
 			</div> 
-			<div class="govuk-warning-text">
-				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-				<strong class="govuk-warning-text__text">
-				  <span class="govuk-visually-hidden">Warning</span>TBC</strong>
-			</div>
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
 				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
