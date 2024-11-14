@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Recommended Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
+Recommended Accredited Programmes: moderate - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -11,15 +11,26 @@ Recommended Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended Accredited Programmes</h1>
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended Accredited Programmes: moderate</h1>
 		<p class="govuk-body">These programmes are recommended for people with medium risks and needs.</p>
+		<details class="govuk-details govuk-!-margin-bottom-7">
+			<summary class="govuk-details__summary">
+			  	<span class="govuk-details__summary-text">I need to refer to a different programme</span>
+			</summary>
+			<div class="govuk-details__text">
+				<p class="govuk-body">If you think the person needs a programme not listed here, you can request an override. You will need to give a reason.</p>
+				<div class="govuk-button-group govuk-!-margin-top-4">
+					<a class="govuk-button govuk-button--secondary" href="high-acp-programme-override-request">Request an override</a>
+				</div>
+			</div>
+		</details>
     </div>
 </div>
 
@@ -56,7 +67,7 @@ Recommended Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
 	  		</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="building-choices-moderate">Building Choices: moderate intensity</a></h2>
+		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Building Choices: moderate intensity</a></h2>
 		<p class="govuk-body govuk-!-margin-top-6">Building Choices helps people to develop skills for change and future-focused goals. It is a cognitive-behavioural programme, combining group and one-to-one sessions. It develops skills such as emotion management, healthy thinking, healthy relationships, sense of purpose and healthy sex. This is the moderate intensity pathway.</p>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">

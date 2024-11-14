@@ -38,31 +38,19 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
               			<span class="govuk-prototype-kit-task-list__task-name">
                 			<a href="#" aria-describedby="review-accredited-programme-history-status">Review Accredited Programme history</a>
               			</span>
-						{% if (data['referral-information-one'] == "done") %}
-						<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="confirm-personal-details-status">Completed</strong>
-						{% else %}
               			<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
-            			{% endif %}
             		</li>
             		<li class="govuk-prototype-kit-task-list__item">
               			<span class="govuk-prototype-kit-task-list__task-name">
                 			<a href="#" aria-describedby="confirm-oasys-information-status">Confirm the OASys information</a>
               			</span>
-						{% if (data['referral-information-two'] == "done") %}
-              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
-						{% else %}
 						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
-						{% endif %}
             		</li>
             		<li class="govuk-prototype-kit-task-list__item">
               			<span class="govuk-prototype-kit-task-list__task-name">
                 			<a href="#" aria-describedby="additional-information">Add additional information</a>
               			</span>
-						{% if (data['referral-information-three'] == "done") %}
-              			<strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="additional-information">Completed</strong>
-						{% else %}
 						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="additional-information">Not started</strong>
-						{% endif %}
             		</li>
           		</ul>
         	</li>
@@ -73,11 +61,7 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 						<span class="govuk-prototype-kit-task-list__task-name">
 							<a href="#" aria-describedby="check-answers-status">Check answers and submit</a>
 						</span>
-						{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
-						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="check-answers-status">Not started</strong>
-						{% else %}
 						<strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="check-answers-status">Cannot start yet</strong>
-						{% endif %}
 					</li>
 				</ul>
         	</li>
