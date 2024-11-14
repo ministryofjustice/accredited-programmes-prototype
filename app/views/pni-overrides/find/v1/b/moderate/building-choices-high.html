@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Building Choices: high intensity</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Programme criteria</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Custody or community</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Any, depending on prison requirements</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Risk criteria</dt>
+				<dd class="govuk-summary-list__value">
+					<p class="govuk-body">High or very high in at least one of these areas:</p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>OGRS3 (Offender Group Reconviction Scale 3)</li>
+						<li>OVP (OASys Violence Predictor)</li>
+						<li>OSP-DC or OSP-IIC (OASys Sexual Reconviction Predictor &ndash; Contact or Indecent Imagery)</li>
+						<li>RSR (Risk of Serious Recidivism)</li>
+						<li>SARA (Spousal Assault Risk Assessment)</li>
+					</ul>
+				</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Needs criteria</dt>
+				<dd class="govuk-summary-list__value">High need, based on their programme needs score</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Suitable for people with learning disabilities or challenges (LDC)</dt>
+				<dd class="govuk-summary-list__value">Yes</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Time to complete</dt>
+				<dd class="govuk-summary-list__value">Around 17 to 25 weeks (2 to 3 sessions a week)</dd>
+		  	</div>
+		</dl>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Programme description</h2>
+		<p class="govuk-body govuk-!-margin-top-6">Building Choices helps people to develop skills for change and future-focused goals. It is a cognitive-behavioural programme, combining group and one-to-one sessions. It develops skills such as emotion management, healthy thinking, healthy relationships, sense of purpose and healthy sex. This is the high intensity pathway, including Getting Ready.</p>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Locations</h2>
+		<p class="govuk-body govuk-!-margin-top-6">Prisons where the programme runs and how to contact them.</p>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Prison</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Category</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">County</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+			  	<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Aylesbury (HMP)</a></td>
+					<td class="govuk-table__cell">Category C</td>
+					<td class="govuk-table__cell">Buckinghamshire</td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Brinsford (HMP)</a></td>
+					<td class="govuk-table__cell">Category B/C</td>
+					<td class="govuk-table__cell">Wolverhampton</td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="hmp-erlestoke">Erlestoke (HMP)</a></td>
+					<td class="govuk-table__cell">Category C</td>
+					<td class="govuk-table__cell">Wiltshire</td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Frankland (HMP)</a></td>
+					<td class="govuk-table__cell">Category A/B</td>
+					<td class="govuk-table__cell">Durham</td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Stoke Heath (HMP)</a></td>
+					<td class="govuk-table__cell">Category C</td>
+					<td class="govuk-table__cell">Shropshire</td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Swinton Hall (HMP)</a></td>
+					<td class="govuk-table__cell">Category C</td>
+					<td class="govuk-table__cell">Staffordshire</td>
+			  	</tr>
+			</tbody>
+		</table>
+    </div>
+</div>
+
+{% endblock %}
