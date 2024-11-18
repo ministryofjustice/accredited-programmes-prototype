@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
+Not recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,19 +18,12 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended: high intensity Accredited Programmes</h1>
-		<p class="govuk-body">These programmes are recommended for people with high or very high risks and needs.</p>
-		<details class="govuk-details govuk-!-margin-bottom-7">
-			<summary class="govuk-details__summary">
-			  	<span class="govuk-details__summary-text">I need to refer to a different programme</span>
-			</summary>
-			<div class="govuk-details__text">
-				<p class="govuk-body">If you think the person needs a programme not listed here, you can see non-recommended programmes and request an override. You will need to give a reason for this before you submit the referral.</p>
-				<div class="govuk-button-group govuk-!-margin-top-4">
-					<a class="govuk-button govuk-button--secondary" href="not-high-acp-programmes">See moderate intensity programmes</a>
-				</div>
-			</div>
-		</details>
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Not recommended: high intensity Accredited Programmes</h1>
+		<p class="govuk-body">These programmes are not recommended for people with medium risks and needs, like Del Hatton.</p>
+		<p class="govuk-body">You can make a referral anyway and the treatment manager will decide whether an override is appropriate. You will need to give a reason before you submit the referral.</p>
+		<div class="govuk-button-group govuk-!-margin-top-4">
+			<a class="govuk-button govuk-button--secondary" href="#">See recommended programmes</a>
+		</div>
     </div>
 </div>
 
