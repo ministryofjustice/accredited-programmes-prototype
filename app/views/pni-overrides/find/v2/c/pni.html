@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Recommended programme pathway for Del Hatton - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended programme pathway for Del Hatton</h1>
+		<p class="govuk-body">This is the recommended Accredited Programme pathway. It is based on the person's risks and needs.</p>
+		<div class="rosh-widget rosh-widget--not-eligible govuk-!-margin-bottom-6">
+			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
+				<span class="grey"><strong>NOT ELIGIBLE</strong></span>
+			</h2>
+			<p class="govuk-body govuk-!-margin-bottom-1">Based on the risk and need scores, Del Hatton may not be eligible for either the moderate or high intensity Accredited Programmes pathway. Consider other options.</p>
+		</div>
+		<h2 class="govuk-heading-m">If you still want to make a referral</h2>
+		<p class="govuk-body">If you still think the person should be referred to an Accredited Programme, you can view the list of programmes and request an override. You will need to give a reason for this before you submit the referral.</p>
+		<div class="govuk-button-group govuk-!-margin-top-4">
+			<a class="govuk-button" href="all-acp-programmes">See all programmes</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}
