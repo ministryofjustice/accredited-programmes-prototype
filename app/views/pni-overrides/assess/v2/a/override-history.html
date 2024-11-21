@@ -33,14 +33,13 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 			<div class="moj-page-header-actions__title">
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: high intensity</h1>
 			</div>
-			<form action="#" method="post">
-				<div class="moj-page-header-actions__actions">
-					<div class="moj-button-menu">
-					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
-					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
-				  	</div>
+			<div class="moj-button-group moj-button-group--inline">
+				<a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
+					<a href="update-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
+					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Move to Building Choices</a>		  
 				</div>
-			</form>
+			</div>
  		</div>
 	</div>
 </div>
@@ -48,19 +47,19 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
-			 	</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
+					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
 				</li>
-		  	</ul>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+				</li>
+			</ul>
 		</nav>
 	</div>
 </div>
@@ -73,13 +72,13 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 				<dd class="govuk-summary-list__value">Del Hatton</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Becoming New Me Plus: intimate partner violence offence</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Intimate partner violence offence</dd>
-			</div>
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme strand</dt>
+				<dd class="govuk-summary-list__value">Sexual offence</dd>
+		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
 				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
@@ -102,10 +101,6 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Referrer contact number</dt>
-				<dd class="govuk-summary-list__value">01380 814250</dd>
-			</div>
 		</dl>
     </div>
 </div>
@@ -119,22 +114,22 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 				<li class="moj-side-navigation__item">
-					<a href="#">Personal details</a>
+					<a href="personal-details">Personal details</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
-					<a href="#">Programme history</a>
+					<a href="programme-history">Programme history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Offence history</a>
+					<a href="offence-history">Offence history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Sentence information</a>
+					<a href="sentence-information">Sentence information</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#" aria-current="location">Additional information</a>
+					<a href="additional-information">Additional information</a>
 		  		</li>
 				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="#" aria-current="location">Override decision history</a>
+					<a href="override-history" aria-current="location">Override decision history</a>
 		  		</li>
 			</ul>
 		</nav>
