@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
+Update referral status - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pt.html" %}	
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,62 +26,65 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 				<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
 			</div>
 		</div>
-		<form action="#" method="post">
-			<h1 class="govuk-heading-l">Assessed as suitable</h1>
-			<p class="govuk-body">Submitting this will change the status to assessed as suitable.</p>
-			<h2 class="govuk-heading-m">Current status</h2>
-			<div class="moj-timeline">
-				<div class="moj-timeline__item">
-					<div class="moj-timeline__header">
-						<h2 class="moj-timeline__title">Referral submitted</h2>
-						<p class="moj-timeline__byline">by You</p>
+		<h1 class="govuk-heading-l">Update referral status</h1>
+		<p class="govuk-body">Record all decisions to keep the status up to date.</p>
+		<h2 class="govuk-heading-m">Current status</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<form action="reason-override" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Select decision</h2>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable" name="assessed-suitable" type="radio" value="On hold &ndash; assessment not completed" {{ checked("assessed-suitable", "On hold &ndash; assessment not completed") }}>
+							<label class="govuk-label govuk-radios__label" for="assessed-suitable">On hold &ndash; assessment not completed</label>
+							<div class="govuk-hint govuk-radios__hint">The assessment has not been completed, but the referral will be paused until the person is ready to continue.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable-2" name="assessed-suitable" type="radio" value="Assessed as suitable and ready to continue" {{ checked("assessed-suitable", "Assessed as suitable and ready to continue") }}>
+							<label class="govuk-label govuk-radios__label" for="assessed-suitable-2">Assessed as suitable and ready to continue</label>
+							<div class="govuk-hint govuk-radios__hint">This person meets the suitability criteria. They can now be considered to join the programme.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable-3" name="assessed-suitable" type="radio" value="Assessed as suitable but not ready" {{ checked("assessed-suitable", "Assessed as suitable but not ready") }}>
+							<label class="govuk-label govuk-radios__label" for="assessed-suitable-3">Assessed as suitable but not ready</label>
+							<div class="govuk-hint govuk-radios__hint">This person meets the suitability criteria but is not ready to start the programme. The referral will be paused until they are ready.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable-4" name="assessed-suitable" type="radio" value="Not suitable" {{ checked("assessed-suitable", "Not suitable") }}>
+							<label class="govuk-label govuk-radios__label" for="assessed-suitable-4">Not suitable</label>
+							<div class="govuk-hint govuk-radios__hint">This person does not meet the suitability criteria for this programme. The referral will be closed.</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="assessed-suitable-5" name="assessed-suitable" type="radio" value="Withdraw referral" {{ checked("assessed-suitable", "Withdraw referral") }}>
+							<label class="govuk-label govuk-radios__label" for="assessed-suitable-5">Withdraw referral</label>
+							<div class="govuk-hint govuk-radios__hint">The referral will be closed.</div>
+						</div>
 					</div>
-					<p class="moj-timeline__date">
-						<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
-					</p>
-					<div class="moj-timeline__description">
-						<strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
-					</div>
+				</fieldset>
+				<div class="govuk-button-group govuk-!-margin-top-7">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+					<a class="govuk-link" href="status-history">Cancel</a>
 				</div>
-			</div>
-			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Reason for override</h2>
-			<p class="govuk-body">This referral overrides the recommended programme pathway based on risk and programme needs identifier (PNI) scores. You must give a reason for this decision.</p>
-			<div class="govuk-radios" data-module="govuk-radios">
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override" name="reasons-override" type="radio" value="pna-completed">
-					<label class="govuk-label govuk-radios__label" for="reasons-override">The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI).</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-2" name="reasons-override" type="radio" value="pna-completed">
-					<label class="govuk-label govuk-radios__label" for="reasons-override-2">The risk and need scores are very close to the threshold.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-3" name="reasons-override" type="radio" value="pna-completed">
-					<label class="govuk-label govuk-radios__label" for="reasons-override-3">Information is missing from the layer 3 assessment but the risks and needs do match the recommendations for the programme.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-4" name="reasons-override" type="radio" value="pna-completed">
-					<label class="govuk-label govuk-radios__label" for="reasons-override-4">The person has already completed a programme and this is an appropriate follow-on programme.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-5" name="reasons-override" type="radio" value="other">
-					<label class="govuk-label govuk-radios__label" for="reasons-override-5">Other</label>
-				</div>
-			</div>
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Add details</h2>
-			<p class="govuk-body">Give your reasons for assessing this override as suitable.</p>
-			<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
-				<textarea class="govuk-textarea govuk-js-character-count" id="reason-override-suitable" name="reason-override-suitable" rows="12" aria-describedby="reason-override-suitable-info"></textarea>
-				<div id="reason-override-suitable-info" class="govuk-hint govuk-character-count__message">You can enter up to 500 characters</div>
-			</div>
-
-			<div class="govuk-button-group">
-				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
 			</div>
 		</form>
-	</div>
+    </div>
 </div>
+
 {% endblock %}
