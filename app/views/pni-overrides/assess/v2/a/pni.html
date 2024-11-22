@@ -27,19 +27,20 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 		</div>
 	</div>
 </div>
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: high intensity</h1>
 			</div>
-			<div class="moj-button-group moj-button-group--inline">
-				<a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
-				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
-					<a href="update-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
-					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Move to Building Choices</a>		  
+			<form action="open-referrals" method="post">
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+					  <a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+					  <a href="update-status" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  	</div>
 				</div>
-			</div>
+			</form>
  		</div>
 	</div>
 </div>
