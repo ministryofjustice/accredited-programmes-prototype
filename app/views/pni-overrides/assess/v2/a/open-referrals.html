@@ -162,6 +162,16 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
+				{% if data['reasons-override'] %}
+			  	<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
+					<td class="govuk-table__cell">Stocken (HMP)</td>
+					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
+					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
+					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
+			  	</tr>
+				{% else %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Erlestoke (HMP)</td>
@@ -170,6 +180,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 			  	</tr>
+				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B6789KL</td>
 					<td class="govuk-table__cell">Frankland (HMP)</td>

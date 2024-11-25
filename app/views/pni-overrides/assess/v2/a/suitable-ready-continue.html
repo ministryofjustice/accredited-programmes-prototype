@@ -26,7 +26,7 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 				<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
 			</div>
 		</div>
-		<form action="#" method="post">
+		<form action="status-history" method="post">
 			<h1 class="govuk-heading-l">Assessed as suitable</h1>
 			<p class="govuk-body">Submitting this will change the status to assessed as suitable.</p>
 			<h2 class="govuk-heading-m">Current status</h2>
@@ -50,23 +50,23 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 			<p class="govuk-body">This referral overrides the recommended programme pathway based on risk and programme needs identifier (PNI) scores. You must give a reason for this decision.</p>
 			<div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override" name="reasons-override" type="radio" value="pna-completed">
+					<input class="govuk-radios__input" id="reasons-override" name="reasons-override" type="radio" value="The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI)" {{ checked("reasons-override", "The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI)") }}>
 					<label class="govuk-label govuk-radios__label" for="reasons-override">The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI).</label>
 				</div>
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-2" name="reasons-override" type="radio" value="pna-completed">
+					<input class="govuk-radios__input" id="reasons-override-2" name="reasons-override" type="radio" value="The risk and need scores are very close to the threshold" {{ checked("reasons-override", "The risk and need scores are very close to the threshold") }}>
 					<label class="govuk-label govuk-radios__label" for="reasons-override-2">The risk and need scores are very close to the threshold.</label>
 				</div>
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-3" name="reasons-override" type="radio" value="pna-completed">
+					<input class="govuk-radios__input" id="reasons-override-3" name="reasons-override" type="radio" value="Information is missing from the layer 3 assessment but the risks and needs do match the recommendations for the programme" {{ checked("reasons-override", "Information is missing from the layer 3 assessment but the risks and needs do match the recommendations for the programme") }}>
 					<label class="govuk-label govuk-radios__label" for="reasons-override-3">Information is missing from the layer 3 assessment but the risks and needs do match the recommendations for the programme.</label>
 				</div>
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-4" name="reasons-override" type="radio" value="pna-completed">
+					<input class="govuk-radios__input" id="reasons-override-4" name="reasons-override" type="radio" value="The person has already completed a programme and this is an appropriate follow-on programme" {{ checked("reasons-override", "The person has already completed a programme and this is an appropriate follow-on programme") }}>
 					<label class="govuk-label govuk-radios__label" for="reasons-override-4">The person has already completed a programme and this is an appropriate follow-on programme.</label>
 				</div>
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-5" name="reasons-override" type="radio" value="other">
+					<input class="govuk-radios__input" id="reasons-override-5" name="reasons-override" type="radio" value="Other" {{ checked("reasons-override", "Other") }}>
 					<label class="govuk-label govuk-radios__label" for="reasons-override-5">Other</label>
 				</div>
 			</div>
