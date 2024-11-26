@@ -162,11 +162,19 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Treatment manager decision</dt>
+							{% if data['reasons-override'] %}
+							<dd class="govuk-summary-list__value">Assessed as suitable</dd>
+							{% else %}
 							<dd class="govuk-summary-list__value"><!-- Assessed as suitable --></dd>
+							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Treatment manager notes</dt>
+							{% if data['reasons-override'] %}
+							<dd class="govuk-summary-list__value">{{ data['reason-override-suitable'] }}</dd>
+							{% else %}
 							<dd class="govuk-summary-list__value"><!-- A PNA has already been completed and Del Hatton shows high need in all relevant areas. --></dd>
+							{% endif %}
 						</div>
 					</dl>
 				</div>
