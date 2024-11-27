@@ -677,7 +677,7 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 </div> -->
 <div class="govuk-grid-row govuk-!-margin-bottom-9">
 	<div class="govuk-grid-column-two-thirds">
-		<h2 class="govuk-heading-m">Overrides</h2>
+		<h2 class="govuk-heading-m" id="programme-overrides">Programme overrides</h2>
 		<p class="govuk-body">Overrides happen when someone starts a programme that doesn't match the pathway recommended by their risk and needs scores.</p>
 		<p class="govuk-body"><a href="qa-data" class="govuk-link">See details of overrides</a></p>
     </div>
@@ -694,9 +694,34 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</div>
 			<div class="govuk-grid-column-three-quarters govuk-!-margin-top-7">
-				<h3 class="govuk-heading-s">Number of overrides by programme</h3>
-				<div class="faux-chart">
-					<img src="/public/images/qa-chart.png" alt="dummy image to be replaced with a real chart" width="100%" />
+				<div class="govuk-summary-card">
+					<div class="govuk-summary-card__title-wrapper">
+						  <h2 class="govuk-summary-card__title">Overrides by reason</h2>
+					</div>
+					<div class="govuk-summary-card__content">
+						  <dl class="govuk-summary-list">
+							<div class="govuk-summary-list__row">
+								  <dt class="govuk-summary-list__key">PNA gives a different recommendation</dt>
+								  <dd class="govuk-summary-list__value">7</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Risk and need scores are close to threshold</dt>
+								<dd class="govuk-summary-list__value">8</dd>
+							  </div>
+							  <div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Information missing from risks and needs assessment</dt>
+								<dd class="govuk-summary-list__value">5</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Follow-on programme</dt>
+								<dd class="govuk-summary-list__value">1</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Other</dt>
+								<dd class="govuk-summary-list__value">1</dd>
+							</div>
+						  </dl>
+					</div>
 				</div>
 			</div>
 		</div>
