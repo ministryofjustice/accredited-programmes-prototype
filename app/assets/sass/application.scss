@@ -142,6 +142,8 @@ $not-eligible-score-colour: #b1b4b6;
 $not-eligible-score-border-colour: #b1b4b6;
 $info-missing-score-colour: #1d70b8;
 $info-missing-score-border-colour: #1d70b8;
+$unknown-score-colour: #0b0c0c;
+$unknown-score-border-colour: #0b0c0c;
 
 .rosh-widget {
   border: 2px solid govuk-colour('black');
@@ -203,6 +205,14 @@ $info-missing-score-border-colour: #1d70b8;
 
   & h3 {
     color: $info-missing-score-colour;
+  }
+}
+
+.rosh-widget--unknown {
+  border: 2px solid $unknown-score-border-colour;
+
+  & h3 {
+    color: $unknown-score-colour;
   }
 }
 
@@ -336,7 +346,11 @@ $low-score-colour__text: #485b10;
 }
 
 .orange {
-  color: #a34e00
+  color: #a34e00;
+}
+
+.black {
+  color: #0b0c0c;
 }
 
 .red-figure {
