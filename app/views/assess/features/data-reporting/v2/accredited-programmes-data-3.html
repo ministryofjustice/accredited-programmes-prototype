@@ -683,46 +683,48 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
     </div>
     <div class="govuk-grid-column-full">
 		<div class="govuk-grid-row">
-			<div class="govuk-grid-column-full govuk-!-margin-top-7">
+			<div class="govuk-grid-column-one-quarter govuk-!-margin-top-7">
 				<div class="data-block">
 					<h3 class="govuk-heading-s">Number of overrides</h3>
 					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">22</span> in August 2024</p>
 				</div>
-			</div>
-			<div class="govuk-grid-column-two-thirds govuk-!-margin-top-7">
-				<table class="govuk-table">
-					<caption class="govuk-table__caption govuk-table__caption--m">Overrides by reason</caption>
-					<tbody class="govuk-table__body">
-						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">PNA gives a different recommendation</th>
-							<td class="govuk-table__cell">7</td>
-						</tr>
-						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Risk and need scores are close to threshold</th>
-							<td class="govuk-table__cell">8</td>
-						</tr>
-						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Information missing from risks and needs assessment</th>
-							<td class="govuk-table__cell">5</td>
-						</tr>
-						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Follow-on programme</th>
-							<td class="govuk-table__cell">1</td>
-						</tr>
-						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Other</th>
-							<td class="govuk-table__cell">1</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="govuk-grid-column-full govuk-!-margin-top-7">
 				<div class="data-block">
 					<h3 class="govuk-heading-s">Percentage of overrides</h3>
 					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">30%</span> in August 2024</p>
 				</div>
 			</div>
-    	</div>
-	</div>
+			<div class="govuk-grid-column-three-quarters govuk-!-margin-top-7">
+				<div class="govuk-summary-card">
+					<div class="govuk-summary-card__title-wrapper">
+						  <h2 class="govuk-summary-card__title">Overrides by reason</h2>
+					</div>
+					<div class="govuk-summary-card__content">
+						  <dl class="govuk-summary-list">
+							<div class="govuk-summary-list__row">
+								  <dt class="govuk-summary-list__key">PNA gives a different recommendation</dt>
+								  <dd class="govuk-summary-list__value">7</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Risk and need scores are close to threshold</dt>
+								<dd class="govuk-summary-list__value">8</dd>
+							  </div>
+							  <div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Information missing from risks and needs assessment</dt>
+								<dd class="govuk-summary-list__value">5</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Follow-on programme</dt>
+								<dd class="govuk-summary-list__value">1</dd>
+							</div>
+							<div class="govuk-summary-list__row">
+								<dt class="govuk-summary-list__key">Other</dt>
+								<dd class="govuk-summary-list__value">1</dd>
+							</div>
+						  </dl>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>
 {% endblock %}
