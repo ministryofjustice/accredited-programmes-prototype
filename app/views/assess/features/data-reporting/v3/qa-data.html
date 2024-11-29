@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Programme overrides - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav-assess.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<!-- <div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Programme overrides</h1>
+		<p class="govuk-body">Overrides happen when someone starts a programme that doesn't match the pathway recommended by their risk and needs scores.</p>
+    </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-8">
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<div class="data-block govuk-!-margin-bottom-7">
+			<h3 class="govuk-heading-s">Number of overrides</h3>
+			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">22</span> in August 2024</p>
+		</div>
+		<div class="data-block">
+			<h3 class="govuk-heading-s">Percentage of overrides</h3>
+			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">30%</span> in August 2024</p>
+		</div>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<h3 class="govuk-heading-s">Number of overrides by programme</h3>
+		<div class="faux-chart">
+			<img src="/public/images/qa-chart.png" alt="dummy image to be replaced with a real chart" width="100%" />
+		</div>
+	</div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-8"> -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<h1 class="govuk-heading-l">Override details</h1>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number
+				</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Recommended pathway</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Actual pathway</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Programme name</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="override-history" class="govuk-link govuk-link--no-visited-state">Del Hatton</a><br />D0168KE</td>
+					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Choices: high intensity</td>
+					<td class="govuk-table__cell">Erlestoke</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Harry Cane</a><br />A1979DZ</td>
+					<td class="govuk-table__cell">Not eligible</td>
+					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell">Whatton</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Tim Jones</a><br />A8610DY</td>
+					<td class="govuk-table__cell">Information missing</td>
+					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">Building Choices: high intensity</td>
+					<td class="govuk-table__cell">Whatton</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Danny Koch</a><br />A6184EA</td>
+					<td class="govuk-table__cell">Moderate</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Kaizen: sexual offence</td>
+					<td class="govuk-table__cell">Whatton</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+</div>
+
+
+
+{% endblock %}

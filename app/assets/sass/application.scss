@@ -858,3 +858,16 @@ $low-score-colour__text: #485b10;
 .moj-button-menu__toggle-button--secondary[aria-expanded=true]:hover:after {
   background-image: url(../images/icon-arrow-black-up.svg);
 }
+
+.data-card {
+  background-color: #f3f2f1;
+  padding: 20px;
+  border-top: 2px dotted #b1b4b6;
+}
+
+
+.svg-chart img {
+  margin: 0 auto;
+  text-align: center !important;
+  display: block;
+}

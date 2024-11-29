@@ -1,0 +1,581 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav-assess.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-1">Accredited Programmes data</h1>
+		<p class="govuk-body govuk-!-font-size-24 govuk-!-margin-bottom-8">Showing data from last month (1 to 31 August 2024)</p>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+		<div class="moj-filter">
+			<div class="moj-filter__header">
+			  	<div class="moj-filter__header-title">
+					<h2 class="govuk-heading-m">Filters</h2>
+				</div>
+			</div>
+		</div>
+		<div class="moj-filter__content">
+			<div class="moj-filter__options">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Reporting period</h1>
+						</legend>
+					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+						  		<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month" checked>
+						  		<label class="govuk-label govuk-radios__label" for="reportingPeriod">last month</label>
+							</div>
+							<div class="govuk-radios__item">
+						  		<input class="govuk-radios__input" id="reportingPeriod-2" name="reportingPeriod" type="radio" value="last quarter">
+						  		<label class="govuk-label govuk-radios__label" for="reportingPeriod-2">last quarter</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="reportingPeriod-3" name="reportingPeriod" type="radio" value="last 6 months">
+								<label class="govuk-label govuk-radios__label" for="reportingPeriod-3">last 6 months</label>
+						  	</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="reportingPeriod-4" name="reportingPeriod" type="radio" value="last year">
+								<label class="govuk-label govuk-radios__label" for="reportingPeriod-4">last year</label>
+						  	</div>
+							<div class="govuk-radios__divider">or</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="reportingPeriod-5" name="reportingPeriod" type="radio" value="custom dates" data-aria-controls="conditional-reportingPeriod-5">
+								<label class="govuk-label govuk-radios__label" for="reportingPeriod-5">custom dates</label>
+							</div>
+						</div>
+					</fieldset>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reportingPeriod-5">
+						<div class="moj-datepicker govuk-!-margin-bottom-6" data-module="moj-date-picker">
+							<div class="govuk-form-group">
+							  	<label class="govuk-label govuk-label--s" for="date-from">Date from</label>
+							  	<div id="date-from-hint" class="govuk-hint">For example, 17/5/2024</div>
+							  	<input class="govuk-input moj-js-datepicker-input " id="date-from" name="date-from" type="text" aria-describedby="date-from-hint" autocomplete="off">
+							</div>
+						</div>
+						<div class="moj-datepicker" data-module="moj-date-picker">
+							<div class="govuk-form-group">
+							  	<label class="govuk-label govuk-label--s" for="date-to">Date to</label>
+							  	<div id="date-to-hint" class="govuk-hint">For example, 23/5/2024</div>
+							  	<input class="govuk-input moj-js-datepicker-input " id="date-to" name="date-to" type="text" aria-describedby="date-to-hint" autocomplete="off">
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Location</h1>
+						</legend>
+					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+						  		<input class="govuk-radios__input" id="location" name="location" type="radio" value="national data">
+						  		<label class="govuk-label govuk-radios__label" for="location">national data</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="location-2" name="location" type="radio" value="data by prison" data-aria-controls="conditional-location-2">
+								<label class="govuk-label govuk-radios__label" for="location-2">data by prison</label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-location-2">
+								<div class="scroll-content">
+									<div class="govuk-form-group govuk-!-margin-bottom-3 govuk-!-margin-right-4">
+										<label class="govuk-label govuk-label--s" for="search-prison">Search prison</label>
+										<input class="govuk-input" id="search-prison" name="searchPrison" type="text">
+									</div>
+									<div class="govuk-form-group">
+										<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName" name="prisonName" type="radio" value="Altcourse">
+												<label class="govuk-label govuk-radios__label" for="prisonName">Altcourse</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-2" name="prisonName" type="radio" value="Aylesbury">
+												<label class="govuk-label govuk-radios__label" for="prisonName-2">Aylesbury</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-3" name="prisonName" type="radio" value="Belmarsh">
+												<label class="govuk-label govuk-radios__label" for="prisonName-3">Belmarsh</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-4" name="prisonName" type="radio" value="Berwyn">
+												<label class="govuk-label govuk-radios__label" for="prisonName-4">Berwyn</label>
+											</div>
+
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-5" name="prisonName" type="radio" value="Birmingham">
+												<label class="govuk-label govuk-radios__label" for="prisonName-5">Birmingham</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-6" name="prisonName" type="radio" value="Brinsford">
+												<label class="govuk-label govuk-radios__label" for="prisonName-6">Brinsford</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-7" name="prisonName" type="radio" value="Buckley Hall">
+												<label class="govuk-label govuk-radios__label" for="prisonName-7">Buckley Hall</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-8" name="prisonName" type="radio" value="Bullingdon">
+												<label class="govuk-label govuk-radios__label" for="prisonName-8">Bullingdon</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-9" name="prisonName" type="radio" value="Channings Wood">
+												<label class="govuk-label govuk-radios__label" for="prisonName-9">Channings Wood</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-10" name="prisonName" type="radio" value="Dartmoor">
+												<label class="govuk-label govuk-radios__label" for="prisonName-10">Dartmoor</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-11" name="prisonName" type="radio" value="Deerbolt">
+												<label class="govuk-label govuk-radios__label" for="prisonName-11">Deerbolt</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-12" name="prisonName" type="radio" value="Doncaster">
+												<label class="govuk-label govuk-radios__label" for="prisonName-12">Doncaster</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-13" name="prisonName" type="radio" value="Dovegate">
+												<label class="govuk-label govuk-radios__label" for="prisonName-13">Dovegate</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-14" name="prisonName" type="radio" value="Downview">
+												<label class="govuk-label govuk-radios__label" for="prisonName-14">Downview</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-15" name="prisonName" type="radio" value="Drake Hall">
+												<label class="govuk-label govuk-radios__label" for="prisonName-15">Drake Hall</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-16" name="prisonName" type="radio" value="Elmley">
+												<label class="govuk-label govuk-radios__label" for="prisonName-16">Elmley</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-17" name="prisonName" type="radio" value="Erlestoke">
+												<label class="govuk-label govuk-radios__label" for="prisonName-17">Erlestoke</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-18" name="prisonName" type="radio" value="Featherstone">
+												<label class="govuk-label govuk-radios__label" for="prisonName-18">Featherstone</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-19" name="prisonName" type="radio" value="Feltham">
+												<label class="govuk-label govuk-radios__label" for="prisonName-19">Feltham</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-20" name="prisonName" type="radio" value="Five Wells">
+												<label class="govuk-label govuk-radios__label" for="prisonName-20">Five Wells</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-21" name="prisonName" type="radio" value="Fosse Way">
+												<label class="govuk-label govuk-radios__label" for="prisonName-21">Fosse Way</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-22" name="prisonName" type="radio" value="Forest Bank">
+												<label class="govuk-label govuk-radios__label" for="prisonName-22">Forest Bank</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-23" name="prisonName" type="radio" value="Foston Hall">
+												<label class="govuk-label govuk-radios__label" for="prisonName-23">Foston Hall</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-24" name="prisonName" type="radio" value="Garth">
+												<label class="govuk-label govuk-radios__label" for="prisonName-24">Garth</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-25" name="prisonName" type="radio" value="Gartree">
+												<label class="govuk-label govuk-radios__label" for="prisonName-25">Gartree</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-26" name="prisonName" type="radio" value="Guys Marsh">
+												<label class="govuk-label govuk-radios__label" for="prisonName-26">Guys Marsh</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-27" name="prisonName" type="radio" value="High Down">
+												<label class="govuk-label govuk-radios__label" for="prisonName-27">High Down</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-28" name="prisonName" type="radio" value="Highpoint">
+												<label class="govuk-label govuk-radios__label" for="prisonName-28">Highpoint</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-29" name="prisonName" type="radio" value="Hindley">
+												<label class="govuk-label govuk-radios__label" for="prisonName-29">Hindley</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-30" name="prisonName" type="radio" value="Holme House">
+												<label class="govuk-label govuk-radios__label" for="prisonName-30">Holme House</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-31" name="prisonName" type="radio" value="Humber">
+												<label class="govuk-label govuk-radios__label" for="prisonName-31">Humber</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-32" name="prisonName" type="radio" value="Isis">
+												<label class="govuk-label govuk-radios__label" for="prisonName-32">Isis</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-33" name="prisonName" type="radio" value="Lancaster Farms">
+												<label class="govuk-label govuk-radios__label" for="prisonName-33">Lancaster Farms</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-34" name="prisonName" type="radio" value="Lewes">
+												<label class="govuk-label govuk-radios__label" for="prisonName-34">Lewes</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-35" name="prisonName" type="radio" value="Lindholme">
+												<label class="govuk-label govuk-radios__label" for="prisonName-35">Lindholme</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-36" name="prisonName" type="radio" value="Liverpool">
+												<label class="govuk-label govuk-radios__label" for="prisonName-36">Liverpool</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-37" name="prisonName" type="radio" value="Long Lartin">
+												<label class="govuk-label govuk-radios__label" for="prisonName-37">Long Lartin</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-38" name="prisonName" type="radio" value="Low Newton">
+												<label class="govuk-label govuk-radios__label" for="prisonName-38">Low Newton</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-39" name="prisonName" type="radio" value="Lowdham Grange">
+												<label class="govuk-label govuk-radios__label" for="prisonName-39">Lowdham Grange</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-40" name="prisonName" type="radio" value="Manchester">
+												<label class="govuk-label govuk-radios__label" for="prisonName-40">Manchester</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-41" name="prisonName" type="radio" value="Moorland">
+												<label class="govuk-label govuk-radios__label" for="prisonName-41">Moorland</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-42" name="prisonName" type="radio" value="New Hall">
+												<label class="govuk-label govuk-radios__label" for="prisonName-42">New Hall</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-43" name="prisonName" type="radio" value="Northumberland">
+												<label class="govuk-label govuk-radios__label" for="prisonName-43">Northumberland</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-44" name="prisonName" type="radio" value="Oakwood">
+												<label class="govuk-label govuk-radios__label" for="prisonName-44">Oakwood</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-45" name="prisonName" type="radio" value="Onley">
+												<label class="govuk-label govuk-radios__label" for="prisonName-45">Onley</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-46" name="prisonName" type="radio" value="Parc">
+												<label class="govuk-label govuk-radios__label" for="prisonName-46">Parc</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-47" name="prisonName" type="radio" value="Peterborough">
+												<label class="govuk-label govuk-radios__label" for="prisonName-47">Peterborough</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-48" name="prisonName" type="radio" value="Portland">
+												<label class="govuk-label govuk-radios__label" for="prisonName-48">Portland</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-49" name="prisonName" type="radio" value="Ranby">
+												<label class="govuk-label govuk-radios__label" for="prisonName-49">Ranby</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-50" name="prisonName" type="radio" value="Risley">
+												<label class="govuk-label govuk-radios__label" for="prisonName-50">Risley</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-51" name="prisonName" type="radio" value="Rochester">
+												<label class="govuk-label govuk-radios__label" for="prisonName-51">Rochester</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-52" name="prisonName" type="radio" value="Stocken">
+												<label class="govuk-label govuk-radios__label" for="prisonName-52">Stocken</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-53" name="prisonName" type="radio" value="Stoke Heath">
+												<label class="govuk-label govuk-radios__label" for="prisonName-53">Stoke Heath</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-54" name="prisonName" type="radio" value="Styal">
+												<label class="govuk-label govuk-radios__label" for="prisonName-54">Styal</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-55" name="prisonName" type="radio" value="Swaleside">
+												<label class="govuk-label govuk-radios__label" for="prisonName-55">Swaleside</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-56" name="prisonName" type="radio" value="The Mount">
+												<label class="govuk-label govuk-radios__label" for="prisonName-56">The Mount</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-57" name="prisonName" type="radio" value="Wayland">
+												<label class="govuk-label govuk-radios__label" for="prisonName-57">Wayland</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-58" name="prisonName" type="radio" value="Wealstun">
+												<label class="govuk-label govuk-radios__label" for="prisonName-58">Wealstun</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-59" name="prisonName" type="radio" value="Woodhill">
+												<label class="govuk-label govuk-radios__label" for="prisonName-59">Woodhill</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="prisonName-60" name="prisonName" type="radio" value="Wymott">
+												<label class="govuk-label govuk-radios__label" for="prisonName-60">Wymott</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					  	</div>
+					</fieldset>
+				</div>
+				<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Programme</h1>
+					  	</legend>
+					  	<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+							<div class="scroll-content">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme" name="programme" type="radio" value="Becoming New Me Plus">
+									<label class="govuk-label govuk-radios__label" for="programme">Becoming New Me Plus</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-2" name="programme" type="radio" value="Building Better Relationships">
+									<label class="govuk-label govuk-radios__label" for="programme-2">Building Better Relationships</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-3" name="programme" type="radio" value="Building Choices">
+									<label class="govuk-label govuk-radios__label" for="programme-3">Building Choices</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-4" name="programme" type="radio" value="Control of Violence for Angry Impulsive Drinkers">
+									<label class="govuk-label govuk-radios__label" for="programme-4">Control of Violence for Angry Impulsive Drinkers</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-5" name="programme" type="radio" value="Healthy Identity Intervention">
+									<label class="govuk-label govuk-radios__label" for="programme-5">Healthy Identity Intervention</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-6" name="programme" type="radio" value="Healthy Sex Programme">
+									<label class="govuk-label govuk-radios__label" for="programme-6">Healthy Sex Programme</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-7" name="programme" type="radio" value="Horizon">
+									<label class="govuk-label govuk-radios__label" for="programme-7">Horizon</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-8" name="programme" type="radio" value="Identity Matters">
+									<label class="govuk-label govuk-radios__label" for="programme-8">Identity Matters</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-9" name="programme" type="radio" value="Kaizen">
+									<label class="govuk-label govuk-radios__label" for="programme-9">Kaizen</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-10" name="programme" type="radio" value="Living as New Me">
+									<label class="govuk-label govuk-radios__label" for="programme-10">Living as New Me</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-11" name="programme" type="radio" value="New Me MOT">
+									<label class="govuk-label govuk-radios__label" for="programme-11">New Me MOT</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-12" name="programme" type="radio" value="New Me Strengths">
+									<label class="govuk-label govuk-radios__label" for="programme-12">New Me Strengths</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="programme-13" name="programme" type="radio" value="Thinking Skills Programme">
+									<label class="govuk-label govuk-radios__label" for="programme-13">Thinking Skills Programme</label>
+								</div>
+							</div>
+					  	</div>
+					</fieldset>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-right-3">
+					<a href="#" class="govuk-button">Apply filters</a>
+				</div>
+			</div>
+		</div>
+	</div>	  
+    <div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Referral progress</h2>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Referrals submitted</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">520</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Awaiting assessment</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">33</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessment started</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">13</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">On hold</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">122</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as suitable</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">65</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as suitable but not ready</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">6</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Ineligible participants</h2>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Not eligible</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as not suitable</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Progress on programme</h2>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Started programme</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Completed programme</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Deselected</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Overrides</h2>
+		<p class="govuk-body">Overrides happen when someone starts a programme that doesn't match the pathway recommended by their risk and needs scores.</p>
+		<p class="govuk-body"><a href="qa-data" class="govuk-link">See details of overrides</a></p>
+		<div class="govuk-grid-row govuk-!-margin-top-8 govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Number of overrides</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">22</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-2">
+			<div class="govuk-grid-column-full">
+				<table class="govuk-table">
+					<caption class="govuk-table__caption govuk-table__caption--s govuk-!-margin-bottom-2">Overrides by reason</caption>
+					<tbody class="govuk-table__body">
+						<tr class="govuk-table__row">
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">PNA gives a different recommendation</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">7</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Risk and need scores are close to threshold</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">8</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Information missing from risks and needs assessment</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">5</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Follow-on programme</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">1</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Other</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Percentage of programmes started that are overrides</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">30%</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}
