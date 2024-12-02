@@ -23,104 +23,6 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 </div>
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<div class="filters-container-moj">
-			<h2 class="govuk-heading-m filters-heading">Filters</h2>
-			<div class="filter-options">
-				<!-- <div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<fieldset class="govuk-fieldset">
-						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-						  	<h1 class="govuk-fieldset__heading">Reporting period</h1>
-					  	</legend>
-						<div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-						  <div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="reportingPeriod" name="reportingPeriod" type="radio" value="last month" checked>
-								<label class="govuk-label govuk-radios__label" for="reportingPeriod">last month</label>
-						  </div>
-						  <div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="reportingPeriod-2" name="reportingPeriod" type="radio" value="last quarter">
-								<label class="govuk-label govuk-radios__label" for="reportingPeriod-2">last quarter</label>
-						  </div>
-						  <div class="govuk-radios__item">
-							  <input class="govuk-radios__input" id="reportingPeriod-3" name="reportingPeriod" type="radio" value="last 6 months">
-							  <label class="govuk-label govuk-radios__label" for="reportingPeriod-3">last 6 months</label>
-							</div>
-						  <div class="govuk-radios__item">
-							  <input class="govuk-radios__input" id="reportingPeriod-4" name="reportingPeriod" type="radio" value="last year">
-							  <label class="govuk-label govuk-radios__label" for="reportingPeriod-4">last year</label>
-							</div>
-						  <div class="govuk-radios__divider">or</div>
-						  	<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="reportingPeriod-5" name="reportingPeriod" type="radio" value="custom dates" data-aria-controls="conditional-reportingPeriod-5">
-								<label class="govuk-label govuk-radios__label" for="reportingPeriod-5">custom dates</label>
-						  	</div>
-					  	</div>
-				  	</fieldset>
-				  	<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reportingPeriod-5">
-					  	<div class="moj-datepicker govuk-!-margin-bottom-6" data-module="moj-date-picker">
-						  	<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="date-from">Date from</label>
-								<div id="date-from-hint" class="govuk-hint">For example, 17/5/2024</div>
-								<input class="govuk-input moj-js-datepicker-input " id="date-from" name="date-from" type="text" aria-describedby="date-from-hint" autocomplete="off">
-						  	</div>
-					  	</div>
-					  	<div class="moj-datepicker" data-module="moj-date-picker">
-						  	<div class="govuk-form-group">
-								<label class="govuk-label govuk-label--s" for="date-to">Date to</label>
-								<div id="date-to-hint" class="govuk-hint">For example, 23/5/2024</div>
-								<input class="govuk-input moj-js-datepicker-input " id="date-to" name="date-to" type="text" aria-describedby="date-to-hint" autocomplete="off">
-						  	</div>
-					  	</div>
-				  	</div>
-			  	</div> -->
-				  <div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="reporting-period">Reporting period</label>
-					<select class="govuk-select" id="reporting-period" name="reporting-period">
-						<option value="select" selected>Select</option>
-						<option value="last-month">last month</option>
-						<option value="last-quarter">last quarter</option>
-						<option value="last-6-months">last 6 months</option>
-						<option value="last-year">last year</option>
-						<option value="custom-dates">custom dates</option>
-					</select>
-				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="location">Location</label>
-					<select class="govuk-select" id="location" name="location">
-						<option value="select" selected>Select</option>
-						<option value="national-data">national data</option>
-						<option value="data-by-prison">data by prison</option>
-					</select>
-				</div>
-				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="programme">Programme</label>
-					<select class="govuk-select" id="programme" name="programme">
-						<option value="select" selected>Select</option>
-						<option value="becoming-new-me-plus">Becoming New Me Plus</option>
-						<option value="building-better-relationships">Building Better Relationships</option>
-						<option value="building-choices">Building Choices</option>
-						<option value="control-violence-angry-impulsive-drinkers">Control of Violence for Angry Impulsive Drinkers</option>
-						<option value="healthy-identity-intervention">Healthy Identity Intervention</option>
-						<option value="healthy-sex-programme">Healthy Sex Programme</option>
-						<option value="horizon">Horizon</option>
-						<option value="identity-matters">Identity Matters</option>
-						<option value="kaizen">Kaizen</option>
-						<option value="living-as-new-me">Living as New Me</option>
-						<option value="new-me-mot">New Me MOT</option>
-						<option value="new-me-strengths">New Me Strengths</option>
-						<option value="thinking-skills-programme">Thinking Skills Programme</option>
-					</select>
-				</div>
-				<div class="govuk-button-group govuk-!-margin-right-3 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
-					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
-					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
 		<div class="moj-filter">
 			<div class="moj-filter__header">
@@ -513,314 +415,167 @@ Accredited Programmes data - {{ serviceName }} - GOV.UK Prototype Kit
 					</fieldset>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-right-3">
-					<a href="accredited-programmes-data-bnm" class="govuk-button">Apply filters</a>
+					<a href="#" class="govuk-button">Apply filters</a>
 				</div>
 			</div>
 		</div>
 	</div>	  
     <div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Referral progress</h2>
 		<div class="govuk-grid-row govuk-!-margin-bottom-6">
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total referrals submitted</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">520</span> in August 2024</p>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Referrals submitted</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">520</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total programmes started</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">33</span> in August 2024</p>
-				</div>
-			</div>
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total programmes completed</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">13</span> in August 2024</p>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Awaiting assessment</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">33</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
 		</div>
 		<div class="govuk-grid-row govuk-!-margin-bottom-6">
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total referrals not eligible</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">122</span> in August 2024</p>
-				</div>
-			</div>
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total referrals withdrawn</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">65</span> in August 2024</p>
-				</div>
-			</div>
-			<div class="govuk-grid-column-one-third">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Total participants deselected</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">6</span> in August 2024</p>
-				</div>
-			</div>
-		</div>
-    </div>
-</div>
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-m govuk-!-margin-bottom-6">Referrals by programme</h2>
-    </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-		<table class="govuk-table">
-			<caption class="govuk-table__caption govuk-table__caption--m" style="display: none;">Table</caption>
-			<thead class="govuk-table__head">
-			  	<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header govuk-!-width-one-half">Header</th>
-					<th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Header</th>
-					<th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Header</th>
-			  	</tr>
-			</thead>
-			<tbody class="govuk-table__body">
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Header</th>
-					<td class="govuk-table__cell">Cell</td>
-					<td class="govuk-table__cell">Cell</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="govuk-grid-column-one-half">
-		<div class="govuk-grid-row">
 			<div class="govuk-grid-column-one-half">
-				<h3 class="govuk-heading-s">Percentage of referrals by programme</h3>
-				<div class="faux-chart">
-					<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessment started</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">13</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
 			<div class="govuk-grid-column-one-half">
-				<h3 class="govuk-heading-s">Prisons running Building Choices</h3>
-				<div class="faux-chart">
-					<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">On hold</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">122</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as suitable</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">65</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as suitable but not ready</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">6</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Ineligible participants</h2>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Not eligible</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Assessed as not suitable</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+		</div>
 
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-m govuk-!-margin-bottom-6">Referral progress</h2>
-    </div>
-</div>
-<div class="govuk-grid-row govuk-!-margin-bottom-6">
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Overall referral progress</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Progress on programme</h2>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Started programme</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Completed programme</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Referral progress by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Deselected</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">XXX</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of referrals on hold</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of referrals on hold by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-</div>
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Moving Forward conversations conducted</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-</div>
 
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-m govuk-!-margin-bottom-6">Ineligible referrals</h2>
-    </div>
-</div>
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Percentage of referrals not eligible</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of referrals not eligible by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Percentage of referrals not suitable</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of referrals not suitable by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-</div>
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-m govuk-!-margin-bottom-6">Programme completion</h2>
-    </div>
-</div>
-<div class="govuk-grid-row govuk-!-margin-bottom-6">
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Total programmes completed</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Completions by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Percentage of referrals withdrawn</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of referrals withdrawn by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-</div>
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-one-quarter">
-		<div class="data-block">
-			<h3 class="govuk-heading-s">Percentage of participants deselected</h3>
-			<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">XXX</span> in July 2024</p>
-			<p class="govuk-body-s grey">XX% decrease from June 2024</p>
-		</div>
-	</div>
-	<div class="govuk-grid-column-one-quarter">
-		<h3 class="govuk-heading-s">Percentage of participants deselected by programme</h3>
-		<div class="faux-chart">
-			<img src="/public/images/img-chart-sq.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-	</div>
-</div>
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<!-- <div class="govuk-grid-row govuk-!-margin-bottom-9">
-    <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-m govuk-!-margin-bottom-6">Programme pathway</h2>
-		<div class="faux-chart">
-			<img src="/public/images/img-tbc.svg" alt="dummy image to be replaced with a real chart" />
-		</div>
-    </div>
-</div> -->
-<div class="govuk-grid-row govuk-!-margin-bottom-9">
-	<div class="govuk-grid-column-two-thirds">
-		<h2 class="govuk-heading-m" id="programme-overrides">Programme overrides</h2>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible govuk-!-margin-bottom-7">
+		<h2 class="govuk-heading-m govuk-!-margin-bottom-4">Overrides</h2>
 		<p class="govuk-body">Overrides happen when someone starts a programme that doesn't match the pathway recommended by their risk and needs scores.</p>
 		<p class="govuk-body"><a href="qa-data" class="govuk-link">See details of overrides</a></p>
-    </div>
-    <div class="govuk-grid-column-full">
-		<div class="govuk-grid-row">
-			<div class="govuk-grid-column-full govuk-!-margin-top-7">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Number of overrides</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">22</span> in August 2024</p>
+		<div class="govuk-grid-row govuk-!-margin-top-8 govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Number of overrides</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">22</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
-			<div class="govuk-grid-column-two-thirds govuk-!-margin-top-7">
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-2">
+			<div class="govuk-grid-column-full">
 				<table class="govuk-table">
-					<caption class="govuk-table__caption govuk-table__caption--m">Overrides by reason</caption>
+					<caption class="govuk-table__caption govuk-table__caption--s govuk-!-margin-bottom-2">Overrides by reason</caption>
 					<tbody class="govuk-table__body">
 						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">PNA gives a different recommendation</th>
-							<td class="govuk-table__cell">7</td>
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">PNA gives a different recommendation</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">7</td>
 						</tr>
 						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Risk and need scores are close to threshold</th>
-							<td class="govuk-table__cell">8</td>
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Risk and need scores are close to threshold</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">8</td>
 						</tr>
 						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Information missing from risks and needs assessment</th>
-							<td class="govuk-table__cell">5</td>
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Information missing from risks and needs assessment</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">5</td>
 						</tr>
 						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Follow-on programme</th>
-							<td class="govuk-table__cell">1</td>
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Follow-on programme</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">1</td>
 						</tr>
 						<tr class="govuk-table__row">
-							<th scope="row" class="govuk-table__header">Other</th>
-							<td class="govuk-table__cell">1</td>
+							<th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Other</th>
+							<td class="govuk-table__cell govuk-!-font-weight-bold">1</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="govuk-grid-column-full govuk-!-margin-top-7">
-				<div class="data-block">
-					<h3 class="govuk-heading-s">Percentage of overrides</h3>
-					<p class="govuk-body"><span class="govuk-!-font-size-48 govuk-!-font-weight-bold">30%</span> in August 2024</p>
+		</div>
+		<div class="govuk-grid-row govuk-!-margin-bottom-6">
+			<div class="govuk-grid-column-one-half">
+				<div class="data-card">
+					<h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-2">Percentage of programmes started that are overrides</h3>
+					<p class="govuk-body govuk-!-margin-top-0 govuk-!-margin-bottom-1"><span class="govuk-!-font-size-36">30%</span></p>
+					<p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-0 govuk-!-margin-bottom-0 grey">In August 2024</p>
 				</div>
 			</div>
-    	</div>
-	</div>
+		</div>
+		
+
+
+
+
+
+
+    </div>
 </div>
 {% endblock %}
