@@ -1,0 +1,147 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
+			</div>
+			<form action="open-referrals" method="post">
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+						<a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+						<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
+						<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
+					</div>
+				</div>
+			</form>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="#">Status history</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-m">Status history</h2>
+		{% if data['withdrawal-reason-category'] %}
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Withdrawn</strong>
+					{% if data['withdrawal-reason-category'] %}
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['withdrawal-reason-category'] }}</p>
+					{% if data['add-withdrawal-reason'] %}
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> {{ data['add-withdrawal-reason'] }}</p>
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> Submitted in error</p>
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
+			  	</div>
+			</div> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% elseif data['add-hold-reason'] %}
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong>
+					{% if data['add-hold-reason'] %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-hold-reason'] }}</p>
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
+			  	</div>
+			</div> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% else %}
+		<div class="moj-timeline"> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% endif %}
+    </div>
+</div>
+{% endblock %}
