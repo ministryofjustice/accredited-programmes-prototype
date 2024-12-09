@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Del Hatton has other open referrals - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Del Hatton has other open referrals</h1>
+		<p class="govuk-body">These referrals already exist for Del Hatton.</p>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Strand</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Referrer</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Date referred</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Becoming New Me Plus</td>
+					<td class="govuk-table__cell">General violence</td>
+					<td class="govuk-table__cell">Lowdham Grange</td>
+					<td class="govuk-table__cell">Jo Smith</td>
+					<td class="govuk-table__cell">1 November 2024</td>
+					<td class="govuk-table__cell">Assessment started</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Becoming New Me Plus</td>
+					<td class="govuk-table__cell">Intimate partner violence</td>
+					<td class="govuk-table__cell">Lowdham Grange</td>
+					<td class="govuk-table__cell">Jo Smith</td>
+					<td class="govuk-table__cell">1 November 2024</td>
+					<td class="govuk-table__cell">Referral submitted</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="govuk-body">Do you want to continue?</p>
+		<div class="govuk-button-group govuk-!-margin-top-8">
+			<a class="govuk-button" href="task-list">Continue</a>
+			<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+		</div>
+		
+    </div>
+</div>
+
+{% endblock %}

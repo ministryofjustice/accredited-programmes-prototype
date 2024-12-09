@@ -91,10 +91,10 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="status-history">Status history</a>
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
@@ -107,94 +107,82 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 </div>
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h2 class="govuk-heading-m">Status history</h2>
-		{% if data['withdrawal-reason-category'] %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--red">Withdrawn</strong>
-					{% if data['withdrawal-reason-category'] %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['withdrawal-reason-category'] }}</p>
-					{% if data['add-withdrawal-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> {{ data['add-withdrawal-reason'] }}</p>
-					{% else %}
-					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					{% endif %}
-					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> Submitted in error</p>
-					<p class="govuk-body govuk-!-margin-top-0"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
-			  	</div>
-			</div> 
-		</div>
-		{% elseif data['add-hold-reason'] %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong>
-					{% if data['add-hold-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-hold-reason'] }}</p>
-					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
-			  	</div>
-			</div> 
-		</div>
-		{% else %}
-		<div class="moj-timeline"> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
-			  	</div>
-			</div> 
-		</div>
-		{% endif %}
+    <div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Becoming New Me Plus: sexual offence</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Programme strand</dt>
+					<dd class="govuk-summary-list__value">Sexual offence</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme location</dt>
+				<dd class="govuk-summary-list__value">Whatton (HMP)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme team email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">interventions.whatton@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Date referred</dt>
+			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Referrer name</dt>
+			  	<dd class="govuk-summary-list__value">Jordan Smith</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Referrer email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Referrer contact number</dt>
+				<dd class="govuk-summary-list__value">01380 814250</dd>
+			</div>
+		</dl>
     </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+	</div>
+</div> 
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="#">Personal details</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="#">Programme history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Additional information</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="#" aria-current="location">Other referrals</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<p class="govuk-body">Del Hatton has no other open referrals.</p>
+	</div>
 </div>
 {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Enter the person's identifier - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Enter the person's identifier</h1>
+		<p class="govuk-body">Enter the prison number. We'll import their details into your service.</p>
+		<form action="check-details" method="post">
+			<div class="govuk-form-group">
+				<!-- <label class="govuk-label govuk-label--m" for="person-identifier">Enter identifier</label> -->
+				<div id="person-identifier-hint" class="govuk-hint">For example, a prison number is D0168GH</div>
+				<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
