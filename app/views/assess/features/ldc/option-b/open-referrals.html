@@ -77,7 +77,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -166,11 +166,18 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Stocken (HMP)</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					
+					<td class="govuk-table__cell">Sexual offence
+						{% if data['add-ldc-flag'] %}
+						<br /><span class="moj-badge moj-badge--bright-purple">LDC</span>
+						{% else %}
+						<!-- Empty row -->
+						{% endif %}
+					</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
 				<tr class="govuk-table__row">
