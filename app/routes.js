@@ -312,3 +312,26 @@ router.post('/redirect-bc-high', function(request, response) {
 	  response.redirect("pni/find/8-building-choices/v1/building-choice-moderate-yes-no")
 	}
   })
+
+
+  router.post('/redirect-bc-moderate', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+	var moderate_hwp = request.session.data['moderate_hwp'];//
+  
+	if (moderate_hso === "yes" && moderate_hwp === "yes"){
+	  response.redirect("find/building-choices/building-choice-moderate-yes-yes") // Initial redirect
+  
+	}
+	else if (moderate_hso === "no" && moderate_hwp === "yes"){
+		response.redirect("find/building-choices/building-choice-moderate-no-yes") // Initial redirect
+	
+	  }
+	else if (moderate_hso === "no" && moderate_hwp === "no"){
+	  response.redirect("find/building-choices/building-choice-moderate-no-no") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("find/building-choices/building-choice-moderate-yes-no")
+	}
+  })
