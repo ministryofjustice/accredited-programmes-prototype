@@ -268,8 +268,8 @@ router.use('/', (req, res, next) => {
 	next();  
 });
 
-
-router.post('/redirect-bc-high', function(request, response) {
+/* Building Choices High (8 pathways) journey */
+router.post('/redirect-bc-high-pathways', function(request, response) {
 
 	var high_hso = request.session.data['high_hso'];//
 	var high_hwp = request.session.data['high_hwp'];//
@@ -291,7 +291,7 @@ router.post('/redirect-bc-high', function(request, response) {
 	}
   })
 
-  router.post('/redirect-bc-moderate', function(request, response) {
+router.post('/redirect-bc-moderate-pathways', function(request, response) {
 
 	var moderate_hso = request.session.data['moderate_hso'];//
 	var moderate_hwp = request.session.data['moderate_hwp'];//
@@ -313,8 +313,30 @@ router.post('/redirect-bc-high', function(request, response) {
 	}
   })
 
+/* Main FIND prototype journey */
+router.post('/redirect-bc-high', function(request, response) {
 
-  router.post('/redirect-bc-moderate', function(request, response) {
+	var high_hso = request.session.data['high_hso'];//
+	var high_hwp = request.session.data['high_hwp'];//
+  
+	if (high_hso === "yes" && high_hwp === "yes"){
+	  response.redirect("find/building-choices/building-choice-high-yes-yes") // Initial redirect
+  
+	}
+	else if (high_hso === "no" && high_hwp === "yes"){
+		response.redirect("find/building-choices/building-choice-high-no-yes") // Initial redirect
+	
+	  }
+	else if (high_hso === "no" && high_hwp === "no"){
+	  response.redirect("find/building-choices/building-choice-high-no-no") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("find/building-choices/building-choice-high-yes-no")
+	}
+})
+
+router.post('/redirect-bc-moderate', function(request, response) {
 
 	var moderate_hso = request.session.data['moderate_hso'];//
 	var moderate_hwp = request.session.data['moderate_hwp'];//
@@ -333,5 +355,50 @@ router.post('/redirect-bc-high', function(request, response) {
 	}
 	else {
 	  response.redirect("find/building-choices/building-choice-moderate-yes-no")
+	}
+})
+
+/* Version 2 - Branch A (Recommended programmes (Moderate to High intensity) */
+router.post('/redirect-bc-high-v2a', function(request, response) {
+
+	var high_hso = request.session.data['high_hso'];//
+	var high_hwp = request.session.data['high_hwp'];//
+  
+	if (high_hso === "yes" && high_hwp === "yes"){
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-high-yes-yes") // Initial redirect
+  
+	}
+	else if (high_hso === "no" && high_hwp === "yes"){
+		response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-high-no-yes") // Initial redirect
+	
+	  }
+	else if (high_hso === "no" && high_hwp === "no"){
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-high-no-no") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-high-yes-no")
+	}
+  })
+
+  router.post('/redirect-bc-moderate-v2a', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+	var moderate_hwp = request.session.data['moderate_hwp'];//
+  
+	if (moderate_hso === "yes" && moderate_hwp === "yes"){
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-moderate-yes-yes") // Initial redirect
+  
+	}
+	else if (moderate_hso === "no" && moderate_hwp === "yes"){
+		response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-moderate-no-yes") // Initial redirect
+	
+	  }
+	else if (moderate_hso === "no" && moderate_hwp === "no"){
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-moderate-no-no") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-moderate-yes-no")
 	}
   })

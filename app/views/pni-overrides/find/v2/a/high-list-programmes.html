@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
+Not recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,19 +18,12 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Recommended: high intensity Accredited Programmes</h1>
-		<p class="govuk-body">These programmes are recommended for people with high or very high risks and needs.</p>
-		<details class="govuk-details govuk-!-margin-bottom-7">
-			<summary class="govuk-details__summary">
-			  	<span class="govuk-details__summary-text">I need to refer to a different programme</span>
-			</summary>
-			<div class="govuk-details__text">
-				<p class="govuk-body">If you think the person needs a programme not listed here, you can see non-recommended programmes and request an override. You will need to give a reason for this before you submit the referral.</p>
-				<div class="govuk-button-group govuk-!-margin-top-4">
-					<a class="govuk-button govuk-button--secondary" href="not-high-acp-programmes">See moderate intensity programmes</a>
-				</div>
-			</div>
-		</details>
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Not recommended: high intensity Accredited Programmes</h1>
+		<p class="govuk-body">These programmes are not recommended for people with medium risks and needs, like Del Hatton.</p>
+		<p class="govuk-body">You can make a referral anyway and the treatment manager will decide whether an override is appropriate. You will need to give a reason before you submit the referral.</p>
+		<div class="govuk-button-group govuk-!-margin-top-4">
+			<a class="govuk-button govuk-button--secondary" href="list-programmes">See recommended programmes</a>
+		</div>
     </div>
 </div>
 
@@ -106,7 +99,7 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> 
 		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Becoming New Me Plus: sexual offence</a></h2>
-		<strong class="govuk-tag govuk-tag--orange">Sexual offence</strong>
+		<strong class="govuk-tag govuk-tag--red">Sexual offence</strong>
 		<p class="govuk-body govuk-!-margin-top-6">Becoming New Me Plus (BNM+) uses cognitive behavioural therapy. It is for men who are at high or very high risk of reoffending. This strand is for men convicted of a sexual offence.</p>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
@@ -139,7 +132,7 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 	  		</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> 
-		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="building-choices-high">Building Choices: high intensity</a></h2>
+		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="building-choices/about-person-high">Building Choices: high intensity</a></h2>
 		<p class="govuk-body govuk-!-margin-top-6">Building Choices helps people to develop skills for change and future-focused goals. It is a cognitive-behavioural programme, combining group and one-to-one sessions. It develops skills such as emotion management, healthy thinking, healthy relationships, sense of purpose and healthy sex. This is the high intensity pathway, including Getting Ready.</p>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
@@ -207,7 +200,29 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 	  		</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Kaizen: sexual offence</a></h2>
+		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Healthy Sex Programme</a></h2>
+		<strong class="govuk-tag govuk-tag--orange">Sexual offence</strong>
+		<p class="govuk-body govuk-!-margin-top-6">Healthy Sex Programme (HSP) is a follow-up programme for men who have completed Kaizen, Becoming New Me Plus, Horizon, or New Me Strengths. It uses cognitive behavioural therapy and is aimed at men convicted of a sexual offence, or an offence with a sexual element.</p>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Custody</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Male</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Risk criteria</dt>
+				<dd class="govuk-summary-list__value">Medium, high or very high OSP (OASys Sexual Reconviction Predictor)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Suitable for people with learning disabilities or challenges (LDC)</dt>
+			  	<dd class="govuk-summary-list__value">Yes</dd>
+			</div>
+		</dl>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Kaizen</a></h2>
 		<strong class="govuk-tag govuk-tag--orange">Sexual offence</strong>
 		<p class="govuk-body govuk-!-margin-top-6">Kaizen uses a unified approach, focusing on the needs of participants. It is inclusive and effective for a range of responsivity needs, including difficulties with engagement, therapeutic relationships and denial. This strand is for men convicted of a sexual offence.</p>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
@@ -234,58 +249,6 @@ Recommended: high intensity Accredited Programmes - {{ serviceName }} - GOV.UK P
 		  	<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Time to complete</dt>
 				<dd class="govuk-summary-list__value">At least 6 months</dd>
-	  		</div>
-		</dl>
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">Living as New Me</a></h2>
-		<strong class="govuk-tag govuk-tag--light-blue">All offences</strong>
-		<p class="govuk-body govuk-!-margin-top-6">Living as New Me (LNM) is a booster or maintenance programme for men who have completed New Me Strengths or Becoming New Me Plus and may need extra support. In a custody setting, it is for men convicted of any offence. In the community, it is for sexual offences only.</p>
-		<dl class="govuk-summary-list govuk-summary-list--no-border">
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody or community</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Risk criteria</dt>
-				<dd class="govuk-summary-list__value">Medium or above risk</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Suitable for people with learning disabilities or challenges (LDC)</dt>
-			  	<dd class="govuk-summary-list__value">Yes</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Time to complete</dt>
-				<dd class="govuk-summary-list__value">Rolling programme with at least 5 sessions, often more</dd>
-	  		</div>
-		</dl>
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<h2 class="govuk-heading-m"><a class="govuk-link govuk-link--no-visited-state" href="#">New Me MOT</a></h2>
-		<strong class="govuk-tag govuk-tag--light-blue">All offences</strong>
-		<p class="govuk-body govuk-!-margin-top-6">New Me MOT (NMMOT) is not an Accredited Programme, but is for men who have already completed Becoming New Me Plus, Kaizen, Healthy Sex Programme, Horizon, iHorizon, New Me Strengths, the Cognitive Self-Change Programme or the Self-Change Programme. It offers support throughout a person's sentence, set out as a series of short exercises. These are completed with support from the perso's Prison Offender Manager in custody or their Probation Practitioner in the community. This gives them the chance to practise skills in different contexts, generalising and maintaining their learning from the Accredited Programme.</p>
-		<dl class="govuk-summary-list govuk-summary-list--no-border">
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody or community</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Gender</dt>
-				<dd class="govuk-summary-list__value">Male</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Risk criteria</dt>
-				<dd class="govuk-summary-list__value">All risk scores</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Suitable for people with learning disabilities or challenges (LDC)</dt>
-			  	<dd class="govuk-summary-list__value">Yes</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Time to complete</dt>
-				<dd class="govuk-summary-list__value">Number of sessions is at the discretion of the practitioner and depends on the risk, need and responsivity profile of the individual. Has a 30-day Rehabilitation Activity Requirement (RAR) in the community.</dd>
 	  		</div>
 		</dl>
 		<nav class="govuk-pagination govuk-!-margin-top-9" role="navigation" aria-label="results">
