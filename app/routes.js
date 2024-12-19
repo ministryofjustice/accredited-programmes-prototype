@@ -370,7 +370,7 @@ router.post('/redirect-bc-high-v2a', function(request, response) {
 	else {
 	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-high-no")
 	}
-  })
+})
 
   router.post('/redirect-bc-moderate-v2a', function(request, response) {
 
@@ -383,4 +383,31 @@ router.post('/redirect-bc-high-v2a', function(request, response) {
 	else {
 	  response.redirect("pni-overrides/find/v2/a/building-choices/building-choice-moderate-no")
 	}
-  })
+})
+
+/* Version 2 - Branch B (Recommended programmes (High to Moderate intensity) */
+router.post('/redirect-bc-high-v2b', function(request, response) {
+
+	var high_hso = request.session.data['high_hso'];//
+  
+	if (high_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/b/building-choices/building-choice-high-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/b/building-choices/building-choice-high-no")
+	}
+})
+
+  router.post('/redirect-bc-moderate-v2b', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+  
+	if (moderate_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/b/building-choices/building-choice-moderate-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/b/building-choices/building-choice-moderate-no")
+	}
+})
