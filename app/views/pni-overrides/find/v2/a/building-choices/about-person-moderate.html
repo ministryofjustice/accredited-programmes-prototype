@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
+Has Del Hatton been convicted of a sexual offence? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,14 +18,12 @@ About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">About the person you're referring</h1>
-		<p class="govuk-body">Not all prisons can offer programmes to all prisoners. To see a list of suitable locations, tell us more about the person you're referring.</p>
+		<h1 class="govuk-heading-l">Has Del Hatton been convicted of a sexual offence?</h1>
 		<form action="/redirect-bc-moderate-v2a" method="post">
-
 			<div class="govuk-form-group govuk-!-margin-top-6">
 				<fieldset class="govuk-fieldset">
-				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Have they been convicted of a sexual offence?</legend>
-				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+				  	<legend class="govuk-fieldset__legend">Not all prisons can offer programmes to all people. To see a list of suitable locations, tell us whether the person you're referring has been convicted of a sexual offence.</legend>
+				  		<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
 							<div class="govuk-radios__item">
 					  			<input class="govuk-radios__input" id="moderate_hso" name="moderate_hso" type="radio" value="yes" {{ checked("moderate_hso", "yes") }}>
 					  			<label class="govuk-label govuk-radios__label" for="moderate_hso">Yes</label>
@@ -37,22 +35,6 @@ About the person you're referring - {{ serviceName }} - GOV.UK Prototype Kit
 				  		</div>
 				</fieldset>
 			</div>
-			<div class="govuk-form-group govuk-!-margin-top-6">
-				<fieldset class="govuk-fieldset">
-				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are they in a women's prison?</legend>
-				  		<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="moderate_hwp" name="moderate_hwp" type="radio" value="yes" {{ checked("moderate_hwp", "yes") }}>
-					  			<label class="govuk-label govuk-radios__label" for="moderate_hwp">Yes</label>
-							</div>
-							<div class="govuk-radios__item">
-					  			<input class="govuk-radios__input" id="moderate_hwp-2" name="moderate_hwp" type="radio" value="no" {{ checked("moderate_hwp", "no") }}>
-					  			<label class="govuk-label govuk-radios__label" for="moderate_hwp-2">No</label>
-							</div>
-				  		</div>
-				</fieldset>
-			</div>
-
 			<div class="govuk-form-group">
 				<div class="govuk-button-group govuk-!-margin-top-6">
 					<button class="govuk-button" data-module="govuk-button">Continue</button>
