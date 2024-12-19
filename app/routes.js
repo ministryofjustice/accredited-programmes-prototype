@@ -372,7 +372,7 @@ router.post('/redirect-bc-high-v2a', function(request, response) {
 	}
 })
 
-  router.post('/redirect-bc-moderate-v2a', function(request, response) {
+router.post('/redirect-bc-moderate-v2a', function(request, response) {
 
 	var moderate_hso = request.session.data['moderate_hso'];//
   
@@ -399,7 +399,7 @@ router.post('/redirect-bc-high-v2b', function(request, response) {
 	}
 })
 
-  router.post('/redirect-bc-moderate-v2b', function(request, response) {
+router.post('/redirect-bc-moderate-v2b', function(request, response) {
 
 	var moderate_hso = request.session.data['moderate_hso'];//
   
@@ -409,5 +409,86 @@ router.post('/redirect-bc-high-v2b', function(request, response) {
 	}
 	else {
 	  response.redirect("pni-overrides/find/v2/b/building-choices/building-choice-moderate-no")
+	}
+})
+
+/* Version 2 - Branch C (Recommended programmes (Not eligible) */
+router.post('/redirect-bc-high-v2c', function(request, response) {
+
+	var high_hso = request.session.data['high_hso'];//
+  
+	if (high_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/c/building-choices/building-choice-high-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/c/building-choices/building-choice-high-no")
+	}
+})
+
+router.post('/redirect-bc-moderate-v2c', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+  
+	if (moderate_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/c/building-choices/building-choice-moderate-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/c/building-choices/building-choice-moderate-no")
+	}
+})
+
+/* Version 2 - Branch D (Recommended programmes (All information missing) */
+router.post('/redirect-bc-high-v2d', function(request, response) {
+
+	var high_hso = request.session.data['high_hso'];//
+  
+	if (high_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/d/building-choices/building-choice-high-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/d/building-choices/building-choice-high-no")
+	}
+})
+
+router.post('/redirect-bc-moderate-v2d', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+  
+	if (moderate_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/d/building-choices/building-choice-moderate-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/d/building-choices/building-choice-moderate-no")
+	}
+})
+
+/* Version 2 - Branch E (Recommended programmes (Some information missing) */
+router.post('/redirect-bc-high-v2e', function(request, response) {
+
+	var high_hso = request.session.data['high_hso'];//
+  
+	if (high_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/e/building-choices/building-choice-high-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/e/building-choices/building-choice-high-no")
+	}
+})
+
+router.post('/redirect-bc-moderate-v2e', function(request, response) {
+
+	var moderate_hso = request.session.data['moderate_hso'];//
+  
+	if (moderate_hso === "yes"){
+	  response.redirect("pni-overrides/find/v2/e/building-choices/building-choice-moderate-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("pni-overrides/find/v2/e/building-choices/building-choice-moderate-no")
 	}
 })
