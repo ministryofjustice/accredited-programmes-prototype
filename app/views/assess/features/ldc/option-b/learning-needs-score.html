@@ -1,10 +1,7 @@
-{%- from "govuk/components/button/macro.njk" import govukButton %}
-{%- from "moj/components/button-menu/macro.njk" import mojButtonMenu -%}
-
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -94,10 +91,10 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
@@ -107,116 +104,109 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				</li>
 			</ul>
 		</nav>
-	</div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
-		<h2 class="govuk-heading-m">Referral summary</h2>
-		<dl class="govuk-summary-list govuk-summary-list--no-border">
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Applicant name</dt>
-				<dd class="govuk-summary-list__value">Sham Booth</dd>
-		  	</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Building Choices: high - general offence</dd>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Risks and needs</h2>
+				<p class="govuk-body govuk-!-margin-bottom-0">Relevant sections from OASys to support the referral. The full Layer 3 assessment is available in OASys. Information is accurate at the time of the referral being submitted.</p>
 			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">General offence</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme location</dt>
-				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme team email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
-			</div>
-		</dl>
-		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Date referred</dt>
-			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Referrer name</dt>
-			  	<dd class="govuk-summary-list__value">Jordan Smith</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Referrer email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
-			</div>
-		</dl>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     </div>
 </div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-	</div>
-</div> 
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="personal-details" aria-current="location">Personal details</a>
+				<li class="moj-side-navigation__item">
+					<a href="risks-needs">Risks and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="offence-analysis">Section 2 - Offence analysis</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="ete">Section 4 - Education, training and employment</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
-					<a href="programme-history">Programme history</a>
+					<a href="relationships">Section 6 - Relationships</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="offence-history">Offence history</a>
+					<a href="lifestyle-associates">Section 7 - Lifestyle and associates</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="sentence-information">Sentence information</a>
+					<a href="drug-misuse">Section 8 - Drug misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="additional-information">Additional information</a>
+					<a href="alcohol-misuse">Section 9 - Alcohol misuse</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="emotional-wellbeing">Section 10 - Emotional wellbeing</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="thinking-behaving">Section 11 - Thinking and behaving</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="attitudes">Section 12 - Attitudes</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="health">Section 13 - Health</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="learning-needs-score" aria-current="location">Learning needs score</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="rosh-analysis">Section R6 - ROSH analysis</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from Nomis on 1 August 2023, last updated on 4 January 2023</div>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Personal details</h2>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">Sham Booth</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Prison number</dt>
-							<dd class="govuk-summary-list__value">B6789KL</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date of birth</dt>
-							<dd class="govuk-summary-list__value">21 February 1977 (47 years, 1 months old)</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Ethnicity</dt>
-							<dd class="govuk-summary-list__value">White</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Gender</dt>
-							<dd class="govuk-summary-list__value">Male</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">Custody</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Current prison</dt>
-							<dd class="govuk-summary-list__value">Frankland (HMP)</dd>
-						</div>
-					</dl>
-				</div>
-		 	</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Assessment completed 1 August 2023</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Learning needs information</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">3.3 - Currently of no fixed abode or in transient accommodation</dt>
+						<dd class="govuk-summary-list__value">0 - No problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.4 - Work related skills</dt>
+						<dd class="govuk-summary-list__value">1 - Some problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.7 - Has problems with reading, writing or numeracy</dt>
+						<dd class="govuk-summary-list__value">2 - Significant problems
+							Reading, Writing</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.8 - Has learning difficulties (optional)</dt>
+						<dd class="govuk-summary-list__value">2 - Significant problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.9 - Educational or formal professional / vocational qualifications (optional) </dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Learning needs score</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Calculated score</dt>
+						<dd class="govuk-summary-list__value">2<br /><br />This individual may have a learning disability and/or learning challenges. Further assessment may be needed to determine the support required.</dd>
+					</div>
+				</dl>
+			</div>
 		</div>
 	</div>
 </div>
+
 {% endblock %}

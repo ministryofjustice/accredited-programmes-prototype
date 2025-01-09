@@ -1,10 +1,7 @@
-{%- from "govuk/components/button/macro.njk" import govukButton %}
-{%- from "moj/components/button-menu/macro.njk" import mojButtonMenu -%}
-
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -39,9 +36,9 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-			  	<li class="moj-sub-navigation__item">
+				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
-				</li>
+			    </li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
@@ -64,13 +61,13 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				<dd class="govuk-summary-list__value">Del Hatton</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Sexual offence</dd>
-			</div>
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme strand</dt>
+				<dd class="govuk-summary-list__value">Sexual offence</dd>
+		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
 				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
@@ -93,6 +90,10 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Referrer contact number</dt>
+				<dd class="govuk-summary-list__value">01380 814250</dd>
+			</div>
 		</dl>
     </div>
 </div>
@@ -105,63 +106,91 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="personal-details" aria-current="location">Personal details</a>
-		  		</li>
-		  		<li class="moj-side-navigation__item">
-					<a href="programme-history">Programme history</a>
-		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="offence-history">Offence history</a>
-		  		</li>
+					<a href="personal-details">Personal details</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="programme-history">Programme history</a>
+				</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="offence-history" aria-current="location">Offence history</a>
+				</li>
 				<li class="moj-side-navigation__item">
 					<a href="sentence-information">Sentence information</a>
-		  		</li>
+				</li>
 				<li class="moj-side-navigation__item">
 					<a href="additional-information">Additional information</a>
-		  		</li>
+				</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from Nomis on 1 August 2023, last updated on 4 January 2023</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 1 November 2022</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Personal details</h2>
+					<h2 class="govuk-summary-card__title">Index offence</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">Del Hatton</dd>
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Publishing or causing to be published a tobacco advertisement - 09144</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Prison number</dt>
-							<dd class="govuk-summary-list__value">D0168KE</dd>
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Public Health Offences</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date of birth</dt>
-							<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Ethnicity</dt>
-							<dd class="govuk-summary-list__value">White and Black African</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Gender</dt>
-							<dd class="govuk-summary-list__value">Male</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">Custody</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Current prison</dt>
-							<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">11 June 2020</dd>
 						</div>
 					</dl>
 				</div>
-		 	</div>
+			</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+					<h2 class="govuk-summary-card__title">Additional offence (08000)</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody - 08000</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">18 January 2013</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+					<h2 class="govuk-summary-card__title">Additional offence (08000)</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Class unspecified - permitting premises to be used - 09329</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Permitting premises to be used for unlawful (drug-related) purposes</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">23 September 2000</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

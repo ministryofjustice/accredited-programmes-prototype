@@ -1,10 +1,7 @@
-{%- from "govuk/components/button/macro.njk" import govukButton %}
-{%- from "moj/components/button-menu/macro.njk" import mojButtonMenu -%}
-
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -39,9 +36,9 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
-				</li>
+				<li class="moj-sub-navigation__item">
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+			 	</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
@@ -51,7 +48,7 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 				</li>
-			</ul>
+		  	</ul>
 		</nav>
 	</div>
 </div>
@@ -64,12 +61,12 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				<dd class="govuk-summary-list__value">Del Hatton</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme name</dt>
-			  	<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Sexual offence</dd>
+					<dt class="govuk-summary-list__key">Programme strand</dt>
+					<dd class="govuk-summary-list__value">Sexual offence</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
@@ -93,6 +90,10 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Referrer contact number</dt>
+				<dd class="govuk-summary-list__value">01380 814250</dd>
+			</div>
 		</dl>
     </div>
 </div>
@@ -105,11 +106,11 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="personal-details" aria-current="location">Personal details</a>
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
 		  		</li>
-		  		<li class="moj-side-navigation__item">
-					<a href="programme-history">Programme history</a>
+		  		<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="programme-history" aria-current="location">Programme history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="offence-history">Offence history</a>
@@ -124,45 +125,38 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from Nomis on 1 August 2023, last updated on 4 January 2023</div>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Personal details</h2>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">Del Hatton</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Prison number</dt>
-							<dd class="govuk-summary-list__value">D0168KE</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date of birth</dt>
-							<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Ethnicity</dt>
-							<dd class="govuk-summary-list__value">White and Black African</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Gender</dt>
-							<dd class="govuk-summary-list__value">Male</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">Custody</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Current prison</dt>
-							<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
-						</div>
-					</dl>
-				</div>
-		 	</div>
-		</div>
+		<p>This is a list of programmes that Del Hatton has started or completed.</p>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Outcome</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Notes</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Kaizen</td>
+					<td class="govuk-table__cell">Whatton</td>
+					<td class="govuk-table__cell">Completed 2024</td>
+					<td class="govuk-table__cell">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Creating better relationships</td>
+					<td class="govuk-table__cell">Community</td>
+					<td class="govuk-table__cell">Not known</td>
+					<td class="govuk-table__cell">Not known</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">New Me MOT</td>
+					<td class="govuk-table__cell">Whatton</td>
+					<td class="govuk-table__cell">Completed 1993</td>
+					<td class="govuk-table__cell">Not known</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
+
 {% endblock %}
