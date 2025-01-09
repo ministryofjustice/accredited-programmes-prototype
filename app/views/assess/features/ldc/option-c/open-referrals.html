@@ -6,7 +6,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block header %}
 	<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-	<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]><!-->
     <link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
     <!--<![endif]-->
     {% for stylesheetUrl in extensionConfig.stylesheets %}
@@ -72,6 +72,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
       	</div>
     </div>
 </div>
+    
 {% endblock %}
 
 {% block beforeContent %}
@@ -90,7 +91,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-notification-banner__content">
 				<h3 class="govuk-notification-banner__heading">LDC status changed</h3>
-				<p class="govuk-body">Update: Sham Booth may need an LDC-adapted programme</p>
+				<p class="govuk-body">Update: Del Hatton may need an LDC-adapted programme</p>
 			</div>
 		</div>
 	</div>
@@ -184,25 +185,26 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
 					<td class="govuk-table__cell">Erlestoke (HMP)</td>
 					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Sexual offence</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
-			  	</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Booth, Sham</a><br />B6789KL</td>
-					<td class="govuk-table__cell">Frankland (HMP)</td>
-					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
-					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">General offence
+					
+					<td class="govuk-table__cell">Sexual offence
 						{% if data['add-ldc-flag'] %}
 						<br /><span class="moj-badge moj-badge--bright-purple">LDC</span>
 						{% else %}
 						<!-- Empty row -->
 						{% endif %}
 					</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
+			  	</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B6789KL</td>
+					<td class="govuk-table__cell">Frankland (HMP)</td>
+					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
+					<td class="govuk-table__cell">Indeterminate</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
