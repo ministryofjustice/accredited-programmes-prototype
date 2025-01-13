@@ -114,6 +114,25 @@ router.post('/pni-overrides/assess/v2/a/update-status', function (req, res) {
 	  	}
  	});
 
+router.post('/pni-overrides/assess/v3/a/update-status', function (req, res) {
+	const assessedSuitable = req.session.data['assessed-suitable']
+		if (assessedSuitable == 'On hold – assessment not completed') {
+			res.redirect('on-hold-assessment')
+		} 
+		else if (assessedSuitable == 'Assessed as suitable and ready to continue') {
+			res.redirect('suitable-ready-continue')
+		}
+		else if (assessedSuitable == 'Assessed as suitable but not ready') {
+			res.redirect('suitable-not-ready')
+		}
+		else if (assessedSuitable == 'Not suitable') {
+			res.redirect('not-suitable')
+		}
+		else {
+			res.redirect('withdrawal-reason')
+		}
+	});
+
 router.get('/refer/withdrawal-category', function (req, res) {
 	res.render('/refer/withdrawal-category')
 	});
