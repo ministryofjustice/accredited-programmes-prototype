@@ -37,41 +37,104 @@ Assessed as suitable - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</div>
 			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Reason why the referral does not match the PNI</h2>
+			<p class="govuk-body">This referral does not match the recommended programme pathway based on the risk and programme needs identifier (PNI) scores.</p>
 
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Reason for override</h2>
-			<p class="govuk-body">This referral overrides the recommended programme pathway based on risk and programme needs identifier (PNI) scores. You must give a reason for this decision.</p>
-			<div class="govuk-radios" data-module="govuk-radios">
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override" name="reasons-override" type="radio" value="The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI)" {{ checked("reasons-override", "The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI)") }}>
-					<label class="govuk-label govuk-radios__label" for="reasons-override">The programme needs assessment (PNA) gives a different recommendation to the programme needs identifier (PNI).</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-2" name="reasons-override" type="radio" value="The risk and need scores are very close to the threshold" {{ checked("reasons-override", "The risk and need scores are very close to the threshold") }}>
-					<label class="govuk-label govuk-radios__label" for="reasons-override-2">The risk and need scores are very close to the threshold.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-3" name="reasons-override" type="radio" value="Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme" {{ checked("reasons-override", "Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme") }}>
-					<label class="govuk-label govuk-radios__label" for="reasons-override-3">Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-4" name="reasons-override" type="radio" value="The person has already completed a programme and this is an appropriate follow-on programme" {{ checked("reasons-override", "The person has already completed a programme and this is an appropriate follow-on programme") }}>
-					<label class="govuk-label govuk-radios__label" for="reasons-override-4">The person has already completed a programme and this is an appropriate follow-on programme.</label>
-				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="reasons-override-5" name="reasons-override" type="radio" value="Other" {{ checked("reasons-override", "Other") }}>
-					<label class="govuk-label govuk-radios__label" for="reasons-override-5">Other</label>
-				</div>
-			</div>
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Add details</h2>
-			<p class="govuk-body">Give your reasons for assessing this override as suitable.</p>
-			<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
-				<textarea class="govuk-textarea govuk-js-character-count" id="reason-override-suitable" name="reason-override-suitable" rows="12" aria-describedby="reason-override-suitable-info"></textarea>
-				<div id="reason-override-suitable-info" class="govuk-hint govuk-character-count__message">You can enter up to 500 characters</div>
-			</div>
 
-			<div class="govuk-button-group">
-				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
-				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+
+			<div class="govuk-form-group">
+				<div id="one-reason-hint" class="govuk-hint govuk-!-margin-top-7">Select one reason.</div>
+				<!-- Reasons relating to risk and need -->
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Reasons relating to risk and need</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-risk-need" name="reasons-override" type="radio" value="The risk and need scores are very close to the threshold." {{ checked("reasons-override", "The risk and need scores are very close to the threshold.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-risk-need">The risk and need scores are very close to the threshold.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-risk-need-2" name="reasons-override" type="radio" value="Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme." {{ checked("reasons-override", "Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-risk-need-2">Information is missing from the risk and need assessment but the risk and need scores do match the recommendations for the programme.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-risk-need-3" name="reasons-override" type="radio" value="The person is low risk but has been convicted of a sexual killing." {{ checked("reasons-override", "The person is low risk but has been convicted of a sexual killing.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-risk-need-3">The person is low risk but has been convicted of a sexual killing.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-risk-need-4" name="reasons-override" type="radio" value="The person is low risk but has been convicted of extremist offending, for example terrorism." {{ checked("reasons-override", "The person is low risk but has been convicted of extremist offending, for example terrorism.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-risk-need-4">The person is low risk but has been convicted of extremist offending, for example terrorism.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-risk-need-5" name="reasons-override" type="radio" value="The person's risk assessment suggests they are eligible." {{ checked("reasons-override", "The person's risk assessment suggests they are eligible.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-risk-need-5">The person's risk assessment suggests they are eligible.</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Behaviour reasons -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Behaviour reasons</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-behaviour" name="reasons-override" type="radio" value="The PNI suggests high intensity but the person's recent behaviour suggests they're suitable for moderate intensity." {{ checked("reasons-override", "The PNI suggests high intensity but the person's recent behaviour suggests they're suitable for moderate intensity.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-behaviour">The PNI suggests high intensity but the person's recent behaviour suggests they're suitable for moderate intensity.</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Eligibility is not based on the programme needs identifier (PNI) -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Eligibility is not based on the programme needs identifier (PNI)</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-eligibility" name="reasons-override" type="radio" value="The person has already completed a programme and this is an appropriate follow-on programme." {{ checked("reasons-override", "The person has already completed a programme and this is an appropriate follow-on programme.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-eligibility">The person has already completed a programme and this is an appropriate follow-on programme.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-eligibility-2" name="reasons-override" type="radio" value="The programme needs assessment (PNA) gives a different recommendation to the PNI." {{ checked("reasons-override", "The programme needs assessment (PNA) gives a different recommendation to the PNI.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-eligibility-2">The programme needs assessment (PNA) gives a different recommendation to the PNI.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-eligibility-3" name="reasons-override" type="radio" value="The person was assessed as suitable for a discontinued programme, for example Horizon, and now needs to move to Building Choices." {{ checked("reasons-override", "The person was assessed as suitable for a discontinued programme, for example Horizon, and now needs to move to Building Choices.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-eligibility-3">The person was assessed as suitable for a discontinued programme, for example Horizon, and now needs to move to Building Choices.</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-eligibility-4" name="reasons-override" type="radio" value="The person has an Indefinite Sentence for the Public Protection." {{ checked("reasons-override", "The person has an Indefinite Sentence for the Public Protection.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-eligibility-4">The person has an Indefinite Sentence for the Public Protection.</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Operational reasons -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Operational reasons</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reasons-override-operational" name="reasons-override" type="radio" value="There is not enough time to complete a high intensity programme so the person should complete a moderate intensity programme." {{ checked("reasons-override", "There is not enough time to complete a high intensity programme so the person should complete a moderate intensity programme.") }}>
+							<label class="govuk-label govuk-radios__label" for="reasons-override-operational">There is not enough time to complete a high intensity programme so the person should complete a moderate intensity programme.</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<h2 class="govuk-heading-m govuk-!-margin-top-7">Add details</h2>
+				<p class="govuk-body">Give your reasons for assessing this override as suitable.</p>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+					<textarea class="govuk-textarea govuk-js-character-count" id="reason-override-suitable" name="reason-override-suitable" rows="12" aria-describedby="reason-override-suitable-info"></textarea>
+					<div id="reason-override-suitable-info" class="govuk-hint govuk-character-count__message">You can enter up to 500 characters</div>
+				</div>
+
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+					<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+				</div>
 			</div>
 		</form>
 	</div>
