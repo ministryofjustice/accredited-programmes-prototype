@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add additional information</h1>
+		<p class="govuk-body">Add extra information to help the programme team assess this referral.</p>
+		<form action="#" method="post">
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Reason why the referral is not to a recommended programme</h2>
+			<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
+			<p class="govuk-body">You can make a referral anyway and the treatment manager will decide whether an override is appropriate. You must give a reason.</p>
+			<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+				<textarea class="govuk-textarea govuk-js-character-count" id="recommed-why-referral" name="recommed-why-referral" rows="12" aria-describedby="recommed-why-referral-info"></textarea>
+				<div id="recommed-why-referral-info" class="govuk-hint govuk-character-count__message">You can enter up to 200 characters</div>
+			</div>
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Additional information</h2>
+			<p class="govuk-body">Relevant scores and information from OASys will automatically be pulled through to the referral.</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>the reason for the referral</li>
+				<li>the person's motivation to complete the programme</li>
+			</ul>
+			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+				<div class="govuk-form-group">
+					<textarea class="govuk-textarea govuk-js-character-count" id="additional-information" name="additional-information" rows="20" aria-describedby="additional-information-info"></textarea>
+				</div>
+				<div id="additional-information-info" class="govuk-hint govuk-character-count__message">You have 5000 characters remaining</div>
+			</div> 
+			<div class="govuk-button-group govuk-!-margin-top-2">
+				<button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+				<a class="govuk-link" href="#">Cancel</a>
+			</div>
+		</form>
+    </div>
+</div>
+{% endblock %}
