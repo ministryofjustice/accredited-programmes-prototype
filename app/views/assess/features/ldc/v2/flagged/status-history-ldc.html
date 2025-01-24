@@ -55,7 +55,7 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
-		{% if data['add-ldc-flag'] %}
+		{% if data['no-ldc-adapted'] %}
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -67,8 +67,8 @@ Referral to Building Choices: high - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</p>
 			  	<div class="moj-timeline__description">
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Does not need an LDC-adapted programme</strong></p>
-					{% if data['add-ldc-flag'] %}
-					<p class="govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['add-ldc-flag'] }}</p>
+					{% if data['no-ldc-adapted'] %}
+					<p class="govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['no-ldc-adapted'] }}</p>
 					{% else %}
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> The Adaptive Functioning Checklist (AFCR) shows that they are not suitable for LDC programmes.</p>
 					{% endif %}

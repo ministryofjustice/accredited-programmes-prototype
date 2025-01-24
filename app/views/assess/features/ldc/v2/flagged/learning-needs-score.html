@@ -67,6 +67,9 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				<li class="moj-side-navigation__item">
 					<a href="risks-needs">Risks and alerts</a>
 		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="learning-needs-score" aria-current="location">Learning needs</a>
+		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="offence-analysis">Section 2 - Offence analysis</a>
 		  		</li>
@@ -82,8 +85,8 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				<li class="moj-side-navigation__item">
 					<a href="drug-misuse">Section 8 - Drug misuse</a>
 		  		</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="alcohol-misuse" aria-current="location">Section 9 - Alcohol misuse</a>
+				<li class="moj-side-navigation__item">
+					<a href="alcohol-misuse">Section 9 - Alcohol misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="emotional-wellbeing">Section 10 - Emotional wellbeing</a>
@@ -98,9 +101,6 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 					<a href="health">Section 13 - Health</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="learning-needs-score">Learning needs</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
 					<a href="rosh-analysis">Section R6 - ROSH analysis</a>
 		  		</li>
 			</ul>
@@ -110,26 +110,48 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="govuk-inset-text govuk-!-margin-top-0">Assessment completed 1 August 2023</div>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				  <h2 class="govuk-summary-card__title">9 - Alcohol misuse</h2>
+				  <h2 class="govuk-summary-card__title">Learning needs information</h2>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">9.1 - Is current use a problem?</dt>
-						<dd class="govuk-summary-list__value">0 - No problems<br /><br />Del has been sober for 2 years.</dd>
+						<dt class="govuk-summary-list__key">3.3 - Currently of no fixed abode or in transient accommodation</dt>
+						<dd class="govuk-summary-list__value">No</dd>
 					</div>
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">9.2 - Binge drinking or excessive alcohol use in the last 6 months</dt>
+						<dt class="govuk-summary-list__key">4.4 - Work related skills</dt>
 						<dd class="govuk-summary-list__value">0 - No problems</dd>
 					</div>
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">9.3 - Level of alcohol misuse in the past</dt>
-						<dd class="govuk-summary-list__value">1 - Some problems</dd>
+						<dt class="govuk-summary-list__key">4.7 - Has problems with reading, writing or numeracy</dt>
+						<dd class="govuk-summary-list__value">2 - Significant problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.8 - Has learning difficulties (optional)</dt>
+						<dd class="govuk-summary-list__value">0 - No problems</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">4.9 - Educational or formal professional / vocational qualifications (optional) </dt>
+						<dd class="govuk-summary-list__value">2 - No qualifications</dd>
 					</div>
 				</dl>
 			</div>
 		</div>
 
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Learning needs</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Calculated score</dt>
+						<dd class="govuk-summary-list__value">4</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
 	</div>
 </div>
+
 {% endblock %}

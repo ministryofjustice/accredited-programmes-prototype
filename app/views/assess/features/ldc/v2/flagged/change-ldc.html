@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update learning disabilities and challenges (LDC) - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}	
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="open-referrals" method="post">
+			<h1 class="govuk-heading-l">Update learning disabilities and challenges (LDC)</h1>
+			<p class="govuk-body">Del Hatton's current LDC status:</p>
+			<p class="govuk-body"><strong>May need an LDC-adapted programme</strong></p>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<h2 class="govuk-heading-m">Update status: Does not need an LDC-adapted programme</h2>
+			<p class="govuk-body">You must give a reason why Del Hatton does not need an LDC-adapted programme.</p>
+			<div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="no-ldc-adapted" name="no-ldc-adapted" type="radio" value="The Adaptive Functioning Checklist (AFCR) shows that they are not suitable for LDC programmes." {{ checked("no-ldc-adapted", "The Adaptive Functioning Checklist (AFCR) shows that they are not suitable for LDC programmes.") }}>
+					<label class="govuk-label govuk-radios__label" for="no-ldc-adapted">The Adaptive Functioning Checklist (AFCR) shows that they are not suitable for LDC programmes.</label>
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="no-ldc-adapted-2" name="no-ldc-adapted" type="radio" value="The learning screening tool scores have changed." {{ checked("no-ldc-adapted", "The learning screening tool scores have changed.") }}>
+					<label class="govuk-label govuk-radios__label" for="no-ldc-adapted-2">The learning screening tool scores have changed.</label>
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="no-ldc-adapted-3" name="no-ldc-adapted" type="radio" value="The what works for me interview found that they didn't need an LDC programme." {{ checked("no-ldc-adapted", "The what works for me interview found that they didn't need an LDC programme.") }}>
+					<label class="govuk-label govuk-radios__label" for="no-ldc-adapted-3">The what works for me interview found that they didn't need an LDC programme.</label>
+				</div>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
