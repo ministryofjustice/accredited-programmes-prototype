@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
+			</div>
+			<div class="moj-button-group moj-button-group--inline">
+				<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
+					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
+					<a href="no-results-location" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Move to Building Choices</a>		  
+				</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Referral details</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="status-history">Status history</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-m">Status history</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Jordan Smith</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+{% endblock %}
