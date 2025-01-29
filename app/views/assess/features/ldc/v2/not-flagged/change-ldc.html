@@ -79,18 +79,19 @@ Update learning disabilities and challenges (LDC) - {{ serviceName }} - GOV.UK P
 			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 			<h2 class="govuk-heading-m">Update status: May need an LDC-adapted programme</h2>
 			<p class="govuk-body">You must give a reason why Sham Booth may need an LDC-adapted programme.</p>
-			<div class="govuk-radios" data-module="govuk-radios">
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="add-ldc-flag" name="add-ldc-flag" type="radio" value="The Adaptive Functioning Checklist (AFCR) showed that they are suitable for LDC programmes." {{ checked("add-ldc-flag", "The Adaptive Functioning Checklist (AFCR) showed that they are suitable for LDC programmes.") }}>
-					<label class="govuk-label govuk-radios__label" for="add-ldc-flag">The Adaptive Functioning Checklist (AFCR) showed that they are suitable for LDC programmes.</label>
+			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
+			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="add-ldc-flag" name="add-ldc-flag" type="checkbox" value="The Adaptive Functioning Checklist (AFCR) suggested that they are suitable for LDC programmes." {{ checked("add-ldc-flag", "The Adaptive Functioning Checklist (AFCR) suggested that they are suitable for LDC programmes.") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="add-ldc-flag">The Adaptive Functioning Checklist (AFCR) suggested that they are suitable for LDC programmes.</label>
 				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="add-ldc-flag-2" name="add-ldc-flag" type="radio" value="The learning screening tool scores have changed." {{ checked("add-ldc-flag", "The learning screening tool scores have changed.") }}>
-					<label class="govuk-label govuk-radios__label" for="add-ldc-flag-2">The learning screening tool scores have changed.</label>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="add-ldc-flag-2" name="add-ldc-flag" type="checkbox" value="Their learning screening tool scores have changed." {{ checked("add-ldc-flag", "Their learning screening tool scores have changed.") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="add-ldc-flag-2">Their learning screening tool scores have changed.</label>
 				</div>
-				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="add-ldc-flag-3" name="add-ldc-flag" type="radio" value="The what works for me interview found that they were suitable for LDC programmes." {{ checked("add-ldc-flag", "The what works for me interview found that they were suitable for LDC programmes.") }}>
-					<label class="govuk-label govuk-radios__label" for="add-ldc-flag-3">The what works for me interview found that they were suitable for LDC programmes.</label>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="add-ldc-flag-3" name="add-ldc-flag" type="checkbox" value="The What works for me meeting found that they were suitable for LDC programmes." {{ checked("add-ldc-flag", "The What works for me meeting found that they were suitable for LDC programmes.") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="add-ldc-flag-3">The What works for me meeting found that they were suitable for LDC programmes.</label>
 				</div>
 			</div>
 			<div class="govuk-button-group govuk-!-margin-top-7">
