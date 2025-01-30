@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Duplicate referral found - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Duplicate referral found</h1>
+		<p class="govuk-body">A referral already exists for Del Hatton to Building Choices: high intensity at Erlestoke.</p>
+		<h2 class="govuk-heading-m">Duplicate referral summary</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Programme name</dt>
+			  	<dd class="govuk-summary-list__value">Building Choices: high intensity</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Programme strand</dt>
+			  	<dd class="govuk-summary-list__value">Intimate partner violence</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme location</dt>
+				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme team email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Date referred</dt>
+			  	<dd class="govuk-summary-list__value">5 January 2023</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Referrer name</dt>
+			  	<dd class="govuk-summary-list__value">Richard Clegg</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Referrer email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">richard.clegg@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+
+		<form action="#" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="show-referral-case-list" name="show-referral-case-list" type="checkbox" value="Show this referral in my case list">
+					  <label class="govuk-label govuk-checkboxes__label" for="show-referral-case-list">Show this referral in my case list</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="govuk-warning-text">
+				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+				<strong class="govuk-warning-text__text">
+					<span class="govuk-visually-hidden">Warning</span>You cannot move this referral while a duplicate referral is open.
+				</strong>
+			</div>
+			<div class="govuk-button-group">
+				<a class="govuk-button" href="/refer/withdrawal-reason">Withdraw referral to Building Choices: high intensity</a>
+				<a class="govuk-button govuk-button--secondary" href="/find/list-programmes">Return to programme list</a>
+			</div>
+		</form>	
+    </div>
+</div>
+
+{% endblock %}
