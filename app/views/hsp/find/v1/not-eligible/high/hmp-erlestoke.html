@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Building Choices: high intensity</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Erlestoke (HMP)</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Prison category</dt>
+				<dd class="govuk-summary-list__value">Category C </dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Address</dt>
+				<dd class="govuk-summary-list__value">Church Rd, Eastchurch, Sheerness, ME12 4DZ</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">County</dt>
+				<dd class="govuk-summary-list__value">Wiltshire</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Email address</dt>
+			  	<dd class="govuk-summary-list__value"><a href="mailto:interventions.erlestoke@justice.gov.uk" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<div class="govuk-!-margin-top-4">
+			<a class="govuk-button" href="start-now">Make a referral</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

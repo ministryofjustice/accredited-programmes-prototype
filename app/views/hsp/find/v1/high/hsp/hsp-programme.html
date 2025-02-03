@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Healthy Sex Programme: sexual offence</h1>
+		<strong class="govuk-tag govuk-tag--red">Sexual offence</strong>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Programme criteria</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Custody</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Male</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Risk criteria</dt>
+				<dd class="govuk-summary-list__value">Medium, high or very high OSP (OASys Sexual Reconviction Predictor)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Suitable for people with learning disabilities or challenges (LDC)</dt>
+			  	<dd class="govuk-summary-list__value">Yes</dd>
+			</div>
+		</dl>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Programme description</h2>
+		<p class="govuk-body govuk-!-margin-top-6">Healthy Sex Programme (HSP) is a follow-up programme for men who have completed Kaizen, Becoming New Me Plus, Horizon, or New Me Strengths. It uses cognitive behavioural therapy and is aimed at men convicted of a sexual offence, or an offence with a sexual element.</p>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Locations</h2>
+		<p class="govuk-body govuk-!-margin-top-6">To find out where Healthy Sex Programme runs and for more information, email the national psychology team: <a href="#" class="govuk-link govuk-link--no-visited-state">NationalHSP@justice.gov.uk</a></p>
+		<div class="govuk-!-margin-top-8">
+			<a class="govuk-button" href="convicted-sexual-offence">Make a referral</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}
