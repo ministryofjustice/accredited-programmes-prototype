@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Del Hatton is not eligible for Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Del Hatton is not eligible for Healthy Sex Programme</h1>
+		<p class="govuk-body">Based on the offence details, Del Hatton is not eligible for Healthy Sex Programme (HSP).</p>
+		<p class="govuk-body">Choose another programme. Or if you think this is incorrect, contact the national psychology team: <a href="#" class="govuk-link govuk-link--no-visited-state">NationalHSP@justice.gov.uk</a></p>
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="list-programmes">Return to programme list</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Sexual offence details</h1>
+		<p class="govuk-body">Do any of these statements apply to Del Hatton's sexual offences?</p>
+		<form action="/hsp/refer/start-now" method="post">
+			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
+			<p class="govuk-body">The offence involved:</p> 
+			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details" name="sexual_offence_details" type="checkbox" value="a victim aged 12 or younger" {{ checked("sexual_offence_details", "a victim aged 12 or younger") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details">a victim aged 12 or younger</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details-2" name="sexual_offence_details" type="checkbox" value="a boy victim aged 15 or younger" {{ checked("sexual_offence_details", "a boy victim aged 15 or younger") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-2">a boy victim aged 15 or younger</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details-3" name="sexual_offence_details" type="checkbox" value="more than one victim aged 15 or younger" {{ checked("sexual_offence_details", "more than one victim aged 15 or younger") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-3">more than one victim aged 15 or younger</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details-4" name="sexual_offence_details" type="checkbox" value="a victim outside the family aged 15 or younger" {{ checked("sexual_offence_details", "a victim outside the family aged 15 or younger") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-4">a victim outside the family aged 15 or younger</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details-5" name="sexual_offence_details" type="checkbox" value="possessing indecent images of under-18s" {{ checked("sexual_offence_details", "possessing indecent images of under-18s") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-5">possessing indecent images of under-18s</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-details-6" name="sexual_offence_details" type="checkbox" value="self-reported sexual attraction to under-18s" {{ checked("sexual_offence_details", "self-reported sexual attraction to under-18s") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-6">self-reported sexual attraction to under-18s</label>
+				</div>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}

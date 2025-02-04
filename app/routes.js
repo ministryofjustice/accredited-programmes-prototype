@@ -526,3 +526,31 @@ router.post('/redirect-conviction-yes', function(request, response) {
 	  response.redirect("hsp/find/v1/high/conviction-no")
 	}
 })
+
+router.post('/redirect-sexual-offence-18-over', function(request, response) {
+
+	var age_18_over = request.session.data['sexual_offence'];//
+  
+	if (age_18_over === "committed against someone aged 18 or older"){
+	  response.redirect("hsp/find/v1/high/sexual-offence-18-over") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("hsp/find/v1/high/sexual-offence-under-18")
+	}
+})
+
+// router.post('/redirect-sexual-offence-18-over', function(request, response) {
+
+//	var sexual_offence = request.session.data['sexual_offence'];//
+  
+//	if (sexual_offence === "committed against someone aged 18 or older"){
+//	  response.redirect("hsp/find/v1/high/sexual-offence-18-over") // Initial redirect
+  
+//	}
+//	else {
+//	  response.redirect("hsp/find/v1/high/sexual-offence-under-18")
+//	}
+//})
+
+
