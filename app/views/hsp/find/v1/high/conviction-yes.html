@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Sexual offence category - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Sexual offence category</h1>
+		<p class="govuk-body">To check eligibility for a referral to Healthy Sex Programme (HSP), give more details about Del Hatton's sexual offence.</p>
+		<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
+		<!-- <h2 class="govuk-heading-m">Was the sexual offence:</h2> -->
+		<p class="govuk-body">Was the sexual offence:</p> 
+			<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence" name="sexual-offence" type="checkbox" value="committed against someone aged 18 or older" {{ checked("sexual-offence", "committed against someone aged 18 or older") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence">committed against someone aged 18 or older</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-2" name="sexual-offence" type="checkbox" value="committed against someone aged under 18" {{ checked("sexual-offence", "committed against someone aged under 18") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-2">committed against someone aged under 18</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-3" name="sexual-offence" type="checkbox" value="exhibitionism" {{ checked("sexual-offence", "exhibitionism") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-3">exhibitionism</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-4" name="sexual-offence" type="checkbox" value="frotteurism" {{ checked("sexual-offence", "frotteurism") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-4">frotteurism</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-5" name="sexual-offence" type="checkbox" value="intercourse with an animal" {{ checked("sexual-offence", "intercourse with an animal") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-5">intercourse with an animal</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-6" name="sexual-offence" type="checkbox" value="sexual murder" {{ checked("sexual-offence", "sexual murder") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-6">sexual murder</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-7" name="sexual-offence" type="checkbox" value="sexual penetration of a corpse" {{ checked("sexual-offence", "sexual penetration of a corpse") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-7">sexual penetration of a corpse</label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sexual-offence-8" name="sexual-offence" type="checkbox" value="voyeurism" {{ checked("sexual-offence", "voyeurism") }}>
+					<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-8">voyeurism</label>
+				</div>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

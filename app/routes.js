@@ -511,3 +511,18 @@ router.post('/redirect-bc-moderate-v2e', function(request, response) {
 	  response.redirect("pni-overrides/find/v2/e/building-choices/building-choice-moderate-no")
 	}
 })
+
+
+/* HSP referrals */
+router.post('/redirect-conviction-yes', function(request, response) {
+
+	var hsp_yes = request.session.data['hsp_conviction'];//
+  
+	if (hsp_yes === "yes"){
+	  response.redirect("hsp/find/v1/high/conviction-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("hsp/find/v1/high/conviction-no")
+	}
+})
