@@ -519,25 +519,29 @@ router.post('/redirect-conviction-yes', function(request, response) {
 	var hsp_yes = request.session.data['hsp_conviction'];//
   
 	if (hsp_yes === "yes"){
-	  response.redirect("hsp/find/v1/high/conviction-yes") // Initial redirect
+	  response.redirect("hsp/find/v1/a/conviction-yes") // Initial redirect
   
 	}
 	else {
-	  response.redirect("hsp/find/v1/high/conviction-no")
+	  response.redirect("hsp/find/v1/a/conviction-no")
 	}
 })
 
 router.post('/redirect-sexual-offence-18-over', function(request, response) {
 
-	var age_18_over = request.session.data['sexual_offence'];//
+	var age_18_over = request.session.data['sexual_offence_details'];//
+	var age_18_under = request.session.data['sexual_offence_details'];//
   
 	if (age_18_over === "committed against someone aged 18 or older"){
-	  response.redirect("hsp/find/v1/high/sexual-offence-18-over") // Initial redirect
+	  response.redirect("hsp/find/v1/a/sexual-offence-18-over") // Initial redirect
   
 	}
-	else {
-	  response.redirect("hsp/find/v1/high/sexual-offence-under-18")
+	else if (age_18_under === "committed against someone aged under 18"){
+	  response.redirect("hsp/find/v1/a/sexual-offence-under-18")
 	}
+	else {
+		response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
+	  }
 })
 
 // router.post('/redirect-sexual-offence-18-over', function(request, response) {
@@ -545,11 +549,11 @@ router.post('/redirect-sexual-offence-18-over', function(request, response) {
 //	var sexual_offence = request.session.data['sexual_offence'];//
   
 //	if (sexual_offence === "committed against someone aged 18 or older"){
-//	  response.redirect("hsp/find/v1/high/sexual-offence-18-over") // Initial redirect
+//	  response.redirect("hsp/find/v1/a/sexual-offence-18-over") // Initial redirect
   
 //	}
 //	else {
-//	  response.redirect("hsp/find/v1/high/sexual-offence-under-18")
+//	  response.redirect("hsp/find/v1/a/sexual-offence-under-18")
 //	}
 //})
 
