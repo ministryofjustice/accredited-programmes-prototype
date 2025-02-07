@@ -23,10 +23,11 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 		<form action="/hsp/refer/start-now" method="post">
 			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
 
+			<h2 class="govuk-heading-m govuk-!-margin-top-6">Offences against someone aged under 18</h2>
 			<!-- The offence involved: -->
-			<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					<h2 class="govuk-fieldset__heading">The offence involved:</h2>
+					<h3 class="govuk-fieldset__heading govuk-!-font-weight-regular govuk-!-font-size-19">The offence involved:</h3>
 				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
@@ -53,6 +54,13 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-6" name="sexual_offence_details" type="checkbox" value="self-reported sexual attraction to under-18s" {{ checked("sexual_offence_details", "self-reported sexual attraction to under-18s") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-6">self-reported sexual attraction to under-18s</label>
 					</div>
+				</div>
+			</fieldset>
+			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading govuk-!-margin-top-6">Offences against someone aged 18 or over</h2>
+				</legend>
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-7" name="sexual_offence_details" type="checkbox" value="At least one conviction for a coercive sexual offence" {{ checked("sexual_offence_details", "At least one conviction for a coercive sexual offence") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-7">At least one conviction for a coercive sexual offence</label>
