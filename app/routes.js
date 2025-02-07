@@ -544,17 +544,20 @@ router.post('/redirect-sexual-offence-18-over', function(request, response) {
 	  }
 })
 
-// router.post('/redirect-sexual-offence-18-over', function(request, response) {
+router.post('/sexual-offence-answer', function(request, response) {
 
-//	var sexual_offence = request.session.data['sexual_offence'];//
-  
-//	if (sexual_offence === "committed against someone aged 18 or older"){
-//	  response.redirect("hsp/find/v1/a/sexual-offence-18-over") // Initial redirect
-  
-//	}
-//	else {
-//	  response.redirect("hsp/find/v1/a/sexual-offence-under-18")
-//	}
-//})
+    var sexualOffence = request.session.data['sexual_offence']
+    if (sexualOffence.includes("committed against someone aged under 18")){
+        response.redirect("hsp/find/v1/a/sexual-offence-under-18")
+    } 
+	else if (sexualOffence.includes("committed against someone aged 18 or older")){
+        response.redirect("hsp/find/v1/a/sexual-offence-18-over")
+    }
+	else {
+        response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
+    }
+})
+
+
 
 
