@@ -553,6 +553,24 @@ router.post('/sexual-offence-answer', function(request, response) {
 	else if (sexualOffence.includes("committed against someone aged 18 or older")){
         response.redirect("hsp/find/v1/a/sexual-offence-18-over")
     }
+	else if (sexualOffence.includes("exhibitionism")){
+        response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
+    }
+	else if (sexualOffence.includes("frotteurism")){
+        response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
+    }
+	else if (sexualOffence.includes("voyeurism")){
+        response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
+    }
+	else if (sexualOffence.includes("sexual murder")){
+        response.redirect("hsp/refer/start-now")
+    }
+	else if (sexualOffence.includes("sexual murder")){
+        response.redirect("hsp/refer/start-now")
+    }
+	else if (sexualOffence.includes("sexual penetration of a corpse")){
+        response.redirect("hsp/refer/start-now")
+    }
 	else {
         response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
     }
