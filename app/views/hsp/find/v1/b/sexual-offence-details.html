@@ -21,7 +21,7 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Sexual offence details</h1>
 		<p class="govuk-body">To check eligibility for a referral to Healthy Sex Programme (HSP), give more details about Del Hatton's sexual offence.</p>
 		<p class="govuk-body">Do any of these statements apply to their sexual offences?</p>
-		<form action="/hsp/refer/start-now" method="post">
+		<form action="/sexual-offence-details-answer" method="post">
 
 			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
 			<!-- Sexual offences against someone aged under 18 -->
@@ -147,7 +147,7 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 			<p class="govuk-body">The person is unlikely to be eligible for HSP. If you still think they might be, contact the HSP national psychology team: <a href="#" class="govuk-link govuk-link--no-visited-state">NationalHSP@justice.gov.uk</a></p>
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-				<a class="govuk-button" href="/hsp/refer/start-now">Continue</a>
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
 				<a class="govuk-button govuk-button--secondary" href="find-programmes">Return to programme list</a>
 			  </div>
 		</form>

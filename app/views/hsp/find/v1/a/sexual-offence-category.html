@@ -20,7 +20,7 @@ Sexual offence category - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Sexual offence category</h1>
 		<p class="govuk-body">To check eligibility for a referral to Healthy Sex Programme (HSP), give more details about Del Hatton's sexual offence.</p>
-		<form action="/sexual-offence-answer" method="post">
+		<form action="/sexual-offence-category-answer" method="post">
 			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
 			
 			<!-- Was the sexual offence: -->
@@ -30,35 +30,35 @@ Sexual offence category - {{ serviceName }} - GOV.UK Prototype Kit
 				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence" name="sexual_offence" type="checkbox" value="committed against someone aged under 18" {{ checked("sexual_offence", "committed against someone aged under 18") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence" name="sexual_offence_category" type="checkbox" value="committed against someone aged under 18" {{ checked("sexual_offence_category", "committed against someone aged under 18") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence">committed against someone aged under 18</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-2" name="sexual_offence" type="checkbox" value="committed against someone aged 18 or older" {{ checked("sexual_offence", "committed against someone aged 18 or older") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-2" name="sexual_offence_category" type="checkbox" value="committed against someone aged 18 or older" {{ checked("sexual_offence_category", "committed against someone aged 18 or older") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-2">committed against someone aged 18 or older</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-3" name="sexual_offence" type="checkbox" value="exhibitionism" {{ checked("sexual_offence", "exhibitionism") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-3" name="sexual_offence_category" type="checkbox" value="exhibitionism" {{ checked("sexual_offence_category", "exhibitionism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-3">exhibitionism</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-4" name="sexual_offence" type="checkbox" value="frotteurism" {{ checked("sexual_offence", "frotteurism") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-4" name="sexual_offence_category" type="checkbox" value="frotteurism" {{ checked("sexual_offence_category", "frotteurism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-4">frotteurism</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-5" name="sexual_offence" type="checkbox" value="intercourse with an animal" {{ checked("sexual_offence", "intercourse with an animal") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-5" name="sexual_offence_category" type="checkbox" value="intercourse with an animal" {{ checked("sexual_offence_category", "intercourse with an animal") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-5">intercourse with an animal</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-6" name="sexual_offence" type="checkbox" value="sexual murder" {{ checked("sexual_offence", "sexual murder") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-6" name="sexual_offence_category" type="checkbox" value="sexual murder" {{ checked("sexual_offence_category", "sexual murder") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-6">sexual murder</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-7" name="sexual_offence" type="checkbox" value="sexual penetration of a corpse" {{ checked("sexual_offence", "sexual penetration of a corpse") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-7" name="sexual_offence_category" type="checkbox" value="sexual penetration of a corpse" {{ checked("sexual_offence_category", "sexual penetration of a corpse") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-7">sexual penetration of a corpse</label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="sexual-offence-8" name="sexual_offence" type="checkbox" value="voyeurism" {{ checked("sexual_offence", "voyeurism") }}>
+						<input class="govuk-checkboxes__input" id="sexual-offence-8" name="sexual_offence_category" type="checkbox" value="voyeurism" {{ checked("sexual_offence_category", "voyeurism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-8">voyeurism</label>
 					</div>
 				</div>

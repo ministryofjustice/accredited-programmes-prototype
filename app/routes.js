@@ -544,38 +544,35 @@ router.post('/redirect-sexual-offence-18-over', function(request, response) {
 	  }
 })
 
-router.post('/sexual-offence-answer', function(request, response) {
-    var sexualOffence = request.session.data['sexual_offence']
-    if (sexualOffence.includes("committed against someone aged under 18") 
-        && sexualOffence.includes("committed against someone aged 18 or older")){
+router.post('/sexual-offence-category-answer', function(request, response) {
+    var sexualOffenceCategory = request.session.data['sexual_offence_category']
+    if (sexualOffenceCategory.includes("committed against someone aged under 18") 
+        && sexualOffenceCategory.includes("committed against someone aged 18 or older")){
         response.redirect("hsp/find/v1/a/sexual-offence-under-18-over")
     } 
-    else if (sexualOffence.includes("exhibitionism") 
-        && sexualOffence.includes("frotteurism")){
+    else if (sexualOffenceCategory.includes("exhibitionism") 
+        && sexualOffenceCategory.includes("frotteurism")){
         response.redirect("hsp/refer/start-now")
     } 
-    else if (sexualOffence.includes("committed against someone aged under 18")){
+    else if (sexualOffenceCategory.includes("committed against someone aged under 18")){
         response.redirect("hsp/find/v1/a/sexual-offence-under-18")
     } 
-    else if (sexualOffence.includes("committed against someone aged 18 or older")){
+    else if (sexualOffenceCategory.includes("committed against someone aged 18 or older")){
         response.redirect("hsp/find/v1/a/sexual-offence-18-over")
     }
-    else if (sexualOffence.includes("exhibitionism")){
+    else if (sexualOffenceCategory.includes("exhibitionism")){
         response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
     }
-    else if (sexualOffence.includes("frotteurism")){
+    else if (sexualOffenceCategory.includes("frotteurism")){
         response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
     }
-    else if (sexualOffence.includes("voyeurism")){
+    else if (sexualOffenceCategory.includes("voyeurism")){
         response.redirect("hsp/find/v1/a/not-eligible-for-hsp")
     }
-    else if (sexualOffence.includes("sexual murder")){
+    else if (sexualOffenceCategory.includes("sexual murder")){
         response.redirect("hsp/refer/start-now")
     }
-    else if (sexualOffence.includes("sexual murder")){
-        response.redirect("hsp/refer/start-now")
-    }
-    else if (sexualOffence.includes("sexual penetration of a corpse")){
+    else if (sexualOffenceCategory.includes("sexual penetration of a corpse")){
         response.redirect("hsp/refer/start-now")
     }
     else {
@@ -583,7 +580,19 @@ router.post('/sexual-offence-answer', function(request, response) {
     }
 })
 
-
-
+router.post('/sexual-offence-details-answer', function(request, response) {
+    var sexualOffenceDetails = request.session.data['sexual_offence_details']
+    if (sexualOffenceDetails.includes("A victim aged 12 or younger") 
+        && sexualOffenceDetails.includes("A male victim aged 15 or younger")
+		&& sexualOffenceDetails.includes("More than one victim aged 15 or younger")){
+        response.redirect("hsp/refer/start-now")
+    } 
+    else if (sexualOffenceDetails.includes("Self-reported sexual attraction to under-18s")){
+        response.redirect("hsp/refer/start-now")
+    } 
+    else {
+        response.redirect("hsp/find/v1/b/not-eligible-for-hsp")
+    }
+})
 
 
