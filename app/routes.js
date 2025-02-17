@@ -581,10 +581,19 @@ router.post('/sexual-offence-category-answer', function(request, response) {
 })
 
 router.post('/sexual-offence-details-answer', function(request, response) {
-    var sexualOffenceDetails = request.session.data['sexual_offence_details']
+    var sexualOffenceDetails = ""; 
+    if(request.session.data['sexual_offence_details'] == undefined  ||
+           request.session.data['sexual_offence_details'].length == 0) 
+        {
+                        
+        }
+    else {
+        sexualOffenceDetails = request.session.data['sexual_offence_details'];
+    }
+    
     if (sexualOffenceDetails.includes("A victim aged 12 or younger") 
         && sexualOffenceDetails.includes("A male victim aged 15 or younger")
-		&& sexualOffenceDetails.includes("More than one victim aged 15 or younger")){
+        && sexualOffenceDetails.includes("More than one victim aged 15 or younger")){
         response.redirect("hsp/refer/start-now")
     } 
     else if (sexualOffenceDetails.includes("Self-reported sexual attraction to under-18s")){
@@ -594,5 +603,3 @@ router.post('/sexual-offence-details-answer', function(request, response) {
         response.redirect("hsp/find/v1/b/not-eligible-for-hsp")
     }
 })
-
-
