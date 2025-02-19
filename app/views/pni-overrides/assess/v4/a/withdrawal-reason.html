@@ -1,0 +1,423 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Withdrawal reason - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="#" method="post">
+			<h1 class="govuk-heading-l">Withdrawal reason</h1>
+			<p class="govuk-body">If you withdraw the referral, it will be closed.</p>
+			<h2 class="govuk-heading-m">Current status</h2>
+			<div class="moj-timeline">
+				<div class="moj-timeline__item">
+					<div class="moj-timeline__header">
+						<h2 class="moj-timeline__title">Status update</h2>
+						<p class="moj-timeline__byline">by You</p>
+					</div>
+					<p class="moj-timeline__date">
+						<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+					</p>
+					<div class="moj-timeline__description">
+						<strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
+					</div>
+				</div>
+			</div>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<div class="govuk-form-group">
+
+				<div id="one-reason-hint" class="govuk-hint">Select one reason.</div>
+				
+				<!-- Administrative error -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Administrative error</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="withdrawal-reason-category" name="withdrawal-reason-category" type="radio" value="Duplicate referral" data-aria-controls="conditional-reason-category-admin-error" {{ checked("withdrawal-reason-category", "Duplicate referral") }}>
+							<label class="govuk-label govuk-radios__label" for="withdrawal-reason-category">Duplicate referral</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-admin-error">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-admin-error">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-admin-error" name="add-reason-admin-error" rows="12" aria-describedby="add-reason-admin-error-info"></textarea>
+									</div>
+									<div id="add-reason-admin-error-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-admin-error-2" name="withdrawal-reason-category" type="radio" value="Submitted in error" data-aria-controls="conditional-reason-category-admin-error-2" {{ checked("withdrawal-reason-category", "Submitted in error") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-admin-error-2">Submitted in error</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-admin-error-2">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-admin-error-2">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-admin-error-2" name="add-reason-admin-error" rows="12" aria-describedby="add-reason-admin-error-info-2"></textarea>
+									</div>
+									<div id="add-reason-admin-error-info-2" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Motivation and behaviour -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Motivation and behaviour</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-motivation-behaviour" name="withdrawal-reason-category" type="radio" value="Behavioural problems" data-aria-controls="conditional-reason-category-motivation-behaviour" {{ checked("withdrawal-reason-category", "Behavioural problems") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-motivation-behaviour">Behavioural problems</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-motivation-behaviour">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-motivation-behaviour">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-motivation-behaviour" name="add-reason-motivation-behaviour" rows="12" aria-describedby="add-reason-motivation-behaviour-info"></textarea>
+									</div>
+									<div id="add-reason-motivation-behaviour-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-motivation-behaviour-2" name="withdrawal-reason-category" type="radio" value="Motivation changed" data-aria-controls="conditional-reason-category-motivation-behaviour-2" {{ checked("withdrawal-reason-category", "Motivation changed") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-motivation-behaviour-2">Motivation changed</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-motivation-behaviour-2">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-motivation-behaviour-2">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-motivation-behaviour-2" name="add-reason-motivation-behaviour" rows="12" aria-describedby="add-reason-motivation-behaviour-info-2"></textarea>
+									</div>
+									<div id="add-reason-motivation-behaviour-info-2" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Operational -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Operational</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational" name="withdrawal-reason-category" type="radio" value="Course no longer available" data-aria-controls="conditional-reason-category-operational" {{ checked("withdrawal-reason-category", "Course no longer available") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational">Course no longer available</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info"></textarea>
+									</div>
+									<div id="add-reason-operational-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-2" name="withdrawal-reason-category" type="radio" value="Does not meet transfer criteria" data-aria-controls="conditional-reason-category-operational-2" {{ checked("withdrawal-reason-category", "Does not meet transfer criteria") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-2">Does not meet transfer criteria</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-2">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-2">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-2" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-2"></textarea>
+									</div>
+									<div id="add-reason-operational-info-2" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-3" name="withdrawal-reason-category" type="radio" value="In transfer process or transferred to another prison" data-aria-controls="conditional-reason-category-operational-3" {{ checked("withdrawal-reason-category", "In transfer process or transferred to another prison") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-3">In transfer process or transferred to another prison</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-3">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-3">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-3" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-3"></textarea>
+									</div>
+									<div id="add-reason-operational-info-3" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-4" name="withdrawal-reason-category" type="radio" value="Not enough time to complete programme" data-aria-controls="conditional-reason-category-operational-4" {{ checked("withdrawal-reason-category", "Not enough time to complete programme") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-4">Not enough time to complete programme</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-4">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-4">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-4" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-4"></textarea>
+									</div>
+									<div id="add-reason-operational-info-4" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-5" name="withdrawal-reason-category" type="radio" value="Released after parole hearing" data-aria-controls="conditional-reason-category-operational-5" {{ checked("withdrawal-reason-category", "Released after parole hearing") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-5">Released after parole hearing</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-5">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-5">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-5" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-5"></textarea>
+									</div>
+									<div id="add-reason-operational-info-5" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-6" name="withdrawal-reason-category" type="radio" value="Sentence ended or on probation" data-aria-controls="conditional-reason-category-operational-6" {{ checked("withdrawal-reason-category", "Sentence ended or on probation") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-6">Sentence ended or on probation</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-6">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-6">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-6" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-6"></textarea>
+									</div>
+									<div id="add-reason-operational-info-6" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-operational-7" name="withdrawal-reason-category" type="radio" value="Other type of release" data-aria-controls="conditional-reason-category-operational-7" {{ checked("withdrawal-reason-category", "Other type of release") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-operational-7">Other type of release</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-operational-7">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-operational-7">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-operational-7" name="add-reason-operational" rows="12" aria-describedby="add-reason-operational-info-7"></textarea>
+									</div>
+									<div id="add-reason-operational-info-7" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Personal and health -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Personal and health</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health" name="withdrawal-reason-category" type="radio" value="Death" data-aria-controls="conditional-reason-category-personal-health" {{ checked("withdrawal-reason-category", "Death") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health">Death</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-2" name="withdrawal-reason-category" type="radio" value="Instructed by solicitor not to attend" data-aria-controls="conditional-reason-category-personal-health-2" {{ checked("withdrawal-reason-category", "Instructed by solicitor not to attend") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-2">Instructed by solicitor not to attend</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-2">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-2">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-2" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-2"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-2" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-3" name="withdrawal-reason-category" type="radio" value="Medical or health reasons" data-aria-controls="conditional-reason-category-personal-health-3" {{ checked("withdrawal-reason-category", "Medical or health reasons") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-3">Medical or health reasons</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-3">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-3">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-3" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-3"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-3" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-4" name="withdrawal-reason-category" type="radio" value="Non-associations" data-aria-controls="conditional-reason-category-personal-health-4" {{ checked("withdrawal-reason-category", "Non-associations") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-4">Non-associations</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-4">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-4">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-4" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-4"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-4" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-5" name="withdrawal-reason-category" type="radio" value="Personal reasons" data-aria-controls="conditional-reason-category-personal-health-5" {{ checked("withdrawal-reason-category", "Personal reasons") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-5">Personal reasons</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-5">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-5">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-5" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-5"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-5" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-6" name="withdrawal-reason-category" type="radio" value="Personal safety" data-aria-controls="conditional-reason-category-personal-health-6" {{ checked("withdrawal-reason-category", "Personal safety") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-6">Personal safety</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-6">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-6">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-6" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-6"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-6" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-personal-health-7" name="withdrawal-reason-category" type="radio" value="Risk scores changed" data-aria-controls="conditional-reason-category-personal-health-7" {{ checked("withdrawal-reason-category", "Risk scores changed") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-personal-health-7">Risk scores changed</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-personal-health-7">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-personal-health-7">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-personal-health-7" name="add-reason-personal-health" rows="12" aria-describedby="add-reason-personal-health-info-7"></textarea>
+									</div>
+									<div id="add-reason-personal-health-info-7" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="govuk-radios__divider govuk-!-margin-top-4">or</div>
+
+				<!-- Other reason -->
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Other reason</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="reason-category-other" name="withdrawal-reason-category" type="radio" value="Other" data-aria-controls="conditional-reason-category-other" {{ checked("withdrawal-reason-category", "Other") }}>
+							<label class="govuk-label govuk-radios__label" for="reason-category-other">Other</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-category-other">
+							<div class="govuk-form-group">
+								<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+									<div class="govuk-form-group">
+										<h3 class="govuk-label-wrapper">
+											<label class="govuk-label govuk-label--s" for="add-reason-other">Add details</label>
+										</h3>
+										<textarea class="govuk-textarea govuk-js-character-count" id="add-reason-other" name="add-reason-other" rows="12" aria-describedby="add-reason-other-info"></textarea>
+									</div>
+									<div id="add-reason-other-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Submit</button>
+					<a class="govuk-link" href="#">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
