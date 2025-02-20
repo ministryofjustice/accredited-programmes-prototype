@@ -134,7 +134,11 @@ Referral to Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
+						{% if data['reason-referring'] %}
+						<p class="govuk-!-margin-bottom-2">{{ data['reason-referring'] }}</p>
+						{% else %}
 						<p class="govuk-!-margin-bottom-2">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+						{% endif %}
 					</div>
 				</dl>
 			</div>

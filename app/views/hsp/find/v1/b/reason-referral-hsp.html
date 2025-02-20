@@ -19,16 +19,19 @@ Reason for referral to HSP - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Reason for referral to HSP</h1>
-		<p class="govuk-body">What is your reason for referring this person to HSP?</p>
 		<p class="govuk-body">Include any information the Treatment Manager should consider when assessing the person's suitability and readiness. For example:</p>
 		<ul class="govuk-list govuk-list--bullet">
 			<li>sexual offences not covered in the previous questions</li>
 			<li>self-reported information about their sexual interests</li>
 			<li>concerns about their ability to manage their sexual interests</li>
 		</ul>
-		<form action="../../../refer/start-now" method="post">
+		<form action="/hsp/refer/v1/b/start-now" method="post">
 			<div class="govuk-form-group">
-				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5"></textarea>
+				<label class="govuk-label govuk-label--m" for="reason-referring">What is your reason for referring this person to HSP?</label>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+					<textarea class="govuk-textarea govuk-js-character-count" id="reason-referring" name="reason-referring" rows="5" aria-describedby="reason-referring-info"></textarea>
+					<div id="reason-referring-info" class="govuk-hint govuk-character-count__message">You can enter up to 5000 characters</div>
+				</div>
 			</div>
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
