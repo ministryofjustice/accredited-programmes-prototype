@@ -613,10 +613,10 @@ router.post('/sexual-offence-details-answer', function(request, response) {
     if (sexualOffenceDetails.includes("A victim aged 12 or younger") 
         && sexualOffenceDetails.includes("A male victim aged 15 or younger")
         && sexualOffenceDetails.includes("More than one victim aged 15 or younger")){
-        response.redirect("hsp/refer/start-now")
+        response.redirect("hsp/refer/v1/b/start-now")
     } 
     else if (sexualOffenceDetails.includes("Self-reported sexual attraction to under-18s")){
-        response.redirect("hsp/refer/start-now")
+        response.redirect("hsp/refer/v1/b/start-now")
     } 
     else {
         response.redirect("hsp/find/v1/b/not-eligible-for-hsp")
