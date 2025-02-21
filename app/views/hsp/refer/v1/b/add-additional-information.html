@@ -27,9 +27,12 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 		<form action="task-list?referral-information-three=done&" method="post">
 			<div class="govuk-form-group">
 				<label class="govuk-label govuk-label--m" for="provide-additional-information">Additional information (optional)</label>
-				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5">{{ data['provide-additional-information'] }}</textarea>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+					<textarea class="govuk-textarea govuk-js-character-count" id="provide-additional-information" name="provide-additional-information" rows="5" aria-describedby="provide-additional-information-info"></textarea>
+					<div id="provide-additional-information-info" class="govuk-hint govuk-character-count__message">You can enter up to 5000 characters</div>
+				</div>
 			</div>
-			<div class="govuk-button-group govuk-!-margin-top-2">
+			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
 			</div>
 		</form>

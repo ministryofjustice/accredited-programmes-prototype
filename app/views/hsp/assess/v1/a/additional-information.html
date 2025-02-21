@@ -37,7 +37,7 @@ Referral to Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
 			    </li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
@@ -62,11 +62,11 @@ Referral to Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme name</dt>
-				<dd class="govuk-summary-list__value">Becoming New Me Plus: sexual offence</dd>
+				<dd class="govuk-summary-list__value">Becoming New Me Plus: general violence offence</dd>
 		  	</div>
 		  	<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme strand</dt>
-				<dd class="govuk-summary-list__value">Sexual offence</dd>
+				<dd class="govuk-summary-list__value">General violence offence</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
@@ -108,41 +108,43 @@ Referral to Healthy Sex Programme - {{ serviceName }} - GOV.UK Prototype Kit
 			<ul class="moj-side-navigation__list">
 				<li class="moj-side-navigation__item">
 					<a href="personal-details">Personal details</a>
-				</li>
-				<li class="moj-side-navigation__item">
+		  		</li>
+		  		<li class="moj-side-navigation__item">
 					<a href="#">Programme history</a>
-				</li>
-				<li class="moj-side-navigation__item">
-					<a href="#" aria-current="location">Offence history</a>
-				</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Sentence information</a>
-				</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="hsp-details">HSP details</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="additional-information">Additional information</a>
-				</li>
+					<a href="#">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="hsp-details">HSP details</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="additional-information" aria-current="location">Additional information</a>
+		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">HSP additional information</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						{% if data['reason-referring'] %}
-						<p class="govuk-!-margin-bottom-2">{{ data['reason-referring'] }}</p>
-						{% else %}
-						<p class="govuk-!-margin-bottom-2">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
-						{% endif %}
-					</div>
-				</dl>
-			</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Jordan Smith on 11 June 2023</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Additional information</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							{% if data['provide-additional-information'] %}
+							<p class="govuk-!-margin-bottom-2">{{ data['provide-additional-information'] }}</p>
+							{% else %}
+							<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+							{% endif %}
+						</div>
+					</dl>
+				</div>
+		 	</div>
 		</div>
 	</div>
 </div>
