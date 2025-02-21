@@ -19,30 +19,18 @@ Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">Add additional information</h1>
-		<p class="govuk-body">Add extra information to help the programme team assess this referral.</p>
-		<form action="#" method="post">
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Reason why the referral is not to a recommended programme</h2>
-			<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
-			<p class="govuk-body">You can make a referral anyway and the treatment manager will decide whether an override is appropriate. You must give a reason.</p>
-			<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
-				<textarea class="govuk-textarea govuk-js-character-count" id="recommed-why-referral" name="recommed-why-referral" rows="10" aria-describedby="recommed-why-referral-info"></textarea>
-				<div id="recommed-why-referral-info" class="govuk-hint govuk-character-count__message">You can enter up to 4000 characters</div>
+		<p class="govuk-body">Relevant scores and information from OASys will automatically be pulled through to the referral.</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>the reason for the referral</li>
+			<li>the person's motivation to complete the programme</li>
+		</ul>
+		<form action="task-list?referral-information-three=done&" method="post">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="provide-additional-information">Additional information (optional)</label>
+				<textarea class="govuk-textarea" id="provide-additional-information" name="provide-additional-information" rows="5">{{ data['provide-additional-information'] }}</textarea>
 			</div>
-			<h2 class="govuk-heading-m govuk-!-margin-top-7">Additional information</h2>
-			<p class="govuk-body">Relevant scores and information from OASys will automatically be pulled through to the referral.</p>
-			<ul class="govuk-list govuk-list--bullet">
-				<li>the reason for the referral</li>
-				<li>the person's motivation to complete the programme</li>
-			</ul>
-			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
-				<div class="govuk-form-group">
-					<textarea class="govuk-textarea govuk-js-character-count" id="additional-information" name="additional-information" rows="10" aria-describedby="additional-information-info"></textarea>
-				</div>
-				<div id="additional-information-info" class="govuk-hint govuk-character-count__message">You have 4000 characters remaining</div>
-			</div> 
 			<div class="govuk-button-group govuk-!-margin-top-2">
-				<button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
-				<a class="govuk-link" href="#">Cancel</a>
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
 			</div>
 		</form>
     </div>
