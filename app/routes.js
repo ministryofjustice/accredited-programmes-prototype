@@ -23,6 +23,18 @@ router.post('/community/assess/update-status', function (req, res) {
 	  	}
  	});
 
+router.post('/redirect-about-person-sexual-offence', function(request, response) {
+
+	var moderate_pso = request.session.data['moderate_pso'];//
+	
+	if (moderate_pso === "yes"){
+		response.redirect("/community/refer/about-person-sexual-offence-yes") // Initial redirect
+	}
+	else {
+		response.redirect("/community/refer/about-person-sexual-offence-no")
+	}
+})
+
 
 
 /* CUSTODY */

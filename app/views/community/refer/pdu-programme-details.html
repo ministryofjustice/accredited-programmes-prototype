@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choice: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-find-community.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Building Choice: moderate intensity</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Brighton and Hove: Brighton Probation Office</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<!-- <div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Prison category</dt>
+				<dd class="govuk-summary-list__value">Category C </dd>
+			</div> -->
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Address</dt>
+				<dd class="govuk-summary-list__value">Probation Office, Lancaster House, 47 Grand Parade, Brighton, East Sussex, BN2 9QA</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Region</dt>
+				<dd class="govuk-summary-list__value">Kent, Surrey and Sussex</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Email address</dt>
+			  	<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">KSSPS.BrightonReceptionists@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<div class="govuk-!-margin-top-4">
+			<a class="govuk-button" href="task-list">Make a referral</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}
