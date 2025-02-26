@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Find recommended programmes - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to [intervention] homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Find recommended [interventions/programmes]</h1>
+		<p class="govuk-body">Enter a [CRN] to check what [interventions/programmes] are recommended [based on the person's risks and needs].</p>
+		<div class="govuk-form-group">
+			<div id="person-identifier-hint" class="govuk-hint">For example, a CRN is X123456</div>
+			<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
+		</div>
+		<form action="check-details" method="post" novalidate>
+			<input type="hidden" name="answers-checked" value="true">
+			<button type="submit" class="govuk-button" data-module="govuk-button">
+				Continue
+			</button>
+			<p class="govuk-body"><a class="govuk-link" href="#">See a list of all programmes/Browse</a></p>
+		</form>
+    </div>
+</div>
+
+{% endblock %}

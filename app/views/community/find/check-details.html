@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirm Del Hatton's details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to [intervention] homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Confirm Del Hatton's details</h1>
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Name</dt>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">CRN</dt>
+				{% if data['person-identifier'] == "X123456" %}
+				<dd class="govuk-summary-list__value">X123456</dd>
+				{% else %}
+				<dd class="govuk-summary-list__value">X654321</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Date of birth</dt>
+				<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Ethnicity</dt>
+			  	<dd class="govuk-summary-list__value">White and Black African</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Male</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Community</dd>
+	  		</div>
+	  		<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Current PDU</dt>
+				<dd class="govuk-summary-list__value">Derby City</dd>
+  			</div>
+		</dl>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+				<span class="govuk-visually-hidden">Warning</span>If this information is out of date or incorrect, you must update the information in OASys/NDelius[TBC].
+			</strong>
+		</div>
+		<p class="govuk-body">This will save a draft referral.</p>
+		<div class="govuk-button-group govuk-!-margin-top-8">
+			<a class="govuk-button" href="pni">Continue</a>
+			<a class="govuk-link" href="/community/find/find-programmes">Enter a different identifier</a>
+		</div>
+		
+    </div>
+</div>
+
+{% endblock %}
