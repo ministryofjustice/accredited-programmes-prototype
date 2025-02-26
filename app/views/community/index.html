@@ -6,8 +6,42 @@
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-three-quarters">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-8"><span class="govuk-caption-l">Community</span>{{ serviceName }}</h1>
-		<p class="govuk-body">TBC</p>
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-8">
+			<span class="govuk-caption-l">Community</span>{{ serviceName }}</h1>
+
+   		
+		<div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">Contents</h2>
+			<ul class="govuk-tabs__list">
+				<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+					<a class="govuk-tabs__tab" href="#find">Find</a>
+			  	</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#refer">Refer</a>
+			  	</li>
+				<li class="govuk-tabs__list-item">
+					<a class="govuk-tabs__tab" href="#assess">Assess</a>
+			  	</li>
+			</ul>
+			<div class="govuk-tabs__panel" id="find">
+				<h3 class="govuk-heading-m">Find</h3>
+				<!-- <p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) finds a programme for the Person in Prison (PiP).</p> -->
+				<a href="#" class="govuk-button">View prototype</a>
+			</div>
+
+			<div class="govuk-tabs__panel" id="refer">
+				<h3 class="govuk-heading-m">Refer</h3>
+				<!-- <p class="govuk-body">This is the end to end journey of when the Prison Offender Manager (POM) makes a programme referral for the Person in Prison (PiP).</p> -->
+				<a href="community/refer/open-referrals" class="govuk-button">View prototype</a>
+			</div>
+
+			<div class="govuk-tabs__panel" id="assess">
+				<h3 class="govuk-heading-m">Assess</h3>
+				<!-- <p class="govuk-body">This is the end to end journey of when a member of the Programme Team (PT) views and assesses the programme referral made by the Prison Offender Manager (POM).</p> -->
+				<a href="community/assess/open-referrals" class="govuk-button">View prototype</a>
+				
+			</div>
+		</div>
   	</div>
 </div>
 {% endblock %}

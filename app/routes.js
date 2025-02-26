@@ -6,6 +6,27 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+/* COMMUNITY */
+router.post('/community/assess/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['referral-submitted']
+    	if (referralSubmitted == 'Awaiting assessment') {
+			res.redirect('awaiting-assessment')
+     	} 
+		else if (referralSubmitted == 'Not eligible') {
+       		res.redirect('not-eligible')
+     	}
+		else if (referralSubmitted == 'On hold') {
+			res.redirect('on-hold')
+	  	}
+		else {
+			res.redirect('withdrawal-reason')
+	  	}
+ 	});
+
+
+
+/* CUSTODY */
+
 // Add your routes here
 require('./routes/assess/v6/routes.js')(router);
 require('./routes/assess/v7/routes.js')(router);
@@ -87,13 +108,6 @@ router.post('/assess/features/withdrawal/v3/withdraw-referral', function (req, r
 			res.redirect('personal-health')
 		}
 	});
-
-/* router.get('/refer/on-hold', function (req, res) {
-    res.render('/refer/on-hold')
-});
-router.post('/refer/on-hold', function (req, res) {
-    res.redirect('/refer/status-history')
-});*/
 
 router.post('/pni-overrides/assess/v2/a/update-status', function (req, res) {
 	const assessedSuitable = req.session.data['assessed-suitable']
