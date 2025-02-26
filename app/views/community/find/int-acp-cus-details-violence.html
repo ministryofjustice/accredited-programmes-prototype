@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Intervention skeleton
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+  text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" method="post" action="#">
+          <div class="govuk-form-group">
+            <!--<span class="govuk-caption-l">Alex River (CRN: X123456)</span>-->
+            <h1 class="govuk-heading-l">Becoming New Me Plus: general violence offence</h1> 
+            <h2 class="govuk-heading-m govuk-!-margin-top-8">Location name (HMP)</h2>
+          </div>  
+          <h2 class="govuk-heading-m govuk-!-margin-top-8">Criteria</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Prison category</dt>
+              <dd class="govuk-summary-list__value">Category C </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Address</dt>
+              <dd class="govuk-summary-list__value">Church Rd, Eastchurch, Sheerness, ME12 4DZ</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">County</dt>
+              <dd class="govuk-summary-list__value">Wiltshire</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Email address</dt>
+                <dd class="govuk-summary-list__value"><a href="mailto:interventions.erlestoke@justice.gov.uk" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
+            </div>
+          </dl>
+
+
+          <!-- {{ govukButton({
+            text: 'Continue'
+          }) }} -->
+
+          <div class="govuk-button-group">
+            <!--<a href="#" class="govuk-button">
+              Make a referral
+            </a> 
+            <a href="#" class="govuk-button govuk-button--secondary">
+              Copy a link to this intervention
+            </a>-->
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/public/javascripts/gov-uk-latest.js"></script>
+
+{% endblock %}

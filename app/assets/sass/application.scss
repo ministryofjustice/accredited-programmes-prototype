@@ -802,7 +802,6 @@ $low-score-colour__text: #485b10;
   margin-bottom: 0;
 }
 
-
 .scroll-content {
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: scroll; /* Add vertical scrollbar */
@@ -878,4 +877,118 @@ $low-score-colour__text: #485b10;
 
 .acp-home .govuk-main-wrapper {
 	padding-top: 0;
+}
+
+
+//Andreea adding below CSS. This is relevant to find in community
+.result-info {
+  margin: 0 0 20px 0;
+  border-bottom: solid 1px #0b0c0c;
+}
+
+.gem-c-document-list__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-heading-m {
+      margin-bottom: 20px;
+      padding-top: 20px;
+  }
+}
+
+.sort-options .sort-options__label {
+  padding-right: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.gem-c-document-list__item:first-child {
+  margin-top: 0;
+}
+
+.gem-c-document-list__item {
+  padding-top: 10px;
+  border-top: 1px solid #b1b4b6;
+  list-style: none;
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-document-list__item-title {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.govuk-grid-column-one-half {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-document-list__item-description, .gem-c-document-list__subtext {
+      font-size: 1.1875rem;
+      line-height: 1.5;
+  }
+}
+
+.gem-c-document-list__item-description {
+  margin: 5px 0;
+  /* color: #0b0c0c; */
+}
+
+.gem-c-document-list__item-metadata {
+  padding: 0;
+}
+
+.gem-c-document-list__attribute {
+  color: #505a5f;
+}
+@media (min-width: 40.0625em) {
+  .gem-c-document-list__attribute {
+      font-size: 1.1875rem;
+      line-height: 1.25;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-document-list__item-title {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.finder-results {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .gem-c-document-list {
+      font-size: 1.1875rem;
+      line-height: 1.3157894737;
+  }
+}
+
+.tag-filters{
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  max-width:100%;
+  margin-right: 5px
+}
+
+ul.govuk-list.search-result-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+th.moj-fixed-width-40 {
+  width: 50%;
 }

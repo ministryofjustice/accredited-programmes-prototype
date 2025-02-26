@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Find recommended programmes - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to intervention homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Enter identity number</h1>
+		<p class="govuk-body">Enter CRN or prison number. This will retrieve their details from NDelius and OASys to help you find suitable interventions.</p>
+		<div class="govuk-form-group">
+			<div id="person-identifier-hint" class="govuk-hint">For example, a CRN is X123456 or a prison number is D0168GH</div>
+			<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
+		</div>
+		<form action="check-details" method="post" novalidate>
+			<input type="hidden" name="answers-checked" value="true">
+			<button type="submit" class="govuk-button" data-module="govuk-button">
+				Continue
+			</button>
+			<p class="govuk-body"><a class="govuk-link" href="#">See a list of all interventions/Browse</a></p>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
