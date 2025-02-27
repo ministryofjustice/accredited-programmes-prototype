@@ -1,12 +1,19 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Main catalogue page
+Recommended programme pathway for Alex River - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
-{% block main %}
-{{ super() }}
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
 {% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row">
