@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Find recommended programmes - {{ serviceName }} - GOV.UK Prototype Kit
+Enter identity number - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,8 +18,8 @@ Find recommended programmes - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Enter identity number</h1>
-		<p class="govuk-body">Enter CRN or prison number. This will retrieve their details from NDelius and OASys to help you find suitable interventions.</p>
+		<h1 class="govuk-heading-l">Enter a CRN or prison number </h1>
+		<p class="govuk-body">This will retrieve the person's details to help you find suitable interventions.</p>
 		<div class="govuk-form-group">
 			<div id="person-identifier-hint" class="govuk-hint">For example, a CRN is X123456 or a prison number is D0168GH</div>
 			<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
