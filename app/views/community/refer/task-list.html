@@ -5,7 +5,7 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-pp.html" %}
+	{% include "/includes/key-details-com.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,7 +33,7 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 		<ul class="govuk-task-list">
 			<li class="govuk-task-list__item govuk-task-list__item--with-link">
 			  	<div class="govuk-task-list__name-and-hint">
-					<a class="govuk-link govuk-task-list__link" href="check-details" aria-describedby="make-referral-details-1">Confirm personal details</a>
+					<a class="govuk-link govuk-task-list__link" href="../find/check-details" aria-describedby="make-referral-details-1">Confirm personal details</a>
 			  	</div>
 			  	<div class="govuk-task-list__status" id="make-referral-details-1">Completed</div>
 			</li>
@@ -70,6 +70,18 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 				  	<a class="govuk-link govuk-task-list__link" href="add-additional-information" aria-describedby="make-referral-details-4">Add additional information</a>
 				</div>
 				{% if (data['referral-information-three'] == "done") %}
+				<div class="govuk-task-list__status" id="make-referral-details-4">Completed</div>
+				{% else %}
+				<div class="govuk-task-list__status" id="make-referral-details-4">
+				  	<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
+				</div>
+				{% endif %}
+		  	</li>
+			<li class="govuk-task-list__item govuk-task-list__item--with-link">
+				<div class="govuk-task-list__name-and-hint">
+				  	<a class="govuk-link govuk-task-list__link" href="availability-attend-sessions" aria-describedby="make-referral-details-4">Availability to attend sessions</a>
+				</div>
+				{% if (data['referral-information-four'] == "done") %}
 				<div class="govuk-task-list__status" id="make-referral-details-4">Completed</div>
 				{% else %}
 				<div class="govuk-task-list__status" id="make-referral-details-4">

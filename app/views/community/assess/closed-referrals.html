@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-xl">Referrals</span>
-		<h1 class="govuk-heading-xl">Becoming New Me Plus</h1>
+		<h1 class="govuk-heading-xl">Building Choices: moderate intensity</h1>
     </div>
 </div>
 
@@ -98,7 +98,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			<tbody class="govuk-table__body">
 				{% if data['referral-submitted'] == "Not eligible" %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
@@ -107,7 +107,7 @@ Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 				{% elseif data['referral-submitted'] == "Withdraw referral" %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">Hatton, Del</a><br />D0168KE</td>
+					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">Stocken</td>
 					<td class="govuk-table__cell">15 Aug 2023<br />Conditional release date</td>
 					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
