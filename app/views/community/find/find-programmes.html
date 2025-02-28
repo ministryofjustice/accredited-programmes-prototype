@@ -11,7 +11,7 @@ Enter identity number - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to intervention homepage</a>
+	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -21,7 +21,6 @@ Enter identity number - {{ serviceName }} - GOV.UK Prototype Kit
 		<h1 class="govuk-heading-l">Enter a CRN or prison number </h1>
 		<p class="govuk-body">This will retrieve the person's details to help you find suitable interventions.</p>
 		<div class="govuk-form-group">
-			<div id="person-identifier-hint" class="govuk-hint">For example, a CRN is X123456 or a prison number is D0168GH</div>
 			<input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="person-identifier" name="person-identifier" type="text" spellcheck="false" value="{{ data['person-identifier'] }}" aria-describedby="person-identifier-hint">
 		</div>
 		<form action="check-details" method="post" novalidate>
@@ -29,7 +28,7 @@ Enter identity number - {{ serviceName }} - GOV.UK Prototype Kit
 			<button type="submit" class="govuk-button" data-module="govuk-button">
 				Continue
 			</button>
-			<p class="govuk-body"><a class="govuk-link" href="#">See a list of all interventions/Browse</a></p>
+			<p class="govuk-body"><a class="govuk-link" href="#">See a list of all interventions</a></p>
 		</form>
     </div>
 </div>

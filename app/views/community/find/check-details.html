@@ -11,7 +11,7 @@ Confirm  Alex River's details - {{ serviceName }} - GOV.UK Prototype Kit
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to intervention homepage</a>
+	<a href="/community/find/landing-page" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right"> Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -29,16 +29,16 @@ Confirm  Alex River's details - {{ serviceName }} - GOV.UK Prototype Kit
 				{% if data['person-identifier'] == "X123456" %}
 				<dd class="govuk-summary-list__value">X123456</dd>
 				{% else %}
-				<dd class="govuk-summary-list__value">X654321</dd>
+				<dd class="govuk-summary-list__value">X123456</dd>
 				{% endif %}
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Date of birth</dt>
-				<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
+				<dd class="govuk-summary-list__value">5 February 1991 (33 years, 1 months old)</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Ethnicity</dt>
-			  	<dd class="govuk-summary-list__value">White and Black African</dd>
+			  	<dd class="govuk-summary-list__value">White</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Gender</dt>
@@ -50,7 +50,7 @@ Confirm  Alex River's details - {{ serviceName }} - GOV.UK Prototype Kit
 	  		</div>
 	  		<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Current PDU</dt>
-				<dd class="govuk-summary-list__value">Derby City</dd>
+				<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
   			</div>
 		</dl>
 		<div class="govuk-warning-text">
@@ -59,10 +59,10 @@ Confirm  Alex River's details - {{ serviceName }} - GOV.UK Prototype Kit
 				<span class="govuk-visually-hidden">Warning</span>If this information is out of date or incorrect, you must update the information in OASys/NDelius[TBC].
 			</strong>
 		</div>
-		<p class="govuk-body">This will save a draft referral.</p>
+		<!--<p class="govuk-body">This will save a draft referral.</p>-->
 		<div class="govuk-button-group govuk-!-margin-top-8">
 			<a class="govuk-button" href="pni">Continue</a>
-			<a class="govuk-link" href="/community/find/find-programmes">Enter a different identifier</a>
+			<a class="govuk-link" href="/community/find/find-programmes">Enter a different CRN or prison number</a>
 		</div>
 		
     </div>
