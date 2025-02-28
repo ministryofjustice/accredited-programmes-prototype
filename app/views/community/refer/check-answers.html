@@ -5,13 +5,13 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/key-details-com.html" %}
+	{% include "includes/community/key-details-com.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -31,27 +31,19 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 			  	<dt class="govuk-summary-list__key">Programme name</dt>
 			  	<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
 			</div>
-			<!-- <div class="govuk-summary-list__row">
+			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Programme strand</dt>
-			  	<dd class="govuk-summary-list__value">Intimate partner violence</dd>
+			  	<dd class="govuk-summary-list__value">Sexual violence</dd>
 			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme location</dt>
-				<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
-			</div> 
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme team email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
-			</div> -->
 		</dl>
 		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
-			  	<dd class="govuk-summary-list__value">Max Freeman</dd>
+			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
 			</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">TBC</a></dd>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
 			</div>
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -163,7 +155,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						{% elseif data['provide-additional-detail'] == false %}
 						<dd class="govuk-summary-list__value">Not known</dd>
 						{% else %}
-						<dd class="govuk-summary-list__value">Del's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
+						<dd class="govuk-summary-list__value">Alex's motivation for the programme declined after the first 2 sessions due to a family bereavement.</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
 							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
@@ -188,7 +180,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		  			</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Added by</dt>
-						<dd class="govuk-summary-list__value">Tom Saunders, 11 June 2023</dd>
+						<dd class="govuk-summary-list__value">Jordan Smith, 11 June 2023</dd>
 					</div>
 			  	</dl>
 			</div>
@@ -196,13 +188,13 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-			  	<h2 class="govuk-summary-card__title">Creating better relationships</h2>
+			  	<h2 class="govuk-summary-card__title">Building better relationships</h2>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 				  		<dt class="govuk-summary-list__key">Programme name</dt>
-				  		<dd class="govuk-summary-list__value">Creating better relationships</dd>
+				  		<dd class="govuk-summary-list__value">Building better relationships</dd>
 						<dd class="govuk-summary-list__actions">
 							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Programme name</span>
@@ -296,7 +288,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 					</div>
 			  		<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Source of information</dt>
-						<dd class="govuk-summary-list__value">Spoke to COM</dd>
+						<dd class="govuk-summary-list__value">Spoke to POM</dd>
 						<dd class="govuk-summary-list__actions">
 							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Source of information</span>
@@ -305,7 +297,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		  			</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Added by</dt>
-						<dd class="govuk-summary-list__value">Tom Saunders, 11 June 2023</dd>
+						<dd class="govuk-summary-list__value">Jordan Smith, 11 June 2023</dd>
 					</div> 
 			  	</dl>
 			</div>

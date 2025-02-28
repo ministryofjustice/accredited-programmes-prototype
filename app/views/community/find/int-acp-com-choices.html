@@ -5,13 +5,12 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/head-no-nav.html" %}
+	{% include "includes/community/key-details-com.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -259,7 +258,7 @@ Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
                 </thead>
                 <tbody class="govuk-table__body">      
                   <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Brighton and East Sussex</a></td>                    
+                    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../refer/pdu-programme-details">Brighton and East Sussex</a></td>                    
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">East Kent</a></td>                   

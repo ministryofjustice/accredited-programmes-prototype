@@ -5,13 +5,12 @@ Has Alex River been convicted of a sexual offence? - {{ serviceName }} - GOV.UK 
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/head-no-nav-community.html" %}
+	{% include "includes/community/key-details-com.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -39,7 +38,7 @@ Has Alex River been convicted of a sexual offence? - {{ serviceName }} - GOV.UK 
 			<div class="govuk-form-group">
 				<div class="govuk-button-group govuk-!-margin-top-6">
 					<!-- <button class="govuk-button" data-module="govuk-button">Continue</button> -->
-					<a class="govuk-button" href="pdu-programme-details">Continue</a>
+					<a class="govuk-button" href="task-list">Continue</a>
 				</div>
 			</div>
 		</form>

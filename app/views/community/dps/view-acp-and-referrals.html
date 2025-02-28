@@ -5,16 +5,16 @@
 Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
-{% set bodyClasses = "acp-home" %}
+{% set bodyClasses = "dps-home" %}
 
 {% block header %}
-    {% include "/includes/head-dps.html" %}
+    {% include "/includes/community/head-dps.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="moj-width-container">
-    <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-7">Digital Prison Services</a>
-    <h1 class="govuk-heading-l">Accredited Programmes</h1>
+   <!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-7">Digital Prison Services</a> -->
+    <h1 class="govuk-heading-l">Interventions: refer and monitor</h1>
 </div>
 <div class="homepage-content">
     <div class="moj-width-container">
@@ -22,9 +22,9 @@ Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
             <li class="govuk-grid-column-one-third card-group__item">
                 <div class="card card--clickable">
                     <h2 class="govuk-heading-m card__heading">
-                        <a class="govuk-link card__link govuk-link--no-visited-state" href="../find/list-programmes">Find a programme and make a referral</a>
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="../find/find-programmes">Find an intervention and make a referral</a>
                     </h2>
-                    <p class="govuk-body card__description">Search for Accredited Programmes, find out where they're running and start a referral.</p>
+                    <p class="govuk-body card__description">Search for suitable interventions and start a referral.</p>
                     <p>&nbsp;</p>
                 </div>
             </li>
