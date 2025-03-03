@@ -5,7 +5,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/head-assess.html" %}
+	{% include "/includes/community/head-assess.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,15 +28,15 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			<h2 class="govuk-heading-m filters-heading">Filters</h2>
 			<div class="filter-options">
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or prison number</label>
+					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or CRN</label>
 					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
 			  	</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="programme-strand">Programme strand</label>
 					<select class="govuk-select" id="programme-strand" name="programme-strand">
 						<option value="select" selected>Select</option>
-						<option value="general-violence">General violence offence</option>
-						<option value="intimate-partner-violence">Intimate partner violence offence</option>
+						<option value="general-violence">General offence</option>
+						<option value="intimate-partner-violence">Sexual offence</option>
 					</select>
 				</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
@@ -87,12 +87,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="none">Name and prison number</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Order end date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Probation delivery unit</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">ROSH score</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Programme strand</th>
-				
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 				</tr>
 			</thead>
@@ -104,142 +103,141 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Medium</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 			  	</tr>
 				{% elseif data['referral-submitted'] == "On hold" %}
 			  	<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Medium</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
 			  	</tr>
 				{% else %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">1 Dec 2025<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Medium</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
 				{% endif %}
-
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B6789KL</td>
-					<td class="govuk-table__cell">Frankland (HMP)</td>
-					<td class="govuk-table__cell">1 Apr 2024<br />Conditional release date</td>
-					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B739123</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N6005OK</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">28 Dec 2027<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Step, Richard</a><br />L2273CK</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">1 Jan 2026<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Determinate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Step, Richard</a><br />L227390</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">Low</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jones, Matt</a><br />A1034LK</td>
-					<td class="govuk-table__cell">Stocken (HMP)</td>
-					<td class="govuk-table__cell">3 Apr 2030<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jones, Matt</a><br />A103428</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">Low</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Wright, Kevin</a><br />Z2345LL</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Wright, Kevin</a><br />Z234587</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">Surrey</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D0051ED</td>
-					<td class="govuk-table__cell">Stocken (HMP)</td>
-					<td class="govuk-table__cell">1 Jan 2026<br />Home detention curfew approved date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">Surrey</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Metcalfe, Nicholas</a><br />E7728KL</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">3 Apr 2030<br />Home detention curfew eligibility date</td>
-					<td class="govuk-table__cell">Determinate</td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Akhtar, Suhail</a><br />K2273CD</td>
-					<td class="govuk-table__cell">Erlestoke</td>
-					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F3849MK</td>
-					<td class="govuk-table__cell">Frankland (HMP)</td>
-					<td class="govuk-table__cell">1 Jan 2026<br />Tariff end date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 					</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B1234LP</td>
-					<td class="govuk-table__cell">Frankland (HMP)</td>
-					<td class="govuk-table__cell">3 Apr 2030<br />Tariff expired release scheme eligibility date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">29 Jun 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114LKA</td>
-					<td class="govuk-table__cell">Frankland (HMP)</td>
-					<td class="govuk-table__cell">15 May 2029<br />Parole eligibility date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">James, Bob</a><br />A9234LQ</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">1 Jan 2026<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate<br /><span class="moj-badge">Recall</span></td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Setto, Lukas</a><br />L0994FD</td>
-					<td class="govuk-table__cell">Stocken (HMP)</td>
-					<td class="govuk-table__cell">3 Apr 2030<br />Conditional release date</td>
-					<td class="govuk-table__cell">Indeterminate</td>
-					<td class="govuk-table__cell">Intimate partner violence offence</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Aalegra, Rema</a><br />F0394LM</td>
-					<td class="govuk-table__cell">Erlestoke (HMP)</td>
-					<td class="govuk-table__cell">15 May 2029<br />Conditional release date</td>
-					<td class="govuk-table__cell">Determinate and indeterminate</td>
-					<td class="govuk-table__cell">General violence offence</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 			</tbody>
