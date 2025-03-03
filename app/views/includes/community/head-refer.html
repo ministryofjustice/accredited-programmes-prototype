@@ -1,17 +1,10 @@
 <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if gt IE 8]><!-->
-    <link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
-    <!--<![endif]-->
-    {% for stylesheetUrl in extensionConfig.stylesheets %}
-    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
-    {% endfor %}
-    <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!-->
-    <link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
-    <!--<![endif]-->
-    {% for stylesheetUrl in extensionConfig.stylesheets %}
-    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
-    {% endfor %}
+<link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+{% for stylesheetUrl in extensionConfig.stylesheets %}
+<link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+{% endfor %}
     <header class="dps-header" role="banner">
 		<div class="dps-header__container">
 			<div class="dps-header__title">
@@ -23,13 +16,13 @@
 					</svg>
 					HMPPS
 				</a>
-				<a class="dps-header__link dps-header__title__service-name" href="#">Accredited Programmes</a>
+				<a class="dps-header__link dps-header__title__service-name" href="#">Interventions: refer and monitor</a>
 			</div>
 			<nav aria-label="Account navigation">
 				<ul class="dps-header__navigation">
 					<li class="dps-header__navigation__item">
 						<a class="dps-header__link govuk-link--no-visited-state" href="#">
-							<span>T. Saunders</span>
+							<span>J. Smith</span>
 							<span class="dps-header__link__sub-text">Manage your details</span>
 						</a>
 					</li>
