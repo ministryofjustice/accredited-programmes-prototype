@@ -1,0 +1,320 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="../dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+  	<div class="govuk-grid-column-two-thirds">
+    	<form class="form" method="post" action="#">
+        	<div class="govuk-form-group">
+        		<h1 class="govuk-heading-l">Building Choices: moderate intensity</h1> 
+        	</div>  
+        	<h2 class="govuk-heading-m govuk-!-margin-top-8">Criteria</h2>
+          	<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Gender</dt>
+					<dd class="govuk-summary-list__value">Any, depending on prison requirements</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Type</dt>
+					<dd class="govuk-summary-list__value">Accredited Programmes</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Risk criteria</dt>
+					<dd class="govuk-summary-list__value">
+						<p class="govuk-body">Medium in at least one of these areas:</p>
+						<ul class="govuk-list govuk-list--bullet">
+							<li>OGRS3 (Offender Group Reconviction Scale 3)</li>
+							<li>OVP (OASys Violence Predictor)</li>
+							<li>OSP-DC or OSP-IIC (OASys Sexual Reconviction Predictor &ndash; Contact or Indecent Imagery)</li>
+							<li>RSR (Risk of Serious Recidivism)</li>
+							<li>SARA (Spousal Assault Risk Assessment)</li>
+						</ul>
+						<p class="govuk-body">The person should not score high in any risk areas for the moderate intensity pathway.</p>
+					</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Time to complete</dt>
+					<dd class="govuk-summary-list__value">Around 10 to 13 weeks (2 to 3 sessions a week)</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Format</dt>
+					<dd class="govuk-summary-list__value">Group, one-to-one [TBC]</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Attendance type</dt>
+					<dd class="govuk-summary-list__value">In person [TBC]</dd>
+				</div>
+    		</dl>
+          	<h2 class="govuk-heading-m govuk-!-margin-top-6">Description</h2>
+          	<p class="govuk-body">Building Choices helps people to develop skills for change and future-focused goals. It is a cognitive-behavioural programme, combining group and one-to-one sessions. It develops skills such as emotion management, healthy thinking, healthy relationships, sense of purpose and healthy sex. This is the moderate intensity pathway.</p>
+          	<h2 class="govuk-heading-m govuk-!-margin-top-6">Location</h2>
+          	<p class="govuk-body">Select a community location to contact the programme team or make a referral.</p>
+			<!-- East Midlands -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">East Midlands</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Derby City</a></li>
+						<li><a class="govuk-link" href="#">Derbyshire</a></li>
+						<li><a class="govuk-link" href="#">Leicester, Leicestershire and Rutland</a></li>
+						<li><a class="govuk-link" href="#">Lincolnshire East and West</a></li>
+						<li><a class="govuk-link" href="#">Nottingham City</a></li>
+						<li><a class="govuk-link" href="#">Nottinghamshire</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- East of England -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">East of England</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Bedfordshire</a></li>
+						<li><a class="govuk-link" href="#">Cambridgeshire and Peterborough</a></li>
+						<li><a class="govuk-link" href="#">Essex North</a></li>
+						<li><a class="govuk-link" href="#">Essex South</a></li>
+						<li><a class="govuk-link" href="#">Hertfordshire</a></li>
+						<li><a class="govuk-link" href="#">Norfolk</a></li>
+						<li><a class="govuk-link" href="#">Northamptonshire</a></li>
+						<li><a class="govuk-link" href="#">Suffolk</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- Greater Manchester -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">Greater Manchester</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Bolton</a></li>
+						<li><a class="govuk-link" href="#">Bury and Rochdale</a></li>
+						<li><a class="govuk-link" href="#">Manchester North</a></li>
+						<li><a class="govuk-link" href="#">Manchester South</a></li>
+						<li><a class="govuk-link" href="#">Oldham</a></li>
+						<li><a class="govuk-link" href="#">Salford</a></li>
+						<li><a class="govuk-link" href="#">Stockport and Trafford</a></li>
+						<li><a class="govuk-link" href="#">Tameside</a></li>
+						<li><a class="govuk-link" href="#">Wigan</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- Kent, Surrey and Sussex -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">Kent, Surrey and Sussex</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="../refer/pdu-programme-details">Brighton and East Sussex</a></li>
+						<li><a class="govuk-link" href="#">East Kent</a></li>
+						<li><a class="govuk-link" href="#">Surrey</a></li>
+						<li><a class="govuk-link" href="#">West Kent</a></li>
+						<li><a class="govuk-link" href="#">West Sussex</a></li>
+					</ul> 
+				</div>
+			</details>
+
+			<!-- London -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">London</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Barking and Dagenham and Havering</a></li>
+						<li><a class="govuk-link" href="#">Brent</a></li>
+						<li><a class="govuk-link" href="#">Camden, Islington</a></li>
+						<li><a class="govuk-link" href="#">Croydon</a></li>
+						<li><a class="govuk-link" href="#">Ealing and Hillingdon</a></li>
+						<li><a class="govuk-link" href="#">Enfield and Haringey</a></li>
+						<li><a class="govuk-link" href="#">Greenwich and Bexley</a></li>
+						<li><a class="govuk-link" href="#">Hackney and City</a></li>
+						<li><a class="govuk-link" href="#">Hammersmith, Fulham, Kensington, Chelsea and Westminster</a></li>
+						<li><a class="govuk-link" href="#">Harrow and Barnet</a></li>
+						<li><a class="govuk-link" href="#">Kingston, Richmond and Hounslow</a></li>
+						<li><a class="govuk-link" href="#">Lambeth</a></li>
+						<li><a class="govuk-link" href="#">Lewisham and Bromley</a></li>
+						<li><a class="govuk-link" href="#">Newham</a></li>
+						<li><a class="govuk-link" href="#">Redbridge and Waltham Forest</a></li>
+						<li><a class="govuk-link" href="#">Southwark</a></li>
+						<li><a class="govuk-link" href="#">Tower Hamlets</a></li>
+						<li><a class="govuk-link" href="#">Wandsworth, Merton and Sutton</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- North East -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">North East</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">County Durham and Darlington</a></li>
+						<li><a class="govuk-link" href="#">Gateshead and South Tyneside</a></li>
+						<li><a class="govuk-link" href="#">Newcastle Upon Tyne</a></li>
+						<li><a class="govuk-link" href="#">North Tyneside and Northumberland</a></li>
+						<li><a class="govuk-link" href="#">Redcar, Cleveland and Middlesbrough</a></li>
+						<li><a class="govuk-link" href="#">Stockton and Hartlepool</a></li>
+						<li><a class="govuk-link" href="#">Sunderland</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- North West -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">North West</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Blackburn and Darwen</a></li>
+						<li><a class="govuk-link" href="#">Central Lancashire</a></li>
+						<li><a class="govuk-link" href="#">Cheshire East</a></li>
+						<li><a class="govuk-link" href="#">Cheshire West</a></li>
+						<li><a class="govuk-link" href="#">Cumbria</a></li>
+						<li><a class="govuk-link" href="#">East Lancashire</a></li>
+						<li><a class="govuk-link" href="#">Halton and Warrington</a></li>
+						<li><a class="govuk-link" href="#">Knowsley and St Helens</a></li>
+						<li><a class="govuk-link" href="#">Liverpool North</a></li>
+						<li><a class="govuk-link" href="#">Liverpool South</a></li>
+						<li><a class="govuk-link" href="#">North West Lancashire</a></li>
+						<li><a class="govuk-link" href="#">Sefton</a></li>
+						<li><a class="govuk-link" href="#">Wirral</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- South Central -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">South Central</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Buckinghamshire and Milton Keynes</a></li>
+						<li><a class="govuk-link" href="#">East Berkshire</a></li>
+						<li><a class="govuk-link" href="#">Hampshire North and East</a></li>
+						<li><a class="govuk-link" href="#">Oxfordshire</a></li>
+						<li><a class="govuk-link" href="#">Portsmouth and Isle of Wighth</a></li>
+						<li><a class="govuk-link" href="#">Southampton, Eastleigh and New Forest</a></li>
+						<li><a class="govuk-link" href="#">West Berkshire</a></li>
+					</ul>
+				</div>
+			</details>
+
+			<!-- South West -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">South West</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Bath and North Somerset</a></li>
+						<li><a class="govuk-link" href="#">Bristol and South Gloucestershire</a></li>
+						<li><a class="govuk-link" href="#">Cornwall and Isles of Scilly</a></li>
+						<li><a class="govuk-link" href="#">Devon and Torbay</a></li>
+						<li><a class="govuk-link" href="#">Dorset</a></li>
+						<li><a class="govuk-link" href="#">Gloucestershire</a></li>
+						<li><a class="govuk-link" href="#">Plymouth</a></li>
+						<li><a class="govuk-link" href="#">Somerset</a></li>
+						<li><a class="govuk-link" href="#">Swindon and Wiltshire</a></li>
+					</ul>        
+				</div>
+			</details>
+
+			<!-- Wales -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">Wales</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Cardiff and Vale</a></li>
+						<li><a class="govuk-link" href="#">Cwm Taf Morgannwg</a></li>
+						<li><a class="govuk-link" href="#">Dyfed Powys</a></li>
+						<li><a class="govuk-link" href="#">Gwent</a></li>
+						<li><a class="govuk-link" href="#">North Wales</a></li>
+						<li><a class="govuk-link" href="#">Swansea, Neath Port Talbot</a></li>
+					</ul>        
+				</div>
+			</details>
+
+			<!-- West Midlands -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">West Midlands</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Birmingham Central and South</a></li>
+						<li><a class="govuk-link" href="#">Birmingham North, East and Solihull</a></li>
+						<li><a class="govuk-link" href="#">Coventry</a></li>
+						<li><a class="govuk-link" href="#">Dudley and Sandwell</a></li>
+						<li><a class="govuk-link" href="#">Herefordshire, Shropshire and Telford</a></li>
+						<li><a class="govuk-link" href="#">Staffordshire and Stoke</a></li>
+						<li><a class="govuk-link" href="#">Walsall and Wolverhampton</a></li>
+						<li><a class="govuk-link" href="#">Warwickshire</a></li>
+						<li><a class="govuk-link" href="#">Worcestershire</a></li>
+					</ul>           
+				</div>
+			</details>
+
+			<!-- Yorkshire and the Humber -->
+			<details class="govuk-details govuk-!-margin-bottom-2">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">Yorkshire and the Humber</span>
+				</summary>
+				<div class="govuk-details__text">
+					<h3 class="govuk-heading-s">Probation Delivery Unit (PDU)</h3>
+					<ul class="govuk-list">
+						<li><a class="govuk-link" href="#">Barnsley and Rotherham</a></li>
+						<li><a class="govuk-link" href="#">Bradford and Calderdale</a></li>
+						<li><a class="govuk-link" href="#">Doncaster</a></li>
+						<li><a class="govuk-link" href="#">Hull and East Riding</a></li>
+						<li><a class="govuk-link" href="#">Kirklees</a></li>
+						<li><a class="govuk-link" href="#">Leeds</a></li>
+						<li><a class="govuk-link" href="#">North and North East Lincs</a></li>
+						<li><a class="govuk-link" href="#">North Yorkshire</a></li>
+						<li><a class="govuk-link" href="#">Sheffield</a></li>
+						<li><a class="govuk-link" href="#">Wakefield</a></li>
+						<li><a class="govuk-link" href="#">York</a></li>
+					</ul>             
+				</div>
+			</details>
+		</form>
+	</div>
+</div>
+<script type="module" src="/public/javascripts/gov-uk-latest.js"></script>
+{% endblock %}
