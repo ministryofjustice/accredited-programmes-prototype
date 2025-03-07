@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Has Del Hatton been convicted of a sexual offence? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Has Del Hatton been convicted of a sexual offence?</h1>
+        <form action="/redirect-bc-high-all" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend">Not all prisons can offer programmes to all people. To see a list of suitable locations, tell us whether the person you're referring has been convicted of a sexual offence.</legend>
+				  		<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high_hso_all" name="high_hso_all" type="radio" value="yes" {{ checked("high_hso_all", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hso_all">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="high_hso_all-2" name="high_hso_all" type="radio" value="no" {{ checked("high_hso_all", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="high_hso_all-2">No</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}

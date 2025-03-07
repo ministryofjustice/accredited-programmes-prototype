@@ -648,3 +648,31 @@ router.post('/sexual-offence-details-answer', function(request, response) {
         response.redirect("hsp/find/v1/b/not-eligible-for-hsp")
     }
 })
+
+/* All - Branch A (Recommended programmes (Moderate to High intensity) */
+router.post('/redirect-bc-high-all', function(request, response) {
+
+	var high_hso_all = request.session.data['high_hso_all'];//
+  
+	if (high_hso_all === "yes"){
+	  response.redirect("all/overrides/find/building-choices/building-choice-high-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("all/overrides/find/building-choices/building-choice-high-no")
+	}
+})
+
+router.post('/redirect-bc-moderate-all', function(request, response) {
+
+	var moderate_hso_all = request.session.data['moderate_hso_all'];//
+  
+	if (moderate_hso_all === "yes"){
+	  response.redirect("all/overrides/find/building-choices/building-choice-moderate-yes") // Initial redirect
+  
+	}
+	else {
+	  response.redirect("all/overrides/find/building-choices/building-choice-moderate-no")
+	}
+})
+
