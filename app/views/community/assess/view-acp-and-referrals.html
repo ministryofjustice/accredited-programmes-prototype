@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+{% set containerClasses = "moj-special-width-container" %}
+
+{% block pageTitle %}
+Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% set bodyClasses = "dps-home" %}
+
+{% block header %}
+    {% include "/includes/community/head-dps.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="moj-width-container">
+   <!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-7">Digital Prison Services</a> -->
+    <h1 class="govuk-heading-l">Interventions: refer and monitor</h1>
+</div>
+<div class="homepage-content">
+    <div class="moj-width-container">
+        <ul class="govuk-grid-row card-group govuk-!-margin-bottom-9">
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="../find/find-programmes">Find an intervention and make a referral</a>
+                    </h2>
+                    <p class="govuk-body card__description">Search for suitable interventions and start a referral.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">My referrals</a>
+                    </h2>
+                    <p class="govuk-body card__description">View draft, open and closed referrals you have made.</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="../assess/open-referrals">Manage your programme team's referrals</a>
+                    </h2>
+                    <p class="govuk-body card__description">View and update all referrals made to your programme team.</p>
+                </div>
+            </li>
+            <br />
+            <br />
+        </ul>
+    </div>
+</div>
+{% endblock %}

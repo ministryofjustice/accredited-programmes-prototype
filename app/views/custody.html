@@ -1,15 +1,16 @@
 {% extends "layouts/main.html" %}
 
+{% set serviceName %}
+Accredited Programmes: Custody
+{% endset%}
+
 {% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-three-quarters">
-		<h1 class="govuk-heading-l govuk-!-margin-bottom-8">
-			<span class="govuk-caption-l">Custody</span>{{ serviceName }}</h1>
-
-   		
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-8">{{ serviceName }}</h1>
 		<div class="govuk-tabs" data-module="govuk-tabs">
 			<h2 class="govuk-tabs__title">Contents</h2>
 			<ul class="govuk-tabs__list">
