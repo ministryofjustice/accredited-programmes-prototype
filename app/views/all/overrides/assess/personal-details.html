@@ -1,16 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/key-details-pt.html" %}
+	{% include "/includes/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="/dps/view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -19,7 +19,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
+	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
 			</div>
 			<form action="open-referrals" method="post">
 				<div class="moj-page-header-actions__actions">
@@ -37,8 +37,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
-			 	</li>
+				  <a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
@@ -58,16 +58,24 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Applicant name</dt>
-				<dd class="govuk-summary-list__value">Alex River</dd>
+				<dd class="govuk-summary-list__value">Del Hatton</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme name</dt>
-				<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
+				<dd class="govuk-summary-list__value">Becoming New Me Plus: general violence offence</dd>
 		  	</div>
 		  	<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme strand</dt>
-				<dd class="govuk-summary-list__value">Sexual offence</dd>
+				<dd class="govuk-summary-list__value">General violence offence</dd>
 		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme location</dt>
+				<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme team email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">interventions.erlestoke@justice.gov.uk</a></dd>
+			</div>
 		</dl>
 		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
 			<div class="govuk-summary-list__row">
@@ -75,12 +83,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
 			</div>
 			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
-			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
+			  	<dt class="govuk-summary-list__key">Referrer name</dt>
+			  	<dd class="govuk-summary-list__value">Jordan Smith</dd>
 			</div>
 			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
+				<dt class="govuk-summary-list__key">Referrer email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
 		</dl>
     </div>
@@ -94,8 +102,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item">
-					<a href="personal-details">Personal details</a>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="personal-details" aria-current="location">Personal details</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
 					<a href="programme-history">Programme history</a>
@@ -106,22 +114,47 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<li class="moj-side-navigation__item">
 					<a href="sentence-information">Sentence information</a>
 		  		</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="additional-information" aria-current="location">Additional information</a>
+				<li class="moj-side-navigation__item">
+					<a href="additional-information">Additional information</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Tom Saunders on 11 June 2023</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from Nomis on 1 August 2023, last updated on 4 January 2023</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Additional information</h2>
+			  		<h2 class="govuk-summary-card__title">Personal details</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<p class="govuk-!-margin-bottom-2">Alex's OASys scores show that he meets the criteria for this programme as he is a moderate risk individual who has learning needs. He also has enough time left on his order end date to complete the programme.</p>
+							<dt class="govuk-summary-list__key">Name</dt>
+							<dd class="govuk-summary-list__value">Del Hatton</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Prison number</dt>
+							<dd class="govuk-summary-list__value">D0168KE</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date of birth</dt>
+							<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Ethnicity</dt>
+							<dd class="govuk-summary-list__value">White and Black African</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Gender</dt>
+							<dd class="govuk-summary-list__value">Male</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Setting</dt>
+							<dd class="govuk-summary-list__value">Custody</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Current prison</dt>
+							<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
 						</div>
 					</dl>
 				</div>
@@ -129,4 +162,5 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</div>
 	</div>
 </div>
+
 {% endblock %}
