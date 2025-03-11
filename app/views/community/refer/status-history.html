@@ -22,7 +22,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline">
-				{% if data['add-hold-reason'] %}
+				{% if (data['submit-hold'] == "done") %}
 				<a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary govuk-!-margin-right-0">
 					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Remove hold</a>
@@ -100,7 +100,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			  	</div>
 			</div> 
 		</div>
-		{% elseif data['add-hold-reason'] %}
+		{% elseif (data['submit-hold'] == "done") %}
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -113,9 +113,9 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			  	<div class="moj-timeline__description">
 					<strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong>
 					{% if data['add-hold-reason'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> {{ data['add-hold-reason'] }}</p>
-					{% else %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Status details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['add-hold-reason'] }}</p>
+					{% elseif (data['submit-hold'] == "done") %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% endif %}
 			  	</div>
 			</div> 
