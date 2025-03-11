@@ -55,7 +55,98 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<h2 class="govuk-heading-m">Status history</h2>
-		{% if data['withdrawal-reason-category'] %}
+		{% if data['referral-submitted'] == "Awaiting assessment" %}
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong>
+			  	</div>
+			</div> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Tom Saunders</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% elseif data['referral-submitted'] == "Not eligible" %}
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--red">Not eligible</strong>
+					{% if data['add-reason-not-eligible'] %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['add-reason-not-eligible'] }}</p>
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
+			  	</div>
+			</div> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Tom Saunders</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% elseif data['referral-submitted'] == "On hold" %}
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Status update</h2>
+					<p class="moj-timeline__byline">by You</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 June 2023 at 4:12pm</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong>
+					{% if data['add-hold-reason'] %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['add-hold-reason'] }}</p>
+					{% else %}
+					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+					{% endif %}
+			  	</div>
+			</div> 
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Tom Saunders</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div> 
+		</div>
+		{% elseif data['withdrawal-reason-category'] %}
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -69,11 +160,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<strong class="govuk-tag govuk-tag--red">Withdrawn</strong>
 					{% if data['withdrawal-reason-category'] %}
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> {{ data['withdrawal-reason-category'] }}</p>
-						{% if data['add-withdrawal-reason'] %}
-						<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> {{ data['add-withdrawal-reason'] }}</p>
-						{% else %}
-						<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-						{% endif %}
+					<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					{% else %}
 					<p class="govuk-body govuk-!-margin-top-4 govuk-!-margin-bottom-1"><strong>Reason:</strong> Submitted in error</p>
 					<p class="govuk-body govuk-!-margin-top-0"><strong>Details:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
