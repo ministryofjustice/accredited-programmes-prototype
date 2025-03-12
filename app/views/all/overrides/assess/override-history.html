@@ -102,8 +102,8 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="personal-details" aria-current="location">Personal details</a>
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
 					<a href="programme-history">Programme history</a>
@@ -117,47 +117,83 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 				<li class="moj-side-navigation__item">
 					<a href="additional-information">Additional information</a>
 		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="override-history">Override decision history</a>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="override-history" aria-current="location">Override decision history</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from Nomis on 1 August 2023, last updated on 4 January 2023</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Jordan Smith on 11 June 2023</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Personal details</h2>
+					<h2 class="govuk-summary-card__title">Override decision history</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">Del Hatton</dd>
+							<p class="govuk-body">This referral overrides the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
+						</div>
+					</dl>
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Recommended pathway</dt>
+							<dd class="govuk-summary-list__value">Moderate intensity</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Prison number</dt>
-							<dd class="govuk-summary-list__value">D0168KE</dd>
+							<dt class="govuk-summary-list__key">Requested pathway</dt>
+							<dd class="govuk-summary-list__value">High intensity</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date of birth</dt>
-							<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
+							<dt class="govuk-summary-list__key">Reason given by referrer</dt>
+							{% if data['recommend-why-referral'] %}
+							<dd class="govuk-summary-list__value">{{ data['recommend-why-referral'] }}</dd>
+							{% else %}
+							<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
+							{% endif %}
+						</div>
+						{% if data['reasons-override'] %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Treatment manager decision</dt>
+							{% if data['reasons-override'] %}
+							<dd class="govuk-summary-list__value">{{ data['reasons-override'] }}</dd>
+							{% else %}
+							<dd class="govuk-summary-list__value">There is not enough time to complete a high intensity programme so the person should complete a moderate intensity programme.</dd>
+							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Ethnicity</dt>
-							<dd class="govuk-summary-list__value">White and Black African</dd>
+							<dt class="govuk-summary-list__key">Treatment manager notes</dt>
+							{% if data['reason-override-suitable'] %}
+							<dd class="govuk-summary-list__value">{{ data['reason-override-suitable'] }}</dd>
+							{% else %}
+							<dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</dd>
+							{% endif %}
+						</div>
+						{% else %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Treatment manager decision</dt>
+							<dd class="govuk-summary-list__value">&nbsp;</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Gender</dt>
-							<dd class="govuk-summary-list__value">Male</dd>
+							<dt class="govuk-summary-list__key">Treatment manager notes</dt>
+							<dd class="govuk-summary-list__value">&nbsp;</dd>
 						</div>
+						{% endif %}
+					</dl>
+				</div>
+			</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Additional information</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">Custody</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Current prison</dt>
-							<dd class="govuk-summary-list__value">Erlestoke (HMP)</dd>
+							{% if data['additional-information'] %}
+							<p class="govuk-!-margin-bottom-2">{{ data['additional-information'] }}</p>
+							{% else %}
+							<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+							{% endif %}
 						</div>
 					</dl>
 				</div>
@@ -165,5 +201,4 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 		</div>
 	</div>
 </div>
-
 {% endblock %}

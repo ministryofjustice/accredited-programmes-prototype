@@ -148,7 +148,11 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Reason given by referrer</dt>
+							{% if data['recommend-why-referral'] %}
+							<dd class="govuk-summary-list__value">{{ data['recommend-why-referral'] }}</dd>
+							{% else %}
 							<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
+							{% endif %}
 						</div>
 					</dl>
 					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -176,7 +180,11 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
+							{% if data['additional-information'] %}
+							<p class="govuk-!-margin-bottom-2">{{ data['additional-information'] }}</p>
+							{% else %}
 							<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+							{% endif %}
 						</div>
 					</dl>
 				</div>

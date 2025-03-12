@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
+Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -19,15 +19,14 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Becoming New Me Plus</h1>
+	  			<h1 class="govuk-heading-l">Referral to Building Choices: high intensity</h1>
 			</div>
-			<form action="#" method="post">
+			<form action="open-referrals" method="post">
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
-						<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
-						<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Put on hold</a>
-						<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Withdraw referral</a>
-					</div>
+					  <a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+					  <a href="update-status" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  	</div>
 				</div>
 			</form>
  		</div>
@@ -37,17 +36,17 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 				</li>
 			</ul>
 		</nav>
@@ -63,11 +62,11 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme name</dt>
-				<dd class="govuk-summary-list__value">Becoming New Me Plus: general violence offence</dd>
+				<dd class="govuk-summary-list__value">Building Choices: high - sexual offence</dd>
 		  	</div>
 		  	<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme strand</dt>
-				<dd class="govuk-summary-list__value">General violence offence</dd>
+				<dd class="govuk-summary-list__value">Sexual offence</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme location</dt>
@@ -91,10 +90,6 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Referrer contact number</dt>
-				<dd class="govuk-summary-list__value">01380 814250</dd>
-			</div>
 		</dl>
     </div>
 </div>
@@ -108,69 +103,93 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 				<li class="moj-side-navigation__item">
-					<a href="#">Personal details</a>
+					<a href="personal-details">Personal details</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
-					<a href="#">Programme history</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Offence history</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Sentence information</a>
+					<a href="programme-history">Programme history</a>
 		  		</li>
 				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="#" aria-current="location">Additional information</a>
+					<a href="offence-history" aria-current="location">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="sentence-information">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="additional-information">Additional information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="override-history">Override decision history</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Jordan Smith on 11 June 2023</div>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from OASys on 1 August 2023, last updated on 1 November 2022</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-					<h2 class="govuk-summary-card__title">Reason why the referral does not match the PNI</h2>
+					<h2 class="govuk-summary-card__title">Index offence</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
-						</div>
-					</dl>
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Recommended pathway</dt>
-							<dd class="govuk-summary-list__value">Moderate intensity</dd>
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Publishing or causing to be published a tobacco advertisement - 09144</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Requested pathway</dt>
-							<dd class="govuk-summary-list__value">High intensity</dd>
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Public Health Offences</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Reason given by referrer</dt>
-							<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
-						</div>
-					</dl>
-					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<p class="govuk-body govuk-!-margin-bottom-2">The person has been assessed as not eligible by the Treatment Manager.</p>
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">11 June 2020</dd>
 						</div>
 					</dl>
 				</div>
 			</div>
+
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Additional information</h2>
+					<h2 class="govuk-summary-card__title">Additional offence (08000)</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody - 08000</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">18 January 2013</dd>
 						</div>
 					</dl>
 				</div>
-		 	</div>
+			</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+					<h2 class="govuk-summary-card__title">Additional offence (08000)</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Class unspecified - permitting premises to be used - 09329</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Permitting premises to be used for unlawful (drug-related) purposes</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">23 September 2000</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

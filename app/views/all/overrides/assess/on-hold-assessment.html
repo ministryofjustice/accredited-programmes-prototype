@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Put referral on hold: assessment not completed - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pt.html" %}	
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="#" method="post">
+			<h1 class="govuk-heading-l">Put referral on hold: assessment not completed</h1>
+			<p class="govuk-body">If you put a referral on hold, it will not progress until it is removed from hold.</p>
+			<h2 class="govuk-heading-m">Current status</h2>
+			<div class="moj-timeline">
+				<div class="moj-timeline__item">
+					<div class="moj-timeline__header">
+						<h2 class="moj-timeline__title">Status update</h2>
+						<p class="moj-timeline__byline">by You</p>
+					</div>
+					<p class="moj-timeline__date">
+						<time datetime="2023-07-07T16:25:00.000Z">7 July 2023 at 4:25pm</time>
+					</p>
+					<div class="moj-timeline__description">
+						<strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
+					</div>
+				</div>
+			</div>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			<h2 class="govuk-heading-m govuk-!-margin-top-7">Give a reason</h2>
+			<p class="govuk-body">You must give a reason for putting this referral on hold.</p>
+			<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+				<div class="govuk-form-group">
+				  	<h3 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--s" for="add-hold-reason">Add reason</label>
+				  	</h3>
+				  	<textarea class="govuk-textarea govuk-js-character-count" id="add-hold-reason" name="add-hold-reason" rows="12" aria-describedby="add-hold-reason-info">{{ data['add-hold-reason'] }}</textarea>
+				</div>
+				<div id="add-hold-reason-info" class="govuk-hint govuk-character-count__message">You have 500 characters remaining</div>
+			</div> 
+			<div class="govuk-warning-text">
+				<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+				<strong class="govuk-warning-text__text">
+				  <span class="govuk-visually-hidden">Warning</span>Submitting this will pause the referral.</strong>
+			</div>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+				<a class="govuk-link" href="#">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
