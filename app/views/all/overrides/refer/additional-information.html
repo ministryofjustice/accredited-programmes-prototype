@@ -150,9 +150,18 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 							<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
 							{% endif %}
 						</div>
+					</dl>
+					{% if data['reasons-override'] %}
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<p class="govuk-body govuk-!-margin-top-2 govuk-!-margin-bottom-2">The person has been assessed as suitable by the Treatment Manager:</p>
+						</div>
+					</dl>
+					<dl class="govuk-summary-list">
 						{% if data['reasons-override'] %}
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Treatment manager decision</dt>
+							<dt class="govuk-summary-list__key">Reason for accepting referral</dt>
 							{% if data['reasons-override'] %}
 							<dd class="govuk-summary-list__value">{{ data['reasons-override'] }}</dd>
 							{% else %}
@@ -160,7 +169,7 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Treatment manager notes</dt>
+							<dt class="govuk-summary-list__key">Treatment manager decision details</dt>
 							{% if data['reason-override-suitable'] %}
 							<dd class="govuk-summary-list__value">{{ data['reason-override-suitable'] }}</dd>
 							{% else %}
@@ -169,15 +178,16 @@ Referral to Building Choices: high intensity - {{ serviceName }} - GOV.UK Protot
 						</div>
 						{% else %}
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Treatment manager decision</dt>
+							<dt class="govuk-summary-list__key">Reason for accepting referral</dt>
 							<dd class="govuk-summary-list__value">&nbsp;</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Treatment manager notes</dt>
+							<dt class="govuk-summary-list__key">Treatment manager decision details</dt>
 							<dd class="govuk-summary-list__value">&nbsp;</dd>
 						</div>
 						{% endif %}
 					</dl>
+					{% endif %}
 				</div>
 			</div>
 			<div class="govuk-summary-card">
