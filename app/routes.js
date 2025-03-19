@@ -683,7 +683,7 @@ router.post('/all/overrides/assess/update-status', function (req, res) {
 			res.redirect('on-hold-assessment')
 		} 
 		else if (assessedSuitable == 'Assessed as suitable and ready to continue') {
-			res.redirect('suitable-ready-continue')
+			res.redirect('reason-why-no-match-pni')
 		}
 		else if (assessedSuitable == 'Assessed as suitable but not ready') {
 			res.redirect('suitable-not-ready')
