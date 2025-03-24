@@ -53,15 +53,10 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
-			<!-- <div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Referrer contact number</dt>
-				<dd class="govuk-summary-list__value">01380 814250</dd>
-			</div> -->
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-		<h2 class="govuk-heading-m">Sexual offence details</h2>
-
 		{% if data['sexual_offence_details'] %}
+		<h2 class="govuk-heading-m">Sexual offence details</h2>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Offences against someone aged under 18</h2>
@@ -84,47 +79,10 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 		{% else %}
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Offences against someone aged under 18</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<p class="govuk-!-margin-bottom-2">No information to display.</p>
-					</div>
-				</dl>
-			</div>
-		</div>
-
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Sexual offences that include violence, force or humiliation</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<p class="govuk-!-margin-bottom-2">No information to display.</p>
-					</div>
-				</dl>
-			</div>
-		</div>
-
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Other sexual offences</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<p class="govuk-!-margin-bottom-2">No information to display.</p>
-					</div>
-				</dl>
-			</div>
-		</div>
+		<!-- Nothing to display as no checkboxess were selected -->
 		{% endif %}
 
-		<!-- <h2 class="govuk-heading-m">Reason for referral to HSP</h2> -->
+		<h2 class="govuk-heading-m">Reason for referral to HSP</h2>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Reason for referring this person to HSP</h2>
