@@ -19,8 +19,7 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Sexual offence details</h1>
-		<p class="govuk-body">To check eligibility for a referral to Healthy Sex Programme (HSP), give more details about Del Hatton's sexual offence.</p>
-		<p class="govuk-body">Do any of these statements apply to their sexual offences?</p>
+		<p class="govuk-body">To check eligibility for a referral to Healthy Sex Programme (HSP), give more details about Del Hatton's sexual offending.</p>
 		<p class="govuk-body">Include:</p>
 		<ul class="govuk-list govuk-list--bullet">
 			<li>previous convictions as well as the index offence</li>
@@ -32,13 +31,13 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 		</ul>
 		<p class="govuk-body">Do not include unproved or overturned allegations.</p>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Do any of these statements apply to their sexual offences?</h2>
 		<form action="/sexual-offence-details-answer-v2" method="post">
-
 			<div id="one-reason-hint" class="govuk-hint">Select all that apply.</div>
 			<!-- Sexual offences against someone aged under 18 -->
 			<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
-				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					<h2 class="govuk-fieldset__heading">Sexual offences against someone aged under 18</h2>
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+					<h3 class="govuk-fieldset__heading">Sexual offences against someone aged under 18</h3>
 				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
@@ -56,10 +55,12 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-4" name="sexual_offence_details" type="checkbox" value="A victim outside the family aged 15 or younger" {{ checked("sexual_offence_details", "A victim outside the family aged 15 or younger") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-4">A victim outside the family aged 15 or younger</label>
+						<div id="victims-hint" class="govuk-hint govuk-checkboxes__hint">Include victims who are not the son, daughter, stepson, stepdaughter, nephew, niece, grandchild or first cousin</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-5" name="sexual_offence_details" type="checkbox" value="Possessing indecent images of under-18s" {{ checked("sexual_offence_details", "Possessing indecent images of under-18s") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-5">Possessing indecent images of under-18s</label>
+						<div id="photos-hint" class="govuk-hint govuk-checkboxes__hint">Images showing someone who is or appears to be under 18, in a sexually suggestive pose, in sexual conduct with another person, or that are sexually explicit. This includes visual and non-visual depictions of real children and depictions of fictional children.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-6" name="sexual_offence_details" type="checkbox" value="Self-reported sexual attraction to under-18s" {{ checked("sexual_offence_details", "Self-reported sexual attraction to under-18s") }}>
@@ -70,13 +71,14 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 
 			<!-- Sexual offences that include violence, force or humiliation -->
 			<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
-				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					<h2 class="govuk-fieldset__heading">Sexual offences that include violence, force or humiliation</h2>
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+					<h3 class="govuk-fieldset__heading">Sexual offences that include violence, force or humiliation</h3>
 				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-7" name="sexual_offence_details" type="checkbox" value="At least one conviction for a coercive sexual offence" {{ checked("sexual_offence_details", "At least one conviction for a coercive sexual offence") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-7">At least one conviction for a coercive sexual offence</label>
+						<div id="sexual-hint" class="govuk-hint govuk-checkboxes__hint">Sexual activity without consent, or if consent has been forcefully gained, tricked, pressured or manipulated, or if consent cannot be freely and knowingly given, for example because of sleep, drugs or alcoholic incapacitation</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-8" name="sexual_offence_details" type="checkbox" value="More than one conviction for a coercive sexual offence against 3 or more separate victims" {{ checked("sexual_offence_details", "More than one conviction for a coercive sexual offence against 3 or more separate victims") }}>
@@ -85,14 +87,17 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-9" name="sexual_offence_details" type="checkbox" value="Mutilated parts of the victim's body" {{ checked("sexual_offence_details", "Mutilated parts of the victim's body") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-9">Mutilated parts of the victim's body</label>
+						<div id="actions-hint" class="govuk-hint govuk-checkboxes__hint">Actions that injure, disfigure, or make imperfect by removing or irreparably damaging a body part</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-10" name="sexual_offence_details" type="checkbox" value="Tortured or engaged in acts of cruelty to the victim" {{ checked("sexual_offence_details", "Tortured or engaged in acts of cruelty to the victim") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-10">Tortured or engaged in acts of cruelty to the victim</label>
+						<div id="deliberate-hint" class="govuk-hint govuk-checkboxes__hint">Deliberately inflicting severe pain or suffering for sexual pleasure. This does not include safe BDSM practice with a consenting partner.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-11" name="sexual_offence_details" type="checkbox" value="Gratuitous violence or wounding toward the victim" {{ checked("sexual_offence_details", "Gratuitous violence or wounding toward the victim") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-11">Gratuitous violence or wounding toward the victim</label>
+						<div id="additional-hint" class="govuk-hint govuk-checkboxes__hint">Additional violence or force not needed to gain victim compliance. 'Wounding' is an intentional injury that breaks the skin, with or without using a weapon.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-12" name="sexual_offence_details" type="checkbox" value="Kept records or trophies (for example hair, underwear, ID)" {{ checked("sexual_offence_details", "Kept records or trophies (for example hair, underwear, ID)") }}>
@@ -101,10 +106,12 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-13" name="sexual_offence_details" type="checkbox" value="Victim was abducted or confined" {{ checked("sexual_offence_details", "Victim was abducted or confined") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-13">Victim was abducted or confined</label>
+						<div id="force-hint" class="govuk-hint govuk-checkboxes__hint">Forcing or threatening a victim to go with them or taking them away against their will. 'Confined' means keeping them in an enclosed space with limited or restricted movement or ability to leave.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-14" name="sexual_offence_details" type="checkbox" value="Evidence of ritualism in the offence" {{ checked("sexual_offence_details", "Evidence of ritualism in the offence") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-14">Evidence of ritualism in the offence</label>
+						<div id="fixed-hint" class="govuk-hint govuk-checkboxes__hint">Fixed actions or words, performed in a specific way</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-15" name="sexual_offence_details" type="checkbox" value="Objects inserted into bodily orifices" {{ checked("sexual_offence_details", "Objects inserted into bodily orifices") }}>
@@ -123,33 +130,39 @@ Sexual offence details - {{ serviceName }} - GOV.UK Prototype Kit
 
 			<!-- Other sexual offences -->
 			<fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="contact-hint">
-				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					<h2 class="govuk-fieldset__heading">Other sexual offences</h2>
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+					<h3 class="govuk-fieldset__heading">Other sexual offences</h3>
 				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details" name="sexual_offence_details" type="checkbox" value="Exhibitionism" {{ checked("sexual_offence_details", "Exhibitionism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details">Exhibitionism</label>
+						<div id="exposing-hint" class="govuk-hint govuk-checkboxes__hint">Exposing genitals to an unsuspecting person for sexual gratification</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-2" name="sexual_offence_details" type="checkbox" value="Frotteurism" {{ checked("sexual_offence_details", "Frotteurism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-2">Frotteurism</label>
+						<div id="touching-hint" class="govuk-hint govuk-checkboxes__hint">Touching or rubbing (usually genitals) against someone in a sexual manner without their consent</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-3" name="sexual_offence_details" type="checkbox" value="Intercourse with an animal" {{ checked("sexual_offence_details", "Intercourse with an animal") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-3">Intercourse with an animal</label>
+						<div id="sexual-act-hint" class="govuk-hint govuk-checkboxes__hint">A sexual act with an animal. Indecent images only count if the person is involved in the image.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-4" name="sexual_offence_details" type="checkbox" value="Sexual murder" {{ checked("sexual_offence_details", "Sexual murder") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-4">Sexual murder</label>
+						<div id="murder-hint" class="govuk-hint govuk-checkboxes__hint">Murder that contains a sexual element. For example, sexual acts before, during or after the murder, leaving the body in a state of undress or taking underwear.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-5" name="sexual_offence_details" type="checkbox" value="Sexual penetration of a corpse" {{ checked("sexual_offence_details", "Sexual penetration of a corpse") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-5">Sexual penetration of a corpse</label>
+						<div id="sexual-act-corpse-hint" class="govuk-hint govuk-checkboxes__hint">A sexual act with a dead body. Indecent images only count if the person is involved in the image.</div>
 					</div>
 					<div class="govuk-checkboxes__item">
 						<input class="govuk-checkboxes__input" id="sexual-offence-details-6" name="sexual_offence_details" type="checkbox" value="Voyeurism" {{ checked("sexual_offence_details", "Voyeurism") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="sexual-offence-details-6">Voyeurism</label>
+						<div id="watch-hint" class="govuk-hint govuk-checkboxes__hint">Watching an unaware or unconsenting person when they are naked or engaged in sexual activity</div>
 					</div>
 				</div>
 			</fieldset>
