@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Motivation - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/key-details-pom.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Motivation</h1>
+		<form action="additional-information" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Does the person maintain their innocence?</h2>
+					</legend>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="innocence" name="innocence" type="radio" value="yes" {{ checked("innocence", "yes") }}>
+							<label class="govuk-label govuk-radios__label" for="innocence">Yes</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="innocence-2" name="innocence" type="radio" value="no" {{ checked("innocence", "no") }}>
+							<label class="govuk-label govuk-radios__label" for="innocence-2">No</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="govuk-fieldset govuk-!-margin-top-8" aria-describedby="motivation-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h2 class="govuk-fieldset__heading">Is the person motivated to participate in an Accredited Programme?</h2>
+					</legend>
+					<p class="govuk-body">This includes:</p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>engaging with the assessment process</li>
+						<li>being motivated to address their thinking or behaviour, even if they maintain their innocence</li>
+					</ul>
+					<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
+						<textarea class="govuk-textarea govuk-js-character-count" id="motivation-information" name="motivation-information" rows="10" aria-describedby="motivation-information-info"></textarea>
+						<div id="motivation-information-info" class="govuk-hint govuk-character-count__message">You can enter up to 4000 characters</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+					<a class="govuk-link" href="task-list?referral-information-three=inprogress&">Cancel</a>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
