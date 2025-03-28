@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirm  Alex River's details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right"> Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Confirm Alex River's details</h1>
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Name</dt>
+				<dd class="govuk-summary-list__value">Alex River</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">CRN</dt>
+				{% if data['person-identifier'] == "X123456" %}
+				<dd class="govuk-summary-list__value">X123456</dd>
+				{% else %}
+				<dd class="govuk-summary-list__value">X123456</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Date of birth</dt>
+				<dd class="govuk-summary-list__value">5 February 1991 (33 years, 1 months old)</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Ethnicity</dt>
+			  	<dd class="govuk-summary-list__value">White</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Gender</dt>
+				<dd class="govuk-summary-list__value">Male</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Setting</dt>
+				<dd class="govuk-summary-list__value">Community</dd>
+	  		</div>
+	  		<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Probation delivery unit</dt>
+				<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
+  			</div>
+		</dl>
+		<div class="govuk-warning-text">
+			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+			<strong class="govuk-warning-text__text">
+				<span class="govuk-visually-hidden">Warning</span>If this information is out of date or incorrect, you must update the information in NDelius.
+			</strong>
+		</div>
+		<div class="govuk-button-group govuk-!-margin-top-8">
+			<a class="govuk-button" href="pni">Continue</a>
+			<a class="govuk-link" href="/community/find/find-programmes">Enter a different CRN or prison number</a>
+		</div>
+		
+    </div>
+</div>
+
+{% endblock %}

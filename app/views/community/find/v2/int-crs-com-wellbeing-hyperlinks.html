@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+North Yorkshire: Dependency and Recovery activities - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row clear">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" method="post" action="#">
+          <div class="govuk-form-group">
+            <!--<span class="govuk-caption-l">Alex River (CRN: X123456)</span>-->
+            <h1 class="govuk-heading-l">North Yorkshire: Dependency and Recovery activities</h1> 
+          </div>  
+
+          <p class="govuk-body">Activity sessions are available to any adult men on probation in the following locations: </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Harrogate</li>
+            <li>Northallerton</li>
+            <li>Scarborough</li>
+            <li>Skipton</li>
+            <li>York</li>
+          </ul>
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-8">One-to-one or group sessions</h2>
+          <p class="govuk-body">The following activities are available as a one-to-one or group session:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Addressing harmful or negative relationships</li>
+            <li>Alcohol Brief intervention</li>
+            <li>Arts activities</li>
+            <li>Departure Lounges (where available)</li>
+            <li>Digital Inclusion</li>
+            <li>Diversion</li>
+            <li>Drinking and Me</li>
+            <li>Health Trainer or Health Champion support</li>
+            <li>Hope in Recovery</li>
+            <li>Ingeus Academy</li>
+            <li>Managing-Me</li>
+            <li>Map of Me</li>
+            <li>Me and My Emotions</li>
+            <li>Sports activities</li>
+            <li>Trigger Rehearsal</li>
+            <li>Understanding cravings</li>
+            <li>Geese Theatre: “USED” (group session only)</li>
+          </ul>
+          
+          <h2 class="govuk-heading-m govuk-!-margin-top-8">One-to-one sessions</h2>
+          <p class="govuk-body govuk-!-margin-top-6">The following activities are available as one-to-one sessions:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>ABEI</li>
+            <li>Breaking Free Online</li>
+            <li>Co-ordinate</li>
+            <li>Drink Coach</li>
+            <li>Engage with other Probation service providers</li>
+            <li>Getting To Know You</li>
+            <li>Guided Recovery Journaling</li>
+            <li>Inside Out</li>
+            <li>Keeping Me Safe</li>
+            <li>Link-it</li>
+            <li>Make Time Count</li>
+            <li>Mutual aid</li>
+            <li>My Choices</li>
+            <li>Navigate from the Gate</li>
+            <li>Out-of-hours service for crisis-management</li>
+            <li>Pathways to Change</li>
+            <li>Plotting the Course</li>
+            <li>Re-Engage</li>
+            <li>Satnav</li>
+          </ul>
+         
+          <h2 class="govuk-heading-m govuk-!-margin-top-8">Group sessions </h2>
+          <p class="govuk-body govuk-!-margin-top-6">The activity Geese Theatre: “USED” is offered as a group session. </p>
+
+
+          <!-- {{ govukButton({
+            text: 'Continue'
+          }) }} -->
+
+          <div class="govuk-button-group">
+            <!--<a href="#" class="govuk-button">
+              Make a referral
+            </a> 
+            <a href="#" class="govuk-button govuk-button--secondary">
+              Copy a link to this intervention
+            </a>-->
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/public/javascripts/gov-uk-latest.js"></script>
+
+{% endblock %}
