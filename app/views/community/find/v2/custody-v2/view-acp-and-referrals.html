@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+{% set containerClasses = "moj-special-width-container" %}
+
+{% block pageTitle %}
+Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% set bodyClasses = "acp-home" %}
+
+{% block header %}
+    {% include "/includes/head-dps.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="moj-width-container">
+    <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="govuk-notification-banner govuk-!-margin-bottom-1" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Important</h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">Rolling out the referral service</p>
+                    <p class="govuk-body" style="max-width: 100%">This is a new service. While we're rolling it out, referrers can only use it to<br />refer people to Accredited Programmes at a few prisons. At the moment, you can refer to:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Drake Hall (HMP & YOI)</li>
+                        <li>Fosse Way (HMP & YOI)</li>
+                        <li>Long Lartin (HMP)</li>
+                        <li>Onley (HMP)</li>
+                        <li>Peterborough Female (HMP & YOI)</li>
+                        <li>Peterborough (HMP & YOI)</li>
+                        <li>Stocken (HMP)</li>
+                        <li>Whatton (HMP)</li>
+                    </ul>
+                    <p class="govuk-body">You can still refer to other prisons using your usual process.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-7">Digital Prison Services</a>
+    <h1 class="govuk-heading-l">Interventions</h1>
+</div>
+<div class="homepage-content">
+    <div class="moj-width-container">
+        <ul class="govuk-grid-row card-group govuk-!-margin-bottom-9">
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="find-programmes">Find a programme and make a referral</a>
+                    </h2>
+                    <p class="govuk-body card__description">Check recommended programmes based on risks and needs, and start a referral.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">My referrals</a>
+                    </h2>
+                    <p class="govuk-body card__description">View draft, open and closed referrals you have made.</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Manage your programme team's referrals</a>
+                    </h2>
+                    <p class="govuk-body card__description">View and update all referrals made to your programme team.</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Reporting data</a>
+                    </h2>
+                    <p class="govuk-body card__description">See data about Accredited Programmes.</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Quality assurance data</a>
+                    </h2>
+                    <p class="govuk-body card__description">See information about programme pathways and overrides.</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </li>
+        </ul>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+        <div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
+    </div>
+</div>
+{% endblock %}
