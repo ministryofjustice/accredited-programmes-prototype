@@ -126,38 +126,6 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	<div class="govuk-grid-column-three-quarters">
 		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Jordan Smith on 11 June 2023</div>
-
-
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Reason why the referral does not match the PNI</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
-					</div>
-				</dl>
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Recommended pathway</dt>
-						<dd class="govuk-summary-list__value">Moderate intensity</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Requested pathway</dt>
-						<dd class="govuk-summary-list__value">High intensity</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Reason given by referrer</dt>
-						{% if data['override-reason'] %}
-						<dd class="govuk-summary-list__value">{{ data['override-reason'] }}</dd>
-						{% else %}
-						<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
-						{% endif %}
-					</div>
-				</dl>
-			</div>
-		</div>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Motivation</h2>
@@ -165,7 +133,7 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Maintains innocence</dt>
+				  		<dt class="govuk-summary-list__key">Maintains innocence</dt>
 						{% if data['innocence'] %}
 				  		<dd class="govuk-summary-list__value">{{ data['innocence'] }}</dd>
 						{% else %}
@@ -192,11 +160,7 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						{% if data['provide-additional-information'] == false %}
 						<p class="govuk-!-margin-bottom-2">No information provided.</p>
-						{% else %}
-						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
-						{% endif %}
 					</div>
 				</dl>
 			</div>

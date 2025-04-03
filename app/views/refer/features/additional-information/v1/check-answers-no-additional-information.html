@@ -53,10 +53,6 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<dt class="govuk-summary-list__key">Referrer email address</dt>
 				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">jordan.smith@justice.gov.uk</a></dd>
 			</div>
-			<!-- <div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Referrer contact number</dt>
-				<dd class="govuk-summary-list__value">01380 814250</dd>
-			</div> -->
 		</dl>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 		<h2 class="govuk-heading-m">Person being referred</h2>
@@ -344,7 +340,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Yes</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="motivation?camefromcheckanswers=true&">
+							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Maintains innocence</span>
 							</a>
 						</dd>
@@ -359,7 +355,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 							{% endif %}
 						</dd>
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="motivation?camefromcheckanswers=true&">
+							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Motivation to participate in an Accredited Programme</span>
 							</a>
 						</dd>
@@ -372,18 +368,14 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<h2 class="govuk-summary-card__title">Additional information</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="additional-information?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Additional information</span></a>
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional information</span></a>
 					</li>
 			  	</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						{% if data['provide-additional-information'] == false %}
 						<p class="govuk-!-margin-bottom-2">No information provided.</p>
-						{% else %}
-						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
-						{% endif %}
 					</div>
 				</dl>
 			</div>
@@ -401,7 +393,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Submit referral</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="task-list">Return to task list</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Return to task list</button>
 			</div>
 		</form>
 	</div>

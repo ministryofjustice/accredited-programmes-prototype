@@ -332,6 +332,44 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Additional information</h2>
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Reason why the referral does not match the PNI</h2>
+				<!-- <ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="not-recommended?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Reason why the referral does not match the PNI</span></a>
+					</li>
+			  	</ul> -->
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-body">This referral does not match the recommendation based on the risk and programme needs identifier (PNI) scores.</p>
+					</div>
+				</dl>
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Recommended pathway</dt>
+						<dd class="govuk-summary-list__value">Moderate intensity</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Requested pathway</dt>
+						<dd class="govuk-summary-list__value">High intensity</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Reason given by referrer</dt>
+						{% if data['override-reason'] %}
+						<dd class="govuk-summary-list__value">{{ data['override-reason'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Del Hatton had a PNA in October. That showed high need in Attitude and Self-management and high/medium need in Relationships.</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="not-recommended?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Reason why the referral does not match the PNI</span></a>
+						</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Motivation</h2>
 			</div>
 			<div class="govuk-summary-card__content">
@@ -344,7 +382,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Yes</dd>
 						{% endif %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="motivation?camefromcheckanswers=true&">
+							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Maintains innocence</span>
 							</a>
 						</dd>
@@ -359,7 +397,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 							{% endif %}
 						</dd>
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="motivation?camefromcheckanswers=true&">
+							<a class="govuk-link" href="#">
 							  Change<span class="govuk-visually-hidden"> Motivation to participate in an Accredited Programme</span>
 							</a>
 						</dd>
@@ -372,18 +410,14 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 				<h2 class="govuk-summary-card__title">Additional information</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="additional-information?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Additional information</span></a>
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Additional information</span></a>
 					</li>
 			  	</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						{% if data['provide-additional-information'] == false %}
 						<p class="govuk-!-margin-bottom-2">No information provided.</p>
-						{% else %}
-						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
-						{% endif %}
 					</div>
 				</dl>
 			</div>
@@ -401,7 +435,7 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Submit referral</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="task-list">Return to task list</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Return to task list</button>
 			</div>
 		</form>
 	</div>

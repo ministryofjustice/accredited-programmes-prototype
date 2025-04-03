@@ -153,9 +153,6 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</dl>
 			</div>
 		</div>
-		{% if data['provide-additional-information'] == false %}
-		<!-- Empty -->
-		{% else %}
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Additional information</h2>
@@ -163,8 +160,8 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-						{% if data['provide-additional-information'] %}
-						<p class="govuk-!-margin-bottom-2">{{ data['provide-additional-information'] }}</p>
+						{% if data['provide-additional-information'] == false %}
+						<p class="govuk-!-margin-bottom-2">No information provided.</p>
 						{% else %}
 						<p class="govuk-!-margin-bottom-2">Del's OASys scores show that he meets the criteria for this programme as he is a high risk individual who has learning needs. He also has enough time left on his sentence to complete the programme.</p>
 						{% endif %}
@@ -172,7 +169,6 @@ Referral to Becoming New Me Plus - {{ serviceName }} - GOV.UK Prototype Kit
 				</dl>
 			</div>
 		</div>
-		{% endif %}
 	</div>
 </div>
 {% endblock %}
