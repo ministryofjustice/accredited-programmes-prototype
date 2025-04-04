@@ -1,8 +1,245 @@
 
 <!DOCTYPE html>
 <html lang="en-gb" xmlns="http://www.w3.org/1999/xhtml">
-    <style>
-        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+<style>
+:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
@@ -127,7 +364,11 @@ element.style {
     margin-top: 0;
     padding: 5px 0px 5px 30px;
     font-weight: bold;
-    background: url(/../../../accredited-programmes-prototype/app/assets/images/info-icon24.png) left center no-repeat;
+    background: url(/public/images/info-icon24.png) left center no-repeat;
+}
+
+.expandIcon.collapsed {
+    content: url(/public/images/expand.gif);
 }
 
 h2 {
@@ -214,6 +455,7 @@ a {
 .linkWrapper div {
     padding-bottom: 12px;
 }
+
 
 @media (min-width: 576px) {
     .col-sm-4 {
@@ -381,43 +623,51 @@ hr {
     overflow: hidden;
 }
     </style>
-    <link rel="shortcut icon" type="image/x-icon" href="/NDelius-war/delius/javax.faces.resource/images/favicon.ico" /><head id="j_idt2">
-            <title>National Delius Home Page</title><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/bootstrap/bootstrap.min.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/jquery-ui/jquery-ui.min.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-overview.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-navigation.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-training.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/fontawesome/css/font-awesome.min.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-jquery-ui.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/homepage.css" /><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/jsf.js?ln=javax.faces"></script></head><body onload="renderURLsHomepageMaintenanceBanner()" style="background: #fff; margin: 0 20px;padding-top: 0;">
-<form id="homepageForm" name="homepageForm" method="post" action="/NDelius-war/delius/JSP/homepage.xhtml" enctype="application/x-www-form-urlencoded" role="dialog">
-<input type="hidden" name="homepageForm" value="homepageForm" />
+    <link rel="shortcut icon" type="image/x-icon" href="#" /><head id="j_idt2">
+        <title>National Delius Home Page</title>
+       <!-- <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/bootstrap/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/jquery-ui/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-overview.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-navigation.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-training.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/fontawesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-jquery-ui.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/homepage.css" />
+        <script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/jsf.js?ln=javax.faces"></script>-->
+        </head>
+        <body onload="renderURLsHomepageMaintenanceBanner()" style="background: #fff; margin: 0 20px;padding-top: 0;">
+        <form id="homepageForm" name="homepageForm" method="post" action="/NDelius-war/delius/JSP/homepage.xhtml" enctype="application/x-www-form-urlencoded" role="dialog">
+        <input type="hidden" name="homepageForm" value="homepageForm" />
 
-
-                <main>
-
-
+     <main>
         <div class="container-fluid">
-            <div class="logos"><img src="https://www.prendo.com/wp-content/uploads/2018/06/client-ministry-of-justice.png" alt="MoJ Logo" height="110" width="253" class="float-left" />
+            <div class="logos"><img src="/public/images/MOJ-logo.png" alt="MoJ Logo" height="110" width="253" class="float-left" />
             </div>
             <div class="headerInformation">
-                <h1 style="font-size: 35px; font-weight: bold">National Delius
-                </h1>Welcome <span style="font-weight: bold;">R&amp;MP Practitioner</span>(Refer_Monitor_PP)
-                <br />to National Delius - TEST USE ONLY Version 6.2.14.3 
-                <br />
+                <h1 style="font-size: 35px; font-weight: bold; margin-bottom: 8px;">National Delius</h1>
+                Welcome <span style="font-weight: bold;">T. Saunders</span>(T_Saunders)
+                <br/>to National Delius - TEST USE ONLY Version 6.2.14.3 
+                <br/>
             </div>
         </div>
 
-
         <div class="warning">
-
-        </div><div class="informationArea">
+        </div>
+        <div class="informationArea">
             <div class="form-row">
-                <h2>Maintenance Banner
+                <h2 style="line-height: 1.2; color: var(--bs-heading-color);">Maintenance Banner
                 </h2>
-                <div id="maintenanceBannerLinkify" style="max-height: 100px;">
+                <div id="maintenanceBannerLinkify" style="max-height: 100px;" class="div-textarea">
                     <pre><span id="maintenanceBanner">AWS Test Maintenance Banner</span></pre>
                 </div>
-            </div></div>
+            </div>
+        </div>
 
         <div id="tipOfTheDayArea" class="tipOfTheDay hide">
             <div class="messageInner">
                 <h2>
                     Shortcut Keys
-                    <a id="tipOfTheDayAreaBtn" class="pull-right expandIcon collapsed" data-bs-toggle="collapse" href="#tooltip-list" role="button" aria-expanded="false" aria-controls="tooltip-list"></a>
+                    <a id="tipOfTheDayAreaBtn" class="pull-right expandIcon collapsed" data-bs-toggle="collapse" href="#" role="button" aria-expanded="false" aria-controls="tooltip-list"></a>
                 </h2>
 
                 <div class="collapse" id="tooltip-list">
@@ -505,11 +755,14 @@ hr {
             <div style="clear: both"> 
             </div>
         </div>
-        <hr />
+        <hr style="margin: 1rem 0;">
 
-        <div class="homepageFeedback">Your feedback on Delius is appreciated. <a id="feedback-output-link" name="feedback-output-link" href="https://forms.office.com/e/0sewVJHZnq" target="_blank" class="homepageFeedbackUrl">Please use this link to send us your comments.</a><br />Please do not use this link to log support calls, this is for feedback only.
+        <div class="homepageFeedback" style="line-height: 20px;">Your feedback on Delius is appreciated. 
+            <a id="feedback-output-link" name="feedback-output-link" href="https://forms.office.com/e/0sewVJHZnq" target="_blank" class="homepageFeedbackUrl">Please use this link to send us your comments.</a>
+            <br/>
+            Please do not use this link to log support calls, this is for feedback only.
         </div>
-        <hr />
+        <hr style="margin: 1rem 0;">
 
         <div class="linksArea clearfix">
             <div class="row mb-sm-2 linkWrapper"><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt48':'j_idt48'},'');return false" ndaccesskey="q">National Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to New Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt50':'j_idt50'},'');return false" ndaccesskey="s">New Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false" ndaccesskey="n">National Custody Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to Recently Viewed Offenders." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt54':'j_idt54'},'');return false" ndaccesskey="r">Recently Viewed</a></div><div class="col-sm-4"><a href="#" title="Select this option to view the Officer Diary" onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt56':'j_idt56'},'');return false" ndaccesskey="f">Officer Diary</a></div><div class="col-sm-4"><a href="#" title="Select this option to view the Court Diary" onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt58':'j_idt58'},'');return false" ndaccesskey="c">Court Diary</a></div>
@@ -519,19 +772,35 @@ hr {
                 </div>
             </div>
 
-            <hr />
+            <hr style="margin: 1rem 0;">
 
-            <div class="row mb-sm-2 linkWrapper external"><div class="col-sm-4"><a href="#" title="Select this option to navigate to the external link to Create and Vary a Licence" onclick="jsf.util.chain(this,event,'openExternalWindow(\'https://create-and-vary-a-licence-dev.hmpps.service.justice.gov.uk\')','mojarra.jsfcljs(document.getElementById(\'homepageForm\'),{\'j_idt75\':\'j_idt75\'},\'\')');return false">Prepare a Case for Sentence</a></div><div class="col-sm-4">
-                    <a title="Select this option to navigate to the Practitioner Dashboard for your Home area" href="https://app.powerbi.com/groups/me/apps/9ec98a50-a26c-4336-a5e0-a5c2f783690a/reports/fadff3e7-f756-4e2d-ae09-411ddb530dc8/ReportSection5ce6e6b978c0553f8e82?experience=power-bi" target="_blank">
-                        Manage a Workforce
-                    </a></div>
-            <div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false">Create and Vary a Licence</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false">Consider a Recall</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false">Approved Premises Service (CAS1)</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false">Transitional Accommodation (CAS3)</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false">Interventions</a></div></div>
-
-
-            <hr />
-
-            <div class="row mb-sm-2 linkWrapper">
+            <div class="row mb-sm-2 linkWrapper external">
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to the external link to Prepare a Case for Sentence">Prepare a Case for Sentence</a>
+                </div>
+                <div class="col-sm-4">
+                    <a title="Select this option to navigate to the Manage a Workforce" target="_blank">Manage a Workforce</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Create and Vary a Licence">Create and Vary a Licence</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Consider a Recall">Consider a Recall</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Approved Premises Service (CAS1)">Approved Premises Service (CAS1)</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Transitional Accommodation (CAS3)">Transitional Accommodation (CAS3)</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="view-acp-and-referrals" title="Select this option to navigate to Interventions">Interventions</a>
+                </div>
             </div>
+
+
+            <hr/>
+
         </div>
 
         <script type="text/javascript">
