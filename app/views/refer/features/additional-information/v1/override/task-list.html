@@ -73,12 +73,12 @@ Make a referral - {{ serviceName }} - GOV.UK Prototype Kit
 		  	</li>
 		</ul>
 
-		{% if (data['referral-information-one'] == "done") and (data['referral-information-two'] == "done") and (data['referral-information-three'] == "done") %}
+		{% if (data['referral-information-three'] == "done") %}
 		<h2 class="govuk-heading-m govuk-!-margin-top-8">Check answers and submit</h2>
 		<ul class="govuk-task-list">
 			<li class="govuk-task-list__item govuk-task-list__item--with-link">
 			  	<div class="govuk-task-list__name-and-hint">
-					<a class="govuk-link govuk-task-list__link" href="#" aria-describedby="make-referral-details-5">Check answers and submit</a>
+					<a class="govuk-link govuk-task-list__link" href="check-answers" aria-describedby="make-referral-details-5">Check answers and submit</a>
 				</div>
 				<div class="govuk-task-list__status" id="make-referral-details-5">
 					<strong class="govuk-tag govuk-tag--blue">Incomplete</strong>
