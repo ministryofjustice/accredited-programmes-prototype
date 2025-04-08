@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Move referral to awaiting assessment - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/key-details-pt.html" %}	
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Move referral to awaiting assessment</h1>
+		<p class="govuk-body">Submitting this will change the status to awaiting assessment.</p>
+		<h2 class="govuk-heading-m">Current status</h2>
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<p class="moj-timeline__byline">by Tom Saunders</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+			  	</div>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm status change</h2>
+		<form action="status-history" method="post">
+			<div class="govuk-form-group">
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="confirm-suitability" name="confirm-suitability" type="checkbox" value="{{ data['confirm-suitability'] }}">
+					  <label class="govuk-label govuk-checkboxes__label" for="confirm-suitability">I confirm the person meets the programme eligibility criteria and will be assessed for suitability.</label>
+					</div>
+				</div>
+			</div>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit</button>
+				<a class="govuk-link" href="status-history">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,225 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+My referrals - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/head-refer.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">My referrals</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-half">
+		<div class="moj-search govuk-!-margin-bottom-6">
+			<form action="#" method="post">
+				<div class="govuk-form-group">
+					<h2 class="govuk-label-wrapper">
+					  	<label class="govuk-label govuk-label--m" for="search-name-prison">Search by name or CRN</label>
+					</h2>
+					<input class="govuk-input moj-search__input" id="search-name-prison" name="searchNamePrison" type="text">
+				</div>
+			  	<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">Search</button>
+			</form>
+		</div>  
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+			  	<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (57)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="draft-referrals">Draft referrals (20)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (80)</a>
+				</li>	
+			</ul>
+		</nav>
+		<div class="moj-scrollable-pane">
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Order end date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Probation delivery unit</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">ROSH score</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Programme name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				{% if data['reason-category'] %}
+				<!-- Empty row -->
+				{% elseif data['add-hold-reason'] %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="status-history" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell">1 January 2026</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Medium</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
+			  	</tr>
+				{% else %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="status-history" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell">1 January 2026</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Medium</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
+			  	</tr>
+				{% endif %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B739123</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">New Me Strengths: general violence offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Step, Richard</a><br />L227390</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">Low</td>
+					<td class="govuk-table__cell">New Me Strengths: general violence offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jones, Matt</a><br />A103428</td>
+					<td class="govuk-table__cell">27 Jul 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">Low</td>
+					<td class="govuk-table__cell">New Me Strengths: general violence offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Wright, Kevin</a><br />Z234587</td>
+					<td class="govuk-table__cell">28 Jun 2023</td>
+					<td class="govuk-table__cell">Surrey</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">Surrey</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Metcalfe, Nicholas</a><br />E772821</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">West Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
+					</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Akhtar, Suhail</a><br />K227326</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F384914</td>
+					<td class="govuk-table__cell">15 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B123408</td>
+					<td class="govuk-table__cell">29 Jun 2023</td>
+					<td class="govuk-table__cell">Brighton and East Sussex</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114123</td>
+					<td class="govuk-table__cell">1 May 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">Very high</td>
+					<td class="govuk-table__cell">Building Choices: moderate intensity</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">James, Bob</a><br />A923429</td>
+					<td class="govuk-table__cell">10 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Setto, Lukas</a><br />L099432</td>
+					<td class="govuk-table__cell">14 Aug 2023</td>
+					<td class="govuk-table__cell">West Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Aalegra, Rema</a><br />F039409</td>
+					<td class="govuk-table__cell">16 Aug 2023</td>
+					<td class="govuk-table__cell">East Kent</td>
+					<td class="govuk-table__cell">High</td>
+					<td class="govuk-table__cell">Building Better Relationships</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+			</tbody>
+		</table>	
+		
+		<nav class="govuk-pagination" role="navigation" aria-label="results">
+			<ul class="govuk-pagination__list">
+				<li class="govuk-pagination__item govuk-pagination__item--current">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+			  	</li>
+			  	<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
+			  	</li>
+				<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
+			  	<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">42</a>
+			  	</li>
+			</ul>
+			<div class="govuk-pagination__next">
+			  	<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+					<path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+				</svg>
+				</a>
+			</div>
+		</nav>
+    </div>
+</div>
+
+{% endblock %}

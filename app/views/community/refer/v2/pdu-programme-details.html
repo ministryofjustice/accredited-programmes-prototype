@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l govuk-!-margin-bottom-4">Building Choices: moderate intensity</h1>
+		<h2 class="govuk-heading-m govuk-!-margin-top-8">Brighton and East Sussex</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Address</dt>
+				<dd class="govuk-summary-list__value">City Gate House,<br>185 Dyke Road,<br>Brighton, East Sussex,<br>BN3 1TL</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Region</dt>
+				<dd class="govuk-summary-list__value">Kent, Surrey and Sussex</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Email address</dt>
+			  	<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">krystian.kikta@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<div class="govuk-!-margin-top-4">
+			<a class="govuk-button" href="about-person-sexual-offence">Make a referral</a>
+		</div>
+    </div>
+</div>
+
+{% endblock %}

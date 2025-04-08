@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Add additional information - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add additional information</h1>
+		<p class="govuk-body">Relevant scores and information from OASys will automatically be pulled through to the referral.</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>the reason for the referral</li>
+			<li>the person's motivation to complete the programme</li>
+		</ul>
+		<form action="task-list?referral-information-three=done&" method="post">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="provide-additional-information">Additional information (optional)</label>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+					<textarea class="govuk-textarea govuk-js-character-count" id="provide-additional-information" name="provide-additional-information" rows="5" aria-describedby="provide-additional-information-info"></textarea>
+					<div id="provide-additional-information-info" class="govuk-hint govuk-character-count__message">You can enter up to 5000 characters</div>
+				</div>
+			</div>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
+			</div>
+		</form>
+    </div>
+</div>
+{% endblock %}
