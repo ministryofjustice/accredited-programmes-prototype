@@ -1,0 +1,183 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">When is Alex River available to attend a programme?</h1>
+		<p class="govuk-body">Add any availability details you know. You can also add or update this later.</p>
+		<form action="task-list?referral-information-third=done&" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Mondays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="mondays" name="mondays" type="checkbox" value="monday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="mondays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="mondays-2" name="mondays" type="checkbox" value="monday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="mondays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="mondays-3" name="mondays" type="checkbox" value="monday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="mondays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Tuesdays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="tuesdays" name="tuesdays" type="checkbox" value="tuesday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="tuesdays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="tuesdays-2" name="tuesdays" type="checkbox" value="tuesday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="tuesdays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="tuesdays-3" name="tuesdays" type="checkbox" value="tuesday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="tuesdays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Wednesdays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="wednesdays" name="wednesdays" type="checkbox" value="wednesday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="wednesdays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="wednesdays-2" name="wednesdays" type="checkbox" value="wednesday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="wednesdays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="wednesdays-3" name="wednesdays" type="checkbox" value="wednesday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="wednesdays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Thursdays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="thursdays" name="thursdays" type="checkbox" value="thursday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="thursdays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="thursdays-2" name="thursdays" type="checkbox" value="thursday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="thursdays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="thursdays-3" name="thursdays" type="checkbox" value="thursday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="thursdays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Fridays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="fridays" name="fridays" type="checkbox" value="friday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="fridays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="fridays-2" name="fridays" type="checkbox" value="friday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="fridays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="fridays-3" name="fridays" type="checkbox" value="friday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="fridays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Saturdays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="saturdays" name="saturdays" type="checkbox" value="saturday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="saturdays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="saturdays-2" name="saturdays" type="checkbox" value="saturday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="saturdays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="saturdays-3" name="saturdays" type="checkbox" value="saturday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="saturdays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset govuk-!-margin-top-6">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h1 class="govuk-fieldset__heading">Sundays</h1>
+					</legend>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="sundays" name="sundays" type="checkbox" value="sunday morning">
+							<label class="govuk-label govuk-checkboxes__label" for="sundays">morning</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="sundays-2" name="sundays" type="checkbox" value="sunday afternoon">
+							<label class="govuk-label govuk-checkboxes__label" for="sundays-2">afternoon</label>
+						</div>
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="sundays-3" name="sundays" type="checkbox" value="sunday evening">
+							<label class="govuk-label govuk-checkboxes__label" for="sundays-3">evening</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>	
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="availability-details">Other availability details (optional)</label>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+					<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
+					<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 200 characters</div>
+				</div>
+			</div>
+			<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">Continue</button>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
