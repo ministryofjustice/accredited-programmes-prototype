@@ -5,7 +5,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/key-details-pt.html" %}
+	{% include "includes/community/key-details-com.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,14 +21,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			<div class="moj-page-header-actions__title">
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
 			</div>
-			<form action="#" method="post">
-				<div class="moj-page-header-actions__actions">
-					<div class="moj-button-menu">
-					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
-					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
-				  	</div>
+			<div class="moj-button-group moj-button-group--inline">
+				<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary govuk-!-margin-right-0">
+					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Put on hold</a>
+					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Withdraw referral</a>
 				</div>
-			</form>
+			</div>
  		</div>
 	</div>
 </div>
@@ -37,7 +36,10 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-				  <a class="moj-sub-navigation__link" href="#">Referral details</a>
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
@@ -48,10 +50,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" aria-current="page" href="#">Availability</a>
 				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
-				</li>
-		  	</ul>
+			</ul>
 		</nav>
 	</div>
 </div>
