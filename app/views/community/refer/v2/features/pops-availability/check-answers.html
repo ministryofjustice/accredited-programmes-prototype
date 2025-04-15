@@ -1,0 +1,540 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Check your answers</h1>
+		<p class="govuk-body">Read through this page and check that the information provided for each answer is accurate. When you feel the application is complete, submit it.</p>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Alex River</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Programme name</dt>
+			  	<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Programme strand</dt>
+			  	<dd class="govuk-summary-list__value">Sexual violence</dd>
+			</div>
+		</dl>
+		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
+			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m">Person being referred</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Personal details</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Name</dt>
+						<dd class="govuk-summary-list__value">Alex River</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">CRN</dt>
+						<dd class="govuk-summary-list__value">X123456</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Date of birth</dt>
+						<dd class="govuk-summary-list__value">5 February 1991 (33 years, 1 months old)</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Ethnicity</dt>
+						<dd class="govuk-summary-list__value">White</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Gender</dt>
+						<dd class="govuk-summary-list__value">Male</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						<dd class="govuk-summary-list__value">Community</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Probation delivery unit</dt>
+						<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Accredited Programme history</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				{% if data['add-accredited-programme'] %}
+				<h2 class="govuk-summary-card__title">{{ data['add-accredited-programme'] }}</h2>
+				{% else %}
+				<h2 class="govuk-summary-card__title">Building Better Relationships</h2>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+						{% if data['add-accredited-programme'] %}
+						<dd class="govuk-summary-list__value">{{ data['add-accredited-programme'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Building Better Relationships</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-accredited-programme?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> Programme name</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Setting</dt>
+						{% if data['setting'] == "Community" and data['setting-community'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Community" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-community'] }}</dd>
+						{% elseif data['setting'] == "Custody" and data['setting-custody'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['setting'] == "Custody" %}
+						<dd class="govuk-summary-list__value">{{ data['setting'] }}, {{ data['setting-custody'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Community</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> Setting</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						{% if data['outcome'] == "Complete" and data['outcome-complete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Complete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-complete'] }}</dd>
+						{% elseif data['outcome'] == "Incomplete" and data['outcome-incomplete'] == false %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% elseif data['outcome'] == "Incomplete" %}
+						<dd class="govuk-summary-list__value">{{ data['outcome'] }}, Year started {{ data['outcome-incomplete'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> Outcome</span>
+							</a>
+						</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						{% if data['provide-additional-detail'] %}
+						<dd class="govuk-summary-list__value">{{ data['provide-additional-detail'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> Additional detail</span>
+							</a>
+						</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						{% if data['provide-source-detail'] %}
+					  	<dd class="govuk-summary-list__value">{{ data['provide-source-detail'] }}</dd>
+						{% else %}
+						<dd class="govuk-summary-list__value">Not known</dd>
+						{% endif %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-programme-details?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> Source of information</span>
+							</a>
+						</dd>
+		  			</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Added by</dt>
+						<dd class="govuk-summary-list__value">Tom Saunders, 11 June 2023</dd>
+					</div>
+			  	</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+			  	<h2 class="govuk-summary-card__title">Horizon</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Programme name</dt>
+				  		<dd class="govuk-summary-list__value">Horizon</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">Setting</dt>
+				  		<dd class="govuk-summary-list__value">Custody</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Outcome</dt>
+						<dd class="govuk-summary-list__value">Completed 2022</dd>
+				  	</div>
+				  	<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Additional detail</dt>
+						<dd class="govuk-summary-list__value">Motivated to complete the programme</dd>
+					</div>
+			  		<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Source of information</dt>
+						<dd class="govuk-summary-list__value">Spoke to POM</dd>
+		  			</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Added by</dt>
+						<dd class="govuk-summary-list__value">Jordan Smith, 17 May 2022</dd>
+					</div> 
+			  	</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">OASys information</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Confirm OASys information</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-!-margin-bottom-2">I confirm that the information is accurate.</p>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Availability</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Mondays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Tuesdays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Wednesdays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+						<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Thursdays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+						<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Fridays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+						<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Saturdays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+						<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Sundays</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+							  Change<span class="govuk-visually-hidden"> morning</span>
+							</a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> afternoon</span>
+							</a>
+						</dd>
+				  	</div>
+						<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
+								Change<span class="govuk-visually-hidden"> evening</span>
+							</a>
+						</dd>
+				 	</div>
+			  	</dl>
+			</div>
+		</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Other availability details</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Other availability details</span></a>
+					</li>
+			  	</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-!-margin-bottom-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Additional information</h2>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Add additional information</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action"> 
+						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Add Additional information</span></a>
+					</li>
+			  	</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<p class="govuk-!-margin-bottom-2">Alex's OASys scores show that he meets the criteria for this programme as he is a moderate risk individual who has learning needs. He also has enough time left before his order end date to complete the programme.</p>
+					</div>
+				</dl>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-m govuk-!-margin-top-7">Confirm this information is correct</h2>
+		<form action="#" method="post">
+			<div class="govuk-form-group">
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="confirm-information-accurate" name="confirm-information-accurate" type="checkbox" value="{{ data['confirm-information-accurate'] }}">
+					  <label class="govuk-label govuk-checkboxes__label" for="confirm-information-accurate">I confirm the information I have provided is complete, accurate and up to date.</label>
+					</div>
+				</div>
+			</div>
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Submit referral</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="task-list">Return to task list</button>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
