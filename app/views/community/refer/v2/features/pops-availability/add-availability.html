@@ -20,7 +20,7 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">When is Alex River available to attend a programme?</h1>
 		<p class="govuk-body">Add any availability details you know. You can also add or update this later.</p>
-		<form action="task-list?referral-information-third=done&" method="post">
+		<form action="task-list?referral-information-three=done&" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -28,15 +28,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="mondays" name="mondays" type="checkbox" value="monday morning">
+							<input class="govuk-checkboxes__input" id="mondays" name="mondays" type="checkbox" value="monday morning" {{ checked("mondays", "monday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="mondays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="mondays-2" name="mondays" type="checkbox" value="monday afternoon">
+							<input class="govuk-checkboxes__input" id="mondays-2" name="mondays" type="checkbox" value="monday afternoon" {{ checked("mondays", "monday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="mondays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="mondays-3" name="mondays" type="checkbox" value="monday evening">
+							<input class="govuk-checkboxes__input" id="mondays-3" name="mondays" type="checkbox" value="monday evening" {{ checked("mondays", "monday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="mondays-3">evening</label>
 						</div>
 					</div>
@@ -49,15 +49,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="tuesdays" name="tuesdays" type="checkbox" value="tuesday morning">
+							<input class="govuk-checkboxes__input" id="tuesdays" name="tuesdays" type="checkbox" value="tuesday morning" {{ checked("tuesdays", "tuesday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="tuesdays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="tuesdays-2" name="tuesdays" type="checkbox" value="tuesday afternoon">
+							<input class="govuk-checkboxes__input" id="tuesdays-2" name="tuesdays" type="checkbox" value="tuesday afternoon" {{ checked("tuesdays", "tuesday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="tuesdays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="tuesdays-3" name="tuesdays" type="checkbox" value="tuesday evening">
+							<input class="govuk-checkboxes__input" id="tuesdays-3" name="tuesdays" type="checkbox" value="tuesday evening" {{ checked("tuesdays", "tuesday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="tuesdays-3">evening</label>
 						</div>
 					</div>
@@ -70,15 +70,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="wednesdays" name="wednesdays" type="checkbox" value="wednesday morning">
+							<input class="govuk-checkboxes__input" id="wednesdays" name="wednesdays" type="checkbox" value="wednesday morning" {{ checked("wednesdays", "wednesday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="wednesdays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="wednesdays-2" name="wednesdays" type="checkbox" value="wednesday afternoon">
+							<input class="govuk-checkboxes__input" id="wednesdays-2" name="wednesdays" type="checkbox" value="wednesday afternoon" {{ checked("wednesdays", "wednesday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="wednesdays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="wednesdays-3" name="wednesdays" type="checkbox" value="wednesday evening">
+							<input class="govuk-checkboxes__input" id="wednesdays-3" name="wednesdays" type="checkbox" value="wednesday evening" {{ checked("wednesdays", "wednesday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="wednesdays-3">evening</label>
 						</div>
 					</div>
@@ -91,15 +91,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="thursdays" name="thursdays" type="checkbox" value="thursday morning">
+							<input class="govuk-checkboxes__input" id="thursdays" name="thursdays" type="checkbox" value="thursday morning" {{ checked("thursdays", "thursday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="thursdays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="thursdays-2" name="thursdays" type="checkbox" value="thursday afternoon">
+							<input class="govuk-checkboxes__input" id="thursdays-2" name="thursdays" type="checkbox" value="thursday afternoon" {{ checked("thursdays", "thursday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="thursdays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="thursdays-3" name="thursdays" type="checkbox" value="thursday evening">
+							<input class="govuk-checkboxes__input" id="thursdays-3" name="thursdays" type="checkbox" value="thursday evening" {{ checked("thursdays", "thursday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="thursdays-3">evening</label>
 						</div>
 					</div>
@@ -112,15 +112,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="fridays" name="fridays" type="checkbox" value="friday morning">
+							<input class="govuk-checkboxes__input" id="fridays" name="fridays" type="checkbox" value="friday morning" {{ checked("fridays", "friday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="fridays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="fridays-2" name="fridays" type="checkbox" value="friday afternoon">
+							<input class="govuk-checkboxes__input" id="fridays-2" name="fridays" type="checkbox" value="friday afternoon" {{ checked("fridays", "friday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="fridays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="fridays-3" name="fridays" type="checkbox" value="friday evening">
+							<input class="govuk-checkboxes__input" id="fridays-3" name="fridays" type="checkbox" value="friday evening" {{ checked("fridays", "friday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="fridays-3">evening</label>
 						</div>
 					</div>
@@ -133,15 +133,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="saturdays" name="saturdays" type="checkbox" value="saturday morning">
+							<input class="govuk-checkboxes__input" id="saturdays" name="saturdays" type="checkbox" value="saturday morning" {{ checked("saturdays", "saturday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="saturdays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="saturdays-2" name="saturdays" type="checkbox" value="saturday afternoon">
+							<input class="govuk-checkboxes__input" id="saturdays-2" name="saturdays" type="checkbox" value="saturday afternoon" {{ checked("saturdays", "saturday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="saturdays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="saturdays-3" name="saturdays" type="checkbox" value="saturday evening">
+							<input class="govuk-checkboxes__input" id="saturdays-3" name="saturdays" type="checkbox" value="saturday evening" {{ checked("saturdays", "saturday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="saturdays-3">evening</label>
 						</div>
 					</div>
@@ -154,15 +154,15 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					</legend>
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="sundays" name="sundays" type="checkbox" value="sunday morning">
+							<input class="govuk-checkboxes__input" id="sundays" name="sundays" type="checkbox" value="sunday morning" {{ checked("sundays", "sunday morning") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="sundays">morning</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="sundays-2" name="sundays" type="checkbox" value="sunday afternoon">
+							<input class="govuk-checkboxes__input" id="sundays-2" name="sundays" type="checkbox" value="sunday afternoon" {{ checked("sundays", "sunday afternoon") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="sundays-2">afternoon</label>
 						</div>
 						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="sundays-3" name="sundays" type="checkbox" value="sunday evening">
+							<input class="govuk-checkboxes__input" id="sundays-3" name="sundays" type="checkbox" value="sunday evening" {{ checked("sundays", "sunday evening") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="sundays-3">evening</label>
 						</div>
 					</div>
