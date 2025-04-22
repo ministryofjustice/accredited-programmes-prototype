@@ -231,271 +231,332 @@ Check your answers - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Availability</h2>
+		<!-- Mondays -->
 		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Mondays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Mondays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['mondays'] or []).indexOf('monday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['mondays'] or []).indexOf('monday afternoon') > -1  %}  
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
-				  	</div>
+					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['mondays'] or []).indexOf('monday evening') > -1  %}    
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
-						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Tuesdays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
+						</dd>
+					</div>
+				</dl>
+            </div>
+        </div>
+		
+		<!-- Tuesdays -->
+		<div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Tuesdays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['tuesdays'] or []).indexOf('tuesday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['tuesdays'] or []).indexOf('tuesday afternoon') > -1  %}  
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
-				  	</div>
+					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['tuesdays'] or []).indexOf('tuesday evening') > -1  %}    
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
-						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Wednesdays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
+						</dd>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Wednesdays -->
+		<div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Wednesdays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['wednesdays'] or []).indexOf('wednesday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['wednesdays'] or []).indexOf('wednesday afternoon') > -1  %}  
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
-				  	</div>
-						<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">evening</dt>
-						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
-						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Thursdays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
+					</div>
 					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['wednesdays'] or []).indexOf('wednesday evening') > -1  %}    
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
+						</dd>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Thursdays -->
+		<div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Thursdays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['thursdays'] or []).indexOf('thursday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
-						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
-						</dd>
-				  	</div>
-						<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">evening</dt>
-						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
-						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Fridays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['thursdays'] or []).indexOf('thursday afternoon') > -1  %}  
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">afternoon</dt>
-						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
-						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
-						</dd>
-				  	</div>
-						<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['thursdays'] or []).indexOf('thursday evening') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
 						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Fridays -->
 		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Saturdays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Fridays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['fridays'] or []).indexOf('friday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['fridays'] or []).indexOf('friday afternoon') > -1  %}  
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
-				  	</div>
-						<div class="govuk-summary-list__row">
+					</div>
+					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['fridays'] or []).indexOf('friday evening') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
 						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Saturdays -->
 		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Sundays</h2>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Saturdays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
-				  		<dt class="govuk-summary-list__key">morning</dt>
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['saturdays'] or []).indexOf('saturday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-							  Change<span class="govuk-visually-hidden"> morning</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
 						</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['saturdays'] or []).indexOf('saturday afternoon') > -1  %}  
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> afternoon</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
 						</dd>
-				  	</div>
-						<div class="govuk-summary-list__row">
+					</div>
+					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['saturdays'] or []).indexOf('saturday evening') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
 						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
 						<dd class="govuk-summary-list__actions">
-							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">
-								Change<span class="govuk-visually-hidden"> evening</span>
-							</a>
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
 						</dd>
-				 	</div>
-			  	</dl>
-			</div>
-		</div>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Sundays -->
+		<div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Sundays</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">morning</dt>
+						{%  if (data['sundays'] or []).indexOf('sunday morning') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> morning</span></a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">afternoon</dt>
+						{%  if (data['sundays'] or []).indexOf('sunday afternoon') > -1  %}  
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> afternoon</span></a>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">evening</dt>
+						{%  if (data['sundays'] or []).indexOf('sunday evening') > -1  %}    
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--green">available</strong></dd>
+						{% else %}
+						<dd class="govuk-summary-list__value"><strong class="govuk-tag govuk-tag--red">not available</strong></dd>
+						{%  endif  %}
+						<dd class="govuk-summary-list__actions">
+							<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> evening</span></a>
+						</dd>
+					</div>
+				</dl>
+            </div>
+        </div>
+
+		<!-- Other -->
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
 				<h2 class="govuk-summary-card__title">Other availability details</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action"> 
-						<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Other availability details</span></a>
+						<a class="govuk-link" href="add-availability?camefromcheckanswers=true&">Change<span class="govuk-visually-hidden"> Other availability details</span></a>
 					</li>
 			  	</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
+						{% if data['availability-details'] %}
+						<p class="govuk-!-margin-bottom-2">{{ data['availability-details'] }}</p>
+						{% else %}
 						<p class="govuk-!-margin-bottom-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						{% endif %}
 					</div>
 				</dl>
 			</div>
