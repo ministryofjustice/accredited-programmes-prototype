@@ -10,14 +10,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="../view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Referrals</span>
+		<span class="govuk-caption-xl">Referrals in Kent, Surrey and Sussex</span>
 		<h1 class="govuk-heading-xl">Building Choices: moderate intensity</h1>
     </div>
 </div>
@@ -75,11 +75,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
-			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (25)</a>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="../open-referrals">Open referrals (25)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (34)</a>
+					<a class="moj-sub-navigation__link" href="#">Closed referrals (34)</a>
 				</li>
 			</ul>
 		</nav>
@@ -95,14 +95,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 				</tr>
 			</thead>
-			<tbody class="govuk-table__body">
+			<tbody>
 				{% if data['referral-submitted'] == "Withdraw referral" %}
 				<!-- Empty row -->
 				{% elseif data['referral-submitted'] == "Not eligible" %}
 				<!-- Empty row -->
 				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
 			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">1 January 2026</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Medium</td>
@@ -111,7 +111,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 				{% elseif data['referral-submitted'] == "On hold" %}
 			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">1 January 2026</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Medium</td>
@@ -120,7 +120,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 				{% else %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">1 January 2026</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Medium</td>
@@ -135,7 +135,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">High</td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
-				</tr>
+					</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
 					<td class="govuk-table__cell">1 May 2023</td>
