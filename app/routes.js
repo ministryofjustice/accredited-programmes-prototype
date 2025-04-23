@@ -94,7 +94,8 @@ router.post('/redirect-about-person-sexual-offence', function(request, response)
 })
 
 //This is the routes for the going back to check answers from day availability 
-router.post('/community/refer/v2/features/pops-availability/availabilityrouter', function (req, res) {
+// router.post('/community/refer/v2/features/pops-availability/availabilityrouter', function (req, res) {
+router.post('/community/refer/v2/availabilityrouter', function (req, res) {
 	req.session.data['referral-information-three'] ="done";
 	   if (req.session.data['camefromcheckanswers'] =="true") {
 		   req.session.data['camefromcheckanswers'] ="false";
