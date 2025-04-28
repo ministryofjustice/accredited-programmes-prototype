@@ -265,6 +265,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		{% endif %}
 		
 		<form action="/community/refer/v2/add-availability" method="post">
+			<input type="hidden" id="update-button" name="update-button" value="update availability">
 			<div class="govuk-button-group">
 				<button class="govuk-button" data-module="govuk-button" type="submit">Update availability</button>
 			</div>

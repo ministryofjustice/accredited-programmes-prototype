@@ -175,10 +175,17 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
 				</div>
 			</div>
+			{% if data['update-button'] == "update availability" %}
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" formaction="../../assess/v2/availability">Update</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+			{% else %}
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Continue</button>
 				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Skip this section</button>
 			</div>
+			{% endif %}
 		</form>
 	</div>
 </div>
