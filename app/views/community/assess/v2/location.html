@@ -97,8 +97,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<li class="moj-side-navigation__item">
 					<a href="personal-details">Personal details</a>
 		  		</li>
-		  		<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="programme-history" aria-current="location">Programme history</a>
+		  		<li class="moj-side-navigation__item">
+					<a href="programme-history">Programme history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="offence-history">Offence history</a>
@@ -109,8 +109,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<li class="moj-side-navigation__item">
 					<a href="availability">Availability</a>
 		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="location">Location</a>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="location" aria-current="location">Location</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="additional-information">Additional information</a>
@@ -119,38 +119,37 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<p>This is a list of programmes that Alex River has started or completed.</p>
-		<table class="govuk-table" data-module="moj-sortable-table">
-			<thead class="govuk-table__head">
-				<tr class="govuk-table__row">
-				<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Outcome</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Notes</th>
-				</tr>
-			</thead>
-			<tbody class="govuk-table__body">
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Building Better Relationships</td>
-					<td class="govuk-table__cell">Community</td>
-					<td class="govuk-table__cell">Not known</td>
-					<td class="govuk-table__cell">Not known</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Horizon</td>
-					<td class="govuk-table__cell">Whatton (HMP)</td>
-					<td class="govuk-table__cell">Completed 2022</td>
-					<td class="govuk-table__cell">Motivated to complete the programme</td>
-				</tr>
-				<!-- <tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">New Me MOT</td>
-					<td class="govuk-table__cell">Whatton</td>
-					<td class="govuk-table__cell">Completed 1993</td>
-					<td class="govuk-table__cell">Not known</td>
-				</tr> -->
-			</tbody>
-		</table>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Location information</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
+							<dd class="govuk-summary-list__value">Kent, Surrey and Sussex</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Probation delivery location</dt>
+							<dd class="govuk-summary-list__value">Brighton & Hove: Sussex House</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">Donec elementum tincidunt bibendum. Vestibulum pulvinar facilisis augue at sagittis. Sed laoreet enim non rutrum faucibus. Sed nunc quam, pharetra at laoreet ut, molestie ut lacus. Nullam feugiat est ornare arcu ullamcorper, sed dictum dui finibus. Morbi sit amet leo eu ligula malesuada ultrices eu quis lacus. Nulla facilisi.</p>
+							</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+			<form action="/community/refer/v2/preferred-location" method="post">
+				<input type="hidden" id="update-button" name="update-button" value="change location">
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Change location</button>
+				</div>
+			</form>
+		</div>
 	</div>
 </div>
-
 {% endblock %}

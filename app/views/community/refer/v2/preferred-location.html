@@ -1,0 +1,159 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the preferred location for the programme? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v2/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">What is the preferred location for the programme?</h1>
+		<p class="govuk-body">This is a list of all locations where the programme can take place in this probation delivery unit. Choose the location you think is most suitable.</p>
+		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
+		<form action="no-locations" method="post">
+
+			<div class="govuk-form-group">
+				<div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference" name="location-preference" type="radio" value="Arun: Meadowfield House" {{ checked("location-preference", "Arun: Meadowfield House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference">Arun: Meadowfield House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-2" name="location-preference" type="radio" value="Ashford: Templar House" {{ checked("location-preference", "Ashford: Templar House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-2">Ashford: Templar House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-3" name="location-preference" type="radio" value="Brighton and Hove: Brighton Probation Office" {{ checked("location-preference", "Brighton and Hove: Brighton Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-3">Brighton and Hove: Brighton Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-4" name="location-preference" type="radio" value="Brighton & Hove: Sussex House" {{ checked("location-preference", "Brighton & Hove: Sussex House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-4">Brighton & Hove: Sussex House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-5" name="location-preference" type="radio" value="Canterbury: Ralphs Centre" {{ checked("location-preference", "Canterbury: Ralphs Centre") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-5">Canterbury: Ralphs Centre</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-6" name="location-preference" type="radio" value="Crawley: Midtown House" {{ checked("location-preference", "Crawley: Midtown House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-6">Crawley: Midtown House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-7" name="location-preference" type="radio" value="Guildford: College House" {{ checked("location-preference", "Guildford: College House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-7">Guildford: College House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-8" name="location-preference" type="radio" value="Guildford: First House" {{ checked("location-preference", "Guildford: First House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-8">Guildford: First House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-9" name="location-preference" type="radio" value="Hastings: St. Leonards Probation Office" {{ checked("location-preference", "Hastings: St. Leonards Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-9">Hastings: St. Leonards Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-10" name="location-preference" type="radio" value="Kent: Joynes House" {{ checked("location-preference", "Kent: Joynes House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-10">Kent: Joynes House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-11" name="location-preference" type="radio" value="Kent: Maidstone Probation Office" {{ checked("location-preference", "Kent: Maidstone Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-11">Kent: Maidstone Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-12" name="location-preference" type="radio" value="Lewes & Eastbourne: Eastbourne Probation Office" {{ checked("location-preference", "Lewes & Eastbourne: Eastbourne Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-12">Lewes & Eastbourne: Eastbourne Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-13" name="location-preference" type="radio" value="Littlehampton: Arun Civic Centre" {{ checked("location-preference", "Littlehampton: Arun Civic Centre") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-13">Littlehampton: Arun Civic Centre</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-14" name="location-preference" type="radio" value="Maidstone: Galleon House" {{ checked("location-preference", "Maidstone: Galleon House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-14">Maidstone: Galleon House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-15" name="location-preference" type="radio" value="Medway: Chatham Probation Office" {{ checked("location-preference", "Medway: Chatham Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-15">Medway: Chatham Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-16" name="location-preference" type="radio" value="Ramsgate: Queens House" {{ checked("location-preference", "Ramsgate: Queens House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-16">Ramsgate: Queens House</label>
+					</div>
+
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-17" name="location-preference" type="radio" value="Reigate & Banstead: Redhill Probation Office" {{ checked("location-preference", "Reigate & Banstead: Redhill Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-17">Reigate & Banstead: Redhill Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-18" name="location-preference" type="radio" value="Reigate & Banstead: Tower House" {{ checked("location-preference", "Reigate & Banstead: Tower House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-18">Reigate & Banstead: Tower House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-19" name="location-preference" type="radio" value="Shepway: Folkestone Probation Office" {{ checked("location-preference", "Shepway: Folkestone Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-19">Shepway: Folkestone Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-20" name="location-preference" type="radio" value="Spelthorne: Swan House" {{ checked("location-preference", "Spelthorne: Swan House") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-20">Spelthorne: Swan House</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-21" name="location-preference" type="radio" value="Swale: Sittingbourne Probation Office" {{ checked("location-preference", "Swale: Sittingbourne Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-21">Swale: Sittingbourne Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-22" name="location-preference" type="radio" value="Tunbridge Wells: 17 Garden Road" {{ checked("location-preference", "Tunbridge Wells: 17 Garden Road") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-22">Tunbridge Wells: 17 Garden Road</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-23" name="location-preference" type="radio" value="Worthing: Worthing Probation Office" {{ checked("location-preference", "Worthing: Worthing Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-23">Worthing: Worthing Probation Office</label>
+					</div>
+					<div class="govuk-radios__divider">or</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-24" name="location-preference" type="radio" value="I cannot choose a suitable location yet" {{ checked("location-preference", "I cannot choose a suitable location yet") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-24">I cannot choose a suitable location yet</label>
+					</div>
+				</div>
+			</div>
+
+
+			<!--
+			
+			<div class="govuk-form-group govuk-!-margin-top-2">
+				<label class="govuk-label govuk-label--m" for="availability-details">Other availability details (optional)</label>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+					<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
+					<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+				</div>
+			</div> 
+
+			{% if data['update-button'] == "update availability" %}
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button" formaction="../../assess/v2/availability">Update</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+			{% else %} 
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Skip this section</button>
+			</div>
+			{% endif %} -->
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
