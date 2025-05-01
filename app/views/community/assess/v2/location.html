@@ -132,12 +132,26 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Probation delivery location</dt>
+							{% if data['location-preference'] %}
+							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
+							{% else %}
 							<dd class="govuk-summary-list__value">Brighton & Hove: Sussex House</div>
+							{% endif %}
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
+							{% if data['no-locations-programme'] == "Yes" %}
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">{{ data['locations-cannot-attend'] }}</p>
+							</dd>
+							{% elseif data['no-locations-programme'] == "No" %}
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">No</p>
+							</dd>
+							{% else %}
 							<dd class="govuk-summary-list__value">
 								<p class="govuk-body">Donec elementum tincidunt bibendum. Vestibulum pulvinar facilisis augue at sagittis. Sed laoreet enim non rutrum faucibus. Sed nunc quam, pharetra at laoreet ut, molestie ut lacus. Nullam feugiat est ornare arcu ullamcorper, sed dictum dui finibus. Morbi sit amet leo eu ligula malesuada ultrices eu quis lacus. Nulla facilisi.</p>
 							</dd>
+							{% endif %}
 						</div>
 					</dl>
 				</div>
