@@ -119,6 +119,21 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
+		{% if data['update-location'] == "update location" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert">
+			<div>
+			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			  	</svg>
+			</div>
+			<div class="moj-alert__content">Location details updated successfully.</div>
+			<div class="moj-alert__action">
+			  	<button class="moj-alert__dismiss" hidden>Dismiss</button>
+			</div>
+		</div>
+		{% else %}
+		<!-- No success banner to display yet -->
+		{% endif %}
 		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
@@ -128,14 +143,14 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
-							<dd class="govuk-summary-list__value">Kent, Surrey and Sussex</dd>
+							<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation delivery location</dt>
+							<dt class="govuk-summary-list__key">Programme delivery location</dt>
 							{% if data['location-preference'] %}
 							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
 							{% else %}
-							<dd class="govuk-summary-list__value">Brighton & Hove: Sussex House</div>
+							<dd class="govuk-summary-list__value">TBC</div>
 							{% endif %}
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
@@ -149,7 +164,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							</dd>
 							{% else %}
 							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">Donec elementum tincidunt bibendum. Vestibulum pulvinar facilisis augue at sagittis. Sed laoreet enim non rutrum faucibus. Sed nunc quam, pharetra at laoreet ut, molestie ut lacus. Nullam feugiat est ornare arcu ullamcorper, sed dictum dui finibus. Morbi sit amet leo eu ligula malesuada ultrices eu quis lacus. Nulla facilisi.</p>
+								<p class="govuk-body">Alex has conditions meaning he is not to enter the postcode areas of BN9 or BN10.</p>
 							</dd>
 							{% endif %}
 						</div>
