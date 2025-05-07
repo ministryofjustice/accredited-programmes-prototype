@@ -5,7 +5,7 @@ Are there any locations the person cannot attend the programme? - {{ serviceName
 {% endblock %}
 
 {% block header %}
-	{% include "includes/community/v2/key-details-com.html" %}
+	{% include "includes/community/v2/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,7 +18,7 @@ Are there any locations the person cannot attend the programme? - {{ serviceName
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<form action="task-list?referral-information-four=done&" method="post">
+		<form action="../../assess/v2/location" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -47,7 +47,7 @@ Are there any locations the person cannot attend the programme? - {{ serviceName
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<input type="hidden" id="update-location" name="update-location" value="update location">
 				<button class="govuk-button" data-module="govuk-button">Submit</button>
-				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+				<a class="govuk-link" href="../../assess/v2/location">Cancel</a>
 			</div>
 		</form>
 	</div>

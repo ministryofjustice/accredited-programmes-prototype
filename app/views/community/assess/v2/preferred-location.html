@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the preferred location for the programme? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v2/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">What is the preferred location for the programme?</h1>
+		<p class="govuk-body">This is a list of all locations where the programme can take place in this probation delivery unit. Choose the location you think is most suitable.</p>
+		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
+		<form action="no-locations" method="post">
+
+			<div class="govuk-form-group">
+				<div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference" name="location-preference" type="radio" value="Brighton and Hove: Brighton Probation Office" {{ checked("location-preference", "Brighton and Hove: Brighton Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference">Brighton and Hove: Brighton Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-2" name="location-preference" type="radio" value="Hastings: St. Leonards Probation Office" {{ checked("location-preference", "Hastings: St. Leonards Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-2">Hastings: St. Leonards Probation Office</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-3" name="location-preference" type="radio" value="Lewes & Eastbourne: Eastbourne Probation Office" {{ checked("location-preference", "Lewes & Eastbourne: Eastbourne Probation Office") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-3">Lewes & Eastbourne: Eastbourne Probation Office</label>
+					</div>
+					<div class="govuk-radios__divider">or</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="location-preference-24" name="location-preference" type="radio" value="I cannot choose a suitable location yet" {{ checked("location-preference", "I cannot choose a suitable location yet") }}>
+						<label class="govuk-label govuk-radios__label" for="location-preference-24">I cannot choose a suitable location yet</label>
+					</div>
+				</div>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+				<a class="govuk-link" href="../../assess/v2/location">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
