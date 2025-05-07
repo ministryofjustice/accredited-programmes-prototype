@@ -24,19 +24,19 @@ Update referral status - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Referral submitted</h2>
+					<h2 class="moj-timeline__title">Court order</h2>
 					<p class="moj-timeline__byline">by Tom Saunders</p>
 			  	</div>
 			  	<p class="moj-timeline__date">
 					<time datetime="2023-06-28T10:00:00.000Z">28 June 2023 at 10:00am</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+					<strong class="govuk-tag govuk-tag--orange">Court order</strong>
 			  	</div>
 			</div>
 		</div>
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<form action="update-status" method="post">
+		<form action="#" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -44,28 +44,23 @@ Update referral status - {{ serviceName }} - GOV.UK Prototype Kit
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="referral-submitted" name="referral-submitted" type="radio" value="Awaiting assessment" {{ checked("referral-submitted", "Awaiting assessment") }}>
-							<label class="govuk-label govuk-radios__label" for="referral-submitted">Awaiting assessment</label>
-							<div class="govuk-hint govuk-radios__hint">This person meets the eligibility criteria for this programme and will be assessed for suitability.</div>
+							<input class="govuk-radios__input" id="court-order" name="court-order" type="radio" value="Suitable and ready to continue" {{ checked("court-order", "Suitable and ready to continue") }}>
+							<label class="govuk-label govuk-radios__label" for="court-order">Suitable and ready to continue</label>
+							<div class="govuk-hint govuk-radios__hint">This person meets the suitability criteria. They can now be considered to join the programme.</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="referral-submitted-2" name="referral-submitted" type="radio" value="Not eligible" {{ checked("referral-submitted", "Not eligible") }}>
-							<label class="govuk-label govuk-radios__label" for="referral-submitted-2">Not eligible</label>
-							<div class="govuk-hint govuk-radios__hint">This person does not meet the eligibility criteria for this programme. The referral will be closed.</div>
+							<input class="govuk-radios__input" id="court-order-2" name="court-order" type="radio" value="Suitable but not ready" {{ checked("court-order", "Suitable but not ready") }}>
+							<label class="govuk-label govuk-radios__label" for="court-order-2">Suitable but not ready</label>
+							<div class="govuk-hint govuk-radios__hint">This person meets the suitability criteria but is not ready to start the programme. The referral will be paused until they are ready.</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="referral-submitted-3" name="referral-submitted" type="radio" value="On hold" {{ checked("referral-submitted", "On hold") }}>
-							<label class="govuk-label govuk-radios__label" for="referral-submitted-3">On hold</label>
-							<div class="govuk-hint govuk-radios__hint">The referral will be paused until the person is ready to continue.</div>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="referral-submitted-4" name="referral-submitted" type="radio" value="Withdraw referral" {{ checked("referral-submitted", "Withdraw referral") }}>
-							<label class="govuk-label govuk-radios__label" for="referral-submitted-4">Withdraw referral</label>
-							<div class="govuk-hint govuk-radios__hint">The referral will be closed.</div>
+							<input class="govuk-radios__input" id="court-order-3" name="court-order" type="radio" value="Not suitable – return to cohort" {{ checked("court-order", "Not suitable – return to cohort") }}>
+							<label class="govuk-label govuk-radios__label" for="court-order-3">Not suitable – return to cohort</label>
+							<div class="govuk-hint govuk-radios__hint">This person does not meet the suitability for this programme. The referral will closed.</div>
 						</div>
 					</div>
 				</fieldset>
-				<div class="govuk-button-group govuk-!-margin-top-4">
+				<div class="govuk-button-group govuk-!-margin-top-8">
 					<button class="govuk-button" data-module="govuk-button">Continue</button>
 					<a class="govuk-link" href="status-history">Cancel</a>
 				</div>

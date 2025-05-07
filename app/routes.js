@@ -65,22 +65,6 @@ router.post('/redirect-about-person-sexual-offence', function(request, response)
 })
 
 /* v2 */
-router.post('/community/assess/v2/update-status', function (req, res) {
-	const referralSubmitted = req.session.data['referral-submitted']
-    	if (referralSubmitted == 'Awaiting assessment') {
-			res.redirect('awaiting-assessment')
-     	} 
-		else if (referralSubmitted == 'Not eligible') {
-       		res.redirect('not-eligible')
-     	}
-		else if (referralSubmitted == 'On hold') {
-			res.redirect('on-hold')
-	  	}
-		else {
-			res.redirect('withdrawal-reason')
-	  	}
- 	});
-
 router.post('/redirect-about-person-sexual-offence', function(request, response) {
 
 	var moderate_pso = request.session.data['moderate_pso'];//
