@@ -5,7 +5,7 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 {% endblock %}
 
 {% block header %}
-	{% include "includes/community/v2/key-details-com.html" %}
+	{% include "includes/community/v2/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,7 +20,7 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-l">When is Alex River available to attend a programme?</h1>
 		<p class="govuk-body">Add any availability details you know. You can also add or update this later.</p>
-		<form action="availabilityrouter" method="post">
+		<form action="availability" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -175,24 +175,11 @@ When is Alex River available to attend a programme? - {{ serviceName }} - GOV.UK
 					<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
 				</div>
 			</div>
-			{% if data['update-button'] == "update availability" %}
 			<div class="govuk-button-group govuk-!-margin-top-7">
-				<input type="hidden" id="update-availability" name="update-availability" value="update availability">
+				<input type="hidden" id="update-availability-assess" name="update-availability-assess" value="update availability assess">
 				<button class="govuk-button" data-module="govuk-button" formaction="availability">Update</button>
 				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
 			</div>
-			{% elseif data['update-button'] == "update availability" %}
-			<div class="govuk-button-group govuk-!-margin-top-7">
-				<input type="hidden" id="update-availability" name="update-availability" value="update availability">
-				<button class="govuk-button" data-module="govuk-button" formaction="../../assess/v2/availability">Update</button>
-				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
-			</div>
-			{% else %}
-			<div class="govuk-button-group govuk-!-margin-top-7">
-				<button class="govuk-button" data-module="govuk-button">Continue</button>
-				<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit" formaction="#">Skip this section</button>
-			</div>
-			{% endif %}
 		</form>
 	</div>
 </div>
