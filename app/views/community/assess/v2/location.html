@@ -134,7 +134,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		{% else %}
 		<!-- No success banner to display yet -->
 		{% endif %}
+
+		{% if data['update-location'] == "update location" %}
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
+		{% else %}
 		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
+		{% endif %}
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 			  		<h2 class="govuk-summary-card__title">Location information</h2>
@@ -150,7 +155,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							{% if data['location-preference'] %}
 							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
 							{% else %}
-							<dd class="govuk-summary-list__value">TBC</div>
+							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</div>
 							{% endif %}
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
