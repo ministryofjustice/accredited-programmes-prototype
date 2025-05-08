@@ -45,11 +45,13 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="select" selected>Select</option>
 						<optgroup label="Open referrals">
 							<option value="referral-submitted">Referral submitted</option>
-							<option value="referral-submitted">On hold - referral submitted</option>
+							<option value="referral-submitted-hold">On hold - referral submitted</option>
+							<option value="court-order">Court order</option>
+							<option value="returned-court">Returned to court</option>
 							<option value="awaiting-assessment">Awaiting assessment</option>
-							<option value="awaiting-assessment">On hold - awaiting assessment</option>
+							<option value="awaiting-assessment-hold">On hold - awaiting assessment</option>
 							<option value="assessment-started">Assessment started</option>
-							<option value="assessment-started">On hold - assessment started</option>
+							<option value="assessment-started-hold">On hold - assessment started</option>
 							<option value="assessed-suitable">Assessed as suitable</option>
 							<option value="suitable-not-ready">Suitable but not ready</option>
 							<option value="on-programme">On programme</option>
@@ -121,7 +123,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">1 January 2026</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Court order</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
 				{% endif %}
 				<tr class="govuk-table__row">
