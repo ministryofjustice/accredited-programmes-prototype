@@ -1,0 +1,144 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/v2/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
+			</div>
+			<form action="open-referrals" method="post">
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+					  <a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  	</div>
+				</div>
+			</form>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+			 	</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="#">Status history</a>
+				</li>
+		  	</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Alex River</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Cohort</dt>
+				<dd class="govuk-summary-list__value">Sexual offence</dd>
+		  	</div>
+		</dl>
+		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Date referred</dt>
+			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
+			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+	</div>
+</div> 
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="#">Programme history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Availability</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="#">Location</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="additional-information" aria-current="location">Additional information</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<div class="govuk-inset-text govuk-!-margin-top-0">Submitted in referral by Tom Saunders on 11 June 2023</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Additional information</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<p class="govuk-!-margin-bottom-2">No information provided.</p>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+			<form action="#" method="post">
+				<input type="hidden" id="add-additional-information" name="add-additional-information" value="add additional informaion">
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Add additional informaion</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
