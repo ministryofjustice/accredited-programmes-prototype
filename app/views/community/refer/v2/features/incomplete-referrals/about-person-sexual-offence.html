@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Which cohort should Alex River be in? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v2/key-details-com.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Which cohort should Alex River be in?</h1>
+		<form action="add-availability" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend">To assign Alex River to the correct cohort, tell us if they have been convicted of a sexual offence.</legend>
+				  		<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="correct-cohort" name="correct-cohort" type="radio" value="Sexual offence" {{ checked("correct-cohort", "Sexual offence") }}>
+					  			<label class="govuk-label govuk-radios__label" for="correct-cohort">Sexual offence</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="correct-cohort-2" name="correct-cohort" type="radio" value="General offence or domestic abuse" {{ checked("correct-cohort", "General offence or domestic abuse") }}>
+					  			<label class="govuk-label govuk-radios__label" for="correct-cohort-2">General offence or domestic abuse</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}
