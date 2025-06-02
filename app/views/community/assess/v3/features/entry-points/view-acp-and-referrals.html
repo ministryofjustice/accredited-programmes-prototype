@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+{% set containerClasses = "moj-special-width-container" %}
+
+{% block pageTitle %}
+Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% set bodyClasses = "dps-home" %}
+
+{% block header %}
+    {% include "/includes/community/head-dps.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="moj-width-container">
+   <!-- <a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-7">Digital Prison Services</a> -->
+    <h1 class="govuk-heading-l">Interventions: refer and monitor</h1>
+</div>
+<div class="homepage-content">
+    <div class="moj-width-container">
+        <ul class="govuk-grid-row card-group govuk-!-margin-bottom-9">
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="../../find/v2/find-programmes">Find an intervention and make a referral</a>
+                    </h2>
+                    <p class="govuk-body card__description">Search for suitable interventions and start a referral.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="pdu/open-referrals">Referrals to your PDU</a>
+                    </h2>
+                    <p class="govuk-body card__description">Track and update referrals to your probation delivery unit (PDU)</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="region/open-referrals">Referrals to your region</a>
+                    </h2>
+                    <p class="govuk-body card__description">Track and update referrals to your region</p>
+                </div>
+            </li>
+            <br />
+            <br />
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Reporting data</a>
+                    </h2>
+                    <p class="govuk-body card__description">See data about Accredited programmes.</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+{% endblock %}

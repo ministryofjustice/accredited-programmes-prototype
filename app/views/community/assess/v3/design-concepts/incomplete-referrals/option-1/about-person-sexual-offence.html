@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Has Alex River been convicted of a sexual offence? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Has Alex River been convicted of a sexual offence?</h1>
+		<form action="personal-details" method="post">
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend">To assign Alex River to the correct cohort, tell us if they have been convicted of a sexual offence.</legend>
+				  		<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="moderate_pso" name="moderate_pso" type="radio" value="yes" {{ checked("moderate_pso", "yes") }}>
+					  			<label class="govuk-label govuk-radios__label" for="moderate_pso">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+					  			<input class="govuk-radios__input" id="moderate_pso-2" name="moderate_pso" type="radio" value="no" {{ checked("moderate_pso", "no") }}>
+					  			<label class="govuk-label govuk-radios__label" for="moderate_pso-2">No</label>
+							</div>
+				  		</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</div>
+		</form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Are there any locations the person cannot attend the programme? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v2/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<form action="../../assess/v2/location" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<h1 class="govuk-fieldset__heading">Are there any locations the person cannot attend the programme?</h1>
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="contact" name="no-locations-programme" type="radio" value="Yes" data-aria-controls="conditional-no-locations-programme">
+							<label class="govuk-label govuk-radios__label" for="no-locations-programme">Yes</label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no-locations-programme">
+							<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+								<label class="govuk-label govuk-label--s" for="locations-cannot-attend">Tell us about the delivery locations they cannot attend</label>
+								<div id="locations-cannot-attend-hint" class="govuk-hint">This can be delivery location, probation delivery unit or region level</div>
+								<textarea class="govuk-textarea govuk-js-character-count" id="locations-cannot-attend" name="locations-cannot-attend" rows="5" aria-describedby="locations-cannot-attend-hint"></textarea>
+								<div id="locations-cannot-attend-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+							</div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="no-locations-programme-2" name="no-locations-programme" type="radio" value="No">
+							<label class="govuk-label govuk-radios__label" for="no-locations-programme-2">No</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<input type="hidden" id="update-location" name="update-location" value="update location">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="../../assess/v2/location">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

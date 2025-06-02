@@ -1,0 +1,189 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/v2/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
+			</div>
+			<form action="pdu/open-referrals" method="post">
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+					  <a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
+				  	</div>
+				</div>
+			</form>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+			 	</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+				</li>
+		  	</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-m">Referral summary</h2>
+		<dl class="govuk-summary-list govuk-summary-list--no-border">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Applicant name</dt>
+				<dd class="govuk-summary-list__value">Alex River</dd>
+		  	</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme name</dt>
+				<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
+		  	</div>
+		  	<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Programme strand</dt>
+				<dd class="govuk-summary-list__value">Sexual offence</dd>
+		  	</div>
+		</dl>
+		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Date referred</dt>
+			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
+			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
+				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
+			</div>
+		</dl>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+	</div>
+</div> 
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="programme-history">Programme history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="offence-history">Offence history</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="sentence-information">Sentence information</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="availability">Availability</a>
+		  		</li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="location" aria-current="location">Location</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="additional-information">Additional information</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		{% if data['update-location'] == "update location" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
+			<div>
+			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			  	</svg>
+			</div>
+			<div class="moj-alert__content">Location details updated successfully.</div>
+			<div class="moj-alert__action">
+			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
+			</div>
+		</div>
+		{% else %}
+		<!-- No success banner to display yet -->
+		{% endif %}
+
+		{% if data['update-location'] == "update location" %}
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
+		{% else %}
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
+		{% endif %}
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h2 class="govuk-summary-card__title">Location information</h2>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
+							<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Programme delivery location</dt>
+							{% if data['location-preference'] %}
+							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
+							{% else %}
+							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</div>
+							{% endif %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
+							{% if data['no-locations-programme'] == "Yes" %}
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">{{ data['locations-cannot-attend'] }}</p>
+							</dd>
+							{% elseif data['no-locations-programme'] == "No" %}
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">None</p>
+							</dd>
+							{% else %}
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">Alex has conditions meaning he is not to enter the postcode areas of BN9 or BN10.</p>
+							</dd>
+							{% endif %}
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+			<form action="preferred-location" method="post">
+				<input type="hidden" id="update-button" name="update-button" value="change location">
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Change location</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
