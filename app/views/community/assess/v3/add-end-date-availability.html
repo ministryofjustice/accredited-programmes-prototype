@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Do you want to add an end date for this availability? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v2/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<!-- <h1 class="govuk-heading-l">Do you want to add an end date for this availability?</h1>
+		<p class="govuk-body">If you know this availability will change, for example if someone is starting a new job or travelling, add the date it will change.</p> -->
+		<form action="availability" method="post">
+
+
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="end-date-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<h1 class="govuk-fieldset__heading">Do you want to add an end date for this availability?</h1>
+					</legend>
+				  <div id="end-date-hint" class="govuk-hint govuk-!-margin-top-2 govuk-!-margin-bottom-4">If you know this availability will change, for example if someone is starting a new job or travelling, add the date it will change.</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="end-date" name="end-date" type="radio" value="yes" data-aria-controls="conditional-end-date" {{ checked("end-date", "yes") }}>
+						<label class="govuk-label govuk-radios__label" for="end-date">Yes</label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-end-date">
+						<div class="moj-datepicker" data-module="moj-date-picker">
+							<div class="govuk-form-group">
+								  <label class="govuk-label" for="date">Date</label>
+								  <div id="date-hint" class="govuk-hint">For example, 17/5/2024.</div>
+								  <input class="govuk-input moj-js-datepicker-input" id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+							</div>  
+						</div>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="end-date-2" name="end-date" type="radio" value="no" {{ checked("end-date", "no") }}>
+						<label class="govuk-label govuk-radios__label" for="end-date-2">No</label>
+					</div>
+				  </div>
+				</fieldset>
+			  </div>
+
+			<!-- <div class="moj-datepicker" data-module="moj-date-picker">
+				<div class="govuk-form-group">
+				  	<label class="govuk-label" for="date">Date</label>
+				  	<div id="date-hint" class="govuk-hint">For example, 17/5/2024.</div>
+				  	<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+				</div>  
+			</div>
+
+			
+			 <div class="govuk-form-group govuk-!-margin-top-2">
+				<label class="govuk-label govuk-label--m" for="availability-details">Other availability details (optional)</label>
+				<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+					<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
+					<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+				</div>
+			</div> -->
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<input type="hidden" id="update-availability-assess" name="update-availability-assess" value="update availability assess">
+				<button class="govuk-button" data-module="govuk-button" formaction="availability">Update</button>
+				<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

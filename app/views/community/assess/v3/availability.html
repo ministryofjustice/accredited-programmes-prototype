@@ -140,7 +140,11 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		{% else %}
 		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
 		{% endif %}
+		{% if data['end-date'] == "yes" %}
+		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's general availability until 7 December 2025.</p>
+		{% else %}
 		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's general availability to attend an Accredited Programme.</p>
+		{% endif %}
 		<table class="govuk-table govuk-table--small-text-until-tablet">
 			<caption class="govuk-table__caption govuk-table__caption--m" style="display: none;">Availability</caption>
 			<thead class="govuk-table__head">
