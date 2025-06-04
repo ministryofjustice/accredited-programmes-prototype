@@ -146,20 +146,14 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			<thead class="govuk-table__head">
 			  <tr class="govuk-table__row">
 				<th scope="col" class="govuk-table__header">Day</th>
-				<th scope="col" class="govuk-table__header">Morning</th>
-				<th scope="col" class="govuk-table__header">Afternoon</th>
+				<th scope="col" class="govuk-table__header">Daytime</th>
 				<th scope="col" class="govuk-table__header">Evening</th>
 			  </tr>
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Mondays</th>
-					{% if (data['mondays'] or []).indexOf('monday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['mondays'] or []).indexOf('monday afternoon') > -1 %}    
+					{% if (data['mondays'] or []).indexOf('monday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -172,12 +166,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Tuesdays</th>
-					{% if (data['tuesdays'] or []).indexOf('tuesday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['tuesdays'] or []).indexOf('tuesday afternoon') > -1 %}    
+					{% if (data['tuesdays'] or []).indexOf('tuesday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -190,12 +179,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Wednesdays</th>
-					{% if (data['wednesdays'] or []).indexOf('wednesday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['wednesdays'] or []).indexOf('wednesday afternoon') > -1 %}    
+					{% if (data['wednesdays'] or []).indexOf('wednesday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -208,12 +192,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Thursdays</th>
-					{% if (data['thursdays'] or []).indexOf('thursday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['thursdays'] or []).indexOf('thursday afternoon') > -1 %}    
+					{% if (data['thursdays'] or []).indexOf('thursday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -226,12 +205,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Fridays</th>
-					{% if (data['fridays'] or []).indexOf('friday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['fridays'] or []).indexOf('friday afternoon') > -1 %}    
+					{% if (data['fridays'] or []).indexOf('friday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -244,12 +218,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Saturdays</th>
-					{% if (data['saturdays'] or []).indexOf('saturday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['saturdays'] or []).indexOf('saturday afternoon') > -1 %}    
+					{% if (data['saturdays'] or []).indexOf('saturday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
@@ -262,12 +231,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Sundays</th>
-					{% if (data['sundays'] or []).indexOf('sunday morning') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['sundays'] or []).indexOf('sunday afternoon') > -1 %}    
+					{% if (data['sundays'] or []).indexOf('sunday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
