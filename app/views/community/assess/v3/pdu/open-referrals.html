@@ -10,7 +10,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="../view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -86,10 +86,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="#">Open referrals (25)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (25)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Closed referrals (34)</a>
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (34)</a>
 				</li>
 			</ul>
 		</nav>
@@ -113,7 +113,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<!-- Empty row -->
 				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
 			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
@@ -133,7 +133,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			  	</tr>
 				{% else %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
@@ -150,7 +150,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">12 month community order<br /><span class="moj-badge moj-badge--bright-blue">Breach</span></td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Court order</strong></td>
-					</tr>
+				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
 					<td class="govuk-table__cell">Sussex House</td>
