@@ -157,15 +157,16 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
 							{% if data['location-preference'] %}
-							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
+							<dd class="govuk-summary-list__value" style="white-space: pre wrap;">{{ data['location-preference'] }}</dd>
 							{% else %}
 							<dd class="govuk-summary-list__value">
 								<ul class="govuk-list">
 									<li>Brighton and Hove: Brighton Probation Office</li>
 									<li>Hastings: St. Leonards Probation Office</li>
 								</ul>
-							</div>
+							</dd>
 							{% endif %}
+						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
 							{% if data['no-locations-programme'] == "Yes" %}
