@@ -21,8 +21,8 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 		<h1 class="govuk-heading-l">Which programme locations would Alex River prefer?</h1>
 		<p class="govuk-body">This is a list of all locations where the programme can take place in this probation delivery unit. Choose any locations that are suitable.</p>
 		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
+		<h2 class="govuk-heading-m">Offices in Brighton and East Sussex</h2>
 		<form action="preferred-location-router" method="post">
-
 			<div class="govuk-form-group">
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-radios__item">
@@ -44,6 +44,112 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 					</div>
 				</div>
 			</div>
+			<details class="govuk-details">
+				<summary class="govuk-details__summary">
+				  	<span class="govuk-details__summary-text">You can also select offices in another PDU</span>
+				</summary>
+				<div class="govuk-details__text">
+					<div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" aria-describedby="offices-hint">
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<h2 class="govuk-fieldset__heading">Other offices in Kent, Surrey and Sussex</h2>
+							</legend>
+						  	<div id="offices-hint" class="govuk-hint">Select one option</div>
+						  	<div class="govuk-radios" data-module="govuk-radios">
+								<div class="govuk-radios__item">
+							  		<input class="govuk-radios__input" id="offices" name="offices" type="radio" value="East Kent" data-aria-controls="conditional-offices">
+							  		<label class="govuk-label govuk-radios__label" for="offices">East Kent</label>
+								</div>
+								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices">
+									<div class="govuk-form-group">
+										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-east-kent" name="location-east-kent" type="checkbox" value="Office name 1" {{ checked("location-east-kent", "Office name 1") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-east-kent">Office name 1</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-east-kent-2" name="location-east-kent" type="checkbox" value="Office name 2" {{ checked("location-east-kent", "Office name 2") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-east-kent-2">Office name 2</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-east-kent-3" name="location-east-kent" type="checkbox" value="Office name 3" {{ checked("location-east-kent", "Office name 3") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-east-kent-3">Office name 3</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="offices-2" name="offices" type="radio" value="West Kent" data-aria-controls="conditional-offices-2">
+									<label class="govuk-label govuk-radios__label" for="offices-2">West Kent</label>
+								</div>
+								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-2">
+									<div class="govuk-form-group">
+										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-kent" name="location-west-kent" type="checkbox" value="Office name 1" {{ checked("location-west-kent", "Office name 1") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-kent">Office name 1</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-kent-2" name="location-west-kent" type="checkbox" value="Office name 2" {{ checked("location-west-kent", "Office name 2") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-kent-2">Office name 2</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-kent-3" name="location-west-kent" type="checkbox" value="Office name 3" {{ checked("location-west-kent", "Office name 3") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-kent-3">Office name 3</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="offices-3" name="offices" type="radio" value="Surrey" data-aria-controls="conditional-offices-3">
+									<label class="govuk-label govuk-radios__label" for="offices-3">Surrey</label>
+								</div>
+								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-3">
+									<div class="govuk-form-group">
+										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-surrey" name="location-surrey" type="checkbox" value="Office name 1" {{ checked("location-surrey", "Office name 1") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-surrey">Office name 1</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-surrey-3" name="location-surrey" type="checkbox" value="Office name 2" {{ checked("location-surrey", "Office name 2") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-surrey-3">Office name 2</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-surrey-3" name="location-surrey" type="checkbox" value="Office name 3" {{ checked("location-surrey", "Office name 3") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-surrey-3">Office name 3</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="offices-4" name="offices" type="radio" value="West Sussex" data-aria-controls="conditional-offices-4">
+									<label class="govuk-label govuk-radios__label" for="offices-4">West Sussex</label>
+								</div>
+								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-4">
+									<div class="govuk-form-group">
+										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-sussex" name="location-west-sussex" type="checkbox" value="Office name 1" {{ checked("location-west-sussex", "Office name 1") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-sussex">Office name 1</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-sussex-4" name="location-west-sussex" type="checkbox" value="Office name 2" {{ checked("location-west-sussex", "Office name 2") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-sussex-4">Office name 2</label>
+											</div>
+											<div class="govuk-radios__item">
+												<input class="govuk-checkboxes__input" id="location-west-sussex-4" name="location-west-sussex" type="checkbox" value="Office name 3" {{ checked("location-west-sussex", "Office name 3") }}>
+												<label class="govuk-label govuk-checkboxes__label" for="location-west-sussex-4">Office name 3</label>
+											</div>
+										</div>
+									</div>
+								</div>
+						  	</div>
+						</fieldset>
+					</div>
+				</div>
+			</details>
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Continue</button>
 				<a class="govuk-link" href="../../assess/v2/location">Cancel</a>
