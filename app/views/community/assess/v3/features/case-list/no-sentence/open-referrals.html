@@ -10,7 +10,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="../view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -28,8 +28,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			<h2 class="govuk-heading-m filters-heading">Filters</h2>
 			<div class="filter-options">
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
-					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or CRN</label>
-					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
+					<label class="govuk-label govuk-label--s" for="search-name-crn">Search by name or CRN</label>
+					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
 			  	</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="Probation office">Probation office</label>
@@ -86,10 +86,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (25)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="#">Open referrals (25)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (34)</a>
+					<a class="moj-sub-navigation__link" href="#">Closed referrals (34)</a>
 				</li>
 			</ul>
 		</nav>
@@ -101,53 +101,24 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<th scope="col" class="govuk-table__header" aria-sort="none">Probation office</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">PSS end date</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 				</tr>
 			</thead>
 			<tbody>
-				{% if data['referral-submitted'] == "Withdraw referral" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Not eligible" %}
-				<!-- Empty row -->
-				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
-					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
-					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS) (11 months)<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
-					<td class="govuk-table__cell">Sexual offence <br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
-			  	</tr>
-				{% elseif data['referral-submitted'] == "On hold" %}
-			  	<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
-					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
-					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS) (11 months)<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
-					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral submitted</strong></td>
-			  	</tr>
-				{% else %}
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">River, Alex</a><br />X123456</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">River, Alex</a><br />X123456</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS) (11 months)<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong></td>
 			  	</tr>
-				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B739123</td>
 					<td class="govuk-table__cell">Sussex House</td>
-					<td class="govuk-table__cell">7 Jul 2025<br />Order end date</td>
+					<td class="govuk-table__cell">7 Jul 2025<br />Order end date<br /><span class="moj-badge moj-badge--bright-blue">Breach</span></td>
 					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">12 month community order<br /><span class="moj-badge moj-badge--bright-blue">Breach</span></td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Court order</strong></td>
 				</tr>
@@ -156,7 +127,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">ORA community order</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
@@ -165,7 +135,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">6 Oct 2025</td>
-					<td class="govuk-table__cell">Adult custody &lt; 12m</td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting assessment</strong></td>
 				</tr>
@@ -174,16 +143,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS)</td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Wright, Kevin</a><br />Z234587</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">6 Oct 2025</td>
-					<td class="govuk-table__cell">Adult custody &lt; 12m<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong></td>
 				</tr>
@@ -192,7 +159,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">ORA community order</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
@@ -201,7 +167,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">6 Oct 2025</td>
-					<td class="govuk-table__cell">Adult custody &lt; 12m</td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as suitable</strong></td>
 				</tr>
@@ -210,7 +175,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS)</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
@@ -219,7 +183,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">ORA community order</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 					</tr>
@@ -228,7 +191,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">6 Oct 2025</td>
-					<td class="govuk-table__cell">Adult custody &lt; 12m</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong></td>
 				</tr>
@@ -237,7 +199,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS)</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
@@ -246,25 +207,22 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">6 Oct 2025</td>
-					<td class="govuk-table__cell">Adult custody &lt; 12m</td>
 					<td class="govuk-table__cell">General offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Setto, Lukas</a><br />L099432</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date<br /><span class="moj-badge moj-badge--bright-blue">Breach</span></td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS) (11 months)<br /><span class="moj-badge moj-badge--bright-blue">Breach</span></td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Aalegra, Rema</a><br />F039409</td>
 					<td class="govuk-table__cell">Sussex House</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">21 Dec 2025</td>
-					<td class="govuk-table__cell">ORA Adult custody (inc PSS)<br /><span class="moj-badge moj-badge--bright-blue">Recall</span></td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
 				</tr>
