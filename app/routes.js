@@ -775,3 +775,20 @@ router.post('/all/overrides/assess/update-status', function (req, res) {
 			res.redirect('withdrawal-reason')
 		}
 	});
+
+	// This is the routes line breaks {
+router.post('/community/assess/v3/preferred-location-router', function (req, res) {
+	// Continue to the next page
+		let originalStringlocation = String(req.session.data['location-preference']);
+		let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+		if(newStringlocation == "undefined")
+		{
+			req.session.data['location-preference-formatted'] = "None";
+		}
+		else
+		{
+			req.session.data['location-preference-formatted'] = newStringlocation;
+		}
+		res.redirect('no-locations');
+	});
+	
