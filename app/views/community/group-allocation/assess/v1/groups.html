@@ -70,13 +70,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 				<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Allocate people</a>
 			</div>
 		</div>
-
-
-		<!-- <div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions" data-button-classes="govuk-button--secondary" data-align-menu="right">
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Create group</a>
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Manage group</a>
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Allocate people</a>
-		</div> -->
 	</div>
 </div>
 
@@ -85,19 +78,12 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<!-- <div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div> -->
-					</th>
+					<th scope="col" class="govuk-table__header govuk-!-padding-top-0 govuk-!-padding-bottom-0">&nbsp;</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Start date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Gender</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Sex</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Allocated</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Spaces</th>
 				</tr>
@@ -117,7 +103,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">12</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -134,7 +120,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Any</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">3</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -151,7 +137,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">6</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -168,7 +154,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Lewes & Eastbourne</td>
 					<td class="govuk-table__cell">Sexual offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">2</td>
 					<td class="govuk-table__cell">12</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -185,7 +171,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">2</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -202,7 +188,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">1</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -219,7 +205,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Littlehampton</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Any</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">16</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -236,7 +222,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">22</td>
 					<td class="govuk-table__cell">30</td>
 			  	</tr>
 				  <tr class="govuk-table__row">
@@ -253,7 +239,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">12</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -270,7 +256,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Crawley</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">19</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -287,7 +273,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Crawley</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Any</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">17</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -304,7 +290,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Female</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">1</td>
 					<td class="govuk-table__cell">18</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -321,7 +307,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Littlehampton</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">2</td>
 					<td class="govuk-table__cell">10</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -338,7 +324,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Crawley</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">7</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -355,7 +341,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">5</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -372,7 +358,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">12</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -389,7 +375,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">5</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -406,7 +392,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Any</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">No</strong></td>
+					<td class="govuk-table__cell">7</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
@@ -423,7 +409,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Lewes & Eastbourne</td>
 					<td class="govuk-table__cell">General offence</td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">12</td>
 					<td class="govuk-table__cell">30</td>
 			  	</tr>
 				  <tr class="govuk-table__row">
@@ -440,7 +426,7 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
 					<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 					<td class="govuk-table__cell">Male</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong></td>
+					<td class="govuk-table__cell">17</td>
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 			</tbody>
