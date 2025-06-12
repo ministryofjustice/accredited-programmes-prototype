@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Groups - {{ serviceName }} - GOV.UK Prototype Kit
+Current groups - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -59,24 +59,13 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="moj-page-header-actions clear">
 	<div class="moj-page-header-actions__title">
-		<h1 class="govuk-heading-xl">Groups</h1>
+		<h1 class="govuk-heading-xl">Current groups</h1>
 	</div>
 	<div class="moj-page-header-actions__actions">
-
-		<div class="moj-button-group moj-button-group--inline">
-			<button type="submit" class="govuk-button" data-module="govuk-button">Create group</button>
-			<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions" data-button-classes="govuk-button--secondary" data-align-menu="right">
-			  	<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Manage group</a>
-				<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Allocate people</a>
-			</div>
+	  	<div class="moj-button-group moj-button-group--inline govuk-!-margin-right-0">
+			<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Create new group</a>
+			<!-- <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Allocate people</a> -->
 		</div>
-
-
-		<!-- <div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions" data-button-classes="govuk-button--secondary" data-align-menu="right">
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Create group</a>
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Manage group</a>
-			<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Allocate people</a>
-		</div> -->
 	</div>
 </div>
 
@@ -85,14 +74,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<!-- <div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div> -->
-					</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Start date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
@@ -104,14 +85,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 			</thead>
 			<tbody>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">A Group name 4</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -121,14 +94,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">A Group name 5</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -138,14 +103,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="bc-group-1" class="govuk-link">Building Choices group 1</a></td>
 					<td class="govuk-table__cell">19 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -155,14 +112,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">15</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Building Choices group 2</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Lewes & Eastbourne</td>
@@ -172,14 +121,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">12</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Building Choices group 3</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -189,14 +130,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">B Group name 4</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -206,14 +139,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">C Group name 5</a></td>
 					<td class="govuk-table__cell">5 Jun 2025</td>
 					<td class="govuk-table__cell">Littlehampton</td>
@@ -223,14 +148,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">C Group name 6</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -240,14 +157,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">30</td>
 			  	</tr>
 				  <tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">D Group name 11</a></td>
 					<td class="govuk-table__cell">19 Jul 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -257,14 +166,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">D Group name 12</a></td>
 					<td class="govuk-table__cell">30 Apr 2025</td>
 					<td class="govuk-table__cell">Crawley</td>
@@ -274,14 +175,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">D Group name 13</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Crawley</td>
@@ -291,14 +184,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">E Group name 7</a></td>
 					<td class="govuk-table__cell">3 Apr 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -308,14 +193,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">18</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">E Group name 8</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Littlehampton</td>
@@ -325,14 +202,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">10</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">E Group name 9</a></td>
 					<td class="govuk-table__cell">26 Jul 2025</td>
 					<td class="govuk-table__cell">Crawley</td>
@@ -342,14 +211,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">F Group name 10</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -359,14 +220,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">G Group name 11</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -376,14 +229,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">G Group name 12</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -393,14 +238,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">H Group name 13</a></td>
 					<td class="govuk-table__cell">19 Jul 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
@@ -410,14 +247,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">20</td>
 			  	</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">H Group name 14</a></td>
 					<td class="govuk-table__cell">11 Jun 2025</td>
 					<td class="govuk-table__cell">Lewes & Eastbourne</td>
@@ -427,14 +256,6 @@ Groups - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">30</td>
 			  	</tr>
 				  <tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">H Group name 15</a></td>
 					<td class="govuk-table__cell">17 Jun 2025</td>
 					<td class="govuk-table__cell">Brighton and East Sussex</td>
