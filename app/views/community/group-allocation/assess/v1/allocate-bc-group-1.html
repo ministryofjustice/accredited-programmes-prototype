@@ -131,6 +131,41 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
     <div class="govuk-grid-column-full">
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break govuk-section-break--visible" />
 		<h2 class="govuk-heading-l govuk-!-margin-top-8">Building Choices waitlist</h2>
+		<div class="filters-container-moj">
+			<h2 class="govuk-heading-m filters-heading">Filters</h2>
+			<div class="filter-options">
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="sex">Sex</label>
+					<select class="govuk-select" id="sex" name="sex">
+						<option value="select" selected>Select</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<!-- <div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
+					<select class="govuk-select" id="cohort" name="cohort">
+						<option value="select" selected>Select</option>
+						<option value="general-violence">General offence</option>
+						<option value="general-violence-ldc">General offence LDC</option>
+						<option value="intimate-partner-violence">Sexual offence</option>
+						<option value="intimate-partner-violence-ldc">Sexual offence LDC</option>
+					</select>
+				</div> -->
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="reporting-office">Reporting office</label>
+					<select class="govuk-select" id="reporting-office" name="reporting-office">
+						<option value="select" selected>Select</option>
+						<option value="brighton-probation-office">Brighton Probation Office</option>
+						<option value="sussex-house">Sussex House</option>
+					</select>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
+					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
+				</div>
+			</div>
+		</div>
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 			  	<li class="moj-sub-navigation__item">
