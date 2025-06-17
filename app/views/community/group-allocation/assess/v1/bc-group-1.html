@@ -137,67 +137,40 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break govuk-section-break--visible" />
 		<h2 class="govuk-heading-l govuk-!-margin-top-8">Participants allocated</h2>
-		<div class="moj-scrollable-pane">
-			<table class="govuk-table" data-module="moj-sortable-table">
-				<thead class="govuk-table__head">
-					<tr class="govuk-table__row">
-						<th scope="col" class="govuk-table__header govuk-!-padding-top-0 govuk-!-padding-bottom-0">&nbsp;</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Attended</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Missed</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Non-associations</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
-					</tr>
-				</thead>
-				<tbody class="govuk-table__body">
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small">
-								<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-								<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-								<span class="govuk-visually-hidden">Select group</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">34</td>
-						<td class="govuk-table__cell">None</td>
-						<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small">
-								<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-								<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-								<span class="govuk-visually-hidden">Select group</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">27</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
-						<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small">
-								<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-								<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-								<span class="govuk-visually-hidden">Select group</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />P227326</td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">45</td>
-						<td class="govuk-table__cell">None</td>
-						<td class="govuk-table__cell">20 May 2025<br />Order end date</td>
-					</tr>
-				</tbody>
-			</table>	
-		</div>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attended</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Missed</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Non-associations</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
+					<td class="govuk-table__cell">Male</td>
+					<td class="govuk-table__cell">34</td>
+					<td class="govuk-table__cell">None</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
+					<td class="govuk-table__cell">Male</td>
+					<td class="govuk-table__cell">27</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />P227326</td>
+					<td class="govuk-table__cell">Male</td>
+					<td class="govuk-table__cell">45</td>
+					<td class="govuk-table__cell">None</td>
+					<td class="govuk-table__cell">20 May 2025<br />Order end date</td>
+				</tr>
+			</tbody>
+		</table>	
 	</div>
 </div>
 {% endblock %}
