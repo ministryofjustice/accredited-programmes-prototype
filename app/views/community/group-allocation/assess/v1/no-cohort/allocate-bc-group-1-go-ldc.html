@@ -161,7 +161,7 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 					</select>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
-					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
+					<button type="submit" class="govuk-button govuk-!-margin-bottom-0 govuk-button--secondary" data-module="govuk-button">Apply filters</button>
 					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
 				</div>
 			</div>
@@ -185,7 +185,14 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header govuk-!-padding-top-0 govuk-!-padding-bottom-0">&nbsp;</th>
+					<th scope="col" class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small">
+							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
+							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
+							<span class="govuk-visually-hidden">Select group</span>
+							</label>
+						</div>
+					</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Sex</th>
@@ -215,6 +222,7 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 			  	</tr>
 			</tbody>
 		</table>	
+		<a href="#" class="govuk-button moj-button-menu__item">Add to group</a>
     </div>
 </div>
 {% endblock %}
