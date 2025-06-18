@@ -5,7 +5,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/v3/key-details-pt.html" %}
+	{% include "/includes/community/v2/key-details-pt.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -151,17 +151,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							<dd class="govuk-summary-list__value">Brighton and East Sussex</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation office</dt>
-							<dd class="govuk-summary-list__value">Brighton Probation Office</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
+							<dt class="govuk-summary-list__key">Programme delivery location</dt>
 							{% if data['location-preference'] %}
-							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-formatted'] }}</dd>
+							<dd class="govuk-summary-list__value">{{ data['location-preference'] }}</div>
 							{% else %}
-							<dd class="govuk-summary-list__value"><a href="preferred-location" class="govuk-link">Enter preferred programme delivery locations</a></dd>
+							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</div>
 							{% endif %}
-						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
 							{% if data['no-locations-programme'] == "Yes" %}
@@ -173,21 +168,21 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 								<p class="govuk-body">None</p>
 							</dd>
 							{% else %}
-							<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body">Alex has conditions meaning he is not to enter the postcode areas of BN9 or BN10.</p>
+							</dd>
 							{% endif %}
 						</div>
 					</dl>
 				</div>
 		 	</div>
 
-			{% if data['update-location'] == "update location" %}
 			<form action="preferred-location" method="post">
 				<input type="hidden" id="update-button" name="update-button" value="change location">
 				<div class="govuk-button-group">
-					<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
+					<button class="govuk-button" data-module="govuk-button" type="submit">Change location</button>
 				</div>
 			</form>
-			{% endif %}
 		</div>
 	</div>
 </div>
