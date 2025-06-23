@@ -64,8 +64,8 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	<div class="moj-page-header-actions__actions">
 	  	<div class="moj-button-group moj-button-group--inline govuk-!-margin-right-0">
-			<a href="allocate-bc-group-1" class="govuk-button moj-button-menu__item">Allocate people</a>
-			<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Manage group</a>
+			<!-- <a href="allocate-bc-group-1" class="govuk-button moj-button-menu__item">Allocate people</a> 
+			<a href="#" class="govuk-button moj-button-menu__item">Manage group</a> -->
 		</div>
 	</div>
 </div>
@@ -73,7 +73,12 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-two-thirds">
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				  <h2 class="govuk-summary-card__title">Group information</h2>
+				<h2 class="govuk-summary-card__title">Group information</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  	<a class="govuk-link" href="#">Manage<span class="govuk-visually-hidden"> Building Choices group 1</span></a>
+					</li>
+				</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
@@ -108,7 +113,12 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-one-third">
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
-				  <h2 class="govuk-summary-card__title">Schedule overview</h2>
+				<h2 class="govuk-summary-card__title">Schedule overview</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  	<a class="govuk-link" href="#">Manage<span class="govuk-visually-hidden"> Schedule overview</span></a>
+					</li>
+				</ul>
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
@@ -171,6 +181,7 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</tbody>
 		</table>	
+		<a href="allocate-bc-group-1" class="govuk-button moj-button-menu__item">Allocate people</a>
 	</div>
 </div>
 {% endblock %}
