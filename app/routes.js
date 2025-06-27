@@ -808,3 +808,16 @@ router.post('/community/assess/v3/design-concepts/location/a/preferred-location-
 		res.redirect('no-locations');
 	});
 	
+
+router.post('/community/group-allocation/assess/v1/allocate-router', function(request, response) {
+
+		var allocate_person_group = request.session.data['allocate-person-group'];//
+	  
+		if (allocate_person_group === "Yes"){
+		  response.redirect("availability-adrian-poole") // Initial redirect
+	  
+		}
+		else {
+		  response.redirect("allocate-bc-group-1")
+		}
+	})
