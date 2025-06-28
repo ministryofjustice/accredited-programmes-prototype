@@ -175,32 +175,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		{% if data['update-availability-assess'] == "update availability assess" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
-			<div>
-			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			  	</svg>
-			</div>
-			<div class="moj-alert__content">Availability details updated successfully.</div>
-			<div class="moj-alert__action">
-			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
-			</div>
-		</div>
-		{% else %}
-		<!-- No success banner to display yet -->
-		{% endif %}
-
-		{% if data['update-availability-assess'] == "update availability assess" %}
-		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
-		{% else %}
 		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
-		{% endif %}
-		{% if data['end-date'] == "yes" %}
-		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's general availability until 7 December 2025.</p>
-		{% else %}
 		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's general availability to attend an Accredited Programme.</p>
-		{% endif %}
 		<table class="govuk-table govuk-table--small-text-until-tablet">
 			<caption class="govuk-table__caption govuk-table__caption--m" style="display: none;">Availability</caption>
 			<thead class="govuk-table__head">
@@ -213,103 +189,43 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Mondays</th>
-					{% if (data['mondays'] or []).indexOf('monday daytime') > -1 %}    
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['mondays'] or []).indexOf('monday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Tuesdays</th>
-					{% if (data['tuesdays'] or []).indexOf('tuesday daytime') > -1 %}    
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['tuesdays'] or []).indexOf('tuesday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Wednesdays</th>
-					{% if (data['wednesdays'] or []).indexOf('wednesday daytime') > -1 %}    
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['wednesdays'] or []).indexOf('wednesday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
-					<th scope="row" class="govuk-table__header">Thursdays</th>
-					{% if (data['thursdays'] or []).indexOf('thursday daytime') > -1 %}    
+					<th scope="row" class="govuk-table__header">Thursdays</th>   
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['thursdays'] or []).indexOf('thursday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Fridays</th>
-					{% if (data['fridays'] or []).indexOf('friday daytime') > -1 %}    
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['fridays'] or []).indexOf('friday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Saturdays</th>
-					{% if (data['saturdays'] or []).indexOf('saturday daytime') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['saturdays'] or []).indexOf('saturday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Sundays</th>
-					{% if (data['sundays'] or []).indexOf('sunday daytime') > -1 %}    
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
-					{% if (data['sundays'] or []).indexOf('sunday evening') > -1 %}    
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
-					{% else %}
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
-					{% endif %}
 				</tr>
 			</tbody>
 		</table>
 		<h3 class="govuk-heading-s">Other availability details</h3>
-		{% if data['availability-details'] %}
-		<p class="govuk-!-margin-bottom-8">{{ data['availability-details'] }}</p>
-		{% else %}
-		<p class="govuk-!-margin-bottom-8">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-		{% endif %}
+		<p class="govuk-body govuk-!-margin-bottom-6">Adrian has childcare responsibilities on Tuesday and Thursday evenings. He works on Saturdays.</p>
 		
 		<form action="#" method="post">
 			<input type="hidden" id="update-button" name="update-button" value="update availability assess">
