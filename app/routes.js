@@ -826,20 +826,44 @@ router.post('/community/assess/v3/design-concepts/location/b/preferred-location-
 
 // This is the routes line breaks {
 router.post('/community/assess/v3/design-concepts/location/c/preferred-location-router', function (req, res) {
-	// Continue to the next page
-		let originalStringlocation = String(req.session.data['location-preference']);
-		let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
-		if(newStringlocation == "undefined")
-		{
-			req.session.data['location-preference-formatted'] = "None";
-		}
-		else
-		{
-			req.session.data['location-preference-formatted'] = newStringlocation;
-		}
-		res.redirect('no-locations');
+	//Prev string setup - @enor this all seems to work as expected
+	let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-formatted'] = newStringlocation;
+	}
+	//Redirect based on answer to yes no radio
+	var moreLocations = req.session.data['moreLocations']
+	if (moreLocations == "yes"){
+    res.redirect('preferred-location-alternates')
+  } else {
+    res.redirect('no-locations')
+  }
 	});
+
+router.post('/community/assess/v3/design-concepts/location/c/preferred-location-alt-router', function (req, res) {
+// @enor this is where it's messy - I'm trying to combine any location data from the prev page with anything the user chooses here
+// I did change some names of things but that didn't seem to work so I've changed it back on other pages to the 'default' for now
+let originalStringlocation = String(req.session.data['location-preference-formatted'+'location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-2-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-2-formatted'] = newStringlocation;
+	}
+	res.redirect('no-locations');
+});
 	
+
+
 
 router.post('/community/group-allocation/assess/v1/allocate-router', function(request, response) {
 
