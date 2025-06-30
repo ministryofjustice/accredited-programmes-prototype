@@ -847,10 +847,14 @@ router.post('/community/assess/v3/design-concepts/location/c/preferred-location-
 	});
 
 router.post('/community/assess/v3/design-concepts/location/c/preferred-location-alt-router', function (req, res) {
-// @enor this is where it's messy - I'm trying to combine any location data from the prev page with anything the user chooses here
-// I did change some names of things but that didn't seem to work so I've changed it back on other pages to the 'default' for now
-let originalStringlocation = String(req.session.data['location-preference-formatted'+'location-preference']);
-	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+
+//Don't know how this all works exactly but it does
+let original = req.session.data['location-preference-formatted'] || '';
+let alternative = req.session.data['location-preference'] || '';
+let combined = `${original}\n${alternative}`;
+
+let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = combined.replace(/,(?!\s)/g, "\n");
 	if(newStringlocation == "undefined")
 	{
 		req.session.data['location-preference-2-formatted'] = "None";
