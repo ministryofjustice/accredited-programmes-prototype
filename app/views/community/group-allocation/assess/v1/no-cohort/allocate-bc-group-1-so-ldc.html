@@ -174,7 +174,37 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 				</li>	
 			</ul>
 		</nav>
-		<table class="govuk-table" data-module="moj-sortable-table">
+		<table class="govuk-table" data-module="moj-multi-select" data-id-prefix="group-">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0" scope="col" id="group-select-all"></th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Name and CRN</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Sentence end date</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Age</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Reporting office</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Preferred locations</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row govuk-table__row--selected">
+					<td class="govuk-table__cell">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+							<input type="checkbox" class="govuk-checkboxes__input" id="group-poole-adrian">
+							<label class="govuk-label govuk-checkboxes__label" for="group-poole-adrian">
+							<span class="govuk-visually-hidden">Select Poole, Adrian</span>
+							</label>
+						</div>
+					</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+					<td class="govuk-table__cell">34</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">Hastings: St. Leonards Probation Office</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- <table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
 					<th scope="col" class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0">
@@ -211,7 +241,8 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 					<td class="govuk-table__cell"><a href="../availability" class="govuk-link govuk-link--no-visited-state">View</a></td>
 			  	</tr>
 			</tbody>
-		</table>	
+		</table> -->
+		
 		<a href="#" class="govuk-button moj-button-menu__item">Add to group</a>
     </div>
 </div>

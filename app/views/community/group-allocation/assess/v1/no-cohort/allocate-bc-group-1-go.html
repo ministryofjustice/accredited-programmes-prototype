@@ -174,7 +174,82 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 				</li>	
 			</ul>
 		</nav>
-		<table class="govuk-table" data-module="moj-sortable-table">
+		<table class="govuk-table" data-module="moj-multi-select" data-id-prefix="group-">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0" scope="col" id="group-select-all"></th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Name and CRN</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Sentence end date</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Age</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Reporting office</th>
+					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Preferred locations</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row govuk-table__row--selected">
+					<td class="govuk-table__cell">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcgregor-simon">
+							<label class="govuk-label govuk-checkboxes__label" for="group-mcgregor-simon">
+							<span class="govuk-visually-hidden">Select McGregor, Simon</span>
+							</label>
+						</div>
+					</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+					<td class="govuk-table__cell">39</td>
+					<td class="govuk-table__cell">St. Leonards Probation Office</td>
+					<td class="govuk-table__cell">Brighton and Hove: Brighton Probation Office</td>
+				</tr>
+				<tr class="govuk-table__row govuk-table__row--selected">
+					<td class="govuk-table__cell">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+							<input type="checkbox" class="govuk-checkboxes__input" id="group-hemsworth-luke">
+							<label class="govuk-label govuk-checkboxes__label" for="group-hemsworth-luke">
+							<span class="govuk-visually-hidden">Select Hemsworth, Luke</span>
+							</label>
+						</div>
+					</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F384914</td>
+					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">41</td>
+					<td class="govuk-table__cell">Sussex House</td>
+					<td class="govuk-table__cell">West Sussex: Office 2</td>
+				</tr>
+				<tr class="govuk-table__row govuk-table__row--selected">
+					<td class="govuk-table__cell">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcdonald-jim">
+							<label class="govuk-label govuk-checkboxes__label" for="group-mcdonald-jim">
+							<span class="govuk-visually-hidden">Select McDonald, Jim</span>
+							</label>
+						</div>
+					</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B123408</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">52</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">Lewes & Eastbourne: Eastbourne Probation Office</td>
+				</tr>
+				<tr class="govuk-table__row govuk-table__row--selected">
+					<td class="govuk-table__cell">
+						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcadam-alistair">
+							<label class="govuk-label govuk-checkboxes__label" for="group-mcadam-alistair">
+							<span class="govuk-visually-hidden">Select McAdam, Alistair</span>
+							</label>
+						</div>
+					</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114123</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">28</td>
+					<td class="govuk-table__cell">St. Leonards Probation Office</td>
+					<td class="govuk-table__cell">Hastings: St. Leonards Probation Office</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- <table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
 					<th scope="col" class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0">
@@ -259,7 +334,8 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
 			  	</tr>
 			</tbody>
-		</table>	
+		</table> -->
+		
 		<a href="#" class="govuk-button moj-button-menu__item">Add to group</a>
     </div>
 </div>
