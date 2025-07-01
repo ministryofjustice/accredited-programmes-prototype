@@ -874,7 +874,7 @@ router.post('/community/group-allocation/assess/v1/allocate-router', function(re
 		var allocate_person_group = request.session.data['allocate-person-group'];//
 	  
 		if (allocate_person_group === "Yes"){
-		  response.redirect("availability-adrian-poole") // Initial redirect
+		  response.redirect("confirmation") // Initial redirect
 	  
 		}
 		else {

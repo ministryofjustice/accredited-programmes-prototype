@@ -84,30 +84,15 @@ Adrian Poole has non-associations in this group - {{ serviceName }} - GOV.UK Pro
 				</tr> -->
 			</tbody>
 		</table>	
-		<!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
-		<form action="allocate-router" method="post">
-			<div class="govuk-form-group">
-				<fieldset class="govuk-fieldset">
-					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h2 class="govuk-fieldset__heading">Do you want to allocate Adrian Poole to Building Choices group 1?</h2>
-					</legend>
-					<div class="govuk-radios" data-module="govuk-radios">
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="contact" name="allocate-person-group" type="radio" value="Yes" {{ checked("allocate-person-group", "Yes") }}>
-							<label class="govuk-label govuk-radios__label" for="allocate-person-group">Yes</label>
-						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="allocate-person-group-2" name="allocate-person-group" type="radio" value="No" {{ checked("allocate-person-group", "No") }}>
-							<label class="govuk-label govuk-radios__label" for="allocate-person-group-2">No, cancel allocation</label>
-						</div>
-					</div>
-				</fieldset>
-			</div>
-			<div class="govuk-button-group govuk-!-margin-top-7">
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<form action="availability-adrian-poole" method="post">
 				<input type="hidden" id="person-not-allocated" name="person-not-allocated" value="person not allocated">
-				<button class="govuk-button" data-module="govuk-button">Continue</button>
-			</div>
-		</form>
+				<div class="govuk-button-group">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+					<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" formaction="allocate-bc-group-1">Cancel allocation</button>
+				</div>
+			</form>
+		</div>
     </div>
 </div>
 {% endblock %}
