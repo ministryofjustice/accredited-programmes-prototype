@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
+Allocation complete - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -13,7 +13,13 @@ Accredited Programme history - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-two-thirds">
 		<div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
 			<h1 class="govuk-panel__title">Allocation complete</h1>
-			  <div class="govuk-panel__body">Adrian Poole (D005188) has been added to Buidling Choices group 1</div>
+			{% if data['group-waitlist'] == "Poole, Adrian" %}
+			<div class="govuk-panel__body">Adrian Poole (D005188) has been added to Building Choices group 1</div>
+			{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+			<div class="govuk-panel__body">Dan Jackson (Z234533) has been added to Building Choices group 1</div>
+			{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+			<div class="govuk-panel__body">Fredric Roman (P227326) has been added to Building Choices group 1</div>
+			{% endif %}
 		</div>
 		<h2 class="govuk-heading-m">What happens next</h2>
     	<p class="govuk-body">[[ Content to be confirmed. ]]</p>

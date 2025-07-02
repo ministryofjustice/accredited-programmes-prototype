@@ -1,7 +1,13 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+	{% if data['group-waitlist'] == "Poole, Adrian" %}	
+	Adrian Poole's availability - {{ serviceName }} - GOV.UK Prototype Kit
+	{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+	Dan Jackson's availability - {{ serviceName }} - GOV.UK Prototype Kit
+	{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+	Roman Fredric's availability - {{ serviceName }} - GOV.UK Prototype Kit
+	{% endif %}
 {% endblock %}
 
 {% block header %}
@@ -33,7 +39,6 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						<span class="dps-header__link__sub-text">Manage your details</span>
 					</a>
 				</li>
-
 				<li class="dps-header__navigation__item">
 					<a class="dps-header__link govuk-link--no-visited-state" href="#">Sign out</a>
 				</li>
@@ -41,25 +46,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</nav>
 	</div>
 </header>
-<div class="govuk-phase-banner govuk-width-container" style="border-bottom: none;">
-	  <p class="govuk-phase-banner__content">
-		<strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
-		<span class="govuk-phase-banner__text">This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.</span>
-	  </p>
-</div>
-<section class="key-details-bar" aria-label="Key details">
-	  <div class="key-details-bar__key-details">
-		<div class="key-details-bar__top-block">
-			<span class="govuk-visually-hidden">Name:</span>
-			<span class="key-details-bar__name">Adrian Poole</span>
-		</div>
-		<div class="key-details-bar__bottom-block govuk-!-padding-top-0">
-			<span class="govuk-body govuk-!-margin-right-4 nav-border">CRN: D005188</span> 
-			<span class="govuk-body govuk-!-margin-right-4 nav-border">Date of birth: 15 March 1991 (34 years old)</span> 
-			<span class="govuk-body govuk-!-margin-right-6">Tier: C2</span>
-		</div>
-	  </div>
-</section> 
+<div class="govuk-phase-banner govuk-width-container" style="border-bottom: 1px solid #b1b4b6;">
+	<p class="govuk-phase-banner__content">
+	  <strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
+	  <span class="govuk-phase-banner__text">This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.</span>
+	</p>
+  </div>
 </div>
 
 {% endblock %}
@@ -71,112 +63,46 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %} 
 
 {% block content %}
-<div class="govuk-grid-row clear">
-    <div class="govuk-grid-column-full">
-		<div class="moj-page-header-actions">
-			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
-			</div>
-			<form action="open-referrals" method="post">
-				<div class="moj-page-header-actions__actions">
-					<div class="moj-button-menu">
-					  <a href="open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
-					  <a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Update status</a>
-				  	</div>
-				</div>
-			</form>
- 		</div>
+<div class="moj-page-header-actions clear">
+	<div class="moj-page-header-actions__title">
+		<span class="govuk-caption-l"> Building Choices group 1</span>
+		{% if data['group-waitlist'] == "Poole, Adrian" %}
+		<h1 class="govuk-heading-l">Adrian Poole's availability</h1>
+		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+		<h1 class="govuk-heading-l">Dan Jackson's availability</h1>
+		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+		<h1 class="govuk-heading-l">Roman Fredric's availability</h1>
+		{% endif %}
 	</div>
 </div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
-			    </li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
-				</li>
-		  	</ul>
-		</nav>
-	</div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
-		<h2 class="govuk-heading-m">Referral summary</h2>
-		<dl class="govuk-summary-list govuk-summary-list--no-border">
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Applicant name</dt>
-				<dd class="govuk-summary-list__value">Adrian Poole</dd>
-		  	</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme name</dt>
-				<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
-		  	</div>
-		  	<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme strand</dt>
-				<dd class="govuk-summary-list__value">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></dd>
-		  	</div>
-		</dl>
-		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Date referred</dt>
-			  	<dd class="govuk-summary-list__value">2 April 2025</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-			  	<dt class="govuk-summary-list__key">Probation practitioner</dt>
-			  	<dd class="govuk-summary-list__value">Tom Saunders</dd>
-			</div>
-			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Probation practitioner email address</dt>
-				<dd class="govuk-summary-list__value"><a href="#" class="govuk-link">tom.saunders@justice.gov.uk</a></dd>
-			</div>
-		</dl>
-    </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-	</div>
-</div> 
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-one-quarter">
-		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
-			<ul class="moj-side-navigation__list">
-				<li class="moj-side-navigation__item">
-					<a href="#">Personal details</a>
-				</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Programme history</a>
-				</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Offence history</a>
-				</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Sentence information</a>
-				</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="#" aria-current="location">Availability</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Location</a>
-		  		</li>
-				<li class="moj-side-navigation__item">
-					<a href="#">Additional information</a>
-		  		</li>
-			</ul>
-		</nav>
-	</div>
-	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
-		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's general availability to attend an Accredited Programme.</p>
+<div class="govuk-grid-row govuk-!-margin-top-8">  
+    <div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">Information has been added about preferred locations and availability.</p>
+		<h2 class="govuk-heading-m">Preferred programme delivery locations</h2>
+		{% if data['group-waitlist'] == "Poole, Adrian" %}
+		<ul class="govuk-list">
+			<li>Hastings: St. Leonards Probation Office</li>
+		</ul>
+		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+		<ul class="govuk-list">
+			<li>Lewes & Eastbourne: Eastbourne Probation Office</li>
+		</ul>
+		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+		<ul class="govuk-list">
+			<li>Meadowfield House</li>
+			<li>Eastbourne Probation Office</li>
+		</ul>
+		{% endif %}
+
+		<h2 class="govuk-heading-m">Availability</h2>
+		{% if data['group-waitlist'] == "Poole, Adrian" %}
+		<p class="govuk-body">This is Adrian Poole's general availability to attend an Accredited Programme.</p>
+		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+		<p class="govuk-body">This is Dan Jackson's general availability to attend an Accredited Programme.</p>
+		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+		<p class="govuk-body">This is Fredric Roman's general availability to attend an Accredited Programme.</p>
+		{% endif %}
+
 		<table class="govuk-table govuk-table--small-text-until-tablet">
 			<caption class="govuk-table__caption govuk-table__caption--m" style="display: none;">Availability</caption>
 			<thead class="govuk-table__head">
@@ -186,6 +112,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<th scope="col" class="govuk-table__header">Evening</th>
 			  </tr>
 			</thead>
+			{% if data['group-waitlist'] == "Poole, Adrian" %}
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
 					<th scope="row" class="govuk-table__header">Mondays</th>
@@ -223,16 +150,161 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
 				</tr>
 			</tbody>
+			{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Mondays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Tuesdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Wednesdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Thursdays</th>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Fridays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Saturdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Sundays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+			</tbody>
+			{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Mondays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Tuesdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Wednesdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Thursdays</th>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Fridays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">available</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Saturdays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>   
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>   
+				</tr>
+				<tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Sundays</th>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>      
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">not available</strong></td>   
+				</tr>
+			</tbody>
+			{% endif %}
 		</table>
-		<h3 class="govuk-heading-s">Other availability details</h3>
-		<p class="govuk-body govuk-!-margin-bottom-6">Adrian has childcare responsibilities on Tuesday and Thursday evenings. He works on Saturdays.</p>
+
+		{% if data['group-waitlist'] == "Poole, Adrian" %}
+		<h2 class="govuk-heading-m">Other availability details</h2>
+		<p class="govuk-body">Adrian has childcare responsibilities on Tuesday and Thursday evenings. He works on Saturdays.</p>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+		<h2 class="govuk-heading-m">Other availability details</h2>
+		<p class="govuk-body">Dan works Monday to Friday during daytime.</p>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+		<div class="govuk-!-margin-top-8"></div>
+		{% endif %}
 		
-		<form action="#" method="post">
-			<input type="hidden" id="update-button" name="update-button" value="update availability assess">
-			<div class="govuk-button-group">
-				<button class="govuk-button" data-module="govuk-button" type="submit">Update availability</button>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">Group information</h2>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Delivery location</dt>
+						{% if data['group-waitlist'] == "Poole, Adrian" %}
+						<dd class="govuk-summary-list__value">Brighton Probation Office</dd>
+						{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+						<dd class="govuk-summary-list__value">Brighton Probation Office</dd>
+						{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+						<dd class="govuk-summary-list__value">Sussex House</dd>
+						{% endif %}
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
+						<dd class="govuk-summary-list__value">16 June 2025</dd>
+					</div>
+					<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
+						<dt class="govuk-summary-list__key">End date</dt>
+						<dd class="govuk-summary-list__value">22 August 2025</dd>
+					</div>
+				</dl>
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<ul class="govuk-list govuk-!-margin-top-4 govuk-!-margin-bottom-2">
+							<li>Mondays 10am to 2pm</li>
+							<li>Thursdays 10am to 2pm</li>
+						</ul>
+					</div>
+				</dl>
+			</div>
+		</div>
+		<form action="allocate-router" method="post">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						{% if data['group-waitlist'] == "Poole, Adrian" %}
+						<h2 class="govuk-fieldset__heading">Do you want to allocate Adrian Poole to Building Choices group 1?</h2>
+						{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+						<h2 class="govuk-fieldset__heading">Do you want to allocate Dan Jackson to Building Choices group 1?</h2>
+						{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+						<h2 class="govuk-fieldset__heading">Do you want to allocate Fredric Roman to Building Choices group 1?</h2>
+						{% endif %}
+					</legend>
+					<div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="contact" name="allocate-person-group" type="radio" value="Yes" {{ checked("allocate-person-group", "Yes") }}>
+							<label class="govuk-label govuk-radios__label" for="allocate-person-group">Yes</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="allocate-person-group-2" name="allocate-person-group" type="radio" value="No" {{ checked("allocate-person-group", "No") }}>
+							<label class="govuk-label govuk-radios__label" for="allocate-person-group-2">No</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<input type="hidden" id="person-not-allocated" name="person-not-allocated" value="person not allocated">
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
 			</div>
 		</form>
-	</div>
+    </div>
 </div>
 {% endblock %}

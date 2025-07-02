@@ -881,3 +881,17 @@ router.post('/community/group-allocation/assess/v1/allocate-router', function(re
 		  response.redirect("allocate-bc-group-1")
 		}
 	})
+
+
+router.post('/community/group-allocation/assess/v1/availability-router', function(request, response) {
+
+	var cancel_continue_group = request.session.data['cancel-continue-group'];//
+	
+	if (cancel_continue_group === "Cancel allocation"){
+		response.redirect("allocate-bc-group-1") // Initial redirect
+	
+	}
+	else {
+		response.redirect("availability")
+	}
+})
