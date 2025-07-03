@@ -871,14 +871,19 @@ let originalStringlocation = String(req.session.data['location-preference']);
 
 router.post('/community/group-allocation/assess/v1/allocate-router', function(request, response) {
 
-		var allocate_person_group = request.session.data['allocate-person-group'];//
-	  
-		if (allocate_person_group === "Yes"){
-		  response.redirect("confirmation") // Initial redirect
-	  
+		var cancel_continue_group = request.session.data['cancel-continue-group'];//
+		
+		if (cancel_continue_group === "Cancel allocation for Adrian Poole"){
+			response.redirect("allocate-bc-group-1") // Initial redirect
+		}
+		else if (cancel_continue_group === "Cancel allocation for Dan Jackson") {
+			response.redirect('allocate-bc-group-1')
+		}
+		else if (cancel_continue_group === "Cancel allocation for Roman Fredric") {
+			response.redirect('allocate-bc-group-1')
 		}
 		else {
-		  response.redirect("allocate-bc-group-1")
+		  response.redirect("confirmation")
 		}
 	})
 
@@ -887,11 +892,17 @@ router.post('/community/group-allocation/assess/v1/availability-router', functio
 
 	var cancel_continue_group = request.session.data['cancel-continue-group'];//
 	
-	if (cancel_continue_group === "Cancel allocation"){
+	if (cancel_continue_group === "Cancel allocation for Adrian Poole"){
 		response.redirect("allocate-bc-group-1") // Initial redirect
-	
+	}
+	else if (cancel_continue_group === "Cancel allocation for Dan Jackson") {
+		response.redirect('allocate-bc-group-1')
+	}
+	else if (cancel_continue_group === "Cancel allocation for Roman Fredric") {
+		response.redirect('allocate-bc-group-1')
 	}
 	else {
 		response.redirect("availability")
 	}
 })
+

@@ -63,27 +63,16 @@
 {% endblock %} 
 
 {% block content %}
+{% if data['group-waitlist'] == "Poole, Adrian" %}
 <div class="moj-page-header-actions clear">
 	<div class="moj-page-header-actions__title">
 		<span class="govuk-caption-l"> Building Choices group 1</span>
-		{% if data['group-waitlist'] == "Poole, Adrian" %}
 		<h1 class="govuk-heading-l">Adrian Poole has non-associations in this group</h1>
-		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
-		<h1 class="govuk-heading-l">Dan Jackson has non-associations in this group</h1>
-		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
-		<h1 class="govuk-heading-l">Roman Fredric has non-associations in this group</h1>
-		{% endif %}
 	</div>
 </div>
 <div class="govuk-grid-row govuk-!-margin-top-8">  
     <div class="govuk-grid-column-two-thirds">
-		{% if data['group-waitlist'] == "Poole, Adrian" %}
 		<p class="govuk-body">Adrian Poole has an open non-association with someone in this group.</p>
-		{% elseif data['group-waitlist'] == "Jackson, Dan" %}
-		<p class="govuk-body">Dan Jackson has open non-associations with people in this group.</p>
-		{% elseif data['group-waitlist'] == "Fredric, Roman" %}
-		<p class="govuk-body">Roman Fredric has an open non-association with someone in this group.</p>
-		{% endif %}
 		<table class="govuk-table govuk-!-margin-bottom-8">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
@@ -92,26 +81,10 @@
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
-				{% if data['group-waitlist'] == "Poole, Adrian" %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Dillion, Ben</a><br />L253334</td>
 					<td class="govuk-table__cell">10 June 2025</td>
 				</tr>
-				{% elseif data['group-waitlist'] == "Jackson, Dan" %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Dillion, Ben</a><br />L253334</td>
-					<td class="govuk-table__cell">10 June 2025</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Charles, Eric</a><br />P237152</td>
-					<td class="govuk-table__cell">1 March 2024</td>
-				</tr>
-				{% elseif data['group-waitlist'] == "Fredric, Roman" %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Charles, Eric</a><br />P237152</td>
-					<td class="govuk-table__cell">1 March 2024</td>
-				</tr>
-				{% endif %}
 			</tbody>
 		</table>	
 		<div class="govuk-button-group govuk-!-margin-top-7">
@@ -123,20 +96,12 @@
 						</legend>
 						<div class="govuk-radios" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-								<input class="govuk-radios__input" id="contact" name="cancel-continue-group" type="radio" value="Cancel allocation" {{ checked("cancel-continue-group", "Cancel allocation") }}>
+								<input class="govuk-radios__input" id="contact" name="cancel-continue-group" type="radio" value="Cancel allocation for Adrian Poole" {{ checked("cancel-continue-group", "Cancel allocation for Adrian Poole") }}>
 								<label class="govuk-label govuk-radios__label" for="cancel-continue-group">Cancel allocation</label>
 							</div>
 							<div class="govuk-radios__item">
-								{% if data['group-waitlist'] == "Poole, Adrian" %}
 								<input class="govuk-radios__input" id="cancel-continue-group-2" name="cancel-continue-group" type="radio" value="Continue and review Adrian Poole's availability" {{ checked("cancel-continue-group", "Continue and review Adrian Poole's availability") }}>
 								<label class="govuk-label govuk-radios__label" for="cancel-continue-group-2">Continue and review Adrian Poole's availability</label>
-								{% elseif data['group-waitlist'] == "Jackson, Dan" %}
-								<input class="govuk-radios__input" id="cancel-continue-group-2" name="cancel-continue-group" type="radio" value="Continue and review Dan Jackson's availability" {{ checked("cancel-continue-group", "Continue and review Dan Jackson's availability") }}>
-								<label class="govuk-label govuk-radios__label" for="cancel-continue-group-2">Continue and review Dan Jackson's availability</label>
-								{% elseif data['group-waitlist'] == "Fredric, Roman" %}
-								<input class="govuk-radios__input" id="cancel-continue-group-2" name="cancel-continue-group" type="radio" value="Continue and review Roman Fredric's availability" {{ checked("cancel-continue-group", "Continue and review Roman Fredric's availability") }}>
-								<label class="govuk-label govuk-radios__label" for="cancel-continue-group-2">Continue and review Roman Fredric's availability</label>
-								{% endif %}
 							</div>
 						</div>
 					</fieldset>
@@ -149,4 +114,113 @@
 		</div>
     </div>
 </div>
+
+{% elseif data['group-waitlist'] == "Jackson, Dan" %}
+<div class="moj-page-header-actions clear">
+	<div class="moj-page-header-actions__title">
+		<span class="govuk-caption-l"> Building Choices group 1</span>
+		<h1 class="govuk-heading-l">Dan Jackson has non-associations in this group</h1>
+	</div>
+</div>
+<div class="govuk-grid-row govuk-!-margin-top-8">  
+    <div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">Dan Jackson has open non-associations with people in this group.</p>
+		<table class="govuk-table govuk-!-margin-bottom-8">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Non-association last updated</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Dillion, Ben</a><br />L253334</td>
+					<td class="govuk-table__cell">10 June 2025</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Charles, Eric</a><br />P237152</td>
+					<td class="govuk-table__cell">1 March 2024</td>
+				</tr>
+			</tbody>
+		</table>	
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<form action="availability-router" method="post" style="width: 100%">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h2 class="govuk-fieldset__heading">Do you want to cancel or continue?</h2>
+						</legend>
+						<div class="govuk-radios" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="contact" name="cancel-continue-group" type="radio" value="Cancel allocation for Dan Jackson" {{ checked("cancel-continue-group", "Cancel allocation for Dan Jackson") }}>
+								<label class="govuk-label govuk-radios__label" for="cancel-continue-group">Cancel allocation</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="cancel-continue-group-2" name="cancel-continue-group" type="radio" value="Continue and review Dan Jackson's availability" {{ checked("cancel-continue-group", "Continue and review Dan Jackson's availability") }}>
+								<label class="govuk-label govuk-radios__label" for="cancel-continue-group-2">Continue and review Dan Jackson's availability</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-top-7">
+					<input type="hidden" id="person-not-allocated" name="person-not-allocated" value="person not allocated">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</form>
+		</div>
+    </div>
+</div>
+
+{% elseif data['group-waitlist'] == "Fredric, Roman" %}
+<div class="moj-page-header-actions clear">
+	<div class="moj-page-header-actions__title">
+		<span class="govuk-caption-l"> Building Choices group 1</span>
+		<h1 class="govuk-heading-l">Roman Fredric has non-associations in this group</h1>
+	</div>
+</div>
+<div class="govuk-grid-row govuk-!-margin-top-8">  
+    <div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">Roman Fredric has an open non-association with someone in this group.</p>
+		<table class="govuk-table govuk-!-margin-bottom-8">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Non-association last updated</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Charles, Eric</a><br />P237152</td>
+					<td class="govuk-table__cell">1 March 2024</td>
+				</tr>
+			</tbody>
+		</table>	
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<form action="availability-router" method="post" style="width: 100%">
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<h2 class="govuk-fieldset__heading">Do you want to cancel or continue?</h2>
+						</legend>
+						<div class="govuk-radios" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="contact" name="cancel-continue-group" type="radio" value="Cancel allocation for Roman Fredric" {{ checked("cancel-continue-group", "Cancel allocation for Roman Fredric") }}>
+								<label class="govuk-label govuk-radios__label" for="cancel-continue-group">Cancel allocation</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="cancel-continue-group-2" name="cancel-continue-group" type="radio" value="Continue and review Roman Fredric's availability" {{ checked("cancel-continue-group", "Continue and review Roman Fredric's availability") }}>
+								<label class="govuk-label govuk-radios__label" for="cancel-continue-group-2">Continue and review Roman Fredric's availability</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-top-7">
+					<button class="govuk-button" data-module="govuk-button">Continue</button>
+				</div>
+			</form>
+		</div>
+    </div>
+</div>
+{% endif %}
+
 {% endblock %}
