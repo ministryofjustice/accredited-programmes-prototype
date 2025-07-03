@@ -174,168 +174,89 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 				</li>	
 			</ul>
 		</nav>
-		<table class="govuk-table" data-module="moj-multi-select" data-id-prefix="group-">
+		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0" scope="col" id="group-select-all"></th>
-					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Name and CRN</th>
-					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Sentence end date</th>
-					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Age</th>
-					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Reporting office</th>
-					<th class="govuk-table__header govuk-!-padding-top-6 govuk-!-padding-bottom-0" scope="col">Preferred locations</th>
+					<th class="govuk-table__header"></th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Name and CRN</th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Sentence end date</th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Age</th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Sex</th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Reporting office</th>
+					<th class="govuk-table__header" aria-sort="none" scope="col">Preferred locations</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row govuk-table__row--selected">
 					<td class="govuk-table__cell">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcgregor-simon">
-							<label class="govuk-label govuk-checkboxes__label" for="group-mcgregor-simon">
-							<span class="govuk-visually-hidden">Select McGregor, Simon</span>
-							</label>
+						<div class="govuk-radios govuk-radios--small">
+							<div class="govuk-radios__item">
+								<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-mcgregor-simon" value="McGregor, Simon" {{ checked("group-waitlist", "McGregor, Simon") }}>
+								<label class="govuk-label govuk-radios__label" for="group-mcgregor-simon">
+								<span class="govuk-visually-hidden">Select McGregor, Simon</span>
+							</div>
 						</div>
 					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
 					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 					<td class="govuk-table__cell">39</td>
+					<td class="govuk-table__cell">Male</td>
 					<td class="govuk-table__cell">St. Leonards Probation Office</td>
 					<td class="govuk-table__cell">Brighton and Hove: Brighton Probation Office</td>
 				</tr>
 				<tr class="govuk-table__row govuk-table__row--selected">
 					<td class="govuk-table__cell">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-							<input type="checkbox" class="govuk-checkboxes__input" id="group-hemsworth-luke">
-							<label class="govuk-label govuk-checkboxes__label" for="group-hemsworth-luke">
-							<span class="govuk-visually-hidden">Select Hemsworth, Luke</span>
-							</label>
+						<div class="govuk-radios govuk-radios--small">
+							<div class="govuk-radios__item">
+								<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-hemsworth-luke" value="Hemsworth, Luke" {{ checked("group-waitlist", "Hemsworth, Luke") }}>
+								<label class="govuk-label govuk-radios__label" for="group-hemsworth-luke">
+								<span class="govuk-visually-hidden">Select Hemsworth, Luke</span>
+							</div>
 						</div>
 					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F384914</td>
 					<td class="govuk-table__cell">N/A</td>
 					<td class="govuk-table__cell">41</td>
+					<td class="govuk-table__cell">Male</td>
 					<td class="govuk-table__cell">Sussex House</td>
 					<td class="govuk-table__cell">West Sussex: Office 2</td>
 				</tr>
 				<tr class="govuk-table__row govuk-table__row--selected">
 					<td class="govuk-table__cell">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcdonald-jim">
-							<label class="govuk-label govuk-checkboxes__label" for="group-mcdonald-jim">
-							<span class="govuk-visually-hidden">Select McDonald, Jim</span>
-							</label>
+						<div class="govuk-radios govuk-radios--small">
+							<div class="govuk-radios__item">
+								<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-mcdonald-jim" value="McDonald, Jim" {{ checked("group-waitlist", "McDonald, Jim") }}>
+								<label class="govuk-label govuk-radios__label" for="group-mcdonald-jim">
+								<span class="govuk-visually-hidden">Select McDonald, Jim</span>
+							</div>
 						</div>
 					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B123408</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B12340</td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">52</td>
+					<td class="govuk-table__cell">Male</td>
 					<td class="govuk-table__cell">Brighton Probation Office</td>
 					<td class="govuk-table__cell">Lewes & Eastbourne: Eastbourne Probation Office</td>
 				</tr>
 				<tr class="govuk-table__row govuk-table__row--selected">
 					<td class="govuk-table__cell">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-							<input type="checkbox" class="govuk-checkboxes__input" id="group-mcadam-alistair">
-							<label class="govuk-label govuk-checkboxes__label" for="group-mcadam-alistair">
-							<span class="govuk-visually-hidden">Select McAdam, Alistair</span>
-							</label>
+						<div class="govuk-radios govuk-radios--small">
+							<div class="govuk-radios__item">
+								<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-mcadam-alistair" value="McAdam, Alistair" {{ checked("group-waitlist", "McAdam, Alistair") }}>
+								<label class="govuk-label govuk-radios__label" for="group-mcadam-alistair">
+								<span class="govuk-visually-hidden">Select McAdam, Alistair</span>
+							</div>
 						</div>
 					</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114123</td>
 					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
 					<td class="govuk-table__cell">28</td>
+					<td class="govuk-table__cell">Male</td>
 					<td class="govuk-table__cell">St. Leonards Probation Office</td>
 					<td class="govuk-table__cell">Hastings: St. Leonards Probation Office</td>
 				</tr>
 			</tbody>
-		</table>
-
-		<!-- <table class="govuk-table" data-module="moj-sortable-table">
-			<thead class="govuk-table__head">
-				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header govuk-!-padding-top-4 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Age</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Reporting office</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Preferred locations</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Availability</th>
-				</tr>
-			</thead>
-			<tbody class="govuk-table__body">
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
-					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
-					<td class="govuk-table__cell">39</td>
-					<td class="govuk-table__cell">St. Leonards Probation Office</td>
-					<td class="govuk-table__cell">Brighton and Hove: Brighton Probation Office</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
-			  	</tr>
-				  <tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F384914</td>
-					<td class="govuk-table__cell">N/A</td>
-					<td class="govuk-table__cell">41</td>
-					<td class="govuk-table__cell">Sussex House</td>
-					<td class="govuk-table__cell">West Sussex: Office 2</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
-			  	</tr>
-				  <tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B123408</td>
-					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
-					<td class="govuk-table__cell">52</td>
-					<td class="govuk-table__cell">Brighton Probation Office</td>
-					<td class="govuk-table__cell">Lewes & Eastbourne: Eastbourne Probation Office</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
-			  	</tr>
-				  <tr class="govuk-table__row">
-					<td class="govuk-table__cell govuk-!-padding-top-0 govuk-!-padding-bottom-0">
-						<div class="govuk-checkboxes__item govuk-checkboxes--small">
-							<input type="checkbox" class="govuk-checkboxes__input" id="checkbox-name-tbc">
-							<label class="govuk-label govuk-checkboxes__label govuk-!-padding-top-0 govuk-!-padding-bottom-0" for="checkbox-name-tbc">
-							<span class="govuk-visually-hidden">Select group</span>
-							</label>
-						</div>
-					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114123</td>
-					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
-					<td class="govuk-table__cell">28</td>
-					<td class="govuk-table__cell">St. Leonards Probation Office</td>
-					<td class="govuk-table__cell">Hastings: St. Leonards Probation Office</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
-			  	</tr>
-			</tbody>
-		</table> -->
-		
+		</table>		
 		<a href="#" class="govuk-button moj-button-menu__item">Add to group</a>
     </div>
 </div>
