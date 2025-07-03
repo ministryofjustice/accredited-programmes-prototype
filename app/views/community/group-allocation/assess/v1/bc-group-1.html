@@ -62,12 +62,6 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 		<span class="govuk-caption-xl">East Sussex</span>
 		<h1 class="govuk-heading-xl">Building Choices group 1</h1>
 	</div>
-	<!--<div class="moj-page-header-actions__actions">
-	  	<div class="moj-button-group moj-button-group--inline govuk-!-margin-right-0">
-			<a href="allocate-bc-group-1" class="govuk-button moj-button-menu__item">Allocate people</a> 
-			<a href="#" class="govuk-button moj-button-menu__item">Manage group</a>
-		</div>
-	</div> -->
 </div>
 <div class="govuk-grid-row govuk-!-margin-top-8">
 	<div class="govuk-grid-column-two-thirds">
@@ -158,30 +152,48 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
+				{% if data['group-waitlist'] == "Poole, Adrian" %}	
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Kent, Carl</a><br />X002999</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
 					<td class="govuk-table__cell">0</td>
-					<td class="govuk-table__cell">None</td>
-					<td class="govuk-table__cell">22 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">0</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 				</tr>
+				{% elseif data['group-waitlist'] == "Jackson, Dan" %}	
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
+					<td class="govuk-table__cell">0</td>
+					<td class="govuk-table__cell">0</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+				</tr>
+				{% elseif data['group-waitlist'] == "Fredric, Roman" %}	
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />D005188</td>
+					<td class="govuk-table__cell">0</td>
+					<td class="govuk-table__cell">0</td>
+					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+				</tr>
+				{% endif %}
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Dillion, Ben</a><br />L253334</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
 					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jones, Jack</a><br />Y783641</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">None</td>
 					<td class="govuk-table__cell">5 Apr 2025<br />Order end date</td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Charles, Eric</a><br />P237152</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View non-associations</a></td>
 					<td class="govuk-table__cell">7 Jul 20255<br />Order end date</td>
@@ -189,14 +201,14 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Martinez, Gabriel</a><br />Z298776</td>
 					<td class="govuk-table__cell">0</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">None</td>
 					<td class="govuk-table__cell">12 Jun 2025<br />Order end date</td>
 				</tr>
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hussain, Ali</a><br />W891110</td>
 					<td class="govuk-table__cell">0</td>
-					<td class="govuk-table__cell">1</td>
+					<td class="govuk-table__cell">0</td>
 					<td class="govuk-table__cell">None</td>
 					<td class="govuk-table__cell">17 Jul 2025<br />Licence end date</td>
 				</tr>
