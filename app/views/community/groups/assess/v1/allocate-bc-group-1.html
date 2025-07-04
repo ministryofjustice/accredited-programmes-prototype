@@ -126,11 +126,13 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Cohort</dt>
-						<dd class="govuk-summary-list__value">Sexual offence <span class="moj-badge moj-badge--bright-purple">LDC</span></dd>
+						<!-- <dd class="govuk-summary-list__value">Sexual offence <span class="moj-badge moj-badge--bright-purple">LDC</span></dd> -->
+						<dd class="govuk-summary-list__value">To be confirmed</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Sex</dt>
-						<dd class="govuk-summary-list__value">Male</dd>
+						<!-- <dd class="govuk-summary-list__value">Male</dd> -->
+						<dd class="govuk-summary-list__value">To be confirmed</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Allocated</dt>
@@ -175,10 +177,24 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break govuk-section-break--visible" />
-		<h2 class="govuk-heading-l govuk-!-margin-top-8">Building Choices sexual offence LDC waitlist</h2>
+		<h2 class="govuk-heading-l govuk-!-margin-top-8">Building Choices waitlist</h2>
 		<div class="filters-container-moj">
 			<h2 class="govuk-heading-m filters-heading">Filters</h2>
 			<div class="filter-options">
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="search-name-prison-number">Search by name or CRN</label>
+					<input class="govuk-input" id="search-name-prison-number" name="search-name-prison-number" type="text">
+			  	</div>
+				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
+					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
+					<select class="govuk-select" id="cohort" name="cohort">
+						<option value="select" selected>Select</option>
+						<option value="general-offence">General offence</option>
+						<option value="general-offence-ldc">General offence LDC</option>
+						<option value="sexual-offence">Sexual offence</option>
+						<option value="sexual-offence-ldc">Sexual offence LDC</option>
+					</select>
+			  	</div>
 				<div class="govuk-form-group govuk-!-margin-right-3 govuk-!-margin-bottom-0">
 					<label class="govuk-label govuk-label--s" for="sex">Sex</label>
 					<select class="govuk-select" id="sex" name="sex">
@@ -197,8 +213,8 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 						<option value="st-leonards-probation-office">St. Leonards Probation Office</option>
 					</select>
 				</div>
-				<div class="govuk-button-group govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
-					<button type="submit" class="govuk-button govuk-!-margin-bottom-0 govuk-button--secondary" data-module="govuk-button">Apply filters</button>
+				<div class="govuk-button-group govuk-!-margin-top-4 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
+					<button type="submit" class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">Apply filters</button>
 					<a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-0" href="#">Clear filters</a>
 				</div>
 			</div>
@@ -211,9 +227,9 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 						<th class="govuk-table__header" aria-sort="none" scope="col">Name and CRN</th>
 						<th class="govuk-table__header" aria-sort="none" scope="col">Sentence end date</th>
 						<th class="govuk-table__header" aria-sort="none" scope="col">Age</th>
+						<th class="govuk-table__header" aria-sort="none" scope="col">Cohort</th>
 						<th class="govuk-table__header" aria-sort="none" scope="col">Sex</th>
 						<th class="govuk-table__header" aria-sort="none" scope="col">Reporting office</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Preferred locations</th>
 					</tr>
 				</thead>
 				<tbody class="govuk-table__body">
@@ -230,9 +246,9 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 						<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
 						<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
 						<td class="govuk-table__cell">34</td>
+						<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 						<td class="govuk-table__cell">Male</td>
 						<td class="govuk-table__cell">Brighton Probation Office</td>
-						<td class="govuk-table__cell">Hastings: St. Leonards Probation Office</td>
 					</tr>
 					<tr class="govuk-table__row govuk-table__row--selected">
 						<td class="govuk-table__cell">
@@ -247,9 +263,9 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 						<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
 						<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
 						<td class="govuk-table__cell">27</td>
+						<td class="govuk-table__cell">Sexual offence</td>
 						<td class="govuk-table__cell">Male</td>
 						<td class="govuk-table__cell">Brighton Probation Office</td>
-						<td class="govuk-table__cell">Lewes & Eastbourne: Eastbourne Probation Office</td>
 					</tr>
 					<tr class="govuk-table__row govuk-table__row--selected">
 						<td class="govuk-table__cell">
@@ -264,14 +280,9 @@ Allocate people to Building Choices group 1 - {{ serviceName }} - GOV.UK Prototy
 						<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />P227326</td>
 						<td class="govuk-table__cell">20 May 2025<br />Order end date</td>
 						<td class="govuk-table__cell">45</td>
+						<td class="govuk-table__cell">General offence</td>
 						<td class="govuk-table__cell">Male</td>
 						<td class="govuk-table__cell">Sussex House</td>
-						<td class="govuk-table__cell">
-							<ul class="govuk-list govuk-!-margin-bottom-0">
-								<li>Meadowfield House</li>
-								<li>Eastbourne Probation Office</li>
-							</ul>
-						</td>
 					</tr>
 				</tbody>
 			</table>
