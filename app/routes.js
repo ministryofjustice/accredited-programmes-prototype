@@ -869,7 +869,7 @@ let originalStringlocation = String(req.session.data['location-preference']);
 
 
 
-router.post('/community/group-allocation/assess/v1/allocate-router', function(request, response) {
+router.post('/community/groups/assess/v1/allocate-router', function(request, response) {
 
 		var cancel_continue_group = request.session.data['cancel-continue-group'];//
 		
@@ -888,7 +888,7 @@ router.post('/community/group-allocation/assess/v1/allocate-router', function(re
 	})
 
 
-router.post('/community/group-allocation/assess/v1/availability-router', function(request, response) {
+router.post('/community/groups/assess/v1/availability-router', function(request, response) {
 
 	var cancel_continue_group = request.session.data['cancel-continue-group'];//
 	
