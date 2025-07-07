@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-	Do you want to add an end date for the group? - {{ serviceName }} - GOV.UK Prototype Kit
+What days and times will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -59,30 +59,136 @@
 {% block content %}
 <div class="govuk-grid-row govuk-!-margin-top-8">  
     <div class="govuk-grid-column-two-thirds">
-		<form action="days-times-group-run" method="post">
+		<form action="run-bank-holidays" method="post">
+
+			
+
+
 			<div class="govuk-form-group">
-				<fieldset class="govuk-fieldset">
-					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<fieldset class="govuk-fieldset" aria-describedby="day-hint">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 						<span class="govuk-caption-l">Create a group</span>
-						<h1 class="govuk-fieldset__heading">Do you want to add an end date for the group?</h1>
-					</legend>
-					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="end-date" name="end-date" type="radio" value="Yes" data-aria-controls="conditional-end-date" {{ checked("end-date", "Yes") }}>
-							<label class="govuk-label govuk-radios__label" for="end-date">Yes</label>
+						<h1 class="govuk-fieldset__heading">What days and times will the group run?</h1>
+				  	</legend>
+				  	<div id="day-hint" class="govuk-hint govuk-!-margin-top-4">Select all that apply</div>
+					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day" name="day" type="checkbox" value="Monday" data-aria-controls="conditional-monday" {{ checked("day", "Monday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day">Monday</label>
 						</div>
-						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-end-date">
-							<div class="moj-datepicker" data-module="moj-date-picker">
-								<div class="govuk-form-group">
-									<label class="govuk-label govuk-label--s" for="date">Date</label>
-									<div id="date-hint" class="govuk-hint">Enter a date, for example 10/7/2025, or select one from the calendar.</div>
-									<input class="govuk-input moj-js-datepicker-input" id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
-								</div>  
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-monday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
 							</div>
 						</div>
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="end-date-2" name="end-date" type="radio" value="No" {{ checked("end-date", "No") }}>
-							<label class="govuk-label govuk-radios__label" for="end-date-2">No</label>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-2" name="day" type="checkbox" value="Tuesday" data-aria-controls="conditional-tuesday" {{ checked("day", "Tuesday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-2">Tuesday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-tuesday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
+						</div>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-3" name="day" type="checkbox" value="Wednesday" data-aria-controls="conditional-wednesday" {{ checked("day", "Wednesday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-3">Wednesday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-wednesday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
+						</div>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-4" name="day" type="checkbox" value="Thursday" data-aria-controls="conditional-thursday" {{ checked("day", "Thursday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-4">Thursday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-thursday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
+						</div>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-5" name="day" type="checkbox" value="Friday" data-aria-controls="conditional-friday" {{ checked("day", "Friday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-5">Friday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-friday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
+						</div>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-6" name="day" type="checkbox" value="Saturday" data-aria-controls="conditional-saturday" {{ checked("day", "Saturday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-6">Saturday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-saturday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
+						</div>
+
+						<div class="govuk-checkboxes__item">
+							<input class="govuk-checkboxes__input" id="day-7" name="day" type="checkbox" value="Sunday" data-aria-controls="conditional-sunday" {{ checked("day", "Sunday") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="day-7">Sunday</label>
+						</div>
+						<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-sunday">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="start-time">Start time</label>
+								<div id="start-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="start-time" name="start-time" type="text" aria-describedby="start-time-hint" inputmode="numeric">
+							</div>
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="end-time">End time</label>
+								<div id="end-time-hint" class="govuk-hint">For example, 09:30 or 14:55</div>
+								<input class="govuk-input govuk-input--width-5" id="end-time" name="end-time" type="text" aria-describedby="end-time-hint" inputmode="numeric">
+							</div>
 						</div>
 					</div>
 				</fieldset>
