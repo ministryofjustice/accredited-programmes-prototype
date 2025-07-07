@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-How many people can be in this group? - {{ serviceName }} - GOV.UK Prototype Kit
+Where does this group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -59,14 +59,106 @@ How many people can be in this group? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row govuk-!-margin-top-8">  
     <div class="govuk-grid-column-two-thirds">
-		<form action="group-location" method="post">
+		<form action="facilitate-group" method="post">
 			<div class="govuk-form-group">
-				<h1 class="govuk-label-wrapper">
-					<span class="govuk-caption-l">Create a group</span>
-				  	<label class="govuk-label govuk-label--l" for="people-group">How many people can be in this group?</label>
-				</h1>
-				<div id="people-group-hint" class="govuk-hint govuk-!-margin-top-6">You can add more people than the maximum group size when shortlisting, and remove them later.</div>
-				<input class="govuk-input govuk-input--width-2" id="people-group" name="accountNumber" type="text" spellcheck="false" aria-describedby="people-group-hint" inputmode="numeric">
+				<fieldset class="govuk-fieldset" aria-describedby="location-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<span class="govuk-caption-l">Create a group</span>
+						<h1 class="govuk-fieldset__heading">Where does this group take place?</h1>
+					</legend>
+					<div id="location-hint" class="govuk-hint govuk-!-margin-top-4">Select the delivery location.</div>
+					<h2 class="govuk-heading-m">Locations in East Sussex</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-1" name="group-location" type="radio" value="Brighton and Hove: Brighton Probation Office" {{ checked("group-location", "Brighton and Hove: Brighton Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-1">Brighton and Hove: Brighton Probation Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-2" name="group-location" type="radio" value="Hastings: St. Leonards Probation Office" {{ checked("group-location", "Hastings: St. Leonards Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-2">Hastings: St. Leonards Probation Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-3" name="group-location" type="radio" value="Hollingbury: Sussex House" {{ checked("group-location", "Hollingbury: Sussex House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-3">Hollingbury: Sussex House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-4" name="group-location" type="radio" value="Lewes & Eastbourne: Eastbourne Probation Office" {{ checked("group-location", "Lewes & Eastbourne: Eastbourne Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-4">Lewes & Eastbourne: Eastbourne Probation Office</label>
+						</div>
+					</div>
+
+					<h2 class="govuk-heading-m govuk-!-margin-top-4">Locations in East Kent</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-5" name="group-location" type="radio" value="Canterbury: Ralphs Centre" {{ checked("group-location", "Canterbury: Ralphs Centre") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-5">Canterbury: Ralphs Centre</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-6" name="group-location" type="radio" value="Kent: Maidstone Probation Office" {{ checked("group-location", "Kent: Maidstone Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-6">Kent: Maidstone Probation Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-7" name="group-location" type="radio" value="Medway: Chatham Probation Office" {{ checked("group-location", "Medway: Chatham Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-7">Medway: Chatham Probation Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-8" name="group-location" type="radio" value="Shepway: Folkestone Probation Office" {{ checked("group-location", "Shepway: Folkestone Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-8">Shepway: Folkestone Probation Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-9" name="group-location" type="radio" value="Thanet: Darlincton House" {{ checked("group-location", "Thanet: Darlincton House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-9">Thanet: Darlincton House</label>
+						</div>
+					</div>
+
+					<h2 class="govuk-heading-m govuk-!-margin-top-4">Locations in West Kent</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-10" name="group-location" type="radio" value="Kent: Joynes House" {{ checked("group-location", "Kent: Joynes House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-10">Kent: Joynes House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-11" name="group-location" type="radio" value="Bexley: Bexley Magistrates' Court" {{ checked("group-location", "Bexley: Bexley Magistrates' Court") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-11">Bexley: Bexley Magistrates' Court</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-12" name="group-location" type="radio" value="Bromley: Orpington Probation Office" {{ checked("group-location", "Bromley: Orpington Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-12">Bromley: Orpington Probation Office</label>
+						</div>
+					</div>
+
+					<h2 class="govuk-heading-m govuk-!-margin-top-4">Locations in Surrey</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-13" name="group-location" type="radio" value="Guildford: College House" {{ checked("group-location", "Guildford: College House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-13">Guildford: College House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-14" name="group-location" type="radio" value="Spelthorne: Swan House" {{ checked("group-location", "Spelthorne: Swan House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-14">Spelthorne: Swan House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-15" name="group-location" type="radio" value="Croydon: 4 Whitgift Street" {{ checked("group-location", "Croydon: 4 Whitgift Street") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-15">Croydon: 4 Whitgift Street</label>
+						</div>
+					</div>
+
+					<h2 class="govuk-heading-m govuk-!-margin-top-4">Locations in West Sussex</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-16" name="group-location" type="radio" value="Arun: Meadowfield House" {{ checked("group-location", "Arun: Meadowfield House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-16">Arun: Meadowfield House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-17" name="group-location" type="radio" value="Crawley: Goff's Park House" {{ checked("group-location", "Crawley: Goff's Park House") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-17">Crawley: Goff's Park House</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-location-18" name="group-location" type="radio" value="Worthing: Worthing Probation Office" {{ checked("group-location", "Worthing: Worthing Probation Office") }}>
+							<label class="govuk-label govuk-radios__label" for="group-location-18">Worthing: Worthing Probation Office</label>
+						</div>
+					</div>
+				</fieldset>
 			</div>
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Continue</button>

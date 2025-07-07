@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-How many people can be in this group? - {{ serviceName }} - GOV.UK Prototype Kit
+Who will facilitate the group? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -47,7 +47,6 @@ How many people can be in this group? - {{ serviceName }} - GOV.UK Prototype Kit
 	</p>
   </div>
 </div>
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -59,14 +58,38 @@ How many people can be in this group? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row govuk-!-margin-top-8">  
     <div class="govuk-grid-column-two-thirds">
-		<form action="group-location" method="post">
+		<form action="check-answers" method="post">
 			<div class="govuk-form-group">
-				<h1 class="govuk-label-wrapper">
-					<span class="govuk-caption-l">Create a group</span>
-				  	<label class="govuk-label govuk-label--l" for="people-group">How many people can be in this group?</label>
-				</h1>
-				<div id="people-group-hint" class="govuk-hint govuk-!-margin-top-6">You can add more people than the maximum group size when shortlisting, and remove them later.</div>
-				<input class="govuk-input govuk-input--width-2" id="people-group" name="accountNumber" type="text" spellcheck="false" aria-describedby="people-group-hint" inputmode="numeric">
+				<fieldset class="govuk-fieldset" aria-describedby="location-hint">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<span class="govuk-caption-l">Create a group</span>
+						<h1 class="govuk-fieldset__heading">Who will facilitate the group?</h1>
+					</legend>
+					<div id="location-hint" class="govuk-hint govuk-!-margin-top-4">Select from list of facilitators in the PDU.</div>
+					<h2 class="govuk-heading-m">Facilitators in {{ data['group-location'] }}</h2>
+					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-facilitator-1" name="group-facilitator" type="radio" value="John Smith" {{ checked("group-facilitator", "John Smith") }}>
+							<label class="govuk-label govuk-radios__label" for="group-facilitator-1">John Smith</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-facilitator-2" name="group-facilitator" type="radio" value="Sheila Cooke" {{ checked("group-facilitator", "Sheila Cooke") }}>
+							<label class="govuk-label govuk-radios__label" for="group-facilitator-2">Sheila Cooke</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-facilitator-3" name="group-facilitator" type="radio" value="Chloe Pascal" {{ checked("group-facilitator", "Chloe Pascal") }}>
+							<label class="govuk-label govuk-radios__label" for="group-facilitator-3">Chloe Pascal</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-facilitator-4" name="group-facilitator" type="radio" value="Frank Gillian" {{ checked("group-facilitator", "Frank Gillian") }}>
+							<label class="govuk-label govuk-radios__label" for="group-facilitator-4">Frank Gillian</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="group-facilitator-5" name="group-facilitator" type="radio" value="Tom Bush" {{ checked("group-facilitator", "Tom Bush") }}>
+							<label class="govuk-label govuk-radios__label" for="group-facilitator-5">Tom Bush</label>
+						</div>
+					</div>
+				</fieldset>
 			</div>
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Continue</button>
