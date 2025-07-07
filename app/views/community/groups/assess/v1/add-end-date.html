@@ -59,7 +59,7 @@
 {% block content %}
 <div class="govuk-grid-row govuk-!-margin-top-8">  
     <div class="govuk-grid-column-two-thirds">
-		<form action="#" method="post" style="width: 100%">
+		<form action="days-group-run" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -68,7 +68,7 @@
 					</legend>
 					<div class="govuk-radios govuk-!-margin-top-4" data-module="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="end-date" name="end-date" type="radio" value="yes" data-aria-controls="conditional-end-date" {{ checked("end-date", "yes") }}>
+							<input class="govuk-radios__input" id="end-date" name="end-date" type="radio" value="Yes" data-aria-controls="conditional-end-date" {{ checked("end-date", "Yes") }}>
 							<label class="govuk-label govuk-radios__label" for="end-date">Yes</label>
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-end-date">
@@ -81,7 +81,7 @@
 							</div>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="end-date-2" name="end-date" type="radio" value="no" {{ checked("end-date", "no") }}>
+							<input class="govuk-radios__input" id="end-date-2" name="end-date" type="radio" value="No" {{ checked("end-date", "No") }}>
 							<label class="govuk-label govuk-radios__label" for="end-date-2">No</label>
 						</div>
 					</div>
