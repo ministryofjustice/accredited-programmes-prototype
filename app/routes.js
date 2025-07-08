@@ -6,93 +6,6 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
-/* COMMUNITY */
-router.post('/community/assess/update-status', function (req, res) {
-	const referralSubmitted = req.session.data['referral-submitted']
-    	if (referralSubmitted == 'Awaiting assessment') {
-			res.redirect('awaiting-assessment')
-     	} 
-		else if (referralSubmitted == 'Not eligible') {
-       		res.redirect('not-eligible')
-     	}
-		else if (referralSubmitted == 'On hold') {
-			res.redirect('on-hold')
-	  	}
-		else {
-			res.redirect('withdrawal-reason')
-	  	}
- 	});
-
-router.post('/redirect-about-person-sexual-offence', function(request, response) {
-
-	var moderate_pso = request.session.data['moderate_pso'];//
-	
-	if (moderate_pso === "yes"){
-		response.redirect("/community/refer/about-person-sexual-offence-yes") // Initial redirect
-	}
-	else {
-		response.redirect("/community/refer/about-person-sexual-offence-no")
-	}
-})
-
-/* v1 */
-router.post('/community/assess/v1/update-status', function (req, res) {
-	const referralSubmitted = req.session.data['referral-submitted']
-    	if (referralSubmitted == 'Awaiting assessment') {
-			res.redirect('awaiting-assessment')
-     	} 
-		else if (referralSubmitted == 'Not eligible') {
-       		res.redirect('not-eligible')
-     	}
-		else if (referralSubmitted == 'On hold') {
-			res.redirect('on-hold')
-	  	}
-		else {
-			res.redirect('withdrawal-reason')
-	  	}
- 	});
-
-router.post('/redirect-about-person-sexual-offence', function(request, response) {
-
-	var moderate_pso = request.session.data['moderate_pso'];//
-	
-	if (moderate_pso === "yes"){
-		response.redirect("/community/refer/v1/about-person-sexual-offence-yes") // Initial redirect
-	}
-	else {
-		response.redirect("/community/refer/v1/about-person-sexual-offence-no")
-	}
-})
-
-/* v2 */
-router.post('/redirect-about-person-sexual-offence', function(request, response) {
-
-	var moderate_pso = request.session.data['moderate_pso'];//
-	
-	if (moderate_pso === "yes"){
-		response.redirect("/community/refer/v2/about-person-sexual-offence-yes") // Initial redirect
-	}
-	else {
-		response.redirect("/community/refer/v2/about-person-sexual-offence-no")
-	}
-})
-
-//This is the routes for the going back to check answers from day availability 
-// router.post('/community/refer/v2/features/pops-availability/availabilityrouter', function (req, res) {
-router.post('/community/refer/v2/availabilityrouter', function (req, res) {
-	req.session.data['referral-information-three'] ="done";
-	   if (req.session.data['camefromcheckanswers'] =="true") {
-		   req.session.data['camefromcheckanswers'] ="false";
-		   res.redirect('check-answers')
-	   } 
-	   
-	   else {
-		   res.redirect('task-list')
-	   }
-   });
-
-
-
 /* CUSTODY */
 
 // Add your routes here
@@ -776,54 +689,136 @@ router.post('/all/overrides/assess/update-status', function (req, res) {
 		}
 	});
 
-	// This is the routes line breaks {
-router.post('/community/assess/v3/preferred-location-router', function (req, res) {
-	// Continue to the next page
-		let originalStringlocation = String(req.session.data['location-preference']);
-		let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
-		if(newStringlocation == "undefined")
-		{
-			req.session.data['location-preference-formatted'] = "None";
+
+
+/* COMMUNITY */
+router.post('/community/assess/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['referral-submitted']
+    	if (referralSubmitted == 'Awaiting assessment') {
+			res.redirect('awaiting-assessment')
+     	} 
+		else if (referralSubmitted == 'Not eligible') {
+       		res.redirect('not-eligible')
+     	}
+		else if (referralSubmitted == 'On hold') {
+			res.redirect('on-hold')
+	  	}
+		else {
+			res.redirect('withdrawal-reason')
+	  	}
+ 	});
+
+router.post('/redirect-about-person-sexual-offence', function(request, response) {
+	var moderate_pso = request.session.data['moderate_pso'];//
+	
+	if (moderate_pso === "yes"){
+		response.redirect("/community/refer/about-person-sexual-offence-yes") // Initial redirect
+	}
+	else {
+		response.redirect("/community/refer/about-person-sexual-offence-no")
+	}
+})
+
+/* v1 */
+router.post('/community/assess/v1/update-status', function (req, res) {
+	const referralSubmitted = req.session.data['referral-submitted']
+    	if (referralSubmitted == 'Awaiting assessment') {
+			res.redirect('awaiting-assessment')
+     	} 
+		else if (referralSubmitted == 'Not eligible') {
+       		res.redirect('not-eligible')
+     	}
+		else if (referralSubmitted == 'On hold') {
+			res.redirect('on-hold')
+	  	}
+		else {
+			res.redirect('withdrawal-reason')
+	  	}
+ 	});
+
+router.post('/redirect-about-person-sexual-offence', function(request, response) {
+	var moderate_pso = request.session.data['moderate_pso'];//
+	if (moderate_pso === "yes"){
+		response.redirect("/community/refer/v1/about-person-sexual-offence-yes") // Initial redirect
+	}
+	else {
+		response.redirect("/community/refer/v1/about-person-sexual-offence-no")
+	}
+})
+
+/* v2 */
+router.post('/redirect-about-person-sexual-offence', function(request, response) {
+	var moderate_pso = request.session.data['moderate_pso'];//
+	if (moderate_pso === "yes"){
+		response.redirect("/community/refer/v2/about-person-sexual-offence-yes") // Initial redirect
+	}
+	else {
+		response.redirect("/community/refer/v2/about-person-sexual-offence-no")
+	}
+})
+
+//This is the routes for the going back to check answers from day availability 
+// router.post('/community/refer/v2/features/pops-availability/availabilityrouter', function (req, res) {
+router.post('/community/refer/v2/availabilityrouter', function (req, res) {
+	req.session.data['referral-information-three'] ="done";
+		if (req.session.data['camefromcheckanswers'] =="true") {
+			req.session.data['camefromcheckanswers'] ="false";
+			res.redirect('check-answers')
+		} 
+		
+		else {
+			res.redirect('task-list')
 		}
-		else
-		{
-			req.session.data['location-preference-formatted'] = newStringlocation;
-		}
-		res.redirect('no-locations');
 	});
+
+// This is the routes line breaks {
+router.post('/community/assess/v3/preferred-location-router', function (req, res) {
+// Continue to the next page
+	let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-formatted'] = newStringlocation;
+	}
+	res.redirect('no-locations');
+});
 
 // This is the routes line breaks {
 router.post('/community/assess/v3/design-concepts/location/a/preferred-location-router', function (req, res) {
-	// Continue to the next page
-		let originalStringlocation = String(req.session.data['location-preference']);
-		let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
-		if(newStringlocation == "undefined")
-		{
-			req.session.data['location-preference-formatted'] = "None";
-		}
-		else
-		{
-			req.session.data['location-preference-formatted'] = newStringlocation;
-		}
-		res.redirect('no-locations');
-	});
-
+// Continue to the next page
+	let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-formatted'] = newStringlocation;
+	}
+	res.redirect('no-locations');
+});
+	
 // This is the routes line breaks {
 router.post('/community/assess/v3/design-concepts/location/b/preferred-location-router', function (req, res) {
 	// Continue to the next page
-		let originalStringlocation = String(req.session.data['location-preference']);
-		let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
-		if(newStringlocation == "undefined")
-		{
-			req.session.data['location-preference-formatted'] = "None";
-		}
-		else
-		{
-			req.session.data['location-preference-formatted'] = newStringlocation;
-		}
-		res.redirect('no-locations');
-	});
-
+	let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-formatted'] = newStringlocation;
+	}
+	res.redirect('no-locations');
+});
+		
 // This is the routes line breaks {
 router.post('/community/assess/v3/design-concepts/location/c/preferred-location-router', function (req, res) {
 	//Prev string setup - @enor this all seems to work as expected
@@ -840,12 +835,12 @@ router.post('/community/assess/v3/design-concepts/location/c/preferred-location-
 	//Redirect based on answer to yes no radio
 	var moreLocations = req.session.data['moreLocations']
 	if (moreLocations == "yes"){
-    res.redirect('preferred-location-alternates')
-  } else {
-    res.redirect('no-locations')
-  }
-	});
-
+	res.redirect('preferred-location-alternates')
+	} else {
+	res.redirect('no-locations')
+	}
+});
+		
 router.post('/community/assess/v3/design-concepts/location/c/preferred-location-alt-router', function (req, res) {
 
 //Don't know how this all works exactly but it does
@@ -865,28 +860,23 @@ let originalStringlocation = String(req.session.data['location-preference']);
 	}
 	res.redirect('no-locations');
 });
-	
-
-
-
+				
 router.post('/community/groups/assess/v1/allocate-router', function(request, response) {
-
-		var cancel_continue_group = request.session.data['cancel-continue-group'];//
-		
-		if (cancel_continue_group === "Cancel allocation for Adrian Poole"){
-			response.redirect("allocate-bc-group-1") // Initial redirect
-		}
-		else if (cancel_continue_group === "Cancel allocation for Dan Jackson") {
-			response.redirect('allocate-bc-group-1')
-		}
-		else if (cancel_continue_group === "Cancel allocation for Roman Fredric") {
-			response.redirect('allocate-bc-group-1')
-		}
-		else {
-		  response.redirect("confirmation")
-		}
-	})
-
+	var cancel_continue_group = request.session.data['cancel-continue-group'];//
+	
+	if (cancel_continue_group === "Cancel allocation for Adrian Poole"){
+		response.redirect("allocate-bc-group-1") // Initial redirect
+	}
+	else if (cancel_continue_group === "Cancel allocation for Dan Jackson") {
+		response.redirect('allocate-bc-group-1')
+	}
+	else if (cancel_continue_group === "Cancel allocation for Roman Fredric") {
+		response.redirect('allocate-bc-group-1')
+	}
+	else {
+		response.redirect("confirmation")
+	}
+})
 
 router.post('/community/groups/assess/v1/availability-router', function(request, response) {
 
@@ -905,4 +895,3 @@ router.post('/community/groups/assess/v1/availability-router', function(request,
 		response.redirect("availability")
 	}
 })
-
