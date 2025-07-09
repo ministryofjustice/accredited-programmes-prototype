@@ -772,7 +772,7 @@ router.post('/community/refer/v2/availabilityrouter', function (req, res) {
 	});
 
 // This is the routes line breaks {
-router.post('/community/assess/v3/preferred-location-router', function (req, res) {
+/* router.post('/community/assess/v3/preferred-location-router', function (req, res) {
 // Continue to the next page
 	let originalStringlocation = String(req.session.data['location-preference']);
 	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
@@ -785,7 +785,50 @@ router.post('/community/assess/v3/preferred-location-router', function (req, res
 		req.session.data['location-preference-formatted'] = newStringlocation;
 	}
 	res.redirect('no-locations');
+}); */
+
+// This is the routes line breaks {
+router.post('/community/assess/v3/preferred-location-router', function (req, res) {
+	//Prev string setup - @enor this all seems to work as expected
+	let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-formatted'] = newStringlocation;
+	}
+	//Redirect based on answer to yes no radio
+	var moreLocations = req.session.data['moreLocations']
+	if (moreLocations == "yes"){
+	res.redirect('preferred-location-alternates')
+	} else {
+	res.redirect('no-locations')
+	}
 });
+		
+router.post('/community/assess/v3/preferred-location-alt-router', function (req, res) {
+
+//Don't know how this all works exactly but it does
+let original = req.session.data['location-preference-formatted'] || '';
+let alternative = req.session.data['location-preference'] || '';
+let combined = `${original}\n${alternative}`;
+
+let originalStringlocation = String(req.session.data['location-preference']);
+	let newStringlocation = combined.replace(/,(?!\s)/g, "\n");
+	if(newStringlocation == "undefined")
+	{
+		req.session.data['location-preference-2-formatted'] = "None";
+	}
+	else
+	{
+		req.session.data['location-preference-2-formatted'] = newStringlocation;
+	}
+	res.redirect('no-locations');
+});
+
 
 // This is the routes line breaks {
 router.post('/community/assess/v3/design-concepts/location/a/preferred-location-router', function (req, res) {

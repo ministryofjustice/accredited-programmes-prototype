@@ -11,7 +11,7 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
 </nav>
 {% endblock %} 
 
@@ -21,7 +21,7 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 		<h1 class="govuk-heading-l">Which programme locations would Alex River prefer?</h1>
 		<p class="govuk-body">This is a list of all locations where the programme can take place in this probation delivery unit. Choose any locations that are suitable.</p>
 		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
-		<h2 class="govuk-heading-m">Offices in East Sussex</h2>
+		<h2 class="govuk-heading-m">Choose from locations in East Sussex</h2>
 		<form action="preferred-location-router" method="post">
 			<div class="govuk-form-group">
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -43,128 +43,39 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 					</div>
 					<div class="govuk-checkboxes__divider">or</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="location-preference-0" name="location-preference" type="checkbox" value="I cannot choose a suitable location yet" {{ checked("location-preference", "I cannot choose a suitable location yet") }}>
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-0">I cannot choose a suitable location yet</label>
-					</div>
+						<input class="govuk-checkboxes__input" id="location-preference-01" name="location-preference" type="checkbox" value="I cannot choose a suitable location yet" {{ checked("location-preference", "I cannot choose a suitable location yet") }} data-behaviour="exclusive">
+						<label class="govuk-label govuk-checkboxes__label" for="location-preference-01">I cannot choose a suitable location yet</label>
+					</div> 
 				</div>
 			</div>
-			<details class="govuk-details">
-				<summary class="govuk-details__summary">
-				  	<span class="govuk-details__summary-text">You can also select offices in another PDU</span>
-				</summary>
-				<div class="govuk-details__text">
-					<div class="govuk-form-group">
-						<fieldset class="govuk-fieldset" aria-describedby="offices-hint">
-							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-								<h2 class="govuk-fieldset__heading">Other offices in Kent, Surrey and Sussex</h2>
-							</legend>
-						  	<div id="offices-hint" class="govuk-hint">Select one option</div>
-						  	<div class="govuk-radios" data-module="govuk-radios">
-								<div class="govuk-radios__item">
-							  		<input class="govuk-radios__input" id="offices" name="offices" type="radio" value="East Kent" data-aria-controls="conditional-offices" {{ checked("offices", "East Kent") }}>
-							  		<label class="govuk-label govuk-radios__label" for="offices">East Kent</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices">
-									<div class="govuk-form-group">
-										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-5" name="location-preference" type="checkbox" value="Canterbury: Ralphs Centre" {{ checked("location-preference", "Canterbury: Ralphs Centre") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-5">Canterbury: Ralphs Centre</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-6" name="location-preference" type="checkbox" value="Kent: Maidstone Probation Office" {{ checked("location-preference", "Kent: Maidstone Probation Office") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-6">Kent: Maidstone Probation Office</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-7" name="location-preference" type="checkbox" value="Medway: Chatham Probation Office" {{ checked("location-preference", "Medway: Chatham Probation Office") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-7">Medway: Chatham Probation Office</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-8" name="location-preference" type="checkbox" value="Shepway: Folkestone Probation Office" {{ checked("location-preference", "Shepway: Folkestone Probation Office") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-8">Shepway: Folkestone Probation Office</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-9" name="location-preference" type="checkbox" value="Thanet: Darlincton House" {{ checked("location-preference", "Thanet: Darlincton House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-9">Thanet: Darlincton House</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="offices-2" name="offices" type="radio" value="West Kent" data-aria-controls="conditional-offices-2" {{ checked("offices", "West Kent") }}>
-									<label class="govuk-label govuk-radios__label" for="offices-2">West Kent</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-2">
-									<div class="govuk-form-group">
-										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-10" name="location-preference" type="checkbox" value="Kent: Joynes House" {{ checked("location-preference", "Kent: Joynes House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-10">Kent: Joynes House</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-11" name="location-preference" type="checkbox" value="Bexley: Bexley Magistrates' Court" {{ checked("location-preference", "Bexley: Bexley Magistrates' Court") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-11">Bexley: Bexley Magistrates' Court</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-12" name="location-preference" type="checkbox" value="Bromley: Orpington Probation Office" {{ checked("location-preference", "Bromley: Orpington Probation Office") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-12">Bromley: Orpington Probation Office</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="offices-3" name="offices" type="radio" value="Surrey" data-aria-controls="conditional-offices-3" {{ checked("offices", "Surrey") }}>
-									<label class="govuk-label govuk-radios__label" for="offices-3">Surrey</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-3">
-									<div class="govuk-form-group">
-										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-13" name="location-preference" type="checkbox" value="Guildford: College House" {{ checked("location-preference", "Guildford: College House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-13">Guildford: College House</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-14" name="location-preference" type="checkbox" value="Spelthorne: Swan House" {{ checked("location-preference", "Spelthorne: Swan House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-14">Spelthorne: Swan House</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-15" name="location-preference" type="checkbox" value="Croydon: 4 Whitgift Street" {{ checked("location-preference", "Croydon: 4 Whitgift Street") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-15">Croydon: 4 Whitgift Street</label>
-											</div>
-										</div>
-									</div>
-								</div>
 
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="offices-4" name="offices" type="radio" value="West Sussex" data-aria-controls="conditional-offices-4" {{ checked("offices", "West Sussex") }}>
-									<label class="govuk-label govuk-radios__label" for="offices-4">West Sussex</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-offices-4">
-									<div class="govuk-form-group">
-										<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-16" name="location-preference" type="checkbox" value="Arun: Meadowfield House" {{ checked("location-preference", "Arun: Meadowfield House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-16">Arun: Meadowfield House</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-17" name="location-preference" type="checkbox" value="Crawley: Goff's Park House" {{ checked("location-preference", "Crawley: Goff's Park House") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-17">Crawley: Goff's Park House</label>
-											</div>
-											<div class="govuk-radios__item">
-												<input class="govuk-checkboxes__input" id="location-preference-18" name="location-preference" type="checkbox" value="Worthing: Worthing Probation Office" {{ checked("location-preference", "Worthing: Worthing Probation Office") }}>
-												<label class="govuk-label govuk-checkboxes__label" for="location-preference-18">Worthing: Worthing Probation Office</label>
-											</div>
-										</div>
-									</div>
-								</div>
-						  	</div>
-						</fieldset>
-					</div>
-				</div>
-			</details>
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+		name: "moreLocations",
+		fieldset: {
+			legend: {
+			text: "Would you like to choose from more locations in neighbouring probation delivery units (PDUs)?",
+			isPageHeading: false,
+			classes: "govuk-fieldset__legend--m"
+			}
+		},
+		items: [
+			{
+			value: "yes",
+			text: "Yes"
+			},
+			{
+			value: "no",
+			text: "No"
+			}
+		]
+		}) }}
+		
+
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Continue</button>
-				<a class="govuk-link" href="../../assess/v2/location">Cancel</a>
+				<a class="govuk-link" href="location">Cancel</a>
 			</div>
 		</form>
 	</div>
