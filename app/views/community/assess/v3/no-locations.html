@@ -22,7 +22,7 @@ Are there any locations the person cannot attend the programme? - {{ serviceName
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 					<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-						<h1 class="govuk-fieldset__heading">Are there any locations the person cannot attend the programme?</h1>
+						<h1 class="govuk-fieldset__heading">Are there any locations Alex River cannot attend?</h1>
 					</legend>
 					<div class="govuk-radios" data-module="govuk-radios">
 						<div class="govuk-radios__item">
@@ -31,8 +31,14 @@ Are there any locations the person cannot attend the programme? - {{ serviceName
 						</div>
 						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no-locations-programme">
 							<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
-								<label class="govuk-label govuk-label--s" for="locations-cannot-attend">Tell us about the delivery locations they cannot attend</label>
-								<div id="locations-cannot-attend-hint" class="govuk-hint">This can be delivery location, probation delivery unit or region level</div>
+								<label class="govuk-label govuk-label--s" for="locations-cannot-attend">Give details of the locations they cannot attend</label>
+								<div id="locations-cannot-attend-hint" class="govuk-hint">
+									Include:
+									<ul class="govuk-list govuk-list--bullet govuk-colour("dark-grey")">
+										<li>which locations they cannot attend</li>
+  										<li>the reason why</li>
+									</ul>
+								</div>
 								<textarea class="govuk-textarea govuk-js-character-count" id="locations-cannot-attend" name="locations-cannot-attend" rows="5" aria-describedby="locations-cannot-attend-hint"></textarea>
 								<div id="locations-cannot-attend-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
 							</div>

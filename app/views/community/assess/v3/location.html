@@ -134,6 +134,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<!-- No success banner to display yet -->
 		{% endif %}
 
+		<h2 class="govuk-heading-l">Location</h2>
 		{% if data['update-location'] == "update location" %}
 		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
 		{% else %}
@@ -141,7 +142,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		{% endif %}
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h2 class="govuk-summary-card__title">Location information</h2>
+			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
@@ -153,12 +154,21 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							<dt class="govuk-summary-list__key">Probation office</dt>
 							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</dd>
 						</div>
+					</dl>
+				</div>
+		 	</div>
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h3 class="govuk-summary-card__title">Programme delivery locations</h3>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
 							{% if data['location-preference'] %}
 							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-2-formatted'] }}</dd>
 							{% else %}
-							<dd class="govuk-summary-list__value"><a href="preferred-location" class="govuk-link">Enter preferred programme delivery locations</a></dd>
+							<dd class="govuk-summary-list__value">No information added</dd>
 							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
@@ -169,24 +179,36 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							</dd>
 							{% elseif data['no-locations-programme'] == "No" %}
 							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">None</p>
+								<p class="govuk-body">No information added</p>
 							</dd>
 							{% else %}
-							<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>
+							<!--<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>--->
+							<dd class="govuk-summary-list__value">No information added</dd>
 							{% endif %}
 						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Programme delivery location</dt>
+							<dd class="govuk-summary-list__value">To be confirmed</dd>
+						</div>
 					</dl>
+					{% if data['update-location'] == "update location" %}
+					<form action="preferred-location" method="post">
+						<input type="hidden" id="update-button" name="update-button" value="change location">
+						<div class="govuk-button-group govuk-!-margin-top-5">
+							<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
+						</div>
+					</form>
+					{% else %}
+					<form action="preferred-location" method="post">
+						<input type="hidden" id="update-button" name="update-button" value="change location">
+						<div class="govuk-button-group govuk-!-margin-top-5">
+							<button class="govuk-button" data-module="govuk-button" type="submit">Add location preferences</button>
+						</div>
+					</form>
+					{% endif %}
 				</div>
 		 	</div>
 
-			{% if data['update-location'] == "update location" %}
-			<form action="preferred-location" method="post">
-				<input type="hidden" id="update-button" name="update-button" value="change location">
-				<div class="govuk-button-group">
-					<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
-				</div>
-			</form>
-			{% endif %}
 		</div>
 	</div>
 </div>
