@@ -794,7 +794,7 @@ router.post('/community/assess/v3/preferred-location-router', function (req, res
 	let newStringlocation = originalStringlocation.replace(/,(?!\s)/g, "\n");
 	if(newStringlocation == "undefined")
 	{
-		req.session.data['location-preference-formatted'] = "None";
+		req.session.data['location-preference-formatted'] = "No information added";
 	}
 	else
 	{
@@ -820,7 +820,7 @@ let originalStringlocation = String(req.session.data['location-preference']);
 	let newStringlocation = combined.replace(/,(?!\s)/g, "\n");
 	if(newStringlocation == "undefined")
 	{
-		req.session.data['location-preference-2-formatted'] = "None";
+		req.session.data['location-preference-2-formatted'] = "No information added";
 	}
 	else
 	{
@@ -895,7 +895,7 @@ let originalStringlocation = String(req.session.data['location-preference']);
 	let newStringlocation = combined.replace(/,(?!\s)/g, "\n");
 	if(newStringlocation == "undefined")
 	{
-		req.session.data['location-preference-2-formatted'] = "None";
+		req.session.data['location-preference-2-formatted'] = "No information added";
 	}
 	else
 	{

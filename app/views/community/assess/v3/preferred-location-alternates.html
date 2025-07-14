@@ -18,12 +18,21 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Which additional programme locations would Alex River prefer?</h1>
-		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
+		<h1 class="govuk-heading-l">Which locations can Alex River attend in Kent, Surrey and Sussex?</h1>
+		<p class="govuk-body">You have already selected:</p>
+		<div class="govuk-inset-text">
+			<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">East Sussex</p>
+			<p class="govuk-body">{{ data['location-preference-2-formatted'] }}</p>
+		</div>
+		<p class="govuk-body govuk-!-margin-bottom-6">Select any other locations Alex River can attend.</p>
 		<form action="preferred-location-alt-router" method="post">
-
-			<h2 class="govuk-heading-m">Choose from locations in East Kent</h2>
 			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="locations-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">
+						East Kent
+					</h2>
+				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-radios__item">
@@ -46,88 +55,87 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 							<input class="govuk-checkboxes__input" id="location-preference-9" name="location-preference" type="checkbox" value="Thanet: Darlincton House" {{ checked("location-preference", "Thanet: Darlincton House") }}>
 							<label class="govuk-label govuk-checkboxes__label" for="location-preference-9">Thanet: Darlincton House</label>
 						</div>
-						<!-- <div class="govuk-checkboxes__divider">or</div>
-						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="location-preference-02" name="location-preference" type="checkbox" value="I cannot choose a suitable location in East Kent" {{ checked("location-preference", "I cannot choose a suitable location in East Kent") }} data-behaviour="exclusive">
-							<label class="govuk-label govuk-checkboxes__label" for="location-preference-02">I cannot choose a suitable location in East Kent</label>
-						</div> -->
 					</div>
 				</div>
+			</fieldset>
 			</div>
 
-			<h2 class="govuk-heading-m">Choose from locations in Surrey</h2>
 			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="locations-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">
+						Surrey
+					</h2>
+				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 							<div class="govuk-radios__item">
-								<input class="govuk-checkboxes__input" id="location-preference-10" name="location-preference" type="checkbox" value="Guildford: College House" {{ checked("location-preference", "Guildford: College House") }}>
-								<label class="govuk-label govuk-checkboxes__label" for="location-preference-10">Guildford: College House</label>
+								<input class="govuk-checkboxes__input" id="location-preference-10" name="location-preference" type="checkbox" value="Guildford: College House" {{ checked("location-preference", "Croydon: 4 Whitgift Street") }}>
+								<label class="govuk-label govuk-checkboxes__label" for="location-preference-10">Croydon: 4 Whitgift Street</label>
 							</div>
 							<div class="govuk-radios__item">
-								<input class="govuk-checkboxes__input" id="location-preference-11" name="location-preference" type="checkbox" value="Spelthorne: Swan House" {{ checked("location-preference", "Spelthorne: Swan House") }}>
-								<label class="govuk-label govuk-checkboxes__label" for="location-preference-11">Spelthorne: Swan House</label>
+								<input class="govuk-checkboxes__input" id="location-preference-11" name="location-preference" type="checkbox" value="Spelthorne: Swan House" {{ checked("location-preference", "Guildford: College House") }}>
+								<label class="govuk-label govuk-checkboxes__label" for="location-preference-11">Guildford: College House</label>
 							</div>
 							<div class="govuk-radios__item">
-								<input class="govuk-checkboxes__input" id="location-preference-12" name="location-preference" type="checkbox" value="Croydon: 4 Whitgift Street" {{ checked("location-preference", "Croydon: 4 Whitgift Street") }}>
-								<label class="govuk-label govuk-checkboxes__label" for="location-preference-12">Croydon: 4 Whitgift Street</label>
+								<input class="govuk-checkboxes__input" id="location-preference-12" name="location-preference" type="checkbox" value="Spelthorne: Swan House" {{ checked("location-preference", "Spelthorne: Swan House") }}>
+								<label class="govuk-label govuk-checkboxes__label" for="location-preference-12">Spelthorne: Swan House</label>
 							</div>
-							<!-- <div class="govuk-checkboxes__divider">or</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="location-preference-03" name="location-preference" type="checkbox" value="I cannot choose a suitable location in Surrey" {{ checked("location-preference", "I cannot choose a suitable location in Surrey") }}>
-								<label class="govuk-label govuk-checkboxes__label" for="location-preference-03">I cannot choose a suitable location in Surrey</label>
-							</div> -->
 						</div>
 					</div>
 				</div>
+				</fieldset>
 			</div>
 
-			<h2 class="govuk-heading-m">Choose from locations in West Sussex</h2>
 			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="locations-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">
+						West Kent
+					</h2>
+				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-radios__item">
-						<input class="govuk-checkboxes__input" id="location-preference-13" name="location-preference" type="checkbox" value="Arun: Meadowfield House" {{ checked("location-preference", "Arun: Meadowfield House") }}>
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-13">Arun: Meadowfield House</label>
+						<input class="govuk-checkboxes__input" id="location-preference-13" name="location-preference" type="checkbox" value="Bexley: Bexley Magistrates' Court" {{ checked("location-preference", "Bexley: Bexley Magistrates' Court") }}>
+						<label class="govuk-label govuk-checkboxes__label" for="location-preference-13">Bexley: Bexley Magistrates' Court</label>
 					</div>
 					<div class="govuk-radios__item">
-						<input class="govuk-checkboxes__input" id="location-preference-14" name="location-preference" type="checkbox" value="Crawley: Goff's Park House" {{ checked("location-preference", "Crawley: Goff's Park House") }}>
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-14">Crawley: Goff's Park House</label>
+						<input class="govuk-checkboxes__input" id="location-preference-14" name="location-preference" type="checkbox" value="Bromley: Orpington Probation Office" {{ checked("location-preference", "Bromley: Orpington Probation Office") }}>
+						<label class="govuk-label govuk-checkboxes__label" for="location-preference-14">Bromley: Orpington Probation Office</label>
 					</div>
 					<div class="govuk-radios__item">
-						<input class="govuk-checkboxes__input" id="location-preference-15" name="location-preference" type="checkbox" value="Worthing: Worthing Probation Office" {{ checked("location-preference", "Worthing: Worthing Probation Office") }}>
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-15">Worthing: Worthing Probation Office</label>
+						<input class="govuk-checkboxes__input" id="location-preference-15" name="location-preference" type="checkbox" value="Kent: Joynes House" {{ checked("location-preference", "Kent: Joynes House") }}>
+						<label class="govuk-label govuk-checkboxes__label" for="location-preference-15">Kent: Joynes House</label>
 					</div>
-					<!-- <div class="govuk-checkboxes__divider">or</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="location-preference-04" name="location-preference" type="checkbox" value="I cannot choose a suitable location in West Sussex" {{ checked("location-preference", "I cannot choose a suitable location in West Sussex") }}>
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-04">I cannot choose a suitable location in West Sussex</label>
-					</div> -->
 				</div>
+				</fieldset>
 			</div>
 
-			<h2 class="govuk-heading-m">Choose from locations in West Kent</h2>
 			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="locations-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">
+						West Sussex
+					</h2>
+				</legend>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 						<div class="govuk-radios__item">
-							<input class="govuk-checkboxes__input" id="location-preference-19" name="location-preference" type="checkbox" value="Kent: Joynes House" {{ checked("location-preference", "Kent: Joynes House") }}>
-							<label class="govuk-label govuk-checkboxes__label" for="location-preference-19">Kent: Joynes House</label>
+							<input class="govuk-checkboxes__input" id="location-preference-19" name="location-preference" type="checkbox" value="Arun: Meadowfield House" {{ checked("location-preference", "Arun: Meadowfield House") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="location-preference-19">Arun: Meadowfield House</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-checkboxes__input" id="location-preference-20" name="location-preference" type="checkbox" value="Bexley: Bexley Magistrates' Court" {{ checked("location-preference", "Bexley: Bexley Magistrates' Court") }}>
-							<label class="govuk-label govuk-checkboxes__label" for="location-preference-20">Bexley: Bexley Magistrates' Court</label>
+							<input class="govuk-checkboxes__input" id="location-preference-20" name="location-preference" type="checkbox" value="Crawley: Goff's Park House" {{ checked("location-preference", "Crawley: Goff's Park House") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="location-preference-20">Crawley: Goff's Park House</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-checkboxes__input" id="location-preference-21" name="location-preference" type="checkbox" value="Bromley: Orpington Probation Office" {{ checked("location-preference", "Bromley: Orpington Probation Office") }}>
-							<label class="govuk-label govuk-checkboxes__label" for="location-preference-21">Bromley: Orpington Probation Office</label>
+							<input class="govuk-checkboxes__input" id="location-preference-21" name="location-preference" type="checkbox" value="Worthing: Worthing Probation Office" {{ checked("location-preference", "Worthing: Worthing Probation Office") }}>
+							<label class="govuk-label govuk-checkboxes__label" for="location-preference-21">Worthing: Worthing Probation Office</label>
 						</div>
-						<!-- <div class="govuk-checkboxes__divider">or</div>
-						<div class="govuk-checkboxes__item">
-							<input class="govuk-checkboxes__input" id="location-preference-05" name="location-preference" type="checkbox" value="I cannot choose a suitable location in West Kent" {{ checked("location-preference", "I cannot choose a suitable location in West Kent") }}>
-							<label class="govuk-label govuk-checkboxes__label" for="location-preference-05">I cannot choose a suitable location in West Kent</label>
-						</div> -->
 					</div>
 				</div>
+				</fieldset>
 			</div>
 
 

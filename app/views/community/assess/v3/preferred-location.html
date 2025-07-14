@@ -18,12 +18,21 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Which programme locations would Alex River prefer?</h1>
-		<p class="govuk-body">This is a list of all locations where the programme can take place in this probation delivery unit. Choose any locations that are suitable.</p>
-		<p class="govuk-body govuk-!-margin-bottom-6">We use this information to help programme teams assign people to suitable programmes. There is no guarantee the person will attend the programme in the location you choose. You can change the preferred location at any time until the programme starts.</p>
-		<h2 class="govuk-heading-m">Choose from locations in East Sussex</h2>
+		<h1 class="govuk-heading-l">Where can Alex River attend a programme?</h1>
+		<p class="govuk-body">Programme teams can use this information when allocating people to programmes. 
+			There is no guarantee that participants will be offered their preferred location.</p>
+		<p class="govuk-body govuk-!-margin-bottom-6">You can add or change these details until the person starts a programme.</p>
 		<form action="preferred-location-router" method="post">
 			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="locations-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<h2 class="govuk-fieldset__heading">
+						East Sussex
+					</h2>
+					</legend>
+					<div id="locations-hint" class="govuk-hint">
+					Select any locations Alex River can attend. You can skip this question if you do not know.
+					</div>
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-radios__item">
 						<input class="govuk-checkboxes__input" id="location-preference-1" name="location-preference" type="checkbox" value="Brighton and Hove: Brighton Probation Office" {{ checked("location-preference", "Brighton and Hove: Brighton Probation Office") }}>
@@ -41,12 +50,8 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 						<input class="govuk-checkboxes__input" id="location-preference-4" name="location-preference" type="checkbox" value="Lewes & Eastbourne: Eastbourne Probation Office" {{ checked("location-preference", "Lewes & Eastbourne: Eastbourne Probation Office") }}>
 						<label class="govuk-label govuk-checkboxes__label" for="location-preference-4">Lewes & Eastbourne: Eastbourne Probation Office</label>
 					</div>
-					<div class="govuk-checkboxes__divider">or</div>
-					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="location-preference-01" name="location-preference" type="checkbox" value="I cannot choose a suitable location yet" {{ checked("location-preference", "I cannot choose a suitable location yet") }} data-behaviour="exclusive">
-						<label class="govuk-label govuk-checkboxes__label" for="location-preference-01">I cannot choose a suitable location yet</label>
-					</div> 
 				</div>
+			</fieldset>
 			</div>
 
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -55,7 +60,7 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 		name: "moreLocations",
 		fieldset: {
 			legend: {
-			text: "Would you like to choose from more locations in neighbouring probation delivery units (PDUs)?",
+			text: "Do you want to add locations from another probation delivery unit in your region?",
 			isPageHeading: false,
 			classes: "govuk-fieldset__legend--m"
 			}
