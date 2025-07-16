@@ -134,12 +134,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<!-- No success banner to display yet -->
 		{% endif %}
 
-		<h2 class="govuk-heading-l">Location</h2>
-		{% if data['update-location'] == "update location" %}
-		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
-		{% else %}
-		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
-		{% endif %}
+		<h2 class="govuk-heading-m">Location</h2>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
@@ -159,10 +154,15 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		 	</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Programme delivery locations</h3>
+			  		<h3 class="govuk-summary-card__title">Preferred programme delivery locations</h3>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
+						{% if data['update-location'] == "update location" %}
+						<p class="govuk-body">Last updated 9 May 2025 by Max Freeman</p>
+						{% else %}
+						<p class="govuk-body">Last updated 3 April 2025 by Tom Saunders</p>
+						{% endif %}
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
 							{% if data['location-preference'] %}
@@ -186,22 +186,18 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							<dd class="govuk-summary-list__value">No information added</dd>
 							{% endif %}
 						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Programme delivery location</dt>
-							<dd class="govuk-summary-list__value">To be confirmed</dd>
-						</div>
 					</dl>
 					{% if data['update-location'] == "update location" %}
 					<form action="preferred-location" method="post">
 						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5">
+						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
 							<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
 						</div>
 					</form>
 					{% else %}
 					<form action="preferred-location" method="post">
 						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5">
+						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
 							<button class="govuk-button" data-module="govuk-button" type="submit">Add location preferences</button>
 						</div>
 					</form>
