@@ -903,7 +903,8 @@ let originalStringlocation = String(req.session.data['location-preference']);
 	}
 	res.redirect('no-locations');
 });
-				
+
+// Community groups routers - V1
 router.post('/community/groups/assess/v1/allocate-router', function(request, response) {
 	var cancel_continue_group = request.session.data['cancel-continue-group'];//
 	
@@ -936,5 +937,35 @@ router.post('/community/groups/assess/v1/availability-router', function(request,
 	}
 	else {
 		response.redirect("availability")
+	}
+})
+
+// Community groups routers - V2
+router.post('/community/groups/assess/v2/allocate-router', function(request, response) {
+	var cancel_continue_group_2 = request.session.data['cancel-continue-group-2'];//
+	
+	if (cancel_continue_group_2 === "Cancel allocation for Adrian Poole"){
+		response.redirect("allocate-bc-group-1") // Initial redirect
+	}
+	else if (cancel_continue_group_2 === "Cancel allocation for Dan Jackson") {
+		response.redirect('allocate-bc-group-1')
+	}
+	else if (cancel_continue_group_2 === "Cancel allocation for Roman Fredric") {
+		response.redirect('allocate-bc-group-1')
+	}
+	else {
+		response.redirect("bc-group-1")
+	}
+})
+
+router.post('/community/groups/assess/v2/availability-router', function(request, response) {
+
+	var cancel_continue_group = request.session.data['cancel-continue-group'];//
+	
+	if (cancel_continue_group === "yes"){
+		response.redirect("availability") 
+	}
+	else {
+		response.redirect("allocate-bc-group-1")
 	}
 })

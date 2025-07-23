@@ -22,7 +22,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-				<a href="#" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
+				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
 					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
 					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change LDC status</a>		  
@@ -36,16 +36,16 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" aria-current="page" href="#">Referral details</a>
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
 			 	</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Risks and needs</a>
+					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Programme needs identifier</a>
+					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="#">Status history</a>
+					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
 				</li>
 		  	</ul>
 		</nav>
@@ -94,31 +94,31 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 				<li class="moj-side-navigation__item">
-					<a href="#">Personal details</a>
+					<a href="personal-details">Personal details</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
-					<a href="#">Programme history</a>
+					<a href="programme-history">Programme history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Offence history</a>
+					<a href="offence-history">Offence history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Sentence information</a>
+					<a href="sentence-information">Sentence information</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Availability</a>
+					<a href="availability">Availability</a>
 		  		</li>
 				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="#" aria-current="location">Location</a>
+					<a href="location" aria-current="location">Location</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="#">Additional information</a>
+					<a href="additional-information">Additional information</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<!-- {% if data['cancel-continue-group'] == "Cancel allocation for Adrian Poole" %}-->
+		{% if data['update-location'] == "update location" %}
 		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
 			<div>
 			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
@@ -130,14 +130,18 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
 			</div>
 		</div>
-		<!-- {% else %} -->
+		{% else %}
 		<!-- No success banner to display yet -->
-		<!-- {% endif %} -->
+		{% endif %}
 
-		<h2 class="govuk-heading-m">Location</h2>
+		{% if data['update-location'] == "update location" %}
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 9 May 2025 by Max Freeman</div>
+		{% else %}
+		<div class="govuk-inset-text govuk-!-margin-top-0">Last updated 3 April 2025 by Tom Saunders</div>
+		{% endif %}
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
+			  		<h2 class="govuk-summary-card__title">Location information</h2>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
@@ -149,26 +153,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							<dt class="govuk-summary-list__key">Probation office</dt>
 							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</dd>
 						</div>
-					</dl>
-				</div>
-		 	</div>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Preferred programme delivery locations</h3>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						{% if data['update-location'] == "update location" %}
-						<p class="govuk-body">Last updated 9 May 2025 by Max Freeman</p>
-						{% else %}
-						<p class="govuk-body">Last updated 3 April 2025 by Tom Saunders</p>
-						{% endif %}
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
 							{% if data['location-preference'] %}
-							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-2-formatted'] }}</dd>
+							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-formatted'] }}</dd>
 							{% else %}
-							<dd class="govuk-summary-list__value">No information added</dd>
+							<dd class="govuk-summary-list__value"><a href="preferred-location" class="govuk-link">Enter preferred programme delivery locations</a></dd>
 							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
@@ -179,32 +169,24 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 							</dd>
 							{% elseif data['no-locations-programme'] == "No" %}
 							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">No information added</p>
+								<p class="govuk-body">None</p>
 							</dd>
 							{% else %}
-							<!--<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>--->
-							<dd class="govuk-summary-list__value">No information added</dd>
+							<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>
 							{% endif %}
 						</div>
 					</dl>
-					{% if data['update-location'] == "update location" %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
-						</div>
-					</form>
-					{% else %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Add location preferences</button>
-						</div>
-					</form>
-					{% endif %}
 				</div>
 		 	</div>
 
+			{% if data['update-location'] == "update location" %}
+			<form action="preferred-location" method="post">
+				<input type="hidden" id="update-button" name="update-button" value="change location">
+				<div class="govuk-button-group">
+					<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
+				</div>
+			</form>
+			{% endif %}
 		</div>
 	</div>
 </div>
