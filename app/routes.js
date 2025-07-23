@@ -944,7 +944,7 @@ router.post('/community/groups/assess/v1/availability-router', function(request,
 router.post('/community/groups/assess/v2/allocate-router', function(request, response) {
 	var cancel_continue_group_2 = request.session.data['cancel-continue-group-2'];//
 	
-	if (cancel_continue_group_2 === "Cancel allocation for Adrian Poole"){
+	if (cancel_continue_group_2 === "no"){
 		response.redirect("allocate-bc-group-1") // Initial redirect
 	}
 	else if (cancel_continue_group_2 === "Cancel allocation for Dan Jackson") {
