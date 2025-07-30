@@ -154,24 +154,19 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 					</li>
 				</ul>
 			</nav>
-		
-		{% if data['cancel-continue-group-2'] == "Yes" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
-			<div>
-			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+
+			<div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert">
+				<div>
+				  <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
 					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			  	</svg>
-			</div>
-			<div class="moj-alert__content">Adrian Poole was added to this group.</div>
-			<div class="moj-alert__action">
-			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
-			</div>
-		</div>
-
-		{% else %}
-		<!-- No success banner to display yet -->
-		{% endif %}
-
+				  </svg>
+				</div>
+				<div class="moj-alert__content">Adrian Poole was removed from this group.</div>
+			  
+				<div class="moj-alert__action">
+				  <button class="moj-alert__dismiss" hidden>Dismiss</button>
+				</div>
+			  </div>
 
 		<div class="govuk-grid-column-two-thirds">
 			<table class="govuk-table" data-module="moj-sortable-table">
