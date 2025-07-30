@@ -81,8 +81,8 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">Brighton Probation Office</dd>
 					</div>
 					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Facilitator</dt>
-						<dd class="govuk-summary-list__value">John Smith</dd>
+						<dt class="govuk-summary-list__key">Facilitators</dt>
+						<dd class="govuk-summary-list__value">John Smith, Berta Tonka, Hauwa'u Tshepo</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Cohort</dt>
@@ -162,14 +162,16 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
 			  	</svg>
 			</div>
-			<div class="moj-alert__content">Adrian Poole was successfully added to this group.</div>
+			<div class="moj-alert__content">Adrian Poole was added to this group.</div>
 			<div class="moj-alert__action">
 			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
 			</div>
 		</div>
+
 		{% else %}
 		<!-- No success banner to display yet -->
 		{% endif %}
+
 
 		<div class="govuk-grid-column-two-thirds">
 			<table class="govuk-table" data-module="moj-sortable-table">
@@ -300,7 +302,7 @@ Building Choices group 1 - {{ serviceName }} - GOV.UK Prototype Kit
 				</tr>
 			</tbody>
 		</table>	
-		<a href=" " class="govuk-button moj-button-menu__item">Edit allocation</a>
+		<a href=" " class="govuk-button moj-button-menu__item">Remove from group</a>
 	</div>
 	</div>
 </div>
