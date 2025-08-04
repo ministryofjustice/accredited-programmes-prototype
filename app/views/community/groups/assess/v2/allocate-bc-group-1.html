@@ -122,7 +122,7 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Delivery location</dt>
-						<dd class="govuk-summary-list__value">Newcastle Probation Office</dd>
+						<dd class="govuk-summary-list__value">County Durham: Newton Aycliffe Probation Office</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Facilitators</dt>
@@ -160,11 +160,11 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
-						<dd class="govuk-summary-list__value">6 September 2025</dd>
+						<dd class="govuk-summary-list__value">6 September 2026</dd>
 					</div>
 					<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
 						<dt class="govuk-summary-list__key">End date</dt>
-						<dd class="govuk-summary-list__value">22 October 2025</dd>
+						<dd class="govuk-summary-list__value">22 October 2026</dd>
 					</div>
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">Time of sessions</dt>
@@ -184,17 +184,455 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break govuk-section-break--visible" />
 		<h2 class="govuk-heading-l govuk-!-margin-top-8">Participants and waitlist</h2>
-			<nav class="moj-sub-navigation" aria-label="Sub navigation">
-				<ul class="moj-sub-navigation__list">
-					<li class="moj-sub-navigation__item">
-						<a class="moj-sub-navigation__link" href="bc-group-1">Currently allocated (6)</a>
-					</li>
-					<li class="moj-sub-navigation__item">
-						<a class="moj-sub-navigation__link" aria-current="page" href="allocate-bc-group-1">Waitlist (52)</a>
-					</li>
-				</ul>
-			</nav>
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="bc-group-1">Currently allocated (6)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="allocate-bc-group-1">Waitlist (52)</a>
+				</li>
+			</ul>
+		</nav>
 
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-one-third">
+				<div class="moj-filter" data-module="moj-filter">
+					<div class="moj-filter__header">
+					  <div class="moj-filter__header-title">
+						<h2 class="govuk-heading-m">Filter</h2>
+					  </div>
+					  <div class="moj-filter__header-action">
+					  </div>
+					</div>
+					<div class="moj-filter__content">			  
+					  <!--<div class="moj-filter__selected">			  
+						<div class="moj-filter__selected-heading">		  
+						  <div class="moj-filter__heading-title">
+							<h2 class="govuk-heading-m">Selected filters</h2>
+						  </div>
+				  
+						  <div class="moj-filter__heading-action">
+							<p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+						  </div>		  
+						</div>
+				  
+						<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Type</h3>
+						<ul class="moj-filter-tags">
+						  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Blue</a></li>			  
+						  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Yellow</a></li>	  
+						</ul>
+				  
+						<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Status</h3>  
+						<ul class="moj-filter-tags">
+						  <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Completed</a></li>
+						</ul>
+					  </div>-->
+				  
+					  <div class="moj-filter__options">
+						<button type="submit" class="govuk-button" data-module="govuk-button" data-test-id="submit-button">
+						  Apply filters
+						</button>
+				  
+						<div class="govuk-form-group">
+						  <label class="govuk-label govuk-label--m" for="keywords">
+							Search by name or CRN
+						  </label>
+						  <input class="govuk-input" id="keywords" name="keywords" type="text">			  
+						</div>
+
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--m" for="keywords">
+								Cohort
+							</label>
+							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
+						</div>
+
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--m" for="keywords">
+								PDU
+							</label>
+							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
+						</div>
+
+
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--m" for="contact-by-email">
+							<div class="govuk-form-group">
+								<h1 class="govuk-label-wrapper">
+									<label class="govuk-label govuk-label--m" for="country">
+									Probation Delivery Unit (PDU)
+								</label>
+								</h1>
+								<select class="govuk-select" id="country" name="country" aria-labelledby="countryLabel">
+								<option value="" selected disabled>Select an option</option>
+								<option value="Blackburn">Blackburn and Darwen</option>
+								<option value="Lancashire">Central Lancashire</option>
+								<option value="CheshireE">Cheshire East</option>
+								<option value="CheshireW">Cheshire West</option>
+								<option value="Cumbria">Cumbria</option>
+								<option value="ELancashire">East Lancashire</option>
+								<option value="HaltonandWarrington">Halton and Warrington</option>
+								<option value="LiverpoolN">LiverpoolNorth</option>
+								<option value="LiverpoolS">Liverpool South</option>
+								<option value="NWLancashire">North West Lancashire</option>
+								<option value="Sefton">Sefton</option>
+								<option value="Wirra">Wirra</option>
+		
+								<option value="Bolton">Bolton</option>
+								<option value="BuryRochdale">Bury and Rochdale</option>
+								<option value="ManchesterN">Manchester North</option>
+								<option value="ManchesterS">Manchester South</option>
+								<option value="Oldham">Oldham</option>
+								<option value="Salford">Salford</option>
+								<option value="Stockport">Stockport and Trafford</option>
+								<option value="Tameside">Tameside</option>
+								<option value="Wigan">Wigan</option>
+		
+								<option value="Barnsley">Barnsley and Rotherham</option>
+								<option value="Bradford and Calderdale">Bradford and Calderdale</option>
+								<option value="Doncaster">Doncaster</option>
+								<option value="Hull">Hull and East Riding</option>
+								<option value="Leeds">Leeds</option>
+								<option value="North and North East Lincs">North and North East Lincs</option>
+								<option value="NYorkshire">North Yorkshire</option>
+								<option value="Stockport">Stockport and Trafford</option>
+								<option value="Sheffield">Sheffield</option>
+								<option value="Wakefield">Wakefield</option>
+								<option value="York">York</option>
+		
+								<option value="Durham">County Durham and Darlington</option>
+								<option value="Gateshead and South Tyneside">Gateshead and South Tyneside</option>
+								<option value="Newcastle Upon Tyne">Newcastle Upon Tyne</option>
+								<option value="North Tyneside and Northumberland">North Tyneside and Northumberland</option>
+								<option value="Redcar, Cleveland and Middlesbrough">Redcar, Cleveland and Middlesbrough</option>
+								<option value="Stockton and Hartlepool">Stockton and Hartlepool</option>
+								<option value="Sunderland">Sunderland</option>
+		
+								<option value="Barking and Dagenham">Barking and Dagenham and Havering</option>
+								<option value="Brent">Brent</option>
+								<option value="Camden">Camden, Islington</option>
+								<option value="Croydon">Croydon</option>
+								<option value="Ealing and Hillingdon">Ealing and Hillingdon</option>
+								<option value="Enfield and Haringey">Enfield and Haringey</option>
+								<option value="Greenwich and Bexley">Greenwich and Bexley</option>
+								<option value="Hackney and City">Hackney and City</option>
+								<option value="Hammersmith">Hammersmith, Fulham, Kensington, Chelsea and Westminster</option>
+								<option value="Harrow and Barnet">Harrow and Barnet</option>
+								<option value="Ealing and Hillingdon">Kingston, Richmond and Hounslow</option>
+								<option value="Enfield and Haringey">Lambeth</option>
+								<option value="Greenwich and Bexley">Newham</option>
+								<option value="Redbridge and Waltham Forest">Redbridge and Waltham Forest</option>
+								<option value="Enfield and Haringey">Southwark</option>
+								<option value="Greenwich and Bexley">Tower Hamlets</option>
+								<option value="Greenwich and Bexley">Wandsworth, Merton and
+									Sutton</option>
+		
+									<option value="Birmingham Central and South">Birmingham Central and South</option>
+									<option value="Birmingham North, East and
+									Solihull">Birmingham North, East and
+									Solihull</option>
+									<option value="Coventry">Coventry</option>
+									<option value="Dudley">Dudley and Sandwell</option>
+									<option value="Herefordshire, Shropshire
+									and Telford">Herefordshire, Shropshire
+									and Telford</option>
+									<option value="Staffordshire and Stoke">Staffordshire and Stoke</option>
+									<option value="Walsall and Wolverhampton">Walsall and Wolverhampton</option>
+									<option value="Warwickshire">Warwickshire</option>
+									<option value="Worcestershire">Worcestershire</option>
+									<option value="Derby City">Derby City</option>
+									<option value="Derbyshire">Derbyshire</option>
+									<option value="Leicester, Leicestershire and
+									Rutland">Leicester, Leicestershire and
+									Rutland</option>
+									<option value="Lincolnshire East and West">Lincolnshire East and West</option>
+									<option value="Nottingham City">Nottingham City</option>
+									<option value="Nottinghamshire">Nottinghamshire</option>
+		
+									<option value="Bedfordshire">Bedfordshire</option>
+									<option value="Cambridgeshire and
+									Peterborough">Cambridgeshire and
+									Peterborough</option>
+									<option value="Essex North">Essex North</option>
+									<option value="Essex South">Essex South</option>
+									<option value="Hertfordshire">Hertfordshire</option>
+									<option value="Norfolk">Norfolk</option>
+									<option value="Northamptonshire">Northamptonshire</option>
+									<option value="Suffolk">Suffolk</option>
+		
+									<option value="Brighton and East Sussex">Brighton and East Sussex</option>
+									<option value="East Kent">East Kent</option>
+									<option value="Surrey">Surrey</option>
+									<option value="West Kent">West Kent</option>
+									<option value="West Sussex">West Sussex</option>
+		
+								<option value="Bath and North Somerset">Bath and North Somerset</option>
+								<option value="Bristol and South
+								Gloucestershire">Bristol and South
+									Gloucestershire</option>
+								<option value="Cornwall and Isles of Scilly">Cornwall and Isles of Scilly</option>
+								<option value="Devon and Torbay">Devon and Torbay</option>
+								<option value="Dorset">Dorset</option>
+								<option value="Gloucestershire">Gloucestershire</option>
+								<option value="Plymouth">Plymouth</option>
+								<option value="Somerset">Somerset</option>
+								<option value="Buckinghamshire and Milton
+								Keynes">Buckinghamshire and Milton
+									Keynes</option>
+								<option value="East Berkshire">East Berkshire</option>
+								<option value="Hampshire North and East">Hampshire North and East</option>
+								<option value="Oxfordshire">Oxfordshire</option>
+								<option value="Portsmouth and Isle of Wight">Portsmouth and Isle of Wight</option>
+								<option value="Southampton, Eastleigh and
+								New Forest">Southampton, Eastleigh and
+									New Forest</option>
+								<option value="West Berkshire">West Berkshire</option>
+		
+								<option value="Cardiff and Vale">Cardiff and Vale</option>
+								<option value="Cwm Taf Morgannwg">Cwm Taf Morgannwg</option>
+								<option value="Dyfed Powys">Dyfed Powys</option>
+								<option value="Gwent">Gwent</option>
+								<option value="North Wales">North Wales</option>
+								<option value="Swansea, Neath PortTalbot">Swansea, Neath PortTalbot</option>
+		
+								</select>
+							</div>
+							</label>
+						</div>
+
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--m" for="keywords">
+								Reporting team
+							</label>
+							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
+						</div>			  
+					  </div>				  
+					</div>
+				</div>
+			</div>
+			<div class="govuk-grid-column-two-thirds">
+				<form action="eligibility" method="post">
+					<table class="govuk-table" data-module="moj-sortable-table">
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th class="govuk-table__header"></th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Name and CRN</th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Sentence end date</th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Age</th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Cohort</th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Sex</th>
+								<th class="govuk-table__header" aria-sort="none" scope="col">Reporting office</th>
+							</tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row govuk-table__row--selected">
+								
+								{% if data['cancel-continue-group-2'] == "Yes" %}
+								<!-- Hide Adrian's details -->
+								{% else %}
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-poole-adrian" value="Poole, Adrian" {{ checked("group-waitlist", "Poole, Adrian") }}>
+											<label class="govuk-label govuk-radios__label" for="group-poole-adrian">
+											<span class="govuk-visually-hidden">Select Poole, Adrian</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
+								<td class="govuk-table__cell">2 Jun 2026<br />Order end date</td>
+								<td class="govuk-table__cell">34</td>
+								<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">		County Durham and Darlington: North Durham 3</td>
+								</tr>
+								{% endif %}
+							
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-jackson-dan" value="Jackson, Dan" {{ checked("group-waitlist", "Jackson, Dan") }}">
+											<label class="govuk-label govuk-radios__label" for="group-jackson-dan">
+											<span class="govuk-visually-hidden">Select Jackson, Dan</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
+								<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+								<td class="govuk-table__cell">27</td>
+								<td class="govuk-table__cell">Sexual offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: North Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />P227326</td>
+								<td class="govuk-table__cell">20 May 2027<br />Order end date</td>
+								<td class="govuk-table__cell">47</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<!--extra-->
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Jamil Nektarios</a><br />P689325</td>
+								<td class="govuk-table__cell">17 August 2026<br />Order end date</td>
+								<td class="govuk-table__cell">45</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 1</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Malik Jacob</a><br />D199983</td>
+								<td class="govuk-table__cell">11 January 2026<br />Order end date</td>
+								<td class="govuk-table__cell">29</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Christiaan Simon</a><br />T963851</td>
+								<td class="govuk-table__cell">10 February 2026<br />Order end date</td>
+								<td class="govuk-table__cell">66</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Stefan Sviatoslav</a><br />B552940</td>
+								<td class="govuk-table__cell">12 December 2027<br />Order end date</td>
+								<td class="govuk-table__cell">54</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 1</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Amvrosiy Ervin</a><br />R02468</td>
+								<td class="govuk-table__cell">28 April 2026<br />Order end date</td>
+								<td class="govuk-table__cell">42</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Xiaohua Shion Tsutomu</a><br />P999734</td>
+								<td class="govuk-table__cell">16 September 2028<br />Order end date</td>
+								<td class="govuk-table__cell">31</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Shouji Yuudai Souta</a><br />T989842</td>
+								<td class="govuk-table__cell">23 July 2027<br />Order end date</td>
+								<td class="govuk-table__cell">63</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Darlington 1</td>
+							</tr>
+		
+						</tbody>
+					</table>
+					<button type="submit" class="govuk-button" data-module="govuk-button">Add to group</button>
+					<nav class="moj-pagination" aria-label="Pagination navigation">
+		
+						<ul class="moj-pagination__list">
+						 <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+							<a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> page</span></a>
+						  </li>-->
+					  
+						  <li class="moj-pagination__item moj-pagination__item--active" aria-label="Page 1 of 5" aria-current="page">1</li>
+			
+						  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1" aria-label="Page 2 of 5">2</a></li>
+					  
+						  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3" aria-label="Page 3 of 5">3</a></li>
+					  
+						  <li class="moj-pagination__item moj-pagination__item--dots">…</li>
+					  
+						  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=5" aria-label="Page 5 of 5">5</a></li>
+					  
+						  <li class="moj-pagination__item  moj-pagination__item--next">
+							<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> page</span></a>
+						  </li>
+						</ul>
+						<p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>60</b> results</p>
+					</nav>
+				</form>
+			</div>
+		</div>
 
 		<div class="filters-container-moj">
 			<h2 class="govuk-heading-m filters-heading">Filters</h2>
@@ -225,10 +663,10 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-label--s" for="reporting-office">Reporting office</label>
 					<select class="govuk-select" id="reporting-office" name="reporting-office">
 						<option value="select" selected>Select</option>
-						<option value="brighton-probation-office">Brighton Probation Office</option>
-						<option value="eastbourne-probation-office">Eastbourne Probation Office</option>
-						<option value="sussex-house">Sussex House</option>
-						<option value="st-leonards-probation-office">St. Leonards Probation Office</option>
+						<option value="brighton-probation-office">County Durham and Darlington: Peterlee 2</option>
+						<option value="eastbourne-probation-office">County Durham and Darlington</option>
+						<option value="sussex-house">Peterlee 2</option>
+						<option value="st-leonards-probation-office">County Durham and Darlington: Peterlee 2</option>
 					</select>
 				</div>
 				<div class="govuk-button-group govuk-!-margin-top-4 govuk-!-margin-bottom-0" style="margin-bottom: 3px !important">
@@ -238,81 +676,22 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 		
-		<form action="eligibility" method="post">
-			<table class="govuk-table" data-module="moj-sortable-table">
-				<thead class="govuk-table__head">
-					<tr class="govuk-table__row">
-						<th class="govuk-table__header"></th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Name and CRN</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Sentence end date</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Age</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Cohort</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Sex</th>
-						<th class="govuk-table__header" aria-sort="none" scope="col">Reporting office</th>
-					</tr>
-				</thead>
-				<tbody class="govuk-table__body">
-					<tr class="govuk-table__row govuk-table__row--selected">
-						
-						{% if data['cancel-continue-group-2'] == "Yes" %}
-						<!-- Hide Adrian's details -->
-						{% else %}
-						<td class="govuk-table__cell">
-							<div class="govuk-radios govuk-radios--small">
-								<div class="govuk-radios__item">
-									<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-poole-adrian" value="Poole, Adrian" {{ checked("group-waitlist", "Poole, Adrian") }}>
-									<label class="govuk-label govuk-radios__label" for="group-poole-adrian">
-									<span class="govuk-visually-hidden">Select Poole, Adrian</span>
-								</div>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
-						<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
-						<td class="govuk-table__cell">34</td>
-						<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">Brighton Probation Office</td>
-						</tr>
-						{% endif %}
-					
-					<tr class="govuk-table__row govuk-table__row--selected">
-						<td class="govuk-table__cell">
-							<div class="govuk-radios govuk-radios--small">
-								<div class="govuk-radios__item">
-									<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-jackson-dan" value="Jackson, Dan" {{ checked("group-waitlist", "Jackson, Dan") }}">
-									<label class="govuk-label govuk-radios__label" for="group-jackson-dan">
-									<span class="govuk-visually-hidden">Select Jackson, Dan</span>
-								</div>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
-						<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
-						<td class="govuk-table__cell">27</td>
-						<td class="govuk-table__cell">Sexual offence</td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">Brighton Probation Office</td>
-					</tr>
-					<tr class="govuk-table__row govuk-table__row--selected">
-						<td class="govuk-table__cell">
-							<div class="govuk-radios govuk-radios--small">
-								<div class="govuk-radios__item">
-									<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
-									<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
-									<span class="govuk-visually-hidden">Select Fredric, Roman</span>
-								</div>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a href="#" class="govuk-link">Fredric, Roman</a><br />P227326</td>
-						<td class="govuk-table__cell">20 May 2025<br />Order end date</td>
-						<td class="govuk-table__cell">45</td>
-						<td class="govuk-table__cell">General offence</td>
-						<td class="govuk-table__cell">Male</td>
-						<td class="govuk-table__cell">Sussex House</td>
-					</tr>
-				</tbody>
-			</table>
-			<button type="submit" class="govuk-button" data-module="govuk-button">Add to group</button>
-		</form>
+		
     </div>
 </div>
+
+{% block pageScripts %}
+    <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+    <script src="/public/javascripts/accessible-autocomplete.min.js.map"></script>
+
+    <script>
+      accessibleAutocomplete.enhanceSelectElement({
+        defaultValue : '',
+        autoselect : true,
+        showAllValues: true,
+        selectElement: document.querySelector('#country')
+      });
+    </script>
+{% endblock %}
+
 {% endblock %}
