@@ -241,481 +241,265 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 						  <input class="govuk-input" id="keywords" name="keywords" type="text">			  
 						</div>
 
-						<div class="govuk-form-group">
-							<label class="govuk-label govuk-label--m" for="keywords">
-								Cohort
-							</label>
-							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
+						<div class="govuk-form-group govuk-!-margin-right-3">
+							<label class="govuk-label govuk-label--m" for="cohort">Cohort</label>
+							<select class="govuk-select" id="cohort" name="cohort">
+								<option value="select" selected>Select</option>
+								<option value="general-offence">General offence</option>
+								<option value="general-offence-ldc">General offence LDC</option>
+								<option value="sexual-offence">Sexual offence</option>
+								<option value="sexual-offence-ldc">Sexual offence LDC</option>
+							</select>
+						  </div>
+						<div class="govuk-form-group govuk-!-margin-right-3">
+							<label class="govuk-label govuk-label--m" for="sex">Sex</label>
+							<select class="govuk-select" id="sex" name="sex">
+								<option value="select" selected>Select</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="female">Any</option>
+							</select>
 						</div>
 
 						<div class="govuk-form-group">
 							<label class="govuk-label govuk-label--m" for="keywords">
 								PDU
 							</label>
-							<input class="govuk-input" id="keywords" name="keywords" type="text">	
+							<select class="govuk-select" id="country" name="country" aria-labelledby="countryLabel">
+								<option value="" selected disabled>Select an option</option>
+								<option value="Blackburn">Blackburn and Darwen</option>
+								<option value="Lancashire">Central Lancashire</option>
+								<option value="CheshireE">Cheshire East</option>
+								<option value="CheshireW">Cheshire West</option>
+								<option value="Cumbria">Cumbria</option>
+								<option value="ELancashire">East Lancashire</option>
+								<option value="HaltonandWarrington">Halton and Warrington</option>
+								<option value="LiverpoolN">LiverpoolNorth</option>
+								<option value="LiverpoolS">Liverpool South</option>
+								<option value="NWLancashire">North West Lancashire</option>
+								<option value="Sefton">Sefton</option>
+								<option value="Wirra">Wirra</option>
+	  
+								<option value="Bolton">Bolton</option>
+								<option value="BuryRochdale">Bury and Rochdale</option>
+								<option value="ManchesterN">Manchester North</option>
+								<option value="ManchesterS">Manchester South</option>
+								<option value="Oldham">Oldham</option>
+								<option value="Salford">Salford</option>
+								<option value="Stockport">Stockport and Trafford</option>
+								<option value="Tameside">Tameside</option>
+								<option value="Wigan">Wigan</option>
+	  
+								<option value="Barnsley">Barnsley and Rotherham</option>
+								<option value="Bradford and Calderdale">Bradford and Calderdale</option>
+								<option value="Doncaster">Doncaster</option>
+								<option value="Hull">Hull and East Riding</option>
+								<option value="Leeds">Leeds</option>
+								<option value="North and North East Lincs">North and North East Lincs</option>
+								<option value="NYorkshire">North Yorkshire</option>
+								<option value="Stockport">Stockport and Trafford</option>
+								<option value="Sheffield">Sheffield</option>
+								<option value="Wakefield">Wakefield</option>
+								<option value="York">York</option>
+	  
+								<option value="Durham">County Durham and Darlington</option>
+								<option value="Gateshead and South Tyneside">Gateshead and South Tyneside</option>
+								<option value="Newcastle Upon Tyne">Newcastle Upon Tyne</option>
+								<option value="North Tyneside and Northumberland">North Tyneside and Northumberland</option>
+								<option value="Redcar, Cleveland and Middlesbrough">Redcar, Cleveland and Middlesbrough</option>
+								<option value="Stockton and Hartlepool">Stockton and Hartlepool</option>
+								<option value="Sunderland">Sunderland</option>
+	  
+								<option value="Barking and Dagenham">Barking and Dagenham and Havering</option>
+								<option value="Brent">Brent</option>
+								<option value="Camden">Camden, Islington</option>
+								<option value="Croydon">Croydon</option>
+								<option value="Ealing and Hillingdon">Ealing and Hillingdon</option>
+								<option value="Enfield and Haringey">Enfield and Haringey</option>
+								<option value="Greenwich and Bexley">Greenwich and Bexley</option>
+								<option value="Hackney and City">Hackney and City</option>
+								<option value="Hammersmith">Hammersmith, Fulham, Kensington, Chelsea and Westminster</option>
+								<option value="Harrow and Barnet">Harrow and Barnet</option>
+								<option value="Ealing and Hillingdon">Kingston, Richmond and Hounslow</option>
+								<option value="Enfield and Haringey">Lambeth</option>
+								<option value="Greenwich and Bexley">Newham</option>
+								<option value="Redbridge and Waltham Forest">Redbridge and Waltham Forest</option>
+								<option value="Enfield and Haringey">Southwark</option>
+								<option value="Greenwich and Bexley">Tower Hamlets</option>
+								<option value="Greenwich and Bexley">Wandsworth, Merton and
+								  Sutton</option>
+	  
+								  <option value="Birmingham Central and South">Birmingham Central and South</option>
+								  <option value="Birmingham North, East and
+								  Solihull">Birmingham North, East and
+									Solihull</option>
+								  <option value="Coventry">Coventry</option>
+								  <option value="Dudley">Dudley and Sandwell</option>
+								  <option value="Herefordshire, Shropshire
+								  and Telford">Herefordshire, Shropshire
+								  and Telford</option>
+								  <option value="Staffordshire and Stoke">Staffordshire and Stoke</option>
+								  <option value="Walsall and Wolverhampton">Walsall and Wolverhampton</option>
+								  <option value="Warwickshire">Warwickshire</option>
+								  <option value="Worcestershire">Worcestershire</option>
+								  <option value="Derby City">Derby City</option>
+								  <option value="Derbyshire">Derbyshire</option>
+								  <option value="Leicester, Leicestershire and
+								  Rutland">Leicester, Leicestershire and
+									Rutland</option>
+								  <option value="Lincolnshire East and West">Lincolnshire East and West</option>
+								  <option value="Nottingham City">Nottingham City</option>
+								  <option value="Nottinghamshire">Nottinghamshire</option>
+	  
+								  <option value="Bedfordshire">Bedfordshire</option>
+								  <option value="Cambridgeshire and
+								  Peterborough">Cambridgeshire and
+									Peterborough</option>
+								  <option value="Essex North">Essex North</option>
+								  <option value="Essex South">Essex South</option>
+								  <option value="Hertfordshire">Hertfordshire</option>
+								  <option value="Norfolk">Norfolk</option>
+								  <option value="Northamptonshire">Northamptonshire</option>
+								  <option value="Suffolk">Suffolk</option>
+	  
+								  <option value="Brighton and East Sussex">Brighton and East Sussex</option>
+								  <option value="East Kent">East Kent</option>
+								  <option value="Surrey">Surrey</option>
+								  <option value="West Kent">West Kent</option>
+								  <option value="West Sussex">West Sussex</option>
+	  
+								<option value="Bath and North Somerset">Bath and North Somerset</option>
+								<option value="Bristol and South
+								Gloucestershire">Bristol and South
+								  Gloucestershire</option>
+								<option value="Cornwall and Isles of Scilly">Cornwall and Isles of Scilly</option>
+								<option value="Devon and Torbay">Devon and Torbay</option>
+								<option value="Dorset">Dorset</option>
+								<option value="Gloucestershire">Gloucestershire</option>
+								<option value="Plymouth">Plymouth</option>
+								<option value="Somerset">Somerset</option>
+								<option value="Buckinghamshire and Milton
+								Keynes">Buckinghamshire and Milton
+								  Keynes</option>
+								<option value="East Berkshire">East Berkshire</option>
+								<option value="Hampshire North and East">Hampshire North and East</option>
+								<option value="Oxfordshire">Oxfordshire</option>
+								<option value="Portsmouth and Isle of Wight">Portsmouth and Isle of Wight</option>
+								<option value="Southampton, Eastleigh and
+								New Forest">Southampton, Eastleigh and
+								  New Forest</option>
+								<option value="West Berkshire">West Berkshire</option>
+	  
+								<option value="Cardiff and Vale">Cardiff and Vale</option>
+								<option value="Cwm Taf Morgannwg">Cwm Taf Morgannwg</option>
+								<option value="Dyfed Powys">Dyfed Powys</option>
+								<option value="Gwent">Gwent</option>
+								<option value="North Wales">North Wales</option>
+								<option value="Swansea, Neath PortTalbot">Swansea, Neath PortTalbot</option>
+	  
+							</select>
+						</div>
+						<div class="govuk-form-group">
 							<fieldset class="govuk-fieldset pdu-waitlist__filters">
-							<div class="govuk-checkboxes" data-module="govuk-checkboxes" style="padding-top: 10px;">
+							<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+								<div class="govuk-checkboxes">
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids" name="pcc-region-ids[]" type="checkbox" value="avon-and-somerset">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids">
-								Avon &amp; Somerset
-								</label>                 
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-1" name="pcc-region-ids[]" type="checkbox" value="county-durham-and-darlington">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-1">County Durham and Darlington</label>
 									</div>
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-2" name="pcc-region-ids[]" type="checkbox" value="bedfordshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-2">
-								Bedfordshire
-								</label>        
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-2" name="pcc-region-ids[]" type="checkbox" value="gateshead-and-south-tyneside">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-2">Gateshead and South Tyneside</label>
 									</div>
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-3" name="pcc-region-ids[]" type="checkbox" value="cambridgeshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-3">
-								Cambridgeshire
-								</label>
-									
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-3" name="pcc-region-ids[]" type="checkbox" value="newcastle-upon-tyne">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-3">Newcastle Upon Tyne</label>
 									</div>
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-4" name="pcc-region-ids[]" type="checkbox" value="cheshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-4">
-								Cheshire
-								</label>
-									
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-4" name="pcc-region-ids[]" type="checkbox" value="north-tyneside-and-northumberland">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-4">North Tyneside and Northumberland</label>
 									</div>
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-5" name="pcc-region-ids[]" type="checkbox" value="cleveland">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-5">
-								Cleveland
-								</label>
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-5" name="pcc-region-ids[]" type="checkbox" value="redcar-cleveland-and-middlesbrough">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-5">Redcar, Cleveland and Middlesbrough</label>
 									</div>
 									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-6" name="pcc-region-ids[]" type="checkbox" value="cumbria">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-6">
-								Cumbria
-								</label>
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-6" name="pcc-region-ids[]" type="checkbox" value="stockton-and-hartlepool">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-6">Stockton and Hartlepool</label>
 									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-7" name="pcc-region-ids[]" type="checkbox" value="derbyshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-7">
-								Derbyshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-8" name="pcc-region-ids[]" type="checkbox" value="devon-and-cornwall">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-8">
-								Devon &amp; Cornwall
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-9" name="pcc-region-ids[]" type="checkbox" value="dorset">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-9">
-								Dorset
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-10" name="pcc-region-ids[]" type="checkbox" value="durham">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-10">
-								Durham
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-11" name="pcc-region-ids[]" type="checkbox" value="dyfed-powys">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-11">
-								Dyfed-Powys
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-12" name="pcc-region-ids[]" type="checkbox" value="essex">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-12">
-								Essex
-								</label>
-									
-									</div> 
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-13" name="pcc-region-ids[]" type="checkbox" value="gloucestershire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-13">
-								Gloucestershire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-14" name="pcc-region-ids[]" type="checkbox" value="greater-manchester">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-14">
-								Greater Manchester
-								</label>
-									
-									</div>
-									
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-15" name="pcc-region-ids[]" type="checkbox" value="gwent">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-15">
-								Gwent
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-16" name="pcc-region-ids[]" type="checkbox" value="hampshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-16">
-								Hampshire
-								</label>
-									
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-17" name="pcc-region-ids[]" type="checkbox" value="hertfordshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-17">
-								Hertfordshire
-								</label>
-									
-									</div>
-									
-								
-								
-
-								
-								
-									
-									
-									
-									
-									
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-18" name="pcc-region-ids[]" type="checkbox" value="humberside">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-18">
-								Humberside
-								</label>
-									
-									</div>	
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-19" name="pcc-region-ids[]" type="checkbox" value="kent">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-19">
-								Kent
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-20" name="pcc-region-ids[]" type="checkbox" value="lancashire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-20">
-								Lancashire
-								</label>
-									
-							</div>
-									
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-21" name="pcc-region-ids[]" type="checkbox" value="leicestershire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-21">
-								Leicestershire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-22" name="pcc-region-ids[]" type="checkbox" value="lincolnshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-22">
-								Lincolnshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-23" name="pcc-region-ids[]" type="checkbox" value="metropolitan">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-23">
-								London (Metropolitan Police)
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-24" name="pcc-region-ids[]" type="checkbox" value="merseyside">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-24">
-								Merseyside
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-25" name="pcc-region-ids[]" type="checkbox" value="norfolk">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-25">
-								Norfolk
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-26" name="pcc-region-ids[]" type="checkbox" value="north-wales">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-26">
-								North Wales
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-27" name="pcc-region-ids[]" type="checkbox" value="north-yorkshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-27">
-								North Yorkshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-28" name="pcc-region-ids[]" type="checkbox" value="northamptonshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-28">
-								Northamptonshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-29" name="pcc-region-ids[]" type="checkbox" value="northumbria">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-29">
-								Northumbria
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-30" name="pcc-region-ids[]" type="checkbox" value="nottinghamshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-30">
-								Nottinghamshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-31" name="pcc-region-ids[]" type="checkbox" value="south-wales">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-31">
-								South Wales
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-32" name="pcc-region-ids[]" type="checkbox" value="south-yorkshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-32">
-								South Yorkshire
-								</label>
-									
-									</div>
-									
-									
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-33" name="pcc-region-ids[]" type="checkbox" value="staffordshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-33">
-								Staffordshire
-								</label>
-									
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-34" name="pcc-region-ids[]" type="checkbox" value="suffolk">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-34">
-								Suffolk
-								</label>
-									</div>
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-35" name="pcc-region-ids[]" type="checkbox" value="surrey">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-35">
-								Surrey
-								</label>
-									
-									</div>
-									
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-36" name="pcc-region-ids[]" type="checkbox" value="sussex">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-36">
-										Sussex
-									</label>               
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-37" name="pcc-region-ids[]" type="checkbox" value="thames-valley">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-37">
-										Thames Valley
-									</label>         
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-38" name="pcc-region-ids[]" type="checkbox" value="warwickshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-38">
-										Warwickshire
-									</label>
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-39" name="pcc-region-ids[]" type="checkbox" value="west-mercia">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-39">
-										West Mercia
-									</label> 
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-40" name="pcc-region-ids[]" type="checkbox" value="west-midlands">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-40">
-										West Midlands
-									</label>          
-								</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-41" name="pcc-region-ids[]" type="checkbox" value="west-yorkshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-41">
-										West Yorkshire
-									</label> 
-									</div>
-
-									<div class="govuk-checkboxes__item">
-									<input class="govuk-checkboxes__input" id="pcc-region-ids-42" name="pcc-region-ids[]" type="checkbox" value="wiltshire">
-									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-42">
-										Wiltshire
-									</label>             
-									</div>
+								<div>							  
 							</div>
 							</fieldset>  
 						</div>
-
-
-						<div class="govuk-form-group">
-							<label class="govuk-label" for="contact-by-email">
-							  <div class="govuk-form-group">
-								<h1 class="govuk-label-wrapper">
-								  <label class="govuk-label govuk-label--m" for="country" id="countryLabel" style="font-weight:normal">
-									Probation Delivery Unit (PDU)
-								  </label>
-								</h1>
-								<select class="govuk-select" id="country" name="country" aria-labelledby="countryLabel">
-								  <option value="" selected disabled>Select an option</option>
-								  <option value="Blackburn">Blackburn and Darwen</option>
-								  <option value="Lancashire">Central Lancashire</option>
-								  <option value="CheshireE">Cheshire East</option>
-								  <option value="CheshireW">Cheshire West</option>
-								  <option value="Cumbria">Cumbria</option>
-								  <option value="ELancashire">East Lancashire</option>
-								  <option value="HaltonandWarrington">Halton and Warrington</option>
-								  <option value="LiverpoolN">LiverpoolNorth</option>
-								  <option value="LiverpoolS">Liverpool South</option>
-								  <option value="NWLancashire">North West Lancashire</option>
-								  <option value="Sefton">Sefton</option>
-								  <option value="Wirra">Wirra</option>
-		
-								  <option value="Bolton">Bolton</option>
-								  <option value="BuryRochdale">Bury and Rochdale</option>
-								  <option value="ManchesterN">Manchester North</option>
-								  <option value="ManchesterS">Manchester South</option>
-								  <option value="Oldham">Oldham</option>
-								  <option value="Salford">Salford</option>
-								  <option value="Stockport">Stockport and Trafford</option>
-								  <option value="Tameside">Tameside</option>
-								  <option value="Wigan">Wigan</option>
-		
-								  <option value="Barnsley">Barnsley and Rotherham</option>
-								  <option value="Bradford and Calderdale">Bradford and Calderdale</option>
-								  <option value="Doncaster">Doncaster</option>
-								  <option value="Hull">Hull and East Riding</option>
-								  <option value="Leeds">Leeds</option>
-								  <option value="North and North East Lincs">North and North East Lincs</option>
-								  <option value="NYorkshire">North Yorkshire</option>
-								  <option value="Stockport">Stockport and Trafford</option>
-								  <option value="Sheffield">Sheffield</option>
-								  <option value="Wakefield">Wakefield</option>
-								  <option value="York">York</option>
-		
-								  <option value="Durham">County Durham and Darlington</option>
-								  <option value="Gateshead and South Tyneside">Gateshead and South Tyneside</option>
-								  <option value="Newcastle Upon Tyne">Newcastle Upon Tyne</option>
-								  <option value="North Tyneside and Northumberland">North Tyneside and Northumberland</option>
-								  <option value="Redcar, Cleveland and Middlesbrough">Redcar, Cleveland and Middlesbrough</option>
-								  <option value="Stockton and Hartlepool">Stockton and Hartlepool</option>
-								  <option value="Sunderland">Sunderland</option>
-		
-								  <option value="Barking and Dagenham">Barking and Dagenham and Havering</option>
-								  <option value="Brent">Brent</option>
-								  <option value="Camden">Camden, Islington</option>
-								  <option value="Croydon">Croydon</option>
-								  <option value="Ealing and Hillingdon">Ealing and Hillingdon</option>
-								  <option value="Enfield and Haringey">Enfield and Haringey</option>
-								  <option value="Greenwich and Bexley">Greenwich and Bexley</option>
-								  <option value="Hackney and City">Hackney and City</option>
-								  <option value="Hammersmith">Hammersmith, Fulham, Kensington, Chelsea and Westminster</option>
-								  <option value="Harrow and Barnet">Harrow and Barnet</option>
-								  <option value="Ealing and Hillingdon">Kingston, Richmond and Hounslow</option>
-								  <option value="Enfield and Haringey">Lambeth</option>
-								  <option value="Greenwich and Bexley">Newham</option>
-								  <option value="Redbridge and Waltham Forest">Redbridge and Waltham Forest</option>
-								  <option value="Enfield and Haringey">Southwark</option>
-								  <option value="Greenwich and Bexley">Tower Hamlets</option>
-								  <option value="Greenwich and Bexley">Wandsworth, Merton and
-									Sutton</option>
-		
-									<option value="Birmingham Central and South">Birmingham Central and South</option>
-									<option value="Birmingham North, East and
-									Solihull">Birmingham North, East and
-									  Solihull</option>
-									<option value="Coventry">Coventry</option>
-									<option value="Dudley">Dudley and Sandwell</option>
-									<option value="Herefordshire, Shropshire
-									and Telford">Herefordshire, Shropshire
-									and Telford</option>
-									<option value="Staffordshire and Stoke">Staffordshire and Stoke</option>
-									<option value="Walsall and Wolverhampton">Walsall and Wolverhampton</option>
-									<option value="Warwickshire">Warwickshire</option>
-									<option value="Worcestershire">Worcestershire</option>
-									<option value="Derby City">Derby City</option>
-									<option value="Derbyshire">Derbyshire</option>
-									<option value="Leicester, Leicestershire and
-									Rutland">Leicester, Leicestershire and
-									  Rutland</option>
-									<option value="Lincolnshire East and West">Lincolnshire East and West</option>
-									<option value="Nottingham City">Nottingham City</option>
-									<option value="Nottinghamshire">Nottinghamshire</option>
-		
-									<option value="Bedfordshire">Bedfordshire</option>
-									<option value="Cambridgeshire and
-									Peterborough">Cambridgeshire and
-									  Peterborough</option>
-									<option value="Essex North">Essex North</option>
-									<option value="Essex South">Essex South</option>
-									<option value="Hertfordshire">Hertfordshire</option>
-									<option value="Norfolk">Norfolk</option>
-									<option value="Northamptonshire">Northamptonshire</option>
-									<option value="Suffolk">Suffolk</option>
-		
-									<option value="Brighton and East Sussex">Brighton and East Sussex</option>
-									<option value="East Kent">East Kent</option>
-									<option value="Surrey">Surrey</option>
-									<option value="West Kent">West Kent</option>
-									<option value="West Sussex">West Sussex</option>
-		
-								  <option value="Bath and North Somerset">Bath and North Somerset</option>
-								  <option value="Bristol and South
-								  Gloucestershire">Bristol and South
-									Gloucestershire</option>
-								  <option value="Cornwall and Isles of Scilly">Cornwall and Isles of Scilly</option>
-								  <option value="Devon and Torbay">Devon and Torbay</option>
-								  <option value="Dorset">Dorset</option>
-								  <option value="Gloucestershire">Gloucestershire</option>
-								  <option value="Plymouth">Plymouth</option>
-								  <option value="Somerset">Somerset</option>
-								  <option value="Buckinghamshire and Milton
-								  Keynes">Buckinghamshire and Milton
-									Keynes</option>
-								  <option value="East Berkshire">East Berkshire</option>
-								  <option value="Hampshire North and East">Hampshire North and East</option>
-								  <option value="Oxfordshire">Oxfordshire</option>
-								  <option value="Portsmouth and Isle of Wight">Portsmouth and Isle of Wight</option>
-								  <option value="Southampton, Eastleigh and
-								  New Forest">Southampton, Eastleigh and
-									New Forest</option>
-								  <option value="West Berkshire">West Berkshire</option>
-		
-								  <option value="Cardiff and Vale">Cardiff and Vale</option>
-								  <option value="Cwm Taf Morgannwg">Cwm Taf Morgannwg</option>
-								  <option value="Dyfed Powys">Dyfed Powys</option>
-								  <option value="Gwent">Gwent</option>
-								  <option value="North Wales">North Wales</option>
-								  <option value="Swansea, Neath PortTalbot">Swansea, Neath PortTalbot</option>
-		
-								</select>
-							  </div>
-							</label>
-						  </div>
 
 						<div class="govuk-form-group">
 							<label class="govuk-label govuk-label--m" for="keywords">
 								Reporting team
 							</label>
-							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
-						</div>			  
+							<select class="govuk-select" id="reporting-team" name="reporting-team" aria-labelledby="reporting-teamLabel">
+								<option value="" selected disabled>Select an option</option>
+								<option value="CDDarlington">County Durham and Darlington</option>
+								<option value="Darlington1">Darlington 1</option>
+								<option value="Darlington2">Darlington 2</option>
+								<option value="DDIOM">Durham & Darlington IOM</option>
+								<option value="NDurham1">North Durham 1</option>
+								<option value="NDurham2">North Durham 2</option>
+								<option value="Peterlee1">Peterlee 1</option>
+								<option value="Peterlee2">Peterlee 2</option>
+								<option value="SDurham1">South Durham 1</option>
+								<option value="SDurham2">South Durham 1</option>
+							</select>
+						</div>
+						<div class="govuk-form-group">
+							<fieldset class="govuk-fieldset reporting-team-waitlist__filters">
+							<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+								<div class="govuk-checkboxes">
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-1" name="pcc-region-ids[]" type="checkbox" value="county-durham-and-darlington">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-1">County Durham and Darlington</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-2" name="pcc-region-ids[]" type="checkbox" value="darlington-1">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-2">Darlington 1</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-3" name="pcc-region-ids[]" type="checkbox" value="darlington-2">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-3">Darlington 2</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-4" name="pcc-region-ids[]" type="checkbox" value="durham-and-darlington-iom">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-4">Durham &amp; Darlington IOM</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-5" name="pcc-region-ids[]" type="checkbox" value="north-durham-1">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-5">North Durham 1</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-6" name="pcc-region-ids[]" type="checkbox" value="north-durham-2">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-6">North Durham 2</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-7" name="pcc-region-ids[]" type="checkbox" value="peterlee-1">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-7">Peterlee 1</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-8" name="pcc-region-ids[]" type="checkbox" value="peterlee-2">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-8">Peterlee 2</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-9" name="pcc-region-ids[]" type="checkbox" value="south-durham-1">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-9">South Durham 1</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									  <input class="govuk-checkboxes__input" id="pcc-region-ids-10" name="pcc-region-ids[]" type="checkbox" value="south-durham-2">
+									  <label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-10">South Durham 2</label>
+									</div>
+								  </div>
+								  
+							</div>
+							</fieldset>  
+						</div>
+			  
 					  </div>				  
 					</div>
 				</div>
@@ -755,8 +539,8 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 								<td class="govuk-table__cell">Sexual offence<br /><span class="moj-badge moj-badge--bright-purple">LDC</span></td>
 								<td class="govuk-table__cell">Male</td>
 								<td class="govuk-table__cell">		County Durham and Darlington: North Durham 3</td>
-								</tr>
-								{% endif %}
+							</tr>
+							{% endif %}
 							
 							<tr class="govuk-table__row govuk-table__row--selected">
 								<td class="govuk-table__cell">
@@ -792,7 +576,6 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 								<td class="govuk-table__cell">Male</td>
 								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
 							</tr>
-							<!--extra-->
 							<tr class="govuk-table__row govuk-table__row--selected">
 								<td class="govuk-table__cell">
 									<div class="govuk-radios govuk-radios--small">
@@ -912,6 +695,161 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 								<td class="govuk-table__cell">Male</td>
 								<td class="govuk-table__cell">County Durham and Darlington: Darlington 1</td>
 							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-jackson-dan" value="Jackson, Dan" {{ checked("group-waitlist", "Jackson, Dan") }}">
+											<label class="govuk-label govuk-radios__label" for="group-jackson-dan">
+											<span class="govuk-visually-hidden">Select Jackson, Dan</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Jackson, Dan</a><br />Z234533</td>
+								<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+								<td class="govuk-table__cell">27</td>
+								<td class="govuk-table__cell">Sexual offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: North Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Deon Florence</a><br />P227326</td>
+								<td class="govuk-table__cell">19 May 2027<br />Order end date</td>
+								<td class="govuk-table__cell">60</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Anthony Clement</a><br />P689325</td>
+								<td class="govuk-table__cell">15 August 2025<br />Order end date</td>
+								<td class="govuk-table__cell">49</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 1</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Bilal Pitambar</a><br />D199983</td>
+								<td class="govuk-table__cell">11 June 2026<br />Order end date</td>
+								<td class="govuk-table__cell">37</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Mohsin Óscar Simon</a><br />T963851</td>
+								<td class="govuk-table__cell">10 June 2026<br />Order end date</td>
+								<td class="govuk-table__cell">25</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Harish Estevão</a><br />B552940</td>
+								<td class="govuk-table__cell">1 December 2026<br />Order end date</td>
+								<td class="govuk-table__cell">24</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 1</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Aziz Partha</a><br />R02468</td>
+								<td class="govuk-table__cell">29 April 2025<br />Order end date</td>
+								<td class="govuk-table__cell">41</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: South Durham 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Nao Ritsu Noriaki</a><br />P663891</td>
+								<td class="govuk-table__cell">11 September 2026<br />Order end date</td>
+								<td class="govuk-table__cell">38</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Peterlee 2</td>
+							</tr>
+							<tr class="govuk-table__row govuk-table__row--selected">
+								<td class="govuk-table__cell">
+									<div class="govuk-radios govuk-radios--small">
+										<div class="govuk-radios__item">
+											<input type="radio" class="govuk-radios__input" name="group-waitlist" id="group-fredric-roman" value="Fredric, Roman" {{ checked("group-waitlist", "Fredric, Roman") }}">
+											<label class="govuk-label govuk-radios__label" for="group-fredric-roman">
+											<span class="govuk-visually-hidden">Select Fredric, Roman</span>
+										</div>
+									</div>
+								</td>
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">Kō Kyō Kouki</a><br />T358035</td>
+								<td class="govuk-table__cell">3 March 2028<br />Order end date</td>
+								<td class="govuk-table__cell">74</td>
+								<td class="govuk-table__cell">General offence</td>
+								<td class="govuk-table__cell">Male</td>
+								<td class="govuk-table__cell">County Durham and Darlington: Darlington 1</td>
+							</tr>
+							
+
 		
 						</tbody>
 					</table>
@@ -937,7 +875,7 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 							<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> page</span></a>
 						  </li>
 						</ul>
-						<p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>60</b> results</p>
+						<p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>120</b> results</p>
 					</nav>
 				</form>
 			</div>
@@ -960,6 +898,12 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
         showAllValues: true,
         selectElement: document.querySelector('#country')
       });
+	  accessibleAutocomplete.enhanceSelectElement({
+        defaultValue : '',
+        autoselect : true,
+        showAllValues: true,
+        selectElement: document.querySelector('#reporting-team')
+      });  
     </script>
 {% endblock %}
 
