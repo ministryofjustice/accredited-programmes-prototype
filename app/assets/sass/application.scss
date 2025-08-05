@@ -1007,3 +1007,9 @@ th.moj-fixed-width-40 {
   visibility: hidden;
   display: none;
 }
+
+.pdu-waitlist__filters .govuk-form-group {
+  margin-bottom: 35px;
+  max-height: 450px;
+  overflow-y: auto;
+}

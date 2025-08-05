@@ -158,14 +158,14 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
-						<dd class="govuk-summary-list__value">6 September 2026</dd>
-					</div>
-					<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
-						<dt class="govuk-summary-list__key">End date</dt>
-						<dd class="govuk-summary-list__value">22 October 2026</dd>
-					</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
+					<dd class="govuk-summary-list__value">6 September 2026</dd>
+				</div>
+				<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
+					<dt class="govuk-summary-list__key">End date</dt>
+					<dd class="govuk-summary-list__value">22 October 2026</dd>
+				</div>
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">Time of sessions</dt>
 					<dd class="govuk-summary-list__value">
@@ -196,7 +196,7 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 		</nav>
 
 		<div class="govuk-grid-row">
-			<div class="govuk-grid-column-one-third">
+			<div class="govuk-grid-column-one-third pdu-waitlist__filters">
 				<div class="moj-filter" data-module="moj-filter">
 					<div class="moj-filter__header">
 					  <div class="moj-filter__header-title">
@@ -252,7 +252,316 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 							<label class="govuk-label govuk-label--m" for="keywords">
 								PDU
 							</label>
-							<input class="govuk-input" id="keywords" name="keywords" type="text">			  
+							<input class="govuk-input" id="keywords" name="keywords" type="text">	
+							<fieldset class="govuk-fieldset pdu-waitlist__filters">
+							<div class="govuk-checkboxes" data-module="govuk-checkboxes" style="padding-top: 10px;">
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids" name="pcc-region-ids[]" type="checkbox" value="avon-and-somerset">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids">
+								Avon &amp; Somerset
+								</label>                 
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-2" name="pcc-region-ids[]" type="checkbox" value="bedfordshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-2">
+								Bedfordshire
+								</label>        
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-3" name="pcc-region-ids[]" type="checkbox" value="cambridgeshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-3">
+								Cambridgeshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-4" name="pcc-region-ids[]" type="checkbox" value="cheshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-4">
+								Cheshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-5" name="pcc-region-ids[]" type="checkbox" value="cleveland">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-5">
+								Cleveland
+								</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-6" name="pcc-region-ids[]" type="checkbox" value="cumbria">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-6">
+								Cumbria
+								</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-7" name="pcc-region-ids[]" type="checkbox" value="derbyshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-7">
+								Derbyshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-8" name="pcc-region-ids[]" type="checkbox" value="devon-and-cornwall">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-8">
+								Devon &amp; Cornwall
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-9" name="pcc-region-ids[]" type="checkbox" value="dorset">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-9">
+								Dorset
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-10" name="pcc-region-ids[]" type="checkbox" value="durham">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-10">
+								Durham
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-11" name="pcc-region-ids[]" type="checkbox" value="dyfed-powys">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-11">
+								Dyfed-Powys
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-12" name="pcc-region-ids[]" type="checkbox" value="essex">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-12">
+								Essex
+								</label>
+									
+									</div> 
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-13" name="pcc-region-ids[]" type="checkbox" value="gloucestershire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-13">
+								Gloucestershire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-14" name="pcc-region-ids[]" type="checkbox" value="greater-manchester">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-14">
+								Greater Manchester
+								</label>
+									
+									</div>
+									
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-15" name="pcc-region-ids[]" type="checkbox" value="gwent">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-15">
+								Gwent
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-16" name="pcc-region-ids[]" type="checkbox" value="hampshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-16">
+								Hampshire
+								</label>
+									
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-17" name="pcc-region-ids[]" type="checkbox" value="hertfordshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-17">
+								Hertfordshire
+								</label>
+									
+									</div>
+									
+								
+								
+
+								
+								
+									
+									
+									
+									
+									
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-18" name="pcc-region-ids[]" type="checkbox" value="humberside">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-18">
+								Humberside
+								</label>
+									
+									</div>	
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-19" name="pcc-region-ids[]" type="checkbox" value="kent">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-19">
+								Kent
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-20" name="pcc-region-ids[]" type="checkbox" value="lancashire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-20">
+								Lancashire
+								</label>
+									
+							</div>
+									
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-21" name="pcc-region-ids[]" type="checkbox" value="leicestershire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-21">
+								Leicestershire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-22" name="pcc-region-ids[]" type="checkbox" value="lincolnshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-22">
+								Lincolnshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-23" name="pcc-region-ids[]" type="checkbox" value="metropolitan">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-23">
+								London (Metropolitan Police)
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-24" name="pcc-region-ids[]" type="checkbox" value="merseyside">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-24">
+								Merseyside
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-25" name="pcc-region-ids[]" type="checkbox" value="norfolk">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-25">
+								Norfolk
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-26" name="pcc-region-ids[]" type="checkbox" value="north-wales">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-26">
+								North Wales
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-27" name="pcc-region-ids[]" type="checkbox" value="north-yorkshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-27">
+								North Yorkshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-28" name="pcc-region-ids[]" type="checkbox" value="northamptonshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-28">
+								Northamptonshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-29" name="pcc-region-ids[]" type="checkbox" value="northumbria">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-29">
+								Northumbria
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-30" name="pcc-region-ids[]" type="checkbox" value="nottinghamshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-30">
+								Nottinghamshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-31" name="pcc-region-ids[]" type="checkbox" value="south-wales">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-31">
+								South Wales
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-32" name="pcc-region-ids[]" type="checkbox" value="south-yorkshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-32">
+								South Yorkshire
+								</label>
+									
+									</div>
+									
+									
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-33" name="pcc-region-ids[]" type="checkbox" value="staffordshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-33">
+								Staffordshire
+								</label>
+									
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-34" name="pcc-region-ids[]" type="checkbox" value="suffolk">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-34">
+								Suffolk
+								</label>
+									</div>
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-35" name="pcc-region-ids[]" type="checkbox" value="surrey">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-35">
+								Surrey
+								</label>
+									
+									</div>
+									
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-36" name="pcc-region-ids[]" type="checkbox" value="sussex">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-36">
+										Sussex
+									</label>               
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-37" name="pcc-region-ids[]" type="checkbox" value="thames-valley">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-37">
+										Thames Valley
+									</label>         
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-38" name="pcc-region-ids[]" type="checkbox" value="warwickshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-38">
+										Warwickshire
+									</label>
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-39" name="pcc-region-ids[]" type="checkbox" value="west-mercia">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-39">
+										West Mercia
+									</label> 
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-40" name="pcc-region-ids[]" type="checkbox" value="west-midlands">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-40">
+										West Midlands
+									</label>          
+								</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-41" name="pcc-region-ids[]" type="checkbox" value="west-yorkshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-41">
+										West Yorkshire
+									</label> 
+									</div>
+
+									<div class="govuk-checkboxes__item">
+									<input class="govuk-checkboxes__input" id="pcc-region-ids-42" name="pcc-region-ids[]" type="checkbox" value="wiltshire">
+									<label class="govuk-label govuk-checkboxes__label" for="pcc-region-ids-42">
+										Wiltshire
+									</label>             
+									</div>
+							</div>
+							</fieldset>  
 						</div>
 
 
@@ -636,6 +945,9 @@ BCNEW1 - {{ serviceName }} - GOV.UK Prototype Kit
 		
     </div>
 </div>
+
+<style>.autocomplete__wrapper{position:relative}.autocomplete__hint,.autocomplete__input{-webkit-appearance:none;appearance:none;border:2px solid #0b0c0c;border-radius:0;box-sizing:border-box;height:2.5rem;line-height:1.25;margin-bottom:0;width:100%}.autocomplete__input{background-color:transparent;position:relative}.autocomplete__hint{color:#505a5f;position:absolute}.autocomplete__input--default{padding:5px}.autocomplete__input--focused{box-shadow:inset 0 0 0 2px;outline:3px solid #fd0;outline-offset:0}.autocomplete__input--show-all-values{cursor:pointer;padding:5px 35px 5px 5px}.autocomplete__dropdown-arrow-down{display:inline-block;height:24px;position:absolute;right:8px;top:10px;width:24px;z-index:-1}.autocomplete__menu{background-color:#fff;border:2px solid #0b0c0c;border-top:0;color:#0b0c0c;margin:0;max-height:342px;overflow-x:hidden;padding:0;width:100%;width:calc(100% - 4px)}.autocomplete__menu--visible{display:block}.autocomplete__menu--hidden{display:none}.autocomplete__menu--overlay{box-shadow:0 2px 6px rgba(0,0,0,.257);left:0;position:absolute;top:100%;z-index:100}.autocomplete__menu--inline{position:relative}.autocomplete__option{border-bottom:1px solid #b1b4b6;border-left-width:0;border-right-width:0;border-top-width:1px;cursor:pointer;display:block;position:relative}.autocomplete__option>*{pointer-events:none}.autocomplete__option:first-of-type{border-top-width:0}.autocomplete__option:last-of-type{border-bottom-width:0}.autocomplete__option--odd{background-color:#f3f2f1}.autocomplete__option--focused,.autocomplete__option:hover{background-color:#1d70b8;border-color:#1d70b8;color:#fff;outline:none}@media (-ms-high-contrast:active),(forced-colors:active){.autocomplete__menu{border-color:FieldText}.autocomplete__option{background-color:Field;color:FieldText}.autocomplete__option--focused,.autocomplete__option:hover{background-color:Highlight;background-color:SelectedItem;border-color:SelectedItem;color:HighlightText;color:SelectedItemText;forced-color-adjust:none;outline-color:SelectedItemText}}.autocomplete__option--no-results{background-color:#f3f2f1;color:#505a5f;cursor:not-allowed}.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1rem;font-weight:400}.autocomplete__hint,.autocomplete__option{padding:5px}@media (min-width:641px){.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:1.1875rem;line-height:1.3157894737}}</style>
+
 
 {% block pageScripts %}
     <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
