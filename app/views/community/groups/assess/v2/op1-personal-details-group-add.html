@@ -106,33 +106,24 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="location">Location</a>
-		  		</li>s
+		  		</li>
 				<li class="moj-side-navigation__item moj-side-navigation__item--active">
 					<a href="group-allocation-notes" aria-current="location">Group allocation notes</a>
 		  		</li>
 			</ul>
 		</nav>
+		
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<div class="govuk-inset-text govuk-!-margin-top-0">This page shows information relevant to group composition.</div>
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				  <h3 class="govuk-summary-card__title">Preferred programme delivery locations</h3>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<p class="govuk-body">Added by Joe Bloggs on 10 August 2025 </p>			
-				</dl>
-
-				<p class="govuk-body">No group details added for Alex River</p>
-				<form action="preferred-location" method="post">
-					<input type="hidden" id="update-button" name="update-button" value="change location">
-					<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-						<button class="govuk-button" data-module="govuk-button" type="submit">Add notes</button>
-					</div>
-				</form>
-			</div>
-		 </div>
+		<h2 class="govuk-heading-m">Group allocation notes</h2>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Added by Joe Bloggs on 10 August 2025.</div>
+		  <p class="govuk-body">No group details added for Alex River</p>
+		  <form action="preferred-location" method="post">
+			  <input type="hidden" id="update-button" name="update-button" value="change location">
+			  <div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
+				  <button class="govuk-button" data-module="govuk-button" type="submit">Add notes</button>
+			  </div>
+		  </form>
 		</div>
 	</div>
 </div>
