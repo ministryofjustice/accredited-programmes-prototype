@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK Prototype Kit
+Does the person maintain their innocence? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-	{% include "includes/community/v3/key-details-pt.html" %}
+	{% include "includes/community/v3/key-details-pt-adrian.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -45,29 +45,27 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 			  </div>
 			</fieldset>
 		  </div>
-		  <div class="govuk-form-group">
-			<h2 class="govuk-label-wrapper">
-			  <label class="govuk-label govuk-label--l" for="account-number">
+
+		  <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+			 <label class="govuk-label govuk-label--l" for="motivation">
 				Is the person motivated to participate in an Accredited Programme? 
-			  </label>
-			</h2>
-			<div id="account-number-hint" class="govuk-hint">
+			</label>
+			<div id="motivation" class="govuk-hint">
 				<p class="govuk-body">This includes:</p> 
 				<ul class="govuk-list govuk-list--bullet">
 					<li>engaging with the assessment process</a></li>
 					<li>being motivated to address their thinking or behaviour, even if they maintain their innocence</li>
 				</ul>
 			</div>
-			<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
-				<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
-		  </div>
-		  <div class="govuk-form-group">
-			<h2 class="govuk-label-wrapper">
-			  <label class="govuk-label govuk-label--l" for="account-number">
+			<textarea class="govuk-textarea govuk-js-character-count" id="motivation" name="motivation" rows="5" aria-describedby="locations-cannot-attend-hint"></textarea>
+			<div id="motivation-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+		</div>
+
+		<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+			<label class="govuk-label govuk-label--l" for="account-number">
 				Other considerations (optional)
-			  </label>
-			</h2>
-			<div id="account-number-hint" class="govuk-hint">
+			</label>
+			<div id="locations-cannot-attend-hint" class="govuk-hint">
 				<p class="govuk-body">Add other information that could help when selecting people for groups. This might include information to help create a diverse group, such as:</p> 
 				<ul class="govuk-list govuk-list--bullet">
 					<li>relevant demographic information not shown in <a href="#">Personal details</a></li>
@@ -75,13 +73,13 @@ Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK 
 					<li>culture and background </li>
 				</ul>
 			</div>
-			<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
-				<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
-		  </div>
+			<textarea class="govuk-textarea govuk-js-character-count" id="locations-cannot-attend" name="locations-cannot-attend" rows="5" aria-describedby="locations-cannot-attend-hint"></textarea>
+			<div id="locations-cannot-attend-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+		</div>
 		
 		<div class="govuk-button-group govuk-!-margin-top-7">
 			<button class="govuk-button" data-module="govuk-button">Continue</button>
-			<a class="govuk-link" href="location">Add notes</a>
+			<a class="govuk-link" href="location">Cancel</a>
 		</div>
 		</form>
 	</div>

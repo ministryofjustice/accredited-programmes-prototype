@@ -5,7 +5,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/v3/key-details-pt.html" %}
+	{% include "/includes/community/v3/key-details-pt-adrian.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to groups</a>
+				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to group details</a>
 			</div>
  		</div>
 	</div>
@@ -116,14 +116,16 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	</div>
 	<div class="govuk-grid-column-three-quarters">
 		<h2 class="govuk-heading-m">Group allocation notes</h2>
-		<div class="govuk-inset-text govuk-!-margin-top-0">Added by Joe Bloggs on 10 August 2025.</div>
-		  <p class="govuk-body">No group details added for Alex River</p>
-		  <form action="preferred-location" method="post">
-			  <input type="hidden" id="update-button" name="update-button" value="change location">
-			  <div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-				  <button class="govuk-button" data-module="govuk-button" type="submit">Add notes</button>
-			  </div>
-		  </form>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Added by Michael Freeman on 17 August 2025.</div>
+		  <p class="govuk-body">No group details added for Adrian Poole.</p>
+		  	<form action="group-allocation-notes" method="post">
+				<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
+					<button type="submit" class="govuk-button" data-module="govuk-button">
+						Add notes
+					</button>
+					<a class="govuk-link" href="allocate-bc-group-1">Back to group details</a>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

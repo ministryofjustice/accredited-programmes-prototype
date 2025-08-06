@@ -5,7 +5,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/v3/key-details-pt.html" %}
+	{% include "/includes/community/v3/key-details-pt-adrian.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to groups</a>
+				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to group details</a>
 			</div>
  		</div>
 	</div>
@@ -122,7 +122,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			</div>
 			<div class="govuk-summary-card__content">
 				<dl class="govuk-summary-list">
-					<p class="govuk-body">Added by Joe Bloggs on 10 August 2025 </p>
+					<p class="govuk-body">Added by Michaele Freeman on 17 August 2025 </p>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Maintain innocence</dt>
 						<dd class="govuk-summary-list__value">
@@ -143,11 +143,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						</dd>
 					</div>
 				</dl>
-				<form action="preferred-location" method="post">
-					<input type="hidden" id="update-button" name="update-button" value="change location">
+				<form action="group-allocation-notes" method="post">
 					<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-						<button class="govuk-button" data-module="govuk-button" type="submit">Update notes</button>
-					</div>
+						<button type="submit" class="govuk-button" data-module="govuk-button">
+							Update notes
+						</button>
+						<a class="govuk-link" href="allocate-bc-group-1">Back to group details</a>
+				  </div>
 				</form>
 			</div>
 		 </div>
