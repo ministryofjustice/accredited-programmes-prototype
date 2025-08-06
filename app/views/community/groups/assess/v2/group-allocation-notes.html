@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="#" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					Does the person maintain their innocence?
+				</h1>
+			  </legend>
+			 <!-- <div id="changedName-hint" class="govuk-hint">
+				This includes changing your last name or spelling your name differently
+			  </div>-->
+			  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+				  <label class="govuk-label govuk-radios__label" for="changedName">
+					Yes
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+				  <label class="govuk-label govuk-radios__label" for="changedName-2">
+					No
+				  </label>
+				</div>
+			  </div>
+			</fieldset>
+		  </div>
+		  <div class="govuk-form-group">
+			<h2 class="govuk-label-wrapper">
+			  <label class="govuk-label govuk-label--l" for="account-number">
+				Is the person motivated to participate in an Accredited Programme? 
+			  </label>
+			</h2>
+			<div id="account-number-hint" class="govuk-hint">
+				<p class="govuk-body">This includes:</p> 
+				<ul class="govuk-list govuk-list--bullet">
+					<li>engaging with the assessment process</a></li>
+					<li>being motivated to address their thinking or behaviour, even if they maintain their innocence</li>
+				</ul>
+			</div>
+			<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
+				<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+		  </div>
+		  <div class="govuk-form-group">
+			<h2 class="govuk-label-wrapper">
+			  <label class="govuk-label govuk-label--l" for="account-number">
+				Other considerations (optional)
+			  </label>
+			</h2>
+			<div id="account-number-hint" class="govuk-hint">
+				<p class="govuk-body">Add other information that could help when selecting people for groups. This might include information to help create a diverse group, such as:</p> 
+				<ul class="govuk-list govuk-list--bullet">
+					<li>relevant demographic information not shown in <a href="#">Personal details</a></li>
+					<li>neurodivergence </li>
+					<li>culture and background </li>
+				</ul>
+			</div>
+			<textarea class="govuk-textarea govuk-js-character-count" id="availability-details" name="availability-details" rows="5" aria-describedby="availability-details-info"></textarea>
+				<div id="availability-details-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+		  </div>
+		
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			<a class="govuk-link" href="location">Add notes</a>
+		</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "/includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-6 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<h1 class="govuk-heading-l">Placeholder</h1>
+			</div>
+			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
+				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to groups</a>
+			</div>
+ 		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+				  <a class="moj-sub-navigation__link" href="op3-personal-details">Personal details [tbc]</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="op3-personal-details-group-add">Group allocation notes [tbc]</a>
+				</li>
+		  	</ul>
+		</nav>
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<h2 class="govuk-heading-m">Group allocation notes</h2>
+				<p class="govuk-body govuk-!-margin-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a hendrerit erat, ac convallis orci.</p>
+			</div>
+		</div>
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="availability">Availability</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="location">Location</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="group-allocation-notes" aria-current="location">Group allocation notes</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<div class="govuk-inset-text govuk-!-margin-top-0">This page shows information relevant to group composition.</div>
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h3 class="govuk-summary-card__title">Group allocation notes</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<p class="govuk-body">Added by Joe Bloggs on 10 August 2025 </p>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Maintain innocence</dt>
+						<dd class="govuk-summary-list__value">
+							<p class="govuk-body">No information added</p>
+						</dd>
+						
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Motivation to participate in an Accredited Programme</dt>
+						<dd class="govuk-summary-list__value">
+							<p class="govuk-body">No information added</p>
+						</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Other considerations</dt>
+						<dd class="govuk-summary-list__value">
+							<p class="govuk-body">No information added</p>
+						</dd>
+					</div>
+				</dl>
+				<form action="preferred-location" method="post">
+					<input type="hidden" id="update-button" name="update-button" value="change location">
+					<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
+						<button class="govuk-button" data-module="govuk-button" type="submit">Add notes</button>
+					</div>
+				</form>
+			</div>
+		 </div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
