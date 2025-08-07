@@ -62,6 +62,17 @@ Does the person maintain their innocence? - {{ serviceName }} - GOV.UK Prototype
 		</div>
 
 		<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
+			<label class="govuk-label govuk-label--l" for="other-people">
+				Are there other people on probation who the person should not attend a group with? 
+		   </label>
+		   <div id="other-people" class="govuk-hint">
+			Include any non-associations and other relevant personal relationships, such as co-defendants or gang affiliations. 
+		   </div>
+		   <textarea class="govuk-textarea govuk-js-character-count" id="other-people" name="other-people" rows="5" aria-describedby="locations-cannot-attend-hint"></textarea>
+		   <div id="other-people-info" class="govuk-hint govuk-character-count__message">You can enter up to 2000 characters</div>
+	   </div>
+
+		<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
 			<label class="govuk-label govuk-label--l" for="account-number">
 				Other considerations (optional)
 			</label>
