@@ -81,6 +81,10 @@ BCCDD1 - {{ serviceName }} - GOV.UK Prototype Kit
 						<dd class="govuk-summary-list__value">County Durham: Newton Aycliffe Probation Office</dd>
 					</div>
 					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Treatment Manager</dt>
+						<dd class="govuk-summary-list__value">John Smith</dd>
+					</div>
+					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Facilitators</dt>
 						<dd class="govuk-summary-list__value">John Smith, Berta Tonka, Hauwa'u Tshepo</dd>
 					</div>
@@ -162,7 +166,7 @@ BCCDD1 - {{ serviceName }} - GOV.UK Prototype Kit
 				<div class="moj-alert__action">
 				  <button class="moj-alert__dismiss" hidden>Dismiss</button>
 				</div>
-			  </div>
+			</div>
 
 		<div class="govuk-grid-column-two-thirds">
 			<table class="govuk-table" data-module="moj-sortable-table">
@@ -176,19 +180,6 @@ BCCDD1 - {{ serviceName }} - GOV.UK Prototype Kit
 			<tbody class="govuk-table__body">
 				
 				{% if data['group-waitlist'] == "Poole, Adrian" %}	
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">
-						<div class="govuk-radios govuk-radios--small">
-							<div class="govuk-radios__item">
-								<input type="radio" class="govuk-radios__input" name="group-allocate" id="group-allocate-poole" value="Poole, Adrian" {{ checked("group-allocate", "Poole, Adrian") }}>
-								<label class="govuk-label govuk-radios__label" for="group-allocate-poole">
-								<span class="govuk-visually-hidden">Select Poole, Adrian</span>
-							</div>
-						</div>
-					</td>
-					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
-					<td class="govuk-table__cell">2 Jun 2026<br />Order end date</td>
-				</tr>
 				
 				{% elseif data['group-waitlist'] == "Jackson, Dan" %}	
 				<tr class="govuk-table__row">
