@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Which cohort should Alex River be in?</h1>
+
+		<div class="govuk-inset-text">
+			<p class="govuk-body govuk-!-margin-bottom-0">Alex River’s current cohort:</p>
+			<p class="govuk-body govuk-!-font-weight-bold">Sexual offence</p>
+		</div>
+
+		<form action="change-cohort-post" method="post">
+			<div class="govuk-form-group">
+
+				{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+				{{ govukRadios({
+				name: "choose-cohort",
+				fieldset: {
+					legend: {
+					text: "Select Alex’s new cohort",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},
+				items: [
+					{
+					value: "general-offence",
+					text: "General offence"
+					},
+					{
+					value: "sexual-offence",
+					checked: true,
+					text: "Sexual offence"
+					}
+				]
+				}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

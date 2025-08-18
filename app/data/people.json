@@ -1,0 +1,27 @@
+[
+    {
+    "name":"River, Alex",
+    "crn":"X123456",
+    "probOffice":"Brighton Probation Office",
+    "repOffice":"Brighton Probation Office",
+    "sentenceEndDate":"20 May 2026",
+    "sentenceType":"Licence end date",
+    "pssEndDate":"21 Dec 2026",
+    "cohort":"Sexual offence",
+    "cohortTag":"LDC",
+    "referralStatus":"Awaiting assessment",
+    "referralColour":"purple"
+    },
+    {
+    "name":"Booth, Sham",
+    "crn":"B739123",
+    "probOffice":"Brighton Probation Office",
+    "repOffice":"Brighton Probation Office",
+    "sentenceEndDate":"31 May 2026",
+    "sentenceType":"Licence end date",
+    "pssEndDate":"18 Oct 2026",
+    "cohort":"General offence",
+    "referralStatus":"Awaiting allocation",
+    "referralColour":"light-blue"
+    }
+]
