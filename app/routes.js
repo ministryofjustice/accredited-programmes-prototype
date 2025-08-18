@@ -9,6 +9,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 /* CUSTODY */
 
 // Add your routes here
+require('./routes/e2e/routes.js')(router);
 require('./routes/assess/v6/routes.js')(router);
 require('./routes/assess/v7/routes.js')(router);
 require('./routes/assess/v8/routes.js')(router);

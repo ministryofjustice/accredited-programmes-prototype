@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Which programme locations would Alex River prefer? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update learning disabilities and challenges (LDC) status</h1>
+
+		<div class="govuk-inset-text">
+			<p class="govuk-body govuk-!-margin-bottom-0">Alex River’s current LDC status:</p>
+			<p class="govuk-body govuk-!-font-weight-bold">May need an LDC-adapted programme (Building Choices Plus)</p>
+		</div>
+
+		<form action="change-ldc-status-post" method="post">
+			<div class="govuk-form-group">
+
+
+				{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+				{{ govukRadios({
+				name: "choose-ldc-status",
+				fieldset: {
+					legend: {
+					text: "Select Alex’s new LDC status",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},
+				items: [
+					{
+					value: "yes-ldc",
+					checked: true,
+					text: "May need an LDC-adapted programme (Building Choices Plus)"
+					},
+					{
+					value: "no-ldc",
+					text: "Does not need an LDC-adapted programme"
+					}
+				]
+				}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,359 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="../home"
+		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
+		interventions homepage</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Referrals in East Sussex</span>
+		<h1 class="govuk-heading-xl">Building Choices: moderate intensity</h1>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<div class="moj-filter">
+			<div class="moj-filter__header">
+				<div class="moj-filter__header-title">
+					<h2 class="govuk-heading-m govuk-!-padding-top-0">Filters</h2>
+				</div>
+			</div>
+		</div>
+		<div class="moj-filter__content">
+			<div class="moj-filter__options">
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="search-name-crn">Search by name or CRN</label>
+					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
+					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
+						<option value="select" selected>Select</option>
+						<option value="general-offence">General offence</option>
+						<option value="sexual-offence">Sexual offence</option>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
+					<select class="govuk-select" id="referral-status" name="referral-status" style="width: 100%">
+						<option value="select" selected>Select</option>
+						<optgroup label="Open referrals">
+							<option value="referral-submitted">Referral submitted</option>
+							<option value="referral-submitted-hold">On hold - referral submitted</option>
+							<option value="court-order">Court order</option>
+							<option value="returned-court">Returned to court</option>
+							<option value="awaiting-assessment">Awaiting assessment</option>
+							<option value="awaiting-assessment-hold">On hold - awaiting assessment</option>
+							<option value="assessment-started">Assessment started</option>
+							<option value="assessment-started-hold">On hold - assessment started</option>
+							<option value="assessed-suitable">Assessed as suitable</option>
+							<option value="suitable-not-ready">Suitable but not ready</option>
+							<option value="on-programme">On programme</option>
+						</optgroup>
+						<optgroup label="Closed referrals">
+							<option value="not-eligible">Not eligible</option>
+							<option value="not-suitable">Not suitable</option>
+							<option value="withdrawn">Withdrawn</option>
+							<option value="deselected">Deselected</option>
+							<option value="programme-complete">Programme complete</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Probation office</h1>
+						</legend>
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="probationOffice-1" name="probationOffice"
+									type="checkbox" value="Brighton Probation Office">
+								<label class="govuk-label govuk-checkboxes__label" for="probationOffice-1">Brighton
+									Probation Office</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="probationOffice-2" name="probationOffice"
+									type="checkbox" value="Eastbourne Probation Office">
+								<label class="govuk-label govuk-checkboxes__label" for="probationOffice-2">Eastbourne
+									Probation Office</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="probationOffice-3" name="probationOffice"
+									type="checkbox" value="St. Leonards Probation Office">
+								<label class="govuk-label govuk-checkboxes__label" for="probationOffice-3">St. Leonards
+									Probation Office</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="probationOffice-4" name="probationOffice"
+									type="checkbox" value="Sussex House">
+								<label class="govuk-label govuk-checkboxes__label" for="probationOffice-4">Sussex
+									House</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-right-3">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals
+						(25)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (34)</a>
+				</li>
+			</ul>
+		</nav>
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Probation office</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">PSS end date</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				{% macro referralTableRows(openReferrals) %}
+
+				{% for referral in openReferrals %}
+
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell">
+						<a href=" " class="govuk-link">{{referral.name}}</a><br/>{{referral.crn}}</td>
+					<td class="govuk-table__cell">{{referral.probOffice}}</td>
+					<td class="govuk-table__cell">{{referral.sentenceEndDate}}<br/>{{referral.sentenceType}}</td>
+					<td class="govuk-table__cell">{{referral.pssEndDate}}</td>
+					<td class="govuk-table__cell">{{referral.cohort}}</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">{{referral.referralStatus}}</strong></td>
+				</tr>
+
+				{% endfor %}
+
+				{% endmacro %}
+
+				{{ referralTableRows(data.openReferrals) }}
+
+				{# {% if data['referral-submitted'] == "Withdraw referral" %}
+				<!-- Empty row -->
+				{% elseif data['referral-submitted'] == "Not eligible" %}
+				<!-- Empty row -->
+				{% elseif data['referral-submitted'] == "Awaiting assessment" %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="/profiles/referral-details/personal-details" class="govuk-link">Test 1,
+							Alex</a><br />X123456</td>
+					<td class="govuk-table__cell">Test 1 Probation Office</td>
+					<td class="govuk-table__cell">20 May 3025<br />Licence end date<br /></td>
+					<td class="govuk-table__cell">21 Dec 3025</td>
+					<td class="govuk-table__cell">Sexual offence 1<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting
+							assessment</strong></td>
+				</tr>
+				{% elseif data['referral-submitted'] == "On hold" %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">Test 2,
+							Alex</a><br />X123456</td>
+					<td class="govuk-table__cell">Test 2 Probation Office</td>
+					<td class="govuk-table__cell">21 May 3025<br />Licence end date<br /></td>
+					<td class="govuk-table__cell">22 Dec 3025</td>
+					<td class="govuk-table__cell">Sexual offence 2<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">On hold - Referral
+							submitted</strong></td>
+				</tr>
+				{% else %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="../personal-details" class="govuk-link">Test 3,
+							Alex</a><br />X123456</td>
+					<td class="govuk-table__cell">Test 3 Probation Office</td>
+					<td class="govuk-table__cell">22 May 3025<br />Licence end date<br /></td>
+					<td class="govuk-table__cell">23 Dec 3025</td>
+					<td class="govuk-table__cell">Sexual offence 3<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Referral submitted</strong>
+					</td>
+				</tr>
+				{% endif %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Booth, Sham</a><br />B739123</td>
+					<td class="govuk-table__cell">Sussex House</td>
+					<td class="govuk-table__cell">7 Jul 2025<br />Order end date<br /><span
+							class="moj-badge moj-badge--bright-blue">Breach</span></td>
+					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">Sexual offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--orange">Court order</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McGregor, Simon</a><br />N600504</td>
+					<td class="govuk-table__cell">St. Leonards Probation Office</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting
+							assessment</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Step, Richard</a><br />L227390</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">6 Oct 2025</td>
+					<td class="govuk-table__cell">Sexual offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">Awaiting
+							assessment</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Jones, Matt</a><br />A103428</td>
+					<td class="govuk-table__cell">Sussex House</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">21 Dec 2025</td>
+					<td class="govuk-table__cell">Sexual offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
+					</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Wright, Kevin</a><br />Z234587</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date<br /><span
+							class="moj-badge moj-badge--bright-blue">Recall</span></td>
+					<td class="govuk-table__cell">6 Oct 2025</td>
+					<td class="govuk-table__cell">Sexual offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assessment started</strong>
+					</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Poole, Adrian</a><br />D005188</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as
+							suitable</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Metcalfe, Nicholas</a><br />E772821
+					</td>
+					<td class="govuk-table__cell">Eastbourne Probation Office</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">6 Oct 2025</td>
+					<td class="govuk-table__cell">Sexual offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Assessed as
+							suitable</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Akhtar, Suhail</a><br />K227326</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">21 Dec 2025</td>
+					<td class="govuk-table__cell">Sexual offence<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not
+							ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Hemsworth, Luke</a><br />F384914</td>
+					<td class="govuk-table__cell">Sussex House</td>
+					<td class="govuk-table__cell">2 Jun 2025<br />Order end date</td>
+					<td class="govuk-table__cell">N/A</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not
+							ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McDonald, Jim</a><br />B123408</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">6 Oct 2025</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Suitable but not
+							ready</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">McAdam, Alistair</a><br />A114123</td>
+					<td class="govuk-table__cell">St. Leonards Probation Office</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">21 Dec 2025</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">James, Bob</a><br />A923429</td>
+					<td class="govuk-table__cell">Eastbourne Probation Office</td>
+					<td class="govuk-table__cell">23 Apr 2025<br />Licence end date</td>
+					<td class="govuk-table__cell">6 Oct 2025</td>
+					<td class="govuk-table__cell">General offence<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Setto, Lukas</a><br />L099432</td>
+					<td class="govuk-table__cell">Brighton Probation Office</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date<br /><span
+							class="moj-badge moj-badge--bright-blue">Breach</span></td>
+					<td class="govuk-table__cell">21 Dec 2025</td>
+					<td class="govuk-table__cell">Sexual offence<br /><span
+							class="moj-badge moj-badge--bright-purple">LDC</span></td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="#" class="govuk-link">Aalegra, Rema</a><br />F039409</td>
+					<td class="govuk-table__cell">Sussex House</td>
+					<td class="govuk-table__cell">20 May 2025<br />Licence end date<br /><span
+							class="moj-badge moj-badge--bright-blue">Recall</span></td>
+					<td class="govuk-table__cell">21 Dec 2025</td>
+					<td class="govuk-table__cell">General offence</td>
+					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--pink">On programme</strong></td>
+				</tr> #}
+			</tbody>
+		</table>
+		<nav class="govuk-pagination" role="navigation" aria-label="results">
+			<ul class="govuk-pagination__list">
+				<li class="govuk-pagination__item govuk-pagination__item--current">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+				</li>
+				<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
+				</li>
+				<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
+				<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">42</a>
+				</li>
+			</ul>
+			<div class="govuk-pagination__next">
+				<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+						class="govuk-pagination__link-title">Next</span> <svg
+						class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+						height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+						<path
+							d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+						</path>
+					</svg>
+				</a>
+			</div>
+		</nav>
+	</div>
+</div>
+{% endblock %}
