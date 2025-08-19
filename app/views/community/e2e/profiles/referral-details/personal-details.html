@@ -54,6 +54,85 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
+
+		<!-- Cohort - conditional formatting for showing a success banner -->
+		{% if data['choose-cohort'] == "general-offence" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: cohort changed" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Cohort changed</h2>
+			Alex River is in the general offence cohort
+		</div>
+
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-cohort'] == "sexual-offence" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: cohort changed" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Cohort changed</h2>
+			Alex River is in the sexual offence cohort
+		</div>
+
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+		
+		{% else %}
+		<!-- No success banner to display yet -->
+		{% endif %}
+
+		<!-- LDC status - conditional formatting for showing a success banner -->
+		{% if data['choose-ldc-status'] == "yes-ldc" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: LDC status changed" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">LDC status changed</h2>
+			Alex River may need an LDC-adapted programme.
+		</div>
+
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-ldc-status'] == "no-ldc" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: LDC status changed" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">LDC status changed</h2>
+			Alex River does not need an LDC-adapted programme.
+		</div>
+
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+		
+		{% else %}
+		<!-- No success banner to display yet -->
+		{% endif %}
+
 		<h2 class="govuk-heading-m">Referral summary</h2>
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
@@ -65,11 +144,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<dd class="govuk-summary-list__value">Building Choices: moderate intensity</dd>
 		  	</div>
 		  	<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Programme strand</dt>
-				<dd class="govuk-summary-list__value">Sexual offence</dd>
+				<dt class="govuk-summary-list__key">Cohort</dt>
+				{% if data['choose-cohort'] == "general-offence" %}
+				<dd class="govuk-summary-list__value">General offence<span class="moj-badge moj-badge--bright-purple govuk-!-margin-left-1">LDC</span></dd>
+				{% else %}
+				<dd class="govuk-summary-list__value">Sexual offence<span class="moj-badge moj-badge--bright-purple govuk-!-margin-left-1">LDC</span></dd>
+				{% endif %}
 		  	</div>
-		</dl>
-		<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-0">
 			<div class="govuk-summary-list__row">
 			  	<dt class="govuk-summary-list__key">Date referred</dt>
 			  	<dd class="govuk-summary-list__value">11 June 2023</dd>
