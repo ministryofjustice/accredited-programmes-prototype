@@ -55,6 +55,92 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
+
+		<!-- Referral status - conditional formatting for showing a success banner -->
+		{% if data['choose-referral-status'] == "awaiting-allocation" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Referral status updated</h2>
+			Alex River’s referral status is now Awaiting allocation.
+		</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-referral-status'] == "suitable-but-not-ready" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Referral status updated</h2>
+			Alex River’s referral status is now Suitable but not ready.
+		</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-referral-status'] == "deprioritised" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Referral status updated</h2>
+			Alex River’s referral status is now Deprioritised.
+		</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-referral-status'] == "recall" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Referral status updated</h2>
+			Alex River’s referral status is now Recall.
+		</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+
+		{% elseif data['choose-referral-status'] == "return-to-court" %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">
+			<h2 class="moj-alert__heading">Referral status updated</h2>
+			Alex River’s referral status is now Return to court.
+		</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+		</div>
+		
+		{% else %}
+		<!-- No success banner to display yet -->
+		{% endif %}
+
 		<h2 class="govuk-heading-m">Status history</h2>
 
 		{% if data['choose-referral-status'] == "awaiting-allocation" %}
