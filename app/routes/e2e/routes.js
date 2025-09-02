@@ -62,5 +62,26 @@ router.post('/community/e2e/profiles/referral-details/change-ldc-status-post', f
 
 }) 
 
+// Change referral status
+// profile/referral-details/change-referral-status
+router.post('/community/e2e/profiles/referral-details/change-referral-status-post', function (req, res) {
+	const referralChanged = req.session.data['choose-referral-status']
+    	if (referralChanged == 'awaiting-allocation') {
+			res.redirect('status-history')
+     	} 
+		else if (referralChanged == 'suitable-but-not-ready') {
+       		res.redirect('status-history')
+     	}
+		else if (referralChanged == 'deprioritised') {
+			res.redirect('status-history')
+	  	}
+        else if (referralChanged == 'recall') {
+			res.redirect('status-history')
+	  	}
+		else {
+			res.redirect('status-history')
+	  	}
+ 	});
+
 
 }
