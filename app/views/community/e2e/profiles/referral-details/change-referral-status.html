@@ -1,0 +1,119 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update Alex River’s referral status - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Update Alex River’s referral status</h1>
+
+		<div class="moj-timeline">
+			<div class="moj-timeline__item">
+				<div class="moj-timeline__header">
+					<h2 class="moj-timeline__title">Current status</h2>
+					<p class="moj-timeline__byline">by Berta Tonka</p>
+			  	</div>
+			  	<p class="moj-timeline__date">
+					<time datetime="2023-06-29T16:12:00.000Z">29 August 2025 at 10:00am</time>
+			  	</p>
+			  	<div class="moj-timeline__description">
+					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
+			  	</div>
+			</div> 
+		</div>
+
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+		<form action="change-referral-status-post" method="post">
+			<div class="govuk-form-group">
+
+
+				{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+				{{ govukRadios({
+				name: "choose-referral-status",
+				fieldset: {
+					legend: {
+					text: "Select the new referral status",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},
+				items: [
+					{
+					value: "awaiting-allocation",
+					text: "Awaiting allocation",
+					hint: {
+						text: "The person has been assessed as suitable and can be allocated to a group."
+					}
+					},
+					{
+					value: "suitable-but-not-ready",
+					text: "Suitable but not ready",
+					hint: {
+						text: "The person meets the suitability criteria but is not ready to start the programme. The referral will be paused until they are ready."
+					}
+					},
+										{
+					value: "deprioritised",
+					text: "Deprioritised",
+					hint: {
+						text: "The person is suitable but does not meet the prioritisation criteria. The referral will be paused in case they are reprioritised."
+					}
+					},
+										{
+					value: "recall",
+					text: "Recall",
+					hint: {
+						text: "The person has been recalled. Depending on the recall type, the referral may be withdrawn or returned to awaiting assessment."
+					}
+					},
+										{
+					value: "return-to-court",
+					text: "Return to court",
+					hint: {
+						text: "The person is not suitable for the programme or cannot continue with it. The referral will be returned to court."
+					}
+					}
+				]
+				}) }}
+
+				{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+				{{ govukCharacterCount({
+				name: "referral-status-details",
+				id: "referral-status-details",
+				maxlength: 500,
+				label: {
+					text: "Add details (optional)",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+				hint: {
+					text: "You can add more information about this update, such as the reason for an assessment decision or for deprioritising someone."
+				}
+				}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
