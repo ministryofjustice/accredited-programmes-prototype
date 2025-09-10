@@ -3,32 +3,17 @@
 // https://prototype-kit.service.gov.uk/docs/create-routes
 //
 
-// This ain't working...
-module.exports = function (router) {
-  router.get('/community/e2e/referrals/open-referrals-setup', (req, res) => {
-    let openReferrals = require('../../data/people.json')
-    req.session.data['openReferrals'] = openReferrals
-    res.redirect('./open-referrals')
-  });
-
-  router.get('/community/e2e/referrals/open-referrals', (req, res) => {
-    res.render('community/e2e/referrals/open-referrals', {
-      data: {
-        openReferrals: req.session.data['openReferrals'] || []
-      }
-    });
-  });
-
-  // Logging session data  
-  router.use((req, res, next) => {    
+// Logging session data  
+module.exports = function (router) {   
+    router.use((req, res, next) => {    
     const log = {  
       method: req.method,  
       url: req.originalUrl,  
       data: req.session.data  
     }  
-    console.log(JSON.stringify(log, null, 2))  
-    next()  
-  })  
+     console.log(JSON.stringify(log, null, 2))  
+     next()  
+   });
 
 // Change cohort
 // profile/referral-details/change-cohort
@@ -81,7 +66,6 @@ router.post('/community/e2e/profiles/referral-details/change-referral-status-pos
 		else {
 			res.redirect('status-history')
 	  	}
- 	});
-
+ 	})
 
 }

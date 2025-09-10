@@ -104,7 +104,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</div>
 		<div class="moj-alert__content">
 			<h2 class="moj-alert__heading">LDC status changed</h2>
-			Alex River may need an LDC-adapted programme.
+			{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}} may need an LDC-adapted programme.
 		</div>
 
 		<div class="moj-alert__action">
@@ -121,7 +121,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		</div>
 		<div class="moj-alert__content">
 			<h2 class="moj-alert__heading">LDC status changed</h2>
-			Alex River does not need an LDC-adapted programme.
+			{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}} does not need an LDC-adapted programme.
 		</div>
 
 		<div class="moj-alert__action">
@@ -137,7 +137,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<dl class="govuk-summary-list govuk-summary-list--no-border">
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Applicant name</dt>
-				<dd class="govuk-summary-list__value">Alex River</dd>
+				<dd class="govuk-summary-list__value">{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</dd>
 		  	</div>
 			<div class="govuk-summary-list__row">
 				<dt class="govuk-summary-list__key">Programme name</dt>
@@ -213,7 +213,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">Alex River</dd>
+							<dd class="govuk-summary-list__value">{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</dd>
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">CRN</dt>
@@ -237,7 +237,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
-							<dd class="govuk-summary-list__value">East Sussex</dd>
+							<dd class="govuk-summary-list__value">County Durham and Darlington</dd>
 						</div>
 					</dl>
 				</div>
