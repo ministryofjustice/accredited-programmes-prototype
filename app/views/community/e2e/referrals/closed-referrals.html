@@ -146,11 +146,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals
+					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals
 						(72)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (3)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals (3)</a>
 				</li>
 			</ul>
 		</nav>
@@ -170,7 +170,41 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</thead>
 		<tbody>
 
-			{% for referral in data['people'] %}
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">
+					<a href="../profiles/referral-details/personal-details" class="govuk-link govuk-link--no-visited-state">Christiaan, Simon</a><br/>B992476</td>
+				<td class="govuk-table__cell">North Tyneside and Northumberland</td>
+				<td class="govuk-table__cell">North Tyneside</td>
+				<td class="govuk-table__cell">14 Jun 2026<br/>Order end date</td>
+				<td class="govuk-table__cell">19 Aug 2026</td>
+				<td class="govuk-table__cell">General offence 
+					<!-- <span class="moj-badge moj-badge--bright-purple">LDC</span></td> -->
+				<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">
+					<a href="../profiles/referral-details/personal-details" class="govuk-link govuk-link--no-visited-state">Akhtar, Suhail</a><br/>K227326</td>
+				<td class="govuk-table__cell">Sunderland</td>
+				<td class="govuk-table__cell">Sunderland 2</td>
+				<td class="govuk-table__cell">22 Dec 2025<br/>Licence end date</td>
+				<td class="govuk-table__cell">15 Jan 2026</td>
+				<td class="govuk-table__cell">Sexual offence 
+					<span class="moj-badge moj-badge--bright-purple">LDC</span></td>
+				<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Programme complete</strong></td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">
+					<a href="../profiles/referral-details/personal-details" class="govuk-link govuk-link--no-visited-state">Wright, Kevin</a><br/>A104338</td>
+				<td class="govuk-table__cell">Redcar, Cleveland and Middlesbrough</td>
+				<td class="govuk-table__cell">Middlesbrough 2</td>
+				<td class="govuk-table__cell">14 Apr 2026<br/>Licence end date</td>
+				<td class="govuk-table__cell">22 Apr 2026</td>
+				<td class="govuk-table__cell">General offence 
+					<span class="moj-badge moj-badge--bright-purple">LDC</span></td>
+				<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Withdrawn</strong></td>
+			</tr>
+
+			<!-- {% for referral in data['people'] %}
 
 			<tr class="govuk-table__row">
 				<td class="govuk-table__cell">
@@ -184,7 +218,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>
 			</tr>
 
-			{% endfor %}
+			{% endfor %} -->
 
 			</tbody>
 		</table>
