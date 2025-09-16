@@ -43,7 +43,9 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
 						<option value="select" selected>Select cohort</option>
 						<option value="general-offence">General offence</option>
+						<option value="general-offence">General offence LDC</option>
 						<option value="sexual-offence">Sexual offence</option>
+						<option value="sexual-offence">Sexual offence LDC</option>
 					</select>
 				</div>
 				<div class="govuk-form-group">
@@ -143,17 +145,17 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
+		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals
-						(72)</a>
+					<a class="moj-sub-navigation__link" href="open-referrals">Open referrals</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals (3)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="closed-referrals">Closed referrals</a>
 				</li>
 			</ul>
 		</nav>
+		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>3</strong> of <strong>3</strong> results</p>
 		
 		
 	<table class="govuk-table" data-module="moj-sortable-table">
@@ -228,25 +230,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<li class="govuk-pagination__item govuk-pagination__item--current">
 					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
 				</li>
-				<li class="govuk-pagination__item">
-					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
-				</li>
-				<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
-				<li class="govuk-pagination__item">
-					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">42</a>
-				</li>
 			</ul>
-			<div class="govuk-pagination__next">
-				<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
-						class="govuk-pagination__link-title">Next</span> <svg
-						class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
-						height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-						<path
-							d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
-						</path>
-					</svg>
-				</a>
-			</div>
 		</nav>
 	</div>
 </div>

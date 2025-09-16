@@ -11,6 +11,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"34",
     "referralStatus":"Awaiting assessment",
     "referralColour":"purple"
     },
@@ -26,6 +27,7 @@
     "cohort":"General offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"50",
     "referralStatus":"Awaiting allocation",
     "referralColour":"light-blue"
     },
@@ -41,6 +43,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"27",
     "referralStatus":"Scheduled",
     "referralColour":"blue"
     },
@@ -56,6 +59,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"54",
     "referralStatus":"Scheduled",
     "referralColour":"blue"
     },
@@ -71,6 +75,7 @@
     "cohort":"Sexual offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"28",
     "referralStatus":"Awaiting allocation",
     "referralColour":"light-blue"
     },
@@ -86,6 +91,7 @@
     "cohort":"General offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"32",
     "referralStatus":"Awaiting assessment",
     "referralColour":"purple"
     },
@@ -101,6 +107,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"45",
     "referralStatus":"Deprioritised",
     "referralColour":"yellow" 
     },
@@ -116,6 +123,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"22",
     "referralStatus":"Awaiting assessment",
     "referralColour":"purple"
     },   
@@ -131,6 +139,7 @@
     "cohort":"General offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"28",
     "referralStatus":"Awaiting allocation",
     "referralColour":"light-blue"
     }, 
@@ -146,6 +155,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"58",
     "referralStatus":"Scheduled",
     "referralColour":"blue"
     }, 
@@ -161,6 +171,7 @@
     "cohort":"Sexual offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"63",
     "referralStatus":"On programme",
     "referralColour":"green"
     }, 
@@ -176,6 +187,7 @@
     "cohort":"General offence",
     "cohortTag":" ",
     "sex":"Female",
+    "age":"33",
     "referralStatus":"On programme",
     "referralColour":"green"
     }, 
@@ -191,6 +203,7 @@
     "cohort":"Sexual offence",
     "cohortTag":" ",
     "sex":"Male",
+    "age":"31",
     "referralStatus":"Scheduled",
     "referralColour":"blue"
     }, 
@@ -206,6 +219,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Male",
+    "age":"44",
     "referralStatus":"Awaiting assessment",
     "referralColour":"purple"
     }
