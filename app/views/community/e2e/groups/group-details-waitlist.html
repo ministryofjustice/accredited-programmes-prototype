@@ -1,0 +1,308 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="../home"
+		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
+		Accredited Programmes homepage</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions clear">
+			<div class="moj-page-header-actions__title">
+				<span class="govuk-caption-xl">North East</span>
+				<h1 class="govuk-heading-xl">BCCDD1</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+				<div class="moj-button-group moj-button-group--inline">
+					<a href="group-list" class="govuk-button govuk-button--secondary">Back to groups</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-8">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Group information</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  	<a class="govuk-link" href=" ">Edit<span class="govuk-visually-hidden"> BCCDD1</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Delivery location</dt>
+						<dd class="govuk-summary-list__value">County Durham: Darlington Probation Office</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Treatment Manager</dt>
+						<dd class="govuk-summary-list__value">Berta Tonka</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Facilitators</dt>
+						<dd class="govuk-summary-list__value">Berta Tonka, Nathan Jones</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Cohort</dt>
+						<dd class="govuk-summary-list__value">Sexual offence <span class="moj-badge moj-badge--bright-purple">LDC</span></dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Sex</dt>
+						<dd class="govuk-summary-list__value">Male</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Allocated</dt>
+						<dd class="govuk-summary-list__value">12 of 10</dd>
+					</div>
+				</dl>
+			</div>
+		 </div>
+	</div>
+	<div class="govuk-grid-column-one-third">
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Schedule overview</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  	<a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> Schedule overview</span></a>
+					</li>
+				</ul>
+			</div>
+	<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
+					<dd class="govuk-summary-list__value">14 Oct 2025</dd>
+				</div>
+				<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
+					<dt class="govuk-summary-list__key">End date</dt>
+					<dd class="govuk-summary-list__value">2 Dec 2025</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Time of sessions</dt>
+					<dd class="govuk-summary-list__value">
+						<ul class="govuk-list">
+							<li>Mondays 2.00pm to 11.30am</li>
+							<li>Thursdays 2.00 to 3.30pm</li>
+						</ul>
+					</dd>
+				</div>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-l">Allocations and waitlist</h2>
+	</div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<div class="moj-filter">
+			<div class="moj-filter__header">
+				<div class="moj-filter__header-title">
+					<h2 class="govuk-heading-m govuk-!-padding-top-0">Filters</h2>
+				</div>
+			</div>
+		</div>
+		<div class="moj-filter__content">
+			<div class="moj-filter__options">
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="search-name-crn">Group code</label>
+					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
+				</div>				
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="pdu">PDU</label>
+					<select class="govuk-select" id="pdu" name="pdu" style="width: 100%">
+						<option value="select" selected>Select PDU</option>
+						<option value="pdu-1">County Durham and Darlington</option>
+						<option value="pdu-2">Gateshead and South Tyneside</option>
+						<option value="pdu-3">Newcastle Upon Tyne</option>
+						<option value="pdu-2">North Tyneside and Northumberland</option>
+						<option value="pdu-2">Redcar, Cleveland and Middlesbrough</option>
+						<option value="pdu-2">Stockton and Hartlepool</option>
+						<option value="pdu-2">Sunderland</option>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							<h1 class="govuk-fieldset__heading">Reporting team</h1>
+						</legend>
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-1" name="reporting-team"
+									type="checkbox" value="darlington-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-1">Darlington 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-2" name="reporting-team"
+									type="checkbox" value="darlington-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-2">Darlington 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-4" name="reporting-team"
+									type="checkbox" value="north-durham-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-4">North Durham 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-5" name="reporting-team"
+									type="checkbox" value="north-durham-3">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-5">North Durham 3</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-6" name="reporting-team"
+									type="checkbox" value="peterlee-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-6">Peterlee 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-7" name="reporting-team"
+									type="checkbox" value="peterlee-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-7">Peterlee 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-8" name="reporting-team"
+									type="checkbox" value="south-durham-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-8">South Durham 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-9" name="reporting-team"
+									type="checkbox" value="south-durham-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-9">South Durham 2</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
+					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
+						<option value="select" selected>Select cohort</option>
+						<option value="general-offence">General offence</option>
+						<option value="general-offence">General offence LDC</option>
+						<option value="sexual-offence">Sexual offence</option>
+						<option value="sexual-offence">Sexual offence LDC</option>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="cohort">Sex</label>
+					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
+						<option value="select" selected>Select sex</option>
+						<option value="general-offence">Male</option>
+						<option value="general-offence">Female</option>
+						<option value="sexual-offence">Mixed</option>
+					</select>
+				</div>
+				<div class="govuk-button-group govuk-!-margin-right-3">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="govuk-grid-column-three-quarters">
+		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="group-details-allocated">Allocated (9)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-waitlist">Waitlist (52)</a>
+				</li>
+			</ul>
+		</nav>
+		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>20</strong> of <strong>52</strong> results</p>
+
+	<table class="govuk-table" data-module="moj-sortable-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th class="govuk-table__header" style="width: 5%"></th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Age</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Sex</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">PDU</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Reporting team</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		{% for referral in data['people'] %}
+		
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-radios govuk-radios--small">
+					<div class="govuk-radios__item">
+						<input type="radio" class="govuk-radios__input" name="group-waitlist" id="waitlist-{{referral.lastName}}-{{referral.firstName}}" value="{{referral.lastName}}-{{referral.firstName}}">
+						<label class="govuk-label govuk-radios__label" for="group-{{referral.lastName}}-{{referral.firstName}}">
+						<span class="govuk-visually-hidden">{{referral.lastName}}, {{referral.firstName}}</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/personal-details?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
+			<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
+			<td class="govuk-table__cell">{{referral.age}}</td>
+			<td class="govuk-table__cell">{{referral.cohort}} 
+				<span class="moj-badge moj-badge--bright-purple">{{referral.cohortTag}}</span></td>
+			<td class="govuk-table__cell">{{referral.sex}}</td>
+			<td class="govuk-table__cell">{{referral.pdu}}</td>
+			<td class="govuk-table__cell">{{referral.reportingTeam}}</td>	
+		</tr>
+
+		{% endfor %}
+
+		</tbody>
+	</table>
+
+	<nav class="govuk-pagination" role="navigation" aria-label="results">
+		<ul class="govuk-pagination__list">
+			<li class="govuk-pagination__item govuk-pagination__item--current">
+				<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+			</li>
+			<li class="govuk-pagination__item">
+				<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
+			</li>
+			<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
+			<li class="govuk-pagination__item">
+				<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 4">4</a>
+			</li>
+		</ul>
+		<div class="govuk-pagination__next">
+			<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+					class="govuk-pagination__link-title">Next</span> <svg
+					class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+					height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+					<path
+						d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+					</path>
+				</svg>
+			</a>
+		</div>
+	</nav>
+		
+    </div>
+	</div>
+</div>
+{% endblock %}
