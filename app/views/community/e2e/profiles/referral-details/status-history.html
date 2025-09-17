@@ -10,7 +10,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="view-acp-and-referrals" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+	<!-- <a href="javascript:window.history.back()" class="govuk-back-link">Back</a> -->
+	<a href="../../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -37,7 +38,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-				  <a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
+				  <a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
@@ -46,7 +47,10 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="status-history">Status history</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="availability">Group allocation notes</a>
 				</li>
 		  	</ul>
 		</nav>
