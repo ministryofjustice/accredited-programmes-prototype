@@ -68,4 +68,22 @@ router.post('/community/e2e/profiles/referral-details/change-referral-status-pos
 	  	}
  	})
 
+// Show success banner and inset text when user has submitted motivation form
+// profile/referral-details/change-motivation-background
+router.post('/community/e2e/profiles/referral-details/change-motivation-background-post', function (req, res) { 
+    req.session.data['show-success-banner'] = true;
+    req.session.data['show-last-update'] = true;
+    res.redirect('motivation-background');
+
+ })
+
+router.get('/community/e2e/profiles/referral-details/motivation-background', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/profiles/referral-details/motivation-background', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
+
 }

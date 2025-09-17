@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to interventions homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">BCCDD1</span>
+		<h1 class="govuk-heading-l">Remove Alex River from this group?</h1>
+
+		<div class="govuk-button-group govuk-!-margin-top-9">
+			<a href="group-details-allocated" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+				Remove from group
+			</a>
+			<a class="govuk-link" href="group-details-allocated">Cancel</a>
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

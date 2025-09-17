@@ -34,8 +34,6 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	</div>
 </div>
 
-<!-- A lot of stuff to do on this page - and set up routing stuff too -->
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
@@ -83,104 +81,100 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<li class="moj-side-navigation__item">
 					<a href="availability">Availability</a>
 		  		</li>
-		  		<li class="moj-side-navigation__item moj-side-navigation__item--active">
+		  		<li class="moj-side-navigation__item">
 					<a href="location">Location</a>
 		  		</li>
-				<li class="moj-side-navigation__item">
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
 					<a href="motivation-background">Motivation, background and non-associations</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 
-
 	<div class="govuk-grid-column-three-quarters">
-		<!-- {% if data['cancel-continue-group'] == "Cancel allocation for Adrian Poole" %}-->
+		{% if showBanner %}
 		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
 			<div>
 			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
 					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
 			  	</svg>
 			</div>
-			<div class="moj-alert__content">Location details added successfully.</div>
+			<div class="moj-alert__content">Motivation, background and non-associations details added.</div>
 			<div class="moj-alert__action">
 			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
 			</div>
 		</div>
-		<!-- {% else %} -->
-		<!-- No success banner to display yet -->
-		<!-- {% endif %} -->
+		{% endif %}
 
-		<h2 class="govuk-heading-m">Location</h2>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
-							<dd class="govuk-summary-list__value">East Sussex</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation office</dt>
-							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</dd>
-						</div>
-					</dl>
-				</div>
-		 	</div>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Preferred programme delivery locations</h3>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						{% if data['update-location'] == "update location" %}
-						<p class="govuk-body">Last updated 9 May 2025 by Max Freeman</p>
-						{% else %}
-						<p class="govuk-body">Last updated 3 April 2025 by Tom Saunders</p>
-						{% endif %}
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
-							{% if data['location-preference'] %}
-							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-2-formatted'] }}</dd>
-							{% else %}
-							<dd class="govuk-summary-list__value">No information added</dd>
-							{% endif %}
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
-							{% if data['no-locations-programme'] == "Yes" %}
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">{{ data['locations-cannot-attend'] }}</p>
-							</dd>
-							{% elseif data['no-locations-programme'] == "No" %}
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">No information added</p>
-							</dd>
-							{% else %}
-							<!--<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>--->
-							<dd class="govuk-summary-list__value">No information added</dd>
-							{% endif %}
-						</div>
-					</dl>
-					{% if data['update-location'] == "update location" %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
-						</div>
-					</form>
-					{% else %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Add location preferences</button>
-						</div>
-					</form>
-					{% endif %}
-				</div>
-		 	</div>
+		<h2 class="govuk-heading-m">Motivation, background and non-associations</h2>
+
+		{% if data['show-last-update'] %}
+			{{ govukInsetText({
+				text: "Last updated by Berta Tonka on 13 October 2025."
+			}) }}
+		
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+				Maintains innocence
+				</dt>
+				{% if data['maintain-innocence'] == "yes" %}
+					<dd class="govuk-summary-list__value">Yes</dd>
+				{% elseif data['maintain-innocence'] == "no" %}
+					<dd class="govuk-summary-list__value">No</dd>
+				{% else %}
+					<dd class="govuk-summary-list__value">No information added</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+				Motivation to participate in an Accredited Programme
+				</dt>
+				{% if data['motivation'] %}
+					<dd class="govuk-summary-list__value">{{ data['motivation'] }}</dd>
+				{% else %}
+					<dd class="govuk-summary-list__value">No information added</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+				Other people on probation who the person should not attend a group with
+				</dt>
+				{% if data['non-associations'] %}
+					<dd class="govuk-summary-list__value">{{ data['non-associations'] }}</dd>
+				{% else %}
+					<dd class="govuk-summary-list__value">No information added</dd>
+				{% endif %}
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+				Other considerations
+				</dt>
+				{% if data['other-considerations'] %}
+					<dd class="govuk-summary-list__value">{{ data['other-considerations'] }}</dd>
+				{% else %}
+					<dd class="govuk-summary-list__value">No information added</dd>
+				{% endif %}
+			</div>
+		</dl>
+
+		<form action="change-motivation-background" method="post">
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Update notes</button>
+			</div>
+		</form>
+
+		{% else %}
+
+		<p class="govuk-body">No motivation, background and non-associations added for Alex River.</p>	
+
+		<form action="change-motivation-background" method="post">
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Add notes</button>
+			</div>
+		</form>
+
+		{% endif %}
 
 		</div>
 	</div>

@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Update Alex River’s referral status - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+	{% include "includes/community/v3/key-details-pt.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Provide information about motivation, background and non-associations</h1>
+
+		<form action="change-motivation-background-post" method="post">
+			<div class="govuk-form-group">
+
+
+				{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+				{{ govukRadios({
+				classes: "govuk-radios--inline",
+				name: "maintain-innocence",
+				fieldset: {
+					legend: {
+					text: "Does the person maintain their innocence?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},
+				items: [
+					{
+					value: "yes",
+					text: "Yes"
+					},
+					{
+					value: "no",
+					text: "No"
+					}
+				]
+				}) }}
+
+				{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+				{{ govukCharacterCount({
+				name: "motivation",
+				id: "motivation",
+				maxlength: 2000,
+				label: {
+					text: "Is the person motivated to participate in an Accredited Programme?",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+				hint: {
+					text: "For example, are they motivated to address their thinking or behaviour, even if they maintain their innocence."
+				}
+				}) }}
+
+				{{ govukCharacterCount({
+				name: "non-associations",
+				id: "non-associations",
+				maxlength: 2000,
+				label: {
+					text: "Are there other people on probation who the person should not attend a group with?",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+				hint: {
+					text: "Include any non-associations and other relevant personal relationships, such as co-defendants or gang affiliations."
+				}
+				}) }}
+
+				{{ govukCharacterCount({
+				name: "other-considerations",
+				id: "other-considerations",
+				maxlength: 2000,
+				label: {
+					text: "Other considerations",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+				hint: {
+					text: "Include other information that could help with group composition, such as information to help create a diverse group."
+				}
+				}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<input type="hidden" id="change-motivation-background" name="change-motivation-background" value="change-motivation-background">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

@@ -65,7 +65,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Allocated</dt>
-						<dd class="govuk-summary-list__value">12 of 10</dd>
+						<dd class="govuk-summary-list__value">9 of 10</dd>
 					</div>
 				</dl>
 			</div>
@@ -230,7 +230,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</nav>
 		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>9</strong> of <strong>9</strong> results</p>
 
-<!--- Started the form group here - still need to set up in e2e routes folder -->
+<!--- Form action simply redirects users to the remove from a group page -->
 <form action="remove-from-group" method="post">
 	<table class="govuk-table" style="max-width:70%;" data-module="moj-sortable-table">
 		<thead class="govuk-table__head">
@@ -256,7 +256,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</td>
 			<td class="govuk-table__cell">
-				<a href="../profiles/referral-details/personal-details?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
+				<a href="../profiles/referral-details/availability?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
 			<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>
 			</tr>
