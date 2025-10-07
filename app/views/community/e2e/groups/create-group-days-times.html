@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		
+		<!-- TO DO: Save data to pull in later in schedule view-->
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset" aria-describedby="group-days-hint">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+				<h1 class="govuk-fieldset__heading">
+					When will the group run?
+				</h1>
+				</legend>
+				<div id="group-days-hint" class="govuk-hint">
+				Select all days that apply.
+				</div>
+
+				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="monday" name="day" type="checkbox" value="monday" data-aria-controls="conditional-start-time">
+					<label class="govuk-label govuk-checkboxes__label" for="monday">
+					Mondays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="monday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="monday-start-time" name="monday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="tuesday" name="day" type="checkbox" value="tuesday" data-aria-controls="conditional-start-time-2">
+					<label class="govuk-label govuk-checkboxes__label" for="tuesday">
+					Tuesdays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-2">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="tuesday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="tuesday-start-time" name="tuesday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="wednesday" name="day" type="checkbox" value="wednesday" data-aria-controls="conditional-start-time-3">
+					<label class="govuk-label govuk-checkboxes__label" for="wednesday">
+					Wednesdays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-3">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="wednesday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="wednesday-start-time" name="wednesday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="thursday" name="day" type="checkbox" value="thursday" data-aria-controls="conditional-start-time-4">
+					<label class="govuk-label govuk-checkboxes__label" for="thursday">
+					Thursdays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-4">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="thursday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="thursday-start-time" name="thursday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="friday" name="day" type="checkbox" value="friday" data-aria-controls="conditional-start-time-5">
+					<label class="govuk-label govuk-checkboxes__label" for="friday">
+					Fridays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-5">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="friday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="friday-start-time" name="friday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="saturday" name="day" type="checkbox" value="saturday" data-aria-controls="conditional-start-time-6">
+					<label class="govuk-label govuk-checkboxes__label" for="saturday">
+					Saturdays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-6">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="saturday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="saturday-start-time" name="saturday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="sunday" name="day" type="checkbox" value="sunday" data-aria-controls="conditional-start-time-7">
+					<label class="govuk-label govuk-checkboxes__label" for="sunday">
+					Sundays
+					</label>
+				</div>
+				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-7">
+					<div class="govuk-form-group">
+					<label class="govuk-label" for="sunday-start-time">
+						Start time
+					</label>
+					<input class="govuk-input govuk-!-width-one-third" id="sunday-start-time" name="sunday-start-time" type="text" spellcheck="false">
+					</div>
+				</div>
+				
+			</fieldset>
+			</div>
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="create-group-cohort" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Continue
+			</a>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

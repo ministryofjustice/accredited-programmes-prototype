@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		<h1 class="govuk-heading-xl">Who is responsible for the group?</h1>
+		
+		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		<div class="govuk-form-group">
+			<label class="govuk-label govuk-label--m" for="pdu">Treatment Manager</label>
+			<select class="govuk-select" id="pdu" name="pdu" style="width: 50%">
+				<option value="select" selected>Search for Treatment Manager</option>
+				<option value="tm-1">Berta Tonka</option>
+				<option value="tm-2">Chloe Pascal</option>
+				<option value="tm-3">Fiona Ilie</option>
+				<option value="tm-4">Gabriel Sander</option>
+				<option value="tm-5">James Utkin</option>
+				<option value="tm-6">Rasheed Ayers</option>
+				<option value="tm-7">Ruth Amano</option>
+			</select>
+		</div>
+
+		<p class="govuk-body govuk-!-margin-bottom-8"> </p>
+
+		<div data-module="moj-add-another">
+		<form method="post">
+			<fieldset class="govuk-fieldset moj-add-another__item">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="facilitator">
+				Facilitator
+				</label>
+				<select class="govuk-select" id="pdu" name="pdu" style="width: 50%">
+					<option value="select" selected>Search for Facilitator</option>
+					<option value="tm-1">Berta Tonka</option>
+					<option value="tm-2">David Tromso</option>
+					<option value="tm-3">Fiona Ilie</option>
+					<option value="tm-4">James Utkin</option>
+					<option value="tm-5">Keila Makinen</option>
+					<option value="tm-6">Mal Porter</option>
+					<option value="tm-7">Nathan Jones</option>
+					<option value="tm-8">Tom Bassett</option>
+					<option value="tm-9">Tom Fedorov</option>
+					<option value="tm-10">Will Draycott</option>
+				</select>
+			</div>
+			</fieldset>
+			<div class="moj-button-action">
+			<button type="submit" class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">
+				Add another facilitator
+			</button>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="create-group-check-answers" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Submit
+			</a>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,120 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		<h1 class="govuk-heading-xl">Where does the group take place?</h1>
+		
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "PDU"
+			},
+			value: {
+				text: "County Durham and Darlington"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-pdu",
+					text: "Change",
+					visuallyHiddenText: "PDU"
+				}
+				]
+			}
+			}
+		]
+		}) }}	
+
+		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{% set locationHtml %}
+			{{ govukInput({
+				id: "new-location-input",
+				name: "new-location-input",
+				type: "text",
+				classes: "govuk-!-width-one-third",
+				label: {
+					text: "Location"
+				}
+			}) }}
+		{% endset -%}
+
+		{{ govukRadios({
+			name: "create-group-location",
+			fieldset: {
+				legend: {
+				text: "Choose the delivery location",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--m"
+				}
+			},
+			items: [
+				{
+				value: "darlington-prob",
+				text: "County Durham: Darlington Probation Office"
+				},
+				{
+				value: "durham-prob",
+				text: "County Durham: Durham City Probation Office"
+				},
+				{
+				value: "newton-prob",
+				text: "County Durham: Newton Aycliffe Probation Office"
+				},
+				{
+				value: "peterlee-prob",
+				text: "County Durham: Peterlee Probation Office"
+				},
+				{
+				value: "darlington-woodland",
+				text: "Darlington: 11 Woodland Road"
+				},
+				{
+				value: "durham-wear-house",
+				text: "Durham: Wear House"
+				},
+				{
+				divider: "or"
+				},
+				{
+				value: "new-location",
+				text: "I need to add a new location",
+					conditional: {
+						html: locationHtml
+					}
+				}
+			]
+		}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="create-group-facilitators" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Continue
+			</a>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

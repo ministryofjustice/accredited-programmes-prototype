@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		<h1 class="govuk-heading-xl">Where does the group take place?</h1>
+		
+		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		<div class="govuk-form-group">
+			<label class="govuk-label govuk-label--m" for="pdu">Search for PDU</label>
+			<select class="govuk-select" id="pdu" name="pdu" style="width: 50%">
+				<option value="select" selected>Select PDU</option>
+				<option value="pdu-1">County Durham and Darlington</option>
+				<option value="pdu-2">Gateshead and South Tyneside</option>
+				<option value="pdu-3">Newcastle Upon Tyne</option>
+				<option value="pdu-4">North Tyneside and Northumberland</option>
+				<option value="pdu-5">Redcar, Cleveland and Middlesbrough</option>
+				<option value="pdu-6">Stockton and Hartlepool</option>
+				<option value="pdu-7">Sunderland</option>
+			</select>
+		</div>
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="create-group-location" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Continue
+			</a>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

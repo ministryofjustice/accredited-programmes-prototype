@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="../home"
+		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
+		Accredited Programmes homepage</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions clear">
+			<div class="moj-page-header-actions__title">
+				<span class="govuk-caption-xl">BCCDD1</span>
+				<h1 class="govuk-heading-xl">Manage group</h1>
+			</div>
+			<div class="moj-page-header-actions__actions">
+				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
+					<a href="group-list" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to groups</a>
+					<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update group details" data-button-classes="govuk-button--secondary">
+						<a href=" " role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update group information</a>
+						<a href=" " role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">View schedule</a>			  
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="govuk-grid-row govuk-!-margin-top-8">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h2 class="govuk-summary-card__title">Schedule overview</h2>
+				<ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  	<a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> Schedule overview</span></a>
+					</li>
+				</ul>
+			</div>
+	<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
+					<dd class="govuk-summary-list__value">14 Oct 2025</dd>
+				</div>
+				<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
+					<dt class="govuk-summary-list__key">End date</dt>
+					<dd class="govuk-summary-list__value">2 Dec 2025</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Time of sessions</dt>
+					<dd class="govuk-summary-list__value">
+						<ul class="govuk-list">
+							<li>Mondays 2.00pm to 11.30am</li>
+							<li>Thursdays 2.00 to 3.30pm</li>
+						</ul>
+					</dd>
+				</div>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+		<h2 class="govuk-heading-l">Allocations and waitlist</h2>
+	
+		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated">Allocated (9)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="group-details-waitlist">Waitlist (52)</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+</div>
+
+{% endblock %}
