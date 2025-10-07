@@ -1,0 +1,197 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		<h1 class="govuk-heading-xl">Review and finish creating your group</h1>
+
+		<p class="govuk-body govuk-!-margin-bottom-8">We will use these details to create a schedule for the group.</p>
+		
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Group code"
+			},
+			value: {
+				text: "BCCDD1"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-code",
+					text: "Change",
+					visuallyHiddenText: "group code"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Start date for group"
+			},
+			value: {
+				text: "13 November 2025"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-start-date",
+					text: "Change",
+					visuallyHiddenText: "start date"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "When the group runs"
+			},
+			value: {
+        		html: '<p class="govuk-body">Mondays 10.00am to 12.00pm</p><p class="govuk-body">Thursdays 2.30pm to 4.00pm</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: "create-group-start-days-times",
+					text: "Change",
+					visuallyHiddenText: "group days and times"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Cohort"
+			},
+			value: {
+				text: "General offence LDC"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-cohort",
+					text: "Change",
+					visuallyHiddenText: "cohort"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Gender"
+			},
+			value: {
+				text: "Male"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-gender",
+					text: "Change",
+					visuallyHiddenText: "gender"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "PDU"
+			},
+			value: {
+				text: "County Durham and Darlington"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-pdu",
+					text: "Change",
+					visuallyHiddenText: "PDU"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Delivery location"
+			},
+			value: {
+				text: "Darlington: 11 Woodland Road"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-location",
+					text: "Change",
+					visuallyHiddenText: "delivery location"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Treatment Manager"
+			},
+			value: {
+				text: "Chloe Pascal"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Treatment Manager"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Facilitator(s)"
+			},
+			value: {
+        		html: '<p class="govuk-body">Harpreet Singh</p><p class="govuk-body">Tom Bassett</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Facilitators"
+				}
+				]
+			}
+			}		
+		]
+		}) }}	
+
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="group-manage-schedule" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Create this group
+			</a>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

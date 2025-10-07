@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Create a group</span>
+		
+		<!-- TO DO: Save data to pull in later in schedule view-->
+		<div class="moj-datepicker" data-module="moj-date-picker">
+			<div class="govuk-form-group">
+				<h1 class="govuk-label-wrapper">
+					<label class="govuk-label govuk-label--xl" for="date">
+					Add a start date for the group
+					</label>
+				</h1>
+				<div id="date-hint" class="govuk-hint">
+					Enter a date, for example 10/7/2025, or select one from the calendar.
+				</div>
+				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+			</div>
+		</div>
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<a href="create-group-days-times" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+				Continue
+			</a>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
