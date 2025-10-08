@@ -19,14 +19,42 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-l">BCCDD1</span>
-		<h1 class="govuk-heading-l">Add Alex River to this group?</h1>
 
-		<div class="govuk-button-group govuk-!-margin-top-9">
-			<a href="group-details-allocated" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Add to group
-			</a>
+		<form action="add-to-group-post" method="post">
+			<div class="govuk-form-group">
+		
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+		name: "add-to-group",
+		fieldset: {
+			legend: {
+			text: "Add Alex River to this group?",
+			isPageHeading: true,
+			classes: "govuk-fieldset__legend--l"
+			}
+		},
+		hint: {
+			text: "Once you add someone to a group, their referral status will change to Scheduled in the case list and in NDelius."
+		},
+		items: [
+			{
+			value: "yes",
+			text: "Yes"
+			},
+			{
+			value: "no",
+			text: "No"
+			}
+		]
+		}) }}
+
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
 			<a class="govuk-link" href="group-details-waitlist">Cancel</a>
 		</div>
+		</div>
+	</form>
 
 	</div>
 </div>

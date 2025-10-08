@@ -55,99 +55,43 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		  	</ul>
 		</nav>
 	</div>
+</div>
  	
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
 		<!-- Referral status - conditional formatting for showing a success banner -->
-		{% if data['choose-referral-status'] == "awaiting-allocation" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">
+		{% if showBanner %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: Person removed successfully" data-module="moj-alert" data-dismissible="true">
+			<div>
+			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			  	</svg>
+			</div>
+			<div class="moj-alert__content">
 			<h2 class="moj-alert__heading">Referral status updated</h2>
-			Alex River’s referral status is now Awaiting allocation.
+				{% if data['choose-referral-status'] == "awaiting-allocation" %}
+					Alex River’s referral status is now Awaiting allocation.
+				{% elseif data['choose-referral-status'] == "suitable-but-not-ready" %}
+					Alex River’s referral status is now Suitable but not ready.
+				{% elseif data['choose-referral-status'] == "deprioritised" %}
+					Alex River’s referral status is now Deprioritised.
+				{% elseif data['choose-referral-status'] == "recall" %}
+					Alex River’s referral status is now Recall.
+				{% else %}
+					Alex River’s referral status is now Return to court.
+				{% endif %}
+			</div>
+			<div class="moj-alert__action">
+			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
+			</div>
 		</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-		</div>
-
-		{% elseif data['choose-referral-status'] == "suitable-but-not-ready" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">
-			<h2 class="moj-alert__heading">Referral status updated</h2>
-			Alex River’s referral status is now Suitable but not ready.
-		</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-		</div>
-
-		{% elseif data['choose-referral-status'] == "deprioritised" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">
-			<h2 class="moj-alert__heading">Referral status updated</h2>
-			Alex River’s referral status is now Deprioritised.
-		</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-		</div>
-
-		{% elseif data['choose-referral-status'] == "recall" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">
-			<h2 class="moj-alert__heading">Referral status updated</h2>
-			Alex River’s referral status is now Recall.
-		</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-		</div>
-
-		{% elseif data['choose-referral-status'] == "return-to-court" %}
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: referral status updated" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-			<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">
-			<h2 class="moj-alert__heading">Referral status updated</h2>
-			Alex River’s referral status is now Return to court.
-		</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-		</div>
-		
-		{% else %}
-		<!-- No success banner to display yet -->
 		{% endif %}
+
 
 		<h2 class="govuk-heading-m">Status history</h2>
 
-		{% if data['choose-referral-status'] == "awaiting-allocation" %}
 		<div class="moj-timeline">
 			<div class="moj-timeline__item">
 				<div class="moj-timeline__header">
@@ -158,9 +102,19 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<time datetime="2023-06-29T16:12:00.000Z">2 September 2025 at 4:12pm</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--light-blue">Awaiting allocation</strong>
+					{% if data['choose-referral-status'] == "awaiting-allocation" %}
+						<strong class="govuk-tag govuk-tag--light-blue">Awaiting allocation</strong>
+					{% elseif data['choose-referral-status'] == "suitable-but-not-ready" %}
+						<strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong>
+					{% elseif data['choose-referral-status'] == "deprioritised" %}
+						<strong class="govuk-tag govuk-tag--yellow">Deprioritised</strong>
+					{% elseif data['choose-referral-status'] == "recall" %}
+						<strong class="govuk-tag govuk-tag--orange">Recall</strong>
+					{% elseif data['choose-referral-status'] == "return-to-court" %}
+						<strong class="govuk-tag govuk-tag--orange">Return to court</strong>
+					{% endif %}
 					{% if data['referral-status-details'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
+						<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
 					{% endif %}
 			  	</div>
 			</div> 
@@ -177,147 +131,6 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			  	</div>
 			</div> 
 		</div>
-
-		{% elseif data['choose-referral-status'] == "suitable-but-not-ready" %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">2 September 2025 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--yellow">Suitable but not ready</strong>
-					{% if data['referral-status-details'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Berta Tonka</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">29 August 2025 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
-			  	</div>
-			</div>  
-		</div>
-
-		{% elseif data['choose-referral-status'] == "deprioritised" %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">2 September 2025 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--yellow">Deprioritised</strong>
-					{% if data['referral-status-details'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Berta Tonka</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">29 August 2025 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
-			  	</div>
-			</div>  
-		</div>
-
-		{% elseif data['choose-referral-status'] == "recall" %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">2 September 2025 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--orange">Recall</strong>
-					{% if data['referral-status-details'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Berta Tonka</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">29 August 2025 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
-			  	</div>
-			</div>  
-		</div>
-
-		{% elseif data['choose-referral-status'] == "return-to-court" %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by You</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-29T16:12:00.000Z">2 September 2025 at 4:12pm</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--orange">Return to court</strong>
-					{% if data['referral-status-details'] %}
-					<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>
-					{% endif %}
-			  	</div>
-			</div> 
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Berta Tonka</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">29 August 2025 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
-			  	</div>
-			</div>  
-		</div>
-		
-		{% else %}
-		<div class="moj-timeline">
-			<div class="moj-timeline__item">
-				<div class="moj-timeline__header">
-					<h2 class="moj-timeline__title">Status update</h2>
-					<p class="moj-timeline__byline">by Berta Tonka</p>
-			  	</div>
-			  	<p class="moj-timeline__date">
-					<time datetime="2023-06-28T10:00:00.000Z">29 August 2025 at 10:00am</time>
-			  	</p>
-			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
-			  	</div>
-			</div> 
-		</div>
-		{% endif %}
     </div>
 </div>
 {% endblock %}

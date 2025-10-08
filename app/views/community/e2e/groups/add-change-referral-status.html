@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Alex River’s referral status will change to Scheduled - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Alex River’s referral status will change to Scheduled</h1>
+
+		<form action="add-change-referral-status-post" method="post">
+			<div class="govuk-form-group">
+
+				{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+				{{ govukCharacterCount({
+				name: "referral-status-details",
+				id: "referral-status-details",
+				maxlength: 500,
+				label: {
+					text: "Add details (optional)",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+				hint: {
+					text: "You can add more information about this update if you need to."
+				}
+				}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+				<input type="hidden" id="add-change-referral-status" name="add-change-referral-status" value="add-change-referral-status">
+				<button class="govuk-button" data-module="govuk-button">Submit</button>
+				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
