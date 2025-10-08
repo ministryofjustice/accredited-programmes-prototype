@@ -32,7 +32,7 @@ router.post('/community/e2e/profiles/referral-details/change-cohort-post', funct
 }) 
 
 // Change LDC status
-// profile/referral-details/change-ldc-status
+// profiles/referral-details/change-ldc-status
 router.post('/community/e2e/profiles/referral-details/change-ldc-status-post', function (req, res) { 
 
  if(req.session.data['choose-ldc-status']=="yes-ldc") 
@@ -48,9 +48,13 @@ router.post('/community/e2e/profiles/referral-details/change-ldc-status-post', f
 }) 
 
 // Change referral status
-// profile/referral-details/change-referral-status
+// profiles/referral-details/change-referral-status
+// and
+// profiles/referral-details-change-referral-status-scheduled-update
+// profiles/referral-details-change-referral-status-awaiting-allocation-update
 router.post('/community/e2e/profiles/referral-details/change-referral-status-post', function (req, res) {
-	const referralChanged = req.session.data['choose-referral-status']
+	req.session.data['show-success-banner'] = true;
+  const referralChanged = req.session.data['choose-referral-status']
     	if (referralChanged == 'awaiting-allocation') {
 			res.redirect('status-history')
      	} 
@@ -68,8 +72,32 @@ router.post('/community/e2e/profiles/referral-details/change-referral-status-pos
 	  	}
  	})
 
+  router.get('/community/e2e/profiles/referral-details/status-history', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/profiles/referral-details/status-history', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
+
+// Change referral status Scheduled > On programme
+// profiles/referral-details/change-referral-status-scheduled-group
+router.post('/community/e2e/profiles/referral-details/change-referral-status-scheduled-group-post', function (req, res) { 
+
+ if(req.session.data['started-programme']=="yes") 
+
+ {res.redirect('change-referral-status-scheduled-on-prog') } 
+
+ if(req.session.data['started-programme']=="no") 
+
+ { res.redirect('change-referral-status-scheduled-update')} 
+
+}) 
+
+
 // Show success banner and inset text when user has submitted motivation form
-// profile/referral-details/change-motivation-background
+// profiles/referral-details/change-motivation-background
 router.post('/community/e2e/profiles/referral-details/change-motivation-background-post', function (req, res) { 
     req.session.data['show-success-banner'] = true;
     req.session.data['show-last-update'] = true;
@@ -85,5 +113,68 @@ router.get('/community/e2e/profiles/referral-details/motivation-background', fun
         showBanner: showBanner
     });
 })
+
+// Remove from group and change referral status journey
+// A) groups/remove-from-group
+router.post('/community/e2e/groups/remove-from-group-post', function (req, res) { 
+
+ if(req.session.data['remove-from-group']=="yes") 
+
+ {res.redirect('remove-change-referral-status') } 
+
+ if(req.session.data['remove-from-group']=="no") 
+
+ { res.redirect('group-details-allocated')} 
+
+}) 
+
+// B) group/remove-change-referral-status
+router.post('/community/e2e/groups/remove-change-referral-status-post', function (req, res) {
+	req.session.data['show-success-banner'] = true;
+  const referralChanged = req.session.data['choose-referral-status']
+    	if (referralChanged == 'deprioritised') {
+			res.redirect('group-details-allocated')
+     	} 
+		else if (referralChanged == 'recall') {
+       		res.redirect('group-details-allocated')
+     	}
+    else if (referralChanged == 'return-to-court') {
+       		res.redirect('group-details-allocated')
+     	}
+		else {
+			res.redirect('group-details-allocated')
+	  	}
+})
+
+ router.get('/community/e2e/groups/group-details-allocated', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/group-details-allocated', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
+
+// Add to a group and change referral status to Scheduled
+// A) groups/add-to-group
+router.post('/community/e2e/groups/add-to-group-post', function (req, res) { 
+
+ if(req.session.data['add-to-group']=="yes") 
+
+ {res.redirect('add-change-referral-status') } 
+
+ if(req.session.data['add-to-group']=="no") 
+
+ { res.redirect('group-details-waitlist')} 
+
+}) 
+
+// B) group/add-change-referral-status
+router.post('/community/e2e/groups/add-change-referral-status-post', function (req, res) {
+	req.session.data['show-success-banner'] = true;
+  res.redirect('group-details-allocated');
+})
+
+
 
 }

@@ -99,8 +99,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<dt class="govuk-summary-list__key">Time of sessions</dt>
 					<dd class="govuk-summary-list__value">
 						<ul class="govuk-list">
-							<li>Mondays 2.00pm to 11.30am</li>
-							<li>Thursdays 2.00 to 3.30pm</li>
+							<li>Mondays 10.00am to 11.30am</li>
+							<li>Thursdays 2.00pm to 3.30pm</li>
 						</ul>
 					</dd>
 				</div>
@@ -220,8 +220,31 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="govuk-grid-column-three-quarters">
+
+		{% if showBanner %}
+		<div role="region" class="moj-alert moj-alert--success" aria-label="success: Person removed successfully" data-module="moj-alert" data-dismissible="true">
+			<div>
+			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			  	</svg>
+			</div>
+				{% if data['choose-referral-status'] == "deprioritised" %}
+					<div class="moj-alert__content">Alex River was removed from this group. Their referral status is now Deprioritised.</div>
+				{% elseif data['choose-referral-status'] == "recall" %}
+					<div class="moj-alert__content">Alex River was removed from this group. Their referral status is now Recall.</div>
+				{% elseif data['choose-referral-status'] == "return-to-court" %}
+					<div class="moj-alert__content">Alex River was removed from this group. Their referral status is now Return to Court.</div>
+				{% else %}
+					<div class="moj-alert__content">Alex River was added to this group. Their referral status is now Scheduled.</div>
+				{% endif %}
+			<div class="moj-alert__action">
+			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
+			</div>
+		</div>
+		{% endif %}
+
 		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
@@ -262,7 +285,9 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
 			<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Scheduled</strong></td>
+			<!-- Version with multiple referral statuses - post-MVP
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>-->
 			</tr>
 
 		{% endfor %}

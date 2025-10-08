@@ -30,12 +30,16 @@ Update Alex River’s referral status - {{ serviceName }} - GOV.UK Prototype Kit
 					<time datetime="2023-06-29T16:12:00.000Z">29 August 2025 at 10:00am</time>
 			  	</p>
 			  	<div class="moj-timeline__description">
-					<strong class="govuk-tag govuk-tag--purple">Awaiting assessment</strong>
+					<strong class="govuk-tag govuk-tag--light-blue">Awaiting allocation</strong>
 			  	</div>
 			</div> 
 		</div>
 
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+		<div class="govuk-inset-text">
+			If you want to change this person’s status to Scheduled, you must <a href="../../groups/group-list" class="govuk-link">allocate them to a group</a>.
+		</div>
 
 		<form action="change-referral-status-post" method="post">
 			<div class="govuk-form-group">
@@ -55,34 +59,20 @@ Update Alex River’s referral status - {{ serviceName }} - GOV.UK Prototype Kit
 				},
 				items: [
 					{
-					value: "awaiting-allocation",
-					text: "Awaiting allocation",
-					hint: {
-						text: "The person has been assessed as suitable and can be allocated to a group."
-					}
-					},
-					{
-					value: "suitable-but-not-ready",
-					text: "Suitable but not ready",
-					hint: {
-						text: "The person meets the suitability criteria but is not ready to start the programme. The referral will be paused until they are ready."
-					}
-					},
-										{
 					value: "deprioritised",
 					text: "Deprioritised",
 					hint: {
 						text: "The person is suitable but does not meet the prioritisation criteria. The referral will be paused in case they are reprioritised."
 					}
 					},
-										{
+					{
 					value: "recall",
 					text: "Recall",
 					hint: {
 						text: "The person has been recalled. Depending on the recall type, the referral may be withdrawn or returned to awaiting assessment."
 					}
 					},
-										{
+					{
 					value: "return-to-court",
 					text: "Return to court",
 					hint: {
@@ -104,13 +94,13 @@ Update Alex River’s referral status - {{ serviceName }} - GOV.UK Prototype Kit
 					isPageHeading: false
 				},
 				hint: {
-					text: "You can add more information about this update, such as the reason for an assessment decision or for deprioritising someone."
+					text: "You can add more information about this update, such as the reason for deprioritising someone."
 				}
 				}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
 				<button class="govuk-button" data-module="govuk-button">Submit</button>
-				<a class="govuk-link" href="javascript:history.back()">Cancel</a>
+				<a class="govuk-link" href="status-history">Cancel</a>
 			</div>
 			</div>
 		</form>
