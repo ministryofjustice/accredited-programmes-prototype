@@ -99,8 +99,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<dt class="govuk-summary-list__key">Time of sessions</dt>
 					<dd class="govuk-summary-list__value">
 						<ul class="govuk-list">
-							<li>Mondays 10.00am to 11.30am</li>
-							<li>Thursdays 2.00pm to 3.30pm</li>
+							<li>Mondays 10am to 12.30pm</li>
+							<li>Thursdays 2pm to 4.30pm</li>
 						</ul>
 					</dd>
 				</div>
@@ -128,95 +128,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 		<div class="moj-filter__content">
 			<div class="moj-filter__options">
+				<div class="govuk-button-group">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
 				<div class="govuk-form-group">
 					<label class="govuk-label govuk-label--s" for="search-name-crn">Group code</label>
 					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
 				</div>				
-				<div class="govuk-form-group">
-					<label class="govuk-label govuk-label--s" for="pdu">PDU</label>
-					<select class="govuk-select" id="pdu" name="pdu" style="width: 100%">
-						<option value="select" selected>Select PDU</option>
-						<option value="pdu-1">County Durham and Darlington</option>
-						<option value="pdu-2">Gateshead and South Tyneside</option>
-						<option value="pdu-3">Newcastle Upon Tyne</option>
-						<option value="pdu-2">North Tyneside and Northumberland</option>
-						<option value="pdu-2">Redcar, Cleveland and Middlesbrough</option>
-						<option value="pdu-2">Stockton and Hartlepool</option>
-						<option value="pdu-2">Sunderland</option>
-					</select>
-				</div>
-				<div class="govuk-form-group">
-					<fieldset class="govuk-fieldset">
-						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-							<h1 class="govuk-fieldset__heading">Reporting team</h1>
-						</legend>
-						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-1" name="reporting-team"
-									type="checkbox" value="darlington-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-1">Darlington 1</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-2" name="reporting-team"
-									type="checkbox" value="darlington-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-2">Darlington 2</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-4" name="reporting-team"
-									type="checkbox" value="north-durham-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-4">North Durham 2</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-5" name="reporting-team"
-									type="checkbox" value="north-durham-3">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-5">North Durham 3</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-6" name="reporting-team"
-									type="checkbox" value="peterlee-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-6">Peterlee 1</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-7" name="reporting-team"
-									type="checkbox" value="peterlee-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-7">Peterlee 2</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-8" name="reporting-team"
-									type="checkbox" value="south-durham-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-8">South Durham 1</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-9" name="reporting-team"
-									type="checkbox" value="south-durham-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-9">South Durham 2</label>
-							</div>
-						</div>
-					</fieldset>
-				</div>
-				<div class="govuk-form-group">
-					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
-					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
-						<option value="select" selected>Select cohort</option>
-						<option value="general-offence">General offence</option>
-						<option value="general-offence">General offence LDC</option>
-						<option value="sexual-offence">Sexual offence</option>
-						<option value="sexual-offence">Sexual offence LDC</option>
-					</select>
-				</div>
-				<div class="govuk-form-group">
-					<label class="govuk-label govuk-label--s" for="cohort">Sex</label>
-					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
-						<option value="select" selected>Select sex</option>
-						<option value="general-offence">Male</option>
-						<option value="general-offence">Female</option>
-						<option value="sexual-offence">Mixed</option>
-					</select>
-				</div>
-				<div class="govuk-button-group govuk-!-margin-right-3">
-					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
-					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
-				</div>
 			</div>
 		</div>
 	</div>

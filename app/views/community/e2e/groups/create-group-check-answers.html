@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,10 +18,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create a group</span>
-		<h1 class="govuk-heading-xl">Review and finish creating your group</h1>
+		<span class="govuk-caption-xl">Create a group BCCDD1</span>
+		<h1 class="govuk-heading-xl">Review your group details</h1>
 
-		<p class="govuk-body govuk-!-margin-bottom-8">We will use these details to create a schedule for the group.</p>
+		<p class="govuk-body govuk-!-margin-bottom-6">This information will be used to create a draft group and schedule. You can edit the details later.</p>
 		
 		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
@@ -46,7 +46,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "Start date for group"
+				text: "Start date"
 			},
 			value: {
 				text: "13 November 2025"
@@ -63,10 +63,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "When the group runs"
+				text: "Days and times"
 			},
 			value: {
-        		html: '<p class="govuk-body">Mondays 10.00am to 12.00pm</p><p class="govuk-body">Thursdays 2.30pm to 4.00pm</p>'
+        		html: '<p class="govuk-body">Mondays 9.30am to midday</p><p class="govuk-body">Thursdays 2.30pm to 4pm</p>'
       		},
 			actions: {
 				items: [
@@ -165,11 +165,28 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "Facilitator(s)"
+				text: "Facilitators"
 			},
 			value: {
         		html: '<p class="govuk-body">Harpreet Singh</p><p class="govuk-body">Tom Bassett</p>'
       		},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Facilitators"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Cover facilitators"
+			},
+			value: {
+				text: "Tom Saunders"
+			},
 			actions: {
 				items: [
 				{

@@ -79,8 +79,10 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					Alex River’s referral status is now Deprioritised.
 				{% elseif data['choose-referral-status'] == "recall" %}
 					Alex River’s referral status is now Recall.
-				{% else %}
+				{% elseif data['choose-referral-status'] == "return-to-court" %}
 					Alex River’s referral status is now Return to court.
+				{% else %}
+					Alex River’s referral status is now On programme.
 				{% endif %}
 			</div>
 			<div class="moj-alert__action">
@@ -112,6 +114,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						<strong class="govuk-tag govuk-tag--orange">Recall</strong>
 					{% elseif data['choose-referral-status'] == "return-to-court" %}
 						<strong class="govuk-tag govuk-tag--orange">Return to court</strong>
+					{% else %}
+						<strong class="govuk-tag govuk-tag--green">On programme</strong>
 					{% endif %}
 					{% if data['referral-status-details'] %}
 						<p class="govuk-body govuk-!-margin-top-4"><strong>Details:</strong> {{ data['referral-status-details'] }}</p>

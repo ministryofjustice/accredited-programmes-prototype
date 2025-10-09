@@ -175,6 +175,13 @@ router.post('/community/e2e/groups/add-change-referral-status-post', function (r
   res.redirect('group-details-allocated');
 })
 
+// Make success banner show for a Scheduled > On programme referral update
+// community/e2e/profiles/referral-details/change-referral-status-scheduled-group
+router.post('/community/e2e/profiles/referral-details/change-referral-status-scheduled-on-prog-post', function (req, res) {
+	req.session.data['show-success-banner'] = true;
+  res.redirect('status-history');
+})
+
 
 
 }
