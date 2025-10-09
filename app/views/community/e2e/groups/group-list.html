@@ -44,6 +44,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 		<div class="moj-filter__content">
 			<div class="moj-filter__options">
+				<div class="govuk-button-group">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
 				<div class="govuk-form-group">
 					<label class="govuk-label govuk-label--s" for="search-name-crn">Group code</label>
 					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
@@ -64,48 +68,38 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
 						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-							<h1 class="govuk-fieldset__heading">Reporting team</h1>
+							Delivery location
 						</legend>
 						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-1" name="reporting-team"
 									type="checkbox" value="darlington-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-1">Darlington 1</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-1">County Durham: Darlington Probation Office</label>
 							</div>
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-2" name="reporting-team"
 									type="checkbox" value="darlington-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-2">Darlington 2</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-2">County Durham: Durham City Probation Office</label>
 							</div>
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-4" name="reporting-team"
 									type="checkbox" value="north-durham-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-4">North Durham 2</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-4">County Durham: Newton Aycliffe Probation Office</label>
 							</div>
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-5" name="reporting-team"
 									type="checkbox" value="north-durham-3">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-5">North Durham 3</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-5">County Durham: Peterlee Probation Office</label>
 							</div>
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-6" name="reporting-team"
 									type="checkbox" value="peterlee-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-6">Peterlee 1</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-6">Darlington: 11 Woodland Road</label>
 							</div>
 							<div class="govuk-checkboxes__item">
 								<input class="govuk-checkboxes__input" id="reporting-team-7" name="reporting-team"
 									type="checkbox" value="peterlee-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-7">Peterlee 2</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-8" name="reporting-team"
-									type="checkbox" value="south-durham-1">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-8">South Durham 1</label>
-							</div>
-							<div class="govuk-checkboxes__item">
-								<input class="govuk-checkboxes__input" id="reporting-team-9" name="reporting-team"
-									type="checkbox" value="south-durham-2">
-								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-9">South Durham 2</label>
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-7">Durham: Wear House</label>
 							</div>
 						</div>
 					</fieldset>
@@ -128,10 +122,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<option value="general-offence">Female</option>
 						<option value="sexual-offence">Mixed</option>
 					</select>
-				</div>
-				<div class="govuk-button-group govuk-!-margin-right-3">
-					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
-					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
 				</div>
 			</div>
 		</div>

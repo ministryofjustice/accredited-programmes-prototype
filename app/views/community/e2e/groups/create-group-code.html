@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Create a group code - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -25,12 +25,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 		{{ govukInput({
 			label: {
-				text: "Add a group code",
+				text: "Create a group code",
 				classes: "govuk-label--xl",
 				isPageHeading: true
 			},
 			hint: {
-				text: "This will be used to identify the group so this needs to be unique."
+				text: "For example, BCCDD1. This will be used to identify your group."
 			},
 			classes: "govuk-input--width-20",
 			id: "group-code",

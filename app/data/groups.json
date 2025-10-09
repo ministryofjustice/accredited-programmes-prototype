@@ -7,7 +7,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Male",
-    "allocated":"12 of 10"
+    "allocated":"8 of 6"
     },
     {
     "groupCode":"BCCDD2",
@@ -37,7 +37,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
-    "allocated":"5 of 10"
+    "allocated":"5 of 6"
     },
     {
     "groupCode":"BCNTN4",
@@ -67,7 +67,7 @@
     "cohort":"Sexual offence",
     "cohortTag":"LDC",
     "sex":"Female",
-    "allocated":"5 of 8"
+    "allocated":"5 of 6"
     },
     {
     "groupCode":"BCRCM2",
@@ -77,7 +77,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
-    "allocated":"1 of 10"
+    "allocated":"1 of 6"
     },
     {
     "groupCode":"BCRCM3",
@@ -107,7 +107,7 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Male",
-    "allocated":"14 of 10"
+    "allocated":"14 of 6"
     },
     {
     "groupCode":"BCCDD1",
@@ -127,6 +127,6 @@
     "cohort":"General offence",
     "cohortTag":"LDC",
     "sex":"Female",
-    "allocated":"4 of 8"
+    "allocated":"4 of 6"
     }
 ]
