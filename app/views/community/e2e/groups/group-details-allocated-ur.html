@@ -30,7 +30,27 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</div>
 		</div>
-<div class="govuk-grid-row govuk-!-margin-top-8">
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+
+		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href=" ">Group overview</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated-ur">Allocations</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule overview</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-5">
 	<div class="govuk-grid-column-two-thirds">
 		<div class="govuk-summary-card">
 			<div class="govuk-summary-card__title-wrapper">
@@ -45,19 +65,23 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Delivery location</dt>
-						<dd class="govuk-summary-list__value">County Durham: Darlington Probation Office</dd>
+						<dd class="govuk-summary-list__value">Darlington: 11 Woodland Road</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Treatment Manager</dt>
-						<dd class="govuk-summary-list__value">Berta Tonka</dd>
+						<dd class="govuk-summary-list__value">Chloe Pascal</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Facilitators</dt>
-						<dd class="govuk-summary-list__value">Berta Tonka, Nathan Jones</dd>
+						<dd class="govuk-summary-list__value">Harpreet Singh, Tom Bassett</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Cover facilitators</dt>
+						<dd class="govuk-summary-list__value">Tom Saunders</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Cohort</dt>
-						<dd class="govuk-summary-list__value">Sexual offence <span class="moj-badge moj-badge--bright-purple">LDC</span></dd>
+						<dd class="govuk-summary-list__value">General offence</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Sex</dt>
@@ -65,7 +89,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Allocated</dt>
-						<dd class="govuk-summary-list__value">9 of 10</dd>
+						<dd class="govuk-summary-list__value">0 of 10</dd>
 					</div>
 				</dl>
 			</div>
@@ -163,16 +187,23 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated">Allocated (9)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated-ur">Allocated (0)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-waitlist">Waitlist (52)</a>
+					<a class="moj-sub-navigation__link" href="group-details-waitlist-ur">Waitlist (52)</a>
 				</li>
 			</ul>
 		</nav>
-		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>9</strong> of <strong>9</strong> results</p>
+		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">
+			{% if showAllocated %}
+				Showing <strong>1</strong> to <strong>1</strong> of <strong>1</strong> result
+			{% else %}
+				Showing <strong>0</strong> results
+			{% endif %}
+		</p>
 
 <!--- Form action simply redirects users to the remove from a group page -->
+{% if showAllocated %}
 <form action="remove-from-group" method="post">
 	<table class="govuk-table" style="max-width:70%;" data-module="moj-sortable-table">
 		<thead class="govuk-table__head">
@@ -183,43 +214,41 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
 			</tr>
 		</thead>
-		
 	<tbody>
-		{% for referral in data['people'] %}
-		
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
 				<div class="govuk-radios govuk-radios--small">
 					<div class="govuk-radios__item">
-						<input type="radio" class="govuk-radios__input" name="group-allocated" id="allocated-{{referral.lastName}}-{{referral.firstName}}" value="{{referral.lastName}}-{{referral.firstName}}">
-						<label class="govuk-label govuk-radios__label" for="group-{{referral.lastName}}-{{referral.firstName}}">
-						<span class="govuk-visually-hidden">{{referral.lastName}}, {{referral.firstName}}</span>
+						<input type="radio" class="govuk-radios__input" name="group-allocated" id="allocated-river-alex" value="river-alex">
+						<label class="govuk-label govuk-radios__label" for="group-river-alex">
+						<span class="govuk-visually-hidden">River, Alex</span>
 					</div>
 				</div>
 			</td>
 			<td class="govuk-table__cell">
-				<a href="../profiles/referral-details/availability?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
-			<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
+			<td class="govuk-table__cell">20 May 2026<br/>Licence end date</td>
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Scheduled</strong></td>
 			<!-- Version with multiple referral statuses - post-MVP
 			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>-->
-			</tr>
-
-		{% endfor %}
-
-		</tbody>
-	</table>
+		</tr>
+	</tbody>
+</table>
 	<button type="submit" class="govuk-button" data-module="govuk-button">Remove from group</button>
 </form>
 
-	<nav class="govuk-pagination" role="navigation" aria-label="results">
-		<ul class="govuk-pagination__list">
-			<li class="govuk-pagination__item govuk-pagination__item--current">
-				<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
-			</li>
-		</ul>
-	</nav>
-		
+<nav class="govuk-pagination" role="navigation" aria-label="results">
+	<ul class="govuk-pagination__list">
+		<li class="govuk-pagination__item govuk-pagination__item--current">
+			<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+		</li>
+	</ul>
+</nav>
+
+	{% else %}
+	<p class="govuk-body-l">There are currently no people allocated to this group.</p>
+	{% endif %}
+
     </div>
 	</div>
 </div>

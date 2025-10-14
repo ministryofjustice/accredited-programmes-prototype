@@ -23,6 +23,9 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 
 		<p class="govuk-body govuk-!-margin-bottom-6">This information will be used to create a draft group and schedule. You can edit the details later.</p>
 		
+	<form action="group-schedule-overview-post" method="post">
+		<div class="govuk-form-group">
+
 		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 		{{ govukSummaryList({
@@ -49,7 +52,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Start date"
 			},
 			value: {
-				text: "13 November 2025"
+				text: "10 November 2025"
 			},
 			actions: {
 				items: [
@@ -66,7 +69,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Days and times"
 			},
 			value: {
-        		html: '<p class="govuk-body">Mondays 9.30am to midday</p><p class="govuk-body">Thursdays 2.30pm to 4pm</p>'
+        		html: '<p class="govuk-body">Mondays 9.30am to midday</p><p class="govuk-body">Thursdays 2.30pm to 5pm</p>'
       		},
 			actions: {
 				items: [
@@ -83,7 +86,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Cohort"
 			},
 			value: {
-				text: "General offence LDC"
+				text: "General offence"
 			},
 			actions: {
 				items: [
@@ -202,11 +205,11 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="group-manage-schedule" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Create this group
-			</a>
+			<button class="govuk-button" data-module="govuk-button">Create this group</button>
 			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
 		</div>
+		</div>
+	</form>
 	</div>
 </div>
 
