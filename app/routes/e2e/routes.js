@@ -131,18 +131,21 @@ router.post('/community/e2e/groups/remove-from-group-post', function (req, res) 
 // B) group/remove-change-referral-status
 router.post('/community/e2e/groups/remove-change-referral-status-post', function (req, res) {
 	req.session.data['show-success-banner'] = true;
+  //Delete row below after UR 15/10/25
+  req.session.data['showAllocated'] = false; // Clear the allocated view
   const referralChanged = req.session.data['choose-referral-status']
     	if (referralChanged == 'deprioritised') {
-			res.redirect('group-details-allocated')
+			//Change below after UR 15/10/25 - remove -ur from all instances
+      res.redirect('group-details-allocated-ur')
      	} 
-		else if (referralChanged == 'recall') {
-       		res.redirect('group-details-allocated')
+		else if (referralChanged == 'recall') {		
+      res.redirect('group-details-allocated-ur')
      	}
     else if (referralChanged == 'return-to-court') {
-       		res.redirect('group-details-allocated')
+       		res.redirect('group-details-allocated-ur')
      	}
 		else {
-			res.redirect('group-details-allocated')
+			res.redirect('group-details-allocated-ur')
 	  	}
 })
 
@@ -164,15 +167,17 @@ router.post('/community/e2e/groups/add-to-group-post', function (req, res) {
  {res.redirect('add-change-referral-status') } 
 
  if(req.session.data['add-to-group']=="no") 
-
- { res.redirect('group-details-waitlist')} 
+//Change below after UR 15/10/25 - remove -ur
+ { res.redirect('group-details-waitlist-ur')} 
 
 }) 
 
 // B) group/add-change-referral-status
 router.post('/community/e2e/groups/add-change-referral-status-post', function (req, res) {
 	req.session.data['show-success-banner'] = true;
-  res.redirect('group-details-allocated');
+  	req.session.data['showAllocated'] = true;
+  //Change below after UR 15/10/25 - remove -ur
+  res.redirect('group-details-allocated-ur');
 })
 
 // Make success banner show for a Scheduled > On programme referral update
@@ -182,6 +187,34 @@ router.post('/community/e2e/profiles/referral-details/change-referral-status-sch
   res.redirect('status-history');
 })
 
+
+// Make success banner show for creating a group
+// community/e2e/groups/group-schedule-overview
+router.get('/community/e2e/groups/group-schedule-overview', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/group-schedule-overview', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
+
+router.post('/community/e2e/groups/group-schedule-overview-post', function (req, res) {
+	req.session.data['show-success-banner'] = true;
+  res.redirect('group-schedule-overview');
+})
+
+// Delete this after UR 15/10/25
+ router.get('/community/e2e/groups/group-details-allocated-ur', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    const showAllocated = req.session.data['showAllocated'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/group-details-allocated-ur', {
+        data: req.session.data,
+        showBanner: showBanner,
+        showAllocated: showAllocated
+    });
+})
 
 
 }
