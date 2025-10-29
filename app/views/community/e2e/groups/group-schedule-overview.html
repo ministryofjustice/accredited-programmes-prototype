@@ -6,14 +6,53 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block header %}
 {% include "/includes/community/v3/head-no-nav.html" %}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+
 {% endblock %}
 
 {% block beforeContent %}
-<nav class="clear-right">
-	<a href="../home"
-		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
-		Accredited Programmes homepage</a>
-</nav>
+<div class="govuk-width-container">
+
+	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+		{{ govukBreadcrumbs({
+		items: [
+			{
+			text: "Groups",
+			href: "group-list"
+			},
+			{
+			text: "BCCDD1",
+			href: "group-details-overview-ur"
+			},
+			{
+			text: "Schedule overview",
+			href: "group-details-schedule-overview-ur"
+			}
+		]
+		}) }}
+
+</div>
 {% endblock %}
 
 {% block content %}
@@ -21,23 +60,24 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions clear">
 			<div class="moj-page-header-actions__title">
-				<span class="govuk-caption-xl">North East</span>
+				<!--<span class="govuk-caption-xl">North East</span>-->
 				<h1 class="govuk-heading-xl">BCCDD1</h1>
 			</div>
-			<div class="moj-page-header-actions__actions">
+			<!--<div class="moj-page-header-actions__actions">
 				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 					<a href="group-list" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to group list</a>
 				</div>
 			</div>
+		-->
 		</div>
 
-<div class="govuk-grid-row govuk-!-margin-top-8">
+<div class="govuk-grid-row">
 	<div class="govuk-grid-column-full">
 
-		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
+		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href=" ">Group overview</a>
+					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group overview</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
@@ -64,16 +104,50 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</div>
 		</div>
 		{% endif %}
-
-		<h2 class="govuk-heading-l govuk-!-margin-top-5">Schedule overview</h2>
-		<p class="govuk-body"><strong>Start date:</strong> Monday 10 November 2025</p>
-		<p class="govuk-body"><strong>End date:</strong> Thursday 19 February 2026</p>
-
-		<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-			View and manage schedule details
-		</button>
-
 	</div>
+
+	<div class="govuk-grid-column-full">
+
+		<h2 class="govuk-heading-l govuk-!-margin-top-4">Schedule overview</h2>
+		
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+			{{ govukSummaryList({
+			classes: "govuk-summary-list--no-border",
+			rows: [
+				{
+				key: {
+					text: "Pre-group one-to-ones start date"
+				},
+				value: {
+					text: "Thursday 23 April 2026"
+				}
+				},
+				{
+				key: {
+					text: "Getting started module start date"
+				},
+				value: {
+					text: "Thursday 14 May 2026"
+				}
+				},
+				{
+				key: {
+					text: "End date"
+				},
+				value: {
+					text: "Monday 3 September 2026"
+				}
+				}
+			]
+			}) }}
+
+		<a href="group-manage-schedule" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+			View and manage schedule details
+		</a>
+	</div>
+
+
 </div>
 
 <table class="govuk-table" data-module="moj-sortable-table">
