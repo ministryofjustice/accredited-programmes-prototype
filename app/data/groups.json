@@ -1,7 +1,7 @@
 [
     {
     "groupCode":"BCCDD1",
-    "startDate":"10 Nov 2025",
+    "startDate":"Wednesday 10 Dec 2025",
     "pdu":"County Durham and Darlington",
     "deliveryLocation":"County Durham: Darlington Probation Office",
     "cohort":"Sexual offence",
@@ -11,7 +11,7 @@
     },
     {
     "groupCode":"BCCDD2",
-    "startDate":"2 Nov 2025",
+    "startDate":"Monday 5 Jan 2026",
     "pdu":"County Durham and Darlington",
     "deliveryLocation":"Darlington: 11 Woodland Road",
     "cohort":"General offence",
@@ -21,7 +21,7 @@
     },
     {
     "groupCode":"BCGTS1",
-    "startDate":"21 Jan 2026",
+    "startDate":"Wednesday 21 Jan 2026",
     "pdu":"Gateshead and South Tyneside",
     "deliveryLocation":"Gateshead: Gateshead Probation Office",
     "cohort":"General offence",
@@ -31,7 +31,7 @@
     },
     {
     "groupCode":"BCGTS3",
-    "startDate":"23 Mar 2026",
+    "startDate":"Monday 23 Mar 2026",
     "pdu":"Gateshead and South Tyneside",
     "deliveryLocation":"Gateshead: Swan House",
     "cohort":"General offence",
@@ -41,7 +41,7 @@
     },
     {
     "groupCode":"BCNTN4",
-    "startDate":"1 Nov 2025",
+    "startDate":"Wednesday 1 Apr 2026",
     "pdu":"North Tyneside and Northumberland",
     "deliveryLocation":"Northumberland: Ashington Probation Office",
     "cohort":"General offence",
@@ -51,7 +51,7 @@
     },
     {
     "groupCode":"BCGTS4",
-    "startDate":"1 Feb 2026",
+    "startDate":"Thursday 23 Apr 2026",
     "pdu":"Gateshead and South Tyneside",
     "deliveryLocation":"Gateshead: Gateshead Probation Office",
     "cohort":"Sexual offence",
@@ -61,7 +61,7 @@
     },
     {
     "groupCode":"BCRCM1",
-    "startDate":"30 Apr 2026",
+    "startDate":"Friday 29 May 2026",
     "pdu":"Redcar, Cleveland and Middlesbrough",
     "deliveryLocation":"Tees Valley: Middlesbrough Probation Office",
     "cohort":"Sexual offence",
@@ -71,7 +71,7 @@
     },
     {
     "groupCode":"BCRCM2",
-    "startDate":"1 Jul 2026",
+    "startDate":"Wednesday 1 July 2026",
     "pdu":"Redcar, Cleveland and Middlesbrough",
     "deliveryLocation":"Tees Valley: South Bank Probation Office",
     "cohort":"General offence",
@@ -81,7 +81,7 @@
     },
     {
     "groupCode":"BCRCM3",
-    "startDate":"12 Oct 2026",
+    "startDate":"Monday 14 Sept 2026",
     "pdu":"County Durham and Darlington",
     "deliveryLocation":"County Durham: Darlington Probation Office",
     "cohort":"General offence",
@@ -91,7 +91,7 @@
     },
     {
     "groupCode":"BCRCM2",
-    "startDate":"9 Sep 2026",
+    "startDate":"Friday 9 Oct 2026",
     "pdu":"North Tyneside and Northumberland",
     "deliveryLocation":"North Tyneside: 110 Howard Street",
     "cohort":"Sexual offence",
@@ -101,7 +101,7 @@
     },
     {
     "groupCode":"BCNTN2",
-    "startDate":"11 Feb 2026",
+    "startDate":"Wednesday 11 Nov 2026",
     "pdu":"County Durham and Darlington",
     "deliveryLocation":"County Durham: Darlington Probation Office",
     "cohort":"General offence",
@@ -111,7 +111,7 @@
     },
     {
     "groupCode":"BCCDD1",
-    "startDate":"1 Jun 2026",
+    "startDate":"Tuesday 1 Dec 2026",
     "pdu":"North Tyneside and Northumberland",
     "deliveryLocation":"Northumberland: Ashington Probation Office",
     "cohort":"Sexual offence",
@@ -121,7 +121,7 @@
     },
     {
     "groupCode":"BCRCM4",
-    "startDate":"30 Mar 2026",
+    "startDate":"Thursday 3 Jan 2027",
     "pdu":"Redcar, Cleveland and Middlesbrough",
     "deliveryLocation":"Tees Valley: South Bank Probation Office",
     "cohort":"General offence",
