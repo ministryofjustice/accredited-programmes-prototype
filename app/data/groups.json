@@ -52,12 +52,12 @@
     {
     "groupCode":"BCCDD1",
     "startDate":"Thursday 23 Apr 2026",
-    "pdu":"Gateshead and South Tyneside",
-    "deliveryLocation":"Gateshead: Gateshead Probation Office",
-    "cohort":"Sexual offence",
+     "pdu":"County Durham and Darlington",
+    "deliveryLocation":"Darlington: 11 Woodland Road",
+    "cohort":"General offence",
     "cohortTag":" ",
-    "sex":"Mixed",
-    "allocated":"3 of 6"
+    "sex":"Male",
+    "allocated":"9 of 10"
     },
     {
     "groupCode":"BCRCM1",
