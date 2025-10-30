@@ -216,5 +216,54 @@ router.post('/community/e2e/groups/group-schedule-overview-post', function (req,
     });
 })
 
+// Groups - /add-session-type routing
+router.post('/community/e2e/groups/add-session-type-post', function (req, res) {
+
+  if(req.session.data['add-session-choose-type']=="getting-started-1") 
+
+ {res.redirect('add-session-group') } 
+
+  if(req.session.data['add-session-choose-type']=="getting-started-2") 
+
+ { res.redirect('add-session-group')} 
+
+   if(req.session.data['add-session-choose-type']=="getting-started-121") 
+
+ {res.redirect('add-session-individual') } 
+
+  if(req.session.data['add-session-choose-type']=="getting-started-121-catch-up") 
+
+ { res.redirect('add-session-individual')} 
+
+}) 
+
+// Redirect from add-session-group to add-session-group-check-answers
+router.post('/community/e2e/groups/add-session-group-post', function (req, res) { 
+
+ {res.redirect('add-session-group-check-answers') } 
+
+}) 
+
+// Redirect from add-session-group-check-answers to group-manage-schedule
+router.post('/community/e2e/groups/add-session-group-check-answers-post', function (req, res) { 
+
+ {res.redirect('group-manage-schedule') } 
+
+}) 
+
+// Redirect from add-session-individual to add-session-individual-check-answers
+router.post('/community/e2e/groups/add-session-individual-post', function (req, res) { 
+
+ {res.redirect('add-session-individual-check-answers') } 
+
+}) 
+
+// Redirect from add-session-individual-check-answers to group-manage-schedule
+router.post('/community/e2e/groups/add-session-individual-check-answers-post', function (req, res) { 
+
+ {res.redirect('group-manage-schedule') } 
+
+}) 
+
 
 }

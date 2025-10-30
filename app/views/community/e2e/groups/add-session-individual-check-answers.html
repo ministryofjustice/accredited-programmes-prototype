@@ -1,0 +1,156 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Review your session details - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Schedule a Getting started session</span>
+		<h1 class="govuk-heading-l">Review your session details</h1>
+
+	<form action="add-session-individual-check-answers-post" method="post">
+		<div class="govuk-form-group">
+
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Session name"
+			},
+			value: {
+				text: "River, Alex (X123456): Getting started one-to-one"
+			}
+			},
+			{
+			key: {
+				text: "Session type"
+			},
+			value: {
+				text: "Individual"
+			},
+			actions: {
+				items: [
+				{
+					href: "add-session-type",
+					text: "Change",
+					visuallyHiddenText: "session type"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Date"
+			},
+			value: {
+        		text: "Thursday 21st May 2026"
+      		},
+			actions: {
+				items: [
+				{
+					href: "add-session-individual",
+					text: "Change",
+					visuallyHiddenText: "date"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Time"
+			},
+			value: {
+				text: "10am to 11am (1 hour)"
+			},
+			actions: {
+				items: [
+				{
+					href: "add-session-individual",
+					text: "Change",
+					visuallyHiddenText: "time"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Attendee"
+			},
+			value: {
+        		text: "River, Alex"
+      		},
+			actions: {
+				items: [
+				{
+					href: "add-session-individual",
+					text: "Change",
+					visuallyHiddenText: "attendees"
+				}
+				]
+			}
+			},
+		{
+			key: {
+				text: "Facilitators"
+			},
+			value: {
+        		text: "Tom Bassett"
+      		},
+			actions: {
+				items: [
+				{
+					href: "add-session-individual",
+					text: "Change",
+					visuallyHiddenText: "facilitators"
+				}
+				]
+			}
+			}
+		]
+		}) }}	
+
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Create session</button>
+			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+		</div>
+		</div>
+	</form>
+	</div>
+</div>
+
+{% endblock %}
+

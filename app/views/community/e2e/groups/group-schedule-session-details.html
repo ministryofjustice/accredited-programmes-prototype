@@ -1,0 +1,323 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container">
+
+	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+		{{ govukBreadcrumbs({
+		items: [
+			{
+			text: "Groups",
+			href: "group-list"
+			},
+			{
+			text: "BCCDD1",
+			href: "group-details-overview-ur"
+			},
+			{
+			text: "Schedule overview",
+			href: "group-schedule-overview"
+			},
+			{
+			text: "Manage schedule",
+			href: "group-manage-schedule"
+			},
+			{
+			text: "Getting started 1: Introduction to Building Choices",
+			href: "group-schedule-session-details"
+			}
+		]
+		}) }}
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">BCCDD1</span>
+		<h1 class="govuk-heading-l">Getting started 1: Introduction to Building Choices</h1>
+
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Session type"
+			},
+			value: {
+				text: "Group"
+			}
+			},
+			{
+			key: {
+				text: "Date"
+			},
+			value: {
+        		text: "Thursday 14 May 2026"
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "date"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Time"
+			},
+			value: {
+				text: "11am to 1:30pm (2.5 hours)"
+			},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "time"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Attendees"
+			},
+			value: {
+        		html: '<p class="govuk-body">Booth, Sham</p>
+						<p class="govuk-body">Charles, Eric</p>
+						<p class="govuk-body">Dillion, Ben</p>
+						<p class="govuk-body">Fredric, Roman</p>
+						<p class="govuk-body">Hussain, Ali</p>
+						<p class="govuk-body">Jones, Jack</p>
+						<p class="govuk-body">Martinez, Gabriel</p>
+						<p class="govuk-body">Poole, Adrian</p>
+						<p class="govuk-body">River, Alex</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "attendees"
+				}
+				]
+			}
+			},
+		{
+			key: {
+				text: "Facilitators"
+			},
+			value: {
+        		html: '<p class="govuk-body">Harpreet Singh</p><p class="govuk-body">Tom Bassett</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "facilitators"
+				}
+				]
+			}
+			}
+		]
+		}) }}	
+
+<hr class="govuk-section-break govuk-section-break--l">
+
+<h2 class="govuk-heading-m">Attendance</h2>
+
+<form action="mark-attendance" method="post">
+	<table class="govuk-table" data-module="moj-sortable-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th class="govuk-table__header" style="width: 5%"></th>
+				<th scope="col" class="govuk-table__header">Name and CRN</th>
+				<th scope="col" class="govuk-table__header">Attendance status</th>
+				<th scope="col" class="govuk-table__header">Notes</th>
+			</tr>
+		</thead>
+	<tbody>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-booth-sham" value="booth-sham">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-booth-sham">
+						<span class="govuk-visually-hidden">Booth, Sham</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Booth, Sham</a><br/>B739123</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-charles-eric" value="charles-eric">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-charles-eric">
+						<span class="govuk-visually-hidden">Charles, Eric</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Charles, Eric</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-dillion-ben" value="dillion-ben">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-dillion-ben">
+						<span class="govuk-visually-hidden">Dillion, Ben</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Dillion, Ben</a><br/>P689325</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-fredric-roman" value="fredric-roman">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-fredric-roman">
+						<span class="govuk-visually-hidden">Fredric, Roman</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Fredric, Roman</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-hussain-ali" value="hussain-ali">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-hussain-ali">
+						<span class="govuk-visually-hidden">Hussain, Ali</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Hussain, Ali</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-jones-jack" value="jones-jack">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-jones-jack">
+						<span class="govuk-visually-hidden">Jones, Jack</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Jones, Jack</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-martinez-gabriel" value="martinez-gabriel">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-martinez-gabriel">
+						<span class="govuk-visually-hidden">Martinez, Gabriel</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Martinez, Gabriel</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-poole-adrian" value="poole-adrian">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-poole-adrian">
+						<span class="govuk-visually-hidden">Poole, Adrian</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Poole, Adrian</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-river-alex" value="river-alex">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-river-alex">
+						<span class="govuk-visually-hidden">River, Alex</span>
+					</div>
+				</div>
+			</td>
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+	</tbody>
+</table>
+	<button type="submit" class="govuk-button" data-module="govuk-button">Record attendance</button>
+</form>
+
+	</div>
+</div>
+
+
+
+{% endblock %}
