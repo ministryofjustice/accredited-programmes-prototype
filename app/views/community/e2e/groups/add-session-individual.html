@@ -1,0 +1,222 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Which session are you scheduling? - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Schedule a Getting started session</span>
+		<h1 class="govuk-heading-l">Add session details</h1>
+
+		<form action="add-session-individual-post" method="post">
+		<div class="govuk-form-group">
+		
+		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		<div class="moj-datepicker" data-module="moj-date-picker">
+			<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="date">
+					What is the date of the session?
+					</label>
+				<div id="date-hint" class="govuk-hint">
+					The date has been set based on the session schedule. To change this, enter a date, for example 10/7/2025, or select one from the calendar.
+				</div>
+				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" value="21/5/2026" aria-describedby="date-hint" autocomplete="off">
+			</div>
+		</div>
+
+		<!--Adapted date component for time-->
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset govuk-!-margin-top-6" role="group">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3pm.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+			</div>
+		
+		<!--Adapted date component for time-->
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset govuk-!-margin-top-6" role="group">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					When does the session end?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3pm.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+			</div>
+
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+			name: "attendees",
+			fieldset: {
+				legend: {
+				text: "Who is the session for?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--m"
+				}
+			},
+			hint: {
+				text: "Select who should attend the session."
+			},
+			items: [
+				{
+				value: "booth-sham",
+				text: "Booth, Sham"
+				},
+				{
+				value: "charles-eric",
+				text: "Charles, Eric"
+				},
+				{
+				value: "dillion-ben",
+				text: "Dillion, Ben"
+				},
+				{
+				value: "fredric-roman",
+				text: "Fredric, Roman"
+				},
+				{
+				value: "hussain-ali",
+				text: "Hussain, Ali"
+				},
+				{
+				value: "jones-jack",
+				text: "Jones, Jack"
+				},
+				{
+				value: "martinez-gabriel",
+				text: "Martinez, Gabriel"
+				},
+				{
+				value: "poole-adrian",
+				text: "Poole, Adrian"
+				},
+				{
+				value: "river-alex",
+				text: "River, Alex"
+				}
+			]
+		}) }}
+
+		<div data-module="moj-add-another">
+		<form method="post">
+			<fieldset class="govuk-fieldset moj-add-another__item">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="facilitator">
+				Facilitator
+				</label>
+				<input class="govuk-input govuk-input--width-20" id="facilitator" name="facilitator" type="text">
+			</div>
+			</fieldset>
+			<div class="moj-button-action">
+			<button type="submit" class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-top-4" data-module="govuk-button">
+				Add another facilitator
+			</button>
+		</div>
+
+		<p class="govuk-body govuk-!-margin-bottom-8"> </p>
+
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+		</div>
+		</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

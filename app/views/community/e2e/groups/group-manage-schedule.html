@@ -46,7 +46,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: "Schedule overview",
-			href: "group-details-schedule-overview-ur"
+			href: "group-schedule-overview"
+			},
+			{
+			text: "Manage schedule",
+			href: "group-manage-schedule"
 			}
 		]
 		}) }}
@@ -88,219 +92,438 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</nav>
 
 		<h2 class="govuk-heading-l govuk-!-margin-top-4">Manage schedule</h2>
+		<p class="govuk-body">
+			Sessions that fall on bank holidays have automatically been moved to the next scheduled date. You can change this if you need to.
+		</p>
 
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-  <div class="govuk-accordion__section">
+  <div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Pre-group: Individual sessions
+          Pre-group one-to-ones
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
-	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href=" ">Upcoming sessions</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href=" ">Completed sessions</a>
-				</li>
-			</ul>
-		</nav>
+	<div id="accordion-default-content-1" class="govuk-accordion__section-content">	
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-				<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Attendee(s)</th>
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Pre-group: 1-1</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Booth, Sham (B739123): Pre-group one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell">Thursday 23 April 2026</td>
+					<td class="govuk-table__cell">2:30pm to 3:30pm</td>
+					<td class="govuk-table__cell">Booth, Sham</td>
+					<td class="govuk-table__cell">Harpreet Singh</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Pre-group: 1-1</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Dillion, Ben (P689325): Pre-group one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell">Monday 27 April 2026</td>
+					<td class="govuk-table__cell">3:45pm to 4:45pm</td>
+					<td class="govuk-table__cell">Dillion, Ben</td>
+					<td class="govuk-table__cell">Harpreet Singh</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Pre-group: 1-1</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Pre-group one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Pre-group: 1-1</td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell">Tuesday 28 April 2026</td>
+					<td class="govuk-table__cell">2:30pm to 3:30pm</td>
+					<td class="govuk-table__cell">River, Alex</td>
+					<td class="govuk-table__cell">Tom Bassett</td>
 				</tr>
 			</tbody>
 		</table>
+		<p class="govuk-body"><strong>Pre-group one-to-ones:</strong> Thursday 23 April to Monday 11 May 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a pre-group session
+		</a>
     </div>
   </div>
 
-<div class="govuk-accordion__section">
+<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: Getting Started
+          Getting started
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
-	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href=" ">Upcoming sessions</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href=" ">Completed sessions</a>
-				</li>
-			</ul>
-		</nav>
+	<div id="accordion-default-content-1" class="govuk-accordion__section-content">	
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-				<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Attendee(s)</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started 1: Introduction to Building Choices</td>
+					<td class="govuk-table__cell"><a href="group-schedule-session-details" class="govuk-link govuk-link--no-visited-state">Getting started 1: Introduction to Building Choices</a></td>
 					<td class="govuk-table__cell">Group</td>
-					<td class="govuk-table__cell">Monday 3 November 2025</td>
-					<td class="govuk-table__cell">11.00am to 12.30pm</td>
-					<td class="govuk-table__cell">All</td>
+					<td class="govuk-table__cell">Thursday 14 May 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started 2: Understanding Myself</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2: Understanding myself</a></td>
 					<td class="govuk-table__cell">Group</td>
-					<td class="govuk-table__cell">Thursday 6 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 4.00pm</td>
-					<td class="govuk-table__cell">All</td>
-				</tr>				
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started: 1-1</td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell">Monday 18 May 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started: 1-1</td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2: Understanding myself catch-up</a></td>
+					<td class="govuk-table__cell">Catch-up</td>
+					<td class="govuk-table__cell">Thursday 21 May 2026</td>
+					<td class="govuk-table__cell">10am to 11am</td>
+					<td class="govuk-table__cell">Dillion, Ben<br>River, Alex</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started: 1-1</td>
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Dillion, Ben (P689325): Getting started one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 4 November 2025</td>
-					<td class="govuk-table__cell">2.30pm to 3.30pm</td>
-					<td class="govuk-table__cell">Alex River</td>
+					<td class="govuk-table__cell">Thursday 21 May 2026</td>
+					<td class="govuk-table__cell">11am to 12pm</td>
+					<td class="govuk-table__cell">Dillion, Ben</td>
+					<td class="govuk-table__cell">Tom Bassett</td>
 				</tr>
 				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">Getting Started 1: Catch up</td>
-					<td class="govuk-table__cell">Catch up</td>
-					<td class="govuk-table__cell">Thursday 6 November 2025</td>
-					<td class="govuk-table__cell">12.00pm to 1.30pm</td>
-					<td class="govuk-table__cell">Alex River, Shaun Booth</td>
-				</tr>				
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Booth, Sham (B739123): Getting started one-to-one</a></td>
+					<td class="govuk-table__cell">Individual</td>
+					<td class="govuk-table__cell">Thursday 21 May 2026</td>
+					<td class="govuk-table__cell">1:15pm to 2:15pm</td>
+					<td class="govuk-table__cell">Booth, Sham</td>
+					<td class="govuk-table__cell">Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Getting started one-to-one</a></td>
+					<td class="govuk-table__cell">Individual</td>
+					<td class="govuk-table__cell">Friday 22 May 2026</td>
+					<td class="govuk-table__cell">3:30 to 4:30pm</td>
+					<td class="govuk-table__cell">River, Alex</td>
+					<td class="govuk-table__cell">Tom Bassett</td>
+				</tr>
 			</tbody>
 		</table>
+		<p class="govuk-body"><strong>Getting started one-to-ones:</strong> Thursday 21 May 2026</p>
+		<a href="add-session-type" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Getting started session
+		</a>
+		</div>
     </div>
 
-	<div class="govuk-accordion__section">
+	<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: Managing Myself
+          Managing myself
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 1: Understanding my feelings</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 28 May 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2: Helpful and unhelpful feelings</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 1 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 3: Managing my feelings, part 1</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 4 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 4: Managing my feelings, part 2</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 8 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 5: Understanding my thinking</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 11 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 6: Developing my flexible thinking</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 15 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="govuk-body"><strong>Managing myself one-to-ones:</strong> Thursday 18 June 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Managing myself session
+		</a>
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section">
+	<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: Managing Life’s Problems
+          Managing life’s problems
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing life’s problems 1: Understanding problems</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 22 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing life’s problems 2: Exploring life’s problems</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 25 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing life’s problems 3: Planning to manage life’s problems</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 29 June 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing life’s problems 4: Putting it into action</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 2 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="govuk-body"><strong>Managing life’s problems one-to-ones:</strong> Monday 6 July 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Managing life’s problems session
+		</a>		
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section">
+	<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: Managing People Around Me
+          Managing people around me
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 1: Understanding the people and influences around me</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 9 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 2: My role in relationships</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 13 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 3: Relationship skills, part 1</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 16 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 4: Relationship skills, part 2</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 20 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 5: Practicing our relationship skills</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 23 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Managing people around me 6: Module skills practice</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 27 July 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="govuk-body"><strong>Managing people around me one-to-ones:</strong> Thursday 30 July 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Managing life’s problems session
+		</a>
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section">
+	<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: Bringing It All Together
+          Bringing it all together
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		
+		<table class="govuk-table" data-module="moj-sortable-table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
+					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Bringing it all together 1: Future me plan</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 3 August 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Bringing it all together 2: Future me practice</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Thursday 6 August 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Bringing it all together 3: Programme completion</a></td>
+					<td class="govuk-table__cell">Group</td>
+					<td class="govuk-table__cell">Monday 10 August 2026</td>
+					<td class="govuk-table__cell">11am to 1:30pm</td>
+					<td class="govuk-table__cell">See session details</td>
+					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="govuk-body"><strong>Bringing it all together one-to-ones:</strong> Thursday 13 August 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Bringing it all together session
+		</a>
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section">
+	<div class="govuk-accordion__section govuk-accordion__section--expanded">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Module: 3-way meeting
+          Post-programme 3-way meeting
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		
+		<p class="govuk-body"><strong>Post-programme three-way meetings complete by:</strong> Monday 3 September 2026</p>
+		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+			Schedule a Post-programme three-way meeting
+		</a>
 	</div>
 	</div>
-	</div>
+</div>
 
 {% endblock %}
