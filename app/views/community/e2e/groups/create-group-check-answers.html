@@ -18,7 +18,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create a group BCCDD1</span>
+		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
 		<h1 class="govuk-heading-xl">Review your group details</h1>
 
 		<p class="govuk-body govuk-!-margin-bottom-6">This information will be used to create a draft group and schedule. You can edit the details later.</p>
@@ -35,7 +35,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Group code"
 			},
 			value: {
-				text: "BCCDD1"
+				text: data['group-code'] | default('BCNE2026-0409')
 			},
 			actions: {
 				items: [
@@ -52,7 +52,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Start date"
 			},
 			value: {
-				text: "10 November 2025"
+				text: "23 April 2026"
 			},
 			actions: {
 				items: [
@@ -69,7 +69,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Days and times"
 			},
 			value: {
-        		html: '<p class="govuk-body">Mondays 9.30am to midday</p><p class="govuk-body">Thursdays 2.30pm to 5pm</p>'
+        		html: '<p class="govuk-body">Mondays 9:30am to midday</p><p class="govuk-body">Thursdays 11am to 1:30pm</p>'
       		},
 			actions: {
 				items: [
@@ -86,7 +86,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Cohort"
 			},
 			value: {
-				text: "General offence"
+				text: data['create-group-cohort'] | default('General offence')
 			},
 			actions: {
 				items: [
@@ -103,7 +103,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Gender"
 			},
 			value: {
-				text: "Male"
+				text: data['create-group-gender'] | default('Male')
 			},
 			actions: {
 				items: [

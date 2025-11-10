@@ -41,16 +41,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			href: "group-list"
 			},
 			{
-			text: "BCCDD1",
+			text: data['groupCode'] | default('BCNE2026-0409'),
 			href: "group-details-overview-ur"
 			},
 			{
 			text: "Schedule overview",
 			href: "group-schedule-overview"
-			},
-			{
-			text: "Manage schedule",
-			href: "group-manage-schedule"
 			}
 		]
 		}) }}
@@ -64,7 +60,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="moj-page-header-actions clear">
 			<div class="moj-page-header-actions__title">
 				<!--<span class="govuk-caption-xl">North East</span>-->
-				<h1 class="govuk-heading-xl">BCCDD1</h1>
+				<h1 class="govuk-heading-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</h1>
 			</div>
 			<!--<div class="moj-page-header-actions__actions">
 				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">

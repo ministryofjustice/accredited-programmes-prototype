@@ -18,9 +18,10 @@ Select the gender of the group - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group BCCDD1</span>
-		
-		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="create-group-pdu" method="post">
+			<div class="govuk-form-group">
+
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 		{{ govukRadios({
@@ -34,26 +35,25 @@ Select the gender of the group - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			items: [
 				{
-				value: "male",
+				value: "Male",
 				text: "Male"
 				},
 				{
-				value: "female",
+				value: "Female",
 				text: "Female"
 				},
 				{
-				value: "mixed",
+				value: "Mixed",
 				text: "Mixed"
 				}
 			]
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-pdu" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
-		</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+			</div>
+		</form>
 	</div>
 </div>
 
