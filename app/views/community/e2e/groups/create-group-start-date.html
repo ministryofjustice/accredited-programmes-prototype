@@ -18,29 +18,28 @@ Add a start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group BCCDD1</span>
-		
-		<!-- TO DO: Save data to pull in later in schedule view-->
-		<div class="moj-datepicker" data-module="moj-date-picker">
+		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="create-group-days-times" method="post">
 			<div class="govuk-form-group">
+
+		<div class="moj-datepicker" data-module="moj-date-picker">
 				<h1 class="govuk-label-wrapper">
 					<label class="govuk-label govuk-label--xl" for="date">
 					Add a start date for the group
 					</label>
 				</h1>
 				<div id="date-hint" class="govuk-hint">
-					Enter a date, for example 10/7/2025, or select one from the calendar.
+					This is when the pre-group one-to-ones are expected to start. Enter a date, for example 10/7/2025, or select one from the calendar.
 				</div>
 				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
 			</div>
 		</div>
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-days-times" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
-		</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+
+		</form>
 	</div>
 </div>
 

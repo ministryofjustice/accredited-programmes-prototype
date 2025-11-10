@@ -18,10 +18,10 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group BCCDD1</span>
-		
-		<!-- TO DO: Save data to pull in later in schedule view-->
-		<div class="govuk-form-group">
+		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="create-group-cohort" method="post">
+			<div class="govuk-form-group">
+
 			<fieldset class="govuk-fieldset" aria-describedby="group-days-hint">
 				<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 				<h1 class="govuk-fieldset__heading">
@@ -29,7 +29,8 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 				</h1>
 				</legend>
 				<div id="group-days-hint" class="govuk-hint">
-				Select all days that apply.
+					<p class="govuk-hint">Select when group sessions will run. You can add extra information later, for example about times of individual sessions.</p>
+					<p class="govuk-hint">Sessions that fall on bank holidays will automatically be moved to the next scheduled date.</p>
 				</div>
 
 				<div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -39,14 +40,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Mondays
 					</label>
 				</div>
+				
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="monday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="monday-start-time" name="monday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="tuesday" name="day" type="checkbox" value="tuesday" data-aria-controls="conditional-start-time-2">
@@ -54,14 +90,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Tuesdays
 					</label>
 				</div>
+
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-2">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="tuesday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="tuesday-start-time" name="tuesday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="wednesday" name="day" type="checkbox" value="wednesday" data-aria-controls="conditional-start-time-3">
@@ -69,14 +140,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Wednesdays
 					</label>
 				</div>
+
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-3">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="wednesday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="wednesday-start-time" name="wednesday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="thursday" name="day" type="checkbox" value="thursday" data-aria-controls="conditional-start-time-4">
@@ -84,14 +190,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Thursdays
 					</label>
 				</div>
+
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-4">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="thursday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="thursday-start-time" name="thursday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="friday" name="day" type="checkbox" value="friday" data-aria-controls="conditional-start-time-5">
@@ -99,14 +240,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Fridays
 					</label>
 				</div>
+				
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-5">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="friday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="friday-start-time" name="friday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="saturday" name="day" type="checkbox" value="saturday" data-aria-controls="conditional-start-time-6">
@@ -114,14 +290,49 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Saturdays
 					</label>
 				</div>
+				
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-6">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="saturday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="saturday-start-time" name="saturday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 
 				<div class="govuk-checkboxes__item">
 					<input class="govuk-checkboxes__input" id="sunday" name="day" type="checkbox" value="sunday" data-aria-controls="conditional-start-time-7">
@@ -129,24 +340,58 @@ When will the group run? - {{ serviceName }} - GOV.UK Prototype Kit
 					Sundays
 					</label>
 				</div>
+
 				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-start-time-7">
 					<div class="govuk-form-group">
-					<label class="govuk-label" for="sunday-start-time">
-						Start time
+					<fieldset class="govuk-fieldset" role="group">
+				<legend class="govuk-fieldset__legend">
+					When does the session start?
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3:00pm. Enter 12:00pm for midday.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
 					</label>
-					<input class="govuk-input govuk-!-width-one-third" id="sunday-start-time" name="sunday-start-time" type="text" spellcheck="false">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
 					</div>
 				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+				</fieldset>
+			</div>
+			</div>
 				
 			</fieldset>
 			</div>
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-cohort" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
 		</div>
+		</form>
 	</div>
 </div>
 

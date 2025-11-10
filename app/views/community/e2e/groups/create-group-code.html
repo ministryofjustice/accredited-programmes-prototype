@@ -19,8 +19,9 @@ Create a group code - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-xl">Create a group</span>
+		<form action="create-group-start-date" method="post">
+			<div class="govuk-form-group">
 		
-		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
 		{% from "govuk/components/input/macro.njk" import govukInput %}
 
 		{{ govukInput({
@@ -38,11 +39,10 @@ Create a group code - {{ serviceName }} - GOV.UK Prototype Kit
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-start-date" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
-		</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+			</div>
+		</form>
 	</div>
 </div>
 

@@ -41,11 +41,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			href: "group-list"
 			},
 			{
-			text: "BCCDD1",
-			href: "group-details-overview-ur"
-			},
-			{
-			text: "Group overview",
+			text: data['groupCode'] | default('BCNE2026-0409'),
 			href: "group-details-overview-ur"
 			}
 		]
@@ -60,7 +56,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="moj-page-header-actions clear">
 			<div class="moj-page-header-actions__title">
 				<!--<span class="govuk-caption-xl">North East</span>-->
-				<h1 class="govuk-heading-xl">BCCDD1</h1>
+				<h1 class="govuk-heading-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</h1>
 			</div>
 			<!--
 			<div class="moj-page-header-actions__actions">
@@ -103,7 +99,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<h2 class="govuk-summary-card__title">Group information</h2>
 				<ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action">
-					  	<a class="govuk-link" href=" ">Edit<span class="govuk-visually-hidden"> BCCDD1</span></a>
+					  	<a class="govuk-link" href=" ">Edit<span class="govuk-visually-hidden"> {{data['groupCode'] | default('BCNE2026-0409')}}</span></a>
 					</li>
 				</ul>
 			</div>
@@ -127,11 +123,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Cohort</dt>
-						<dd class="govuk-summary-list__value">General offence</dd>
+						<dd class="govuk-summary-list__value">{{ data['create-group-cohort'] | default('General offence') }}</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Sex</dt>
-						<dd class="govuk-summary-list__value">Male</dd>
+						<dd class="govuk-summary-list__value">{{ data['create-group-gender'] | default('Male') }}</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Allocated</dt>
@@ -165,7 +161,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			<dt class="govuk-summary-list__key">Time of sessions</dt>
 			<dd class="govuk-summary-list__value">
 				<ul class="govuk-list">
-					<li>Mondays 11am to 1:30pm</li>
+					<li>Mondays 9:30am to midday</li>
 					<li>Thursdays 11am to 1:30pm</li>
 				</ul>
 			</dd>

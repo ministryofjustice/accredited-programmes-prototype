@@ -9,13 +9,13 @@
     "sessionName":"Getting started 1",
     "sessionType":"Group",
     "date":"Thursday 14 May 2026",
-    "time":"2.30pm to 5pm"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Getting started 2",
     "sessionType":"Group",
     "date":"Monday 18 May 2026",
-    "time":"9.30am to midday"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Getting started one-to-ones",
@@ -27,37 +27,37 @@
     "sessionName":"Managing myself 1",
     "sessionType":"Group",
     "date":"Thursday 28 May 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing myself 2",
     "sessionType":"Group",
     "date":"Monday 1 June 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing myself 3",
     "sessionType":"Group",
     "date":"Thursday 4 June 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing myself 4",
     "sessionType":"Group",
     "date":"Monday 8 June 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing myself 5",
     "sessionType":"Group",
     "date":"Thursday 11 June 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing myself 6",
     "sessionType":"Group",
     "date":"Monday 15 June 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing myself one-to-ones",
@@ -69,25 +69,25 @@
     "sessionName":"Managing life's problems 1",
     "sessionType":"Group",
     "date":"Monday 22 June 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing life's problems 2",
     "sessionType":"Group",
     "date":"Thursday 25 June 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing life's problems 3",
     "sessionType":"Group",
     "date":"Monday 29 June 2026",
-    "time":"9.30am to midday"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing life's problems 4",
     "sessionType":"Group",
     "date":"Thursday 2 July 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing life's problems one-to-ones",
@@ -99,61 +99,61 @@
     "sessionName":"Managing people around me 1",
     "sessionType":"Group",
     "date":"Thursday 9 July 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing people around me 2",
     "sessionType":"Group",
     "date":"Monday 13 July 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing people around me 3",
     "sessionType":"Group",
     "date":"Thursday 16 July 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing people around me 4",
     "sessionType":"Group",
     "date":"Monday 20 July 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing people around me 5",
     "sessionType":"Group",
     "date":"Thursday 23 July 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Managing people around me 6",
     "sessionType":"Group",
     "date":"Monday 27 July 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Managing people around me one-to-ones",
     "sessionType":"Individual",
     "date":"Thursday 30 July 2026",
-    "time":"Various times"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Bringing it all together 1",
     "sessionType":"Group",
     "date":"Monday 3 August 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Bringing it all together 2",
     "sessionType":"Group",
     "date":"Thursday 6 August 2026",
-    "time":"9.30am to midday"
+    "time":"11am to 1:30pm"
     },
     {
     "sessionName":"Bringing it all together 3",
     "sessionType":"Group",
     "date":"Monday 10 August 2026",
-    "time":"2.30pm to 5pm"
+    "time":"9:30am to midday"
     },
     {
     "sessionName":"Bringing it all together one-to-ones",
@@ -164,7 +164,7 @@
     {
     "sessionName":"Post-programme three-way meeting",
     "sessionType":"Individual",
-    "date":"Monday 3 September 2026",
+    "date":"Thursday 24 September 2026",
     "time":"Various times"
     }
 ]

@@ -42,12 +42,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			href: "group-list"
 			},
 			{
-			text: "BCCDD1",
+			text: data['groupCode'] | default('BCNE2026-0409'),
 			href: "group-details-overview-ur"
-			},
-			{
-			text: "Schedule overview",
-			href: "group-schedule-overview"
 			}
 		]
 		}) }}
@@ -61,7 +57,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<div class="moj-page-header-actions clear">
 			<div class="moj-page-header-actions__title">
 				<!--<span class="govuk-caption-xl">North East</span>-->
-				<h1 class="govuk-heading-xl">BCCDD1</h1>
+				<h1 class="govuk-heading-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</h1>
 			</div>
 			<!--<div class="moj-page-header-actions__actions">
 				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
@@ -98,7 +94,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
 			  	</svg>
 			</div>
-				<div class="moj-alert__content">Group BCCDD1 has been created.</div>
+				<div class="moj-alert__content">Group BCNE2026-0409 has been created.</div>
 			<div class="moj-alert__action">
 			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
 			</div>
@@ -136,7 +132,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					text: "End date"
 				},
 				value: {
-					text: "Monday 3 September 2026"
+					text: "Thursday 24 September 2026"
 				}
 				}
 			]

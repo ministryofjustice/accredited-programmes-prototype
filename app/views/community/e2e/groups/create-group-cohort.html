@@ -18,7 +18,9 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group BCCDD1</span>
+		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="create-group-gender" method="post">
+			<div class="govuk-form-group">
 		
 		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -37,30 +39,29 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			items: [
 				{
-				value: "general-offence",
+				value: "General offence",
 				text: "General offence"
 				},
 				{
-				value: "general-offence-ldc",
+				value: "General offence LDC",
 				text: "General offence, learning disabilities and challenges (LDC)"
 				},
 				{
-				value: "sexual-offence",
+				value: "Sexual offence",
 				text: "Sexual offence"
 				},
 				{
-				value: "sexual-offence-ldc",
+				value: "Sexual offence LDC",
 				text: "Sexual offence, learning disabilities and challenges (LDC)"
 				}
 			]
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-gender" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
-		</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+			</div>
+		</form>
 	</div>
 </div>
 
