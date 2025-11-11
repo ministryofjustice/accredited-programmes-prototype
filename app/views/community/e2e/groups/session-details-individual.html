@@ -1,0 +1,190 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container">
+
+	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+		{{ govukBreadcrumbs({
+		items: [
+			{
+			text: "Groups",
+			href: "group-list"
+			},
+			{
+			text: "BCCDD1",
+			href: "group-details-overview-ur"
+			},
+			{
+			text: "Schedule overview",
+			href: "group-schedule-overview"
+			},
+			{
+			text: "Manage schedule",
+			href: "group-manage-schedule"
+			}
+		]
+		}) }}
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
+		<h1 class="govuk-heading-l">River, Alex (X123456): Getting started one-to-one</h1>
+
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Session type"
+			},
+			value: {
+				text: "Individual"
+			},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: " session type"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Date"
+			},
+			value: {
+        		text: "Friday 22 May 2026"
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: " date"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Time"
+			},
+			value: {
+				text: "3:30pm to 4:30pm (1 hour)"
+			},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "time"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Attendee"
+			},
+			value: {
+        		html: '<p class="govuk-body">River, Alex</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "attendee"
+				}
+				]
+			}
+			},
+		{
+			key: {
+				text: "Facilitator"
+			},
+			value: {
+        		html: '<p class="govuk-body">Tom Bassett</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: " ",
+					text: "Change",
+					visuallyHiddenText: "facilitator"
+				}
+				]
+			}
+			}
+		]
+		}) }}	
+
+<hr class="govuk-section-break govuk-section-break--l">
+
+<h2 class="govuk-heading-m">Attendance</h2>
+
+<form action="mark-attendance" method="post">
+	<table class="govuk-table" data-module="moj-sortable-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header">Name and CRN</th>
+				<th scope="col" class="govuk-table__header">Attendance status</th>
+				<th scope="col" class="govuk-table__header">Notes</th>
+			</tr>
+		</thead>
+	<tbody>
+		<tr class="govuk-table__row">
+			<td class="govuk-table__cell">
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell">Not added</td>
+		</tr>
+	</tbody>
+</table>
+	<button type="submit" class="govuk-button" data-module="govuk-button">Record attendance</button>
+</form>
+
+	</div>
+</div>
+
+
+
+{% endblock %}
