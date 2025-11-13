@@ -18,9 +18,11 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create a group BCCDD1</span>
-		<h1 class="govuk-heading-xl">Where does the group take place?</h1>
+		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<h1 class="govuk-heading-l">Where does the group take place?</h1>
 		
+		<form action="create-group-facilitators" method="post">
+		<div class="govuk-form-group">
 		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 		{{ govukSummaryList({
@@ -45,20 +47,7 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 		]
 		}) }}	
 
-		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-		{% set locationHtml %}
-			{{ govukInput({
-				id: "new-location-input",
-				name: "new-location-input",
-				type: "text",
-				classes: "govuk-!-width-one-third",
-				label: {
-					text: "Location"
-				}
-			}) }}
-		{% endset -%}
 
 		{{ govukRadios({
 			name: "create-group-location",
@@ -71,48 +60,36 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			items: [
 				{
-				value: "darlington-prob",
+				value: "County Durham: Darlington Probation Office",
 				text: "County Durham: Darlington Probation Office"
 				},
 				{
-				value: "durham-prob",
+				value: "County Durham: Durham City Probation Office",
 				text: "County Durham: Durham City Probation Office"
 				},
 				{
-				value: "newton-prob",
+				value: "County Durham: Newton Aycliffe Probation Office",
 				text: "County Durham: Newton Aycliffe Probation Office"
 				},
 				{
-				value: "peterlee-prob",
+				value: "County Durham: Peterlee Probation Office",
 				text: "County Durham: Peterlee Probation Office"
 				},
 				{
-				value: "darlington-woodland",
+				value: "Darlington: 11 Woodland Road",
 				text: "Darlington: 11 Woodland Road"
 				},
 				{
-				value: "durham-wear-house",
+				value: "Durham: Wear House",
 				text: "Durham: Wear House"
-				},
-				{
-				divider: "or"
-				},
-				{
-				value: "new-location",
-				text: "I need to add a new location",
-					conditional: {
-						html: locationHtml
-					}
 				}
 			]
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<a href="create-group-facilitators" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-				Continue
-			</a>
-			<!--<a class="govuk-link" href="group-details-waitlist">Cancel</a>-->
-		</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+		</form>
 	</div>
 </div>
 
