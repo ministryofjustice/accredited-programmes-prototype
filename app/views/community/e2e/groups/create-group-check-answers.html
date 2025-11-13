@@ -18,8 +18,8 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
-		<h1 class="govuk-heading-xl">Review your group details</h1>
+		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<h1 class="govuk-heading-l">Review your group details</h1>
 
 		<p class="govuk-body govuk-!-margin-bottom-6">This information will be used to create a draft group and schedule. You can edit the details later.</p>
 		
@@ -137,7 +137,7 @@ Review your group details - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Delivery location"
 			},
 			value: {
-				text: "Darlington: 11 Woodland Road"
+				text: data['create-group-location'] | default('Darlington: 11 Woodland Road')
 			},
 			actions: {
 				items: [

@@ -18,13 +18,13 @@ Add a start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
 		<form action="create-group-days-times" method="post">
 			<div class="govuk-form-group">
 
 		<div class="moj-datepicker" data-module="moj-date-picker">
 				<h1 class="govuk-label-wrapper">
-					<label class="govuk-label govuk-label--xl" for="date">
+					<label class="govuk-label govuk-label--l" for="date">
 					Add a start date for the group
 					</label>
 				</h1>

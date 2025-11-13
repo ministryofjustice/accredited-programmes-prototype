@@ -18,7 +18,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
 		<form action="create-group-gender" method="post">
 			<div class="govuk-form-group">
 		
@@ -31,7 +31,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 				legend: {
 				text: "Select the group cohort",
 				isPageHeading: true,
-				classes: "govuk-fieldset__legend--xl"
+				classes: "govuk-fieldset__legend--l"
 				}
 			},
 			hint: {
