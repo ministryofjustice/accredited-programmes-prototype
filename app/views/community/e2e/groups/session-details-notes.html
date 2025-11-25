@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "group-list",
+			active: true
+			}
+		]
+	}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Alex River: Getting started 1 session notes</h1>
+
+		<dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__value">
+				<a href="session-details-group" class="govuk-link govuk-link--no-visited-state">
+					Getting started 1: Introduction to Building Choices
+				</a>
+			</dt>
+			<dd class="govuk-summary-list__value">
+				<p class="govuk-body"><strong>Date</strong><br> 
+				3 November 2025</p>
+			</dd>
+			<dd class="govuk-summary-list__value">
+				<strong class="govuk-tag">
+					Attended
+				</strong>
+			</dd>
+		</div>
+		</dl>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<h2 class="govuk-heading-m">Session notes</h2>
+
+<div class="govuk-inset-text">
+  Last updated by Berta Tonka on 3 November 2025.
+</div>
+
+<p class="govuk-body">POP arrived on time. Presented as calm and engaged. No immediate safeguarding issues disclosed.</p>
+<p class="govuk-body">Introduced new coping strategies. Add details</p>
+
+<form action="session-details-notes-post" method="post">
+	<button type="submit" class="govuk-button" data-module="govuk-button">Update notes</button>
+</form>
+
+	</div>
+</div>
+
+
+
+{% endblock %}

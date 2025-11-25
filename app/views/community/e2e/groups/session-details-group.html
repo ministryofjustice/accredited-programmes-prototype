@@ -158,16 +158,24 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <hr class="govuk-section-break govuk-section-break--l">
 
-<h2 class="govuk-heading-m">Attendance</h2>
+<h2 class="govuk-heading-m">Attendance and session notes</h2>
 
-<form action="mark-attendance" method="post">
-	<table class="govuk-table" data-module="moj-sortable-table">
+<form action="mark-attendance-post" method="post">
+	<table class="govuk-table" data-module="moj-multi-select">
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
-				<th class="govuk-table__header" style="width: 5%"></th>
+				<th class="govuk-table__header" scope="col" id="name-select-all">
+					<div class="govuk-checkboxes govuk-checkboxes--small">
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-all" value="all">
+						<label class="govuk-label govuk-checkboxes__label" for="attendance-all">
+						<span class="govuk-visually-hidden">Select all</span>
+					</div>
+				</div>
+				</th>
 				<th scope="col" class="govuk-table__header">Name and CRN</th>
-				<th scope="col" class="govuk-table__header">Attendance status</th>
-				<th scope="col" class="govuk-table__header">Notes</th>
+				<th scope="col" class="govuk-table__header">Attendance</th>
+				<th scope="col" class="govuk-table__header">Session notes</th>
 			</tr>
 		</thead>
 	<tbody>
@@ -183,7 +191,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Booth, Sham</a><br/>B739123</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
 			<td class="govuk-table__cell">Not added</td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -198,8 +206,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Charles, Eric</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not attended</strong></td>
+			<td class="govuk-table__cell">
+				<a href=" " class="govuk-link govuk-link--no-visited-state">Charles, Eric: Getting started 1 notes</a>
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -213,8 +223,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Dillion, Ben</a><br/>P689325</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Attended</strong></td>
+			<td class="govuk-table__cell">
+				<a href=" " class="govuk-link govuk-link--no-visited-state">Dillion, Ben: Getting started 1 notes</a>
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -228,8 +240,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Fredric, Roman</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Attended</strong></td>
+			<td class="govuk-table__cell">
+				<a href=" " class="govuk-link govuk-link--no-visited-state">Fredric, Roman: Getting started 1 notes</a>
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -243,7 +257,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Hussain, Ali</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
 			<td class="govuk-table__cell">Not added</td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -258,7 +272,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Jones, Jack</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
 			<td class="govuk-table__cell">Not added</td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -273,8 +287,10 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Martinez, Gabriel</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Attended</strong></td>
+			<td class="govuk-table__cell">
+				<a href=" " class="govuk-link govuk-link--no-visited-state">Martinez, Gabriel: Getting started 1 notes</a>
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -288,7 +304,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Poole, Adrian</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
 			<td class="govuk-table__cell">Not added</td>
 		</tr>
 		<tr class="govuk-table__row">
@@ -303,12 +319,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not recorded</strong></td>
+			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
 			<td class="govuk-table__cell">Not added</td>
 		</tr>
 	</tbody>
 </table>
-	<button type="submit" class="govuk-button" data-module="govuk-button">Record attendance</button>
+	<button type="submit" class="govuk-button" data-module="govuk-button">Update attendance and notes</button>
 </form>
 
 	</div>

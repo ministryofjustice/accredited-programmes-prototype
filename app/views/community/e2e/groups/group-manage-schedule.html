@@ -22,7 +22,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: "Groups",
-			href: "group-list",
+			href: "../groups/group-list",
 			active: true
 			}
 		]
@@ -42,7 +42,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-overview-ur"
+			href: "group-details-allocated-ur"
 			},
 			{
 			text: "Schedule overview",
@@ -72,20 +72,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-full">
-
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group overview</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-schedule-overview">Schedule overview</a>
-				</li>
-			</ul>
-		</nav>
 
 		<h2 class="govuk-heading-l govuk-!-margin-top-4">Manage schedule</h2>
 		<p class="govuk-body">

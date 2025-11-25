@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Sham Booth: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Record attendance and progress</span>
+		<h2 class="govuk-heading-l">Sham Booth: Getting started 1 session notes</h2>
+		<form action="attendance-group-session-notes-1-post" method="post">
+			<div class="govuk-form-group">
+		
+		<dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			Attendance
+			</dt>
+			<dd class="govuk-summary-list__value">
+				<strong class="govuk-tag">
+					Attended
+				</strong>
+			</dd>
+			<dd class="govuk-summary-list__actions">
+			<a class="govuk-link" href="attendance-group-mark">Change<span class="govuk-visually-hidden"> attendance</span></a>
+			</dd>
+		</div>
+		</dl>
+
+			{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+				{{ govukCharacterCount({
+				name: "session-notes",
+				id: "session-notes",
+				maxlength: 50000,
+				label: {
+					text: "Add session notes",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				}
+			}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">
+				Continue
+			</button>
+			<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+				Skip and add later
+			</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

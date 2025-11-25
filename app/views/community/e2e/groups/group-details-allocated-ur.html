@@ -7,7 +7,9 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% block header %}
 {% include "/includes/community/v3/head-no-nav.html" %}
 
-{{ mojPrimaryNavigation({
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
 		label: "Primary navigation",
 		items: [
 			{
@@ -20,12 +22,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: "Groups",
-			href: "group-list",
+			href: "../groups/group-list",
 			active: true
 			}
 		]
 	}) }}
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -41,7 +42,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-overview-ur"
+			href: "group-details-allocated-ur"
 			}
 		]
 		}) }}
@@ -72,13 +73,13 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group overview</a>
-				</li>
-				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated-ur">Allocations</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule overview</a>
+					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group details</a>
 				</li>
 			</ul>
 		</nav>
