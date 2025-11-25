@@ -22,7 +22,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: "Groups",
-			href: "group-list",
+			href: "../groups/group-list",
 			active: true
 			}
 		]
@@ -42,7 +42,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-overview-ur"
+			href: "group-details-allocated-ur"
 			}
 		]
 		}) }}
@@ -73,13 +73,13 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-overview-ur">Group overview</a>
-				</li>
-				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule overview</a>
+					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-overview-ur">Group details</a>
 				</li>
 			</ul>
 		</nav>
@@ -88,87 +88,230 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-l govuk-!-margin-top-4">Group overview</h2>
+		<h2 class="govuk-heading-l govuk-!-margin-top-4">Group details</h2>
 	</div>
 </div>
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Group information</h2>
-				<ul class="govuk-summary-card__actions">
-					<li class="govuk-summary-card__action">
-					  	<a class="govuk-link" href=" ">Edit<span class="govuk-visually-hidden"> {{data['groupCode'] | default('BCNE2026-0409')}}</span></a>
-					</li>
-				</ul>
-			</div>
-			<div class="govuk-summary-card__content">
-				<dl class="govuk-summary-list">
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Delivery location</dt>
-						<dd class="govuk-summary-list__value">Darlington: 11 Woodland Road</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Treatment Manager</dt>
-						<dd class="govuk-summary-list__value">Chloe Pascal</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Facilitators</dt>
-						<dd class="govuk-summary-list__value">Harpreet Singh, Tom Bassett</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Cover facilitators</dt>
-						<dd class="govuk-summary-list__value">Tom Saunders</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Cohort</dt>
-						<dd class="govuk-summary-list__value">{{ data['create-group-cohort'] | default('General offence') }}</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Sex</dt>
-						<dd class="govuk-summary-list__value">{{ data['create-group-gender'] | default('Male') }}</dd>
-					</div>
-					<div class="govuk-summary-list__row">
-						<dt class="govuk-summary-list__key">Allocated</dt>
-						<dd class="govuk-summary-list__value">9 of 10</dd>
-					</div>
-				</dl>
-			</div>
-		 </div>
-	</div>
-	<div class="govuk-grid-column-one-third">
-		<div class="govuk-summary-card">
-			<div class="govuk-summary-card__title-wrapper">
-				<h2 class="govuk-summary-card__title">Schedule overview</h2>
-				<ul class="govuk-summary-card__actions">
-					<li class="govuk-summary-card__action">
-					  	<a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> Schedule overview</span></a>
-					</li>
-				</ul>
-			</div>
-	<div class="govuk-summary-card__content">
-		<dl class="govuk-summary-list">
-		<div class="govuk-summary-list__row">
-			<dt class="govuk-summary-list__key" style="width: 40%">Start date</dt>
-			<dd class="govuk-summary-list__value">23 Apr 2026</dd>
+		<form action="group-details-overview-ur-post" method="post">
+		<div class="govuk-form-group">
+
+		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Group code"
+			},
+			value: {
+				text: data['group-code'] | default('BCNE2026-0409')
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-code",
+					text: "Change",
+					visuallyHiddenText: "group code"
+				}
+				]
+			}
+			}
+		]
+		}) }}
+		
+		<h2 class="govuk-heading-m govuk-!-margin-top-4">Timings</h2>
+		
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Start date"
+			},
+			value: {
+				text: "Thursday 23 April 2026"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-start-date",
+					text: "Change",
+					visuallyHiddenText: "start date"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Days and times"
+			},
+			value: {
+        		html: '<p class="govuk-body">Mondays 9:30am to midday</p><p class="govuk-body">Thursdays 11am to 1:30pm</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: "create-group-start-days-times",
+					text: "Change",
+					visuallyHiddenText: "group days and times"
+				}
+				]
+			}
+			}
+		]
+		}) }}
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-4">Participants</h2>
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Cohort"
+			},
+			value: {
+				text: data['create-group-cohort'] | default('General offence')
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-cohort",
+					text: "Change",
+					visuallyHiddenText: "cohort"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Gender"
+			},
+			value: {
+				text: data['create-group-gender'] | default('Male')
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-gender",
+					text: "Change",
+					visuallyHiddenText: "gender"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Currently allocated"
+			},
+			value: {
+				text: "9 participants"
+			}
+			}
+		]
+		}) }}
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-4">Location</h2>
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Probation delivery unit (PDU)"
+			},
+			value: {
+				text: "County Durham and Darlington"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-pdu",
+					text: "Change",
+					visuallyHiddenText: "PDU"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Delivery location"
+			},
+			value: {
+				text: data['create-group-location'] | default('Darlington: 11 Woodland Road')
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-location",
+					text: "Change",
+					visuallyHiddenText: "delivery location"
+				}
+				]
+			}
+			}
+		]
+		}) }}
+
+		<h2 class="govuk-heading-m govuk-!-margin-top-4">Staff</h2>
+
+		{{ govukSummaryList({
+		rows: [
+			{
+			key: {
+				text: "Treatment Manager"
+			},
+			value: {
+				text: "Chloe Pascal"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Treatment Manager"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Facilitators"
+			},
+			value: {
+        		html: '<p class="govuk-body">Harpreet Singh</p><p class="govuk-body">Tom Bassett</p>'
+      		},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Facilitators"
+				}
+				]
+			}
+			},
+			{
+			key: {
+				text: "Cover facilitators"
+			},
+			value: {
+				text: "Tom Saunders"
+			},
+			actions: {
+				items: [
+				{
+					href: "create-group-facilitators",
+					text: "Change",
+					visuallyHiddenText: "Facilitators"
+				}
+				]
+			}
+			}		
+		]
+		}) }}	
+
 		</div>
-		<div class="govuk-summary-list__row" style="border-bottom: 1px solid #b1b4b6">
-			<dt class="govuk-summary-list__key">End date</dt>
-			<dd class="govuk-summary-list__value">3 Sept 2026</dd>
-		</div>
-		<div class="govuk-summary-list__row">
-			<dt class="govuk-summary-list__key">Time of sessions</dt>
-			<dd class="govuk-summary-list__value">
-				<ul class="govuk-list">
-					<li>Mondays 9:30am to midday</li>
-					<li>Thursdays 11am to 1:30pm</li>
-				</ul>
-			</dd>
-		</div>
-		</dl>
-		</div>
-		</div>
+	</form>
 	</div>
 </div>
 

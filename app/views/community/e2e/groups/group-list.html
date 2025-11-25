@@ -6,14 +6,27 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block header %}
 {% include "/includes/community/v3/head-no-nav.html" %}
-{% endblock %}
 
-{% block beforeContent %}
-<nav class="clear-right">
-	<a href="../home"
-		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
-		Accredited Programmes homepage</a>
-</nav>
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals"
+			},
+			{
+			text: "Groups",
+			href: "../groups/group-list",
+			active: true
+			}
+		]
+	}) }}
 {% endblock %}
 
 {% block content %}
@@ -159,7 +172,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
 				<!-- Remove -ur from the link below after 15/10 -->
-				<a href="group-details-overview-ur?groupCode={{group.groupCode}}" class="govuk-link govuk-link--no-visited-state"><strong>{{group.groupCode}}</strong></a></td>
+				<a href="group-details-allocated-ur?groupCode={{group.groupCode}}" class="govuk-link govuk-link--no-visited-state"><strong>{{group.groupCode}}</strong></a></td>
 			<td class="govuk-table__cell">{{group.startDate}}</td>
 			<td class="govuk-table__cell">{{group.pdu}}</td>
 			<td class="govuk-table__cell">{{group.deliveryLocation}}</td>

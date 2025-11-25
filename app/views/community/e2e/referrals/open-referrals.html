@@ -6,15 +6,29 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block header %}
 {% include "/includes/community/v3/head-no-nav.html" %}
+
+{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../referrals/open-referrals",
+			active: true
+			},
+			{
+			text: "Groups",
+			href: "../groups/group-list"
+			}
+		]
+	}) }}
 {% endblock %}
 
-{% block beforeContent %}
-<nav class="clear-right">
-	<a href="../home"
-		class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to
-		Accredited Programmes homepage</a>
-</nav>
-{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row clear">

@@ -265,5 +265,36 @@ router.post('/community/e2e/groups/add-session-individual-check-answers-post', f
 
 }) 
 
+// Mark attendance for group session
+router.post('/community/e2e/groups/mark-attendance-post', function (req, res) { 
+
+ {res.redirect('attendance-group-mark') } 
+
+}) 
+
+router.post('/community/e2e/groups/attendance-group-mark-post', function (req, res) { 
+
+ {res.redirect('attendance-group-session-notes-1') } 
+
+}) 
+
+router.post('/community/e2e/groups/attendance-group-session-notes-1-post', function (req, res) { 
+
+ {res.redirect('attendance-group-session-notes-2') } 
+
+}) 
+
+router.post('/community/e2e/groups/attendance-group-session-notes-2-post', function (req, res) { 
+
+ {res.redirect('attendance-group-session-notes-3') } 
+
+}) 
+
+router.post('/community/e2e/groups/attendance-group-session-notes-3-post', function (req, res) { 
+
+ {res.redirect('session-details-group') } 
+
+}) 
+
 
 }
