@@ -330,6 +330,28 @@ router.get('/community/e2e/groups/session-details-group', function (req, res) {
     });
 })
 
+// Update session notes inside the session notes detail page
+router.post('/community/e2e/groups/session-details-notes-post', function (req, res) { 
+
+ {res.redirect('session-details-notes-update') } 
+
+}) 
+
+// Show success banner
+router.post('/community/e2e/groups/session-details-notes-update-post', function (req, res) { 
+    req.session.data['show-success-banner'] = true;
+    res.redirect('session-details-notes'); 
+
+}) 
+
+router.get('/community/e2e/groups/session-details-notes', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/session-details-notes', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
 
 
 // Put routes above this row - not below

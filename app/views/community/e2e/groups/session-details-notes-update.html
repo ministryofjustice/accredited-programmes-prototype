@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Record attendance and progress</span>
+		<h2 class="govuk-heading-l">Alex River: Getting started 1 session notes</h2>
+		<form action="session-details-notes-update-post" method="post">
+			<div class="govuk-form-group">
+		
+		<dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			Attendance
+			</dt>
+			<dd class="govuk-summary-list__value">
+				{% if data['river-alex'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% endif %}
+			</dd>
+			<dd class="govuk-summary-list__actions">
+			<a class="govuk-link" href="attendance-individual">Change<span class="govuk-visually-hidden"> attendance</span></a>
+			</dd>
+		</div>
+		</dl>
+
+			{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+				{{ govukCharacterCount({
+				name: "session-notes-3",
+				id: "session-notes-3",
+				maxlength: 50000,
+				label: {
+					text: "Add session notes",
+					classes: "govuk-label--m",
+					isPageHeading: false
+				},
+    			value: data['session-notes-3']
+			}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">
+				Submit
+			</button>
+			<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+				Skip and add later
+			</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+
