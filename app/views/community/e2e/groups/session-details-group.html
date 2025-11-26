@@ -125,16 +125,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<p class="govuk-body">Martinez, Gabriel</p>
 						<p class="govuk-body">Poole, Adrian</p>
 						<p class="govuk-body">River, Alex</p>'
-      		},
-			actions: {
-				items: [
-				{
-					href: " ",
-					text: "Change",
-					visuallyHiddenText: "attendees"
-				}
-				]
-			}
+      		}
 			},
 		{
 			key: {
@@ -160,6 +151,34 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <h2 class="govuk-heading-m">Attendance and session notes</h2>
 
+	{% if showBannerMulti %}
+	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+				<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">Attendance recorded for Sham Booth, Adrian Poole and Alex River.</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+	</div>
+	{% endif %}
+
+	{% if showBannerSingle %}
+	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+				<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">Attendance recorded for Alex River.</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+	</div>
+	{% endif %}
+
 <form action="mark-attendance-post" method="post">
 	<table class="govuk-table" data-module="moj-multi-select">
 		<thead class="govuk-table__head">
@@ -170,6 +189,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-all" value="all">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-all">
 						<span class="govuk-visually-hidden">Select all</span>
+						</label>
 					</div>
 				</div>
 				</th>
@@ -186,13 +206,28 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-booth-sham" value="booth-sham">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-booth-sham">
 						<span class="govuk-visually-hidden">Booth, Sham</span>
+						</label>
 					</div>
 				</div>
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Booth, Sham</a><br/>B739123</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell">
+				{% if data['booth-sham'] == "yes" %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['booth-sham'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--grey">To be confirmed</strong>
+				{% endif %}
+			</td>
+			<td class="govuk-table__cell">
+				{% if data['session-notes-1'] %}
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Booth, Sham: Getting started 1 notes</a>
+				{% else %}
+					Not added
+				{% endif %}
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -201,6 +236,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-charles-eric" value="charles-eric">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-charles-eric">
 						<span class="govuk-visually-hidden">Charles, Eric</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -218,6 +254,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-dillion-ben" value="dillion-ben">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-dillion-ben">
 						<span class="govuk-visually-hidden">Dillion, Ben</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -235,6 +272,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-fredric-roman" value="fredric-roman">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-fredric-roman">
 						<span class="govuk-visually-hidden">Fredric, Roman</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -252,6 +290,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-hussain-ali" value="hussain-ali">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-hussain-ali">
 						<span class="govuk-visually-hidden">Hussain, Ali</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -267,6 +306,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-jones-jack" value="jones-jack">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-jones-jack">
 						<span class="govuk-visually-hidden">Jones, Jack</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -282,6 +322,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-martinez-gabriel" value="martinez-gabriel">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-martinez-gabriel">
 						<span class="govuk-visually-hidden">Martinez, Gabriel</span>
+						</label>
 					</div>
 				</div>
 			</td>
@@ -299,13 +340,28 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-poole-adrian" value="poole-adrian">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-poole-adrian">
 						<span class="govuk-visually-hidden">Poole, Adrian</span>
+						</label>
 					</div>
 				</div>
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Poole, Adrian</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell">
+				{% if data['poole-adrian'] == "yes" %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['poole-adrian'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--grey">To be confirmed</strong>
+				{% endif %}
+			</td>
+			<td class="govuk-table__cell">
+				{% if data['session-notes-2'] %}
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Poole, Adrian: Getting started 1 notes</a>
+				{% else %}
+					Not added
+				{% endif %}
+			</td>
 		</tr>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
@@ -314,13 +370,28 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<input class="govuk-checkboxes__input" type="checkbox" name="attendance" id="attendance-river-alex" value="river-alex">
 						<label class="govuk-label govuk-checkboxes__label" for="attendance-river-alex">
 						<span class="govuk-visually-hidden">River, Alex</span>
+						</label>
 					</div>
 				</div>
 			</td>
 			<td class="govuk-table__cell">
 				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+			<td class="govuk-table__cell">
+				{% if data['river-alex'] == "yes" %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['river-alex'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--grey">To be confirmed</strong>
+				{% endif %}
+			</td>
+			<td class="govuk-table__cell">
+				{% if data['session-notes-3'] %}
+					<a href="session-details-notes" class="govuk-link govuk-link--no-visited-state">River, Alex: Getting started 1 notes</a>
+				{% else %}
+					Not added
+				{% endif %}
+			</td>
 		</tr>
 	</tbody>
 </table>

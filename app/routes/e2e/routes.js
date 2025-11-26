@@ -265,13 +265,46 @@ router.post('/community/e2e/groups/add-session-individual-check-answers-post', f
 
 }) 
 
-// Mark attendance for group session
-router.post('/community/e2e/groups/mark-attendance-post', function (req, res) { 
 
- {res.redirect('attendance-group-mark') } 
+// Trying to redirect depending on whether you have just Alex River selected
+router.post('/community/e2e/groups/mark-attendance-post', function (req, res) {
+
+  if(req.session.data['attendance']=="river-alex") 
+
+ {res.redirect('attendance-individual') } 
+
+  else 
+
+ { res.redirect('attendance-group-mark')} 
 
 }) 
 
+// Mark attendance for individual or single person update in a group session - Alex River
+router.post('/community/e2e/groups/attendance-individual-post', function (req, res) { 
+
+ {res.redirect('attendance-individual-session-notes') } 
+
+}) 
+
+
+// Show success banners for single update
+router.post('/community/e2e/groups/attendance-individual-session-notes-post', function (req, res) { 
+    req.session.data['show-success-banner'] = true;
+    res.redirect('session-details-group'); 
+
+}) 
+
+router.get('/community/e2e/groups/session-details-group', function (req, res) {
+    const showBannerSingle = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/session-details-group', {
+        data: req.session.data,
+        showBannerSingle: showBannerSingle
+    });
+})
+
+
+// Mark attendance flow for bulk updates in a group session
 router.post('/community/e2e/groups/attendance-group-mark-post', function (req, res) { 
 
  {res.redirect('attendance-group-session-notes-1') } 
@@ -290,11 +323,21 @@ router.post('/community/e2e/groups/attendance-group-session-notes-2-post', funct
 
 }) 
 
+// Show success banners for bulk update
 router.post('/community/e2e/groups/attendance-group-session-notes-3-post', function (req, res) { 
-
- {res.redirect('session-details-group') } 
+    req.session.data['show-success-banner'] = true;
+    res.redirect('session-details-group'); 
 
 }) 
 
+router.get('/community/e2e/groups/session-details-group', function (req, res) {
+    const showBannerMulti = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/session-details-group', {
+        data: req.session.data,
+        showBannerMulti: showBannerMulti
+    });
+})
 
+// Put routes above this row - not below
 }

@@ -18,12 +18,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			},
 			{
 			text: "Case list",
-			href: "../referrals/open-referrals",
+			href: "../../referrals/open-referrals",
 			active: true
 			},
 			{
 			text: "Groups",
-			href: "group-list"
+			href: "../../groups/group-list"
 			}
 		]
 	}) }}
@@ -127,30 +127,69 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				<td class="govuk-table__cell">24 July 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
 				<td class="govuk-table__cell">
-					<strong class="govuk-tag govuk-tag--red">
-						Not attended
+					<strong class="govuk-tag">
+						Attended
 					</strong>
 				<td class="govuk-table__cell">
 					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2 notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started 2 catch-up</strong></a></td>
+				<td class="govuk-table__cell">Getting started one-to-one</strong></a></td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">28 July 2025</td>
+				<td class="govuk-table__cell">2pm to 3pm</td>
+				<td class="govuk-table__cell">
+					<strong class="govuk-tag">
+						Attended
+					</strong>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started one-to-one notes</a>
+				</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">Managing myself 1</strong></a></td>
+				<td class="govuk-table__cell">BCNE2025-0501</td>
+				<td class="govuk-table__cell">31 July 2025</td>
+				<td class="govuk-table__cell">11:30am to 2pm</td>
+				<td class="govuk-table__cell">
+					<strong class="govuk-tag">
+						Attended
+					</strong>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 1 notes</a>
+				</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">Managing myself 2</strong></a></td>
+				<td class="govuk-table__cell">BCNE2025-0501</td>
+				<td class="govuk-table__cell">4 August 2025</td>
+				<td class="govuk-table__cell">11:30am to 2pm</td>
+				<td class="govuk-table__cell">
+					<strong class="govuk-tag govuk-tag--red">
+						Not attended
+					</strong>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 notes</a>
+				</td>
+			</tr>
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">Managing myself 2 catch-up</strong></a></td>
+				<td class="govuk-table__cell">BCNE2025-0501</td>
+				<td class="govuk-table__cell">7 August 2025</td>
 				<td class="govuk-table__cell">10am to 11am</td>
 				<td class="govuk-table__cell">
 					<strong class="govuk-tag govuk-tag--red">
 						Not attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2 catch-up notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 catch-up notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
 				<td class="govuk-table__cell">Pre-group one-to-one</strong></a></td>
 				<td class="govuk-table__cell">BCNE2025-1204</td>
-				<td class="govuk-table__cell">28 October 2025</td>
+				<td class="govuk-table__cell">14 November 2025</td>
 				<td class="govuk-table__cell">10am to 11am</td>
 				<td class="govuk-table__cell">
 					<strong class="govuk-tag">
@@ -163,55 +202,24 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 			<tr class="govuk-table__row">
 				<td class="govuk-table__cell">Getting started 1</strong></a></td>
 				<td class="govuk-table__cell">BCNE2025-1204</td>
-				<td class="govuk-table__cell">3 November 2025</td>
+				<td class="govuk-table__cell">27 November 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
 				<td class="govuk-table__cell">
-					<strong class="govuk-tag">
-						Attended
-					</strong>
+					{% if data['river-alex'] == "yes" %}
+						<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+					{% elseif data['river-alex'] == "no" %}
+						<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+					{% else %}
+						<strong class="govuk-tag govuk-tag--grey">To be confirmed</strong>
+					{% endif %}
 				<td class="govuk-table__cell">
-					<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 notes</a>
+					{% if data['session-notes-3'] %}
+						<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 notes</a>
+					{% else %}
+						Not added
+					{% endif %}
 				</td>
-			</tr>
-			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started 2</strong></a></td>
-				<td class="govuk-table__cell">BCNE2025-1204</td>
-				<td class="govuk-table__cell">6 November 2025</td>
-				<td class="govuk-table__cell">11:30am to 2pm</td>
-				<td class="govuk-table__cell">
-					<strong class="govuk-tag">
-						Attended
-					</strong>
-				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2 notes</a>
-				</td>
-			</tr>
-			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started one-to-one</strong></a></td>
-				<td class="govuk-table__cell">BCNE2025-1204</td>
-				<td class="govuk-table__cell">10 November 2025</td>
-				<td class="govuk-table__cell">2pm to 3pm</td>
-				<td class="govuk-table__cell">
-					<strong class="govuk-tag">
-						Attended
-					</strong>
-				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started one-to-one notes</a>
-				</td>
-			</tr>
-			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Managing myself 1</strong></a></td>
-				<td class="govuk-table__cell">BCNE2025-1204</td>
-				<td class="govuk-table__cell">13 November 2025</td>
-				<td class="govuk-table__cell">11:30am to 2pm</td>
-				<td class="govuk-table__cell">
-					<strong class="govuk-tag">
-						Attended
-					</strong>
-				<td class="govuk-table__cell">
-					Not added
-				</td>
-			</tr>
+			</tr>			
 			</tbody>
 		</table>
 

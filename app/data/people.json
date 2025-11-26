@@ -12,8 +12,8 @@
     "cohortTag":"LDC",
     "sex":"Male",
     "age":"34",
-    "referralStatus":"Awaiting assessment",
-    "referralColour":"purple"
+    "referralStatus":"On programme",
+    "referralColour":"green"
     },
     {
     "firstName":"Sham",

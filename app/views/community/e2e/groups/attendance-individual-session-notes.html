@@ -20,7 +20,7 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-l">Record attendance and progress</span>
 		<h2 class="govuk-heading-l">Alex River: Getting started 1 session notes</h2>
-		<form action="attendance-group-session-notes-3-post" method="post">
+		<form action="attendance-individual-session-notes-post" method="post">
 			<div class="govuk-form-group">
 		
 		<dl class="govuk-summary-list">
@@ -36,7 +36,7 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 				{% endif %}
 			</dd>
 			<dd class="govuk-summary-list__actions">
-			<a class="govuk-link" href="attendance-group-mark">Change<span class="govuk-visually-hidden"> attendance</span></a>
+			<a class="govuk-link" href="attendance-individual">Change<span class="govuk-visually-hidden"> attendance</span></a>
 			</dd>
 		</div>
 		</dl>
@@ -52,7 +52,7 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 					classes: "govuk-label--m",
 					isPageHeading: false
 				},
-				value: data['session-notes-3']
+    			value: data['session-notes-3']
 			}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
