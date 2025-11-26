@@ -6,13 +6,32 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 
 {% block header %}
 	{% include "/includes/community/v3/key-details-pt.html" %}
+
+	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+
+	{{ mojPrimaryNavigation({
+		label: "Primary navigation",
+		items: [
+			{
+			text: "Home",
+			href: "../home"
+			},
+			{
+			text: "Case list",
+			href: "../../referrals/open-referrals",
+			active: true
+			},
+			{
+			text: "Groups",
+			href: "../../groups/group-list"
+			}
+		]
+	}) }}
+
 {% endblock %}
 
 {% block beforeContent %}
-<nav class="clear-right">
-	<!-- <a href="javascript:window.history.back()" class="govuk-back-link">Back</a> -->
-	<a href="../../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
-</nav>
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
 {% endblock %} 
 
 {% block content %}
@@ -20,14 +39,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
+	  			<h1 class="govuk-heading-xl">Referral details</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-				<a href="../../referrals/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
 					<a href="change-referral-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
 					<a href="change-ldc-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change LDC status</a>
-					<a href="change-cohort" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change cohort</a>			  
+					<a href="change-cohort" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change cohort</a>		  
 				</div>
 			</div>
  		</div>
@@ -38,8 +56,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<nav class="moj-sub-navigation" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-				  <a class="moj-sub-navigation__link" aria-current="page" href="personal-details">Referral details</a>
-				</li>
+				  	<a class="moj-sub-navigation__link" aria-current="page" href="../referral-details/personal-details">Referral details</a>
+			 	</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
 				</li>
@@ -47,10 +65,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
+					<a class="moj-sub-navigation__link" href="../referral-details/availability">Group allocation notes</a>
 				</li>
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="availability">Group allocation notes</a>
+					<a class="moj-sub-navigation__link" href="../attendance/attendance">Attendance</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="../referral-details/status-history">Status history</a>
 				</li>
 		  	</ul>
 		</nav>

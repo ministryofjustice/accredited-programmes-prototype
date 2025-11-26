@@ -29,9 +29,11 @@ Sham Booth: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 			Attendance
 			</dt>
 			<dd class="govuk-summary-list__value">
-				<strong class="govuk-tag">
-					Attended
-				</strong>
+				{% if data['booth-sham'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% endif %}
 			</dd>
 			<dd class="govuk-summary-list__actions">
 			<a class="govuk-link" href="attendance-group-mark">Change<span class="govuk-visually-hidden"> attendance</span></a>
@@ -42,14 +44,15 @@ Sham Booth: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 			{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
 
 				{{ govukCharacterCount({
-				name: "session-notes",
-				id: "session-notes",
+				name: "session-notes-1",
+				id: "session-notes-1",
 				maxlength: 50000,
 				label: {
 					text: "Add session notes",
 					classes: "govuk-label--m",
 					isPageHeading: false
-				}
+				},
+				value: data['session-notes-1']
 			}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">

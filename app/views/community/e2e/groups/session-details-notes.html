@@ -51,9 +51,11 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				3 November 2025</p>
 			</dd>
 			<dd class="govuk-summary-list__value">
-				<strong class="govuk-tag">
-					Attended
-				</strong>
+				{% if data['river-alex'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% endif %}
 			</dd>
 		</div>
 		</dl>
@@ -63,11 +65,15 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 <h2 class="govuk-heading-m">Session notes</h2>
 
 <div class="govuk-inset-text">
-  Last updated by Berta Tonka on 3 November 2025.
+  Last updated by Berta Tonka on 27 November 2025.
 </div>
 
-<p class="govuk-body">POP arrived on time. Presented as calm and engaged. No immediate safeguarding issues disclosed.</p>
-<p class="govuk-body">Introduced new coping strategies. Add details</p>
+{% if data['session-notes-3'] %}
+	<p class="govuk-body">{{ data['session-notes-3'] }}</p>
+{% else %}
+	<p class="govuk-body">POP arrived on time. Presented as calm and engaged. No immediate safeguarding issues disclosed.</p>
+	<p class="govuk-body">Introduced new coping strategies. Add details</p>
+{% endif %}
 
 <form action="session-details-notes-post" method="post">
 	<button type="submit" class="govuk-button" data-module="govuk-button">Update notes</button>

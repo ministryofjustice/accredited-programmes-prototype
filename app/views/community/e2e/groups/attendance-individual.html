@@ -19,71 +19,29 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-l">Record attendance and progress</span>
-		<h2 class="govuk-heading-l">Record attendance for Getting Started 1</h2>
-		<form action="attendance-group-mark-post" method="post">
+		<form action="attendance-individual-post" method="post">
 			<div class="govuk-form-group">
 		
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-		{{ govukRadios({
-			name: "booth-sham",
-			value: data['booth-sham'],
-			fieldset: {
-				legend: {
-				text: "Booth, Sham",
-				classes: "govuk-fieldset__legend--m"
-				}
-			},
-			items: [
-				{
-				value: "yes",
-				text: "Attended"
-				},
-				{
-				value: "no",
-				text: "Did not attend"
-				}
-			]
-		}) }}
-
-		{{ govukRadios({
-			name: "poole-adrian",
-			value: data['poole-adrian'],
-			fieldset: {
-				legend: {
-				text: "Poole, Adrian",
-				classes: "govuk-fieldset__legend--m"
-				}
-			},
-			items: [
-				{
-				value: "yes",
-				text: "Attended"
-				},
-				{
-				value: "no",
-				text: "Did not attend"
-				}
-			]
-		}) }}
 
 		{{ govukRadios({
 			name: "river-alex",
 			value: data['river-alex'],
 			fieldset: {
 				legend: {
-				text: "River, Alex",
-				classes: "govuk-fieldset__legend--m"
+				text: "Did Alex River attend Getting Started 1?",
+				isPageHeading: true,
+				classes: "govuk-fieldset__legend--l"
 				}
 			},
 			items: [
 				{
 				value: "yes",
-				text: "Attended"
+				text: "Yes - attended"
 				},
 				{
 				value: "no",
-				text: "Did not attend"
+				text: "No - did not attend"
 				}
 			]
 		}) }}
