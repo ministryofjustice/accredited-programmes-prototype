@@ -51,28 +51,28 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions clear">
+			<div class="moj-page-header-actions__title">
+				<!--<span class="govuk-caption-xl">North East</span>-->
+				<h1 class="govuk-heading-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</h1>
+			</div>
+			<!--<div class="moj-page-header-actions__actions">
+				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
+					<a href="group-list" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to group list</a>
+				</div>
+			</div>
+		-->
+		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-full">
 
-		<span class="govuk-caption-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
-		<h1 class="govuk-heading-xl">Sessions and attendance</h1>
-
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-manage-schedule">Sessions and attendance</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group details</a>
-				</li>
-			</ul>
-		</nav>
+		<h2 class="govuk-heading-l govuk-!-margin-top-4">Manage schedule</h2>
+		<p class="govuk-body">
+			Select a session name to change the date or time and record attendance.
+		</p>
 
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -86,44 +86,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">	
-		<table class="govuk-table" data-module="moj-sortable-table">
-			<thead class="govuk-table__head">
-				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
-				</tr>
-			</thead>
-			<tbody class="govuk-table__body">
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Booth, Sham (B739123): Pre-group one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Thursday 23 April 2026</td>
-					<td class="govuk-table__cell">2:30pm to 3:30pm</td>
-					<td class="govuk-table__cell">Booth, Sham</td>
-					<td class="govuk-table__cell">Harpreet Singh</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Dillion, Ben (P689325): Pre-group one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Monday 27 April 2026</td>
-					<td class="govuk-table__cell">3:45pm to 4:45pm</td>
-					<td class="govuk-table__cell">Dillion, Ben</td>
-					<td class="govuk-table__cell">Harpreet Singh</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Pre-group one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Tuesday 28 April 2026</td>
-					<td class="govuk-table__cell">2:30pm to 3:30pm</td>
-					<td class="govuk-table__cell">River, Alex</td>
-					<td class="govuk-table__cell">Tom Bassett</td>
-				</tr>
-			</tbody>
-		</table>
 		<p class="govuk-body"><strong>Pre-group one-to-ones:</strong> Thursday 23 April to Monday 11 May 2026</p>
 		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
 			Schedule a pre-group session
@@ -168,38 +130,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">11am to 1:30pm</td>
 					<td class="govuk-table__cell">See session details</td>
 					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2: Understanding myself catch-up</a></td>
-					<td class="govuk-table__cell">Catch-up</td>
-					<td class="govuk-table__cell">Thursday 21 May 2026</td>
-					<td class="govuk-table__cell">10am to 11am</td>
-					<td class="govuk-table__cell">Dillion, Ben<br>River, Alex</td>
-					<td class="govuk-table__cell">Harpreet Singh<br>Tom Bassett</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Dillion, Ben (P689325): Getting started one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Thursday 21 May 2026</td>
-					<td class="govuk-table__cell">11am to 12pm</td>
-					<td class="govuk-table__cell">Dillion, Ben</td>
-					<td class="govuk-table__cell">Tom Bassett</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">Booth, Sham (B739123): Getting started one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Thursday 21 May 2026</td>
-					<td class="govuk-table__cell">1:15pm to 2:15pm</td>
-					<td class="govuk-table__cell">Booth, Sham</td>
-					<td class="govuk-table__cell">Tom Bassett</td>
-				</tr>
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell"><a href="session-details-individual" class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Getting started one-to-one</a></td>
-					<td class="govuk-table__cell">Individual</td>
-					<td class="govuk-table__cell">Friday 22 May 2026</td>
-					<td class="govuk-table__cell">3:30pm to 4:30pm</td>
-					<td class="govuk-table__cell">River, Alex</td>
-					<td class="govuk-table__cell">Tom Bassett</td>
 				</tr>
 			</tbody>
 		</table>
@@ -490,7 +420,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Three-way meeting
+          Three-way meetings
         </span>
       </h2>
     </div>
