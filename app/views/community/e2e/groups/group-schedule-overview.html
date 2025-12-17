@@ -5,76 +5,19 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "../groups/group-list",
-			active: true
-			}
-		]
-	}) }}
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-width-container">
-
-	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-		{{ govukBreadcrumbs({
-		items: [
-			{
-			text: "Groups",
-			href: "group-list"
-			},
-			{
-			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-allocated-ur"
-			}
-		]
-		}) }}
-
-</div>
+{% include "/includes/community/e2e/header-group.html" %}
+{% include "/includes/community/e2e/header-group-sub-nav-schedule.html" %}
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-full">
-
 		<span class="govuk-caption-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
 		<h1 class="govuk-heading-xl">Schedule</h1>
-		
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-schedule-overview">Schedule</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-manage-schedule">Sessions and attendance</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group details</a>
-				</li>
-			</ul>
-		</nav>
 	</div>
+</div>
 
+<div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-two-thirds">
 
 		{% if showBanner %}
@@ -125,22 +68,19 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				}
 			]
 			}) }}
-
-		<a href="group-manage-schedule" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-			Manage schedule details
-		</a>
-	</div>
-
-
+		
+			<h2 class="govuk-heading-m">Schedule overview</h2>
+	
+		</div>
 </div>
 
 <table class="govuk-table" data-module="moj-sortable-table">
 	<thead class="govuk-table__head">
 		<tr class="govuk-table__row">
-			<th scope="col" class="govuk-table__header" aria-sort="none">Session</th>
-			<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+			<th scope="col" class="govuk-table__header">Session</th>
+			<th scope="col" class="govuk-table__header">Session type</th>
 			<th scope="col" class="govuk-table__header" aria-sort="none">Date</th>
-			<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
+			<th scope="col" class="govuk-table__header">Time</th>
 		</tr>
 	</thead>
 	

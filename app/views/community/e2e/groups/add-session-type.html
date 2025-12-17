@@ -5,26 +5,7 @@ Which session are you scheduling? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "group-list",
-			active: true
-			}
-		]
-	}) }}
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -56,11 +37,11 @@ Which session are you scheduling? - {{ serviceName }} - GOV.UK Prototype Kit
 			items: [
 				{
 				value: "getting-started-1",
-				text: "Introduction to Building Choices (Getting started 1) catch-up"
+				text: "Getting started 1 catch-up"
 				},
 				{
 				value: "getting-started-2",
-				text: "Understanding myself (Getting started 2) catch-up"
+				text: "Getting started 2 catch-up"
 				},
 				{
 				value: "getting-started-121",

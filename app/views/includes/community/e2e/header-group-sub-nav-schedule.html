@@ -1,0 +1,35 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!-->
+    <link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+    {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+    {% endfor %}
+
+	<!-- Secondary nav -->
+	<div class="govuk-width-container">
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-full">
+				<nav class="moj-sub-navigation" aria-label="Sub navigation">
+					<ul class="moj-sub-navigation__list">
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" aria-current="page" href="group-schedule-overview">Schedule</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="group-manage-schedule">Sessions and attendance</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group details</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+
+    

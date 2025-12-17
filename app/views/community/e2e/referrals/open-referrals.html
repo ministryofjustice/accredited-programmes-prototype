@@ -5,36 +5,15 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals",
-			active: true
-			},
-			{
-			text: "Groups",
-			href: "../groups/group-list"
-			}
-		]
-	}) }}
+{% include "/includes/community/e2e/header-caselist.html" %}
 {% endblock %}
 
 
 {% block content %}
 <div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-xl">Referrals in North East</span>
-		<h1 class="govuk-heading-xl">Building Choices: moderate intensity</h1>
+		<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+		<h1 class="govuk-heading-xl">Case list</h1>
 	</div>
 </div>
 <div class="govuk-grid-row">

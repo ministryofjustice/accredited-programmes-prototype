@@ -5,34 +5,9 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/v3/key-details-pt.html" %}
-
-	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../../home"
-			},
-			{
-			text: "Case list",
-			href: "../../referrals/open-referrals",
-			active: true
-			},
-			{
-			text: "Groups",
-			href: "../../groups/group-list"
-			}
-		]
-	}) }}
-
+{% include "/includes/community/e2e/header-pop-no-primary-nav.html" %}
+{% include "/includes/community/e2e/header-pop-sub-nav-referral-details.html" %}
 {% endblock %}
-
-{% block beforeContent %}
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-{% endblock %}  
 
 {% block content %}
 <div class="govuk-grid-row clear">
@@ -49,32 +24,6 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 				</div>
 			</div>
  		</div>
-	</div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" href="../referral-details/personal-details">Referral details</a>
-			 	</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="../referral-details/availability">Group allocation notes</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="../attendance/attendance">Attendance</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="../referral-details/status-history">Status history</a>
-				</li>
-		  	</ul>
-		</nav>
 	</div>
 </div>
  	
