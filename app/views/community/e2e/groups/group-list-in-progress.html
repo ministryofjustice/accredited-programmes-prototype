@@ -5,28 +5,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "../groups/group-list",
-			active: true
-			}
-		]
-	}) }}
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block content %}
@@ -34,8 +13,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	<div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions clear">
 			<div class="moj-page-header-actions__title">
-				<span class="govuk-caption-xl">North East</span>
-				<h1 class="govuk-heading-xl">Building Choices groups</h1>
+				<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Groups</h1>
 			</div>
 			<div class="moj-page-header-actions__actions">
 				<div class="moj-button-group moj-button-group--inline">

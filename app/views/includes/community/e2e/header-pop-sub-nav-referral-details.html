@@ -1,0 +1,41 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!-->
+    <link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+    {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+    {% endfor %}
+
+	<!-- Secondary nav -->
+	<div class="govuk-width-container">
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-full">
+				<nav class="moj-sub-navigation" aria-label="Sub navigation">
+					<ul class="moj-sub-navigation__list">
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" aria-current="page" href="../referral-details/personal-details">Referral details</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="../referral-details/availability">Group allocation notes</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="../attendance/attendance">Attendance</a>
+						</li>
+						<li class="moj-sub-navigation__item">
+							<a class="moj-sub-navigation__link" href="../referral-details/status-history">Status history</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+
+    

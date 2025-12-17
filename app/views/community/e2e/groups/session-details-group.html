@@ -5,59 +5,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "group-list",
-			active: true
-			}
-		]
-	}) }}
-
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-width-container">
-
-	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-		{{ govukBreadcrumbs({
-		items: [
-			{
-			text: "Groups",
-			href: "group-list"
-			},
-			{
-			text: "BCCDD1",
-			href: "group-details-overview-ur"
-			},
-			{
-			text: "Schedule overview",
-			href: "group-schedule-overview"
-			},
-			{
-			text: "Manage schedule",
-			href: "group-manage-schedule"
-			}
-		]
-		}) }}
-
-</div>
-{% endblock %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</nav>
+{% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
@@ -99,7 +54,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Time"
 			},
 			value: {
-				text: "11am to 1:30pm (2.5 hours)"
+				text: "11am to 1:30pm"
 			},
 			actions: {
 				items: [
@@ -113,7 +68,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "Attendees"
+				text: "Scheduled to attend"
 			},
 			value: {
         		html: '<p class="govuk-body">Booth, Sham</p>

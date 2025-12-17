@@ -46,7 +46,7 @@
 		<hr class="govuk-section-break govuk-section-break--visible">
 	</div>
 
-	<!-- Primary nav -->
+	<!-- Primary nav - need to add if or statements to show the active tab depending on if user is in case list, group or home -->
 	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
 
 	{{ mojPrimaryNavigation({
@@ -54,33 +54,17 @@
 		items: [
 			{
 			text: "Home",
-			href: "../../home"
+			href: "../../../community/e2e/home"
 			},
 			{
 			text: "Case list",
-			href: "../../referrals/open-referrals"
+			href: "../../../community/e2e/referrals/open-referrals",
+			active: true
 			},
 			{
 			text: "Groups",
-			href: "../../groups/group-list"
+			href: "../../../community/e2e/groups/group-list"
 			}
 		]
 	}) }}
-
-	<!-- PoP profile banner -->
-    <section class="key-details-bar" aria-label="Key details">
-      	<div class="key-details-bar__key-details">
-			<div class="key-details-bar__top-block">
-				<span class="govuk-visually-hidden">Name:</span>
-				<span class="key-details-bar__name">{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</span>
-			</div>
-			<div class="key-details-bar__bottom-block govuk-!-padding-top-0">
-				<span class="govuk-body govuk-!-margin-right-4 nav-border">CRN: X123456</span> 
-				<span class="govuk-body govuk-!-margin-right-6">Date of birth: 5 February 1991 (33 years old)</span>
-			</div>
-      	</div>
-    </section> 
-
-
-
     

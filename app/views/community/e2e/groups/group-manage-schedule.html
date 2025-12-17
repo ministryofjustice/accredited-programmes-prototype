@@ -5,74 +5,17 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "../groups/group-list",
-			active: true
-			}
-		]
-	}) }}
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-width-container">
-
-	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-		{{ govukBreadcrumbs({
-		items: [
-			{
-			text: "Groups",
-			href: "group-list"
-			},
-			{
-			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-allocated-ur"
-			}
-		]
-		}) }}
-
-</div>
+{% include "/includes/community/e2e/header-group.html" %}
+{% include "/includes/community/e2e/header-group-sub-nav-sessions.html" %}
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-full">
-
 		<span class="govuk-caption-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
 		<h1 class="govuk-heading-xl">Sessions and attendance</h1>
-
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-allocated-ur">Allocations</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-schedule-overview">Schedule</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-manage-schedule">Sessions and attendance</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="group-details-overview-ur">Group details</a>
-				</li>
-			</ul>
-		</nav>
+	</div>
+</div>
 
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -89,12 +32,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -131,7 +74,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
     </div>
   </div>
 
-<div class="govuk-accordion__section govuk-accordion__section--expanded">
+<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -144,12 +87,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -210,7 +153,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
     </div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -223,12 +166,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -289,7 +232,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -302,12 +245,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -352,7 +295,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -365,12 +308,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -431,7 +374,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -444,12 +387,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
-					<th scope="col" class="govuk-table__header" aria-sort="ascending">Session name</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Session type</th>
+					<th scope="col" class="govuk-table__header">Session name</th>
+					<th scope="col" class="govuk-table__header">Session type</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date of session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Attendees</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Facilitators</th>
+					<th scope="col" class="govuk-table__header">Time</th>
+					<th scope="col" class="govuk-table__header">Attendees</th>
+					<th scope="col" class="govuk-table__header">Facilitators</th>
 				</tr>
 			</thead>
 			<tbody class="govuk-table__body">
@@ -486,19 +429,19 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Three-way meeting
+          Post-programme reviews
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		<p class="govuk-body"><strong>Three-way meetings complete by:</strong> Monday 3 September 2026</p>
+		<p class="govuk-body"><strong>Post-programme review deadline:</strong> Monday 3 September 2026</p>
 		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-			Schedule a Three-way meeting
+			Schedule a post-programme review
 		</a>
 	</div>
 	</div>

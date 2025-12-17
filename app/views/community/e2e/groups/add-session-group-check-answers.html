@@ -5,26 +5,7 @@ Review your session details - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "group-list",
-			active: true
-			}
-		]
-	}) }}
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -73,7 +54,7 @@ Review your session details - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "Date"
+				text: "Date of session"
 			},
 			value: {
         		text: "Thursday 11th June 2026"
@@ -107,7 +88,7 @@ Review your session details - {{ serviceName }} - GOV.UK Prototype Kit
 			},
 			{
 			key: {
-				text: "Attendees"
+				text: "Participants"
 			},
 			value: {
         		html: '<p class="govuk-body">Booth, Sham</p><p class="govuk-body">Poole, Adrian</p>'

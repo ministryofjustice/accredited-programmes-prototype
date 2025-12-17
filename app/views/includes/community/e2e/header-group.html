@@ -42,6 +42,9 @@
         	<span class="govuk-phase-banner__text">This is a new service - your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
       	</p>
     </div>
+	<div class="govuk-width-container">
+		<hr class="govuk-section-break govuk-section-break--visible">
+	</div>
 
 	<!-- Primary nav - need to add if or statements to show the active tab depending on if user is in case list, group or home -->
 	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
@@ -51,15 +54,15 @@
 		items: [
 			{
 			text: "Home",
-			href: "../../home"
+			href: "../../../community/e2e/home"
 			},
 			{
 			text: "Case list",
-			href: "../../referrals/open-referrals"
+			href: "../../../community/e2e/referrals/open-referrals"
 			},
 			{
 			text: "Groups",
-			href: "../../groups/group-list",
+			href: "../../../community/e2e/groups/group-list",
 			active: true
 			}
 		]
