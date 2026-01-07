@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Select the gender of the group - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit Getting started 1</span>
+		<h1 class="govuk-heading-l">Rescheduling other sessions</h1>
+		
+		{{ govukSummaryList({
+			rows: [
+				{
+				key: {
+					text: "Previous session date"
+				},
+				value: {
+					text: "Thursday 23 April 2026"
+				}
+				},
+				{
+				key: {
+					text: "New session date"
+				},
+				value: {
+					text: "Monday 25 May 2026"
+				}
+				}
+			]
+			}) }}
+		
+		<form action="session-details-group" method="post">
+			<div class="govuk-form-group">
+
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+			name: "edit-session-reschedule",
+			fieldset: {
+				legend: {
+				text: "Automatically reschedule other sessions?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--m"
+				}
+			},
+			hint: {
+				html: '<p class="govuk-hint">You are updating one session. The service can automatically move group sessions scheduled to take place after this session to reflect the changes you have made.</p>
+				<p class="govuk-hint">Any scheduled one-to-one sessions will not be moved.</p>'
+			},
+			items: [
+				{
+				value: "yes",
+				text: "Yes, automatically move sessions to the next scheduled date"
+				},
+				{
+				value: "no",
+				text: "No, I will manually move sessions"
+				}
+			]
+		}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Submit</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

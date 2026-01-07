@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
+Edit where the group will take place - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,10 +18,10 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
-		<h1 class="govuk-heading-l">Where does the group take place?</h1>
+		<span class="govuk-caption-l">Edit group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<h1 class="govuk-heading-l">Edit where the group will take place</h1>
 		
-		<form action="create-group-facilitators" method="post">
+		<form action="group-details-overview-ur" method="post">
 		<div class="govuk-form-group">
 		{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
@@ -77,6 +77,7 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 				},
 				{
 				value: "Darlington: 11 Woodland Road",
+				checked: true,
 				text: "Darlington: 11 Woodland Road"
 				},
 				{
@@ -87,7 +88,7 @@ Where does the group take place? - {{ serviceName }} - GOV.UK Prototype Kit
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			<button class="govuk-button" data-module="govuk-button">Submit</button>
 			</div>
 		</form>
 	</div>
