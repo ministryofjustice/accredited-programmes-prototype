@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit group code - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="group-details-overview-ur" method="post">
+			<div class="govuk-form-group">
+		
+		{% from "govuk/components/input/macro.njk" import govukInput %}
+
+		{{ govukInput({
+			label: {
+				text: "Edit group code",
+				classes: "govuk-label--l",
+				isPageHeading: true
+			},
+			hint: {
+				text: "For example, BCCDD1. This will be used to identify your group."
+			},
+			classes: "govuk-input--width-20",
+			id: "group-code",
+			name: "group-code",
+			value: data['group-code'] | default('BCNE2026-0409')
+		}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Submit</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

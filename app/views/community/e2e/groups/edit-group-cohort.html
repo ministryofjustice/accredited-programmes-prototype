@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="group-details-overview-ur" method="post">
+			<div class="govuk-form-group">
+		
+		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+			name: "edit-group-cohort",
+			fieldset: {
+				legend: {
+				text: "Edit the group cohort",
+				isPageHeading: true,
+				classes: "govuk-fieldset__legend--l"
+				}
+			},
+			hint: {
+				text: "For Building Choices, general offence cohorts include domestic abuse cohorts."
+			},
+			items: [
+				{
+				value: "General offence",
+				checked: true,
+				text: "General offence"
+				},
+				{
+				value: "General offence LDC",
+				text: "General offence, learning disabilities and challenges (LDC)"
+				},
+				{
+				value: "Sexual offence",
+				text: "Sexual offence"
+				},
+				{
+				value: "Sexual offence LDC",
+				text: "Sexual offence, learning disabilities and challenges (LDC)"
+				}
+			]
+		}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

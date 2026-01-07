@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="edit-group-start-date-reschedule" method="post">
+			<div class="govuk-form-group">
+
+		<div class="moj-datepicker" data-module="moj-date-picker">
+				<h1 class="govuk-label-wrapper">
+					<label class="govuk-label govuk-label--l" for="date">
+					Edit start date for the group
+					</label>
+				</h1>
+				<div id="date-hint" class="govuk-hint">
+					This is when the pre-group one-to-ones are expected to start. Enter a date, for example 10/7/2025, or select one from the calendar.
+				</div>
+				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+			</div>
+		</div>
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

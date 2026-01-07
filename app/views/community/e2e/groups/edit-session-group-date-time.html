@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit Getting started 1</span>
+		<h1 class="govuk-heading-l">Edit the session date and time</h1>
+		<form action="edit-session-group-date-time-reschedule" method="post">
+			<div class="govuk-form-group">
+
+		<div class="moj-datepicker" data-module="moj-date-picker">
+				<label class="govuk-label govuk-label--m" for="date">
+					Session date
+				</label>
+				<div id="date-hint" class="govuk-hint">
+					Enter a date, for example 10/7/2025, or select one from the calendar.
+				</div>
+				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+			</div>
+		</div>
+
+				<!--Adapted date component for time-->
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset govuk-!-margin-top-6" role="group">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Start time
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3pm.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm">pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+		</div>
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

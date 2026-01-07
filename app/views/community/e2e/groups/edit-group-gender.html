@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit the gender of the group - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/v3/head-no-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit group {{data['group-code'] | default('BCNE2026-0409')}}</span>
+		<form action="group-details-overview-ur" method="post">
+			<div class="govuk-form-group">
+
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+			name: "create-group-gender",
+			fieldset: {
+				legend: {
+				text: "Edit the gender of the group",
+				isPageHeading: true,
+				classes: "govuk-fieldset__legend--l"
+				}
+			},
+			items: [
+				{
+				value: "Male",
+				checked: true,
+				text: "Male"
+				},
+				{
+				value: "Female",
+				text: "Female"
+				},
+				{
+				value: "Mixed",
+				text: "Mixed"
+				}
+			]
+		}) }}
+
+			<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Submit</button>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+
