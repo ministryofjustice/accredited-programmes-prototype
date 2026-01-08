@@ -11,6 +11,23 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block content %}
 <div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-two-thirds">
+
+		{% if showBanner %}
+			<div role="region" class="moj-alert moj-alert--success" aria-label="success: Person removed successfully" data-module="moj-alert" data-dismissible="true">
+				<div>
+					<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+						<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+					</svg>
+				</div>
+					<div class="moj-alert__content">Alex River: Getting started one-to-one has been deleted.</div>
+				<div class="moj-alert__action">
+					<button class="moj-alert__dismiss" hidden>Dismiss</button>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	
 	<div class="govuk-grid-column-full">
 		<span class="govuk-caption-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
 		<h1 class="govuk-heading-xl">Sessions and attendance</h1>

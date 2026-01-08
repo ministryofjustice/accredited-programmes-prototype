@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
+Are you sure you want to delete this session? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/e2e/header-group.html" %}
+{% include "/includes/community/e2e/header-no-primary-nav.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,41 +17,33 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
-		<span class="govuk-caption-l">Create group {{data['group-code'] | default('BCNE2026-0409')}}</span>
-		<form action="create-group-gender" method="post">
+		<span class="govuk-caption-l">Delete Alex River: Getting started one-to-one</span>
+		<form action="delete-session-post" method="post">
 			<div class="govuk-form-group">
 		
 		<!-- TO DO: Find a way to save the name data and pass through to caption on other pages-->
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 		{{ govukRadios({
-			name: "create-group-cohort",
+			name: "delete-session",
 			fieldset: {
 				legend: {
-				text: "Select the group cohort",
+				text: "Are you sure you want to delete this session?",
 				isPageHeading: true,
 				classes: "govuk-fieldset__legend--l"
 				}
 			},
 			hint: {
-				text: "For Building Choices, general offence cohorts include domestic abuse cohorts."
+				text: "Any attendance record and session notes will also be deleted."
 			},
 			items: [
 				{
-				value: "General offence",
-				text: "General offence"
+				value: "yes",
+				text: "Yes, delete session"
 				},
 				{
-				value: "General offence LDC",
-				text: "General offence, learning disabilities and challenges (LDC)"
-				},
-				{
-				value: "Sexual offence",
-				text: "Sexual offence"
-				},
-				{
-				value: "Sexual offence LDC",
-				text: "Sexual offence, learning disabilities and challenges (LDC)"
+				value: "no",
+				text: "No, return to session details"
 				}
 			]
 		}) }}

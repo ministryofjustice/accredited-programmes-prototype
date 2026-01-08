@@ -5,75 +5,17 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
-
-{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../home"
-			},
-			{
-			text: "Case list",
-			href: "../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "../groups/group-list",
-			active: true
-			}
-		]
-	}) }}
-{% endblock %}
-
-{% block beforeContent %}
-<div class="govuk-width-container">
-
-	{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-		{{ govukBreadcrumbs({
-		items: [
-			{
-			text: "Groups",
-			href: "group-list"
-			},
-			{
-			text: data['groupCode'] | default('BCNE2026-0409'),
-			href: "group-details-allocated-ur"
-			}
-		]
-		}) }}
-
-</div>
+{% include "/includes/community/e2e/header-group.html" %}
+{% include "/includes/community/e2e/header-group-sub-nav-sessions.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row clear">
 	<div class="govuk-grid-column-full">
-		<div class="moj-page-header-actions clear">
-			<div class="moj-page-header-actions__title">
-				<!--<span class="govuk-caption-xl">North East</span>-->
-				<h1 class="govuk-heading-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</h1>
-			</div>
-			<!--<div class="moj-page-header-actions__actions">
-				<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-					<a href="group-list" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to group list</a>
-				</div>
-			</div>
-		-->
-		</div>
-
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-full">
-
-		<h2 class="govuk-heading-l govuk-!-margin-top-4">Manage schedule</h2>
-		<p class="govuk-body">
-			Select a session name to change the date or time and record attendance.
-		</p>
-
+		<span class="govuk-caption-xl">{{data['groupCode'] | default('BCNE2026-0409')}}</span>
+		<h1 class="govuk-heading-xl">Sessions and attendance</h1>
+	</div>
+</div>
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
   <div class="govuk-accordion__section">
@@ -93,7 +35,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
     </div>
   </div>
 
-<div class="govuk-accordion__section govuk-accordion__section--expanded">
+<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -140,7 +82,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
     </div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -219,7 +161,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -282,7 +224,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -361,7 +303,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
@@ -416,19 +358,19 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	</div>
 
-	<div class="govuk-accordion__section govuk-accordion__section--expanded">
+	<div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Three-way meetings
+          Post-programme reviews
         </span>
       </h2>
     </div>
     <!-- Stuff inside the accordion -->
 	<div id="accordion-default-content-1" class="govuk-accordion__section-content">
-		<p class="govuk-body"><strong>Three-way meetings complete by:</strong> Monday 3 September 2026</p>
+		<p class="govuk-body"><strong>Post-programme reviews complete by:</strong> Monday 3 September 2026</p>
 		<a href=" " role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-			Schedule a Three-way meeting
+			Schedule a post-programme review
 		</a>
 	</div>
 	</div>

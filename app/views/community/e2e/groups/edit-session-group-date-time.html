@@ -1,17 +1,16 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
+Edit the session date and time - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
+{% include "/includes/community/e2e/header-no-primary-nav.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -30,7 +29,7 @@ Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 				<div id="date-hint" class="govuk-hint">
 					Enter a date, for example 10/7/2025, or select one from the calendar.
 				</div>
-				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off">
+				<input class="govuk-input moj-js-datepicker-input " id="date" name="date" type="text" aria-describedby="date-hint" autocomplete="off" value="14/5/2026">
 			</div>
 		</div>
 
@@ -49,7 +48,7 @@ Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
 						Hour
 					</label>
-					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric" value="11">
 					</div>
 				</div>
 				<div class="govuk-date-input__item">
@@ -57,7 +56,7 @@ Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
 						Minute
 					</label>
-					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric">
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric" value="00">
 					</div>
 				</div>
 				<div class="govuk-date-input__item">
@@ -67,7 +66,7 @@ Edit start date for the group - {{ serviceName }} - GOV.UK Prototype Kit
 					</label>
 					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
 						<option value="select"> </option>
-						<option value="am">am</option>
+						<option value="am" selected>am</option>
 						<option value="pm">pm</option>
 					</select>
 					</div>

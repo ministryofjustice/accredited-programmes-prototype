@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" xmlns="http://www.w3.org/1999/xhtml">
+<style>
+:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}:root, [data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+.logos {
+    width: 300px;
+    margin-bottom: 10px;
+}
+.headerInformation {
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    top: 0px;
+}
+h1 {
+    margin-top: 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #eee;
+}
+.headerInformation {
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    top: 0px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    --bs-heading-color: #777;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.informationArea {
+    font-size: 1.25em;
+    background-color: #eee;
+    margin: 10px auto;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+.row>* {
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
+h2 {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    --bs-heading-color: #777;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.div-textarea {
+    vertical-align: top;
+    height: 6lh;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 5px 5px 5px 10px;
+    color: #555;
+    resize: vertical;
+    background-color: #f5f5f5;
+    opacity: 1;
+    cursor: not-allowed;
+    overflow-y: auto;
+}
+pre {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0px;
+    border: 0px;
+}
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .875em;
+}
+element.style {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+.tipOfTheDay {
+    position: relative;
+    color: #333;
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #999;
+}
+.tipOfTheDay h2 {
+    color: #333;
+    margin-top: 0;
+    padding: 5px 0px 5px 30px;
+    font-weight: bold;
+    background: url(/public/images/info-icon24.png) left center no-repeat;
+}
+
+.expandIcon.collapsed {
+    content: url(/public/images/expand.gif);
+}
+
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    --bs-heading-color: #777;
+    margin-bottom: 10px;
+}
+#tooltip-list {
+    margin-top: 5px;
+}
+.collapse:not(.show) {
+    display: none;
+}
+.fa-pull-right, .pull-right {
+    float: right;
+}
+
+[role=button] {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: var(--bs-link-color);
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+}
+
+.card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) -(var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex
+;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex
+;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+.linksArea .linkWrapper a:last-child {
+    margin-bottom: 0;
+}
+.linksArea {
+    margin: 0px auto;
+}
+
+.linksArea .linkWrapper a {
+    padding: 6px 0px 6px 0px;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background-color: #347ab7;
+    border: 1px solid #2f6fa7;
+    margin-bottom: 12px;
+}
+.linksArea .linkWrapper {
+    text-align: center;
+    min-height: 1px;
+}
+@media (min-width: 576px) {
+    .mb-sm-2 {
+        margin-bottom: .5rem !important;
+    }
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+body {
+    font-size: 12px;
+    -ms-overflow-style: scrollbar;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+.linksArea .linkWrapper a:last-child {
+    margin-bottom: 0;
+}
+.linksArea .linkWrapper a {
+    padding: 6px 0px 6px 0px;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background-color: #347ab7;
+    border: 1px solid #2f6fa7;
+}
+.row>* {
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+.linksArea .linkWrapper a:last-child {
+    margin-bottom: 0;
+}
+
+.linksArea .linkWrapper a {
+    padding: 6px 0px 6px 0px;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background-color: #347ab7;
+    border: 1px solid #2f6fa7;
+}
+.linksArea .linkWrapper {
+    text-align: center;
+    min-height: 1px;
+}
+
+@media (min-width: 576px) {
+    .mb-sm-2 {
+        margin-bottom: .5rem !important;
+    }
+}
+
+.linkWrapper div {
+    padding-bottom: 12px;
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+.linksArea .linkWrapper a:last-child {
+    margin-bottom: 0;
+}
+.linksArea .external a {
+    background-color: #008000;
+    border: 1px solid #067106;
+}
+.linksArea .linkWrapper a {
+    padding: 6px 0px 6px 0px;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.homepageFeedback {
+    font-weight: bolder;
+    font-size: 16px;
+}
+.homepageFeedbackUrl {
+    color: #003eff;
+}
+
+a {
+    text-decoration: none;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+}
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+}
+}
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="#" /><head id="j_idt2">
+        <title>National Delius Home Page</title>
+       <!-- <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/bootstrap/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/jquery-ui/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius.css" /><link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-overview.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-navigation.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-training.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/fontawesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/delius-jquery-ui.css" />
+        <link type="text/css" rel="stylesheet" href="/NDelius-war/delius/javax.faces.resource/css/delius/homepage.css" />
+        <script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/jsf.js?ln=javax.faces"></script>-->
+        </head>
+        <body onload="renderURLsHomepageMaintenanceBanner()" style="background: #fff; margin: 0 20px;padding-top: 0;">
+        <form id="homepageForm" name="homepageForm" method="post" action="/NDelius-war/delius/JSP/homepage.xhtml" enctype="application/x-www-form-urlencoded" role="dialog">
+        <input type="hidden" name="homepageForm" value="homepageForm" />
+
+     <main>
+        <div class="container-fluid">
+            <div class="logos"><img src="/public/images/MOJ-logo.png" alt="MoJ Logo" height="110" width="253" class="float-left" />
+            </div>
+            <div class="headerInformation">
+                <h1 style="font-size: 35px; font-weight: bold; margin-bottom: 8px;">National Delius</h1>
+                Welcome <span style="font-weight: bold;">T. Saunders</span>(T_Saunders)
+                <br/>to National Delius - TEST USE ONLY Version 6.2.14.3 
+                <br/>
+            </div>
+        </div>
+
+        <div class="warning">
+        </div>
+        <div class="informationArea">
+            <div class="form-row">
+                <h2 style="line-height: 1.2; color: var(--bs-heading-color);">Maintenance Banner
+                </h2>
+                <div id="maintenanceBannerLinkify" style="max-height: 100px;" class="div-textarea">
+                    <pre><span id="maintenanceBanner">AWS Test Maintenance Banner</span></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="tipOfTheDayArea" class="tipOfTheDay hide">
+            <div class="messageInner">
+                <h2>
+                    Shortcut Keys
+                    <a id="tipOfTheDayAreaBtn" class="pull-right expandIcon collapsed" data-bs-toggle="collapse" href="#" role="button" aria-expanded="false" aria-controls="tooltip-list"></a>
+                </h2>
+
+                <div class="collapse" id="tooltip-list">
+                    <div class="card card-body">
+                        <div style="margin-bottom: 10px;">You can use shortcut keys to navigate more quickly and easily. Use the listed keys in the stated places.
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <h1>Home Screen</h1>
+                                    <ul>
+                                        <li><strong>+ Q</strong> - National Search</li>
+                                        <li><strong>+ N</strong> - National Custody Search</li>
+                                        <li><strong>+ R</strong> - Recently Viewed</li>
+                                        <li><strong>+ U</strong> - UPW Project Diary</li>
+                                        <li><strong>+ J</strong> - UPW Projects</li>
+                                        <li><strong>+ F</strong> - Officer Diary</li>
+                                        <li><strong>+ C</strong> - Court Diary</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <h1>Home Screen</h1>
+                                    <ul>
+                                        <li><strong>+ A</strong> - AP Diary</li>
+                                        <li><strong>+ Z</strong> - User Preferences</li>
+                                        <li><strong>+ X</strong> - Sign Out</li>
+                                        <li><strong>+ S</strong> - New Search</li>
+                                        <li><strong>+ V</strong> - Create and Vary</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="col">
+                                    <h1>Header and Menu</h1>
+                                    <ul>
+                                        <li><strong>+ H</strong> - Home Page</li>
+                                        <li><strong>+ F</strong> - Officer Diary</li>
+                                        <li><strong>+ P</strong> - Print</li>
+                                        <li><strong>+ K</strong> - Alerts Diary</li>
+                                        <li><strong>+ V</strong> - Register Reviews</li>
+                                        <li><strong>+ X</strong> - Exit</li>
+                                        <li><strong>+ Y</strong> - My Documents</li>
+                                        <li><strong>+ Z</strong> - User Preferences</li>
+                                        <li><strong>+ 0</strong> - Toggle Header View</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="col">
+                                    <h1>On Screens</h1>
+                                    <ul>
+                                        <li><strong>+ A</strong> - Add</li>
+                                        <li><strong>+ C</strong> - Close / Return</li>
+                                        <li><strong>+ C</strong> - Cancel</li>
+                                        <li><strong>+ D</strong> - Document</li>
+                                        <li><strong>+ D</strong> - Delete</li>
+                                        <li><strong>+ D</strong> - Deselect All</li>
+                                        <li><strong>+ E</strong> - Edit</li>
+                                        <li><strong>+ E</strong> - Clear</li>
+                                        <li><strong>+ L</strong> - Spell Check</li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="col">
+                                    <h1>On Screens</h1>
+                                    <ul>
+                                        <li><strong>+ O</strong> - Confirm</li>
+                                        <li><strong>+ Q</strong> - Search</li>
+                                        <li><strong>+ R</strong> - Transfer</li>
+                                        <li><strong>+ R</strong> - Print</li>
+                                        <li><strong>+ S</strong> - Save</li>
+                                        <li><strong>+ S</strong> - Select All</li>
+                                        <li><strong>+ U</strong> - Update</li>
+                                        <li><strong>+ 1</strong> - Focus on first input field</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="clear: both"> 
+            </div>
+        </div>
+        <hr style="margin: 1rem 0;">
+
+        <div class="homepageFeedback" style="line-height: 20px;">Your feedback on Delius is appreciated. 
+            <a id="feedback-output-link" name="feedback-output-link" href="https://forms.office.com/e/0sewVJHZnq" target="_blank" class="homepageFeedbackUrl">Please use this link to send us your comments.</a>
+            <br/>
+            Please do not use this link to log support calls, this is for feedback only.
+        </div>
+        <hr style="margin: 1rem 0;">
+
+        <div class="linksArea clearfix">
+            <div class="row mb-sm-2 linkWrapper"><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt48':'j_idt48'},'');return false" ndaccesskey="q">National Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to New Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt50':'j_idt50'},'');return false" ndaccesskey="s">New Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to National Custody Search." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt52':'j_idt52'},'');return false" ndaccesskey="n">National Custody Search</a></div><div class="col-sm-4"><a href="#" title="Select this option to navigate to Recently Viewed Offenders." onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt54':'j_idt54'},'');return false" ndaccesskey="r">Recently Viewed</a></div><div class="col-sm-4"><a href="#" title="Select this option to view the Officer Diary" onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt56':'j_idt56'},'');return false" ndaccesskey="f">Officer Diary</a></div><div class="col-sm-4"><a href="#" title="Select this option to view the Court Diary" onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt58':'j_idt58'},'');return false" ndaccesskey="c">Court Diary</a></div>
+                <div class="col-sm-4"><a href="#" title="Select this option to view your user preferences" onclick="mojarra.jsfcljs(document.getElementById('homepageForm'),{'j_idt66':'j_idt66'},'');return false" ndaccesskey="z">User Preferences</a>
+                </div>
+                <div class="col-sm-4"><a href="#" title="Select this option to exit from the Delius application" onclick="jsf.util.chain(this,event,'return confirm(\'Are you sure you want to sign out?\')','mojarra.jsfcljs(document.getElementById(\'homepageForm\'),{\'j_idt68\':\'j_idt68\'},\'\')');return false" ndaccesskey="x">Sign Out</a>
+                </div>
+            </div>
+
+            <hr style="margin: 1rem 0;">
+
+            <div class="row mb-sm-2 linkWrapper external">
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to the external link to Prepare a Case for Sentence">Prepare a Case for Sentence</a>
+                </div>
+                <div class="col-sm-4">
+                    <a title="Select this option to navigate to the Manage a Workforce" target="_blank">Manage a Workforce</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Create and Vary a Licence">Create and Vary a Licence</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Consider a Recall">Consider a Recall</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Approved Premises Service (CAS1)">Approved Premises Service (CAS1)</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" title="Select this option to navigate to Transitional Accommodation (CAS3)">Transitional Accommodation (CAS3)</a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="home" title="Select this option to navigate to Accredited Programmes">Accredited Programmes</a>
+                </div>
+            </div>
+
+
+            <hr/>
+
+        </div>
+
+        <script type="text/javascript">
+            /* Generate browser-dependent modifier keys for access keys */
+            document.addEventListener("DOMContentLoaded", function () {
+                const tooltipList = document.getElementById("tooltip-list");
+                const strongElements = tooltipList.querySelectorAll("strong");
+
+                strongElements.forEach(function (strongElement) {
+                    strongElement.innerHTML = "Alt + Shift " + strongElement.innerHTML;
+                });
+            });
+        </script>
+                </main><input id="tabUUID" type="hidden" name="tabUUID" /><div id="genericPopUpArea"></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-6123517613967960087:8570706681836455298" autocomplete="off" />
+</form><style></style><script type="text/javascript">
+        var timeoutMessageDelay = "2400";
+        var timeoutMessageDisplayPeriod = "1200";
+        var deploymentMode = "production";
+        var ndReadOnly = "false";
+        var analyticsTag = "";
+        var analyticsUrl = "https://www.googletagmanager.com/gtag/js?id=null";
+
+        var dateWithSlashFormatters = "DD/MM/YYYY,DD/MM/YY,DD/M/YYYY,DD/M/YY,D/MM/YYYY,D/MM/YY,D/M/YYYY,D/M/YY";
+        var dateWithDashFormatters = "DD-MM-YYYY,DD-MM-YY,DD-M-YYYY,DD-M-YY,D-MM-YYYY,D-MM-YY,D-M-YYYY,D-M-YY";
+        var dateWithoutSeparatorFormatters = "DDMMYYYY,DDMMYY";
+        var dateLess5Formatters = "DD/MM,DD/M,D/MM,D/M,DD-MM,DD-M,D-MM,D-M,DDMM";
+        var timeWithSeparatorFormatters = "HH:mm,H:mm,HH:m,H:m";
+        var timeWithoutSeparatorFormatters = "HHmm,HH,H";
+
+        var maxUploadFileSizeMB = "500";
+        var appInsightsConnectionString = "InstrumentationKey=b44af8fc-1647-443d-8cea-55c5cfbd4518;IngestionEndpoint=https://northeurope-0.in.applicationinsights.azure.com/;LiveEndpoint=https://northeurope.livediagnostics.monitor.azure.com/";
+        var appInsightsSamplingPercentage = +"100.0";
+        var oidName = "Refer_Monitor_PP";
+    </script>
+        <script src="https://js.monitor.azure.com/scripts/b/ext/ai.clck.2.min.js" type="text/javascript"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/appInsightsLoader.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/jquery/jquery.min.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/jquery-ui/jquery-ui.min.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/popper/popper.min.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/bootstrap/bootstrap.min.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/delius.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/duplicate-tab-check.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/utility.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/timeout.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/dayjs/dayjs.min.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/dayjs/plugin/customParseFormat.js"></script>
+    
+    <script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setDefaultFocus(false);
+            var tabUUID = JSON.parse(sessionStorage.getItem("tabUUID"));
+            document.getElementById('tabUUID').value = tabUUID['tabUUID'];
+        });
+    </script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/linkify.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/linkify-string.js"></script><script type="text/javascript" src="/NDelius-war/delius/javax.faces.resource/js/delius/activeURLConversion.js"></script></body>
+</html>

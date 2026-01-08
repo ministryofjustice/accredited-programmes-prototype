@@ -5,8 +5,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/e2e/header-pop-no-primary-nav.html" %}
-{% include "/includes/community/e2e/header-pop-sub-nav-referral-details.html" %}
+{% include "/includes/community/e2e/header-pop.html" %}
+{% include "/includes/community/e2e/header-pop-sub-nav-status-history.html" %}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-xl">Status history</h1>
+	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Status history</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
