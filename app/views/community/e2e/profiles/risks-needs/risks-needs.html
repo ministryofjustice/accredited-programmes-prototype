@@ -5,8 +5,8 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/e2e/header-pop-no-primary-nav.html" %}
-{% include "/includes/community/e2e/header-pop-sub-nav-referral-details.html" %}
+{% include "/includes/community/e2e/header-pop.html" %}
+{% include "/includes/community/e2e/header-pop-sub-nav-risks-needs.html" %}
 {% endblock %}
 
 {% block content %}
@@ -14,44 +14,18 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-l">Referral to Building Choices: moderate intensity</h1>
+	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Risks and needs</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
-				<a href="pdu/open-referrals" class="govuk-button moj-button-menu__item govuk-button--secondary">Back to referrals</a>
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
-					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
-					<a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change LDC status</a>		  
+					<a href="change-referral-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
+					<a href="change-ldc-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change LDC status</a>
+					<a href="change-cohort" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change cohort</a>		  
 				</div>
 			</div>
  		</div>
 	</div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-			  	<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="personal-details">Referral details</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="risks-needs">Risks and needs</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="status-history">Status history</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="govuk-grid-row">
-			<div class="govuk-grid-column-two-thirds">
-				<h2 class="govuk-heading-m">Risks and needs</h2>
-				<p class="govuk-body govuk-!-margin-bottom-0">Relevant sections from OASys to support the referral. The full Layer 3 assessment is available in OASys. Information is accurate at the time of the referral being submitted.</p>
-			</div>
-		</div>
-		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    </div>
 </div>
 
 <div class="govuk-grid-row">
@@ -62,45 +36,46 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					<a href="risks-needs" aria-current="location">Risks and alerts</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="learning-needs-score">Learning needs</a>
+					<a href=" ">Learning needs</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="offence-analysis">Section 2 - Offence analysis</a>
+					<a href=" s">Section 2 - Offence analysis</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="ete">Section 4 - Education, training and employment</a>
+					<a href=" ">Section 4 - Education, training and employment</a>
 		  		</li>
 		  		<li class="moj-side-navigation__item">
-					<a href="relationships">Section 6 - Relationships</a>
+					<a href=" ">Section 6 - Relationships</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="lifestyle-associates">Section 7 - Lifestyle and associates</a>
+					<a href=" ">Section 7 - Lifestyle and associates</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="drug-misuse">Section 8 - Drug misuse</a>
+					<a href=" ">Section 8 - Drug misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="alcohol-misuse">Section 9 - Alcohol misuse</a>
+					<a href=" ">Section 9 - Alcohol misuse</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="emotional-wellbeing">Section 10 - Emotional wellbeing</a>
+					<a href=" ">Section 10 - Emotional wellbeing</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="thinking-behaving">Section 11 - Thinking and behaving</a>
+					<a href=" ">Section 11 - Thinking and behaving</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="attitudes">Section 12 - Attitudes</a>
+					<a href=" ">Section 12 - Attitudes</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="health">Section 13 - Health</a>
+					<a href=" ">Section 13 - Health</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
-					<a href="rosh-analysis">Section R6 - ROSH analysis</a>
+					<a href=" ">Section R6 - ROSH analysis</a>
 		  		</li>
 			</ul>
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-l">Risks and alerts</h2>
 		<div class="govuk-inset-text govuk-!-margin-top-0">Assessment completed 1 August 2023</div>
 		<h3 class="govuk-heading-s">Offender group reconviction scale</h3>
 		<div class="rosh-widget rosh-widget--high govuk-!-margin-bottom-6">

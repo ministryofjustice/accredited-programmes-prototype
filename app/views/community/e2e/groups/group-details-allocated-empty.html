@@ -67,7 +67,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated-ur">Allocated (8)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-details-allocated-ur">Allocated (0)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="group-details-waitlist-ur">Waitlist (52)</a>
@@ -78,7 +78,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			{% if showAllocated %}
 				Showing <strong>1</strong> to <strong>1</strong> of <strong>1</strong> result
 			{% else %}
-				Showing <strong>1</strong> to <strong>8</strong> of <strong>8</strong> results
+				Showing <strong>0</strong> results
 			{% endif %}
 		</p>
 
@@ -117,44 +117,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	<button type="submit" class="govuk-button" data-module="govuk-button">Remove from group</button>
 </form>
 
-{% else %}
-
-<form action="remove-from-group" method="post">
-	<table class="govuk-table" style="max-width:70%;" data-module="moj-sortable-table">
-		<thead class="govuk-table__head">
-			<tr class="govuk-table__row">
-				<th class="govuk-table__header" style="width: 5%"></th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for referral in data['people'] %}
-			{% if loop.index0 < 8 %}
-				<tr class="govuk-table__row">
-					<td class="govuk-table__cell">
-						<div class="govuk-radios govuk-radios--small">
-							<div class="govuk-radios__item">
-								<input type="radio" class="govuk-radios__input" name="group-waitlist" id="waitlist-{{referral.lastName}}-{{referral.firstName}}" value="{{referral.lastName}}-{{referral.firstName}}">
-								<label class="govuk-label govuk-radios__label" for="group-{{referral.lastName}}-{{referral.firstName}}">
-								<span class="govuk-visually-hidden">{{referral.lastName}}, {{referral.firstName}}</span>
-							</div>
-						</div>
-					</td>
-					<td class="govuk-table__cell">
-						<a href="../profiles/referral-details/availability?firstName={{referral.firstName}}&lastName={{referral.lastName}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
-					<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
-					<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Scheduled</strong></td>
-				</tr>
-			{% endif %}
-			{% endfor %}
-		</tbody>
-	</table>
-<button type="submit" class="govuk-button" data-module="govuk-button">Remove from group</button>
-</form>
-{% endif %}
-	
 <nav class="govuk-pagination" role="navigation" aria-label="results">
 	<ul class="govuk-pagination__list">
 		<li class="govuk-pagination__item govuk-pagination__item--current">
@@ -162,7 +124,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</li>
 	</ul>
 </nav>
-</div>
-</div>
+
+	{% else %}
+	<p class="govuk-body-l">There are currently no people allocated to this group.</p>
+	{% endif %}
+
+    </div>
+	</div>
 </div>
 {% endblock %}

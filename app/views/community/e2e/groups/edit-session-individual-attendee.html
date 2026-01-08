@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Edit who should attend the session - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/e2e/header-no-primary-nav.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="clear-right">
+	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+</nav>
+{% endblock %} 
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-l">Edit Alex River: Getting started one-to-one</span>
+		<h1 class="govuk-heading-l">Edit who should attend the session</h1>
+		<form action="session-details-individual" method="post">
+			
+		{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		{{ govukRadios({
+			name: "attendees",
+			fieldset: {
+				legend: {
+				text: "Who is the session for?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--m"
+				}
+			},
+			hint: {
+				text: "Select who should attend the session."
+			},
+			items: [
+				{
+				value: "booth-sham",
+				text: "Booth, Sham"
+				},
+				{
+				value: "charles-eric",
+				text: "Charles, Eric"
+				},
+				{
+				value: "dillion-ben",
+				text: "Dillion, Ben"
+				},
+				{
+				value: "fredric-roman",
+				text: "Fredric, Roman"
+				},
+				{
+				value: "hussain-ali",
+				text: "Hussain, Ali"
+				},
+				{
+				value: "jones-jack",
+				text: "Jones, Jack"
+				},
+				{
+				value: "martinez-gabriel",
+				text: "Martinez, Gabriel"
+				},
+				{
+				value: "poole-adrian",
+				text: "Poole, Adrian"
+				},
+				{
+				value: "river-alex",
+				checked: true,
+				text: "River, Alex"
+				}
+			]
+		}) }}
+		
+
+		<div class="govuk-button-group govuk-!-margin-top-7">
+			<button class="govuk-button" data-module="govuk-button">Submit</button>
+		</div>
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

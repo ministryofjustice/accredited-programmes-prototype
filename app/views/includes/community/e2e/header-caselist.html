@@ -47,24 +47,28 @@
 	</div>
 
 	<!-- Primary nav - need to add if or statements to show the active tab depending on if user is in case list, group or home -->
-	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../../../community/e2e/home"
-			},
-			{
-			text: "Case list",
-			href: "../../../community/e2e/referrals/open-referrals",
-			active: true
-			},
-			{
-			text: "Groups",
-			href: "../../../community/e2e/groups/group-list"
-			}
-		]
-	}) }}
+	<div class="moj-primary-navigation">
+		<div class="moj-primary-navigation__container">
+			<div class="moj-primary-navigation__nav">
+			<nav class="moj-primary-navigation" aria-label="Primary navigation">
+				<ul class="moj-primary-navigation__list">
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" href="../../../community/e2e/home">Home</a>
+				</li>
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" aria-current="page" href="../../../community/e2e/referrals/open-referrals">Case list</a>
+				</li>
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" href="../../../community/e2e/groups/group-list">Groups</a>
+				</li>
+				</ul>
+			</nav>
+			</div>
+			<div class="moj-primary-navigation__search">
+				<div class="cas-primary-navigation__regional_header">
+					North East
+				</div>
+			</div>
+		</div>
+	</div>
     

@@ -23,11 +23,11 @@ router.post('/community/e2e/profiles/referral-details/change-cohort-post', funct
 
 // How can I set the cohort on the personal details page to general or sexual offence depending on the option? 
 // Check preferred-location-router journey
- {res.redirect('personal-details') } 
+ {res.redirect('referral-summary') } 
 
  if(req.session.data['choose-cohort']=="sexual-offence") 
 
- { res.redirect('personal-details')} 
+ { res.redirect('referral-summary')} 
 
 }) 
 
@@ -39,11 +39,11 @@ router.post('/community/e2e/profiles/referral-details/change-ldc-status-post', f
 
 // How can I set the LDC status on the personal details page to show or not sure depending on the option? 
 // Check preferred-location-router journey
- {res.redirect('personal-details') } 
+ {res.redirect('referral-summary') } 
 
  if(req.session.data['choose-ldc-status']=="no-ldc") 
 
- { res.redirect('personal-details')} 
+ { res.redirect('referral-summary')} 
 
 }) 
 
@@ -353,6 +353,27 @@ router.get('/community/e2e/groups/session-details-notes', function (req, res) {
     });
 })
 
+// Delete session
+// Redirect
+router.post('/community/e2e/groups/delete-session-post', function (req, res) {
+  if (req.session.data['delete-session'] === 'yes') {
+    req.session.data['show-success-banner'] = true;
+    res.redirect('group-manage-schedule');
+  } else {
+    req.session.data['show-success-banner'] = false;
+  res.redirect('session-details-individual');
+  }
+}) 
+
+// Show success banner
+router.get('/community/e2e/groups/group-manage-schedule', function (req, res) {
+    const showBanner = req.session.data['show-success-banner'];
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/group-manage-schedule', {
+        data: req.session.data,
+        showBanner: showBanner
+    });
+})
 
 // Put routes above this row - not below
 }

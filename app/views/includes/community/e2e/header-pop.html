@@ -47,25 +47,30 @@
 	</div>
 
 	<!-- Primary nav -->
-	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../../home"
-			},
-			{
-			text: "Case list",
-			href: "../../referrals/open-referrals"
-			},
-			{
-			text: "Groups",
-			href: "../../groups/group-list"
-			}
-		]
-	}) }}
+	<div class="moj-primary-navigation">
+		<div class="moj-primary-navigation__container">
+			<div class="moj-primary-navigation__nav">
+			<nav class="moj-primary-navigation" aria-label="Primary navigation">
+				<ul class="moj-primary-navigation__list">
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" href="../../home">Home</a>
+				</li>
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" href="../../referrals/open-referrals">Case list</a>
+				</li>
+				<li class="moj-primary-navigation__item">
+					<a class="moj-primary-navigation__link" href="../../groups/group-list">Groups</a>
+				</li>
+				</ul>
+			</nav>
+			</div>
+			<div class="moj-primary-navigation__search">
+				<div class="cas-primary-navigation__regional_header">
+					North East
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- PoP profile banner -->
     <section class="key-details-bar" aria-label="Key details">

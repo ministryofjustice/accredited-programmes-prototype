@@ -5,42 +5,17 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 {% endblock %}
 
 {% block header %}
-	{% include "/includes/community/v3/key-details-pt.html" %}
-
-	
-	{%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-
-	{{ mojPrimaryNavigation({
-		label: "Primary navigation",
-		items: [
-			{
-			text: "Home",
-			href: "../../home"
-			},
-			{
-			text: "Case list",
-			href: "../../referrals/open-referrals",
-			active: true
-			},
-			{
-			text: "Groups",
-			href: "../../groups/group-list"
-			}
-		]
-	}) }}
-
+{% include "/includes/community/e2e/header-pop.html" %}
+{% include "/includes/community/e2e/header-pop-sub-nav-allocation-notes.html" %}
 {% endblock %}
-
-{% block beforeContent %}
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-{% endblock %} 
 
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-	  			<h1 class="govuk-heading-xl">Group allocation notes</h1>
+	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Allocation notes</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
@@ -53,37 +28,12 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 	</div>
 </div>
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-		<nav class="moj-sub-navigation" aria-label="Sub navigation">
-			<ul class="moj-sub-navigation__list">
-				<li class="moj-sub-navigation__item">
-				  	<a class="moj-sub-navigation__link" href="../referral-details/personal-details">Referral details</a>
-			 	</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="risks-needs">Risks and needs</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="pni">Programme needs identifier</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="../referral-details/availability">Group allocation notes</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="../attendance/attendance">Attendance</a>
-				</li>
-				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" href="../referral-details/status-history">Status history</a>
-				</li>
-		  	</ul>
-		</nav>
-	</div>
-</div>
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<p class="govuk-body">Use this section to add and view information to help you match the person to a group.</p>
-		<div class="govuk-inset-text">
-			Alex River is allocated to <a href="../../groups/group-details-allocated-ur" class="govuk-link">BCCDD1</a>.
+		<div class="govuk-inset-text govuk-!-margin-bottom-0">
+			Alex River is allocated to <a href="../../groups/group-details-allocated-ur" class="govuk-link">{{data['groupCode'] | default('BCNE2026-0409')}}</a>.
 		</div>
 	</div>
 </div>
@@ -130,8 +80,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<!-- No success banner to display yet -->
 		<!-- {% endif %} -->
 
-		<h2 class="govuk-heading-m">Availability</h2>
-		<!--	
+		<h2 class="govuk-heading-l">Availability</h2>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
@@ -200,7 +149,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					</form>
 					{% endif %}
 				</div>
-		 	</div>-->
+		 	</div>
 
 		</div>
 	</div>
