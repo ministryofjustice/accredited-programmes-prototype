@@ -260,10 +260,20 @@ router.post('/community/e2e/groups/add-session-individual-post', function (req, 
 
 // Redirect from add-session-individual-check-answers to group-manage-schedule
 router.post('/community/e2e/groups/add-session-individual-check-answers-post', function (req, res) { 
-
- {res.redirect('group-manage-schedule') } 
+    req.session.data['show-success-banner'] = true;
+    {res.redirect('group-manage-schedule') } 
 
 }) 
+
+    // Show success banner
+    router.get('/community/e2e/groups/group-manage-schedule', function (req, res) {
+        const showBanner = req.session.data['show-success-banner'];
+        req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+        res.render('community/e2e/groups/group-manage-schedule', {
+            data: req.session.data,
+            showBanner: showBanner
+        });
+    })
 
 
 // Redirect when just the Alex River checkbox is selected
@@ -321,12 +331,15 @@ router.post('/community/e2e/groups/attendance-group-session-notes-3-post', funct
 router.get('/community/e2e/groups/session-details-group', function (req, res) {
     const showBannerSingle = req.session.data['show-success-banner-single'];
     const showBannerMulti = req.session.data['show-success-banner-multi'];
+    const showBanner = req.session.data['show-success-banner'];
     req.session.data['show-success-banner-single'] = false; // Clear the banner so it only shows once
     req.session.data['show-success-banner-multi'] = false; // Clear the banner so it only shows once
+    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
     res.render('community/e2e/groups/session-details-group', {
         data: req.session.data,
         showBannerSingle: showBannerSingle,
-        showBannerMulti: showBannerMulti
+        showBannerMulti: showBannerMulti,
+        showBanner: showBanner
     });
 })
 
@@ -374,6 +387,14 @@ router.get('/community/e2e/groups/group-manage-schedule', function (req, res) {
         showBanner: showBanner
     });
 })
+
+// Edit-session-group-date-time-reschedule
+// Redirect
+// See further up for success banner settings for this
+router.post('/community/e2e/groups/edit-session-group-date-time-reschedule-post', function (req, res) {
+    req.session.data['show-success-banner'] = true;
+    res.redirect('session-details-group'); 
+}) 
 
 // Put routes above this row - not below
 }

@@ -20,7 +20,13 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
 					</svg>
 				</div>
-					<div class="moj-alert__content">Alex River: Getting started one-to-one has been deleted.</div>
+					<div class="moj-alert__content">
+						{% if data['delete-session'] == "yes" %}
+							Alex River: Getting started one-to-one has been deleted.
+						{% else %}
+							Getting started one-to-one for Alex River has been added.
+						{% endif %}
+					</div>
 				<div class="moj-alert__action">
 					<button class="moj-alert__dismiss" hidden>Dismiss</button>
 				</div>
@@ -73,7 +79,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">3:45pm to 4:45pm</td>
 					<td class="govuk-table__cell">Dillion, Ben</td>
 					<td class="govuk-table__cell">Harpreet Singh</td>
-				</tr>
+				</tr>		
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href=" " class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Pre-group one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
@@ -153,6 +159,9 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">Booth, Sham</td>
 					<td class="govuk-table__cell">Tom Bassett</td>
 				</tr>
+				{% if data['delete-session'] == "yes" %}
+				
+				{% else %}	
 				<tr class="govuk-table__row">
 					<td class="govuk-table__cell"><a href="session-details-individual" class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Getting started one-to-one</a></td>
 					<td class="govuk-table__cell">Individual</td>
@@ -161,6 +170,19 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<td class="govuk-table__cell">River, Alex</td>
 					<td class="govuk-table__cell">Tom Bassett</td>
 				</tr>
+				{% endif %}
+				{% if data['add-session-ind'] == "yes" %}
+				<tr class="govuk-table__row">
+					<td class="govuk-table__cell"><a href="session-details-individual" class="govuk-link govuk-link--no-visited-state">River, Alex (X123456): Getting started one-to-one</a></td>
+					<td class="govuk-table__cell">Individual</td>
+					<td class="govuk-table__cell">Thursday 21 May 2026</td>
+					<td class="govuk-table__cell">12:30pm to 1:30pm</td>
+					<td class="govuk-table__cell">River, Alex</td>
+					<td class="govuk-table__cell">Tom Bassett</td>
+				</tr>
+				{% else %}	
+				
+				{% endif %}
 			</tbody>
 		</table>
 		<p class="govuk-body"><strong>Getting started one-to-ones:</strong> Thursday 21 May 2026</p>

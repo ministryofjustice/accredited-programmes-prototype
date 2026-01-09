@@ -64,94 +64,17 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 
 
 	<div class="govuk-grid-column-three-quarters">
-		<!-- {% if data['cancel-continue-group'] == "Cancel allocation for Adrian Poole" %}-->
-		<div role="region" class="moj-alert moj-alert--success" aria-label="success: File uploaded successfully" data-module="moj-alert" data-dismissible="true">
-			<div>
-			  	<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-					<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			  	</svg>
-			</div>
-			<div class="moj-alert__content">Location details added successfully.</div>
-			<div class="moj-alert__action">
-			  <button class="moj-alert__dismiss" hidden>Dismiss</button>
-			</div>
-		</div>
-		<!-- {% else %} -->
-		<!-- No success banner to display yet -->
-		<!-- {% endif %} -->
-
 		<h2 class="govuk-heading-l">Availability</h2>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Reporting locations</h3>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
-							<dd class="govuk-summary-list__value">East Sussex</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation office</dt>
-							<dd class="govuk-summary-list__value">Brighton and Hove: Brighton Probation Office</dd>
-						</div>
-					</dl>
-				</div>
-		 	</div>
-			<div class="govuk-summary-card">
-				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Preferred programme delivery locations</h3>
-				</div>
-				<div class="govuk-summary-card__content">
-					<dl class="govuk-summary-list">
-						{% if data['update-location'] == "update location" %}
-						<p class="govuk-body">Last updated 9 May 2025 by Max Freeman</p>
-						{% else %}
-						<p class="govuk-body">Last updated 3 April 2025 by Tom Saunders</p>
-						{% endif %}
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Preferred programme delivery locations</dt>
-							{% if data['location-preference'] %}
-							<dd class="govuk-summary-list__value" style="white-space: pre-wrap;">{{ data['location-preference-2-formatted'] }}</dd>
-							{% else %}
-							<dd class="govuk-summary-list__value">No information added</dd>
-							{% endif %}
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Locations the person cannot attend</dt>
-							{% if data['no-locations-programme'] == "Yes" %}
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">{{ data['locations-cannot-attend'] }}</p>
-							</dd>
-							{% elseif data['no-locations-programme'] == "No" %}
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">No information added</p>
-							</dd>
-							{% else %}
-							<dd class="govuk-summary-list__value"><a href="no-locations" class="govuk-link">Enter locations the person cannot attend</a></dd>
-							<dd class="govuk-summary-list__value">No information added</dd>
-							{% endif %}
-						</div>
-					</dl>
-					{% if data['update-location'] == "update location" %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Change location preferences</button>
-						</div>
-					</form>
-					{% else %}
-					<form action="preferred-location" method="post">
-						<input type="hidden" id="update-button" name="update-button" value="change location">
-						<div class="govuk-button-group govuk-!-margin-top-5 govuk-!-margin-bottom-0">
-							<button class="govuk-button" data-module="govuk-button" type="submit">Add location preferences</button>
-						</div>
-					</form>
-					{% endif %}
-				</div>
-		 	</div>
+		<p class="govuk-body">No availability details added for Alex River.</p>
 
-		</div>
+		<!-- To do: Add journey for availability -->
+		
+		<form action=" " method="post">
+			<div class="govuk-button-group">
+				<button class="govuk-button" data-module="govuk-button" type="submit">Add availability</button>
+			</div>
+		</form>
+
 	</div>
 </div>
 {% endblock %}
