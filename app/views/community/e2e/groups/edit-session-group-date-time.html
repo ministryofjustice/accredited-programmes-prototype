@@ -75,6 +75,47 @@ Edit the session date and time - {{ serviceName }} - GOV.UK Prototype Kit
 			</fieldset>
 		</div>
 
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset govuk-!-margin-top-6" role="group">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					End time
+				</legend>
+				<div id="passport-issued-hint" class="govuk-hint">
+					Use the 12-hour clock, for example 9:30am or 3pm.
+				</div>
+				<div class="govuk-date-input" id="passport-issued">
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-hour">
+						Hour
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" inputmode="numeric" value="1">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-minute">
+						Minute
+					</label>
+					<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" inputmode="numeric" value="30">
+					</div>
+				</div>
+				<div class="govuk-date-input__item">
+					<div class="govuk-form-group">
+					<label class="govuk-label govuk-date-input__label" for="start-time-am-pm">
+						am or pm
+					</label>
+					<select class="govuk-select" id="start-time-am-pm" name="start-time-am-pm">
+						<option value="select"> </option>
+						<option value="am">am</option>
+						<option value="pm" selected>pm</option>
+					</select>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+		</div>
+
 		<div class="govuk-button-group govuk-!-margin-top-7">
 			<button class="govuk-button" data-module="govuk-button">Continue</button>
 		</div>

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Getting started 1: Introduction to Building Choices - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -9,8 +9,9 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
+<!-- Custom back link - see routes -->
 <nav class="clear-right">
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="{{ backLink.href }}" class="govuk-back-link">{{ backLink.text }}</a>
 </nav>
 {% endblock %} 
 
@@ -141,20 +142,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	</div>
 	{% endif %}
 
-	{% if showBannerSingle %}
-	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
-		<div>
-			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
-				<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
-			</svg>
-		</div>
-		<div class="moj-alert__content">Attendance recorded for Alex River.</div>
-		<div class="moj-alert__action">
-			<button class="moj-alert__dismiss" hidden>Dismiss</button>
-		</div>
-	</div>
-	{% endif %}
-
 <form action="mark-attendance-post" method="post">
 	<table class="govuk-table" data-module="moj-multi-select">
 		<thead class="govuk-table__head">
@@ -191,6 +178,8 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 			<td class="govuk-table__cell">
 				{% if data['booth-sham'] == "yes" %}
 					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['booth-sham'] == "failed-to-comply" %}
+					<strong class="govuk-tag govuk-tag--yellow">Attended - failed to comply</strong>
 				{% elseif data['booth-sham'] == "no" %}
 					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
 				{% else %}
@@ -313,10 +302,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</td>
 			<td class="govuk-table__cell">
-				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Poole, Adrian</a><br/>X123456</td>
+				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">Poole, Adrian</a><br/>X977603</td>
 			<td class="govuk-table__cell">
 				{% if data['poole-adrian'] == "yes" %}
 					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['poole-adrian'] == "failed-to-comply" %}
+					<strong class="govuk-tag govuk-tag--yellow">Attended - failed to comply</strong>
 				{% elseif data['poole-adrian'] == "no" %}
 					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
 				{% else %}
@@ -343,10 +334,12 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				</div>
 			</td>
 			<td class="govuk-table__cell">
-				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
+				<a href="../profiles/referral-details/referral-summary" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
 			<td class="govuk-table__cell">
 				{% if data['river-alex'] == "yes" %}
 					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['river-alex'] == "failed-to-comply" %}
+					<strong class="govuk-tag govuk-tag--yellow">Attended - failed to comply</strong>
 				{% elseif data['river-alex'] == "no" %}
 					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
 				{% else %}

@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
+Record attendance for Getting Started 1 - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/e2e/header-no-primary-nav.html" %}
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,7 +29,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 			value: data['booth-sham'],
 			fieldset: {
 				legend: {
-				text: "Booth, Sham",
+				text: "Booth, Sham (B739123)",
 				classes: "govuk-fieldset__legend--m"
 				}
 			},
@@ -37,6 +37,13 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 				{
 				value: "yes",
 				text: "Attended"
+				},
+				{
+				value: "failed-to-comply",
+				text: "Attended but failed to comply",
+					hint: {
+						text: "For example, they could not participate because of drug or alcohol use"
+					}
 				},
 				{
 				value: "no",
@@ -50,7 +57,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 			value: data['poole-adrian'],
 			fieldset: {
 				legend: {
-				text: "Poole, Adrian",
+				text: "Poole, Adrian (X977603)",
 				classes: "govuk-fieldset__legend--m"
 				}
 			},
@@ -58,6 +65,13 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 				{
 				value: "yes",
 				text: "Attended"
+				},
+				{
+				value: "failed-to-comply",
+				text: "Attended but failed to comply",
+					hint: {
+						text: "For example, they could not participate because of drug or alcohol use"
+					}
 				},
 				{
 				value: "no",
@@ -71,7 +85,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 			value: data['river-alex'],
 			fieldset: {
 				legend: {
-				text: "River, Alex",
+				text: "River, Alex (X123456)",
 				classes: "govuk-fieldset__legend--m"
 				}
 			},
@@ -81,6 +95,13 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 				text: "Attended"
 				},
 				{
+				value: "failed-to-comply",
+				text: "Attended but failed to comply",
+					hint: {
+						text: "For example, they could not participate because of drug or alcohol use"
+					}
+				},
+				{
 				value: "no",
 				text: "Did not attend"
 				}
@@ -88,7 +109,7 @@ Select the group cohort - {{ serviceName }} - GOV.UK Prototype Kit
 		}) }}
 
 			<div class="govuk-button-group govuk-!-margin-top-7">
-			<button class="govuk-button" data-module="govuk-button">Submit</button>
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
 			</div>
 			</div>
 		</form>

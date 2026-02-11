@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Did Alex River attend Getting started one-to-one? - {{ serviceName }} - GOV.UK Prototype Kit
+Did Alex River attend Getting started 1? - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@ Did Alex River attend Getting started one-to-one? - {{ serviceName }} - GOV.UK P
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-two-thirds">
 		<span class="govuk-caption-l">Record attendance and progress</span>
-		<form action="attendance-individual-post" method="post">
+		<form action="session-details-notes-attendance-update-post" method="post">
 			<div class="govuk-form-group">
 		
 		{% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -28,7 +28,7 @@ Did Alex River attend Getting started one-to-one? - {{ serviceName }} - GOV.UK P
 			value: data['river-alex'],
 			fieldset: {
 				legend: {
-				text: "Did Alex River attend Getting Started one-to-one?",
+				text: "Did Alex River attend Getting Started 1?",
 				isPageHeading: true,
 				classes: "govuk-fieldset__legend--l"
 				}
