@@ -123,14 +123,14 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 			<ul class="moj-sub-navigation__list">
 				<li class="moj-sub-navigation__item">
-					<a class="moj-sub-navigation__link" aria-current="page" href="group-list">Not started and in progress (50)</a>
+					<a class="moj-sub-navigation__link" aria-current="page" href="group-list">Not started and in progress (80)</a>
 				</li>
 				<li class="moj-sub-navigation__item">
 					<a class="moj-sub-navigation__link" href="group-list-in-progress">Completed (5)</a>
 				</li>
 			</ul>
 		</nav>
-		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>20</strong> of <strong>50</strong> results</p>
+		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>50</strong> of <strong>80</strong> results</p>
 
 	<table class="govuk-table" data-module="moj-sortable-table">
 		<thead class="govuk-table__head">
@@ -141,7 +141,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 				<th scope="col" class="govuk-table__header" aria-sort="none">Delivery location</th>
 				<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
 				<th scope="col" class="govuk-table__header" aria-sort="none">Sex</th>
-				<th scope="col" class="govuk-table__header" aria-sort="none">Allocated</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -151,14 +150,13 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
 				<!-- Remove -ur from the link below after 15/10 -->
-				<a href="group-details-allocated-ur?groupCode={{group.groupCode}}" class="govuk-link govuk-link--no-visited-state"><strong>{{group.groupCode}}</strong></a></td>
+				<a href="group-details-overview-ur?groupCode={{group.groupCode}}" class="govuk-link govuk-link--no-visited-state"><strong>{{group.groupCode}}</strong></a></td>
 			<td class="govuk-table__cell">{{group.startDate}}</td>
 			<td class="govuk-table__cell">{{group.pdu}}</td>
 			<td class="govuk-table__cell">{{group.deliveryLocation}}</td>
 			<td class="govuk-table__cell">{{group.cohort}} 
 				<span class="moj-badge moj-badge--bright-purple">{{group.cohortTag}}</span></td>
 			<td class="govuk-table__cell">{{group.sex}}</td>
-			<td class="govuk-table__cell">{{group.allocated}}</td>
 		</tr>
 
 		{% endfor %}

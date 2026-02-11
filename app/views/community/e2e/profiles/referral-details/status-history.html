@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Status history: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -15,7 +15,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
 	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
-				<h1 class="govuk-heading-xl">Status history</h1>
+				<h1 class="govuk-heading-xl">Status history: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">

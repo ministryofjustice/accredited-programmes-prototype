@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+Attendance history: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -15,7 +15,7 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
 	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
-				<h1 class="govuk-heading-xl">Attendance</h1>
+				<h1 class="govuk-heading-xl">Attendance history: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
@@ -29,23 +29,31 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 </div>
 
 <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">This is {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}’s attendance record and session notes. 
+			To see sessions that haven’t taken place yet, view <a href="../../groups/group-manage-schedule" class="govuk-link govuk-link--no-visited-state">group {{data['groupCode'] | default('BCNE2026-0409')}} Sessions and attendance</a>.</p>
+	</div>
+</div>
+
+
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-		<h2 class="govuk-heading-l">Alex River’s attendance and session notes</h2>
-		
 		<table class="govuk-table" data-module="moj-sortable-table">
 			<thead class="govuk-table__head">
 				<tr class="govuk-table__row">
 					<th scope="col" class="govuk-table__header" aria-sort="none">Session</th>
-					<th scope="col" class="govuk-table__header" aria-sort="none">Group code</th>
+					<th scope="col" class="govuk-table__header">Group code</th>
 					<th scope="col" class="govuk-table__header" aria-sort="none">Date</th>
 					<th scope="col" class="govuk-table__header">Time</th>
-					<th scope="col" class="govuk-table__header">Attendance</th>
-					<th scope="col" class="govuk-table__header">Notes</th>
+					<th scope="col" class="govuk-table__header">Attendance status</th>
+					<th scope="col" class="govuk-table__header">Attendance and notes</th>
 				</tr>
 			</thead>
 			<tbody>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Pre-group one-to-one</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">11 July 2025</td>
 				<td class="govuk-table__cell">10am to 11am</td>
@@ -54,11 +62,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started 1</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 1</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">21 July 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
@@ -67,11 +77,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 1 attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started 2</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">24 July 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
@@ -80,11 +92,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2 notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started 2 attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started one-to-one</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started one-to-one</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">28 July 2025</td>
 				<td class="govuk-table__cell">2pm to 3pm</td>
@@ -93,11 +107,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started one-to-one notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Getting started one-to-one attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Managing myself 1</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 1</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">31 July 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
@@ -106,11 +122,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 1 notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 1 attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Managing myself 2</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">4 August 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
@@ -119,11 +137,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Not attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Managing myself 2 catch-up</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 catch-up</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-0501</td>
 				<td class="govuk-table__cell">7 August 2025</td>
 				<td class="govuk-table__cell">10am to 11am</td>
@@ -132,11 +152,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Not attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 catch-up notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Managing myself 2 catch-up attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Pre-group one-to-one</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-1204</td>
 				<td class="govuk-table__cell">14 November 2025</td>
 				<td class="govuk-table__cell">10am to 11am</td>
@@ -145,11 +167,13 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 						Attended
 					</strong>
 				<td class="govuk-table__cell">
-					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one notes</a>
+					<a href=" " class="govuk-link govuk-link--no-visited-state">Pre-group one-to-one attendance and notes</a>
 				</td>
 			</tr>
 			<tr class="govuk-table__row">
-				<td class="govuk-table__cell">Getting started 1</strong></a></td>
+				<td class="govuk-table__cell">
+					<a href="../../groups/session-details-group" class="govuk-link govuk-link--no-visited-state">Getting started 1</a>
+				</td>
 				<td class="govuk-table__cell">BCNE2025-1204</td>
 				<td class="govuk-table__cell">27 November 2025</td>
 				<td class="govuk-table__cell">11:30am to 2pm</td>
@@ -163,7 +187,9 @@ Referral to Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Pr
 					{% endif %}
 				<td class="govuk-table__cell">
 					{% if data['session-notes-3'] %}
-						<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 notes</a>
+						<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 attendance and notes</a>
+					{% elseif data['river-alex'] %}
+						<a href="../../groups/session-details-notes" class="govuk-link govuk-link--no-visited-state">Getting started 1 attendance and notes</a>
 					{% else %}
 						Not added
 					{% endif %}

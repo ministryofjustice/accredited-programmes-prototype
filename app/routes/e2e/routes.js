@@ -275,24 +275,11 @@ router.post('/community/e2e/groups/add-session-individual-check-answers-post', f
         });
     })
 
-
-// Redirect when just the Alex River checkbox is selected
+// GROUP ATTENDANCE MARKING 
+// Redirect from group details page
 router.post('/community/e2e/groups/mark-attendance-post', function (req, res) {
 
-  if(req.session.data['attendance']=="river-alex") 
-
- {res.redirect('attendance-individual') } 
-
-  else 
-
  {res.redirect('attendance-group-mark')} 
-
-}) 
-
-// Mark attendance for individual or single person update in a group session - Alex River
-router.post('/community/e2e/groups/attendance-individual-post', function (req, res) { 
-
- {res.redirect('attendance-individual-session-notes') } 
 
 }) 
 
@@ -316,12 +303,6 @@ router.post('/community/e2e/groups/attendance-group-session-notes-2-post', funct
 }) 
 
 // Show success banners
-router.post('/community/e2e/groups/attendance-individual-session-notes-post', function (req, res) { 
-    req.session.data['show-success-banner-single'] = true;
-    res.redirect('session-details-group'); 
-
-}) 
-
 router.post('/community/e2e/groups/attendance-group-session-notes-3-post', function (req, res) { 
     req.session.data['show-success-banner-multi'] = true;
     res.redirect('session-details-group'); 
@@ -329,22 +310,82 @@ router.post('/community/e2e/groups/attendance-group-session-notes-3-post', funct
 }) 
 
 router.get('/community/e2e/groups/session-details-group', function (req, res) {
-    const showBannerSingle = req.session.data['show-success-banner-single'];
-    const showBannerMulti = req.session.data['show-success-banner-multi'];
-    const showBanner = req.session.data['show-success-banner'];
-    req.session.data['show-success-banner-single'] = false; // Clear the banner so it only shows once
-    req.session.data['show-success-banner-multi'] = false; // Clear the banner so it only shows once
-    req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
-    res.render('community/e2e/groups/session-details-group', {
+// Custom back link
+        const referrer = req.get('referer') || '';
+        let backLink = {
+            href: 'group-manage-schedule',
+            text: 'Back to Sessions and attendance'
+        };
+        
+        if (referrer.includes('/profiles/attendance/attendance')) {
+            backLink = {
+            href: '../profiles/attendance/attendance',
+            text: 'Back to Attendance history'
+            };
+        }    
+    
+// Success banners
+        const showBannerMulti = req.session.data['show-success-banner-multi'];
+        const showBanner = req.session.data['show-success-banner'];
+        req.session.data['show-success-banner-multi'] = false; // Clear the banner so it only shows once
+        req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
+        res.render('community/e2e/groups/session-details-group', {
         data: req.session.data,
-        showBannerSingle: showBannerSingle,
+        backLink: backLink,
         showBannerMulti: showBannerMulti,
         showBanner: showBanner
     });
+    })
+
+
+// INDIVIDUAL ATTENDANCE MARKING
+// Redirect from Alex River GS 1-1 mark attendance
+router.post('/community/e2e/groups/mark-attendance-individual-post', function (req, res) {
+
+ {res.redirect('attendance-individual')} 
+
+}) 
+
+// Mark attendance for individual - Alex River
+router.post('/community/e2e/groups/attendance-individual-post', function (req, res) { 
+
+ {res.redirect('attendance-individual-session-notes') } 
+
+}) 
+
+// Show success banners
+router.post('/community/e2e/groups/attendance-individual-session-notes-post', function (req, res) { 
+    req.session.data['show-success-banner-single'] = true;
+    res.redirect('session-details-individual'); 
+
+}) 
+
+router.get('/community/e2e/groups/session-details-individual', function (req, res) {
+    const showBannerSingle = req.session.data['show-success-banner-single'];
+    req.session.data['show-success-banner-single'] = false; // Clear the banner so it only shows once
+    res.render('community/e2e/groups/session-details-individual', {
+        data: req.session.data,
+        showBannerSingle: showBannerSingle
+    });
 })
 
+// SESSION NOTES UPDATE ATTENDANCE MARKING
 // Update session notes inside the session notes detail page
 router.post('/community/e2e/groups/session-details-notes-post', function (req, res) { 
+
+ {res.redirect('session-details-notes-attendance-update') } 
+
+}) 
+
+// Updating attendance via session notes
+router.post('/community/e2e/groups/session-details-notes-attendance-update-post', function (req, res) { 
+
+ {res.redirect('session-details-notes-update') } 
+
+}) 
+
+// Updating session notes from a session notes page update
+router.post('/community/e2e/groups/session-details-notes-attendance-update-post', function (req, res) { 
 
  {res.redirect('session-details-notes-update') } 
 
@@ -358,13 +399,29 @@ router.post('/community/e2e/groups/session-details-notes-update-post', function 
 }) 
 
 router.get('/community/e2e/groups/session-details-notes', function (req, res) {
+    // Custom back link
+    const referrer = req.get('referer') || '';
+    let backLink = {
+        href: 'session-details-group',
+        text: 'Back to Getting started 1'
+    };
+    
+    if (referrer.includes('/profiles/attendance/attendance')) {
+        backLink = {
+        href: '../profiles/attendance/attendance',
+        text: 'Back to Attendance history'
+        };
+    }
+    
     const showBanner = req.session.data['show-success-banner'];
     req.session.data['show-success-banner'] = false; // Clear the banner so it only shows once
     res.render('community/e2e/groups/session-details-notes', {
         data: req.session.data,
+        backLink: backLink,
         showBanner: showBanner
     });
 })
+
 
 // Delete session
 // Redirect

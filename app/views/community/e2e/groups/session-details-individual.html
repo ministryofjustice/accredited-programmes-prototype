@@ -10,7 +10,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 {% block beforeContent %}
 <nav class="clear-right">
-	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+	<a href="group-manage-schedule" class="govuk-back-link">Back to Sessions and attendance</a>
 </nav>
 {% endblock %} 
 
@@ -111,7 +111,21 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <h2 class="govuk-heading-m">Attendance and session notes</h2>
 
-<form action="mark-attendance" method="post">
+	{% if showBannerSingle %}
+	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
+		<div>
+			<svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+				<path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+			</svg>
+		</div>
+		<div class="moj-alert__content">Attendance recorded for Alex River.</div>
+		<div class="moj-alert__action">
+			<button class="moj-alert__dismiss" hidden>Dismiss</button>
+		</div>
+	</div>
+	{% endif %}
+
+<form action="mark-attendance-individual-post" method="post">
 	<table class="govuk-table" data-module="moj-sortable-table">
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
@@ -123,9 +137,25 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 	<tbody>
 		<tr class="govuk-table__row">
 			<td class="govuk-table__cell">
-				<a href="../profiles/referral-details/availability" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
-			<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">To be confirmed</strong></td>
-			<td class="govuk-table__cell">Not added</td>
+				<a href="../profiles/referral-details/referral-summary" class="govuk-link govuk-link--no-visited-state">River, Alex</a><br/>X123456</td>
+			<td class="govuk-table__cell">
+				{% if data['river-alex'] == "yes" %}
+					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
+				{% elseif data['river-alex'] == "failed-to-comply" %}
+					<strong class="govuk-tag govuk-tag--yellow">Attended - failed to comply</strong>
+				{% elseif data['river-alex'] == "no" %}
+					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% else %}
+					<strong class="govuk-tag govuk-tag--grey">To be confirmed</strong>
+				{% endif %}
+			</td>
+			<td class="govuk-table__cell">
+				{% if data['session-notes-3'] %}
+					<a href="session-details-notes" class="govuk-link govuk-link--no-visited-state">River, Alex: Getting started one-to-one notes</a>
+				{% else %}
+					Not added
+				{% endif %}
+			</td>
 		</tr>
 	</tbody>
 </table>

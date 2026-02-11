@@ -5,13 +5,12 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 {% endblock %}
 
 {% block header %}
-{% include "/includes/community/v3/head-no-nav.html" %}
+{% include "/includes/community/e2e/header-group.html" %}
 {% endblock %}
 
 {% block beforeContent %}
 <nav class="clear-right">
 	<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
-	<a href="../home" class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-3 govuk-!-margin-bottom-8 float-right">Go to Accredited Programmes homepage</a>
 </nav>
 {% endblock %} 
 
@@ -31,12 +30,14 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 			<dd class="govuk-summary-list__value">
 				{% if data['river-alex'] == "no" %}
 					<strong class="govuk-tag govuk-tag--red">Not attended</strong>
+				{% elseif data['river-alex'] == "failed-to-comply" %}
+					<strong class="govuk-tag govuk-tag--yellow">Attended - failed to comply</strong>
 				{% else %}
 					<strong class="govuk-tag govuk-tag--blue">Attended</strong>
 				{% endif %}
 			</dd>
 			<dd class="govuk-summary-list__actions">
-			<a class="govuk-link" href="attendance-individual">Change<span class="govuk-visually-hidden"> attendance</span></a>
+			<a class="govuk-link" href="session-details-notes-attendance-update">Change<span class="govuk-visually-hidden"> attendance</span></a>
 			</dd>
 		</div>
 		</dl>
@@ -46,7 +47,8 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 				{{ govukCharacterCount({
 				name: "session-notes-3",
 				id: "session-notes-3",
-				maxlength: 50000,
+				maxlength: 10000,
+				rows: "12",
 				label: {
 					text: "Add session notes",
 					classes: "govuk-label--m",
@@ -58,9 +60,6 @@ Alex River: Getting started 1 session notes - {{ serviceName }} - GOV.UK Prototy
 			<div class="govuk-button-group govuk-!-margin-top-7">
 			<button class="govuk-button" data-module="govuk-button">
 				Submit
-			</button>
-			<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-				Skip and add later
 			</button>
 			</div>
 			</div>
