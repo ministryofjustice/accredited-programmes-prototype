@@ -12,7 +12,7 @@ Availability and motivation: Alex River - {{ serviceName }} - GOV.UK Prototype K
 {% block content %}
 <div class="govuk-grid-row clear">
     <div class="govuk-grid-column-full">
-		<div class="moj-page-header-actions govuk-!-margin-bottom-0">
+		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
 	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
 				<h1 class="govuk-heading-xl">Availability and motivation: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
@@ -31,9 +31,10 @@ Availability and motivation: Alex River - {{ serviceName }} - GOV.UK Prototype K
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-		<div class="govuk-inset-text govuk-!-margin-bottom-0">
+		<p class="govuk-body">Use this section to add and view information to help you match the person to a group.</p>
+		<!--<div class="govuk-inset-text govuk-!-margin-bottom-0">
 			{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}} is allocated to <a href="../../groups/group-details-allocated-ur" class="govuk-link">{{data['groupCode'] | default('BCNE2026-0409')}}</a>.
-		</div>
+		</div>-->
 	</div>
 </div>
 

@@ -14,8 +14,8 @@ Referral details: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
-				<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
-	  			<h1 class="govuk-heading-xl">Referral details: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
+	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Referral details: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
@@ -29,20 +29,21 @@ Referral details: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
 </div>
 
 <div class="govuk-grid-row">
+
 	<div class="govuk-grid-column-one-quarter">
 		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 				<li class="moj-side-navigation__item">
 					<a href="referral-summary">Referral summary</a>
 		  		</li>
-				<li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="personal-details" aria-current="page">Personal details</a>
+				<li class="moj-side-navigation__item">
+					<a href="personal-details">Personal details</a>
 		  		</li>
 		  		<!--<li class="moj-side-navigation__item">
 					<a href=" ">Programme history</a>
 		  		</li>-->
-				<li class="moj-side-navigation__item">
-					<a href="offence-history">Offence history</a>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="offence-history" aria-current="page">Offence history</a>
 		  		</li>
 				<li class="moj-side-navigation__item">
 					<a href="sentence-information">Sentence information</a>
@@ -53,44 +54,71 @@ Referral details: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
 			</ul>
 		</nav>
 	</div>
-	
 
-	<div class="govuk-grid-column-three-quarters">
-		<h2 class="govuk-heading-l">Personal details</h2>
+    <div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-l">Offence history</h2>
 		<div class="govuk-inset-text govuk-!-margin-top-0">Imported from NDelius on 11 March 2026, last updated on 11 March 2026</div>
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
-			  		<h3 class="govuk-summary-card__title">Personal details</h3>
+			  		<h3 class="govuk-summary-card__title">Index offence</h3>
 				</div>
 				<div class="govuk-summary-card__content">
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Name</dt>
-							<dd class="govuk-summary-list__value">{{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</dd>
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Publishing or causing to be published a tobacco advertisement - 09144</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">CRN</dt>
-							<dd class="govuk-summary-list__value">{{data['crn'] | default('X123456')}}</dd>
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Public Health Offences</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date of birth</dt>
-							<dd class="govuk-summary-list__value">5 July 1971 (52 years, 11 months old)</dd>
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">11 June 2023</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h3 class="govuk-summary-card__title">Additional offence (08000)</h3>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody - 08000</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Ethnicity</dt>
-							<dd class="govuk-summary-list__value">White</dd>
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Absconding from lawful custody</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Gender</dt>
-							<dd class="govuk-summary-list__value">Male</dd>
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">18 January 2013</dd>
+						</div>
+					</dl>
+				</div>
+		 	</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+			  		<h3 class="govuk-summary-card__title">Additional offence (09329)</h3>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Offence</dt>
+							<dd class="govuk-summary-list__value">Class unspecified - permitting premises to be used - 09329</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Setting</dt>
-							<dd class="govuk-summary-list__value">COMMUNITY</dd>
+							<dt class="govuk-summary-list__key">Category</dt>
+							<dd class="govuk-summary-list__value">Permitting premises to be used for unlawful (drug-related) purposes</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Probation delivery unit</dt>
-							<dd class="govuk-summary-list__value">County Durham and Darlington</dd>
+							<dt class="govuk-summary-list__key">Offence date</dt>
+							<dd class="govuk-summary-list__value">23 September 2000</dd>
 						</div>
 					</dl>
 				</div>

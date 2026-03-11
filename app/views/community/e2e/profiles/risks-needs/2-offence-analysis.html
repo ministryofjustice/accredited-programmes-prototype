@@ -1,0 +1,243 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Risks and needs: Alex River - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/e2e/header-pop.html" %}
+{% include "/includes/community/e2e/header-pop-sub-nav-risks-needs.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row clear">
+    <div class="govuk-grid-column-full">
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+				<h1 class="govuk-heading-xl">Risks and needs: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
+			</div>
+			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
+					<a href="change-referral-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Update status</a>
+					<a href="change-ldc-status" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change LDC status</a>
+					<a href="change-cohort" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">Change cohort</a>		  
+				</div>
+			</div>
+ 		</div>
+	</div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">Relevant sections from OASys to support the referral. The full Layer 3 assessment is available in OASys. 
+			Information is accurate at the time of the referral being submitted.</p>
+	</div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+	</div>
+</div> 
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+				<li class="moj-side-navigation__item">
+					<a href="risks-needs">Risks and alerts</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="learning-needs">Learning needs</a>
+		  		</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="2-offence-analysis" aria-current="page">Section 2 - Offence analysis</a>
+		  		</li>
+		  		<li class="moj-side-navigation__item">
+					<a href="6-relationships">Section 6 - Relationships</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="7-lifestyle-associates">Section 7 - Lifestyle and associates</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="8-drug-misuse">Section 8 - Drug misuse</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="9-alcohol-misuse">Section 9 - Alcohol misuse</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="10-emotional-wellbeing">Section 10 - Emotional wellbeing</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="11-thinking-behaving">Section 11 - Thinking and behaving</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="12-attitudes">Section 12 - Attitudes</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="13-health">Section 13 - Health</a>
+		  		</li>
+				<li class="moj-side-navigation__item">
+					<a href="r6-rosh-analysis">Section R6 - ROSH analysis</a>
+		  		</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<h2 class="govuk-heading-l">Section 2 - Offence analysis</h2>
+		<div class="govuk-inset-text govuk-!-margin-top-0">Assessment completed 2 February 2026</div>
+
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+					<h3 class="govuk-summary-card__title">2.1 - Brief Offence details</h3>
+				</div>
+				<div class="govuk-summary-card__content">
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dd class="govuk-summary-list__value">OASys Question - '2.1 Brief offence(s) details (indicate what exactly happened, when, where and how)' - Answer Input - 'High Rosh risk to Partners, Medium Rosh risk to male peers & children'</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+			
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+					<h3 class="govuk-summary-card__title">2.3 - Victims and partners</h3>
+				</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Were there any direct victim(s) e.g. contact targeting?</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Were any of the victim(s) targeted because of racial motivation or hatred of others identifiable group?</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Response to a specific victim (e.g. revenge, settling grudges)</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Physical violence towards partner</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Repeat victimisation of the same person</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Were the victim(s) stranger(s) to the offender?</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Stalking</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h3 class="govuk-summary-card__title">2.6 - Impact and consequences</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Does the offender recognise the impact and consequences of offending on victim / community / wider society?</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h3 class="govuk-summary-card__title">2.7 - Other offenders and influences</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Were there other offenders involved?</dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Number of others involved</dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Was the offender the leader?</dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Peer group influences (eg offender easily led, gang member)</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h3 class="govuk-summary-card__title">2.6 - Impact and consequences</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Does the offender recognise the impact and consequences of offending on victim / community / wider society?</dt>
+						<dd class="govuk-summary-list__value">No</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h3 class="govuk-summary-card__title">2.8 - Motivation and triggers</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dd class="govuk-summary-list__value">OASys Question - '2.8 Why did it happen - evidence of motivation and triggers' - Answer Input - 'Test Motivation and Trigger - Alcohol & Drugs'</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				  <h3 class="govuk-summary-card__title">2.11 - Responsibility</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">Does the offender accept responsibility for the current offence(s)?</dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+					<div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">How much responsibility does s/he acknowledge for the offence(s). Does s/he blame others, minimise the extent of his/her offending?</dt>
+						<dd class="govuk-summary-list__value">No information available</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+		<div class="govuk-summary-card">
+			<div class="govuk-summary-card__title-wrapper">
+				<h3 class="govuk-summary-card__title">2.12 - Pattern of offending</h3>
+			</div>
+			<div class="govuk-summary-card__content">
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+						<dd class="govuk-summary-list__value">OASys Question - '2.12 Pattern of offending (consider details of previous convictions)' - Answer Input - 'Test Pattern - violence with some property offending'</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}
