@@ -15,7 +15,7 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 		<div class="moj-page-header-actions">
 			<div class="moj-page-header-actions__title">
 	  			<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
-				<h1 class="govuk-heading-xl">Programme needs identifier: Alex River</h1>
+				<h1 class="govuk-heading-xl">Programme needs identifier: {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}</h1>
 			</div>
 			<div class="moj-button-group moj-button-group--inline govuk-!-margin-top-6">
 				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Update referral" data-button-classes="govuk-button--secondary">
@@ -30,14 +30,14 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
-		<p class="govuk-body govuk-!-margin-bottom-6">This is Alex River's eligibility for Accredited Programmes, based on their risk and need scores.</p>
+		<p class="govuk-body govuk-!-margin-bottom-6">This is {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}}'s eligibility for Accredited Programmes, based on their risk and need scores.</p>
     </div>
 	<div class="govuk-grid-column-three-quarters">
 		<div class="rosh-widget rosh-widget--medium govuk-!-margin-bottom-6">
 			<h2 class="govuk-heading-s govuk-!-margin-bottom-1">
 				<span class="orange"><strong>MODERATE INTENSITY</strong></span>
 			</h2>
-			<p class="govuk-body govuk-!-margin-bottom-1">Based on the risk and need scores, Alex River may be eligible for moderate intensity Accredited Programmes.</p>
+			<p class="govuk-body govuk-!-margin-bottom-1">Based on the risk and need scores, {{data['firstName'] | default('Alex')}} {{data['lastName'] | default('River')}} may be eligible for moderate intensity Accredited Programmes.</p>
 		</div>
 		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 		<h2 class="govuk-heading-m">How is this calculated?</h2>
@@ -54,19 +54,19 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">11.11 - Sexual Pre-occupation</dt>
-						<dd class="govuk-summary-list__value">0</dd>
+						<dd class="govuk-summary-list__value">1</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">11.12 - Offence related Sexual Interests </dt>
-						<dd class="govuk-summary-list__value">0</dd>
+						<dd class="govuk-summary-list__value">2</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">6.12  Emotional congruence with children or feeling closer to children than adults</dt>
-						<dd class="govuk-summary-list__value">0</dd>
+						<dd class="govuk-summary-list__value">Score missing</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Sex result</dt>
-						<dd class="govuk-summary-list__value">Low need</dd>
+						<dd class="govuk-summary-list__value">High need</dd>
 					</div>
 				</dl>
 			</div>
@@ -80,15 +80,15 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">12.1 Pro-criminal attitudes</dt>
-						<dd class="govuk-summary-list__value">1</dd>
+						<dd class="govuk-summary-list__value">0</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">12.9 Hostile orientation</dt>
-						<dd class="govuk-summary-list__value">2</dd>
+						<dd class="govuk-summary-list__value">0</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">Thinking result</dt>
-						<dd class="govuk-summary-list__value">High need</dd>
+						<dd class="govuk-summary-list__value">Low need</dd>
 					</div>
 				</dl>
 			</div>
@@ -102,7 +102,7 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 				<dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">6.1 - Current relationship with close family</dt>
-						<dd class="govuk-summary-list__value">1</dd>
+						<dd class="govuk-summary-list__value">Score missing</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">6.6 - Previous experience of close relationships</dt>
@@ -110,7 +110,7 @@ Programme needs identifier: Alex River - {{ serviceName }} - GOV.UK Prototype Ki
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">7.3 - Easily influenced by criminal associates</dt>
-						<dd class="govuk-summary-list__value">2</dd>
+						<dd class="govuk-summary-list__value">Score missing</dd>
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">11.3 - Aggressive or controlling behaviour</dt>
