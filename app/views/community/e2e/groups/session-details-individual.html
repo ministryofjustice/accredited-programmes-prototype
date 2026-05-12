@@ -109,7 +109,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <hr class="govuk-section-break govuk-section-break--m">
 
-<h2 class="govuk-heading-m">Attendance and session notes</h2>
 
 	{% if showBannerSingle %}
 	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
@@ -127,6 +126,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <form action="mark-attendance-individual-post" method="post">
 	<table class="govuk-table" data-module="moj-sortable-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Attendance and session notes</caption>
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
 				<th scope="col" class="govuk-table__header">Name and CRN</th>

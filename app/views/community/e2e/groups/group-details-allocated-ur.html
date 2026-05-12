@@ -86,6 +86,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 {% if showAllocated %}
 <form action="remove-from-group" method="post">
 	<table class="govuk-table" style="max-width:70%;" data-module="moj-sortable-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Allocated to {{data['groupCode'] | default('BCNE2026-0409')}}</caption>
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
 				<th class="govuk-table__header" style="width: 5%"></th>
@@ -121,6 +122,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 
 <form action="remove-from-group" method="post">
 	<table class="govuk-table" style="max-width:70%;" data-module="moj-sortable-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Allocated to {{data['groupCode'] | default('BCNE2026-0409')}}</caption>
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
 				<th class="govuk-table__header" style="width: 5%"></th>
@@ -155,13 +157,6 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 </form>
 {% endif %}
 	
-<nav class="govuk-pagination" role="navigation" aria-label="results">
-	<ul class="govuk-pagination__list">
-		<li class="govuk-pagination__item govuk-pagination__item--current">
-			<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
-		</li>
-	</ul>
-</nav>
 </div>
 </div>
 </div>
