@@ -126,8 +126,6 @@ Getting started 1: Introduction to Building Choices - {{ serviceName }} - GOV.UK
 
 <hr class="govuk-section-break govuk-section-break--l">
 
-<h2 class="govuk-heading-m">Attendance and session notes</h2>
-
 	{% if showBannerMulti %}
 	<div role="region" class="moj-alert moj-alert--success" aria-label="success: Attendance recorded" data-module="moj-alert" data-dismissible="true">
 		<div>
@@ -144,6 +142,7 @@ Getting started 1: Introduction to Building Choices - {{ serviceName }} - GOV.UK
 
 <form action="mark-attendance-post" method="post">
 	<table class="govuk-table" data-module="moj-multi-select">
+		<caption class="govuk-table__caption govuk-table__caption--m">Attendance and session notes</caption>
 		<thead class="govuk-table__head">
 			<tr class="govuk-table__row">
 				<th class="govuk-table__header" style="width: 10%" scope="col" id="name-select-all">
