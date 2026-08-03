@@ -1,0 +1,204 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/includes/community/e2e/header-caselist.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row clear">
+	<div class="govuk-grid-column-two-thirds">
+		<span class="govuk-caption-xl">Building Choices: moderate intensity</span>
+		<h1 class="govuk-heading-xl">Case list</h1>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<div class="moj-filter">
+			<div class="moj-filter__header">
+				<div class="moj-filter__header-title">
+					<h2 class="govuk-heading-m govuk-!-padding-top-0">Filters</h2>
+				</div>
+			</div>
+		</div>
+		<div class="moj-filter__content">
+			<div class="moj-filter__options">
+				<div class="govuk-button-group">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="search-name-crn">Name or CRN</label>
+					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
+				</div>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							PDU
+						</legend>
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-1" name="pdu"
+									type="checkbox" value="county-durham-and-darlington">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-1">County Durham and Darlington</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-2" name="pdu"
+									type="checkbox" value="gateshead-and-south-tyneside">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-2">Gateshead and South Tyneside</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-3" name="pdu"
+									type="checkbox" value="newcastle-upon-tyne">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-3">Newcastle Upon Tyne</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-4" name="pdu"
+									type="checkbox" value="north-tyneside-and-northumberland">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-4">North Tyneside and Northumberland</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-5" name="pdu"
+									type="checkbox" value="redcar-cleveland-and-middlesbrough">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-5">Redcar, Cleveland and Middlesbrough</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-6" name="pdu"
+									type="checkbox" value="stockton-and-hartlepool">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-6">Stockton and Hartlepool</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-7" name="pdu"
+									type="checkbox" value="sunderland">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-7">Sunderland</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<h3 class="govuk-heading-s">Reporting team</h3>
+				<p class="govuk-body">Select one or more PDUs and apply filters to see reporting teams</p>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
+					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
+						<option value="select" selected>Select cohort</option>
+						<option value="general-offence">General offence</option>
+						<option value="general-offence">General offence LDC</option>
+						<option value="sexual-offence">Sexual offence</option>
+						<option value="sexual-offence">Sexual offence LDC</option>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="cohort">Sex</label>
+					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
+						<option value="select" selected>Select sex</option>
+						<option value="general-offence">Male</option>
+						<option value="general-offence">Female</option>
+					</select>
+				</div>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--s" for="referral-status">Referral status</label>
+					<select class="govuk-select" id="referral-status" name="referral-status" style="width: 100%">
+						<option value="select" selected>Select status</option>
+							<option value="awaiting-allocation">Awaiting allocation</option>	
+							<option value="awaiting-assessment">Awaiting assessment</option>
+							<option value="breach">Breach</option>
+							<option value="deferred">Deferred</option>
+							<option value="deprioritised">Deprioritised</option>
+							<option value="on-programme">On programme</option>
+							<option value="programme-complete">Programme complete</option>
+							<option value="recall">Recall</option>
+							<option value="return-to-court">Return to court</option>
+							<option value="scheduled">Scheduled</option>
+							<option value="suitable-but-not-ready">Suitable but not ready</option>
+							<option value="withdrawn">Withdrawn</option>
+					</select>
+				</div>
+				<div class="govuk-button-group">
+					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
+					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="govuk-grid-column-three-quarters">
+		<nav class="moj-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
+			<ul class="moj-sub-navigation__list">
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" aria-current="page" href="open-referrals">Open referrals (84)</a>
+				</li>
+				<li class="moj-sub-navigation__item">
+					<a class="moj-sub-navigation__link" href="closed-referrals">Closed referrals (3)</a>
+				</li>
+			</ul>
+		</nav>
+		<p class="govuk-body-s govuk-!-text-align-right govuk-!-margin-bottom-3">Showing <strong>1</strong> to <strong>20</strong> of <strong>84</strong> results</p>
+		
+		
+	<table class="govuk-table" data-module="moj-sortable-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Open referrals</caption>
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th scope="col" class="govuk-table__header" aria-sort="none">Name and CRN</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">PDU</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Reporting team</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Sentence end date</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">PSS end date</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Cohort</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Sex</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Referral status</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			{% for referral in data['people'] %}
+
+			<tr class="govuk-table__row">
+				<td class="govuk-table__cell">
+					<a href="../profiles/referral-details/referral-summary?firstName={{referral.firstName}}&lastName={{referral.lastName}}&crn={{referral.crn}}" class="govuk-link govuk-link--no-visited-state">{{referral.lastName}}, {{referral.firstName}}</a><br/>{{referral.crn}}</td>
+				<td class="govuk-table__cell">{{referral.pdu}}</td>
+				<td class="govuk-table__cell">{{referral.reportingTeam}}</td>
+				<td class="govuk-table__cell">{{referral.sentenceEnd}}<br/>{{referral.sentenceType}}</td>
+				<td class="govuk-table__cell">{{referral.pssEnd}}</td>
+				<td class="govuk-table__cell">{{referral.cohort}} 
+					<span class="moj-badge moj-badge--bright-purple">{{referral.cohortTag}}</span></td>
+				<td class="govuk-table__cell">{{referral.sex}}</td>
+				<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--{{referral.referralColour | default('purple')}}">{{referral.referralStatus}}</strong></td>
+			</tr>
+
+			{% endfor %}
+
+			</tbody>
+		</table>
+		
+		<nav class="govuk-pagination" role="navigation" aria-label="results">
+			<ul class="govuk-pagination__list">
+				<li class="govuk-pagination__item govuk-pagination__item--current">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">1</a>
+				</li>
+				<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">2</a>
+				</li>
+				<li class="govuk-pagination__item govuk-pagination__item--ellipses">&ctdot;</li>
+				<li class="govuk-pagination__item">
+					<a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">6</a>
+				</li>
+			</ul>
+			<div class="govuk-pagination__next">
+				<a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+						class="govuk-pagination__link-title">Next</span> <svg
+						class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+						height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+						<path
+							d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+						</path>
+					</svg>
+				</a>
+			</div>
+		</nav>
+	</div>
+</div>
+{% endblock %}
