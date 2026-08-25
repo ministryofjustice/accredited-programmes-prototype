@@ -27,6 +27,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 		</div>
 		<div class="moj-filter__content">
 			<div class="moj-filter__options">
+				<form action="open-referrals-filter-test" method="get">
 				<div class="govuk-button-group">
 					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
 					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
@@ -79,8 +80,60 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 						</div>
 					</fieldset>
 				</div>
-				<h3 class="govuk-heading-s">Reporting team</h3>
-				<p class="govuk-body">Select one or more PDUs and apply filters to see reporting teams</p>
+				{% if (data['pdu'] or []).indexOf('county-durham-and-darlington') == -1 %}
+					<h3 class="govuk-heading-s">Reporting team</h3>
+					<p class="govuk-body">Select one or more PDUs and apply filters to see reporting teams</p>
+				{% else %}
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							Reporting team
+						</legend>
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-1" name="reporting-team"
+									type="checkbox" value="darlington-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-1">Darlington 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-2" name="reporting-team"
+									type="checkbox" value="darlington-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-2">Darlington 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-4" name="reporting-team"
+									type="checkbox" value="north-durham-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-4">North Durham 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-5" name="reporting-team"
+									type="checkbox" value="north-durham-3">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-5">North Durham 3</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-6" name="reporting-team"
+									type="checkbox" value="peterlee-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-6">Peterlee 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-7" name="reporting-team"
+									type="checkbox" value="peterlee-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-7">Peterlee 2</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-8" name="reporting-team"
+									type="checkbox" value="south-durham-1">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-8">South Durham 1</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="reporting-team-9" name="reporting-team"
+									type="checkbox" value="south-durham-2">
+								<label class="govuk-label govuk-checkboxes__label" for="reporting-team-9">South Durham 2</label>
+							</div>
+						</div>
+					</fieldset>
+					</div>
+				{% endif %}
 				<div class="govuk-form-group">
 					<label class="govuk-label govuk-label--s" for="cohort">Cohort</label>
 					<select class="govuk-select" id="cohort" name="cohort" style="width: 100%">
@@ -121,6 +174,7 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<button type="submit" class="govuk-button" data-module="govuk-button">Apply filters</button>
 					<a class="govuk-link govuk-link--no-visited-state" href="#">Clear filters</a>
 				</div>
+				</form>
 			</div>
 		</div>
 	</div>
