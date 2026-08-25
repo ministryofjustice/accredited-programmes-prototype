@@ -35,17 +35,48 @@ Building Choices: moderate intensity - {{ serviceName }} - GOV.UK Prototype Kit
 					<input class="govuk-input" id="search-name-crn" name="search-name-crn" type="text">
 				</div>
 				<div class="govuk-form-group">
-					<label class="govuk-label govuk-label--s" for="pdu">PDU</label>
-					<select class="govuk-select" id="pdu" name="pdu" style="width: 100%">
-						<option value="select" selected>Select PDU</option>
-						<option value="pdu-1">County Durham and Darlington</option>
-						<option value="pdu-2">Gateshead and South Tyneside</option>
-						<option value="pdu-3">Newcastle Upon Tyne</option>
-						<option value="pdu-2">North Tyneside and Northumberland</option>
-						<option value="pdu-2">Redcar, Cleveland and Middlesbrough</option>
-						<option value="pdu-2">Stockton and Hartlepool</option>
-						<option value="pdu-2">Sunderland</option>
-					</select>
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							PDU
+						</legend>
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-1" name="pdu"
+									type="checkbox" value="county-durham-and-darlington">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-1">County Durham and Darlington</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-2" name="pdu"
+									type="checkbox" value="gateshead-and-south-tyneside">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-2">Gateshead and South Tyneside</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-3" name="pdu"
+									type="checkbox" value="newcastle-upon-tyne">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-3">Newcastle Upon Tyne</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-4" name="pdu"
+									type="checkbox" value="north-tyneside-and-northumberland">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-4">North Tyneside and Northumberland</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-5" name="pdu"
+									type="checkbox" value="redcar-cleveland-and-middlesbrough">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-5">Redcar, Cleveland and Middlesbrough</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-6" name="pdu"
+									type="checkbox" value="stockton-and-hartlepool">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-6">Stockton and Hartlepool</label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="pdu-7" name="pdu"
+									type="checkbox" value="sunderland">
+								<label class="govuk-label govuk-checkboxes__label" for="pdu-7">Sunderland</label>
+							</div>
+						</div>
+					</fieldset>
 				</div>
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
